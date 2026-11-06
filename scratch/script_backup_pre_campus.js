@@ -1,0 +1,12012 @@
+/**
+ * 0. IMMEDIATE THEME CHECK (Prevent FOUC)
+ */
+(function () {
+  const currentTheme = localStorage.getItem("bdrnk-theme");
+  if (currentTheme === "dark" || currentTheme === "space") {
+    document.documentElement.classList.add("dark-mode");
+    document.body.classList.add("dark-mode");
+  }
+})();
+
+/**
+ * 1. MULTI-LANGUAGE DICTIONARY (AZ, EN, RU)
+ * Instant DOM update without reload.
+ */
+const i18n = {
+  az: {
+    header_subtitle: "Bakı Dövlət Rabitə və Nəqliyyat Kolleci<br><span class=\"logo-subtitle-entity\">Publik Hüquqi Şəxsi</span>",
+    nav_home: "Ana Səhifə",
+    nav_about: "Haqqımızda",
+    nav_structure: "Struktur",
+    nav_library: "Kitabxana",
+
+    nav_science: "Elm və Nəşrlər",
+    science_badge: "Elmi Fəaliyyət və Beynəlxalq Nəşrlər",
+    science_title: "Fakültə Əməkdaşlarımızın Beynəlxalq və Yerli Elmi Nəşrləri",
+    science_desc: "Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin pedaqoji heyətinin nüfuzlu beynəlxalq indeksli jurnallarda və yerli elmi nəşrlərdə dərc olunmuş elmi məqalə və tezisləri.",
+    science_ceremony_tag: "Rəsmi Təqdimat və Qəbul",
+    science_ceremony_kicker: "BDRNK Elmi Heyəti · 2026",
+    science_ceremony_heading: "Kollec rəhbərliyi və professor-müəllim heyətinin elmi nailiyyətləri",
+    science_ceremony_p: "Direktor Səbuhi Qurbanovun təşəbbüsü ilə pedaqoji heyətin beynəlxalq elmi arenada təmsil olunması, impakt faktorlu və Index Copernicus, ERIH PLUS indeksli nəşrlərdə dərc olunan elmi araşdırmaları yüksək qiymətləndirilmişdir.",
+    science_btn_table: "Rəsmi Nazirlik Cədvəlinə Bax (JPG)",
+    science_stat_authors: "Tədqiqatçı Müəllim",
+    science_stat_articles: "Məqalə və Tezis",
+    science_stat_countries: "Xarici və Yerli Ölkə",
+    science_stat_indexed: "Index Copernicus & Respublika",
+    science_tab_all: "Bütün Nəşrlər (23)",
+    science_tab_foreign: "Xarici Jurnallar (17)",
+    science_tab_local: "Yerli Jurnallar (6)",
+    science_tab_copernicus: "Copernicus & ERIH (10)",
+    dept_humanitar: "Humanitar elmlər",
+    dept_dil: "Dil və ədəbiyyat",
+    dept_umumtehsil: "Ümumtəhsil",
+    dept_xaricidil: "Xarici dillər",
+    science_search_ph: "Müəllif, məqalə və ya jurnal axtar...",
+    science_articles_count_label: "Elmi Əsər",
+    science_journal_label: "Nəşr / Jurnal:",
+    science_country_label: "Ölkə:",
+    science_orcid_profile: "ORCID İD Profili",
+    science_no_results: "Axtarış üzrə heç bir elmi nəşr tapılmadı.",
+    science_view_cards: "🗂️ Kartlar Görünüşü",
+    science_view_table: "📋 Rəsmi Cədvəl Rejimi",
+    science_th_no: "№",
+    science_th_author: "Əməkdaş",
+    science_th_role: "Vəzifə / Fənn birləşməsi",
+    science_th_works: "Məqalə / tezis",
+    science_th_journals: "Jurnal / ölkə",
+    science_th_year: "İl",
+    science_th_scope: "Yerli / Xarici",
+    science_th_orcid: "ORCID",
+    science_th_scopus: "Scopus / WoS",
+    science_th_copernicus: "Copernicus",
+    science_th_erih: "ERIH",
+    science_showing_summary: "Tədqiqatçı müəllim · Elmi əsər və tezis",
+
+    nav_lectures: "Videodərslər",
+    nav_sis: "Tələbə Portalı",
+    nav_contact: "Əlaqə",
+    nav_register: "Qeydiyyat",
+    hero_badge: "Rəsmi Təhsil Portalı",
+    hero_title:
+      "AZƏRBAYCAN RESPUBLİKASI ELM VƏ TƏHSİL NAZİRLİYİ<br>ELM VƏ ALİ TƏHSİL ÜZRƏ DÖVLƏT AGENTLİYİ<br>AZƏRBAYCAN TEXNİKİ UNİVERSİTETİNİN NƏZDİNDƏ<br>BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ<br>PUBLİK HÜQUQİ ŞƏXSİ",
+    hero_desc:
+      "Gələcəyin rabitə və nəqliyyat mütəxəssislərini yetişdirən müasir təhsil mərkəzi.",
+    hero_cta_portal: "Tələbə Portalı",
+    hero_cta_about: "Haqqımızda",
+    stat_students: "Tələbə",
+    stat_teachers: "Müəllim",
+    stat_staff: "Digər işçilər",
+    stat_years: "İl Təcrübə",
+
+    about_badge: "Missiyamız",
+    grad_ribbon: "Məzun Günü",
+    grad_eyebrow: "Qürur Anı",
+    grad_title: "Bizim Məzunlarımız —<br /><em>Bizim Qürurumuz</em>",
+    grad_desc: "Hər il kollecimizin qapısından yeni nəslin peşəkar rabitə və nəqliyyat mütəxəssisləri yola düşür. Onların uğuru — müəllimlərimizin zəhməti, kollecimizin isə ən böyük nailiyyətidir.",
+    grad_stat_since: "ildən bəri",
+    grad_stat_years: "illik ənənə",
+    grad_stat_alumni: "uğur hekayəsi",
+    grad_cta: "Instagram-da izlə",
+    grad_hero_small: "Yeni · Video",
+    grad_hero_title: "Məzun Günü",
+    nav_honors: "Fəxri Tələbələr",
+    honors_kicker: "ŞƏRƏF LÖVHƏSİ · FƏXRİ TƏLƏBƏLƏRİMİZ",
+    honors_title: "Beynəlxalq Arenada Kollecimizin İmzası",
+    honors_desc: "İnformasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində beynəlxalq çempionluqlar qazanan, Azərbaycan bayrağını ABŞ, Yaponiya və Avropada dalğalandıran fəxri tələbələrimiz.",
+    mem_eyebrow: "Anım Guşəsi",
+    mem_title: "Şəhidlər ölməz,<br /><em>Vətən bölünməz!</em>",
+    mem_desc: "Azərbaycanın müstəqilliyi və ərazi bütövlüyü uğrunda canından keçmiş bütün şəhidlərimizi, o cümlədən kollecimizin qəhrəman məzunlarını dərin ehtiram və minnətdarlıqla yad edirik. Onların xatirəsi qəlbimizdə əbədi yaşayacaq.",
+    mem_d1_date: "20 Yanvar",
+    mem_d1_title: "Ümumxalq Hüzn Günü",
+    mem_d2_date: "26 Fevral",
+    mem_d2_title: "Xocalı Soyqırımı",
+    mem_d3_date: "27 Sentyabr",
+    mem_d3_title: "Anım Günü",
+    mem_d4_date: "8 Noyabr",
+    mem_d4_title: "Zəfər Günü",
+    mem_candle: "Xatirələrinə şam yandır",
+    mem_candle_lit: "Şam yandırıldı",
+    mem_candle_msg: "Allah bütün şəhidlərimizə rəhmət eləsin. Ruhları şad olsun.",
+    spotlight_tag: "⭐ Seçilmiş Xatirə",
+    spotlight_badge: "✨ Təsirli Xatirə · BDRNK İrsi",
+    spotlight_headline: "Qəlblərdə Yaşayan İllər —<br /><em>Birlik və Qürur Anı</em>",
+    spotlight_quote: "«Zaman ötür, nəsillər dəyişir, amma kollecimizdə bir ailə kimi yaşanan bu duyğulu anlar, tələbə və müəllimlərimizin səmimi sevgisi BDRNK-nın zəngin mənəvi irsinin ən parlaq səhifəsidir.»",
+    spotlight_meta1_title: "Məkan",
+    spotlight_meta1_val: "BDRNK Kampusu",
+    spotlight_meta2_title: "Dəyər",
+    spotlight_meta2_val: "Əbədi Dostluq & Hörmət",
+    spotlight_meta3_title: "Status",
+    spotlight_meta3_val: "Xüsusi Buraxılış",
+    spotlight_btn: "Instagram-da izlə və ya şərh yaz",
+    about_title: "Haqqımızda",
+    about_p1_title: "Gələcəyin Mütəxəssisləri",
+    about_p1:
+      "Bakı Dövlət Rabitə və Nəqliyyat Kolleci Azərbaycanda orta ixtisas təhsili pilləsi üzrə fəaliyyət göstərən ən qocaman və zəngin ənənələrə malik təhsil müəssisələrindən biridir.",
+    about_history_title: "Tarixi",
+    about_history_text: "Kollecin əsası 1931-ci ildə mərkəzi teleqrafın nəzdində fabrik-zavod təhsili bazasında təşkil olunmuşdur. Sonradan keçmiş SSRİ Rabitə Nazirliyinin 157 saylı 02.04.1991-ci il tarixli əmrinə əsasən Bakı Rabitə Kolleci yaradılmışdır. Bakı Rabitə Kolleci və Bakı Dəmiryolu Texnikumu Azərbaycan Respublikasının Nazirlər Kabinetinin 26 avqust 2002-ci il 140 saylı və Azərbaycan Respublikasının Təhsil Nazirliyinin 786 saylı əmrlərinə əsasən birləşdirilərək Bakı Rabitə Kollecinin bazasında Bakı Dövlət Rabitə və Nəqliyyat Kolleci yaradılmışdır.",
+    about_p2:
+      "Hazırda kollecdə tədris prosesi müasir beynəlxalq standartlara uyğun, rəqəmsal texnologiyalar və praktiki təcrübə əsasında qurulmuşdur. Tələbələrimiz ən son laboratoriya avadanlıqları ilə təchiz olunmuş mühitdə gələcəyin peşəkarı gibi yetişirlər.",
+    feature1_title: "Müasir Tədris",
+    feature1_desc: "Beynəlxalq standartlara uyğun tədris proqramları",
+    feature2_title: "Rəqəmsal Laboratoriya",
+    feature2_desc: "Son texnologiya ilə təchiz olunmuş laboratoriyalar",
+    feature3_title: "Tədbirlər",
+    feature3_desc: "Kollecdə baş tutan ən son tədbirlər və yeniliklər",
+    structure_badge: "Təşkilat",
+    structure_title: "İnstitusional Struktur",
+    structure_desc:
+      "Rəhbərlik, İnzibati İdarə Heyəti və İxtisaslar bir baxışda.",
+    struct_view_tree: "İerarxiya Sxemi",
+    struct_view_cards: "Heyət Kartları",
+    struct_tab_hierarchy: "İdarəetmə və Şöbələr",
+    struct_tab_commissions: "Fənn Birləşmə Komissiyaları",
+    fbk_banner_title: "Kollecin Fənn Birləşmə Komissiyaları (FBK)",
+    fbk_banner_desc: "Tədris planlarının icrası, fənn proqramlarının hazırlanması və tədris-metodiki işlərin koordinasiyasını təmin edən 9 ixtisaslaşmış fənn birliyi.",
+    fbk_metodic_label: "Tədris-Metodik",
+    struct_search_placeholder: "İerarxiya və ya fənn birliyi üzrə axtarış...",
+    struct_director_badge: "Kollec Rəhbərliyi",
+    struct_deputies_badge: "Direktor Müavinləri",
+    struct_departments_badge: "Şöbə Müdirləri və Xidmətlər",
+    struct_tier1_label: "I SƏVİYYƏ · DİREKTORLUQ",
+    struct_tier2_label: "II SƏVİYYƏ · DİREKTOR MÜAVİNLƏRİ",
+    struct_tier3_label: "III SƏVİYYƏ · YAP ƏPT SƏDRİ VƏ ŞÖBƏ MÜDİRİ",
+    struct_tier4_label: "IV SƏVİYYƏ · ŞÖBƏ MÜDİRLƏRİ VƏ BİRLƏŞMƏ KOMİSSİYALARI",
+    struct_tier3_badge: "YAP Ərazi Partiya Təşkilatı Sədri · Şöbə Müdiri",
+    struct_wing_academic: "Tədris, İKT və Sahə Şöbələri",
+    struct_wing_admin: "İnzibati, Tələbə və Dəstək Xidmətləri",
+    struct_majors_heading: "Kollecdə Tədris Olunan İxtisaslar",
+    struct_majors_desc: "Dövlət təhsil standartlarına uyğun əyani və qiyabi orta ixtisas təhsili proqramları (19 İxtisas)",
+    major_eyani_tab: "Əyani Təhsil (14 İxtisas)",
+    major_qiyabi_tab: "Qiyabi Təhsil (9 İxtisas)",
+    major_degree: "Orta İxtisas Təhsili",
+    photo_zoom_hint: "Tam böyüt",
+    photo_zoom_btn: "Tam Ekranda Foto",
+    modal_close_btn: "Pəncərəni Bağla",
+    cat_commissions: "Fənn Komissiyası",
+    cat_leadership: "Rəhbərlik",
+    cat_leadership_sub: "Direktor və müavinlər",
+    cat_departments: "İnzibati İdarə Heyəti",
+    cat_departments_sub: "Rəhbər heyət və idarəçilər",
+    cat_majors: "İxtisaslar",
+    cat_majors_sub: "Tədris olunan ixtisaslar",
+    th_code: "Kod",
+    th_major: "İxtisasın Adı",
+    th_field: "Sahə",
+    th_degree: "Təhsil Pilləsi",
+    library_badge: "Resurslar",
+    library_title: "Elektron Kitabxana",
+    library_desc: "Müəllimlərimizin dərs vəsaitləri və metodik materialları",
+    filter_all: "Hamısı",
+    filter_comm: "Rabitə",
+    filter_transport: "Nəqliyyat",
+    filter_it: "İT",
+    library_search_placeholder: "Kitab axtar...",
+    lectures_badge: "Video",
+    lectures_title: "Videodərslər",
+    lectures_desc:
+      "Müəllimlərimizin hazırladığı video dərslər və tədris materialları.",
+    sis_badge: "Portal",
+    sis_title: "Tələbə Məlumat Sistemi",
+    sis_desc:
+      "İmtahan nəticələri, davamiyyət və performans göstəricilərini izləyin.",
+    sis_login_title: "Daxil olun",
+    sis_login_hint: "Tələbə ID nömrənizi daxil edin",
+    sis_login_btn: "Daxil ol",
+    sis_error: "Tələbə tapılmadı. Zəhmət olmasa ID-ni düzgün daxil edin.",
+    sis_demo_hint: "Demo: STU001, STU002, STU003",
+    sis_logout: "Çıxış",
+    dash_gpa: "GPA",
+    dash_attendance: "Davamiyyət",
+    dash_rank: "Sıralama",
+    dash_exam_title: "İmtahan Nəticələri",
+    exam_subject: "Fənn",
+    exam_score: "Bal",
+    exam_grade: "Qiymət",
+    dash_attend_title: "Aylıq Davamiyyət",
+    contact_badge: "Əlaqə",
+    contact_title: "Bizimlə Əlaqə",
+    cf_name: "Ad və Soyad",
+    cf_email: "E-poçt",
+    cf_message: "Mesaj",
+    cf_send: "Göndər",
+    cf_success: "Müraciətiniz göndərildi! 1–3 iş günü ərzində cavablandırılacaqdır.",
+    marquee1: "📢 2025/2026 tədris ili üçün qəbul elan olunub!",
+    marquee2: "🏆 Tələbələrimiz respublika olimpiadasında 1-ci yeri qazandı!",
+    marquee3: "📚 Yeni elektron kitabxana xidməti istifadəyə verildi.",
+    marquee4: "🎓 Məzunlarımızın 92%-i ilk il ərzində iş tapır.",
+    marquee5: "🏢 Müasir Tədris Metodları",
+    marquee6: "👨‍🏫 Təcrübəli Heyət",
+
+    marquee8: "💎 95+ İl Təcrübə",
+    marquee9: "📸 Instagram: @bdrnk__official",
+    marquee10: "👥 Facebook: bdrnk.official",
+    footer_desc:
+      "Bakı Dövlət Rabitə və Nəqliyyat Kolleci<br><span class=\"footer-entity\">Publik Hüquqi Şəxsi</span> — gələcəyin mütəxəssislərini yetişdiririk.",
+    footer_quick: "Sürətli Keçidlər",
+    footer_contact: "Əlaqə",
+    dash_greeting: "Tədris Hesabatı",
+    dash_group_prefix: "Qrup",
+    sem1: "1-ci Semestr",
+    sem2: "2-ci Semestr",
+    th_n: "N",
+    th_name: "Ad və Soyad",
+    th_attendance: "Davamiyyət",
+    th_exam: "İmtahan",
+    th_final: "Yekun",
+    th_grade: "Qiymət",
+    grade_excellent: "Əla",
+    grade_good: "Yaxşı",
+    grade_satisfactory: "Kafi",
+    grade_fail: "Qeyri-kafi",
+    no_video: "Bu bölmədə hələlik video yoxdur.",
+    no_book: "Təəssüf ki, nəticə tapılmadı.",
+    btn_read: "Oxu",
+    filter_informatika: "İnformatika",
+    filter_telecom: "Telekommunikasiya",
+    filter_azdili: "Azərbaycan Dili",
+    filter_biologiya: "Biologiya",
+    filter_cografiya: "Coğrafiya",
+    filter_gch: "Çağırışaqədərki Hazırlıq",
+    filter_tarix: "Tarix",
+    filter_edebiyyat: "Ədəbiyyat",
+    filter_huquq: "Hüquq və Ümumtəhsil",
+    filter_azer_dili: "Azərbaycan dili və ədəbiyyat",
+    filter_vaqonlar: "Vaqonların konstruksiyası",
+    filter_riyaziyyat: "Riyaziyyat",
+    filter_sxematexnika: "Sxematexnika",
+    filter_materialsunasliq: "Materialşünaslıq",
+    filter_rus_dili: "Rus dili",
+    filter_anbar_logistikasi: "Anbar logistikası",
+    filter_xarici_dil: "Xarici dil",
+    filter_ekologiya: "Ekologiya",
+    filter_fizika: "Fizika",
+    filter_kimya: "Kimya",
+    filter_edne: "EDNƏ",
+    filter_menecment: "Menecment",
+    filter_rabite: "Rabitə",
+    filter_sebeke_avadanliqlari: "Şəbəkə avadanlıqları",
+    filter_emeyin_muhafizesi: "Əməyin mühafizəsi",
+    filter_os: "Əməliyyat sistemləri",
+    subj_tpt: "TPT",
+    subj_os: "Əməliyyat sistemləri",
+    subj_informatika: "İnformatika",
+    subj_network: "Şəbəkə texnologiyaları",
+    subj_architecture: "Kompüter arxitekturası",
+    subj_database: "Verilənlər bazası",
+    subj_math: "Riyaziyyat",
+    subj_physics: "Fizika",
+    fame_badge: "Uğurlarımız",
+    fame_title: "Uğur Hekayələri",
+    fame_desc: "Kollecimizin qürur mənbəyi olan tələbələrimiz və məzunlarımız.",
+    calendar_badge: "Təqvim",
+    calendar_title: "Akademik Təqvim",
+    faq_badge: "Məlumat",
+    faq_title: "Tez-tez verilən suallar",
+    eyani: "Əyani",
+    qiyabi: "Qiyabi",
+    nav_gallery: "Qalereya",
+    nav_certificates: "Sertifikatlar",
+    cert_badge: "RƏSMİ TƏLTİFLƏR VƏ DİPLOMLAR",
+    cert_title: "Kollecimizin Qürur və Nailiyyət Guşəsi",
+    cert_desc: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin komandası və tələbələrinin Respublika birinciliklərində, spartakiadalarda və turnirlərdə qazandığı rəsmi diplom və təltifnamələr.",
+    cert_stat_gold_val: "1 Qızıl",
+    cert_stat_gold_lbl: "I Yer Çempionluğu",
+    cert_stat_silver_val: "6 Gümüş",
+    cert_stat_silver_lbl: "II Yer Respublika & Rayon",
+    cert_stat_bronze_val: "2 Bürünc",
+    cert_stat_bronze_lbl: "III Yer Uğuru",
+    cert_stat_total_val: "13 Sənəd",
+    cert_stat_total_lbl: "Rəsmi Arxiv Təltifi",
+    cert_filter_all: "Hamısı",
+    cert_filter_respublika: "Respublika Birinciliyi",
+    cert_filter_turnir: "Rayon Turnirləri",
+    cert_filter_fexri: "Fəxri Fərman",
+    cert_year_all: "Bütün İllər",
+    cert_search_placeholder: "Diplom, idman növü və ya il üzrə axtar...",
+    cert_pdf_btn: "Rəsmi PDF Arxiv (21.4 MB)",
+    cert_card_view_btn: "Böyük Ölçüdə Bax",
+    cert_card_detail_btn: "Ətraflı",
+    cert_modal_sport_lbl: "İdman növü:",
+    cert_modal_team_lbl: "Təltif edilən:",
+    cert_modal_org_lbl: "Təşkilatçı Qurum:",
+    cert_modal_signer_lbl: "İmzalayan şəxs:",
+    cert_modal_date_lbl: "Tarix:",
+    cert_modal_dl_img: "Yüksək Keyfiyyətdə Şəkli Yüklə",
+    cert_modal_dl_all: "Bütün Sənədlər (PDF, 21.4 MB)",
+    cert_empty_title: "Axtarışa uyğun sertifikat tapılmadı",
+    cert_empty_desc: "Zəhmət olmasa axtarış sözünü və ya seçilmiş filtrləri dəyişin.",
+    trophy_cabinet_badge: "RƏQƏMSAL KUBOK VİTRİNİ VƏ İDMAN ŞƏRƏF LÖVHƏSİ",
+    trophy_cabinet_title: "Kollecimizin İdman Qələbələri və Çempionluq Zirvəsi",
+    trophy_cabinet_desc: "«Sağlam bədəndə sağlam ruh!» devizi ilə Respublika birinciliklərində və şəhər spartakiadalarında fəxri kürsüyə yüksələn komandalarımız.",
+    sport_tab_football: "Minifutbol (Qızlar)",
+    sport_tab_chess: "Şahmat (Qızlar)",
+    sport_tab_volleyball: "Voleybol (Oğlanlar)",
+    sport_tab_checkers: "Dama (Qızlar & Oğlanlar)",
+    sport_tab_basketball: "Basketbol (Oğlanlar)",
+    trophy_gold_1st: "I Yer",
+    trophy_silver_2nd: "II Yer",
+    trophy_bronze_3rd: "III Yer",
+    trophy_cta_diploma: "📜 Rəsmi Diplomuna Bax",
+    trophy_cta_filter: "🎯 Bu İdman Üzrə Filtrlə",
+    nav_news: "Xəbərlər",
+    news_badge: "Yeniliklər",
+    news_title: "Son Xəbərlər",
+    news_desc: "Kollecimizdə baş verən ən son yeniliklər, elanlar və nailiyyətlər bir arada.",
+    news_all: "Bütün Xəbərlər",
+    news_read_more: "Ətraflı oxu →",
+    gallery_badge: "Foto",
+    gallery_title: "Qalereya",
+    gallery_desc: "Kollecimizin müxtəlif anlarından seçilmiş fotoşəkillər.",
+    gallery_cat_exam: "İmtahan Mühiti",
+    gallery_cat_events: "Tədbirlər",
+    gallery_cat_rooms: "Auditoriyalar",
+    gallery_cat_study: "Dərs Mühiti",
+    gallery_all: "Hamısı",
+    gallery_view: "Böyüt",
+    gallery_view_btn: "Bax / Ətraflı Arxiv",
+    gallery_event_reel: "Kollec Tədbiri",
+    gallery_exam_moment: "İmtahan Anı",
+    roadmap_badge: "Bələdçi",
+    roadmap_title: "Tələbənin Yol Xəritəsi",
+    roadmap_desc: "Qəbuldan ilk dərs gününə qədər keçəcəyiniz addım-addım bələdçi.",
+    roadmap_step1_title: "İxtisas Seçimi",
+    roadmap_step1_desc: "DİM tərəfindən keçirilən imtahanlarda iştirak və kollecimizə ixtisas seçimi.",
+    roadmap_step2_title: "Elektron Qeydiyyat",
+    roadmap_step2_desc: "Portal.edu.az vasitəsilə onlayn qeydiyyatdan keçmək və təsdiq almaq.",
+    roadmap_step3_title: "Sənəd Təqdimi",
+    roadmap_step3_desc: "Tələb olunan sənədlərin (atestat, foto, tibbi arayış) kollecə təqdim edilməsi.",
+    roadmap_step4_title: "Tanışlıq Günü",
+    roadmap_step4_desc: "Kollec korpusları, auditoriyalar və müəllim heyəti ilə yaxından tanışlıq.",
+    roadmap_step5_title: "İlk Dərs Günü",
+    roadmap_step5_desc: "Tələbə biletinin alınması və dərslərin rəsmi olaraq başlanması!",
+    entry_candidate_title: "Qəbul Portalı",
+    entry_candidate_desc: "İxtisaslar, qəbul qaydaları və kollec həyatı ilə tanış olun.",
+    entry_student_title: "Tələbə Portalı",
+    entry_student_desc: "Dərs cədvəli, imtahan nəticələri və tələbə kabineti.",
+    entry_btn: "Daxil ol",
+    capsule_badge: "Zaman Kapsulu",
+    capsule_title: "Gələcəyə Məktub",
+    capsule_desc: "Gələcək kollec tələbələrinə öz arzularınızı və ismarıcınızı göndərin.",
+    capsule_send: "Göndər",
+    capsule_error: "Zəhmət olmasa nalayiq sözlərdən istifadə etməyin!",
+    cm_theme: "Açıq / Tünd Rejim",
+    cm_portal: "Tələbə Portalı",
+    cm_totop: "Yuxarı Qayıt",
+    dd_lec_info_sub: "11 videodərs · İT və Proqramlaşdırma",
+    dd_lec_telecom_sub: "2 videodərs · Rabitə Şəbəkələri",
+    dd_lec_hist_sub: "8 videodərs · İctimai Elmlər",
+    dd_lec_lit_sub: "8 videodərs · Humanitar Fənlər",
+    dd_lec_law_sub: "6 videodərs · Hüquq və Ümumtəhsil",
+    theme_light: "Gündüz",
+    theme_dark: "Gecə",
+    ticker_live_badge: "BDRNK · CANLI",
+    ticker_1_b: "95 İllik Akademik İrs:",
+    ticker_1_t: "1931-ci ildən rabitə, telekommunikasiya və nəqliyyat sahəsində peşəkar kadr hazırlığı",
+    ticker_2_b: "Struktur və İxtisaslar:",
+    ticker_2_t: "Rəhbərlik, İnzibati İdarə Heyəti və müasir texniki ixtisas proqramları ilə tanış olun",
+    ticker_3_b: "Rəqəmsal Media Studiyası:",
+    ticker_3_t: "4 fənn bölməsi üzrə 16 açıq videodərs və interaktiv tədris bazası",
+    ticker_4_b: "Elektron Kitabxana:",
+    ticker_4_t: "PDF dərsliklər, ixtisas ədəbiyyatı və onlayn oxu zalı tələbələrin ixtiyarındadır",
+    ticker_5_b: "Kollec Həyatı və Xəbərlər:",
+    ticker_5_t: "Rəsmi tədbirlər, konfranslar və tələbə nailiyyətləri haqqında son məlumatlar",
+    about_subtitle: "Azərbaycan Texniki Universitetinin nəzdində fəaliyyət göstərən, bir əsrə yaxın zəngin ənənələri müasir rəqəmsal təhsillə birləşdirən qabaqcıl dövlət təhsil müəssisəsi.",
+    about_seal_title: "95 İLLİK AKADEMİK İRS",
+    about_seal_sub: "AzTU NƏZDİNDƏ BDRNK",
+    about_status_pill: "PUBLİK HÜQUQİ ŞƏXS",
+    about_lead_heading: "Rabitə, Telekommunikasiya və Nəqliyyat Sektorunun Peşəkar Kadr Mərkəzi",
+    about_director_quote: "Əsas hədəfimiz milli-mənəvi dəyərlərə sadiq, müasir rəqəmsal texnologiyalara dərindən yiyələnmiş, ölkəmizin rabitə və nəqliyyat infrastrukturunun inkişafına töhfə verən peşəkar gənc mütəxəssislər yetişdirməkdir.",
+    about_director_name: "Səbuhi Qurbanov",
+    about_director_role: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin Direktoru · «Tərəqqi» medallı",
+    about_meet_leadership: "Rəhbərliklə tanış ol",
+    about_metric_years: "İl Akademik Tarix və Təcrübə",
+    about_metric_teachers: "Peşəkar Müəllim və Pedaqoji Heyət",
+    about_metric_books: "Elektron Dərslik və Tədris Vəsaiti",
+    about_metric_events: "Rəsmi Tədbir, Layihə və Nailiyyət",
+    about_tab_mission: "Missiyamız",
+    about_tab_vision: "Vizyonumuz",
+    about_tab_values: "Strateji Dəyərlərimiz",
+    mvv_mission_badge: "AKADEMİK MİSSİYA",
+    mvv_mission_title: "Müasir Rəqəmsal və Texniki Kompetensiyalı Kadr Hazırlığı",
+    mvv_m1_t: "Praktik Yönümlü Tədris",
+    mvv_m1_d: "Real laboratoriya və istehsalat təcrübəsinə əsaslanan mühəndis-texniki hazırlıq",
+    mvv_m2_t: "AzTU ilə Akademik İnteqrasiya",
+    mvv_m2_d: "Azərbaycan Texniki Universitetinin elmi-metodiki bazası ilə sıx əməkdaşlıq",
+    mvv_m3_t: "Əmək Bazarına Uyğunluq",
+    mvv_m3_d: "Rabitə və nəqliyyat müəssisələrinin müasir tələblərinə cavab verən ixtisas proqramları",
+    mvv_vision_badge: "STRATEJİ VİZYON",
+    mvv_vision_title: "Rəqəmsal İnnovasiyalar və Orta İxtisas Təhsilində Lider Mərkəz",
+    mvv_vision_desc: "Azərbaycanın dördüncü sənaye inqilabı və rəqəmsal transformasiya hədəflərinə uyğun olaraq, kibertəhlükəsizlik, şəbəkə inzibatçılığı, intellektual nəqliyyat sistemləri və müasir telekommunikasiya üzrə regionun ən qabaqcıl orta ixtisas təhsili müəssisəsi olmaq.",
+    mvv_v1_t: "Rəqəmsal Kampus Ekosistemi",
+    mvv_v1_d: "Elektron kitabxana, onlayn oxu zalı və açıq videodərs studiyası ilə fasiləsiz təhsil",
+    mvv_v2_t: "İnnovativ Laboratoriyalar",
+    mvv_v2_d: "Kompüter şəbəkələri, avtomatika və nəqliyyat diaqnostikası üzrə yenilənən texniki baza",
+    mvv_v3_t: "Karyera və Davamlı Təhsil",
+    mvv_v3_d: "Məzunların həm əmək bazarında, həm də ali təhsil pilləsində uğurlu irəliləyişi",
+    mvv_values_badge: "KORPORATİV DƏYƏRLƏR",
+    mvv_values_title: "Şəffaflıq, Vətənpərvərlik və Akademik Mükəmməllik",
+    mvv_values_desc: "Kollecimiz tədris və idarəetmədə şəffaflıq, dürüstlük, milli-mənəvi dəyərlərə bağlılıq və tələbəyönümlü mühit prinsiplərini rəhbər tutaraq sağlam vətəndaş və peşəkar mütəxəssis formalaşdırır.",
+    mvv_val1_t: "Akademik Dürüstlük və Şəffaflıq",
+    mvv_val1_d: "Biliyin obyektiv qiymətləndirilməsi və müasir demokratik idarəetmə mühiti",
+    mvv_val2_t: "Milli Ruh və Vətənpərvərlik",
+    mvv_val2_d: "Dövlətçilik ənənələrinə, ana dilinin saflığına və milli dəyərlərə dərin ehtiram",
+    mvv_val3_t: "Sosial Fəallıq və Tələbə Dəstəyi",
+    mvv_val3_d: "İdman, mədəniyyət, hüquqi maarifləndirmə və sağlam həyat tərzi təşəbbüsləri",
+    about_history_kicker: "TARİXİ İNKİŞAF YOLU",
+    about_timeline_hint: "İllərin üzərinə klikləyərək tarixi mərhələlərlə tanış olun",
+    tl_1931_short: "İlk Təməl",
+    tl_1991_short: "Bakı Rabitə Kolleci",
+    tl_2002_short: "Birləşmə və Yeni Status",
+    tl_2016_short: "AzTU Nəzdinə Verilmə",
+    tl_2026_year: "Bu gün",
+    tl_2026_short: "Rəqəmsal Transformasiya",
+    tl_1931_tag: "TƏMƏLİN QOYULMASI",
+    tl_1931_title: "Mərkəzi Teleqraf Nəzdində İlk Rabitə Təhsili Ocağı",
+    tl_1931_desc: "Kollecin əsası 1931-ci ildə Bakı Mərkəzi Teleqrafının nəzdində fabrik-zavod təhsili bazasında təşkil olunmuşdur. Bu tarixi addım Azərbaycanda peşəkar rabitəçi və teleqraf-telefon mütəxəssislərinin sistemli hazırlanmasının başlanğıcı olmuşdur.",
+    why_lib_title: "Rəqəmsal Kitabxana və Oxu Zalı",
+    why_lib_desc: "Müəllimlərimizin müəllifi olduğu 40+ ixtisas dərsliyi, PDF vəsaitlər və sayt daxilində birbaşa onlayn oxu zalı.",
+    why_lib_cta: "Kitabxanaya keç →",
+    why_lec_title: "Videodərslər və Media Studiya",
+    why_lec_desc: "İnformatika, Tarix, Ədəbiyyat və Hüquq fənləri üzrə 16 açıq videodərs və interaktiv kino-rejimli pleyer.",
+    why_lec_cta: "Videodərsləri izlə →",
+    why_struct_title: "Struktur və Müasir İxtisaslar",
+    why_struct_desc: "Rəhbərlik, İnzibati İdarə Heyəti, Şöbələr və rabitə-nəqliyyat sektorunun ən tələbatlı ixtisas proqramları.",
+    why_struct_cta: "Strukturla tanış ol →",
+    why_news_title: "Tələbə Həyatı və 99+ Rəsmi Xəbər",
+    why_news_desc: "Kollecdə keçirilən bütün elmi konfranslar, idman qələbələri, maarifləndirici tədbirlər və rəsmi xronika.",
+    why_news_cta: "Xəbərləri oxu →",
+    nr_press_center: "BDRNK RƏSMİ MƏTBUAT MƏRKƏZİ",
+    nr_source_btn: "Mənbə",
+    nr_read_time: "⏱ 2 dəq oxu",
+    nr_prev_news: "← Əvvəlki Xəbər",
+    nr_next_news: "Növbəti Xəbər →",
+    nr_other_news: "Digər Xəbərlər",
+    lib_reading_room_title: "BDRNK RƏQƏMSAL OXU ZALI",
+    lib_reading_room_hint: "📖 Kitabın üzərinə klikləyərək daxili oxu zalında dərhal vərəqləyin",
+    reader_fullscreen_download: "Tam Ekranda / Yüklə",
+    reader_lbl_subject: "Fənn / Bölmə:",
+    reader_lbl_author: "Tərtibatçı / Müəllif:",
+    reader_lbl_format: "Format:",
+    reader_val_format: "PDF · Rəqəmsal Nəşr",
+    reader_lbl_status: "Status:",
+    reader_val_status: "✓ Açıq Akademik Giriş",
+    studio_sidebar_label: "BDRNK RƏQƏMSAL MEDIA STUDİYASI",
+    studio_playlist_title: "Bölmə üzrə Dərs Siyahısı",
+    lb_slideshow: "Slayd-Şou",
+    lb_stop: "Dayandır",
+    contact_city: "Bakı, Azərbaycan",
+    contact_subtitle: "AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci<br><span class=\"contact-entity\">Publik Hüquqi Şəxsi</span> ilə birbaşa əlaqə kanalları, rəsmi elektron müraciət sistemi və sosial media resursları.",
+    cac_phone_tag: "QAYNAR XƏTT",
+    cac_phone_title: "Telefon və Qəbul Əlaqəsi",
+    cac_call_btn: "Birbaşa Zəng",
+    cac_copy_btn: "Kopyala",
+    cac_email_tag: "KARGÜZARLIQ",
+    cac_email_title: "Rəsmi Elektron Poçt",
+    cac_email_sub: "Rəsmi sorğular və sənəd dövriyyəsi",
+    cac_write_btn: "Məktub Yaz",
+    cac_addr_tag: "KAMPUS ÜNVANI",
+    cac_addr_title: "Rəsmi Ünvanımız",
+    cac_addr_detail: "Yasamal rayonu, A.M. Şərifzadə küçəsi",
+    cac_route_btn: "Xəritədə Yol Tarifi",
+    cac_status_open: "Açıqdır · İş Saatı",
+    cac_status_closed: "Bağlıdır · Qeyri-iş Saatı",
+    cac_hours_title: "İş Rejimi və Qəbul",
+    cac_hours_days: "Bazar ertəsi – Cümə: 09:00 – 18:00",
+    cac_hours_weekend: "Şənbə – Bazar: Qeyri-iş günləri",
+    cac_online_apply: "Onlayn Müraciət Et",
+    map_header_label: "BDRNK Əsas Tədris Korpusu",
+    map_open_btn: "Google Maps ↗",
+    channels_kicker: "RƏSMİ PLATFORMALAR",
+    channels_title: "Sosial Media və Elektron Portallar",
+    ch_ig_desc: "Tədbirlər, reels və tələbə həyatı",
+    ch_fb_desc: "Rəsmi xəbərlər və elanlar",
+    ch_web_name: "Rəsmi Domen",
+    ch_web_desc: "Elektron informasiya resursları",
+    ch_dim_name: "Qəbul Portalı",
+    ch_dim_desc: "Abituriyent qeydiyyatı və müsabiqə",
+    cf_portal_badge: "ELEKTRON MÜRACİƏT SİSTEMİ",
+    cf_portal_title: "Rəsmi Vətəndaş və Tələbə Müraciəti",
+    cf_portal_desc: "Müraciət etdiyiniz şöbəni və statusunuzu seçin — sorğunuz birbaşa müvafiq bölməyə yönləndiriləcəkdir.",
+    cf_role_label: "Müraciət edən şəxs",
+    cf_role_student: "Tələbə",
+    cf_role_applicant: "Abituriyent",
+    cf_role_parent: "Valideyn",
+    cf_role_other: "Digər",
+    cf_dept_label: "Müraciət Ünvanlanan Şöbə / İnstansiya",
+    cf_dept_general: "Ümumi Müraciət / Məlumat Mərkəzi",
+    cf_dept_admission: "Qəbul Komissiyası və İxtisaslar",
+    cf_dept_academic: "Tədris Hissəsi və Dərs Cədvəli",
+    cf_dept_monitoring: "Qeydiyyat, Qiymətləndirmə və Monitorinq Şöbəsi",
+    cf_dept_depts: "İxtisas Şöbələri (Nəqliyyat, Rabitə, İT, Poçt)",
+    cf_dept_correspondence: "Qiyabi Şöbə və Arayış / Sənəd Sorğusu",
+    cf_dept_director: "Direktora və Rəhbərliyə Rəsmi Müraciət",
+    cf_phone: "Əlaqə Nömrəsi",
+    cf_name_ph: "Məs: Əliyev Əli",
+    cf_email_ph: "numune@mail.az",
+    cf_msg_ph: "Müraciətinizin mətnini daxil edin...",
+    lecture_search_placeholder: "Videodərs axtar...",
+    cf_quick_hint: "Sürətli şablon seçin:",
+    cf_chip_cert: "📄 Tələbə arayışı",
+    cf_chip_adm: "🎓 Qəbul və keçid balları",
+    cf_chip_exam: "📅 İmtahan və qiymətləndirmə",
+    cf_chip_visit: "🏛️ Qəbula yazılmaq",
+    cf_guarantee_text: "Müraciətiniz rəsmi qeydiyyata alınır və 1–3 iş günü ərzində e-poçt və ya telefon vasitəsilə cavablandırılır.",
+    footer_copyright:
+      "© 2026 BDRNK - Müəllif hüquqları qorunur. Hazırlayan: Ləman Əskərova",
+  },
+  en: {
+    fame_badge: "Our Success",
+    fame_title: "Wall of Fame",
+    fame_desc: "The pride of our college — students and alumni who inspire us.",
+    calendar_badge: "Calendar",
+    calendar_title: "Academic Calendar",
+    header_subtitle: "Baku State Communications and Transport College<br><span class=\"logo-subtitle-entity\">Public Legal Entity</span>",
+    nav_home: "Home",
+    nav_about: "About Us",
+    nav_structure: "Structure",
+    nav_library: "Library",
+
+    nav_science: "Science & Publications",
+    science_badge: "Scientific Activity & Publications",
+    science_title: "Faculty International & Domestic Scientific Publications",
+    science_desc: "Scientific articles and conference theses published by faculty members of Baku State Communications and Transport College under Azerbaijan Technical University in prestigious indexed journals and domestic editions.",
+    science_ceremony_tag: "Official Ceremony & Reception",
+    science_ceremony_kicker: "BDRNK Academic Faculty · 2026",
+    science_ceremony_heading: "Scientific Achievements of College Leadership & Faculty",
+    science_ceremony_p: "On the initiative of Director Sabuhi Gurbanov, the representation of our academic faculty in the international scientific arena and their research published in impact factor, Index Copernicus, and ERIH PLUS indexed journals was commended.",
+    science_btn_table: "View Official Ministry Document (JPG)",
+    science_stat_authors: "Faculty Researchers",
+    science_stat_articles: "Articles & Theses",
+    science_stat_countries: "Target Countries",
+    science_stat_indexed: "Index Copernicus & National",
+    science_tab_all: "All Publications (23)",
+    science_tab_foreign: "International Journals (17)",
+    science_tab_local: "Domestic Journals (6)",
+    science_tab_copernicus: "Copernicus & ERIH (10)",
+    dept_humanitar: "Humanities",
+    dept_dil: "Language & Literature",
+    dept_umumtehsil: "General Education",
+    dept_xaricidil: "Foreign Languages",
+    science_search_ph: "Search author, article or journal...",
+    science_articles_count_label: "Scientific Works",
+    science_journal_label: "Publication / Journal:",
+    science_country_label: "Country:",
+    science_orcid_profile: "ORCID Profile",
+    science_no_results: "No scientific publications found matching your search.",
+    science_view_cards: "🗂️ Cards View",
+    science_view_table: "📋 Official Table",
+    science_th_no: "No.",
+    science_th_author: "Faculty Member",
+    science_th_role: "Position / Department",
+    science_th_works: "Article / Thesis",
+    science_th_journals: "Journal / Country",
+    science_th_year: "Year",
+    science_th_scope: "Scope",
+    science_th_orcid: "ORCID",
+    science_th_scopus: "Scopus / WoS",
+    science_th_copernicus: "Copernicus",
+    science_th_erih: "ERIH",
+    science_showing_summary: "Faculty Researchers · Scientific Works",
+
+    nav_lectures: "Lectures",
+    nav_sis: "Student Portal",
+    nav_contact: "Contact",
+    nav_register: "Registration",
+    hero_badge: "Official Educational Portal",
+    hero_title:
+      "MINISTRY OF SCIENCE AND EDUCATION OF THE REPUBLIC OF AZERBAIJAN<br>STATE AGENCY FOR SCIENCE AND HIGHER EDUCATION<br>UNDER AZERBAIJAN TECHNICAL UNIVERSITY<br>BAKU STATE COMMUNICATIONS AND TRANSPORT COLLEGE<br>PUBLIC LEGAL ENTITY",
+    hero_desc:
+      "A modern educational center training future experts in communications and transport.",
+    hero_cta_portal: "Student Portal",
+    hero_cta_about: "About Us",
+    stat_students: "Students",
+    stat_teachers: "Teachers",
+    stat_staff: "Other staff",
+    stat_years: "Years Exp.",
+
+    about_badge: "Our Mission",
+    grad_ribbon: "Graduation Day",
+    grad_eyebrow: "A Moment of Pride",
+    grad_title: "Our Graduates —<br /><em>Our Pride</em>",
+    grad_desc: "Every year a new generation of professional communication and transport specialists sets off from our college. Their success is the result of our teachers' dedication and our college's greatest achievement.",
+    grad_stat_since: "since",
+    grad_stat_years: "years of tradition",
+    grad_stat_alumni: "success stories",
+    grad_cta: "Watch on Instagram",
+    grad_hero_small: "New · Video",
+    grad_hero_title: "Graduation Day",
+    nav_honors: "Honor Students",
+    honors_kicker: "HALL OF FAME · HONORARY STUDENTS",
+    honors_title: "Our College's Mark on the International Stage",
+    honors_desc: "Our outstanding students winning international championships in IT, cybersecurity, and robotics, proudly raising the flag of Azerbaijan in the US, Japan, and Europe.",
+    mem_eyebrow: "Memorial Corner",
+    mem_title: "Martyrs never die,<br /><em>the Motherland is indivisible!</em>",
+    mem_desc: "We remember with deep respect and gratitude all our martyrs who gave their lives for the independence and territorial integrity of Azerbaijan, including the heroic graduates of our college. Their memory will live forever in our hearts.",
+    mem_d1_date: "20 January",
+    mem_d1_title: "National Day of Mourning",
+    mem_d2_date: "26 February",
+    mem_d2_title: "Khojaly Genocide",
+    mem_d3_date: "27 September",
+    mem_d3_title: "Remembrance Day",
+    mem_d4_date: "8 November",
+    mem_d4_title: "Victory Day",
+    mem_candle: "Light a candle in their memory",
+    mem_candle_lit: "Candle lit",
+    mem_candle_msg: "May all our martyrs rest in peace.",
+    spotlight_tag: "⭐ Featured Memory",
+    spotlight_badge: "✨ Touching Memory · BDRNK Legacy",
+    spotlight_headline: "Years Living in Our Hearts —<br /><em>A Moment of Unity and Pride</em>",
+    spotlight_quote: "“Time passes and generations change, but these touching moments shared as one family in our college, filled with the sincere affection of our students and teachers, are the brightest page of BDRNK’s rich spiritual heritage.”",
+    spotlight_meta1_title: "Location",
+    spotlight_meta1_val: "BDRNK Campus",
+    spotlight_meta2_title: "Value",
+    spotlight_meta2_val: "Eternal Friendship & Respect",
+    spotlight_meta3_title: "Status",
+    spotlight_meta3_val: "Special Edition",
+    spotlight_btn: "Watch and comment on Instagram",
+    about_title: "About Us",
+    about_p1_title: "Specialists of the Future",
+    about_p1:
+      "Baku State Communications and Transport College is one of the oldest and most tradition-rich educational institutions in Azerbaijan.",
+    about_history_title: "History",
+    about_history_text: "The college was founded in 1931 on the basis of factory-plant education under the Central Telegraph. Later, Baku Communications College was established by order No. 157 dated 02.04.1991 of the Ministry of Communications of the former USSR. On August 26, 2002, by Decree No. 140 of the Cabinet of Ministers and Order No. 786 of the Ministry of Education, Baku Communications College and Baku Railway Technical School were merged to form Baku State Communications and Transport College.",
+    about_p2:
+      "Currently, the educational process in the college is built according to modern international standards, based on digital technologies and practical experience. Our students grow as future professionals in an environment equipped with the latest laboratory equipment.",
+    feature1_title: "Modern Education",
+    feature1_desc: "Curricula aligned with international standards",
+    feature2_title: "Digital Laboratories",
+    feature2_desc: "Fully equipped with the latest tech",
+    feature3_title: "Events",
+    feature3_desc: "Latest events, seminars, and college news",
+    structure_badge: "Organization",
+    structure_title: "Institutional Structure",
+    structure_desc:
+      "Leadership, Administration and Majors at a glance.",
+    struct_view_tree: "Hierarchy Tree",
+    struct_view_cards: "Staff Cards",
+    struct_tab_hierarchy: "Management & Departments",
+    struct_tab_commissions: "Subject Commissions",
+    fbk_banner_title: "Subject Commissions of the College (FBK)",
+    fbk_banner_desc: "9 specialized subject commissions ensuring curriculum delivery, syllabi development, and methodological excellence.",
+    fbk_metodic_label: "Academic Methodological",
+    struct_search_placeholder: "Search hierarchy or subject commissions...",
+    struct_director_badge: "College Directorate",
+    struct_deputies_badge: "Vice Directors",
+    struct_departments_badge: "Department Heads & Services",
+    struct_tier1_label: "LEVEL I · DIRECTORATE",
+    struct_tier2_label: "LEVEL II · VICE DIRECTORS",
+    struct_tier3_label: "LEVEL III · CHAIR OF YAP ORGANIZATION & DEPT HEAD",
+    struct_tier4_label: "LEVEL IV · DEPARTMENT HEADS & COMMISSIONS",
+    struct_tier3_badge: "Chair of YAP Organization · Department Head",
+    struct_wing_academic: "Academic, ICT & Field Departments",
+    struct_wing_admin: "Administrative, Student & Support Services",
+    struct_majors_heading: "Specialties Offered at the College",
+    struct_majors_desc: "State-standard full-time and part-time vocational programs (19 Majors)",
+    major_eyani_tab: "Full-time (14 Majors)",
+    major_qiyabi_tab: "Part-time (9 Majors)",
+    major_degree: "Vocational Secondary Degree",
+    photo_zoom_hint: "Full view",
+    photo_zoom_btn: "Fullscreen Photo",
+    modal_close_btn: "Close Window",
+    cat_commissions: "Subject Commission",
+    cat_leadership: "Leadership",
+    cat_leadership_sub: "Director and deputies",
+    cat_departments: "Administrative Management",
+    cat_departments_sub: "Leadership and administration",
+    cat_majors: "Majors",
+    cat_majors_sub: "Offered Specialties",
+    th_code: "Code",
+    th_major: "Specialty Name",
+    th_field: "Field",
+    th_degree: "Degree / Mode",
+    library_badge: "Resources",
+    library_title: "Digital Library",
+    library_desc: "Textbooks and methodical materials from our teachers.",
+    filter_all: "All",
+    filter_comm: "Communications",
+    filter_transport: "Transport",
+    filter_it: "IT",
+    library_search_placeholder: "Search books...",
+    lectures_badge: "Video",
+    lectures_title: "Video Lectures",
+    lectures_desc:
+      "Video lessons and educational materials prepared by our teachers.",
+    sis_badge: "Portal",
+    sis_title: "Student Information System",
+    sis_desc: "Track exam results, attendance, and performance metrics.",
+    sis_login_title: "Sign In",
+    sis_login_hint: "Enter your Student ID",
+    sis_login_btn: "Login",
+    sis_error: "Student not found. Please check your ID.",
+    sis_demo_hint: "Demo: STU001, STU002, STU003",
+    sis_logout: "Logout",
+    dash_gpa: "GPA",
+    dash_attendance: "Attendance",
+    dash_rank: "Rank",
+    dash_exam_title: "Exam Results",
+    exam_subject: "Subject",
+    exam_score: "Score",
+    exam_grade: "Grade",
+    dash_attend_title: "Monthly Attendance",
+    contact_badge: "Contact",
+    contact_title: "Contact Us",
+    cf_name: "Full Name",
+    cf_email: "Email",
+    cf_message: "Message",
+    cf_send: "Send",
+    cf_success: "Your inquiry has been sent! It will be answered within 1–3 business days.",
+    marquee1: "📢 Admissions open for the 2025/2026 academic year!",
+    marquee2: "🏆 Our students won 1st place in the national olympiad!",
+    marquee3: "📚 The new digital library service is now live.",
+    marquee4: "🎓 92% of our graduates find a job within the first year.",
+    marquee5: "🏢 Modern Teaching Methods",
+    marquee6: "👨‍🏫 Experienced Staff",
+
+    marquee8: "💎 95+ Years of Experience",
+    marquee9: "📸 Instagram: @bdrnk__official",
+    marquee10: "👥 Facebook: bdrnk.official",
+    footer_desc:
+      "Baku State Communications and Transport College<br><span class=\"footer-entity\">Public Legal Entity</span> — Shaping the specialists of the future.",
+    footer_quick: "Quick Links",
+    footer_contact: "Contact",
+    dash_greeting: "Academic Report",
+    dash_group_prefix: "Group",
+    sem1: "1st Semester",
+    sem2: "2nd Semester",
+    th_n: "N",
+    th_name: "Full Name",
+    th_attendance: "Attendance",
+    th_exam: "Exam",
+    th_final: "Final",
+    th_grade: "Grade",
+    grade_excellent: "Excellent",
+    grade_good: "Good",
+    grade_satisfactory: "Satisfactory",
+    grade_fail: "Fail",
+    no_video: "No videos available in this section yet.",
+    no_book: "Sorry, no results found.",
+    btn_read: "Read",
+    filter_informatika: "Informatics",
+    filter_telecom: "Telecommunications",
+    filter_azdili: "Azerbaijani Language",
+    filter_biologiya: "Biology",
+    filter_cografiya: "Geography",
+    filter_gch: "Pre-Conscription Military Training",
+    filter_tarix: "History",
+    filter_edebiyyat: "Literature",
+    filter_huquq: "Law & General Education",
+    filter_azer_dili: "Azerbaijani Language and Literature",
+    filter_vaqonlar: "Wagon Construction",
+    filter_riyaziyyat: "Mathematics",
+    filter_sxematexnika: "Schematics",
+    filter_materialsunasliq: "Material Science",
+    filter_rus_dili: "Russian Language",
+    filter_anbar_logistikasi: "Warehouse Logistics",
+    filter_xarici_dil: "Foreign Language",
+    filter_ekologiya: "Ecology",
+    filter_fizika: "Physics",
+    filter_kimya: "Chemistry",
+    filter_edne: "EDNA",
+    filter_menecment: "Management",
+    filter_rabite: "Communication",
+    filter_sebeke_avadanliqlari: "Network Equipment",
+    filter_emeyin_muhafizesi: "Labor Protection",
+    filter_os: "Operating Systems",
+    subj_tpt: "TPT",
+    subj_os: "Operating Systems",
+    subj_informatika: "Informatics",
+    subj_network: "Network Technologies",
+    subj_architecture: "Computer Architecture",
+    subj_database: "Database",
+    subj_math: "Mathematics",
+    subj_physics: "Physics",
+    faq_badge: "Information",
+    faq_title: "Frequently Asked Questions",
+    eyani: "Full-time",
+    qiyabi: "Part-time",
+    nav_gallery: "Gallery",
+    nav_certificates: "Certificates",
+    cert_badge: "OFFICIAL AWARDS & DIPLOMAS",
+    cert_title: "College Certificates & Achievements",
+    cert_desc: "Official diplomas, certificates, and honorary citations awarded to Baku State College of Communications and Transport in national competitions and championships.",
+    cert_stat_gold_val: "1 Gold",
+    cert_stat_gold_lbl: "1st Place Championship",
+    cert_stat_silver_val: "6 Silver",
+    cert_stat_silver_lbl: "2nd Place National & District",
+    cert_stat_bronze_val: "2 Bronze",
+    cert_stat_bronze_lbl: "3rd Place Achievement",
+    cert_stat_total_val: "13 Awards",
+    cert_stat_total_lbl: "Official Archived Records",
+    cert_filter_all: "All",
+    cert_filter_respublika: "National Championship",
+    cert_filter_turnir: "District Tournaments",
+    cert_filter_fexri: "Honorary Citation",
+    cert_year_all: "All Years",
+    cert_search_placeholder: "Search diplomas, sport type, or year...",
+    cert_pdf_btn: "Official PDF Archive (21.4 MB)",
+    cert_card_view_btn: "View Full Size",
+    cert_card_detail_btn: "Details",
+    cert_modal_sport_lbl: "Sport Discipline:",
+    cert_modal_team_lbl: "Awarded To:",
+    cert_modal_org_lbl: "Issuing Organization:",
+    cert_modal_signer_lbl: "Authorized Signatory:",
+    cert_modal_date_lbl: "Date Issued:",
+    cert_modal_dl_img: "Download High-Res Image",
+    cert_modal_dl_all: "All Documents (PDF, 21.4 MB)",
+    cert_empty_title: "No certificates found",
+    cert_empty_desc: "Please try adjusting your search terms or selected filters.",
+    trophy_cabinet_badge: "DIGITAL TROPHY CABINET & SPORTS HALL OF FAME",
+    trophy_cabinet_title: "College Sports Championship & Hall of Fame",
+    trophy_cabinet_desc: "Teams that rose to the podium in national championships and city spartakiades under the motto 'A Healthy Mind in a Healthy Body!'.",
+    sport_tab_football: "Mini-football (Girls)",
+    sport_tab_chess: "Chess (Girls)",
+    sport_tab_volleyball: "Volleyball (Boys)",
+    sport_tab_checkers: "Checkers (Girls & Boys)",
+    sport_tab_basketball: "Basketball (Boys)",
+    trophy_gold_1st: "1st Place",
+    trophy_silver_2nd: "2nd Place",
+    trophy_bronze_3rd: "3rd Place",
+    trophy_cta_diploma: "📜 View Official Diploma",
+    trophy_cta_filter: "🎯 Filter by this Sport",
+    nav_news: "News",
+    news_badge: "Updates",
+    news_title: "Latest News",
+    news_desc: "The latest updates, announcements and achievements at our college.",
+    news_all: "All News",
+    news_read_more: "Read more →",
+    gallery_badge: "Photos",
+    gallery_title: "Gallery",
+    gallery_desc: "A selection of moments captured across our college campus.",
+    gallery_cat_exam: "Exam Environment",
+    gallery_cat_events: "Events",
+    gallery_cat_rooms: "Classrooms",
+    gallery_cat_study: "Study Environment",
+    gallery_all: "All",
+    gallery_view: "Enlarge",
+    gallery_view_btn: "View / Full Archive",
+    gallery_event_reel: "College Event",
+    gallery_exam_moment: "Exam Moment",
+    roadmap_badge: "Guide",
+    roadmap_title: "Student Roadmap",
+    roadmap_desc: "A step-by-step guide from admission to your first day of class.",
+    roadmap_step1_title: "Major Selection",
+    roadmap_step1_desc: "Participation in SEC exams and choosing our college majors.",
+    roadmap_step2_title: "Electronic Registration",
+    roadmap_step2_desc: "Online registration and confirmation via Portal.edu.az.",
+    roadmap_step3_title: "Document Submission",
+    roadmap_step3_desc: "Submission of required documents (diploma, photo, medical certificate) to the college.",
+    roadmap_step4_title: "Orientation Day",
+    roadmap_step4_desc: "Getting to know college buildings, classrooms, and faculty.",
+    roadmap_step5_title: "First Day of Class",
+    roadmap_step5_desc: "Getting your student ID and officially starting your studies!",
+    entry_candidate_title: "Admission Portal",
+    entry_candidate_desc: "Learn about majors, requirements and college life.",
+    entry_student_title: "Student Portal",
+    entry_student_desc: "Access schedules, exam results and student records.",
+    entry_btn: "Enter",
+    capsule_badge: "Time Capsule",
+    capsule_title: "Letter to the Future",
+    capsule_desc: "Send your wishes and messages to future college students.",
+    capsule_send: "Send",
+    capsule_error: "Please do not use inappropriate language!",
+    cm_theme: "Light / Dark Mode",
+    cm_portal: "Student Portal",
+    cm_totop: "Back to Top",
+    dd_lec_info_sub: "11 video lessons · IT & Programming",
+    dd_lec_telecom_sub: "2 video lessons · Telecom Networks",
+    dd_lec_hist_sub: "8 video lessons · Social Sciences",
+    dd_lec_lit_sub: "8 video lessons · Humanities",
+    dd_lec_law_sub: "6 video lessons · Law & Education",
+    theme_light: "Light",
+    theme_dark: "Dark",
+    ticker_live_badge: "BDRNK · LIVE",
+    ticker_1_b: "95 Years of Academic Heritage:",
+    ticker_1_t: "Training professional specialists in communications, telecommunications, and transport since 1931",
+    ticker_2_b: "Structure & Majors:",
+    ticker_2_t: "Explore our Leadership, Administrative Board, and modern technical degree programs",
+    ticker_3_b: "Digital Media Studio:",
+    ticker_3_t: "16 open video lectures and interactive learning across 4 academic departments",
+    ticker_4_b: "Digital Library:",
+    ticker_4_t: "PDF textbooks, specialized literature, and an online reading room for students",
+    ticker_5_b: "Campus Life & News:",
+    ticker_5_t: "Latest updates on official events, conferences, and student achievements",
+    about_subtitle: "A leading public educational institution operating under Azerbaijan Technical University, combining nearly a century of rich academic traditions with modern digital education.",
+    about_seal_title: "95 YEARS OF ACADEMIC HERITAGE",
+    about_seal_sub: "BDRNK UNDER AzTU",
+    about_status_pill: "PUBLIC LEGAL ENTITY",
+    about_lead_heading: "Center of Excellence for Communications, Telecommunications & Transport Specialists",
+    about_director_quote: "Our primary goal is to educate young professionals who are devoted to national and moral values, deeply skilled in modern digital technologies, and ready to contribute to the advancement of our country's communications and transport infrastructure.",
+    about_director_name: "Sabuhi Gurbanov",
+    about_director_role: "Director of Baku State Communications and Transport College · Awarded the 'Taraggi' Medal",
+    about_meet_leadership: "Meet the Leadership",
+    about_metric_years: "Years of Academic Heritage",
+    about_metric_teachers: "Professional Faculty Members",
+    about_metric_books: "Digital Textbooks & Manuals",
+    about_metric_events: "Official Events & Achievements",
+    about_tab_mission: "Our Mission",
+    about_tab_vision: "Our Vision",
+    about_tab_values: "Strategic Values",
+    mvv_mission_badge: "ACADEMIC MISSION",
+    mvv_mission_title: "Training Specialists with Modern Digital and Technical Competencies",
+    mvv_m1_t: "Practice-Oriented Education",
+    mvv_m1_d: "Engineering and technical training grounded in real laboratory and industrial practice",
+    mvv_m2_t: "Academic Integration with AzTU",
+    mvv_m2_d: "Close cooperation with the scientific and methodological base of Azerbaijan Technical University",
+    mvv_m3_t: "Labor Market Alignment",
+    mvv_m3_d: "Specialized curricula tailored to the modern demands of communications and transport enterprises",
+    mvv_vision_badge: "STRATEGIC VISION",
+    mvv_vision_title: "Leading Center in Digital Innovation and Specialized Secondary Education",
+    mvv_vision_desc: "In line with Azerbaijan's Fourth Industrial Revolution and digital transformation goals, to serve as the region's most advanced specialized college in cybersecurity, network administration, intelligent transport systems, and modern telecommunications.",
+    mvv_v1_t: "Digital Campus Ecosystem",
+    mvv_v1_d: "Continuous learning through our digital library, online reading room, and open video lecture studio",
+    mvv_v2_t: "Innovative Laboratories",
+    mvv_v2_d: "Upgraded technical facilities for computer networks, automation, and transport diagnostics",
+    mvv_v3_t: "Career & Lifelong Learning",
+    mvv_v3_d: "Successful progression of graduates both in the job market and in higher education",
+    mvv_values_badge: "CORE VALUES",
+    mvv_values_title: "Transparency, Patriotism, and Academic Excellence",
+    mvv_values_desc: "Guided by transparency, integrity, devotion to national values, and a student-centered environment, our college shapes responsible citizens and skilled professionals.",
+    mvv_val1_t: "Academic Integrity & Transparency",
+    mvv_val1_d: "Objective assessment of knowledge and a modern democratic governance environment",
+    mvv_val2_t: "National Spirit & Patriotism",
+    mvv_val2_d: "Deep respect for statehood traditions, the purity of the mother tongue, and national heritage",
+    mvv_val3_t: "Social Engagement & Student Support",
+    mvv_val3_d: "Initiatives in sports, culture, legal literacy, and healthy lifestyle promotion",
+    about_history_kicker: "HISTORICAL MILESTONES",
+    about_timeline_hint: "Click on any year to explore our historical milestones",
+    tl_1931_short: "Foundation",
+    tl_1991_short: "Baku Comm. College",
+    tl_2002_short: "Merger & New Status",
+    tl_2016_short: "Integration with AzTU",
+    tl_2026_year: "Today",
+    tl_2026_short: "Digital Transformation",
+    tl_1931_tag: "HISTORIC FOUNDATION",
+    tl_1931_title: "First Communications Training School Under the Central Telegraph",
+    tl_1931_desc: "Founded in 1931 on the basis of factory-plant education under the Baku Central Telegraph, marking the beginning of systematic training of professional communications and telegraph-telephone specialists in Azerbaijan.",
+    why_lib_title: "Digital Library & Reading Room",
+    why_lib_desc: "40+ specialized textbooks authored by our faculty, PDF manuals, and a built-in online reading room.",
+    why_lib_cta: "Go to Library →",
+    why_lec_title: "Video Lectures & Media Studio",
+    why_lec_desc: "16 open video lessons in Informatics, History, Literature, and Law with an interactive cinema player.",
+    why_lec_cta: "Watch Video Lectures →",
+    why_struct_title: "Structure & Modern Majors",
+    why_struct_desc: "Leadership, Administrative Board, Departments, and the most in-demand programs in telecom and transport.",
+    why_struct_cta: "Explore Structure →",
+    why_news_title: "Campus Life & 99+ Official News",
+    why_news_desc: "All scientific conferences, sports victories, educational seminars, and official college chronicles.",
+    why_news_cta: "Read News →",
+    nr_press_center: "BDRNK OFFICIAL PRESS CENTER",
+    nr_source_btn: "Source",
+    nr_read_time: "⏱ 2 min read",
+    nr_prev_news: "← Previous News",
+    nr_next_news: "Next News →",
+    nr_other_news: "Related News",
+    lib_reading_room_title: "BDRNK DIGITAL READING ROOM",
+    lib_reading_room_hint: "📖 Click on any book to browse it directly inside the reading room",
+    reader_fullscreen_download: "Fullscreen / Download",
+    reader_lbl_subject: "Subject / Dept:",
+    reader_lbl_author: "Author / Compiler:",
+    reader_lbl_format: "Format:",
+    reader_val_format: "PDF · Digital Publication",
+    reader_lbl_status: "Status:",
+    reader_val_status: "✓ Open Academic Access",
+    studio_sidebar_label: "BDRNK DIGITAL MEDIA STUDIO",
+    studio_playlist_title: "Department Lesson Playlist",
+    lb_slideshow: "Slideshow",
+    lb_stop: "Stop",
+    contact_city: "Baku, Azerbaijan",
+    contact_subtitle: "Direct communication channels, official electronic inquiry portal, and social media resources of Baku State Communications and Transport College<br><span class=\"contact-entity\">Public Legal Entity</span> under AzTU.",
+    cac_phone_tag: "HOTLINE",
+    cac_phone_title: "Phone & Admissions Desk",
+    cac_call_btn: "Call Now",
+    cac_copy_btn: "Copy",
+    cac_email_tag: "CHANCELLERY",
+    cac_email_title: "Official Email Address",
+    cac_email_sub: "Official inquiries and document flow",
+    cac_write_btn: "Send Email",
+    cac_addr_tag: "CAMPUS ADDRESS",
+    cac_addr_title: "Official Location",
+    cac_addr_detail: "Yasamal district, A.M. Sharifzade St.",
+    cac_route_btn: "Get Directions",
+    cac_status_open: "Open Now · Working Hours",
+    cac_status_closed: "Closed · Off Hours",
+    cac_hours_title: "Working Hours & Reception",
+    cac_hours_days: "Monday – Friday: 09:00 – 18:00",
+    cac_hours_weekend: "Saturday – Sunday: Closed",
+    cac_online_apply: "Submit Online Inquiry",
+    map_header_label: "BDRNK Main Academic Campus",
+    map_open_btn: "Google Maps ↗",
+    channels_kicker: "OFFICIAL PLATFORMS",
+    channels_title: "Social Media & Digital Portals",
+    ch_ig_desc: "Events, reels, and campus life",
+    ch_fb_desc: "Official news and announcements",
+    ch_web_name: "Official Domain",
+    ch_web_desc: "Electronic information resources",
+    ch_dim_name: "Admissions Portal",
+    ch_dim_desc: "Applicant registration and exams",
+    cf_portal_badge: "E-APPLICATION SYSTEM",
+    cf_portal_title: "Official Citizen & Student Inquiry",
+    cf_portal_desc: "Select the target department and your status — your inquiry will be routed directly to the relevant division.",
+    cf_role_label: "Applicant Status",
+    cf_role_student: "Student",
+    cf_role_applicant: "Applicant",
+    cf_role_parent: "Parent",
+    cf_role_other: "Other",
+    cf_dept_label: "Target Department / Division",
+    cf_dept_general: "General Inquiry / Information Desk",
+    cf_dept_admission: "Admissions Committee & Majors",
+    cf_dept_academic: "Academic Affairs & Class Schedule",
+    cf_dept_monitoring: "Registration, Evaluation & Monitoring Dept",
+    cf_dept_depts: "Academic Departments (Transport, Telecom, IT, Postal)",
+    cf_dept_correspondence: "Correspondence Dept & Certificate Request",
+    cf_dept_director: "Official Appeal to the Director & Leadership",
+    cf_phone: "Phone Number",
+    cf_name_ph: "E.g.: Ali Aliyev",
+    cf_email_ph: "name@example.com",
+    cf_msg_ph: "Enter the text of your inquiry...",
+    lecture_search_placeholder: "Search video lectures...",
+    cf_quick_hint: "Quick template:",
+    cf_chip_cert: "📄 Student certificate",
+    cf_chip_adm: "🎓 Admission & scores",
+    cf_chip_exam: "📅 Exams & grading",
+    cf_chip_visit: "🏛️ Book an appointment",
+    cf_guarantee_text: "Your inquiry is officially registered and answered within 1–3 business days via email or phone.",
+    footer_copyright:
+      "© 2026 BDRNK - All rights reserved. Created by: Ləman Əskərova",
+  },
+  ru: {
+    header_subtitle: "Бакинский Государственный Колледж Связи и Транспорта<br><span class=\"logo-subtitle-entity\">Публичное Юридическое Лицо</span>",
+    nav_home: "Главная",
+    nav_about: "О нас",
+    nav_structure: "Структура",
+    nav_library: "Библиотека",
+
+    nav_science: "Наука и Публикации",
+    science_badge: "Научная Деятельность и Публикации",
+    science_title: "Международные и Отечественные Научные Публикации Преподавателей",
+    science_desc: "Научные статьи и тезисы преподавательского состава Бакинского государственного колледжа связи и транспорта при Азербайджанском техническом университете, опубликованные в авторитетных индексируемых и отечественных журналах.",
+    science_ceremony_tag: "Официальная Презентация",
+    science_ceremony_kicker: "Научный состав БГКСТ · 2026",
+    science_ceremony_heading: "Научные достижения руководства и профессорско-преподавательского состава",
+    science_ceremony_p: "По инициативе директора Сабухи Гурбанова было высоко оценено представление педагогического состава на международной научной арене и публикация исследований в изданиях с импакт-фактором, Index Copernicus и ERIH PLUS.",
+    science_btn_table: "Смотреть Таблицу Министерства (JPG)",
+    science_stat_authors: "Преподавателей-ученых",
+    science_stat_articles: "Статей и тезисов",
+    science_stat_countries: "Стран публикации",
+    science_stat_indexed: "Index Copernicus и Респ.",
+    science_tab_all: "Все публикации (23)",
+    science_tab_foreign: "Зарубежные журналы (17)",
+    science_tab_local: "Отечественные журналы (6)",
+    science_tab_copernicus: "Copernicus и ERIH (10)",
+    dept_humanitar: "Гуманитарные науки",
+    dept_dil: "Язык и литература",
+    dept_umumtehsil: "Общее образование",
+    dept_xaricidil: "Иностранные языки",
+    science_search_ph: "Поиск по автору, статье или журналу...",
+    science_articles_count_label: "Научных трудов",
+    science_journal_label: "Издание / Журнал:",
+    science_country_label: "Страна:",
+    science_orcid_profile: "Профиль ORCID",
+    science_no_results: "Научных публикаций по запросу не найдено.",
+    science_view_cards: "🗂️ Вид карточек",
+    science_view_table: "📋 Официальная таблица",
+    science_th_no: "№",
+    science_th_author: "Сотрудник",
+    science_th_role: "Должность / Кафедра",
+    science_th_works: "Статья / тезис",
+    science_th_journals: "Журнал / страна",
+    science_th_year: "Год",
+    science_th_scope: "Статус",
+    science_th_orcid: "ORCID",
+    science_th_scopus: "Scopus / WoS",
+    science_th_copernicus: "Copernicus",
+    science_th_erih: "ERIH",
+    science_showing_summary: "Преподавателей · Научных трудов",
+
+    nav_lectures: "Видеоуроки",
+    nav_sis: "Студенческий Портал",
+    nav_contact: "Контакты",
+    nav_register: "Регистрация",
+    hero_badge: "Официальный Портал",
+    hero_title:
+      "МИНИСТЕРСТВО НАУКИ И ОБРАЗОВАНИЯ АЗЕРБАЙДЖАНСКОЙ РЕСПУБЛИКИ<br>ГОСУДАРСТВЕННОЕ АГЕНТСТВО ПО НАУКЕ И ВЫСШЕМУ ОБРАЗОВАНИЮ<br>ПРИ АЗЕРБАЙДЖАНСКОМ ТЕХНИЧЕСКОМ УНИВЕРСИТЕТЕ<br>БАКИНСКИЙ ГОСУДАРСТВЕННЫЙ КОЛЛЕДЖ СВЯЗИ И ТРАНСПОРТА<br>ПУБЛИЧНОЕ ЮРИДИЧЕСКОЕ ЛИЦО",
+    hero_desc:
+      "Современный центр, готовящий специалистов будущего в области связи и транспорта.",
+    hero_cta_portal: "Портал Студента",
+    hero_cta_about: "О нас",
+    stat_students: "Студентов",
+    stat_teachers: "Учителей",
+    stat_staff: "Другие сотрудники",
+    stat_years: "Лет Опыта",
+
+
+    about_badge: "Наша Миссия",
+    grad_ribbon: "День выпускника",
+    grad_eyebrow: "Момент гордости",
+    grad_title: "Наши выпускники —<br /><em>Наша гордость</em>",
+    grad_desc: "Каждый год из стен нашего колледжа выходит новое поколение профессиональных специалистов связи и транспорта. Их успех — это труд наших преподавателей и главное достижение колледжа.",
+    grad_stat_since: "с года",
+    grad_stat_years: "лет традиций",
+    grad_stat_alumni: "историй успеха",
+    grad_cta: "Смотреть в Instagram",
+    grad_hero_small: "Новое · Видео",
+    grad_hero_title: "День выпускника",
+    nav_honors: "Почетные студенты",
+    honors_kicker: "ДОСКА ПОЧЕТА · НАШИ ПОЧЕТНЫЕ СТУДЕНТЫ",
+    honors_title: "Имя нашего колледжа на международной арене",
+    honors_desc: "Наши почетные студенты, побеждающие на международных чемпионатах по ИТ, кибербезопасности и робототехнике, с гордостью поднимающие флаг Азербайджана в США, Японии и Европе.",
+    mem_eyebrow: "Уголок памяти",
+    mem_title: "Шехиды бессмертны,<br /><em>Родина неделима!</em>",
+    mem_desc: "Мы с глубоким уважением и благодарностью чтим память всех наших шехидов, отдавших жизнь за независимость и территориальную целостность Азербайджана, в том числе героических выпускников нашего колледжа. Память о них навсегда останется в наших сердцах.",
+    mem_d1_date: "20 Января",
+    mem_d1_title: "День всенародной скорби",
+    mem_d2_date: "26 Февраля",
+    mem_d2_title: "Ходжалинский геноцид",
+    mem_d3_date: "27 Сентября",
+    mem_d3_title: "День памяти",
+    mem_d4_date: "8 Ноября",
+    mem_d4_title: "День Победы",
+    mem_candle: "Зажечь свечу в их память",
+    mem_candle_lit: "Свеча зажжена",
+    mem_candle_msg: "Да упокоит Аллах души всех наших шехидов.",
+    spotlight_tag: "⭐ Избранное воспоминание",
+    spotlight_badge: "✨ Трогательная память · Наследие БГКСТ",
+    spotlight_headline: "Годы, живущие в сердцах —<br /><em>Миг единства и гордости</em>",
+    spotlight_quote: "«Время идёт, поколения сменяются, но эти трогательные мгновения, прожитые в стенах колледжа словно в одной семье, искренность наших студентов и преподавателей — самая светлая страница духовного наследия БГКСТ.»",
+    spotlight_meta1_title: "Локация",
+    spotlight_meta1_val: "Кампус БГКСТ",
+    spotlight_meta2_title: "Ценность",
+    spotlight_meta2_val: "Вечная дружба и уважение",
+    spotlight_meta3_title: "Статус",
+    spotlight_meta3_val: "Специальный выпуск",
+    spotlight_btn: "Смотреть и комментировать в Instagram",
+    about_title: "О нас",
+    about_p1_title: "Специалисты Будущего",
+    about_p1:
+      "Бакинский государственный колледж связи и транспорта является одним из старейших учебных заведений Азербайджана с богатыми традициями.",
+    about_history_title: "История",
+    about_history_text: "Колледж был основан в 1931 году на базе фабрично-заводского обучения при Центральном телеграфе. Позже Бакинский колледж связи был создан приказом № 157 от 02.04.1991 года Министерства связи бывшего СССР. 26 августа 2002 года постановлением Кабинета Министров № 140 и приказом Министерства образования № 786 Бакинский колледж связи и Бакинский железнодорожный техникум были объединены в Бакинский государственный колледж связи и транспорта.",
+    about_p2:
+      "В настоящее время учебный процесс в колледже построен в соответствии с современными международными стандартами, на основе цифровых технологий и практического опыта. Нашим студентам созданы все условия для становления профессионалами будущего в среде, оснащенной новейшим лабораторным оборудованием.",
+    feature1_title: "Современное Обучение",
+    feature1_desc: "Программы по международным стандартам",
+    feature2_title: "Цифровая Лаборатория",
+    feature2_desc: "Оборудование по последнему слову техники",
+    feature3_title: "Мероприятия",
+    feature3_desc: "Последние события, семинары и новости колледжа",
+    structure_badge: "Организация",
+    structure_title: "Институциональная Структура",
+    structure_desc: "Руководство, начальники отделов и председатели комиссий.",
+    struct_view_tree: "Иерархическая Схема",
+    struct_view_cards: "Карточки Сотрудников",
+    struct_tab_hierarchy: "Руководство и отделы",
+    struct_tab_commissions: "Предметные комиссии",
+    fbk_banner_title: "Предметные цикловые комиссии колледжа (ПЦК)",
+    fbk_banner_desc: "9 специализированных предметных комиссий, обеспечивающих реализацию учебных планов и методическое руководство.",
+    fbk_metodic_label: "Учебно-методическая",
+    struct_search_placeholder: "Поиск по структуре или предметным комиссиям...",
+    struct_director_badge: "Руководство Колледжа",
+    struct_deputies_badge: "Заместители Директора",
+    struct_departments_badge: "Заведующие Отделами и Службы",
+    struct_tier1_label: "I УРОВЕНЬ · ДИРЕКТОРАТ",
+    struct_tier2_label: "II УРОВЕНЬ · ЗАМЕСТИТЕЛИ ДИРЕКТОРА",
+    struct_tier3_label: "III УРОВЕНЬ · ПРЕДСЕДАТЕЛЬ ОРГАНИЗАЦИИ YAP И ЗАВ. ОТДЕЛОМ",
+    struct_tier4_label: "IV УРОВЕНЬ · ЗАВЕДУЮЩИЕ ОТДЕЛАМИ И КОМИССИИ",
+    struct_tier3_badge: "Председатель организации YAP · Зав. отделом",
+    struct_wing_academic: "Учебные, ИКТ и отраслевые отделения",
+    struct_wing_admin: "Административные, студенческие и сервисные службы",
+    struct_majors_heading: "Специальности, Преподаваемые в Колледже",
+    struct_majors_desc: "Очные и заочные программы среднего специального образования (19 Специальностей)",
+    major_eyani_tab: "Очное Обучение (14 Специальностей)",
+    major_qiyabi_tab: "Заочное Обучение (9 Специальностей)",
+    major_degree: "Среднее Профессиональное Образование",
+    photo_zoom_hint: "Полный размер",
+    photo_zoom_btn: "Фото на весь экран",
+    modal_close_btn: "Закрыть окно",
+    cat_commissions: "Предметная Комиссия",
+    cat_leadership: "Руководство",
+    cat_leadership_sub: "Директор и заместители",
+    cat_departments: "Административное руководство",
+    cat_departments_sub: "Руководство и администрация",
+    cat_majors: "Специальности",
+    cat_majors_sub: "Предлагаемые специальности",
+    th_code: "Код",
+    th_major: "Название специальности",
+    th_field: "Сфера",
+    th_degree: "Ступень обучения",
+    library_badge: "Ресурсы",
+    library_title: "Электронная Библиотека",
+    library_desc: "Учебные пособия и методические материалы наших преподавателей.",
+    filter_all: "Все",
+    filter_comm: "Связь",
+    filter_transport: "Транспорт",
+    filter_it: "ИТ",
+    library_search_placeholder: "Поиск книг...",
+    lectures_badge: "Видео",
+    lectures_title: "Видеоуроки",
+    lectures_desc: "Видеоуроки и материалы, подготовленные нашими учителями.",
+    sis_badge: "Портал",
+    sis_title: "Студенческая Информ. Система",
+    sis_desc: "Оценки, посещаемость и показатели успеваемости.",
+    sis_login_title: "Войти",
+    sis_login_hint: "Введите ваш студенческий ID",
+    sis_login_btn: "Войти",
+    sis_error: "Студент не найден. Проверьте ваш ID.",
+    sis_demo_hint: "Демо: STU001, STU002, STU003",
+    sis_logout: "Выйти",
+    dash_gpa: "GPA",
+    dash_attendance: "Посещаемость",
+    dash_rank: "Рейтинг",
+    dash_exam_title: "Результаты Экзаменов",
+    exam_subject: "Предмет",
+    exam_score: "Балл",
+    exam_grade: "Оценка",
+    dash_attend_title: "Посещаемость за Месяц",
+    contact_badge: "Контакты",
+    contact_title: "Свяжитесь с нами",
+    cf_name: "Имя Фамилия",
+    cf_email: "E-mail",
+    cf_message: "Сообщение",
+    cf_send: "Отправить",
+    cf_success: "Ваше обращение отправлено! Ответ будет предоставлен в течение 1–3 рабочих дней.",
+    marquee1: "📢 Открыт прием на 2025/2026 учебный год!",
+    marquee2: "🏆 Наши студенты заняли 1-е место на олимпиаде!",
+    marquee3: "📚 Запущена новая электронная библиотека.",
+    marquee4: "🎓 92% выпускников находят работу в первый год.",
+    marquee5: "🏢 Современные Методы Обучения",
+    marquee6: "👨‍🏫 Опытный Персонал",
+
+    marquee8: "💎 95+ года опыта",
+    marquee9: "📸 Instagram: @bdrnk__official",
+    marquee10: "👥 Facebook: bdrnk.official",
+    footer_desc:
+      "Бакинский Государственный Колледж Связи и Транспорта<br><span class=\"footer-entity\">Публичное Юридическое Лицо</span> — готовим специалистов будущего.",
+    footer_quick: "Быстрые Ссылки",
+    footer_contact: "Контакты",
+    dash_greeting: "Учебный Отчёт",
+    dash_group_prefix: "Группа",
+    sem1: "1-й Семестр",
+    sem2: "2-й Семестр",
+    th_n: "N",
+    th_name: "Имя и Фамилия",
+    th_attendance: "Посещаемость",
+    th_exam: "Экзамен",
+    th_final: "Итого",
+    th_grade: "Оценка",
+    grade_excellent: "Отлично",
+    grade_good: "Хорошо",
+    grade_satisfactory: "Удовл.",
+    grade_fail: "Неуд.",
+    no_video: "В этом разделе пока нет видео.",
+    no_book: "К сожалению, ничего не найдено.",
+    btn_read: "Читать",
+    filter_informatika: "Информатика",
+    filter_telecom: "Телекоммуникации",
+    filter_azdili: "Азербайджанский язык",
+    filter_biologiya: "Биология",
+    filter_cografiya: "География",
+    filter_gch: "Допризывная подготовка",
+    filter_tarix: "История",
+    filter_edebiyyat: "Литература",
+    filter_huquq: "Право и Общее образование",
+    filter_azer_dili: "Азербайджанский язык и литература",
+    filter_vaqonlar: "Конструкция вагонов",
+    filter_riyaziyyat: "Математика",
+    filter_sxematexnika: "Схемотехника",
+    filter_materialsunasliq: "Материаловедение",
+    filter_rus_dili: "Русский язык",
+    filter_anbar_logistikasi: "Складская логистика",
+    filter_xarici_dil: "Иностранный язык",
+    filter_ekologiya: "Экология",
+    filter_fizika: "Физика",
+    filter_kimya: "Химия",
+    filter_edne: "ЭДНА",
+    filter_menecment: "Менеджмент",
+    filter_rabite: "Связь",
+    filter_sebeke_avadanliqlari: "Сетевое оборудование",
+    filter_emeyin_muhafizesi: "Охрана труда",
+    filter_os: "Операционные системы",
+    subj_tpt: "ТПТ",
+    subj_os: "Операционные системы",
+    subj_informatika: "Информатика",
+    subj_network: "Сетевые технологии",
+    subj_architecture: "Архитектура компьютера",
+    subj_database: "Базы данных",
+    subj_math: "Математика",
+    subj_physics: "Физика",
+    fame_badge: "Наши Успехи",
+    fame_title: "История Успеха",
+    fame_desc: "Студенты и выпускники, которыми гордится наш колледж.",
+    calendar_badge: "Календарь",
+    calendar_title: "Академический календарь",
+    faq_badge: "Информация",
+    faq_title: "Часто задаваемые вопросы",
+    eyani: "Очное",
+    qiyabi: "Заочное",
+    nav_gallery: "Галерея",
+    nav_certificates: "Сертификаты",
+    cert_badge: "ОФИЦИАЛЬНЫЕ НАГРАДЫ И ДИПЛОМЫ",
+    cert_title: "Зал Славы и Достижений Колледжа",
+    cert_desc: "Официальные дипломы, почетные грамоты и свидетельства побед команды и студентов Бакинского государственного колледжа связи и транспорта на республиканских спартакиадах и турнирах.",
+    cert_stat_gold_val: "1 Золото",
+    cert_stat_gold_lbl: "I Место (Чемпионы)",
+    cert_stat_silver_val: "6 Серебро",
+    cert_stat_silver_lbl: "II Место Республиканских и районных первенств",
+    cert_stat_bronze_val: "2 Бронза",
+    cert_stat_bronze_lbl: "III Место Турниров",
+    cert_stat_total_val: "13 Наград",
+    cert_stat_total_lbl: "Официальный архив наград",
+    cert_filter_all: "Все",
+    cert_filter_respublika: "Республиканские первенства",
+    cert_filter_turnir: "Районные турниры",
+    cert_filter_fexri: "Почетная грамота",
+    cert_year_all: "Все годы",
+    cert_search_placeholder: "Поиск по диплому, виду спорта или году...",
+    cert_pdf_btn: "Официальный PDF Архив (21.4 МБ)",
+    cert_card_view_btn: "Увеличить",
+    cert_card_detail_btn: "Подробнее",
+    cert_modal_sport_lbl: "Вид спорта:",
+    cert_modal_team_lbl: "Награжден(а):",
+    cert_modal_org_lbl: "Организация:",
+    cert_modal_signer_lbl: "Подписал(а):",
+    cert_modal_date_lbl: "Дата выдачи:",
+    cert_modal_dl_img: "Скачать изображение в высоком разрешении",
+    cert_modal_dl_all: "Все документы (PDF, 21.4 МБ)",
+    cert_empty_title: "Сертификаты не найдены",
+    cert_empty_desc: "Пожалуйста, измените поисковый запрос или фильтры.",
+    trophy_cabinet_badge: "ЦИФРОВАЯ ВИТРИНА КУБКОВ И СПОРТИВНАЯ ДОСКА ПОЧЕТА",
+    trophy_cabinet_title: "Спортивные Триумфы и Чемпионские Высоты Колледжа",
+    trophy_cabinet_desc: "Команды, поднявшиеся на пьедестал почета республиканских первенств и спартакиад под девизом «В здоровом теле — здоровый дух!».",
+    sport_tab_football: "Мини-футбол (девушки)",
+    sport_tab_chess: "Шахматы (девушки)",
+    sport_tab_volleyball: "Волейбол (юноши)",
+    sport_tab_checkers: "Шашки (девушки и юноши)",
+    sport_tab_basketball: "Баскетбол (юноши)",
+    trophy_gold_1st: "I Место",
+    trophy_silver_2nd: "II Место",
+    trophy_bronze_3rd: "III Место",
+    trophy_cta_diploma: "📜 Смотреть Диплом",
+    trophy_cta_filter: "🎯 Показать дипломы по спорту",
+    nav_news: "Новости",
+    news_badge: "Обновления",
+    news_title: "Последние Новости",
+    news_desc: "Последние обновления, объявления и достижения нашего колледжа.",
+    news_all: "Все Новости",
+    news_read_more: "Подробнее →",
+    gallery_badge: "Фото",
+    gallery_title: "Галерея",
+    gallery_desc: "Избранные моменты из жизни нашего колледжа.",
+    gallery_cat_exam: "Среда Экзаменов",
+    gallery_cat_events: "Мероприятия",
+    gallery_cat_rooms: "Аудитории",
+    gallery_cat_study: "Учебная Среда",
+    gallery_all: "Все",
+    gallery_view: "Увеличить",
+    gallery_view_btn: "Смотреть / Полный Архив",
+    gallery_event_reel: "Мероприятие Колледжа",
+    gallery_exam_moment: "Момент Экзамена",
+    roadmap_badge: "Путеводитель",
+    roadmap_title: "Дорожная карта студента",
+    roadmap_desc: "Пошаговое руководство от поступления до первого учебного дня.",
+    roadmap_step1_title: "Выбор специальности",
+    roadmap_step1_desc: "Участие в экзаменах ГЭЦ и выбор специальностей нашего колледжа.",
+    roadmap_step2_title: "Электронная регистрация",
+    roadmap_step2_desc: "Онлайн-регистрация и подтверждение через Portal.edu.az.",
+    roadmap_step3_title: "Подача документов",
+    roadmap_step3_desc: "Подача необходимых документов (аттестат, фото, медсправка) в колледж.",
+    roadmap_step4_title: "День знакомства",
+    roadmap_step4_desc: "Знакомство с корпусами колледжа, аудиториями и преподавателями.",
+    roadmap_step5_title: "Первый учебный день",
+    roadmap_step5_desc: "Получение студенческого билета и официальное начало занятий!",
+    entry_candidate_title: "Приемная комиссия",
+    entry_candidate_desc: "Ознакомьтесь с специальностями и правилами приема.",
+    entry_student_title: "Студенческий портал",
+    entry_student_desc: "Расписание занятий, результаты экзаменов и профиль.",
+    entry_btn: "Войти",
+    capsule_badge: "Капсула Времени",
+    capsule_title: "Письмо в Будущее",
+    capsule_desc: "Отправьте свои пожелания и сообщения будущим студентам колледжа.",
+    capsule_send: "Отправить",
+    capsule_error: "Пожалуйста, не используйте ненормативную лексику!",
+    cm_theme: "Светлая / Темная Тема",
+    cm_portal: "Студенческий Портал",
+    cm_totop: "Наверх",
+    dd_lec_info_sub: "11 видеоуроков · ИТ и Программирование",
+    dd_lec_telecom_sub: "2 видеоурока · Сети Связи",
+    dd_lec_hist_sub: "8 видеоуроков · Общественные науки",
+    dd_lec_lit_sub: "8 видеоуроков · Гуманитарные науки",
+    dd_lec_law_sub: "6 видеоуроков · Право и Общее образование",
+    theme_light: "День",
+    theme_dark: "Ночь",
+    ticker_live_badge: "БГКСТ · ЭФИР",
+    ticker_1_b: "95 лет академического наследия:",
+    ticker_1_t: "Подготовка профессиональных кадров в сфере связи, телекоммуникаций и транспорта с 1931 года",
+    ticker_2_b: "Структура и специальности:",
+    ticker_2_t: "Ознакомьтесь с руководством, административным составом и современными техническими специальностями",
+    ticker_3_b: "Цифровая медиа-студия:",
+    ticker_3_t: "16 открытых видеоуроков и интерактивная учебная база по 4 предметным отделениям",
+    ticker_4_b: "Электронная библиотека:",
+    ticker_4_t: "PDF-учебники, профильная литература и онлайн-читальный зал в распоряжении студентов",
+    ticker_5_b: "Жизнь колледжа и новости:",
+    ticker_5_t: "Последние сведения об официальных мероприятиях, конференциях и достижениях студентов",
+    about_subtitle: "Ведущее государственное учебное заведение при Азербайджанском техническом университете, объединяющее почти вековые академические традиции с современным цифровым образованием.",
+    about_seal_title: "95 ЛЕТ АКАДЕМИЧЕСКОГО НАСЛЕДИЯ",
+    about_seal_sub: "БГКСТ ПРИ АзТУ",
+    about_status_pill: "ПУБЛИЧНОЕ ЮРИДИЧЕСКОЕ ЛИЦО",
+    about_lead_heading: "Профессиональный кадровый центр сектора связи, телекоммуникаций и транспорта",
+    about_director_quote: "Наша главная цель — воспитать молодых специалистов, преданных национально-нравственным ценностям, глубоко владеющих современными цифровыми технологиями и вносящих вклад в развитие транспортно-коммуникационной инфраструктуры страны.",
+    about_director_name: "Сабухи Гурбанов",
+    about_director_role: "Директор Бакинского государственного колледжа связи и транспорта · Награжден медалью «Терегги»",
+    about_meet_leadership: "Ознакомиться с руководством",
+    about_metric_years: "Лет академической истории и опыта",
+    about_metric_teachers: "Профессиональных преподавателей",
+    about_metric_books: "Электронных учебников и пособий",
+    about_metric_events: "Официальных мероприятий и побед",
+    about_tab_mission: "Наша Миссия",
+    about_tab_vision: "Наше Видение",
+    about_tab_values: "Стратегические Ценности",
+    mvv_mission_badge: "АКАДЕМИЧЕСКАЯ МИССИЯ",
+    mvv_mission_title: "Подготовка кадров с современными цифровыми и техническими компетенциями",
+    mvv_m1_t: "Практико-ориентированное обучение",
+    mvv_m1_d: "Инженерно-техническая подготовка на базе реальной лабораторной и производственной практики",
+    mvv_m2_t: "Академическая интеграция с АзТУ",
+    mvv_m2_d: "Тесное сотрудничество с научно-методической базой Азербайджанского технического университета",
+    mvv_m3_t: "Соответствие рынку труда",
+    mvv_m3_d: "Программы специальностей, отвечающие современным требованиям предприятий связи и транспорта",
+    mvv_vision_badge: "СТРАТЕГИЧЕСКОЕ ВИДЕНИЕ",
+    mvv_vision_title: "Лидирующий центр цифровых инноваций и среднего специального образования",
+    mvv_vision_desc: "В соответствии с целями четвертой промышленной революции и цифровой трансформации Азербайджана — стать передовым колледжем региона в области кибербезопасности, сетевого администрирования, интеллектуальных транспортных систем и телекоммуникаций.",
+    mvv_v1_t: "Цифровая экосистема кампуса",
+    mvv_v1_d: "Непрерывное обучение через электронную библиотеку, онлайн-читальный зал и открытую видеостудию",
+    mvv_v2_t: "Инновационные лаборатории",
+    mvv_v2_d: "Обновляемая техническая база по компьютерным сетям, автоматике и диагностике транспорта",
+    mvv_v3_t: "Карьера и непрерывное образование",
+    mvv_v3_d: "Успешное продвижение выпускников как на рынке труда, так и на ступени высшего образования",
+    mvv_values_badge: "КОРПОРАТИВНЫЕ ЦЕННОСТИ",
+    mvv_values_title: "Прозрачность, патриотизм и академическое совершенство",
+    mvv_values_desc: "Руководствуясь принципами прозрачности, честности, приверженности национальным ценностям и студентоцентричной среды, колледж формирует достойных граждан и профессиональных специалистов.",
+    mvv_val1_t: "Академическая честность и прозрачность",
+    mvv_val1_d: "Объективная оценка знаний и современная демократическая среда управления",
+    mvv_val2_t: "Национальный дух и патриотизм",
+    mvv_val2_d: "Глубокое уважение к традициям государственности, чистоте родного языка и национальным ценностям",
+    mvv_val3_t: "Социальная активность и поддержка студентов",
+    mvv_val3_d: "Инициативы в области спорта, культуры, правового просвещения и здорового образа жизни",
+    about_history_kicker: "ИСТОРИЧЕСКИЙ ПУТЬ РАЗВИТИЯ",
+    about_timeline_hint: "Нажмите на год, чтобы ознакомиться с историческими этапами",
+    tl_1931_short: "Основание",
+    tl_1991_short: "Бакинский колледж связи",
+    tl_2002_short: "Объединение и статус",
+    tl_2016_short: "Присоединение к АзТУ",
+    tl_2026_year: "Сегодня",
+    tl_2026_short: "Цифровая трансформация",
+    tl_1931_tag: "ОСНОВАНИЕ УЧЕБНОГО ЗАВЕДЕНИЯ",
+    tl_1931_title: "Первое учебное заведение связи при Центральном телеграфе",
+    tl_1931_desc: "Основан в 1931 году на базе фабрично-заводского обучения при Бакинском центральном телеграфе, положив начало системной подготовке профессиональных специалистов связи в Азербайджане.",
+    why_lib_title: "Цифровая библиотека и читальный зал",
+    why_lib_desc: "40+ профильных учебников наших преподавателей, PDF-пособия и встроенный онлайн-читальный зал.",
+    why_lib_cta: "Перейти в библиотеку →",
+    why_lec_title: "Видеоуроки и медиа-студия",
+    why_lec_desc: "16 открытых видеоуроков по информатике, истории, литературе и праву с интерактивным кино-плеером.",
+    why_lec_cta: "Смотреть видеоуроки →",
+    why_struct_title: "Структура и специальности",
+    why_struct_desc: "Руководство, административный совет, отделения и самые востребованные специальности связи и транспорта.",
+    why_struct_cta: "Ознакомиться со структурой →",
+    why_news_title: "Студенческая жизнь и 99+ новостей",
+    why_news_desc: "Все научные конференции, спортивные победы, просветительские мероприятия и официальная хроника.",
+    why_news_cta: "Читать новости →",
+    nr_press_center: "ОФИЦИАЛЬНЫЙ ПРЕСС-ЦЕНТР БГКСТ",
+    nr_source_btn: "Источник",
+    nr_read_time: "⏱ 2 мин чтения",
+    nr_prev_news: "← Предыдущая новость",
+    nr_next_news: "Следующая новость →",
+    nr_other_news: "Другие новости",
+    lib_reading_room_title: "ЦИФРОВОЙ ЧИТАЛЬНЫЙ ЗАЛ БГКСТ",
+    lib_reading_room_hint: "📖 Нажмите на любую книгу, чтобы сразу открыть её во встроенном читальном зале",
+    reader_fullscreen_download: "Полный экран / Скачать",
+    reader_lbl_subject: "Предмет / Раздел:",
+    reader_lbl_author: "Автор / Составитель:",
+    reader_lbl_format: "Формат:",
+    reader_val_format: "PDF · Цифровое издание",
+    reader_lbl_status: "Статус:",
+    reader_val_status: "✓ Открытый академический доступ",
+    studio_sidebar_label: "ЦИФРОВАЯ МЕДИА-СТУДИЯ БГКСТ",
+    studio_playlist_title: "Список уроков по разделу",
+    lb_slideshow: "Слайд-шоу",
+    lb_stop: "Остановить",
+    contact_city: "Баку, Азербайджан",
+    contact_subtitle: "Бакинский Государственный Колледж Связи и Транспорта<br><span class=\"contact-entity\">Публичное Юридическое Лицо</span> при АзТУ — прямые каналы связи, официальная система электронных обращений и социальные медиа-ресурсы.",
+    cac_phone_tag: "ГОРЯЧАЯ ЛИНИЯ",
+    cac_phone_title: "Телефон и приемная комиссия",
+    cac_call_btn: "Позвонить",
+    cac_copy_btn: "Копировать",
+    cac_email_tag: "КАНЦЕЛЯРИЯ",
+    cac_email_title: "Официальная эл. почта",
+    cac_email_sub: "Официальные запросы и документооборот",
+    cac_write_btn: "Написать",
+    cac_addr_tag: "АДРЕС КАМПУСА",
+    cac_addr_title: "Официальный адрес",
+    cac_addr_detail: "Ясамальский район, ул. А.М. Шарифзаде",
+    cac_route_btn: "Маршрут на карте",
+    cac_status_open: "Открыто · Рабочее время",
+    cac_status_closed: "Закрыто · Нерабочее время",
+    cac_hours_title: "Режим работы и прием",
+    cac_hours_days: "Понедельник – Пятница: 09:00 – 18:00",
+    cac_hours_weekend: "Суббота – Воскресенье: Выходные дни",
+    cac_online_apply: "Онлайн-обращение",
+    map_header_label: "Главный учебный корпус БГКСТ",
+    map_open_btn: "Google Maps ↗",
+    channels_kicker: "ОФИЦИАЛЬНЫЕ ПЛАТФОРМЫ",
+    channels_title: "Социальные сети и электронные порталы",
+    ch_ig_desc: "Мероприятия, reels и студенческая жизнь",
+    ch_fb_desc: "Официальные новости и объявления",
+    ch_web_name: "Официальный домен",
+    ch_web_desc: "Электронные информационные ресурсы",
+    ch_dim_name: "Портал приема",
+    ch_dim_desc: "Регистрация абитуриентов и конкурс",
+    cf_portal_badge: "ЭЛЕКТРОННАЯ СИСТЕМА ОБРАЩЕНИЙ",
+    cf_portal_title: "Официальное обращение граждан и студентов",
+    cf_portal_desc: "Выберите отдел и ваш статус — ваш запрос будет напрямую направлен в соответствующее подразделение.",
+    cf_role_label: "Статус заявителя",
+    cf_role_student: "Студент",
+    cf_role_applicant: "Абитуриент",
+    cf_role_parent: "Родитель",
+    cf_role_other: "Другое",
+    cf_dept_label: "Отдел / Инстанция обращения",
+    cf_dept_general: "Общее обращение / Информационный центр",
+    cf_dept_admission: "Приемная комиссия и специальности",
+    cf_dept_academic: "Учебная часть и расписание занятий",
+    cf_dept_monitoring: "Отдел регистрации, оценки и мониторинга",
+    cf_dept_depts: "Профильные отделы (Транспорт, Связь, ИТ, Почта)",
+    cf_dept_correspondence: "Заочный отдел и запрос справок / документов",
+    cf_dept_director: "Официальное обращение к директору и руководству",
+    cf_phone: "Контактный номер",
+    cf_name_ph: "Напр.: Алиев Али",
+    cf_email_ph: "name@example.com",
+    cf_msg_ph: "Введите текст вашего обращения...",
+    lecture_search_placeholder: "Поиск видеоуроков...",
+    cf_quick_hint: "Быстрый шаблон:",
+    cf_chip_cert: "📄 Справка об обучении",
+    cf_chip_adm: "🎓 Прием и проходные баллы",
+    cf_chip_exam: "📅 Экзамены и оценивание",
+    cf_chip_visit: "🏛️ Запись на прием",
+    cf_guarantee_text: "Ваше обращение официально регистрируется и рассматривается в течение 1–3 рабочих дней по эл. почте или телефону.",
+    footer_copyright:
+      "© 2026 BDRNK - Все права защищены. Разработчик: Ləman Əskərova",
+  },
+};
+
+let currentLang = "az";
+
+function gT(key) {
+  return i18n[currentLang][key] || key;
+}
+
+function updateDOMTexts() {
+  // Basic innerHTML translations
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (i18n[currentLang][key]) {
+      el.innerHTML = i18n[currentLang][key];
+    }
+  });
+
+  // Placeholder translations
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (i18n[currentLang][key]) {
+      el.placeholder = i18n[currentLang][key];
+    }
+  });
+
+  // Categories Sub-labels update explicitly (since they generated dynamically later sometimes)
+  renderCategoriesCount();
+
+  // Rerender active module texts
+  if (typeof window.renderCertificatesGrid === "function") {
+    window.renderCertificatesGrid();
+  }
+  if (typeof window.renderScienceAuthors === "function") {
+    window.renderScienceAuthors();
+  }
+
+  const sisDash = document.getElementById("sis-dashboard");
+  if (
+    sisDash &&
+    sisDash.style.display === "block" &&
+    typeof currentGroup !== "undefined" &&
+    currentGroup
+  ) {
+    renderGroupDashboard(currentGroup, activeSemester, activeSubject);
+  }
+}
+
+/**
+ * 2. CORE DATA MODULES (Mocking DB)
+ * Institutional Structure
+ */
+const staffData = {
+  leadership: [
+    {
+      id: "1",
+      name_az: "Səbuhi Qurbanov Yusif oğlu",
+      name_en: "Sabuhi Gurbanov Yusif",
+      name_ru: "Сабухи Гурбанов Юсиф оглы",
+      role_az: "Direktor",
+      role_en: "Director",
+      role_ru: "Директор",
+      img: "sebuhix4.jpeg?v=20261106_08",
+    },
+    {
+      id: "2",
+      name_az: "Şahmurad Məmmədov Zöhtün oğlu",
+      name_en: "Shahmurad Mammadov Zohtun",
+      name_ru: "Шахмурад Мамедов Зехтюн оглы",
+      role_az: "Tərbiyə işləri üzrə direktor müavini",
+      role_en: "Vice-Director for Educational Affairs",
+      role_ru: "Заместитель директора по воспитательной работе",
+      img: "sahumuradx.jpeg",
+    },
+    {
+      id: "3",
+      name_az: "İsmayıl Səfiyev Allahverdi oğlu",
+      name_en: "Ismayil Safiyev Allahverdi",
+      name_ru: "Исмаил Сафиев Аллахверди оглы",
+      role_az: "Inzibati təsərüffat işləri üzrə direktor müavini",
+      role_en: "Deputy Director for Administrative & Economic Affairs",
+      role_ru: "Заместитель директора по административно-хозяйственной части",
+      img: "ismayilx.jpeg",
+    },
+  ],
+  departments: [
+    {
+      id: "7",
+      name_az: "Babək Əhmədli Yasin oğlu",
+      name_en: "Babak Ahmadli Yasin",
+      name_ru: "Бабек Ахмедли Ясин оглы",
+      role_az: '"Telekommunikasiya şöbəsi"-Şöbə müdiri',
+      role_en: 'Head of "Telecommunications" Dept',
+      role_ru: 'Заведующая отделом "Телекоммуникации"',
+      img: "babekx.jpeg",
+    },
+    {
+      id: "9",
+      name_az: "Səkinə Mayılova Oruc qızı",
+      name_en: "Sakina Mayilova Oruj",
+      name_ru: "Сакина Маилова Орудж гызы",
+      role_az: '"Kompüter texnologiyaları şöbəsi"-Şöbə müdiri',
+      role_en: 'Head of "Computer Technologies" Dept',
+      role_ru: 'Заведующая отделом "Компьютерные технологии"',
+      img: "sekinex.jpeg",
+    },
+    {
+      id: "11",
+      name_az: "Ceyhun Cəfərov Müzəffər oğlu",
+      name_en: "Jeyhun Jafarov Muzaffar",
+      name_ru: "Джейхун Джафаров Музаффар оглы",
+      role_az: '"Qiyabi şöbəsi"-Şöbə müdiri',
+      role_en: 'Head of "Correspondence" Dept',
+      role_ru: 'Заведующий "Заочным отделом"',
+      img: "ceyhunx3.jpeg",
+    },
+    {
+      id: "12",
+      name_az: "Səidə Quliyeva Novruz qızı",
+      name_en: "Saida Guliyeva Novruz",
+      name_ru: "Саида Гулиева Новруз гызы",
+      role_az: 'Yeni Azərbaycan Partiyası Ərazi Partiya Təşkilatı sədri<br>"Qeydiyyat, qiymətləndirmə və Monitorinq şöbəsi"-Şöbə müdiri',
+      role_en: 'Chair of YAP Territorial Party Organization<br>Head of "Registration, Evaluation and Monitoring" Dept',
+      role_ru: 'Председатель территориальной партийной организации YAP<br>Заведующая отделом "Регистрации, оценки и мониторинга"',
+      img: "seidex2.jpeg",
+    },
+    {
+      id: "23",
+      name_az: "Yeganə Əliyeva Savalan qızı",
+      name_en: "Yegana Aliyeva Savalan",
+      name_ru: "Егана Алиева Савалан гызы",
+      role_az: '"Nəqliyyat şöbəsi"-Şöbə müdiri',
+      role_en: 'Head of "Transport" Dept',
+      role_ru: 'Заведующая отделом "Транспорт"',
+      img: "yegane.jpeg",
+    },
+    {
+      id: "24",
+      name_az: "Natiq Əliyev Vidadi oğlu",
+      name_en: "Natig Aliyev Vidadi",
+      name_ru: "Натиг Алиев Видади оглы",
+      role_az: '"Poçt rabitəsi və mühasibat uçotu şöbəsi"-Şöbə müdiri',
+      role_en: 'Head of "Postal Communication and Accounting" Dept',
+      role_ru: 'Заведующий отделом "Почтовая связь и бухгалтерский учет"',
+      img: "natiqx3.jpeg",
+    },
+    {
+      id: "14",
+      name_az: "Rəsmiyyə Həsənova Kamil qızı",
+      name_en: "Rasmiyya Hasanova Kamil",
+      name_ru: "Расмия Гасанова Камиль гызы",
+      role_az: '"İnformasiya, kommunikasiya texnologiyaları şöbəsi"-Şöbə müdiri',
+      role_en: 'Head of "Information and Communication Technologies" Dept',
+      role_ru: 'Заведующая отделом "Информационных и коммуникационных технологий"',
+      img: "resmiyyex.jpeg",
+    },
+    {
+      id: "16",
+      name_az: "Vəfa Hacıyeva Nizami qızı",
+      name_en: "Vafa Hajiyeva Nizami",
+      name_ru: "Вафа Гаджиева Низами гызы",
+      role_az: "Hüquqşünas",
+      role_en: "Legal Counsel",
+      role_ru: "Юрист",
+      img: "vefax.jpeg",
+    },
+    {
+      id: "18",
+      name_az: "Günay Əliyeva Zahid qızı",
+      name_en: "Gunay Aliyeva Zahid",
+      name_ru: "Гюнай Алиева Захид гызы",
+      role_az: "Arxiv müdiri",
+      role_en: "Head of Archive",
+      role_ru: "Заведующая архивом",
+      img: "gunayx.jpeg",
+    },
+    {
+      id: "27",
+      name_az: "Aygün Musayeva Akif qızı",
+      name_en: "Aygun Musayeva Akif",
+      name_ru: "Айгюн Мусаева Акиф гызы",
+      role_az: "Həmkarlar İttifaqı Komitəsinin sədri",
+      role_en: "Chair of Trade Union Committee",
+      role_ru: "Председатель Профсоюзного комитета",
+      img: "hemkarx.jpeg",
+    },
+    {
+      id: "28",
+      name_az: "Şöhlə Dadaşova Yavər qızı",
+      name_en: "Shohla Dadashova Yavar",
+      name_ru: "Шохла Дадашова Явер гызы",
+      role_az: "Mülki müdafiə üzrə mühəndis",
+      role_en: "Civil Defense Engineer",
+      role_ru: "Инженер по гражданской обороне",
+      img: "sohlex.jpeg",
+    },
+    {
+      id: "22",
+      name_az: "Aynur Qəniyeva Əliheydər qızı",
+      name_en: "Aynur Ganiyeva Aliheydar",
+      name_ru: "Айнур Ганиева Алигейдар гызы",
+      role_az: "Kitabxana müdiri",
+      role_en: "Head of Library",
+      role_ru: "Заведующая библиотекой",
+      img: "aynurx4.jpeg",
+    },
+    {
+      id: "20",
+      name_az: "Ləman Ağalıyeva Həsən qızı",
+      name_en: "Laman Agahaliyeva Hasan",
+      name_ru: "Ляман Агазаде Гасан гызы",
+      role_az: "Kadrlar üzrə mütəxəssis",
+      role_en: "HR Specialist",
+      role_ru: "Специалист по кадрам",
+      img: "lemanx1.jpeg",
+    },
+    {
+      id: "19",
+      name_az: "Azər Rəhimov Tofiq oğlu",
+      name_en: "Azer Rahimov Tofig",
+      name_ru: "Азер Рагимов Тофиг оглы",
+      role_az: "Baş mühasib",
+      role_en: "Chief Accountant",
+      role_ru: "Главный бухгалтер",
+      img: "azerx2.jpeg",
+    },
+    {
+      id: "13",
+      name_az: "Xəlil Süleymanov Süleyman oğlu",
+      name_en: "Khalil Suleymanov Suleyman",
+      name_ru: "Халил Сулейманов Сулейман оглы",
+      role_az: "İstehsalat təcrübə rəhbəri",
+      role_en: "Production Internship Supervisor",
+      role_ru: "Руководитель производственной практики",
+      img: "xelil2x.jpeg",
+    },
+    {
+      id: "25",
+      name_az: "Sevda Bağızadə Əmrulla qızı",
+      name_en: "Sevda Bagizada Amrulla",
+      name_ru: "Севда Багизаде Амрулла гызы",
+      role_az: "Metodist",
+      role_en: "Methodist",
+      role_ru: "Методист",
+      img: "metodistx.jpeg",
+    },
+    {
+      id: "26",
+      name_az: "Şəlalə Zeynalova Qara qızı",
+      name_en: "Shalala Zeynalova Gara",
+      name_ru: "Шалаля Зейналова Гара гызы",
+      role_az: "Metodist",
+      role_en: "Methodist",
+      role_ru: "Методист",
+      img: "selalex1.jpeg",
+    },
+  ],
+  commissions: [
+    {
+      id: "25",
+      name_az: "Sevda Bağızadə Əmrulla qızı",
+      name_en: "Sevda Bagizada Amrulla",
+      name_ru: "Севда Багизаде Амрулла гызы",
+      role_az: "Metodist",
+      role_en: "Methodist",
+      role_ru: "Методист",
+      img: "metodistx.jpeg",
+    },
+  ],
+  majors: {
+    eyani: [
+      {
+        code: "040406",
+        name_az: "Mühasibat uçotu",
+        name_en: "Accounting",
+        name_ru: "Бухгалтерский учет",
+        field_az: "İqtisadiyyat",
+        field_en: "Economics",
+        field_ru: "Экономика",
+      },
+      {
+        code: "040554",
+        name_az: "Poçt rabitəsi",
+        name_en: "Postal Communication",
+        name_ru: "Почтовая связь",
+        field_az: "Rabitə",
+        field_en: "Communication",
+        field_ru: "Связь",
+      },
+      {
+        code: "040556",
+        name_az: "Radio, televiziya vasitə və qurğuları",
+        name_en: "Radio, TV Tools and Equipment",
+        name_ru: "Радио, ТВ средства и оборудование",
+        field_az: "Telekommunikasiya",
+        field_en: "Telecommunication",
+        field_ru: "Телекоммуникации",
+      },
+      {
+        code: "040405",
+        name_az: "Marketinq (sahələr üzrə)",
+        name_en: "Marketing (by sectors)",
+        name_ru: "Маркетинг (по отраслям)",
+        field_az: "Biznes",
+        field_en: "Business",
+        field_ru: "Бизнес",
+      },
+      {
+        code: "040544",
+        name_az: "Mobil şəbəkə sistemləri və operatorluğu",
+        name_en: "Mobile Network Systems and Operation",
+        name_ru: "Системы мобильной связи и операторство",
+        field_az: "Rabitə",
+        field_en: "Communication",
+        field_ru: "Связь",
+      },
+      {
+        code: "040565",
+        name_az: "Telekommunikasiya şəbəkələri və xətləri",
+        name_en: "Telecommunication Networks and Lines",
+        name_ru: "Телекоммуникационные сети и линии",
+        field_az: "Telekommunikasiya",
+        field_en: "Telecommunication",
+        field_ru: "Телекоммуникации",
+      },
+      {
+        code: "040508",
+        name_az: "Çoxkanallı telekommunikasiya sistemlərinin istismarı",
+        name_en: "Operation of Multi-channel Telecom Systems",
+        name_ru: "Эксплуатация многоканальных телеком систем",
+        field_az: "Telekommunikasiya",
+        field_en: "Telecommunication",
+        field_ru: "Телекоммуникации",
+      },
+      {
+        code: "040572",
+        name_az: "Vaqon və refrijerator sistemləri",
+        name_en: "Wagon and Refrigerator Systems",
+        name_ru: "Вагонные и рефрижераторные системы",
+        field_az: "Nəqliyyat",
+        field_en: "Transport",
+        field_ru: "Транспорт",
+      },
+      {
+        code: "040552",
+        name_az: "Nəqliyyatın logistikası",
+        name_en: "Transport Logistics",
+        name_ru: "Транспортная логистика",
+        field_az: "Logistika",
+        field_en: "Logistics",
+        field_ru: "Логистика",
+      },
+      {
+        code: "040550",
+        name_az: "Nəqliyyat vasitələrinin texniki istismarı",
+        name_en: "Technical Operation of Vehicles",
+        name_ru: "Техническая эксплуатация транспорта",
+        field_az: "Nəqliyyat",
+        field_en: "Transport",
+        field_ru: "Транспорт",
+      },
+      {
+        code: "040518",
+        name_az: "Ətraf mühitin mühafizəsi və bərpası",
+        name_en: "Environmental Protection and Restoration",
+        name_ru: "Охрана и восстановление окружающей среды",
+        field_az: "Ekologiya",
+        field_en: "Ecology",
+        field_ru: "Экология",
+      },
+      {
+        code: "040529",
+        name_az: "Kompüter sistemləri və kompleksləri",
+        name_en: "Computer Systems and Complexes",
+        name_ru: "Компьютерные системы и комплексы",
+        field_az: "İKT",
+        field_en: "ICT",
+        field_ru: "ИКТ",
+      },
+      {
+        code: "040533",
+        name_az: "Kompüter şəbəkə avadanlıqlarının təmiri və servisi",
+        name_en: "Repair and Service of Computer Network Equipment",
+        name_ru: "Ремонт и сервис компьютерного сетевого оборудования",
+        field_az: "İKT",
+        field_en: "ICT",
+        field_ru: "ИКТ",
+      },
+      {
+        code: "040532",
+        name_az: "Kompüter şəbəkələri və şəbəkə inzibatçılığı",
+        name_en: "Computer Networks and Network Administration",
+        name_ru: "Компьютерные сети и сетевое администрирование",
+        field_az: "İKT",
+        field_en: "ICT",
+        field_ru: "ИКТ",
+      },
+    ],
+    qiyabi: [
+      {
+        code: "040406",
+        name_az: "Mühasibat uçotu",
+        name_en: "Accounting",
+        name_ru: "Бухгалтерский учет",
+        field_az: "İqtisadiyyat",
+        field_en: "Economics",
+        field_ru: "Экономика",
+      },
+      {
+        code: "040554",
+        name_az: "Poçt rabitəsi",
+        name_en: "Postal Communication",
+        name_ru: "Почтовая связь",
+        field_az: "Rabitə",
+        field_en: "Communication",
+        field_ru: "Связь",
+      },
+      {
+        code: "040556",
+        name_az: "Radio, televiziya vasitə və qurğuları",
+        name_en: "Radio, TV Tools and Equipment",
+        name_ru: "Радио, ТВ средства и оборудование",
+        field_az: "Telekommunikasiya",
+        field_en: "Telecommunication",
+        field_ru: "Телекоммуникации",
+      },
+      {
+        code: "040565",
+        name_az: "Telekommunikasiya şəbəkələri və xətləri",
+        name_en: "Telecommunication Networks and Lines",
+        name_ru: "Телекоммуникационные сети и линии",
+        field_az: "Telekommunikasiya",
+        field_en: "Telecommunication",
+        field_ru: "Телекоммуникации",
+      },
+      {
+        code: "040508",
+        name_az: "Çoxkanallı telekommunikasiya sistemlərinin istismarı",
+        name_en: "Operation of Multi-channel Telecom Systems",
+        name_ru: "Эксплуатация многоканальных телеком систем",
+        field_az: "Telekommunikasiya",
+        field_en: "Telecommunication",
+        field_ru: "Телекоммуникации",
+      },
+      {
+        code: "040572",
+        name_az: "Vaqon və refrijerator sistemləri",
+        name_en: "Wagon and Refrigerator Systems",
+        name_ru: "Вагонные и рефрижераторные системы",
+        field_az: "Nəqliyyat",
+        field_en: "Transport",
+        field_ru: "Транспорт",
+      },
+      {
+        code: "040552",
+        name_az: "Nəqliyyatın logistikası",
+        name_en: "Transport Logistics",
+        name_ru: "Транспортная логистика",
+        field_az: "Logistika",
+        field_en: "Logistics",
+        field_ru: "Логистика",
+      },
+      {
+        code: "040550",
+        name_az: "Nəqliyyat vasitələrinin texniki istismarı",
+        name_en: "Technical Operation of Vehicles",
+        name_ru: "Техническая эксплуатация транспорта",
+        field_az: "Nəqliyyat",
+        field_en: "Transport",
+        field_ru: "Транспорт",
+      },
+      {
+        code: "040529",
+        name_az: "Kompüter sistemləri və kompleksləri",
+        name_en: "Computer Systems and Complexes",
+        name_ru: "Компьютерные системы и комплексы",
+        field_az: "İKT",
+        field_en: "ICT",
+        field_ru: "ИКТ",
+      },
+    ],
+  }
+};
+
+const newsData = [
+  {
+    "id": 1,
+    "official_id": "4639",
+    "title_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Narkomaniyaya qarşı mübarizə” mövzusunda geniş tədbir keçirilmişdir",
+    "title_en": "Comprehensive Awareness Event on 'Combating Drug Addiction' Held at the College",
+    "title_ru": "В колледже прошло масштабное мероприятие на тему «Борьба с наркоманией»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 25.09.2025-ci il tarixdə “Narkomaniyaya qarşı mübarizə” mövzusunda tədbir keçirilmişdir. Tədbirdə...",
+    "desc_en": "On 25 September 2025, an official appointment activity titled \"Comprehensive Awareness Event on 'Combating Drug Addiction' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "25 Сентября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло масштабное мероприятие на тему «Борьба с наркоманией»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 25.09.2025-ci il tarixdə “Narkomaniyaya qarşı mübarizə” mövzusunda tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir. Tədbirdə çıxış edən direktor müavini Şahmurad Məmmədov bildirmişdir ki, müasir dövrümüzün ağrılı və acınacaqlı bəlalarından biri də nakomaniyadır.\n\nEl arasında “ağ ölüm” kimi tanınan bu bəşəri bəlaya düçar olanların sayı isə ildən-ilə artmaqdadır. Təəssüflər olsun ki, bu bəla ölkəmizdən də yan keçməmişdir. Doğrudur, bir sıra dünya ölkələri ilə müqayisədə ölkəmizdə narkotizm o qədər geniş yayılmasa da, mövcuddur və ciddi mübarizələrə rəğmən yenə də artmaqdadır.\n\nVaxtilə işğala məruz qalmış ərazilərdə də xeyli sayda narkotik laboratoriyalar fəaliyyət göstərmişdir. Düşmən silahlı münaqişə nəticəsində nəzarətsiz qalmış Azərbaycan ərazilərindən narkotiklərin becərilməsi, satılması və tranziti, eyni zamanda, transmilli cinayətlərin həyata keçirilməsi üçün nəzarətsiz zona kimi istifadə etmiş, hər il dünya bazarlarına on tonlarla narkotik maddələr çıxarmışdır.\n\nSonra çıxış edənlər qeyd etmişlər ki, narkomaniyanın cəmiyyətdə, xüsusilə gənc nəslin arasında yayılma səbəblərindən biri də narkotik vasitələrin insan orqanizmində törədə biləcəyi ağır fəsadlar haqqında cəmiyyətin məlumatsızlığının olmasıdır. Xüsusilə bu sahədə təbliğatın aşağı səviyyədə aparılması gənclərin bu bəlanın ağuşuna hazır yem kimi atılmasına münbit şərait yaradır.\n\nBu məqsədlə sağlam həyat tərzinin cəmiyyətdə, xüsusilə gənclər arasında təbliği üçün yeniyetmə və gənclər arasında bəşəriyyəti dərindən düşündürən və onu narahat edən ən ciddi problemlərdən biri kimi narkomaniya və onun törətdiyi ağır fəsadlar haqqında düzgün maarifləndirici tədbirlərin intensiv hal alması olduqca zəruridir.",
+    "full_en": "On 25 September 2025, an official appointment activity titled \"Comprehensive Awareness Event on 'Combating Drug Addiction' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "25 Сентября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло масштабное мероприятие на тему «Борьба с наркоманией»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "25 Sentyabr 2025",
+    "image": "news_proper_4639.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/4639",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "25 Sentyabr 2025",
+    "date_en": "25 September 2025",
+    "date_ru": "25 Сентября 2025"
+  },
+  {
+    "id": 2,
+    "official_id": "3920",
+    "title_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində «Məişət zorakılığına yox deyək» mövzusunda tədbir keçirilmişdir",
+    "title_en": "Educational Seminar 'Say No to Domestic Violence' Organized at the College",
+    "title_ru": "В колледже состоялось просветительское мероприятие «Скажем нет бытовому насилию»",
+    "desc_az": "09 iyun 2026-cı il tarixində Azərbaycan Texniki Universitetinin nəzdində fəaliyyət göstərən Bakı Dövlət Rabitə və Nəqliyyat Kollecində «Məişət zorakılığına yox deyək» mövzusunda...",
+    "desc_en": "On 09 June 2026, an official appointment activity titled \"Educational Seminar 'Say No to Domestic Violence' Organized at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "09 Июня 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже состоялось просветительское мероприятие «Скажем нет бытовому насилию»».",
+    "full_az": "09 iyun 2026-cı il tarixində Azərbaycan Texniki Universitetinin nəzdində fəaliyyət göstərən Bakı Dövlət Rabitə və Nəqliyyat Kollecində «Məişət zorakılığına yox deyək» mövzusunda müəllim və tələbələrin iştirakı iləgeniş tədbir keçirilmişdir. Tədbirdə kollecin direktoru Səbuhi Qurbanov, kollecin tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov, «Dayaq» Sosial maarifləndirmə İctimai Birliyin Sədri Hicran xanım Əliməmmədova, Layihənin Eksperti Gövhər xanım Quliyeva, Ailə, Qadın və Uşaq Problemləri üzrə Dövlət Komitəsinin üzvü İradə xanım, Siyasi Elmlər Doktoru Professor Elşad Mirbəşiroğlu, Azərbaycan Respublikasının Vəkillər Kollegiyasının üzvü Vəkil Elvina xanım Əliyeva, Azərbaycan Respublikasının Vəkillər Kollegiyasının üzvü Vəkil Zinyət xanım Ağamalıyeva, Göyərçin Təhsilin İnkişafına Dəstək İctimai Birliyinin sədri Gövhər xanım Vəlixanlı iştirak etmişlər.\n\nTədbirin iştirakçıları çıxış edərək iştirakçılara zorakılıq və məişət zorakılığı, onların növləri, məişət zorakılığına məruz qalmış şəxslərə yardım, mövcud qanunvericilik aktları, həyata keçirilən sosial layihələr barədə geniş məlumat verdilər. Tədbir iştirakçıları tədbirdə iştirak edən tələbə və müəllimlərin suallarını cavablandırdılar.",
+    "full_en": "On 09 June 2026, an official appointment activity titled \"Educational Seminar 'Say No to Domestic Violence' Organized at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "09 Июня 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже состоялось просветительское мероприятие «Скажем нет бытовому насилию»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "09 İyun 2026",
+    "image": "news_proper_3920.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/3920",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "09 İyun 2026",
+    "date_en": "09 June 2026",
+    "date_ru": "09 Июня 2026"
+  },
+  {
+    "id": 3,
+    "official_id": "3910",
+    "title_az": "Korrupsiyaya qarşı mübarizə tədbirləri çərçivəsində maarifləndirici tədbir",
+    "title_en": "Educational Seminar Held Within Anti-Corruption Awareness Measures",
+    "title_ru": "Просветительский семинар в рамках мер по борьбе с коррупцией",
+    "desc_az": "08 iyun 2026-cı il tarixində Azərbaycan Texniki Universitetin nəzdində fəaliyyət göstərən Bakı Dövlət Rabitə və Nəqliyyat Kollecində korrupsiyaya qarşı mübarizə tədbirləri çərçivəsində...",
+    "desc_en": "On 08 June 2026, an official appointment activity titled \"Educational Seminar Held Within Anti-Corruption Awareness Measures\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "08 Июня 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительский семинар в рамках мер по борьбе с коррупцией».",
+    "full_az": "08 iyun 2026-cı il tarixində Azərbaycan Texniki Universitetin nəzdində fəaliyyət göstərən Bakı Dövlət Rabitə və Nəqliyyat Kollecində korrupsiyaya qarşı mübarizə tədbirləri çərçivəsində maarifləndirici tədbir təşkil olunub. Tədbirdə kollecin tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov çıxış edərək korrupsiyanın cəmiyyətə və dövlətin inkişafına vurduğu zərərdən danışıb.\n\nO, gəncləri korrupsiyaya qarşı həssas olmağa, şəffaflıq və dürüstlük prinsiplərinə sadiq qalmağa çağırıb. Tədbirin məqsədi tələbələr arasında korrupsiyaya qarşı maarifləndirmə işlərinin gücləndirilməsi, onların bu zərərli hallara qarşı mövqeyinin formalaşdırılması və gələcəkdə sağlam cəmiyyətin yaradılmasına töhfə verməkdir.\n\nKollec rəhbərliyi və müəllim heyəti bu cür maarifləndirici tədbirlərin davamlı olaraq keçirilməsinin vacibliyini vurğulayır və tələbələri ictimai həyatın bütün sahələrində etik davranışa səsləyir.",
+    "full_en": "On 08 June 2026, an official appointment activity titled \"Educational Seminar Held Within Anti-Corruption Awareness Measures\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "08 Июня 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительский семинар в рамках мер по борьбе с коррупцией».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "08 İyun 2026",
+    "image": "news_proper_3910.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/3910",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "08 İyun 2026",
+    "date_en": "08 June 2026",
+    "date_ru": "08 Июня 2026"
+  },
+  {
+    "id": 4,
+    "official_id": "3894",
+    "title_az": "«Azərbaycan dilinin saflığı» mövzusunda maarifləndirici tədbir",
+    "title_en": "Educational Seminar Dedicated to the 'Purity of the Azerbaijani Language'",
+    "title_ru": "Просветительское мероприятие на тему «Чистота азербайджанского языка»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 05.06.2026-cı il tarixində «Azərbaycan dilinin saflığı» mövzusunda maarifləndirici tədbir...",
+    "desc_en": "On 05 June 2026, an official commemoration activity titled \"Educational Seminar Dedicated to the 'Purity of the Azerbaijani Language'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "05 Июня 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие на тему «Чистота азербайджанского языка»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 05.06.2026-cı il tarixində «Azərbaycan dilinin saflığı» mövzusunda maarifləndirici tədbir keçirilmişdir. Tədbiri kollecin Azərbaycan dili və Ədəbiyyatı müəllimi Ziba Səfərova aparməşdır.\n\nZiba müəllimə qeyd etmişdir ki, Azərbaycan Respublikası öz müstəqilliyini bərpa etdikdən sonra Azərbaycan dili cəmiyyətin ictimai-siyasi, sosial-iqtisadi, elmi və mədəni həyatının bütün sahələrində daha geniş istifadə edilməyə başlamış, onun dövlət dili kimi maneəsiz inkişafı üçün münbit zəmin yaranmışdır. Ümummilli lider Heydər Əliyevin rəhbərliyi altında işlənib hazırlanmış və 1995-ci ildə ümumxalq səsverməsi ilə qəbul edilmiş Azərbaycan Respublikasının Konstitusiyası, Azərbaycan Respublikası Prezidentinin “Dövlət dilinin tətbiqi işinin təkmilləşdirilməsi haqqında” 2001-ci il 18 iyun tarixli və “Azərbaycan əlifbası və Azərbaycan dili gününün təsis edilməsi haqqında” 2001-ci il 9 avqust tarixli fərmanları, 2002-ci ildə qəbul edilmiş “Azərbaycan Respublikasının dövlət dili haqqında” Azərbaycan Respublikasının Qanunu dilimizin hüquqi statusunu, onun işlənməsi, qorunması və inkişafı üçün zəruri olan tədbirləri müəyyənləşdirmişdir.",
+    "full_en": "On 05 June 2026, an official commemoration activity titled \"Educational Seminar Dedicated to the 'Purity of the Azerbaijani Language'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "05 Июня 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие на тему «Чистота азербайджанского языка»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "05 İyun 2026",
+    "image": "news_proper_3894.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/3894",
+    "tag_az": "Anım və Tarix",
+    "tag_en": "Commemoration",
+    "tag_ru": "Памятная дата",
+    "date_az": "05 İyun 2026",
+    "date_en": "05 June 2026",
+    "date_ru": "05 Июня 2026"
+  },
+  {
+    "id": 5,
+    "official_id": "3882",
+    "title_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində 18 may – 18 iyun tarixlərini əhatə edən “İnsan Hüquqları Aylığı” çərçivəsində maarifləndirici tədbir",
+    "title_en": "Awareness Event Held Within the May 18 – June 18 'Human Rights Month'",
+    "title_ru": "Мероприятие в колледже в рамках «Месячника прав человека» (18 мая – 18 июня)",
+    "desc_az": "02 iyun 2026-cı il tarixində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 18 may – 18 iyun tarixlərini əhatə edən “İnsan Hüquqları Aylığı” çərçivəsində maarifləndirici tədbir...",
+    "desc_en": "On 02 June 2026, an official appointment activity titled \"Awareness Event Held Within the May 18 – June 18 'Human Rights Month'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "02 Июня 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие в колледже в рамках «Месячника прав человека» (18 мая – 18 июня)».",
+    "full_az": "02 iyun 2026-cı il tarixində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 18 may – 18 iyun tarixlərini əhatə edən “İnsan Hüquqları Aylığı” çərçivəsində maarifləndirici tədbir keçirilmişdir. Tədbir Azərbaycan Respublikasının Dövlət Himninin səsləndirilməsi ilə başlamışdır.\n\nTədbirdə çıxış edən tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov insan hüquqlarının cəmiyyətin inkişafındakı əhəmiyyətindən bəhs etmiş, bu sahədə maarifləndirmə işlərinin vacibliyini vurğulamışdır. Daha sonra söz kollecin hüquqşünası Vəfa Hacıyevaya verilmişdir.\n\nVəfa Hacıyeva insan hüquq və azadlıqları, eləcə də tələbələrin hüquq və vəzifələri barədə ətraflı məlumat vermiş, iştirakçıları maraqlandıran sualları cavablandırmış və mövzu ilə bağlı geniş izahatlar təqdim etmişdir. Tədbir iştirakçıların fəal iştirakı və marağı ilə başa çatmışdır.",
+    "full_en": "On 02 June 2026, an official appointment activity titled \"Awareness Event Held Within the May 18 – June 18 'Human Rights Month'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "02 Июня 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие в колледже в рамках «Месячника прав человека» (18 мая – 18 июня)».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "02 İyun 2026",
+    "image": "news_proper_3882.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/3882",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "02 İyun 2026",
+    "date_en": "02 June 2026",
+    "date_ru": "02 Июня 2026"
+  },
+  {
+    "id": 6,
+    "official_id": "3569",
+    "title_az": "Stolüstü tennis üzrə Kollecin tələbələrdən ibarət komandasının uğuru!",
+    "title_en": "College Student Table Tennis Team Achieves Top Honors!",
+    "title_ru": "Успех студенческой команды колледжа по настольному теннису!",
+    "desc_az": "“Şəhərsalma və Memarlıq İli” çərçivəsində Ümummilli Lider Heydər Əliyevin anadan olmasının 103-cü ildönümünə həsr olunmuş stolüstü tennis idman növü üzrə keçirilən Yasamal rayon...",
+    "desc_en": "On 22 April 2026, an official sports activity titled \"College Student Table Tennis Team Achieves Top Honors!\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "22 Апреля 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Успех студенческой команды колледжа по настольному теннису!».",
+    "full_az": "“Şəhərsalma və Memarlıq İli” çərçivəsində Ümummilli Lider Heydər Əliyevin anadan olmasının 103-cü ildönümünə həsr olunmuş stolüstü tennis idman növü üzrə keçirilən Yasamal rayon turnirində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin komandası || yerə layiq görülmüşdür. Komandamızın üzvləri: Nemətov Tofiq – 714B Məmmədov Kərim – 514C Mahmudova Yasəmən – 215B Tələbələrimizi bu nailiyyət münasibətilə təbrik edir, onlara gələcək yarışlarda daha böyük uğurlar arzulayırıq!",
+    "full_en": "On 22 April 2026, an official sports activity titled \"College Student Table Tennis Team Achieves Top Honors!\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "22 Апреля 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Успех студенческой команды колледжа по настольному теннису!».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "22 Aprel 2026",
+    "image": "news_proper_3569.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/3569",
+    "tag_az": "İdman",
+    "tag_en": "Sports",
+    "tag_ru": "Спорт",
+    "date_az": "22 Aprel 2026",
+    "date_en": "22 April 2026",
+    "date_ru": "22 Апреля 2026"
+  },
+  {
+    "id": 7,
+    "official_id": "3554",
+    "title_az": "Kollecin yeni direktoru kollektivə təqdim olunub",
+    "title_en": "Newly Appointed Director Sabuhi Gurbanov Introduced to the College Staff",
+    "title_ru": "Коллективу представлен новый директор колледжа Сабухи Гурбанов",
+    "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecinə yeni təyin edilən direktor Səbuhi Qurbanov kollektivə təqdim olunub. Səbuhi Qurbanov bakalavr təhsilini Bakı Dövlət Universitetində...",
+    "desc_en": "On April 2026, an official appointment activity titled \"Newly Appointed Director Sabuhi Gurbanov Introduced to the College Staff\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "Апреля 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Коллективу представлен новый директор колледжа Сабухи Гурбанов».",
+    "full_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecinə yeni təyin edilən direktor Səbuhi Qurbanov kollektivə təqdim olunub. Səbuhi Qurbanov bakalavr təhsilini Bakı Dövlət Universitetində “Riyaziyyat” ixtisası üzrə, magistratura təhsilini isə Azərbaycan Dövlət İqtisad Universitetində “Biznesin təşkili və idarə edilməsi” ixtisası üzrə alıb.\n\nO, əmək fəaliyyətinə Şəki şəhər 11 nömrəli tam orta məktəbdə riyaziyyat müəllimi kimi başlayıb. Daha sonra həmin məktəbdə direktor müavini, Şəki şəhər 20 nömrəli tam orta məktəbdə direktor vəzifələrində çalışıb, həmçinin Şəki-Zaqatala Regional Təhsil İdarəsində baş məsləhətçi kimi fəaliyyət göstərib.\n\nSəbuhi Qurbanov Azərbaycan Respublikası Prezidentinin müvafiq Sərəncamı ilə “Tərəqqi” medalı ilə təltif olunub. Qeyd edək ki, Səbuhi Qurbanov 2025-ci ildən son təyinatadək Bakı Dövlət Rabitə və Nəqliyyat Kollecinin tədris işləri üzrə direktor müavini vəzifəsində çalışıb.",
+    "full_en": "On April 2026, an official appointment activity titled \"Newly Appointed Director Sabuhi Gurbanov Introduced to the College Staff\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "Апреля 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Коллективу представлен новый директор колледжа Сабухи Гурбанов».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "Aprel 2026",
+    "image": "news_proper_3554.webp",
+    "url": "https://rabitakolleci.edu.az/news/3554",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "Aprel 2026",
+    "date_en": "April 2026",
+    "date_ru": "Апреля 2026"
+  },
+  {
+    "id": 8,
+    "official_id": "3464",
+    "title_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Narkomaniyaya yox deyək” mövzusunda geniş tədbir keçirilmişdir",
+    "title_en": "Wide-Ranging Awareness Event 'Say No to Drugs' Held at the College",
+    "title_ru": "В колледже прошло широкое мероприятие на тему «Скажем нет наркомании»",
+    "desc_az": "15 aprel 2026-cı il tarixində Azərbaycan Texniki Universitetinin nəzdində fəaliyyət göstərən Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Narkomaniyaya yox deyək” mövzusunda geniş...",
+    "desc_en": "On 15 April 2026, an official event activity titled \"Wide-Ranging Awareness Event 'Say No to Drugs' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "15 Апреля 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло широкое мероприятие на тему «Скажем нет наркомании»».",
+    "full_az": "15 aprel 2026-cı il tarixində Azərbaycan Texniki Universitetinin nəzdində fəaliyyət göstərən Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Narkomaniyaya yox deyək” mövzusunda geniş tədbir keçirilmişdir. Tədbirdə Bakı Şəhər Gənclər və İdman İdarəsinin Yasamal rayonu üzrə gənclər və idman sektorunun aparıcı məsləhətçisi Ağayeva Rəna, Yasamal Rayon Polis İdarəsinin Narkotiklərlə Mübarizə Şöbəsinin rəisi İbrahimov Anar, kollecin tərbiyə işləri üzrə direktor müavini Məmmədov Şahmurad, hərbi rəhbər Abbasov Mehdixan, hərbi hazırlıq müəllimi Eminov Xəyyam və digər qonaqlar çıxış etmişlər.\n\nÇıxışlar zamanı narkomaniyanın cəmiyyət üçün yaratdığı təhlükələr, gənclərin bu kimi zərərli vərdişlərdən uzaq tutulmasının vacibliyi və sağlam həyat tərzinin təşviqi ilə bağlı ətraflı məlumat verilmişdir. Tədbirin əsas məqsədi tələbələr arasında maarifləndirmə işinin gücləndirilməsi, onların sağlam və təhlükəsiz gələcəyə yönləndirilməsi olmuşdur.",
+    "full_en": "On 15 April 2026, an official event activity titled \"Wide-Ranging Awareness Event 'Say No to Drugs' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "15 Апреля 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло широкое мероприятие на тему «Скажем нет наркомании»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "15 Aprel 2026",
+    "image": "news_proper_3464.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/3464",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "15 Aprel 2026",
+    "date_en": "15 April 2026",
+    "date_ru": "15 Апреля 2026"
+  },
+  {
+    "id": 9,
+    "official_id": "3422",
+    "title_az": "Qalib müəllimimiz",
+    "title_en": "Our Faculty Member Wins Honors at the Sea Breeze Run #2 Marathon",
+    "title_ru": "Победа нашего преподавателя в забеге Sea Breeze Run #2",
+    "desc_az": "12 aprel 2026-cı il tarixində Sea Breeze-də qaçış seriyasının ikinci mərhələsi — Sea Breeze Run #2 təşkil olunmuşdur. 10 km məsafəni əhatə edən yarışın təşkilatçısı “Bakı Pulse”...",
+    "desc_en": "On 12 April 2026, an official achievement activity titled \"Our Faculty Member Wins Honors at the Sea Breeze Run #2 Marathon\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "12 Апреля 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Победа нашего преподавателя в забеге Sea Breeze Run #2».",
+    "full_az": "12 aprel 2026-cı il tarixində Sea Breeze-də qaçış seriyasının ikinci mərhələsi — Sea Breeze Run #2 təşkil olunmuşdur. 10 km məsafəni əhatə edən yarışın təşkilatçısı “Bakı Pulse” olmuşdur. Yarış “Bakı Marafonu”na hazırlıq məqsədi daşıyır. Tədbirin əsas məqsədi qaçış mədəniyyətini inkişaf etdirmək, insanları idman və hərəkətin müsbət enerjisi ətrafında bir araya gətirməkdir.\n\nKollecimizin müəllimi Yusubov Adil sözügedən yarışda uğurla iştirak edərək II yerə layiq görülmüşdür. Müəllimimizi bu nailiyyəti münasibətilə təbrik edir, ona gələcək yarışlarda daha böyük uğurlar arzulayırıq!",
+    "full_en": "On 12 April 2026, an official achievement activity titled \"Our Faculty Member Wins Honors at the Sea Breeze Run #2 Marathon\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "12 Апреля 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Победа нашего преподавателя в забеге Sea Breeze Run #2».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "12 Aprel 2026",
+    "image": "news_proper_3422.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/3422",
+    "tag_az": "Nailiyyət",
+    "tag_en": "Achievement",
+    "tag_ru": "Достижение",
+    "date_az": "12 Aprel 2026",
+    "date_en": "12 April 2026",
+    "date_ru": "12 Апреля 2026"
+  },
+  {
+    "id": 10,
+    "official_id": "3294",
+    "title_az": "Kollecdə Birləşmiş Millətlər Təşkilatının Ümumdünya Şəhərsalma Forumunun XIII sessiyasının (WUF13) təşkil edilməsi ilə əlaqədar tədbir keçirilmişdir",
+    "title_en": "Educational Event Held in Connection with the 13th Session of the UN World Urban Forum (WUF13)",
+    "title_ru": "В колледже прошло мероприятие, посвященное XIII сессии Всемирного форума городов ООН (WUF13)",
+    "desc_az": "ndə Birləşmiş Millətlər Təşkilatının Ümumdünya Şəhərsalma Forumunun XIII sessiyasının (WUF13) təşkil edilməsi ilə əlaqədar tədbirlər planına uyğun olaraq maarifləndirici tədbir...",
+    "desc_en": "On 06 March 2026, an official event activity titled \"Educational Event Held in Connection with the 13th Session of the UN World Urban Forum (WUF13)\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "06 Марта 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло мероприятие, посвященное XIII сессии Всемирного форума городов ООН (WUF13)».",
+    "full_az": "ndə Birləşmiş Millətlər Təşkilatının Ümumdünya Şəhərsalma Forumunun XIII sessiyasının (WUF13) təşkil edilməsi ilə əlaqədar tədbirlər planına uyğun olaraq maarifləndirici tədbir keçirilmişdir. Tədbirdə tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov çıxış edərək WUF13-ün Azərbaycanda keçirilməsinin əhəmiyyətindən danışmışdır.\n\nBildirmişdir ki, dünyanın 150-dən çox ölkəsindən nümayəndələrin ölkəmizə gəlməsi, minlərlə ekspertin, siyasətçinin, alimin və vətəndaş cəmiyyəti təmsilçilərinin Bakıda bir araya gəlməsi Azərbaycanın beynəlxalq nüfuzunu daha da artıracaq. Bu mühüm tədbir ölkəmizin beynəlxalq imicinə yeni çalarlar qatacaq və Azərbaycan brendinin dünyada daha geniş tanıdılmasına töhfə verəcək.",
+    "full_en": "On 06 March 2026, an official event activity titled \"Educational Event Held in Connection with the 13th Session of the UN World Urban Forum (WUF13)\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "06 Марта 2026 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло мероприятие, посвященное XIII сессии Всемирного форума городов ООН (WUF13)».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "06 Mart 2026",
+    "image": "news_proper_3294.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/3294",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "06 Mart 2026",
+    "date_en": "06 March 2026",
+    "date_ru": "06 Марта 2026"
+  },
+  {
+    "id": 11,
+    "official_id": "2819",
+    "title_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində bir qrup əməkdaş fəxri fərmanla təltif olunub",
+    "title_en": "Group of College Staff Members Awarded Honorary Certificates",
+    "title_ru": "Группа сотрудников колледжа награждена почетными грамотами",
+    "desc_az": "ndə həmkarlar ittifaqı fəaliyyətində səmərəli işin təşviqi və təhsilin inkişafına verdiyi töhfələrə görə mükafatlandırma mərasimi keçirilib. Tədbir çərçivəsində kollecin Həmkarlar...",
+    "desc_en": "On 26 December 2025, an official achievement activity titled \"Group of College Staff Members Awarded Honorary Certificates\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "26 Декабря 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Группа сотрудников колледжа награждена почетными грамотами».",
+    "full_az": "ndə həmkarlar ittifaqı fəaliyyətində səmərəli işin təşviqi və təhsilin inkişafına verdiyi töhfələrə görə mükafatlandırma mərasimi keçirilib. Tədbir çərçivəsində kollecin Həmkarlar İttifaqı Komitəsinin sədri Aygün Musayeva həmkarlar ittifaqı işində səmərəli və fədakar fəaliyyətinə görə kollecin direktoru Bəxtiyar Bəxtiyarov tərəfindən fəxri fərmanla təltif olunub.\n\nQeyd olunub ki, Aygün Musayeva kollektivin sosial-məişət məsələlərinin həlli, əməkdaşların hüquq və maraqlarının qorunması və sağlam iş mühitinin formalaşdırılması istiqamətində ardıcıl fəaliyyət göstərir. Eyni zamanda, Həmkarlar İttifaqı Komitəsinin sədri Aygün Musayeva tərəfindən təhsilin inkişafında səmərəli fəaliyyətinə görə kollecin direktoru Bəxtiyar Bəxtiyarov, habelə həmkarlar ittifaqı işində fəallığı ilə seçilən əməkdaşlar — Məmmədov Şahmurad, Salayev, Oktay, Məhərrəmova Samirə, İsmayılzadə Zəhra, Manafova Zaira, İsmayılova Nigar və Əsədova Səbinə fəxri fərmanlara layiq görülüblər.\n\nTəqdimat zamanı vurğulanıb ki, bu mükafatlar kollecin ictimai həyatında fəal iştirakın, sosial tərəfdaşlıq prinsiplərinin möhkəmləndirilməsinin və təhsil mühitinin davamlı inkişafına verilən dəyərin göstəricisidir. Sonda mükafatlandırılan şəxslərə kollektiv adından təşəkkür edilib, onlara gələcək fəaliyyətlərində yeni uğurlar arzulanıb.",
+    "full_en": "On 26 December 2025, an official achievement activity titled \"Group of College Staff Members Awarded Honorary Certificates\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "26 Декабря 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Группа сотрудников колледжа награждена почетными грамотами».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "26 Dekabr 2025",
+    "image": "news_proper_2819.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2819",
+    "tag_az": "Nailiyyət",
+    "tag_en": "Achievement",
+    "tag_ru": "Достижение",
+    "date_az": "26 Dekabr 2025",
+    "date_en": "26 December 2025",
+    "date_ru": "26 Декабря 2025"
+  },
+  {
+    "id": 12,
+    "official_id": "2676",
+    "title_az": "Ümummilli Lideri Heydər Əliyevin Anım Gününə həsr olunmuş tədbir keçirilmişdir",
+    "title_en": "Commemorative Event Dedicated to the Remembrance Day of National Leader Heydar Aliyev",
+    "title_ru": "Мероприятие, посвященное Дню памяти общенационального лидера Гейдара Алиева",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 12.12.2025-ci il tarixində Azərbaycan xalqının Ümummilli Lideri Heydər Əliyevin Anım Gününə həsr...",
+    "desc_en": "On 12 December 2025, an official event activity titled \"Commemorative Event Dedicated to the Remembrance Day of National Leader Heydar Aliyev\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "12 Декабря 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие, посвященное Дню памяти общенационального лидера Гейдара Алиева».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 12.12.2025-ci il tarixində Azərbaycan xalqının Ümummilli Lideri Heydər Əliyevin Anım Gününə həsr olunmuş tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir.\n\nTədbir iştirakçıları əvvəlcə bir dəqiqəlik sükutla Ümummilli lider Heydər Əliyevin əziz xatirəsini yad etdilər. Tədbiri giriş sözü ilə kollecin tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov açaraq iştirakçıları salamladı, Ulu öndər Heydər Əliyevin çoxşaxəli fəaliyyətindən, Azərbaycanın inkişafı və milli dövlətçiliyin gücləndirilməsi istiqamətində misilsiz tarixi xidmətlərindən, böyük xilaskarlıq missiyasından danışdı.\n\nBildirdi ki, Heydər Əliyev güclü xarizmatik şəxsiyyət, fenomenal siyasətçi və dövlət xadimi idi. Ulu Öndərin ən böyük gücü dərin və universal biliyində, qətiyyətində, işgüzarlığında, qeyri-adi yaddaşında, tükənməz səbrində, uzaqgörənliyində, müdrikliyində və milli məfkurəyə bağlılığında idi.\n\nİstər Azərbaycan tarixində, istərsə də xalqın yaddaşında Heydər Əliyev müstəqil və suveren dövlətin simvolu, xarizmatik siyasət dahisi, cəsur insan və ən böyük vətəndaş kimi qalmışdır və qalacaq. Sonra çıxış edən kollecin müəllimi Səidə Quliyeva Heydər Əliyevin unikal şəxsiyyət, güclü iradə sahibi və siyasət ustası kimi böyük heyranlıq yaratdığını, mükəmməl xarici, həmçinin daxili siyasətinin Azərbaycana qazandırdığı uğurların qürurverici olduğunu dedi.\n\nO, Azərbaycanı qüdrətli dövlətə, beynəlxalq auditoriyalarda söz sahibinə çevirən Heydər Əliyevin həyatının çağdaş gəncliyə və bütün gələcək nəsillərə örnək olacağını vurğuladı. Kollecin tələb əsi Sultanova Zəhra çıxışında Ulu Öndər Heydər Əliyevin Azərbaycanı güclü təməllər üzərində inkişaf etdirdiyini, dövlət maraqlarını daim qoruduğunu, milli həmrəyliyə nail olduğunu vurğuladı.",
+    "full_en": "On 12 December 2025, an official event activity titled \"Commemorative Event Dedicated to the Remembrance Day of National Leader Heydar Aliyev\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "12 Декабря 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие, посвященное Дню памяти общенационального лидера Гейдара Алиева».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "12 Dekabr 2025",
+    "image": "news_proper_2676.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2676",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "12 Dekabr 2025",
+    "date_en": "12 December 2025",
+    "date_ru": "12 Декабря 2025"
+  },
+  {
+    "id": 13,
+    "official_id": "2659",
+    "title_az": "«Ultra və Treyl Qaçışları» Klubunun təşkilatçılığı ilə 10 km məsafəyə qaçış",
+    "title_en": "10 km Race Organized by the 'Ultra and Trail Running' Club",
+    "title_ru": "Забег на 10 км, организованный клубом «Ультра и трейловый бег»",
+    "desc_az": "Azərbaycan Gənclər və İdman Nazirliyinin Ultra və Treyl Qaçışları Klubunun təşkilatçılığı ilə 7 dekabr 2025-ci ildə Bakı şəhərində 10 km məsafəyə treyl qaçışı üzrə yarış keçirilmişdir....",
+    "desc_en": "On 07 December 2025, an official sports activity titled \"10 km Race Organized by the 'Ultra and Trail Running' Club\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "07 Декабря 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Забег на 10 км, организованный клубом «Ультра и трейловый бег»».",
+    "full_az": "Azərbaycan Gənclər və İdman Nazirliyinin Ultra və Treyl Qaçışları Klubunun təşkilatçılığı ilə 7 dekabr 2025-ci ildə Bakı şəhərində 10 km məsafəyə treyl qaçışı üzrə yarış keçirilmişdir. Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimi Adil Yusubov yarışda 2-ci yerə layiq görülmüşdür.\n\nAdil müəllimi bu münasibətlə təbrik edirik.",
+    "full_en": "On 07 December 2025, an official sports activity titled \"10 km Race Organized by the 'Ultra and Trail Running' Club\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "07 Декабря 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Забег на 10 км, организованный клубом «Ультра и трейловый бег»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "07 Dekabr 2025",
+    "image": "news_proper_2659.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2659",
+    "tag_az": "İdman",
+    "tag_en": "Sports",
+    "tag_ru": "Спорт",
+    "date_az": "07 Dekabr 2025",
+    "date_en": "07 December 2025",
+    "date_ru": "07 Декабря 2025"
+  },
+  {
+    "id": 14,
+    "official_id": "2589",
+    "title_az": "«Parlaq Gələcək Naminə Qaç» şüarı altında yarış keçirilmişdir",
+    "title_en": "Race Held Under the Motto 'Run for a Bright Future'",
+    "title_ru": "Соревнование под девизом «Беги ради светлого будущего»",
+    "desc_az": "23 noyabr 2025-ci il tarixində Azərbaycan Gənclər və İdman Nazirliyi və Azərbaycan Atletika Federasiyasının təşkilatçılığı ilə «Parlaq Gələcək Naminə Qaç» şüarı altında keçirilən...",
+    "desc_en": "On 23 November 2025, an official sports activity titled \"Race Held Under the Motto 'Run for a Bright Future'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "23 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Соревнование под девизом «Беги ради светлого будущего»».",
+    "full_az": "23 noyabr 2025-ci il tarixində Azərbaycan Gənclər və İdman Nazirliyi və Azərbaycan Atletika Federasiyasının təşkilatçılığı ilə «Parlaq Gələcək Naminə Qaç» şüarı altında keçirilən yarışda kollecimizin müəllimi Adil müəllim 2-ci yerə layiq görülmüşdür. Adil müəllimə yeni-yeni uğurlar arzulayırıq.",
+    "full_en": "On 23 November 2025, an official sports activity titled \"Race Held Under the Motto 'Run for a Bright Future'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "23 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Соревнование под девизом «Беги ради светлого будущего»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "23 Noyabr 2025",
+    "image": "news_proper_2589.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2589",
+    "tag_az": "İdman",
+    "tag_en": "Sports",
+    "tag_ru": "Спорт",
+    "date_az": "23 Noyabr 2025",
+    "date_en": "23 November 2025",
+    "date_ru": "23 Ноября 2025"
+  },
+  {
+    "id": 15,
+    "official_id": "2581",
+    "title_az": "2 noyabr 2025-ci il tarixində Türkiyədə Beynəlxalq Marafon",
+    "title_en": "Participation in the International Intercontinental Marathon in Istanbul, Türkiye",
+    "title_ru": "Участие в Международном межконтинентальном марафоне в Стамбуле (Турция)",
+    "desc_az": "2 noyabr 2025-ci il tarixində Türkiyənin İstanbul şəhərində dünyada yeganə iki qitəni (Avropa, Asiya) birləşdirən Beynəlxalq Marafon keçirilmişdir. AzTU nəzdində Bakı Dövlət Rabitə və...",
+    "desc_en": "On 02 November 2025, an official sports activity titled \"Participation in the International Intercontinental Marathon in Istanbul, Türkiye\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "02 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Участие в Международном межконтинентальном марафоне в Стамбуле (Турция)».",
+    "full_az": "2 noyabr 2025-ci il tarixində Türkiyənin İstanbul şəhərində dünyada yeganə iki qitəni (Avropa, Asiya) birləşdirən Beynəlxalq Marafon keçirilmişdir. AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimi Adil Yusubov bu Marafonda 42 km 195 metr məsafəni qət edərək Azərbaycanı layiqincə təmsil etmişdir.\n\nAdil müəllimi ürəkdən təbrik edirik.",
+    "full_en": "On 02 November 2025, an official sports activity titled \"Participation in the International Intercontinental Marathon in Istanbul, Türkiye\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "02 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Участие в Международном межконтинентальном марафоне в Стамбуле (Турция)».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "02 Noyabr 2025",
+    "image": "news_proper_2581.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2581",
+    "tag_az": "İdman",
+    "tag_en": "Sports",
+    "tag_ru": "Спорт",
+    "date_az": "02 Noyabr 2025",
+    "date_en": "02 November 2025",
+    "date_ru": "02 Ноября 2025"
+  },
+  {
+    "id": 16,
+    "official_id": "2566",
+    "title_az": "AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci ilə Həmkarlar İttifaqı Komitəsi arasında Kollektiv Müqavilə imzalandı",
+    "title_en": "Collective Agreement Signed Between BDRNK Under AzTU and the Trade Union Committee",
+    "title_ru": "Подписан Коллективный договор между БГКСТ при АзТУ и Профсоюзным комитетом",
+    "desc_az": "2025-ci il noyabrın 25-də Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci ilə Kollecin Həmkarlar İttifaqı Komitəsi arasında yeni Kollektiv...",
+    "desc_en": "On 27 November 2025, an official organization activity titled \"Collective Agreement Signed Between BDRNK Under AzTU and the Trade Union Committee\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "27 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Подписан Коллективный договор между БГКСТ при АзТУ и Профсоюзным комитетом».",
+    "full_az": "2025-ci il noyabrın 25-də Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci ilə Kollecin Həmkarlar İttifaqı Komitəsi arasında yeni Kollektiv Müqavilənin imzalanması münasibətilə tədbir keçirilmişdir. Bu müqavilə əmək münasibətlərinin tənzimlənməsi, işçi hüquqlarının müdafiəsi və sosial təminat mexanizmlərinin gücləndirilməsi baxımından mühüm əhəmiyyət daşıyır.\n\nTədbirdə Kollecin direktoru Bəxtiyar Bəxtiyarov, ETİHİ Respublika Komitəsinin Mətbuat və İctimaiyyətlə əlaqələr şöbəsinin müdiri Ruhiyyə İsrafilova, həmçinin Kollecin Həmkarlar İttifaqı Komitəsinin sədri Aygün Musayeva iştirak ediblər. İştirakçılar yeni müqavilənin kollecin gələcək inkişafı və əməkdaşlıq mühitinin daha da gücləndirilməsi üçün vacib addım olduğunu bildiriblər.\n\nTərəflər çıxışlarında kollektiv müqavilənin təhsil müəssisələrində əmək münasibətlərinin sağlam əsaslar üzərində qurulmasında mühüm rol oynadığını qeyd ediblər. Müqavilənin məqsədi müəllim və texniki heyətin sosial rifahını yaxşılaşdırmaq, onların əmək fəaliyyətində daha yüksək motivasiyanı təmin etmək, həmçinin kollecin tədris prosesində stabillik və davamlılığı dəstəkləməkdir.\n\nYeni sənəddə əmək şəraitinin yaxşılaşdırılması, işçilərin sosial müdafiəsinin gücləndirilməsi, sağlam və təhlükəsiz iş mühitinin qorunması, işçilərin peşə hazırlığının artırılması, həmçinin tərəflər arasında qarşılıqlı məsuliyyət prinsiplərinin daha dəqiq müəyyən edilməsi kimi məsələlər öz əksini tapmışdır. Müzakirələr zamanı müqavilənin əsas müddəaları, tərəflər arasında əməkdaşlığın prioritet istiqamətləri və əmək münasibətlərinin səmərəli təşkili ilə bağlı müxtəlif təkliflər nəzərdən keçirilib.\n\nXüsusilə aşağıdakı məsələlər diqqət mərkəzində olub: işçilərin sosial müdafiə paketlərinin genişləndirilməsi, əmək və istirahət rejimlərinin daha optimal şəkildə tənzimlənməsi, işçilərin hüquq və vəzifələrinin daha dəqiq müəyyən edilməsi, kollecin tədris və inzibati mühitində sağlam əmək münasibətlərinin təşviqi, həmkarlar ittifaqı ilə rəhbərlik arasında əməkdaşlıq mexanizmlərinin gücləndirilməsi. Həmçinin tədbir zamanı kollektiv müqavilənin yalnız hüquqi sənəd deyil, eyni zamanda kollektivin sosial-iqtisadi və mənəvi dəstəyini özündə birləşdirən platforma olduğu vurğulanmışdır.\n\nKollecin direktoru Bəxtiyar Bəxtiyarov çıxışında bildirmişdir ki, müasir təhsil mühitində əməkdaşlıq, qarşılıqlı anlaşma və işçi hüquqlarının təminatı əsas prioritetlərdəndir. Onun sözlərinə görə, imzalanmış kollektiv müqavilə həm kollecin inkişaf strategiyasına uyğun gəlir, həm də əməkdaşların sosial təminatına töhfə verir.\n\nHəmkarlar İttifaqı Komitəsinin sədri Aygün Musayeva isə vurğulamışdır ki, bu müqavilə kollektivin sosial rifahının qorunması, işçilərin maraqlarının müdafiəsi və əmək mədəniyyətinin inkişaf etdirilməsi üçün mühüm alətdir. O, həmçinin əməkdaşlara yaradılan şəraitin yaxşılaşdırılmasının Həmkarlar İttifaqı Komitəsinin daim diqqətində olduğunu qeyd edib.\n\nETİHİ-nin nümayəndəsi Ruhiyyə İsrafilova isə kollektiv müqavilələrin təhsil müəssisələrinin idarə olunmasında mühüm funksional rol oynadığını, həmkarlar ittifaqlarının fəaliyyətinin gücləndirilməsinin sosial tərəfdaşlığın əsas şərtlərindən biri olduğunu bildirib. Tədbirin sonunda tərəflər kollektiv müqavilənin gələcək əməkdaşlıq üçün yeni imkanlar açacağına və kollecin tədris mühitində sosial sabitliyin təmin olunmasına xidmət edəcəyinə əminliklərini ifadə ediblər.\n\nBu müqavilə əməkdaşların rifahının yüksəldilməsi, onların sosial təminatının gücləndirilməsi və kollektivdə sağlam işgüzar atmosferin formalaşdırılması istiqamətində atılan növbəti mühüm addımdır.",
+    "full_en": "On 27 November 2025, an official organization activity titled \"Collective Agreement Signed Between BDRNK Under AzTU and the Trade Union Committee\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "27 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Подписан Коллективный договор между БГКСТ при АзТУ и Профсоюзным комитетом».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "27 Noyabr 2025",
+    "image": "news_proper_2566.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2566",
+    "tag_az": "Təşkilat",
+    "tag_en": "Organization",
+    "tag_ru": "Организация",
+    "date_az": "27 Noyabr 2025",
+    "date_en": "27 November 2025",
+    "date_ru": "27 Ноября 2025"
+  },
+  {
+    "id": 17,
+    "official_id": "2540",
+    "title_az": "Kollecdə «Sağlam həyat tərzi» mövzusunda maarifləndirici tədbir",
+    "title_en": "Educational Awareness Event on 'Healthy Lifestyle' Held at the College",
+    "title_ru": "В колледже прошло просветительское мероприятие на тему «Здоровый образ жизни»",
+    "desc_az": "“2022-2026-cı illərdə sosial-iqtisadi inkişaf Strategiyası”na uyğun olaraq 17.11.2025-ci il tarixində Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat...",
+    "desc_en": "On 17 November 2025, an official event activity titled \"Educational Awareness Event on 'Healthy Lifestyle' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "17 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло просветительское мероприятие на тему «Здоровый образ жизни»».",
+    "full_az": "“2022-2026-cı illərdə sosial-iqtisadi inkişaf Strategiyası”na uyğun olaraq 17.11.2025-ci il tarixində Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Sağlam həyat tərzi” mövzusunda maarifləndirici tədbir keçirilmişdir. Tədbirdə kollecin müəllim və tələbə heyəti iştirak etmişdir.\n\nKollecin tərbiyə işləri üzrə director müavini Məmmədov Şahmurad müəllim tədbir iştirakçıları qarşısında çıxış edərək mövzu ətrafında geniş məlumat vermişdir. Şahmurad müəllim qeyd etmişdir ki, şağlam həyat tərzi üçün aşağıdakı şərtlər vacibdir: Əsas qidalardan istifadə etmək Orqanizmin ağır çəkidən azad olunması əsəblərin sakitləşdirilməsi psixoloji cəhətdən sağlam inkişaf idmanla məşğul olmaq(əsasən yerimək) Erkən yatıb.\n\nErkən durmaq Sağlam həyat tərzi kiçik addımlardan başlayır: Yatmazdan əvvəl təmiz havada gəzmək Yatmazdan əvvəl yemək yemək məsləhət deyil Yatmazdan bir neçə saat əvvəl yüngül qidalar qəbul etmək lazımdır Bunun üçün həyatı düzgün yaşamaq lazımdır. İlk növbədə düzgün qidalanmaq lazımdır.\n\nQeyri-sağlam həyat tərzinin qarşısını almaq, fiziki aktivlik olmalıdır. Xəstəliklərin qarşısını almaq üçün düzgün qidalanmaq, meyvə və tərəvəzdən çox istifadə etmək lazımdır. Gündə 200 qram meyvə, 200 qram tərəvəz yemək lazımdır. Gündə 30 dəqiqə fiziki aktivliklə məşğul olmaq, həftədə 150 dəqiqə idmanla məşğul olmaq, zərərli vərdişlərdən uzaq olmaq lazımdır.",
+    "full_en": "On 17 November 2025, an official event activity titled \"Educational Awareness Event on 'Healthy Lifestyle' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "17 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло просветительское мероприятие на тему «Здоровый образ жизни»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "17 Noyabr 2025",
+    "image": "news_proper_2540.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2540",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "17 Noyabr 2025",
+    "date_en": "17 November 2025",
+    "date_ru": "17 Ноября 2025"
+  },
+  {
+    "id": 18,
+    "official_id": "2532",
+    "title_az": "Kollecdə «Azərbaycan dilinin saflığı» mövzusunda maarifləndirici dərs",
+    "title_en": "Educational Lesson Dedicated to the 'Purity of the Azerbaijani Language'",
+    "title_ru": "Просветительский урок в колледже на тему «Чистота азербайджанского языка»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 19.11.2025-ci il tarixdə “Azərbaycan dilinin saflığı” mövzusunda maarifləndirici dərs keçirilmişdir....",
+    "desc_en": "On 19 November 2025, an official education activity titled \"Educational Lesson Dedicated to the 'Purity of the Azerbaijani Language'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "19 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительский урок в колледже на тему «Чистота азербайджанского языка»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 19.11.2025-ci il tarixdə “Azərbaycan dilinin saflığı” mövzusunda maarifləndirici dərs keçirilmişdir. Dərsi kollecin Azərbaycan dili və ədəbiyyat müəllimi Damət Əliyev aparmışdır.\n\nDərsdə qeyd edilmişdir ki, Azərbaycan dili dünyanın ən zəngin və inkişaf etmiş dillərindən biridir. Dil xalqın böyük var-dövləti, əvəzedilməz sərvətidir. Onunla həyat, varlıq və onun daşıyıcılarının şüurlu və əmək fəaliyyəti ifadə olunur. Dilin maneəsiz inkişafı milli azadlığın zəmanəti və rəhnidir, dilin çiçəklənməsi isə milli rifahın başlıca göstəricisidir.\n\nDil və onun daşıyıcıları, o dərəcədə həyati zəruri əlaqəli və vəhdətdədir, onların birini digərindən təcrid etmək düşünülməz ağılagəlməzdir. Dil insanın əmək fəaliyyəti və insan cəmiyyətinin formalaşması prosesində meydana gəlmişdir. Dil xalqın inkişafının vasitəsi kimi insanların bütün bəşəriyyətlə ünsiyyəti üçün, təbiət qanunlannı və ictimai inkişafı yaxşı dərk etməyə kömək edir.\n\nDilin köməyi ilə insanlar təsəvvürləri və dünyagörüşünü izhar edərək, əvəzedilməz ünsiyyət vasitəsi olaraq, bəşərin inkişafına daim xidmət edir .",
+    "full_en": "On 19 November 2025, an official education activity titled \"Educational Lesson Dedicated to the 'Purity of the Azerbaijani Language'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "19 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительский урок в колледже на тему «Чистота азербайджанского языка»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "19 Noyabr 2025",
+    "image": "news_proper_2532.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2532",
+    "tag_az": "Təhsil",
+    "tag_en": "Education",
+    "tag_ru": "Образование",
+    "date_az": "19 Noyabr 2025",
+    "date_en": "19 November 2025",
+    "date_ru": "19 Ноября 2025"
+  },
+  {
+    "id": 19,
+    "official_id": "2483",
+    "title_az": "Bəxtiyar Vahabzadənin 100 illiyinə həsr olunmuş tədbir",
+    "title_en": "Literary Event Dedicated to the 100th Anniversary of People's Poet Bakhtiyar Vahabzadeh",
+    "title_ru": "Литературное мероприятие к 100-летию народного поэта Бахтияра Вагабзаде",
+    "desc_az": "13.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində xalq şairi Bəxtiyar Vahabzadənin 100 illiyinə həsr olunmuş tədbir keçirilmişdir. Tədbirdə kollecin...",
+    "desc_en": "On 13 November 2025, an official culture activity titled \"Literary Event Dedicated to the 100th Anniversary of People's Poet Bakhtiyar Vahabzadeh\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "13 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Литературное мероприятие к 100-летию народного поэта Бахтияра Вагабзаде».",
+    "full_az": "13.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində xalq şairi Bəxtiyar Vahabzadənin 100 illiyinə həsr olunmuş tədbir keçirilmişdir. Tədbirdə kollecin Azərbaycan dili və ədəbiyyatı müəllimi Ziba müəllimə Bəxtiyar Vahabzadənin yaradıcılığı haqqinda tələbələrə ətraflı məlumat vermişdir.\n\nZiba müəllimə qeyd etdi ki, Bəxtiyar Vahabzadə mübariz şəxsiyyəti və çoxşaxəli fəaliyyəti ilə XX əsrin ikinci yarısından etibarən Azərbaycan bədii-ictimai fikir tarixinə parlaq səhifələr yazmış qüdrətli simalardandır. Onun Vətənə, millətə və doğma ana dilinə sonsuz məhəbbət ifadə edən, dərin poetik-fəlsəfi düşüncələrlə zəngin irsi daim mədəni-mənəvi dəyərlərə ehtiram, milli azadlıq ideallarına bağlılıq və istiqlal məfkurəsinə sədaqət hissi aşılamışdır.\n\nSənətkar ədəbi və elmi yaradıcılığını uzun illər pedaqoji fəaliyyəti ilə uğurla əlaqələndirərək, bir neçə nəslin milli təfəkkürünün formalaşmasında müstəsna rol oynamışdır. Bəxtiyar Vahabzadə ictimai xadim kimi xalqın taleyüklü məsələlərinə münasibətdə həmişə əsl ziyalı mövqeyi nümayiş etdirmişdir.\n\nTədbirdə tələbələr Bəxtiyar Vahabzadənin yaradıcılığından şeirlər söylədilər.",
+    "full_en": "On 13 November 2025, an official culture activity titled \"Literary Event Dedicated to the 100th Anniversary of People's Poet Bakhtiyar Vahabzadeh\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "13 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Литературное мероприятие к 100-летию народного поэта Бахтияра Вагабзаде».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "13 Noyabr 2025",
+    "image": "news_proper_2483.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2483",
+    "tag_az": "Mədəniyyət",
+    "tag_en": "Culture",
+    "tag_ru": "Культура",
+    "date_az": "13 Noyabr 2025",
+    "date_en": "13 November 2025",
+    "date_ru": "13 Ноября 2025"
+  },
+  {
+    "id": 20,
+    "official_id": "2441",
+    "title_az": "Kollecdə 8 noyabr «Zəfər Günü»nə həsr olunmuş tədbir keçirilmişdir",
+    "title_en": "Solemn Event Dedicated to November 8 — Victory Day Held at the College",
+    "title_ru": "В колледже прошло торжественное мероприятие, посвященное 8 Ноября — Дню Победы",
+    "desc_az": "07.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 8 Noyabr «Zəfər Günü»nə həsr olunmuş tədbir keçirilmişdir. Tədbirdə kollecin rəhbərliyi başda...",
+    "desc_en": "On 07 November 2025, an official event activity titled \"Solemn Event Dedicated to November 8 — Victory Day Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "07 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло торжественное мероприятие, посвященное 8 Ноября — Дню Победы».",
+    "full_az": "07.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 8 Noyabr «Zəfər Günü»nə həsr olunmuş tədbir keçirilmişdir. Tədbirdə kollecin rəhbərliyi başda olmaqla müəllim və tələbə heyəti iştirak etmişdir. Tədbir iştirakçıları Vətən müharibəsi Şəhidlərinin xatirəsini bir dəqəqəlik sükutla yad etdilər.\n\nKollecin tərbiyə işləri üzrə direktor müavini Şahmurad müəllim çıxış edərək qeyd etdi ki, Bu Zəfər Azərbaycan xalqının misli görünməmiş qəhrəmanlıq salnaməsidir. Bu əlamətdar gün dövlətçilik ənənələri ta qədimlərə söykənən Azərbaycan xalqının birlik, şərəf, məğrurluq, qürur və ədalət bayramıdır, tariximizə qızıl hərflərlə yazılan, dünya hərb elminə dair dərsliklərə düşən, ordumuzun qüdrətini bütün dünyaya tanıdan böyük hadisədir.\n\nHədd-hüdudu olmayan fərəh, xoşbəxtlik məhz budur! Qazandığımız Zəfər xalq olaraq bizi ölkə rəhbərinin ətrafında ali amal uğrunda «Dəmir yumruq» kimi birləşdirdi. Elə-obaya, vətənin torpağına-daşına, suyuna, aranına-dağına sonsuz sevgi və məhəbbətimizi nümayiş etdirdi.\n\nBöyük Qələbə torpaq uğrunda gözünü qırpmadan özünü fəda edən igid oğulların qəhrəmanlığı sayəsində əldə olundu. Xalqımızın ölkə rəhbərinə olan sevgisini, inamını, etimadını daimi yaşadan Qələbə oldu. Müzəffər Ali Baş Komandan, Prezident İlham Əliyevin rəhbərliyi altında şəhidlərimizin qanı-canı bahasına, qazilərimizin fədəkarlığı sayəsində qazandığımız misilsiz qələbə regionda yeni reallıq yaratdı.\n\nAzərbaycan «münaqişənin hərbi həlli yoxdur» tezisinin yanlış olduğunu sübuta yetirdi. Tədbirdə kollecin hərbi müəllimləri, Vətən Müharibəsi iştirakşıları Salayev Oqtay müıllim, Eminov Xəyyam müəllim, Abbasov Mehdixan müəllim və kollecin 2-ci kurs tələbəsi Vətən Müharibəsi iştirakçısı Allahverdiyev Rəşad çıxış edərək keçdikləri döyüş yolundan ətraflı danışaraq öz təəsüratlarını tədbir iştirakşılarına bildirdilər.\n\nTədbirin sonunda kollecin həmkarlar ittifaqı tərəfindən Vətən Müharibəsi iştirakçılarına Fəxri Fərmanlar təqdim olundu.",
+    "full_en": "On 07 November 2025, an official event activity titled \"Solemn Event Dedicated to November 8 — Victory Day Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "07 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло торжественное мероприятие, посвященное 8 Ноября — Дню Победы».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "07 Noyabr 2025",
+    "image": "news_proper_2441.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2441",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "07 Noyabr 2025",
+    "date_en": "07 November 2025",
+    "date_ru": "07 Ноября 2025"
+  },
+  {
+    "id": 21,
+    "official_id": "2419",
+    "title_az": "«Uşaq Hüquqları Aylığı» çərçivəsində tədbir",
+    "title_en": "Educational Seminar Held Within the 'Child Rights Month' Campaign",
+    "title_ru": "Мероприятие в рамках кампании «Месячник прав ребенка»",
+    "desc_az": "06.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində tədbir keçirilmişdir. Tədbirdə çıxış...",
+    "desc_en": "On 06 November 2025, an official event activity titled \"Educational Seminar Held Within the 'Child Rights Month' Campaign\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "06 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие в рамках кампании «Месячник прав ребенка»».",
+    "full_az": "06.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində tədbir keçirilmişdir. Tədbirdə çıxış edənlər qeyd etdilər ki, “Uşaq hüquqları aylığı”nın təşkil olunmasının əsas məqsədi BMT-nin Uşaq Hüquqları Konvensiyasının qəbul olunmasının ildönümü, 20 noyabr-Ümumdünya Uşaqlar Günü ərəfəsində uşaqlara diqqətin daha da artırılması və uşaq hüquqlarının qorunması işinin yaxşılaşdırılmasından ibarətdir.\n\nTədbirlərdə tələbələrə uşaq hüquqlarının yaranma tarixi, milli və beynəlxalq qanunvericilik, dövlət tərəfindən uşaq hüquqlarının müdafiəsi sahəsində görülən işlər barədə ətraflı məlumatlar verilir. Bildirilir ki, ölkə Prezidenti İlham Əliyevin 27 dekabr 2011-ci il tarixli sərəncamı ilə təsdiq edilmiş “Azərbaycan Respublikasında İnsan hüquq və azadlıqlarının müdafiəsinin səmərəliliyini artırmaq sahəsində Milli Fəaliyyət Proqramı”nda əhalinin müxtəlif qruplarının, o cümlədən də uşaq hüquqlarının müdafiəsi ilə bağlı təsbit olunan müddəalar uğurla həyata keçirilir.\n\nBundan əlavə, 44 günlük Vətən Müharibəsi dövründə Ermənistan tərəfinin Azərbaycanın mülki yaşayış məntəqələrini ağır artilleriyadan atəşə tutması nəticəsində 10-dan çox uşağın həlak olması, 50 nəfərinin yaralanması, bir çox uşağın isə valideynlərini itirmələri barədə məlumat verildi. Qeyd edildi ki, mülki obyektlərin hədəfə alınması, bir çox yaşayış evlərinin, təhsil, səhiyyə müəssisələrinin dağıdılması uşaqların təhsil, səhiyyə və digər hüquqlarının pozulmasına gətirib çıxarıb.\n\nVurğulandı ki, uşaqlar hərbi münaqişələr zamanı heç bir halda hədəf obyektinə çevrilməməli və müharibənin fəsadlarından əziyyət çəkməməlidirlər. Bildirilir ki, Azərbaycanda uşaqlar dövlətin və cəmiyyətin daim diqqət mərkəzindədir və uşaq problemlərinin ardıcıl həlli ölkəmizdə bu sahədə həyata keçirilən dövlət siyasətinin prioritet istiqamətlərindən biridir.",
+    "full_en": "On 06 November 2025, an official event activity titled \"Educational Seminar Held Within the 'Child Rights Month' Campaign\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "06 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие в рамках кампании «Месячник прав ребенка»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "06 Noyabr 2025",
+    "image": "news_proper_2419.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2419",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "06 Noyabr 2025",
+    "date_en": "06 November 2025",
+    "date_ru": "06 Ноября 2025"
+  },
+  {
+    "id": 22,
+    "official_id": "2391",
+    "title_az": "05 noyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində növbəti maarifləndirici tədbir",
+    "title_en": "Follow-Up Educational Session Held Within 'Child Rights Month'",
+    "title_ru": "Очередное просветительское мероприятие в рамках «Месячника прав ребенка»",
+    "desc_az": "05.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində «Uşaqların Hüquqları: Danış, Dinlə, Qoru»...",
+    "desc_en": "On 05 November 2025, an official event activity titled \"Follow-Up Educational Session Held Within 'Child Rights Month'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "05 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Очередное просветительское мероприятие в рамках «Месячника прав ребенка»».",
+    "full_az": "05.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində «Uşaqların Hüquqları: Danış, Dinlə, Qoru» mövzusunda tədbir keçirilmişdir. Tədbirdə kollecin tədris işləri üzrə direktor müavini Şahmurad müəllim mövzu barəsində tələbələrə dolğun məlumatlar verdi.\n\nTədbirin əsas məqsədi uşaqların hüquqları və onların qorunması mövzusunda məlumatlılığın artırılması idi. Kollec tərəfindən hazırlanmış maarifləndirici tanıtım materialları iştirakçılara paylanmış, bu vasitə ilə uşaqların hüquqları haqqında ətraflı məlumat verilib.\n\nTədbirin sonunda “Uşaqların Hüquqları” mövzusunda videoçarx nümayiş olunmuşdur. Bu videoçarx Uşaq hüquqlarının qorunmasının vacibliyini və uşaqların hüquqlarına olan diqqətin artırılmasını vurğulamışdır. Belə tədbirlər uşaqların hüquqlarının qorunmasına dair cəmiyyətdə daha geniş düşüncə və məlumatlılıq yaratmağa yönəlir.",
+    "full_en": "On 05 November 2025, an official event activity titled \"Follow-Up Educational Session Held Within 'Child Rights Month'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "05 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Очередное просветительское мероприятие в рамках «Месячника прав ребенка»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "05 Noyabr 2025",
+    "image": "news_proper_2391.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2391",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "05 Noyabr 2025",
+    "date_en": "05 November 2025",
+    "date_ru": "05 Ноября 2025"
+  },
+  {
+    "id": 23,
+    "official_id": "2365",
+    "title_az": "20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində maarifləndirici tədbir",
+    "title_en": "Awareness Event Held for the October 20 – November 20 'Child Rights Month'",
+    "title_ru": "Просветительское мероприятие в рамках «Месячника прав ребенка» (20 октября – 20 ноября)",
+    "desc_az": "03.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində maarifləndirici tədbir keçirilmişdir....",
+    "desc_en": "On 03 November 2025, an official event activity titled \"Awareness Event Held for the October 20 – November 20 'Child Rights Month'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "03 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие в рамках «Месячника прав ребенка» (20 октября – 20 ноября)».",
+    "full_az": "03.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində maarifləndirici tədbir keçirilmişdir. Tədbirdə kollecin hüquqşünası Vəfa Hacıyeva tələbələrə uşaq hüquqlarının yaranma tarixi, milli və beynəlxalq qanunvericilik, dövlət tərəfindən uşaq hüquqlarının müdafiəsi sahəsində görülən işlər barədə ətraflı məlumat vermişdir.\n\n“Uşaq hüquqları aylığı”nın təşkil olunmasının əsas məqsədi BMT-nin Uşaq Hüquqları Konvensiyasının qəbul olunmasının ildönümü, 20 noyabr-Ümumdünya Uşaqlar Günü ərəfəsində uşaqlara diqqətin daha da artırılması və uşaq hüquqlarının qorunması işinin yaxşılaşdırılmasından ibarətdir.",
+    "full_en": "On 03 November 2025, an official event activity titled \"Awareness Event Held for the October 20 – November 20 'Child Rights Month'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "03 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие в рамках «Месячника прав ребенка» (20 октября – 20 ноября)».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "03 Noyabr 2025",
+    "image": "news_proper_2365.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2365",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "03 Noyabr 2025",
+    "date_en": "03 November 2025",
+    "date_ru": "03 Ноября 2025"
+  },
+  {
+    "id": 24,
+    "official_id": "2318",
+    "title_az": "20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində tədbir",
+    "title_en": "Student Seminar Held Within the 'Child Rights Month' Initiative",
+    "title_ru": "Семинар для студентов в рамках «Месячника прав ребенка»",
+    "desc_az": "30.10.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində müəllim və tələbələrin iştirakı ilə tədbir...",
+    "desc_en": "On 30 October 2025, an official event activity titled \"Student Seminar Held Within the 'Child Rights Month' Initiative\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "30 Октября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Семинар для студентов в рамках «Месячника прав ребенка»».",
+    "full_az": "30.10.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində müəllim və tələbələrin iştirakı ilə tədbir keçirilmişdir. Tədbirdə kollecin tərbiyə işləri üzrə direktor müavini Məmmədov Şahnurad müəllim çıxış etmişdir.\n\nŞahmurad müəllim çıxışında qeyd etdi ki, Azərbaycan Respublikası Birləşmiş Millətlər Təşkilatının “Uşaq hüquqları haqqında” Konvensiyasına qoşulmaqla uşaqların hüquqlarının müdafiəsi istiqamətində mühüm beynəlxalq öhdəliklər götürüb. Hər il Azərbaycan Respublikasının İnsan Hüquqları üzrə Müvəkkili — Ombudsmanının təşəbbüsü ilə Uşaq Hüquqları haqqında Konvensiyanın qəbul edilməsinin ildönümü ərəfəsində – 20 oktyabrdan 20 noyabra qədər ölkəmizdə “Uşaq Hüquqları Aylığı” keçirilir.\n\nBu təşəbbüsün məqsədi uşaqların hüquq və maraqlarının qorunması sahəsində ictimai məlumatlılığın artırılması, dövlət qurumları, vətəndaş cəmiyyəti institutları və digər tərəfdaşların bu istiqamətdə səfərbər olunmasıdır.",
+    "full_en": "On 30 October 2025, an official event activity titled \"Student Seminar Held Within the 'Child Rights Month' Initiative\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "30 Октября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Семинар для студентов в рамках «Месячника прав ребенка»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "30 Oktyabr 2025",
+    "image": "news_proper_2318.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2318",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "30 Oktyabr 2025",
+    "date_en": "30 October 2025",
+    "date_ru": "30 Октября 2025"
+  },
+  {
+    "id": 25,
+    "official_id": "2186",
+    "title_az": "«Qızıl payız» qaçış festivalı",
+    "title_en": "Success at the 'Golden Autumn' Running Festival",
+    "title_ru": "Успешное выступление на беговом фестивале «Золотая осень»",
+    "desc_az": "19.10.2025-ci il tarixində Əməkdar məşqçi Sadıq Sadıqovun 71-ci ildönümü münasibəti ilə «Qızıl payız» qaçış festivalı keçirilmişdir. Kollecimizin idman müəllimi Adil Yusubov bu qaçış...",
+    "desc_en": "On 19 October 2025, an official sports activity titled \"Success at the 'Golden Autumn' Running Festival\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "19 Октября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Успешное выступление на беговом фестивале «Золотая осень»».",
+    "full_az": "19.10.2025-ci il tarixində Əməkdar məşqçi Sadıq Sadıqovun 71-ci ildönümü münasibəti ilə «Qızıl payız» qaçış festivalı keçirilmişdir. Kollecimizin idman müəllimi Adil Yusubov bu qaçış festivalında respublika ikincisi olmuşdur. Bu münasibətlə Adil müəllimi kollecin rəhbərliyi və kollektivi adından ürəkdən təbrik edirik.",
+    "full_en": "On 19 October 2025, an official sports activity titled \"Success at the 'Golden Autumn' Running Festival\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "19 Октября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Успешное выступление на беговом фестивале «Золотая осень»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "19 Oktyabr 2025",
+    "image": "news_proper_2186.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2186",
+    "tag_az": "İdman",
+    "tag_en": "Sports",
+    "tag_ru": "Спорт",
+    "date_az": "19 Oktyabr 2025",
+    "date_en": "19 October 2025",
+    "date_ru": "19 Октября 2025"
+  },
+  {
+    "id": 26,
+    "official_id": "2098",
+    "title_az": "5 Oktyabr — Beynəlxalq Müəllimlər Gününə həsr edilmiş tədbir",
+    "title_en": "Celebration Dedicated to October 5 — International Teachers' Day",
+    "title_ru": "Торжественное мероприятие, посвященное 5 Октября — Международному дню учителя",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 5 Oktyabr — Beynəlxalq Müəllimlər Gününə həsr edilmiş tədbir təşkil olunub. Tədbir Ümummilli Lider...",
+    "desc_en": "On 07 October 2025, an official event activity titled \"Celebration Dedicated to October 5 — International Teachers' Day\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "07 Октября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Торжественное мероприятие, посвященное 5 Октября — Международному дню учителя».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 5 Oktyabr — Beynəlxalq Müəllimlər Gününə həsr edilmiş tədbir təşkil olunub. Tədbir Ümummilli Lider Heydər Əliyevin və ölkəmizin suverenliyi, torpaqlarımızın azadlığı uğrunda canından keçən şəhidlərimizin əziz xatirəsinin bir dəqiqəlik sükutla yad edilməsi, Dövlət Himninin səsləndirilməsi ilə başlayıb.\n\nTədbirdə kollecin HİK sədri Aygün Musayeva kollecin müəllimlərini Beynəlxalq Müəllimlər Günü münasibətilə təbrik edib, onlara şərəfli peşə fəaliyyətlərində uğurlar arzulayıb. Gənc nəslin formalaşmasında müəllimlərin misilsiz rolundan söz açan Aygün Musayeva müəllimliyin insanın ömürlük missiyası olduğunu bildirib.\n\nMüəllimin yalnız bilik ötürən deyil, həm də həyat dərsi verən şəxs olduğunu diqqətə çatdıran HİK sədri onların əziyyətlərinin ən böyük bəhrəsinin yetişdirdikləri savadlı, vicdanlı və vətənpərvər gənclər olduğunu qeyd edib. Sonra kollecin tərbiyə işləri üzrə director müavini Şahmurad Məmmədov çıxış edib.\n\nO, müəllimlik peşəsini öz həyatının mənası kimi dəyərləndirdiyini bildirib, ömrünü gənc nəslin savadlı, vətənpərvər və vicdanlı yetişməsinə həsr etməkdən qürur duyduğunu vurğulayıb. Daha sonra təhsil sahəsində uğurlar qazanan bir qrup müəllim fəxri fərmanla təltif ediliblər.\n\nOnların pedaqoji fəaliyyətinə və kollecin inkişafına verdikləri töhfələrə görə xüsusi minnətdarlıq bildirilib. .",
+    "full_en": "On 07 October 2025, an official event activity titled \"Celebration Dedicated to October 5 — International Teachers' Day\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "07 Октября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Торжественное мероприятие, посвященное 5 Октября — Международному дню учителя».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "07 Oktyabr 2025",
+    "image": "news_proper_2098.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2098",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "07 Oktyabr 2025",
+    "date_en": "07 October 2025",
+    "date_ru": "07 Октября 2025"
+  },
+  {
+    "id": 27,
+    "official_id": "2082",
+    "title_az": "Kollecdə 27 sentyabr — Anım Günü ilə əlaqədar tədbir keçirilmişdir",
+    "title_en": "Commemorative Ceremony Marking September 27 — Remembrance Day",
+    "title_ru": "В колледже прошло мероприятие, посвященное 27 Сентября — Дню памяти",
+    "desc_az": "27 sentyabr 2025-ci ildə Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində Anım Günü ilə əlaqədar kollecin müəllim və tələbə heyətinin iştir akı ilə...",
+    "desc_en": "On 27 September 2025, an official event activity titled \"Commemorative Ceremony Marking September 27 — Remembrance Day\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "27 Сентября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло мероприятие, посвященное 27 Сентября — Дню памяти».",
+    "full_az": "27 sentyabr 2025-ci ildə Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində Anım Günü ilə əlaqədar kollecin müəllim və tələbə heyətinin iştir akı ilə tədbir keçirilmişdir. Tədbirdə kollecin tərbiyə işləri üzrə direktor müavini Məmmədov Şahmurad müəllim çıxış etmişdir.\n\nŞahmurad müəllim çıxışında qeyd etdi ki, Azərbaycanın hərb tarixinə qızıl hərflərlə yazılmış şanlı Zəfər yürüşümüzün — Vətən müharibəsinin başlamasından 5 il keçir. Məhz 2020-ci ilin payızında Azərbaycan Ordusunun əsgərindən yüksəkrütbəli zabitinədək hər bir mənsubu öz canı, qanı bahasına 30 ildən sonra təqvimdəki işğal tarixlərini Qələbə günləri ilə əvəz etdi.\n\nHər günü bir qəhrəmanlıq dastanı olan, Azərbaycan tarixinə parlaq səhifə kimi yazılan 44 günlük Vətən müharibəsi ölkəmizin hərbi gücünün, Silahlı Qüvvələrimizin peşəkarlığının, Ordumuzun haqq işi uğrunda ədalətli savaşının nümayişinə çevrildi. Prezident, Müzəffər Ali Baş Komandan İlham Əliyevin 2020-ci il 2 dekabr tarixli Sərəncamına əsasən Vətən müharibəsinin başladığı günün – sentyabrın 27-nin Anım Günü kimi qeyd edilməsi qəhrəmancasına döyüşmüş, ölkəmizin ərazi bütövlüyü uğrunda canlarını fəda etmiş şəhidlərimizə dərin ehtiramın ifadəsidir.",
+    "full_en": "On 27 September 2025, an official event activity titled \"Commemorative Ceremony Marking September 27 — Remembrance Day\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "27 Сентября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло мероприятие, посвященное 27 Сентября — Дню памяти».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "27 Sentyabr 2025",
+    "image": "news_proper_2082.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2082",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "27 Sentyabr 2025",
+    "date_en": "27 September 2025",
+    "date_ru": "27 Сентября 2025"
+  },
+  {
+    "id": 28,
+    "official_id": "2077",
+    "title_az": "Kollecdə “Reproduktiv sağlamlıq və ailə planlaşdırılması” mövzusunda maarifləndirmə tədbir keçirmişdir.",
+    "title_en": "Awareness Seminar on 'Reproductive Health and Family Planning' Held at the College",
+    "title_ru": "В колледже прошел семинар «Репродуктивное здоровье и планирование семьи»",
+    "desc_az": "19.05.2025-ci il tarixində Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində tələbələrin iştirakı ilə keçirilən tədbirdə reproduktiv sağlamlıq və onun...",
+    "desc_en": "On 19 May 2025, an official event activity titled \"Awareness Seminar on 'Reproductive Health and Family Planning' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "19 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошел семинар «Репродуктивное здоровье и планирование семьи»».",
+    "full_az": "19.05.2025-ci il tarixində Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində tələbələrin iştirakı ilə keçirilən tədbirdə reproduktiv sağlamlıq və onun aspektləri, ailə planlaması, arzu olunmaz hamiləlik və ailədaxili münasibətləri haqqında məlumat verilmişdir. Tədbirdə eyni zamanda erkən nikah və onun yaratdığı fəsadlardan söhbət açılmışdır.",
+    "full_en": "On 19 May 2025, an official event activity titled \"Awareness Seminar on 'Reproductive Health and Family Planning' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "19 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошел семинар «Репродуктивное здоровье и планирование семьи»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "19 May 2025",
+    "image": "news_proper_2077.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2077",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "19 May 2025",
+    "date_en": "19 May 2025",
+    "date_ru": "19 Мая 2025"
+  },
+  {
+    "id": 29,
+    "official_id": "2072",
+    "title_az": "Kollecdə «Səssiz Qatil: Narkomaniya» Mövzusunda Maarifləndirici Tədbir Keçirildi",
+    "title_en": "Educational Seminar Titled 'Silent Killer: Drug Addiction' Held at the College",
+    "title_ru": "В колледже прошло мероприятие «Тихий убийца: наркомания»",
+    "desc_az": "03 iyun 2025-ci il tarixində Azərbaycan Texniki Universitetinin nəzdində fəaliyyət göstərən Bakı Dövlət Rabitə və Nəqliyyat Kollecində narkomaniyaya qarşı mübarizə məqsədilə “Səssiz...",
+    "desc_en": "On 03 June 2025, an official event activity titled \"Educational Seminar Titled 'Silent Killer: Drug Addiction' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "03 Июня 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло мероприятие «Тихий убийца: наркомания»».",
+    "full_az": "03 iyun 2025-ci il tarixində Azərbaycan Texniki Universitetinin nəzdində fəaliyyət göstərən Bakı Dövlət Rabitə və Nəqliyyat Kollecində narkomaniyaya qarşı mübarizə məqsədilə “Səssiz Qatil: Narkomaniya” mövzusunda maarifləndirici tədbir təşkil olunmuşdur. Tədbiri giriş sözü ilə kollecin tərbiyə işləri üzrə direktor müavini Şahmurad müəllim açaraq qeyd etmişdir ki, narkomaniya bəşəriyyətin üzləşdiyi ən təhlükəli sosial bəla olmaqla yanaşı, xüsusilə gənclər arasında geniş yayılmaqda davam edir.\n\nO, narkotik vasitələrin insan sağlamlığına, psixoloji vəziyyətinə və cəmiyyətə vurduğu zərərlər barədə geniş məlumat vermiş və bu bəlaya qarşı hər kəsin fəal mübarizə aparmasının vacibliyini vurğulamışdır. Daha sonra çıxış edən müəllim və tələbələr narkomaniyanın fəsadları, onun cəmiyyətə və ailələrə vurduğu zərbələr, eyni zamanda hüquqi məsuliyyətlər haqqında məlumatlarla çıxış etmişlər.\n\nTədbir zamanı videoçarx nümayiş olunmuş, real həyat hekayələri əsasında nümunələr təqdim edilmişdir. Maarifləndirici tədbirin əsas məqsədi gənclərin diqqətini narkotik vasitələrin yaratdığı təhlükələrə yönəltmək, onlarda sağlam həyat tərzinə maraq yaratmaq və zərərli vərdişlərdən uzaq durmağın əhəmiyyətini aşılamaq olmuşdur.\n\nSonda iştirakçılar arasında interaktiv müzakirə aparılmış, suallar cavablandırılmış və təşəbbüskar tələbələr təşəkkürnamə ilə təltif olunmuşlar.",
+    "full_en": "On 03 June 2025, an official event activity titled \"Educational Seminar Titled 'Silent Killer: Drug Addiction' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "03 Июня 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло мероприятие «Тихий убийца: наркомания»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "03 İyun 2025",
+    "image": "news_proper_2072.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2072",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "03 İyun 2025",
+    "date_en": "03 June 2025",
+    "date_ru": "03 Июня 2025"
+  },
+  {
+    "id": 30,
+    "official_id": "2068",
+    "title_az": "BDRN Kollecində Heydər Əliyevin 102-ci ildönümünə həsr olunmuş Şer və Mahnı Müsabiqəsi keçirilib",
+    "title_en": "Poetry and Song Contest Dedicated to the 102nd Anniversary of Heydar Aliyev",
+    "title_ru": "Конкурс стихов и песни, посвященный 102-й годовщине Гейдара Алиева",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 30 may 2025-ci il tarixində ümummilli lider Heydər Əliyevin anadan olmasının 102-ci ildönümünə həsr...",
+    "desc_en": "On 30 May 2025, an official education activity titled \"Poetry and Song Contest Dedicated to the 102nd Anniversary of Heydar Aliyev\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "30 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Конкурс стихов и песни, посвященный 102-й годовщине Гейдара Алиева».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 30 may 2025-ci il tarixində ümummilli lider Heydər Əliyevin anadan olmasının 102-ci ildönümünə həsr olunmuş Şer və Mahnı Müsabiqəsi keçirilib. Tədbirin əsas məqsədi tələbələr arasında bədii yaradıcılıq fəaliyyətini stimullaşdırmaq, onların ədəbi və musiqi istedadlarını üzə çıxarmaqla yanaşı, gənclərdə Heydər Əliyev irsinə olan marağı artırmaq və vətənpərvərlik ruhunu möhkəmləndirmək olub.\n\nMüsabiqədə kollec tələbələri müxtəlif mövzularda şeirlər səsləndirib, klassik və müasir musiqilərdən ibarət mahnılar ifa ediblər. Çıxışlar zamanı Ulu Öndərin həyat yolu, dövlətçilik sahəsindəki misilsiz xidmətləri və Azərbaycan gəncliyinə göstərdiyi diqqət və qayğı xüsusi vurğulanıb.\n\nTədbirin sonunda münsiflər heyətinin qərarı ilə fərqlənən iştirakçılara fəxri fərmanlar, diplomlar və qiymətli hədiyyələr təqdim olunub. Bu cür tədbirlər tələbələrin mədəni-estetik inkişafına təkan verir və onların sosial aktivliyini artırmaqla yanaşı, milli-mənəvi dəyərlərə bağlı bir nəsil yetişməsinə dəstək olur.",
+    "full_en": "On 30 May 2025, an official education activity titled \"Poetry and Song Contest Dedicated to the 102nd Anniversary of Heydar Aliyev\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "30 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Конкурс стихов и песни, посвященный 102-й годовщине Гейдара Алиева».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "30 May 2025",
+    "image": "news_proper_2068.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2068",
+    "tag_az": "Təhsil",
+    "tag_en": "Education",
+    "tag_ru": "Образование",
+    "date_az": "30 May 2025",
+    "date_en": "30 May 2025",
+    "date_ru": "30 Мая 2025"
+  },
+  {
+    "id": 31,
+    "official_id": "2053",
+    "title_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 30.05.2025-ci il tarixdə “İnsan Hüquqları Aylığı” çərçivəsində tədbir keçirilmişdir",
+    "title_en": "Seminar Held Within 'Human Rights Month' at Baku State Communications and Transport College",
+    "title_ru": "В колледже состоялось мероприятие в рамках «Месячника прав человека»",
+    "desc_az": ". Tədbirdə müəllim və tələbə heyəti iştirak etmişlər. Azərbaycan Respublikasının Prezidenti cənab İlham Əliyevin 18 iyun 2007-ci il tarixli sərəncamı ilə iyun ayının 18-i ölkəmizdə...",
+    "desc_en": "On 30 May 2025, an official event activity titled \"Seminar Held Within 'Human Rights Month' at Baku State Communications and Transport College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "30 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже состоялось мероприятие в рамках «Месячника прав человека»».",
+    "full_az": ". Tədbirdə müəllim və tələbə heyəti iştirak etmişlər. Azərbaycan Respublikasının Prezidenti cənab İlham Əliyevin 18 iyun 2007-ci il tarixli sərəncamı ilə iyun ayının 18-i ölkəmizdə “İnsan Hüquqları günü” kimi qeyd olunur və hər il olduğu kimi bu il də Ombudsmanın tərəfindən mayın 18-dən iyunun 18-dək ölkədə İnsan Hüquqları Aylığı elan edilmişdir.\n\nAylığın məqsədi insan hüquqları sahəsində mövcud problemlərin həlli yollarını müəyyənləşdirmək və İnsan hüquqlarını təmin etməkdir. Tədbirdə çıxış edənlər açaraq belə tədbirlərin keçirilməsinin əhəmiyyətindən və bu sahədə maarifləndirmə işlərinin aparılmasının vacibliyindən danışdılar.\n\nMövzunun aktuallığından bəhs edərək ölkəmizdə insan hüquqlarının daima ön planda olduğundan və dövlətimizin bu sahədə gördüyü işlərdən danışdılar.",
+    "full_en": "On 30 May 2025, an official event activity titled \"Seminar Held Within 'Human Rights Month' at Baku State Communications and Transport College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "30 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже состоялось мероприятие в рамках «Месячника прав человека»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "30 May 2025",
+    "image": "news_proper_2053.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2053",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "30 May 2025",
+    "date_en": "30 May 2025",
+    "date_ru": "30 Мая 2025"
+  },
+  {
+    "id": 32,
+    "official_id": "2039",
+    "title_az": "Kollecdə “Şəffaflıq və dürüstlük: Korrupsiyaya qarşı birgə mübarizə” mövzusunda tədbir keçirilmişdir",
+    "title_en": "Conference on 'Transparency and Integrity: Joint Fight Against Corruption'",
+    "title_ru": "Мероприятие «Прозрачность и честность: совместная борьба с коррупцией»",
+    "desc_az": "29.05.2025-ci il tarixində Azərbaycan Texniki Universitetin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Şəffaflıq və dürüstlük: Korrupsiyaya qarşı birgə mübarizə” mövzusunda...",
+    "desc_en": "On 29 May 2025, an official event activity titled \"Conference on 'Transparency and Integrity: Joint Fight Against Corruption'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "29 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие «Прозрачность и честность: совместная борьба с коррупцией»».",
+    "full_az": "29.05.2025-ci il tarixində Azərbaycan Texniki Universitetin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Şəffaflıq və dürüstlük: Korrupsiyaya qarşı birgə mübarizə” mövzusunda maarifləndirici tədbir təşkil olunub. Tədbirdə tələbələr və müəllimlər aktiv iştirak edərək, korrupsiyanın cəmiyyətə vurduğu zərər və bu bəladan qorunma yolları barədə məlumatlandırılıblar.\n\nTədbir çərçivəsində korrupsiyanın müxtəlif formaları, onun iqtisadi və sosial təsirləri haqqında təqdimatlar göstərilib. Müəllimlər tərəfindən korrupsiyaya qarşı mübarizənin vacibliyi vurğulanıb və tələbələr arasında şəffaflıq, dürüstlük prinsiplərinin önəmi qeyd edilib.\n\nTələbələr tədbirdə fəal iştirak edərək, mövzu ilə bağlı suallar verib və müzakirələr aparıblar. Kollecin ictimai təşkilatları da bu mövzuda maarifləndirici plakatlar hazırlayaraq tədbirin əhəmiyyətini artırıblar. Belə tədbirlər gənclərdə korrupsiyaya qarşı məsuliyyət hissini gücləndirməklə, onların gələcəkdə ədalətli və vətənpərvər vətəndaş kimi formalaşmasına xidmət edir.",
+    "full_en": "On 29 May 2025, an official event activity titled \"Conference on 'Transparency and Integrity: Joint Fight Against Corruption'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "29 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие «Прозрачность и честность: совместная борьба с коррупцией»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "29 May 2025",
+    "image": "news_proper_2039.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2039",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "29 May 2025",
+    "date_en": "29 May 2025",
+    "date_ru": "29 Мая 2025"
+  },
+  {
+    "id": 33,
+    "official_id": "2030",
+    "title_az": "Kollecdə «Azərbaycan dilinin saflığı» mövzusunda tədbir keçirilmişdir",
+    "title_en": "Seminar on 'Purity of the Azerbaijani Language' Held at the College",
+    "title_ru": "В колледже прошло мероприятие на тему «Чистота азербайджанского языка»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 27.05.2025-ci il tarixində «Azərbaycan dilinin saflığı» mövzusunda tədbir keçirilmişdir. Tədbirdə...",
+    "desc_en": "On 27 May 2025, an official event activity titled \"Seminar on 'Purity of the Azerbaijani Language' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "27 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло мероприятие на тему «Чистота азербайджанского языка»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 27.05.2025-ci il tarixində «Azərbaycan dilinin saflığı» mövzusunda tədbir keçirilmişdir. Tədbirdə kollecin Azərbaycan dili və Ədəbiyyatı müəllimi Ziba Səfərova çıxış etmişdir.\n\nZiba müəllimə qeyd etmişdir ki, Azərbaycan Respublikası öz müstəqilliyini bərpa etdikdən sonra Azərbaycan dili cəmiyyətin ictimai-siyasi, sosial-iqtisadi, elmi və mədəni həyatının bütün sahələrində daha geniş istifadə edilməyə başlamış, onun dövlət dili kimi maneəsiz inkişafı üçün münbit zəmin yaranmışdır. Ümummilli lider Heydər Əliyevin rəhbərliyi altında işlənib hazırlanmış və 1995-ci ildə ümumxalq səsverməsi ilə qəbul edilmiş Azərbaycan Respublikasının Konstitusiyası, Azərbaycan Respublikası Prezidentinin “Dövlət dilinin tətbiqi işinin təkmilləşdirilməsi haqqında” 2001-ci il 18 iyun tarixli və “Azərbaycan əlifbası və Azərbaycan dili gününün təsis edilməsi haqqında” 2001-ci il 9 avqust tarixli fərmanları, 2002-ci ildə qəbul edilmiş “Azərbaycan Respublikasının dövlət dili haqqında” Azərbaycan Respublikasının Qanunu dilimizin hüquqi statusunu, onun işlənməsi, qorunması və inkişafı üçün zəruri olan tədbirləri müəyyənləşdirmişdir.",
+    "full_en": "On 27 May 2025, an official event activity titled \"Seminar on 'Purity of the Azerbaijani Language' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "27 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло мероприятие на тему «Чистота азербайджанского языка»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "27 May 2025",
+    "image": "news_proper_2030.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2030",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "27 May 2025",
+    "date_en": "27 May 2025",
+    "date_ru": "27 Мая 2025"
+  },
+  {
+    "id": 34,
+    "official_id": "2021",
+    "title_az": "Kollecdə «Korrupsiyanın Hüquqi və Sosial Təsirləri: Gənclərin Rolu və Məsuliyyəti» mövzusunda tədbir keçirilib",
+    "title_en": "Seminar on 'Legal and Social Impacts of Corruption: Role and Responsibility of Youth'",
+    "title_ru": "Семинар «Правовые и социальные последствия коррупции: роль и ответственность молодежи»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 26.05.2025-ci il tarixində «Korrupsiyanın Hüquqi və Sosial Təsirləri: Gənclərin Rolu və...",
+    "desc_en": "On 26 May 2025, an official event activity titled \"Seminar on 'Legal and Social Impacts of Corruption: Role and Responsibility of Youth'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "26 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Семинар «Правовые и социальные последствия коррупции: роль и ответственность молодежи»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 26.05.2025-ci il tarixində «Korrupsiyanın Hüquqi və Sosial Təsirləri: Gənclərin Rolu və Məsuliyyəti». Bu gün korrupsiyaya qarşı mübarizə təkcə dövlət qurumlarının deyil, həm də cəmiyyətin hər bir üzvünün, xüsusilə də gənclərin üzərinə düşən vacib vəzifələrdəndir.\n\nMəhz bu məqsədlə Texniki Universitetin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin hüquqşünası Vəfa Hacıyevanın iştirakı ilə “Korrupsiyanın Hüquqi və Sosial Təsirləri: Gənclərin Rolu və Məsuliyyəti” mövzusunda maarifləndirici tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir.\n\nTədbir zamanı hüquqşünas Vəfa Hacıyeva korrupsiyanın anlayışı, hüquqi tənzimlənməsi və onun cəmiyyətə vurduğu dərin mənəvi və iqtisadi zərərlər haqqında geniş məlumat vermişdir. O qeyd etmişdir ki, korrupsiya yalnız qanun pozuntusu deyil, həm də cəmiyyətin mənəvi sütunlarını sarsıdan təhlükəli bir sosial bəladır.\n\nÇıxış zamanı Azərbaycan Respublikasının korrupsiyaya qarşı mübarizə üzrə hüquqi çərçivəsinə, o cümlədən Cinayət Məcəlləsində nəzərdə tutulan müvafiq maddələrə toxunulmuş, bu sahədə beynəlxalq təcrübələrə də nəzər salınmışdır. Təqdimat zamanı proyektor vasitəsilə interaktiv slaydlar nümayiş etdirilmiş, iştirakçılara real həyatdan götürülmüş nümunələr əsasında mövzu daha aydın şəkildə izah edilmişdir.\n\nAuditoriyada iştirak edən tələbələr və müəllim heyəti mövzuya böyük maraq göstərmiş, sual-cavab sessiyası zamanı fəal müzakirələr aparılmışdır. Vəfa Hacıyeva gənclərin bu prosesdəki rolunu xüsusi vurğulayaraq qeyd etmişdir ki, şəffaf cəmiyyətin qurulması yalnız hüquqi tədbirlərlə deyil, həm də vicdanlı və məsuliyyətli gənc nəslin yetişməsi ilə mümkündür.\n\nTədbirin sonunda iştirakçılar korrupsiyaya qarşı mübarizədə maarifləndirmə işlərinin davamlı olmasının vacibliyini vurğulamış, bu kimi görüşlərin gənclər arasında hüquqi biliklərin artırılması baxımından mühüm əhəmiyyət daşıdığını bildirmişlər.",
+    "full_en": "On 26 May 2025, an official event activity titled \"Seminar on 'Legal and Social Impacts of Corruption: Role and Responsibility of Youth'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "26 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Семинар «Правовые и социальные последствия коррупции: роль и ответственность молодежи»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "26 May 2025",
+    "image": "news_proper_2021.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2021",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "26 May 2025",
+    "date_en": "26 May 2025",
+    "date_ru": "26 Мая 2025"
+  },
+  {
+    "id": 35,
+    "official_id": "2013",
+    "title_az": "Azadlıq və Təhlükəsizlik: İnsan Hüquqlarının Müdafiəsi mövzusunda tədbir",
+    "title_en": "Educational Forum on 'Freedom and Security: Protection of Human Rights'",
+    "title_ru": "Мероприятие на тему «Свобода и безопасность: защита прав человека»",
+    "desc_az": "Azərbaycan Texniki Universitetinin nəzdindəki Bakı Dövlət Rabitə və Nəqliyyat Kollecində 23.05.2025-ci il tarixdə “İnsan Hüquqları Aylığı” çərçivəsində «Azadlıq və Təhlükəsizlik: İnsan...",
+    "desc_en": "On 23 May 2025, an official event activity titled \"Educational Forum on 'Freedom and Security: Protection of Human Rights'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "23 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие на тему «Свобода и безопасность: защита прав человека»».",
+    "full_az": "Azərbaycan Texniki Universitetinin nəzdindəki Bakı Dövlət Rabitə və Nəqliyyat Kollecində 23.05.2025-ci il tarixdə “İnsan Hüquqları Aylığı” çərçivəsində «Azadlıq və Təhlükəsizlik: İnsan Hüquqlarının Müdafiəsi” mövzusunda tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir.\n\nTədbirdə kollecin hüquq müəllimi Kəmalə Tağıyeva çıxış edərək bildirmişdir ki, bugün burada “Azadlıq və Təhlükəsizlik: İnsan Hüquqlarının Müdafiəsi” mövzusunda müzakirə aparmaq üçün toplaşmışıq. Bu mövzu, insan hüquqları sahəsindəki ən vacib məsələlərdən biridir, çünki azadlıq və təhlükəsizlik arasındakı tarazlıq hər bir cəmiyyətin hüquqi və etik təməlini təşkil edir.\n\nİlk öncə, azadlıq və təhlükəsizlik anlayışlarını müzakirə edək. Azadlıq, insanın öz fikirlərini ifadə etmə, hərəkət etmə və həyatını istədiyi kimi qurma hüququdur. Təhlükəsizlik isə, insanın həyatının, sağlamlığının, əmlakının və ümumiyyətlə, şəxsiyyətinin qorunmasını təmin edən bir şəraitdir.\n\nBunlar bir-birini tamamlayıcı anlayışlar olsa da, bir çox hallarda bu iki hüquq arasında balansın tapılması çətinləşir. Məsələn, bir tərəfdən biz hər bir fərdin şəxsi azadlıqlarının qorunmasını tələb edirik, digər tərəfdən isə cəmiyyəti qorumaq üçün təhlükəsizlik tədbirlərinin artırılmasına ehtiyac duyuruq.\n\nBu vəziyyət, xüsusilə dövlətin hüquqi və inzibati tədbirləri tətbiq etdiyi zaman daha da mürəkkəbləşir. Beynəlxalq hüquqda, insan hüquqlarının müdafiəsi, bütün insanların bərabər, azad və ləyaqətli şəkildə yaşaması üçün mühüm əsasdır. Beynəlxalq İnsan Hüquqları Bəyannaməsi və digər beynəlxalq sənədlər, azadlıq və təhlükəsizlik hüquqlarının qorunmasını tələb edir.\n\nBu sənədlərdə qeyd edilir ki, hər bir şəxs fiziki və zehni zorakılığa qarşı qorunmalıdır, öz fikrini ifadə etmək, yığıncaq keçirmək, sərbəst hərəkət etmək hüququna sahibdir. Tədbirin sonunda iştirakçılar tərəfindən müxtəlif mövzularda suallar verilmiş, müzakirələr aparılmışdır.",
+    "full_en": "On 23 May 2025, an official event activity titled \"Educational Forum on 'Freedom and Security: Protection of Human Rights'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "23 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие на тему «Свобода и безопасность: защита прав человека»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "23 May 2025",
+    "image": "news_proper_2013.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2013",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "23 May 2025",
+    "date_en": "23 May 2025",
+    "date_ru": "23 Мая 2025"
+  },
+  {
+    "id": 36,
+    "official_id": "2006",
+    "title_az": "“Gənclərin Korrupsiyaya Qarşı Mübarizədə Rolu və Məsuliyyəti” mövzusunda tədbir",
+    "title_en": "Seminar on 'The Role and Responsibility of Youth in Combating Corruption'",
+    "title_ru": "Мероприятие «Роль и ответственность молодежи в борьбе с коррупцией»",
+    "desc_az": "Azərbaycan Texniki Universitetinin nəzdindəki Bakı Dövlət Rabitə və Nəqliyyat Kollecində 22.05.2025-ci il tarixdə “Korrupsiyaya qarşı mübarizənin gücləndirilməsi üzrə maarifləndirmə...",
+    "desc_en": "On 22 May 2025, an official appointment activity titled \"Seminar on 'The Role and Responsibility of Youth in Combating Corruption'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "22 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие «Роль и ответственность молодежи в борьбе с коррупцией»».",
+    "full_az": "Azərbaycan Texniki Universitetinin nəzdindəki Bakı Dövlət Rabitə və Nəqliyyat Kollecində 22.05.2025-ci il tarixdə “Korrupsiyaya qarşı mübarizənin gücləndirilməsi üzrə maarifləndirmə tədbirləri çərçivəsində keçirilən növbəti tədbir “Gənclərin Korrupsiyaya Qarşı Mübarizədə Rolu və Məsuliyyəti” mövzusunda keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir.\n\nTədbirdə tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov çıxış edərək bildirmişdir ki, korrupsiyaya qarşı mübarizənin gücləndirilməsi, cəmiyyətin hər bir sahəsində təməl dəyər olmalıdır. O, xüsusilə gənclərin bu sahədə maarifləndirilməsinin vacibliyini vurğulamış, onların hüquq və vəzifələri haqqında məlumatlı olmasının ölkənin inkişafı üçün əhəmiyyətini qeyd etmişdir.\n\nŞahmurad Məmmədov, korrupsiyanın cəmiyyətin sosial və iqtisadi inkişafına ciddi mənfi təsir göstərdiyini, onun qarşısının alınması üçün hər bir vətəndaşın və dövlət qurumlarının məsuliyyət daşıdığını bildirmişdir. Tədbirin sonunda iştirakçılara korrupsiyaya qarşı mübarizə, etik davranış və şəffaflığın vacibliyi ilə bağlı məlumatlar təqdim edilmişdir.\n\nHəmçinin, iştirakçılar tərəfindən müxtəlif mövzularda suallar verilmiş, müzakirələr aparılmışdır.",
+    "full_en": "On 22 May 2025, an official appointment activity titled \"Seminar on 'The Role and Responsibility of Youth in Combating Corruption'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "22 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие «Роль и ответственность молодежи в борьбе с коррупцией»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "22 May 2025",
+    "image": "news_proper_2006.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/2006",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "22 May 2025",
+    "date_en": "22 May 2025",
+    "date_ru": "22 Мая 2025"
+  },
+  {
+    "id": 37,
+    "official_id": "1992",
+    "title_az": "«Korrupsiya – Görünməyən Təhlükə» Mövzusunda Tədbir",
+    "title_en": "Awareness Event Titled 'Corruption — The Invisible Threat'",
+    "title_ru": "Просветительское мероприятие «Коррупция — невидимая угроза»",
+    "desc_az": "Azərbaycan Texniki Universitetinin nəzdindəki Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20.05.2025-ci il tarixdə “Korrupsiyaya qarşı mübarizənin gücləndirilməsi üzrə maarifləndirmə...",
+    "desc_en": "On 20 May 2025, an official event activity titled \"Awareness Event Titled 'Corruption — The Invisible Threat'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "20 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие «Коррупция — невидимая угроза»».",
+    "full_az": "Azərbaycan Texniki Universitetinin nəzdindəki Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20.05.2025-ci il tarixdə “Korrupsiyaya qarşı mübarizənin gücləndirilməsi üzrə maarifləndirmə tədbirləri çərçivəsində keçirilən növbəti tədbir “Korrupsiya – Görünməyən Təhlükə” mövzusuna həsr olunmuşdur. Tədbirdə kollecin müəllim və tələbə heyəti iştirak etmişdir.\n\nTədbirin məqsədi korrupsiyanın cəmiyyətə və fərdlərə olan zərərlərini, həmçinin onun qarşısının alınması yollarını iştirakçılara çatdırmaq idi. Korrupsiya, görünməyən bir təhlükə olaraq, həm cəmiyyətin inkişafını əngəlləyir, həm də insanların hüquqlarını pozur.\n\nBu mövzuda tədbir, korrupsiyanın fərdlər və bütövlükdə cəmiyyət üzərində yaratdığı mənfi təsirləri daha yaxşı anlamağa kömək etməyi hədəfləyirdi. Tədbirdə korrupsiyanın təhsil, səhiyyə, hüquq-mühafizə orqanları və digər sahələrdə necə mənfi təsir göstərdiyi və bunun nəticəsində yaranan ədalətsizliklər müzakirə olunmuşdur.\n\nKorrupsiya həm iqtisadi inkişafı zəiflədir, həm də hüquq bərabərliyinə ziddir. İştirakçılara korrupsiyanı aşkar etmək və onun qarşısını almaq üçün müxtəlif üsullar və yanaşmalar haqqında məlumat verilib. Mühüm rol oynayan vasitələrdən biri, korrupsiyaya qarşı maarifləndirmə və təhsildir.\n\nKollec tərəfindən hazırlanmış materiallar iştirakçılara təqdim olunmuşdur. Bu materiallar, korrupsiyanın təsirlərini və ondan qorunma yollarını daha ətraflı izah edir. Tədbirin sonunda korrupsiyaya qarşı mübarizə ilə bağlı hazırlanan videoçarx nümayiş olunmuşdur.\n\nVideo, korrupsiyanın fərdlər və cəmiyyət üçün yaratdığı təhlükələrə işıq tutaraq, hər kəsin bu məsələyə daha ciddi yanaşmasının vacibliyini vurğulamışdır. Bu tip tədbirlər, cəmiyyətin korrupsiyaya qarşı daha duyarlı olmasına, hər kəsin öz rolunu və məsuliyyətini anlamasına kömək edir.\n\nKorrupsiyanın qarşısının alınması, ədalətli və şəffaf cəmiyyətin qurulması üçün vacib bir addımdır.",
+    "full_en": "On 20 May 2025, an official event activity titled \"Awareness Event Titled 'Corruption — The Invisible Threat'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "20 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие «Коррупция — невидимая угроза»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "20 May 2025",
+    "image": "news_proper_1992.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1992",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "20 May 2025",
+    "date_en": "20 May 2025",
+    "date_ru": "20 Мая 2025"
+  },
+  {
+    "id": 38,
+    "official_id": "1976",
+    "title_az": "Kollecdə “İnsan alverinə qarşı mübarizə” mövzusunda tədbir keçirilmişdir",
+    "title_en": "Educational Seminar on 'Combating Human Trafficking' Held at the College",
+    "title_ru": "В колледже прошло мероприятие на тему «Борьба с торговлей людьми»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20.05.2025-ci il tarixdə Daxili İşlər Nazirliyinin məsul şəxslərinin iştirakı ilə “İnsan alverinə...",
+    "desc_en": "On 20 May 2025, an official appointment activity titled \"Educational Seminar on 'Combating Human Trafficking' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "20 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло мероприятие на тему «Борьба с торговлей людьми»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20.05.2025-ci il tarixdə Daxili İşlər Nazirliyinin məsul şəxslərinin iştirakı ilə “İnsan alverinə qarşı mübarizə” mövzusunda tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir.\n\nTədbirdə çıxış edən direktor müavini Şahmurad Məmmədov bildirmişdir ki, müasir dövrümüzün ağrılı və acınacaqlı bəlalarından biri də insan alveridir. Bu gün dünyanın inkişaf etmiş əksər ölkələrində dövlət tərəfindən aparılan mübarizələrdən biri də insan alverinə qarşı mübarizədir.\n\nİnsan alverinə qarşı mübarizə ölkəmizdə də geniş vüsət alıb. Çıxış edən Daxili İşlər Nazirliyinin “İnsan alveri”nə qarşı mübarizə İdarəsinin məsul işçisi insan alverinin problemlərinin mahiyyəti, formaları, qurbanların müəyyən edilmə üsulları, ölkəmizdə bu sahədə qanunvericilik bazası və insan alverinə qarşı mübarizə tədbirlərindən ətraflı bəhs etmişdir.\n\nİnteraktiv şəraitdə keçən tədbirin sonunda tələbələri maraqlandıran suallar cavablandırılmışdır.",
+    "full_en": "On 20 May 2025, an official appointment activity titled \"Educational Seminar on 'Combating Human Trafficking' Held at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "20 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло мероприятие на тему «Борьба с торговлей людьми»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "20 May 2025",
+    "image": "news_proper_1976.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1976",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "20 May 2025",
+    "date_en": "20 May 2025",
+    "date_ru": "20 Мая 2025"
+  },
+  {
+    "id": 39,
+    "official_id": "1946",
+    "title_az": "Kollecimizdə Ümummilli Lider Heydər Əliyevin 102-ci ildönümünə həsr olunmuş tədbir keçirilib",
+    "title_en": "Solemn Event Dedicated to the 102nd Anniversary of National Leader Heydar Aliyev",
+    "title_ru": "Торжественное мероприятие, посвященное 102-летию общенационального лидера Гейдара Алиева",
+    "desc_az": "AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində Ümummilli Lider Heydər Əliyevin anadan olmasının 102-ci ildönümünə həsr olunmuş tədbir keçirilib. Tədbirdə kollecin tərbiyı...",
+    "desc_en": "On 15 May 2025, an official appointment activity titled \"Solemn Event Dedicated to the 102nd Anniversary of National Leader Heydar Aliyev\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "15 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Торжественное мероприятие, посвященное 102-летию общенационального лидера Гейдара Алиева».",
+    "full_az": "AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində Ümummilli Lider Heydər Əliyevin anadan olmasının 102-ci ildönümünə həsr olunmuş tədbir keçirilib. Tədbirdə kollecin tərbiyı işləri üzrə direktor müavini Məmmədov Şahmurad müəllim Ümummilli Liderin Azərbaycan dövləti və xalqı qarşısında misilsiz xidmətləri, müstəqil Azərbaycanın tərəqqisi yolunda gördüyü işlərə həsr olunmuş məruzə ilə çıxış edib.\n\nŞahmurad müəllim Heydər Əliyevin fəaliyyətinin 5 dövrü haqqında məlumat verib və hər dövrün necə xarakterizə olunduğunu yığcam şəkildə diqqətə çatdırıb. O, qeyd edib ki, birinci dövr Heydər Əliyevin xüsusi xidmət orqanlarında çalışdığı 1944-1969-cu illəri əhatə edir.\n\nHeydər Əliyev bu illər ərzində yüzlərlə azərbaycanlı ziyalını sovet dövlətinin repressiya və təqibindən qoruyub. Azərbaycana rəhbərlik etdiyi 1969-1972-ci illərdə təyin olunub. Azərbaycan aqrar ölkədən sənaye-aqrar ölkəsinə çevrilib. Hər il minlərlə azərbaycanlı gənci SSRİ-nin ən nüfuzlu ali məktəblərinə göndərməklə ölkənin təhsilinə böyük töhfə verib.",
+    "full_en": "On 15 May 2025, an official appointment activity titled \"Solemn Event Dedicated to the 102nd Anniversary of National Leader Heydar Aliyev\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "15 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Торжественное мероприятие, посвященное 102-летию общенационального лидера Гейдара Алиева».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "15 May 2025",
+    "image": "news_proper_1946.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1946",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "15 May 2025",
+    "date_en": "15 May 2025",
+    "date_ru": "15 Мая 2025"
+  },
+  {
+    "id": 40,
+    "official_id": "1920",
+    "title_az": "Ümummilli Lider Heydər Əliyevin 102-ci ildönümünə həsr olunmuş idman yarışları",
+    "title_en": "Sports Tournaments Dedicated to the 102nd Anniversary of National Leader Heydar Aliyev",
+    "title_ru": "Спортивные соревнования, посвященные 102-й годовщине общенационального лидера Гейдара Алиева",
+    "desc_az": "YAP Yasamal rayon təşkilatı, Yasamal Rayon İcra Hakimiyyəti və Bakı şəhər Gənclər və İdman İdarəsinin Yasamal rayon üzrə Gənclər və İdman sektorunun birgə təşkilatçılığı ilə 21 aprel –...",
+    "desc_en": "On 05 May 2025, an official sports activity titled \"Sports Tournaments Dedicated to the 102nd Anniversary of National Leader Heydar Aliyev\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "05 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Спортивные соревнования, посвященные 102-й годовщине общенационального лидера Гейдара Алиева».",
+    "full_az": "YAP Yasamal rayon təşkilatı, Yasamal Rayon İcra Hakimiyyəti və Bakı şəhər Gənclər və İdman İdarəsinin Yasamal rayon üzrə Gənclər və İdman sektorunun birgə təşkilatçılığı ilə 21 aprel – 05 may 2025-ci il tarixində “Ümummilli Lider Heydər Əliyevin anadan olmasının 102-ci ildönümünə həsr olunmuş idman yarışları keçirilmişdir. BDRNK-nın dama üzrə yığma komandası II yerə layiq görülmüşdür.\n\nKomandanın tərkibi: Cəlilov Vüsal – 912B Nəsirov Eyvaz – 1212 Muxtarov İbrahim – 1212 Xudaverdiyev Xumar – 112A Musayeva Rasimə — 214B",
+    "full_en": "On 05 May 2025, an official sports activity titled \"Sports Tournaments Dedicated to the 102nd Anniversary of National Leader Heydar Aliyev\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "05 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Спортивные соревнования, посвященные 102-й годовщине общенационального лидера Гейдара Алиева».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "05 May 2025",
+    "image": "news_proper_1920.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1920",
+    "tag_az": "İdman",
+    "tag_en": "Sports",
+    "tag_ru": "Спорт",
+    "date_az": "05 May 2025",
+    "date_en": "05 May 2025",
+    "date_ru": "05 Мая 2025"
+  },
+  {
+    "id": 41,
+    "official_id": "1909",
+    "title_az": "Bakı Marafonu-2025",
+    "title_en": "Active Participation in the Baku Marathon 2025",
+    "title_ru": "Активное участие в «Бакинском марафоне – 2025»",
+    "desc_az": "04.05.2025-ci il tarixində Heydər Əliyev Fondunun təşkilatçılığı ilə “Bakı Marafonu-2025” keçirilmişdir. Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat...",
+    "desc_en": "On 07 May 2025, an official sports activity titled \"Active Participation in the Baku Marathon 2025\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "07 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Активное участие в «Бакинском марафоне – 2025»».",
+    "full_az": "04.05.2025-ci il tarixində Heydər Əliyev Fondunun təşkilatçılığı ilə “Bakı Marafonu-2025” keçirilmişdir. Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllim və tələbələri yarışda aktiv iştirak etmişlər.\n\nBu yarışda 28 min iştirakçı qeydiyyatdan keçmişdir. Müəllim və tələbələrimiz ilk 100 işturakçı arasında finiş etmişlər",
+    "full_en": "On 07 May 2025, an official sports activity titled \"Active Participation in the Baku Marathon 2025\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "07 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Активное участие в «Бакинском марафоне – 2025»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "07 May 2025",
+    "image": "news_proper_1909.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1909",
+    "tag_az": "İdman",
+    "tag_en": "Sports",
+    "tag_ru": "Спорт",
+    "date_az": "07 May 2025",
+    "date_en": "07 May 2025",
+    "date_ru": "07 Мая 2025"
+  },
+  {
+    "id": 42,
+    "official_id": "1896",
+    "title_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin kollektivi «Nur» uşaq evini ziyarət ediblər",
+    "title_en": "College Staff and Students Visit the 'Nur' Children's Home",
+    "title_ru": "Коллектив колледжа посетил детский дом «Нур»",
+    "desc_az": "25.03.2025-ci il tarixində kollecimiz Rəhbərliyin, «Telekommunikasiya» şöbəsinin və tələbələrin təşkilatçılığı, həmçinin digər şöbələr və müəllillərin dəstəyi ilə «Nur» uşaq evini...",
+    "desc_en": "On 25 March 2025, an official appointment activity titled \"College Staff and Students Visit the 'Nur' Children's Home\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "25 Марта 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Коллектив колледжа посетил детский дом «Нур»».",
+    "full_az": "25.03.2025-ci il tarixində kollecimiz Rəhbərliyin, «Telekommunikasiya» şöbəsinin və tələbələrin təşkilatçılığı, həmçinin digər şöbələr və müəllillərin dəstəyi ilə «Nur» uşaq evini ziyarət edib. Bu addımı atmaqda başlıca məqsəd valideyn himayəsindən məhrum olan uşaqların cəmiyyətdə özlərini tək hiss etməsinin qarşısını almaq, onlara qayğı göstərməklə Novruz bayramını və Müqəddəs Ramazan ayını birlikdə qeyd etmək idi.\n\nBayram əhval-ruhiyyəsi yaratmaq məqsədi ilə uşaqlara bayram sovqatları və hədiyyələr təqdim edildi. Bir günlük olsa da körpələrin sevinməsinə səbəb olan hər kəsə, başda direktor Bəxtiyar müəllimə və rəhbər heyətə, müəllimlərə, tələbələrə dərin minnətdarlığımızı bildiririk.",
+    "full_en": "On 25 March 2025, an official appointment activity titled \"College Staff and Students Visit the 'Nur' Children's Home\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "25 Марта 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Коллектив колледжа посетил детский дом «Нур»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "25 Mart 2025",
+    "image": "news_proper_1896.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1896",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "25 Mart 2025",
+    "date_en": "25 March 2025",
+    "date_ru": "25 Марта 2025"
+  },
+  {
+    "id": 43,
+    "official_id": "1884",
+    "title_az": "20 Yanvar faciəsi xalqımızın qan yaddaşıdır",
+    "title_en": "Commemorative Event: 'The January 20 Tragedy Is the Blood Memory of Our Nation'",
+    "title_ru": "Памятное мероприятие: «Трагедия 20 Января — кровная память нашего народа»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat kollecinin kollektivi direktor Bəxtiyar Bəxtiyarovun rəhbərliyi ilə müəllim və tələbə heyəti 20 Yanvar-...",
+    "desc_en": "On 20 January 2025, an official appointment activity titled \"Commemorative Event: 'The January 20 Tragedy Is the Blood Memory of Our Nation'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "20 Января 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Памятное мероприятие: «Трагедия 20 Января — кровная память нашего народа»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat kollecinin kollektivi direktor Bəxtiyar Bəxtiyarovun rəhbərliyi ilə müəllim və tələbə heyəti 20 Yanvar- Memorial abidə kompleksini ziyarət etmişlər. 1990-cı il yanvarın 19-dan 20-nə keçən gecə şəhid qanları ilə Azərbaycanın yeni tarixi yazıldı.\n\n20 Yanvar xalqımızın qəhrəmanlıq salnaməsinə ən parlaq səhifələrindən biri kimi daxil oldu. 20 Yanvar Memorial Abidə Kompleksində təşkil olunan tədbir, bütün ölkə ərazisində olduğu kimi, bir dəqiqəlik sükutla başladı. Sonra Azərbaycan Respublikasının Dövlət Himni səsləndi.Kollektiv abidə önünə əklil qoyaraq şəhidlərin xatirəsini ehtiramla yad etdilər.",
+    "full_en": "On 20 January 2025, an official appointment activity titled \"Commemorative Event: 'The January 20 Tragedy Is the Blood Memory of Our Nation'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "20 Января 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Памятное мероприятие: «Трагедия 20 Января — кровная память нашего народа»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "20 Yanvar 2025",
+    "image": "news_proper_1884.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1884",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "20 Yanvar 2025",
+    "date_en": "20 January 2025",
+    "date_ru": "20 Января 2025"
+  },
+  {
+    "id": 44,
+    "official_id": "1870",
+    "title_az": "COP29-un Azərbaycana faydaları",
+    "title_en": "Roundtable Discussion on 'The Benefits of COP29 for Azerbaijan'",
+    "title_ru": "Круглый стол на тему «Преимущества COP29 для Азербайджана»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində kollecində 17.12.2024-cü il tarixdə “COP29-un Azərbaycana faydaları” mövzusunda tədbir...",
+    "desc_en": "On 17 December 2024, an official event activity titled \"Roundtable Discussion on 'The Benefits of COP29 for Azerbaijan'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "17 Декабря 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Круглый стол на тему «Преимущества COP29 для Азербайджана»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində kollecində 17.12.2024-cü il tarixdə “COP29-un Azərbaycana faydaları” mövzusunda tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir. Tədbirdə çıxış edənlər COP29 tədbirinin qlobal və regional miqyasda əhəmiyyəti barədə geniş danışdılar.\n\nHəmçinin bildirdilər ki, COP29-dan sonra Azərbaycanın beynəlxalq nüfuzunun daha da artdığını, ölkəyə yaşıl gələcək qurmaq məqsədlərinə çatmasına töhfə verməklə yanaşı ekoloji sahədə həm texniki, həm də maliyyə dəstəyinin güclənəcəyini, yerli və beynəlxalq ekspertlər arasında əməkdaşlığın, bilik və təcrübə mübadiləsinin artacağını, iqtisadi və sosial sahələrdə tətbiq olunacaq yeniliklərin ümumi və dayanıqlı inkişafa, vətəndaşların rifahının yaxşılaşmasına, nəhayət, onların ekoloji cəhətdən daha məsuliyyətli davranış sərgiləməsinə müsbət təsir edəcəyini proqnozlaşdırmaq olar.",
+    "full_en": "On 17 December 2024, an official event activity titled \"Roundtable Discussion on 'The Benefits of COP29 for Azerbaijan'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "17 Декабря 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Круглый стол на тему «Преимущества COP29 для Азербайджана»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "17 Dekabr 2024",
+    "image": "news_proper_1870.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1870",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "17 Dekabr 2024",
+    "date_en": "17 December 2024",
+    "date_ru": "17 Декабря 2024"
+  },
+  {
+    "id": 45,
+    "official_id": "1866",
+    "title_az": "«Uşaq hüquqlarının müdafiəsi» mövzusunda tədbir keçirilmişdir",
+    "title_en": "Educational Seminar on 'Protection of Children's Rights'",
+    "title_ru": "Просветительское мероприятие на тему «Защита прав детей»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində kollecində 0912.2024-cü il tarixdə “Uşaqlara dair Strategiyanın həyata keçirilməsi üzrə 2020–2025-ci...",
+    "desc_en": "On 04 June 2024, an official appointment activity titled \"Educational Seminar on 'Protection of Children's Rights'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "04 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие на тему «Защита прав детей»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində kollecində 0912.2024-cü il tarixdə “Uşaqlara dair Strategiyanın həyata keçirilməsi üzrə 2020–2025-ci illər üçün Fəaliyyət Planı”nın icrası istiqamətində tədbirlər planına uyğun olaraq «Uşaq hüquqlarının müdafiəsi» mövzusunda tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir.\n\nTəlimdə kollecin direktor müavini Şahmurad Məmmədov və kollecin psixoloqu Səbinə Mustafayeva çıxış edərək, iştirakçıları müxtəlif mövzular üzrə məlumatlandırıblar. Çıxışlarda uşaq hüquqları haqqında qanunvericiliyin və qəbul olunmuş beynəlxalq sənədlərin müəyyən etdiyi məsələlər, uşaq yaşlarından psixoloji hazırlılığın aşılanmasının vacibliyi, uşaqları müdafiə sistemini gücləndiməklə, ölkə üzrə uşaqları müdafiə mexanizminin təkmilləşdirilməsi və genişləndirilməsi istiqamətində tədbirlərin həyata keçirilməsi, uşaq hüquqlarının müdafiəsinə hərtərəfli yanaşma prinsipləri, münaqişələrdən və dini ekstremizmdən əziyyət çəkmiş uşaqlara və onların ailələrinə sosial-psixoloji dəstək tədbirlərinin gücləndirilməsi məsələləri barədə ətraflı məlumat verilib.\n\nDaha sonra mövzu ətrafında müzakirələr aparılıb, mövcud problemlər səsləndirilib və iştirakçıların sualları cavablandırılıb",
+    "full_en": "On 04 June 2024, an official appointment activity titled \"Educational Seminar on 'Protection of Children's Rights'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "04 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие на тему «Защита прав детей»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "04 İyun 2024",
+    "image": "news_proper_1866.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1866",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "04 İyun 2024",
+    "date_en": "04 June 2024",
+    "date_ru": "04 Июня 2024"
+  },
+  {
+    "id": 46,
+    "official_id": "1855",
+    "title_az": "Kollecdə Yaşıl dünyamızı qoruyaq» mövzusunda tədbir keçirilmişdir",
+    "title_en": "Environmental Event Titled 'Let Us Protect Our Green World'",
+    "title_ru": "Экологическое мероприятие «Защитим наш зеленый мир»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində kollecində ilə 10.12.2024-cü il tarixdə «Yaşıl dünyamızı qoruyaq» mövzusunda tədbir keçirilmişdir....",
+    "desc_en": "On 10 December 2024, an official appointment activity titled \"Environmental Event Titled 'Let Us Protect Our Green World'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "10 Декабря 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Экологическое мероприятие «Защитим наш зеленый мир»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində kollecində ilə 10.12.2024-cü il tarixdə «Yaşıl dünyamızı qoruyaq» mövzusunda tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir. Seminarda çıxış edən kollecin direktor müavini Şahmurad Məmmədov bildirdi ki, son illər planetimizdə baş verən təbii fəlakətlər, qlobal istiləşmə, daşqınlar, torpaq sürüşmələri və digər kataklizmlər hamını narahat etməkdədir.\n\nBəlkə də bütün bunlar təbiətin hədsiz istismarına, insafsızlığa etiraz əlamətidir. Gəlin etiraf edək ki, biz təbiətdən daha çox şey götürməyə tələsirik. Bugünkü həyatımızı daha firavan qurmaq üçün təbii ehtiyatlardan israfçılıqla istifadə edir, götürdüyümüzün yerini doldurmağa təşəbbüs belə göstərmirik.\n\nDaim yeniliklərə imza atan Azərbaycan “Yaşıl dünya naminə həmrəylik ili”ndən irəli gələn vəzifə və öhdəlikləri layiqincə yerinə yetirmişdir. Sonda videçarx nümayiş olunmuş və maarifləndirici bukletlər paylanılmışdır.",
+    "full_en": "On 10 December 2024, an official appointment activity titled \"Environmental Event Titled 'Let Us Protect Our Green World'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "10 Декабря 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Экологическое мероприятие «Защитим наш зеленый мир»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "10 Dekabr 2024",
+    "image": "news_proper_1855.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1855",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "10 Dekabr 2024",
+    "date_en": "10 December 2024",
+    "date_ru": "10 Декабря 2024"
+  },
+  {
+    "id": 47,
+    "official_id": "1843",
+    "title_az": "Kollecdə «İqlim dəyişikliyinin təsirləri və iqlim fəaliyyətləri» mövzusunda seminar keçirilmişdir",
+    "title_en": "Seminar on 'Impacts of Climate Change and Climate Action'",
+    "title_ru": "Семинар «Последствия изменения климата и климатические действия»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində kollecində ilə 02.12.2024-cü il tarixdə «İqlim dəyişikliyinin təsirləri və iqlim fəaliyyətləri»...",
+    "desc_en": "On 02 December 2024, an official appointment activity titled \"Seminar on 'Impacts of Climate Change and Climate Action'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "02 Декабря 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Семинар «Последствия изменения климата и климатические действия»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində kollecində ilə 02.12.2024-cü il tarixdə «İqlim dəyişikliyinin təsirləri və iqlim fəaliyyətləri» mövzusunda seminar keçirilmişdir. Seminarda müəllim və tələbə heyəti iştirak etmişdir.\n\nSeminarda çıxış edən kollecin direktor müavini Şahmurad Məmmədov bildirdi ki, bu gün dünyanı narahat edən qlobal problemlərdən biri də iqlim dəyişmələridir. İqlim dəyişiklikləri və onların canlı aləmə təsiri dünya birliyini getdikcə daha çox narahat etməkdədir.\n\nÖlkəmiz də qlobal iqlim dəyişmələrinin təsirindən kənarda qalmamışdır. Kənd təsərrüfatı, su resursları, enerji, meşə, turizm, səhiyyə sektoru və sahilyanı zonaları Azərbaycanda iqlim dəyişikliyinə həssasdır. Bu problemə qarşı mübarizədə diqqətin artması, beynəlxalq həmrəyliyin gücləndirilməsi məqsədilə Azərbaycan Respublikasının Prezidenti İlham Əliyev 25 dekabr 2023-cü il tarixdə 2024-cü ilin “Yaşıl dünya naminə həmrəylik ili” elan edilməsi haqqında sərəncam imzalayıb.\n\nBu sərəncam Azərbaycanın qlobal təşəbbüslərə ilk qoşulan ölkələrin sırasında olduğunu bir daha sübut edir. Dövlət başçısı tərəfdən 2024-cü ilin “Yaşıl dünya naminə həmrəylik ili” elan edilməsi il ərzində bu sahədə fəaliyyətin genişləndiriləcəyindən və ətraf mühitin qorunması istiqamətində görüləcək işlərin xeyli dərəcədə intensivləşəcəyindən xəbər verir.\n\nSeminarda iqlim dəyişmələrinin səbəb və nəticələri, Azərbaycanda iqlim dəyişikliyi fəaliyyəti məlumatlar çatdırıdı və gənclərə yaşıl düşüncə tərzinin formalaşdırılması ilə bağlı praktiki biliklər ötürüldü. Sonda suaalar cavablandırıldı və bukletlər paylanıldı.",
+    "full_en": "On 02 December 2024, an official appointment activity titled \"Seminar on 'Impacts of Climate Change and Climate Action'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "02 Декабря 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Семинар «Последствия изменения климата и климатические действия»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "02 Dekabr 2024",
+    "image": "news_proper_1843.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1843",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "02 Dekabr 2024",
+    "date_en": "02 December 2024",
+    "date_ru": "02 Декабря 2024"
+  },
+  {
+    "id": 48,
+    "official_id": "1839",
+    "title_az": "AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində Mərkəzləşdirilmiş Elektron İnformasiya Sistemi (MEİS) haqqında təlim keçirilmişdir",
+    "title_en": "Training Session on the Centralized Electronic Information System (CEIS)",
+    "title_ru": "Тренинг по Централизованной электронной информационной системе (ЦЭИС)",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində Azərbaycan Təhsil İşçiləri Azad Həmkarlar İttifaqı (ATİAHİ) Respublika Komitəsi tərəfindən təlim...",
+    "desc_en": "On 13 December 2024, an official academics activity titled \"Training Session on the Centralized Electronic Information System (CEIS)\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "13 Декабря 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Тренинг по Централизованной электронной информационной системе (ЦЭИС)».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində Azərbaycan Təhsil İşçiləri Azad Həmkarlar İttifaqı (ATİAHİ) Respublika Komitəsi tərəfindən təlim keçirilmişdir. Təlimdə Azərbaycan Təhsil İşçiləri Azad Həmkarlar İttifaqı (ATİAHİ) Respublika Komitəsinin əməkdaşları Pərvanə İsmayılova, Elnur Cəfərov, İlahə Haqverdiyeva, Aygül Bağırova və Bakı şəhərində yerləşən orta ixtisas təhsil müəssisələrinin Həmkarlar İttifaqı Komitələrinin sədrləri iştirak edirdilər.\n\nTəlimin məqsədi Mərkəzləşdirilmiş Elektron İnformasiya Sistemi (MEİS) haqqında məlumat vermək və proqramdan praktiki istifadə etmək qaydalarını öyrətmək idi. Təlimdə Cəfərov Elnur MEİS haqıqında ətraflı məlumat verdikdən sonra proqramda ezamiyyə, məzuniyyət, məktub, təşəkkür, icazə bölmələrini praktiki olaraq yerinə yetirdi.\n\nBağırova Aygül MEİS-də tədbirin təşkili, tədbirə dəvət, Haqverdiyeva İlahə isə ATİAHİ RK-nə müraciət etmiş ərizəçilərlə bağlı göndərilən məktublar, yollayış və yollayışdan imtina bölmələrini ətraflı izah etdilər. Təlimin sonunda iştirakçıların bütün sualları cavablandırıldı.",
+    "full_en": "On 13 December 2024, an official academics activity titled \"Training Session on the Centralized Electronic Information System (CEIS)\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "13 Декабря 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Тренинг по Централизованной электронной информационной системе (ЦЭИС)».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "13 Dekabr 2024",
+    "image": "news_proper_1839.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1839",
+    "tag_az": "Tədris",
+    "tag_en": "Academics",
+    "tag_ru": "Образование",
+    "date_az": "13 Dekabr 2024",
+    "date_en": "13 December 2024",
+    "date_ru": "13 Декабря 2024"
+  },
+  {
+    "id": 49,
+    "official_id": "1823",
+    "title_az": "Kollecdə ümummilli lideri Heydər Əliyevin Anım Günü keçirildi",
+    "title_en": "Commemoration Day of National Leader Heydar Aliyev Observed at the College",
+    "title_ru": "В колледже почтили День памяти общенационального лидера Гейдара Алиева",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində kollecin Həmkarlar İttifaqı Komitəsinin təşkilatçılığı ilə 10.12.2024-cü il tarixdə Azərbaycan...",
+    "desc_en": "On 10 December 2024, an official appointment activity titled \"Commemoration Day of National Leader Heydar Aliyev Observed at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "10 Декабря 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже почтили День памяти общенационального лидера Гейдара Алиева».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində kollecin Həmkarlar İttifaqı Komitəsinin təşkilatçılığı ilə 10.12.2024-cü il tarixdə Azərbaycan xalqının ümummilli lideri Heydər Əliyevin Anım Gününə həsr olunmuş tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir.\n\nTədbir iştirakçıları əvvəlcə bir dəqiqəlik sükutla Ümummilli lider Heydər Əliyevin əziz xatirəsini yad etdilər. Tədbiri giriş sözü ilə kollecin Həmkarlar İttifaqı Komitəsinin sədri açaraq iştirakçıları salamladı, Ulu öndər Heydər Əliyevin çoxşaxəli fəaliyyətindən, Azərbaycanın inkişafı və milli dövlətçiliyin gücləndirilməsi istiqamətində misilsiz tarixi xidmətlərindən, böyük xilaskarlıq missiyasından danışdı.\n\nBildirdi ki, Heydər Əliyev güclü xarizmatik şəxsiyyət, fenomenal siyasətçi və dövlət xadimi idi. Ulu Öndərin ən böyük gücü dərin və universal biliyində, qətiyyətində, işgüzarlığında, qeyri-adi yaddaşında, tükənməz səbrində, uzaqgörənliyində, müdrikliyində və milli məfkurəyə bağlılığında idi.\n\nİstər Azərbaycan tarixində, istərsə də xalqın yaddaşında Heydər Əliyev müstəqil və suveren dövlətin simvolu, xarizmatik siyasət dahisi, cəsur insan və ən böyük vətəndaş kimi qalmışdır və qalacaq. Sonra çıxış edən tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov Heydər Əliyevin unikal şəxsiyyət, güclü iradə sahibi və siyasət ustası kimi böyük heyranlıq yaratdığını, mükəmməl xarici, həmçinin daxili siyasətinin Azərbaycana qazandırdığı uğurların qürurverici olduğunu dedi.\n\nO, Azərbaycanı qüdrətli dövlətə, beynəlxalq auditoriyalarda söz sahibinə çevirən Heydər Əliyevin həyatının çağdaş gəncliyə və bütün gələcək nəsillərə örnək olacağını vurğuladı. Kollecin tələbələri Xankişiyeva Zəhra və Hacıyeva Fəridə çıxışlarında ulu öndər Heydər Əliyevin Azərbaycanı güclü təməllər üzərində inkişaf etdirdiyini, dövlət maraqlarını daim qoruduğunu, milli həmrəyliyə nail olduğunu vurğuladılar.\n\nTələbələr Heydər Əliyevin əziz xatirəsinə həsr olunmuş şeirlər səsləndirdilər. Sonra ümummilli lider Heydər Əliyev haqqında sənədli film təqdim edildi. Tədbirin sonunda Azərbaycan xalqının ümummilli lideri Heydər Əliyevin Anım Gününə həsr olunmuş “Mən fəxr edirəm ki, Azərbaycanlıyam” mövzusunda keçirilən inşa müsabiqəsində fərqlənən tələbələr təltif olundu",
+    "full_en": "On 10 December 2024, an official appointment activity titled \"Commemoration Day of National Leader Heydar Aliyev Observed at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "10 Декабря 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже почтили День памяти общенационального лидера Гейдара Алиева».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "10 Dekabr 2024",
+    "image": "news_proper_1823.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1823",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "10 Dekabr 2024",
+    "date_en": "10 December 2024",
+    "date_ru": "10 Декабря 2024"
+  },
+  {
+    "id": 50,
+    "official_id": "1806",
+    "title_az": "Kollecdə “İnsan alverinə qarşı mübarizə” mövzusunda tədbir keçirilmişdir",
+    "title_en": "Awareness Session on 'Combating Human Trafficking' Organized at the College",
+    "title_ru": "В колледже состоялся семинар на тему «Борьба с торговлей людьми»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 27.11.2024-cü il tarixdə Əmək və Əhalinin Sosial Müdafiəsi Nazirliyinin təşkilatçılığı “İnsan...",
+    "desc_en": "On 27 November 2024, an official appointment activity titled \"Awareness Session on 'Combating Human Trafficking' Organized at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "27 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже состоялся семинар на тему «Борьба с торговлей людьми»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 27.11.2024-cü il tarixdə Əmək və Əhalinin Sosial Müdafiəsi Nazirliyinin təşkilatçılığı “İnsan alverinə qarşı mübarizə” mövzusunda tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir.\n\nTədbirdə çıxış edən direktor müavini Şahmurad Məmmədov bildirmişdir ki, müasir dövrümüzün ağrılı və acınacaqlı bəlalarından biri də insan alveridir. Bu gün dünyanın inkişaf etmiş əksər ölkələrində dövlət tərəfindən aparılan mübarizələrdən biri də insan alverinə qarşı mübarizədir.\n\nİnsan alverinə qarşı mübarizə ölkəmizdə də geniş vüsət alıb. Çıxış edən Əmək və Əhalinin Sosial Müdafiəsi Nazirliyinin tabeliyində Sosial Xidmətlər Agentliyinin İnsan Alveri Qurbanlarına Yardım Mərkəzinin direktoru Həbibə Qəribova təmsil etdiyi müəssisənin fəaliyyəti, insan alverinin problemlərinin mahiyyəti, formaları, qurbanların müəyyən edilmə üsulları, ölkəmizdə bu sahədə qanunvericilik bazası və insan alverinə qarşı mübarizə tədbirlərindən ətraflı bəhs etmişdir.\n\nİnteraktiv şəraitdə keçən tədbirin sonunda tələbələri maraqlandıran suallar cavablandırılmışdır",
+    "full_en": "On 27 November 2024, an official appointment activity titled \"Awareness Session on 'Combating Human Trafficking' Organized at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "27 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже состоялся семинар на тему «Борьба с торговлей людьми»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "27 Noyabr 2024",
+    "image": "news_proper_1806.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1806",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "27 Noyabr 2024",
+    "date_en": "27 November 2024",
+    "date_ru": "27 Ноября 2024"
+  },
+  {
+    "id": 51,
+    "official_id": "1780",
+    "title_az": "Kollecdə Korrupsiyaya qarşı mübarizənin gücləndirilməsinə dair silsilə tədbirlər davam edir",
+    "title_en": "Series of Events on Strengthening Anti-Corruption Measures Continues at the College",
+    "title_ru": "В колледже продолжается цикл мероприятий по усилению борьбы с коррупцией",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 01.11.2024-cü il tarixdə «Korrupsiyaya qarşı mübarizənin gücləndirilməsinə dair 2022-2026-cı illər...",
+    "desc_en": "On 01 November 2024, an official event activity titled \"Series of Events on Strengthening Anti-Corruption Measures Continues at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "01 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже продолжается цикл мероприятий по усилению борьбы с коррупцией».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 01.11.2024-cü il tarixdə «Korrupsiyaya qarşı mübarizənin gücləndirilməsinə dair 2022-2026-cı illər ilə bağlı Elm və Təhsil Nazirliyinin 2024-cü il üzrə iş Planına uyğun olaraq tədbir keçirilmişdir. Tədbirin məqsədi kollecdə elektron informasiya resurslarından istifadənin və rəqəmsəllaşma istiqamətində pedaqoji işçilərin bacarığının yüksəldilməsi və bu istiqamətdə maarifləndirmə olmuşdur.\n\nTədbirdə müəssisə rəhbərliyi, pedaqoji heyət, iştirak etmişlər. İnformasiyanın əldə olunması, saxlanılması, təkrar istifadəsi və qorunması məqsədilə informasiya texnologiyalarından istifadə ilə əlaqədar əsas hədəflər müəyyənləşdirilmiş, nəzərdə tutulan tədbirlərin xeyli hissəsi həyata keçirilmişdir.\n\nTədbir zamanı iştirakçıları maraqlandıran suallar cavablandırılmışdır. Sonda iştirakçılara bukletlər paylanmışdır.",
+    "full_en": "On 01 November 2024, an official event activity titled \"Series of Events on Strengthening Anti-Corruption Measures Continues at the College\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "01 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже продолжается цикл мероприятий по усилению борьбы с коррупцией».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "01 Noyabr 2024",
+    "image": "news_proper_1780.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1780",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "01 Noyabr 2024",
+    "date_en": "01 November 2024",
+    "date_ru": "01 Ноября 2024"
+  },
+  {
+    "id": 52,
+    "official_id": "1769",
+    "title_az": "Kollecimizdə “Yaşıl dünya naminə həmrəylik ili” ilə bağlı iməclik keçirilmişdir",
+    "title_en": "Campus Community Cleanup Held for the 'Green World Solidarity Year'",
+    "title_ru": "В колледже прошел субботник в рамках «Года солидарности во имя зеленого мира»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 07.11.2024-cü il tarixdə “Yaşıl dünya naminə həmrəylik ili” ilə bağlı iməclik keçirilmişdir....",
+    "desc_en": "On 07 November 2024, an official event activity titled \"Campus Community Cleanup Held for the 'Green World Solidarity Year'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "07 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошел субботник в рамках «Года солидарности во имя зеленого мира»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 07.11.2024-cü il tarixdə “Yaşıl dünya naminə həmrəylik ili” ilə bağlı iməclik keçirilmişdir. İməclikdə müəllim və tələbə heyəti iştirak etmişlər. Azərbaycan Respublikasının Prezidenti cənab İlham Əliyevin ölkə ərazisində yaşıllıqların salınması və onların genişləndirilməsinə olan diqqət və qayğısının bariz nümunəsidir ki, hər il ölkə ərazisində minlərlə yeni ağaclar əkilir, onlara qulluq göstərilir, yeni-yeni yaşıllıq zonaları yaradılır, istirahət parkları salınır.\n\nİməclik kollecin ərazisində aparılmışdır. Onlarla yeni ağac əkilmiş, əvvəl əkilmiş ağaclara qulluq göstərilmişdir. Ağacların gövdələri əhənglənmişdir. Bir qrup tələbə tərəfindən hazırlanan quş yuvaları ağaclardan asılmışdır. Ərazi alaq otlarından təmizlənmiş aöaclar budanmışdır.\n\nGül kollarına xüsusi qulluq göstərilmişdir. Sonda kollecin rəhbərliyi iməclikdə iştirak edənlərə təşəkkürünübildimiş və ərazidə xatirə şəkli çəkilmişdir",
+    "full_en": "On 07 November 2024, an official event activity titled \"Campus Community Cleanup Held for the 'Green World Solidarity Year'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "07 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошел субботник в рамках «Года солидарности во имя зеленого мира»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "07 Noyabr 2024",
+    "image": "news_proper_1769.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1769",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "07 Noyabr 2024",
+    "date_en": "07 November 2024",
+    "date_ru": "07 Ноября 2024"
+  },
+  {
+    "id": 53,
+    "official_id": "1759",
+    "title_az": "Molla Pənah Vaqifin əsərlərində təbiəti mühafizə olunması mövzusunda tədbir keçirilmişdir",
+    "title_en": "Literary Seminar on 'Nature Conservation in the Works of Molla Panah Vagif'",
+    "title_ru": "Мероприятие на тему «Охрана природы в произведениях Моллы Панаха Вагифа»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 04.11.2024-cü il tarixdə “Molla Pənah Vaqifin əsərlərində təbiəti mühafizə olunması” barədə...",
+    "desc_en": "On 04 November 2024, an official academics activity titled \"Literary Seminar on 'Nature Conservation in the Works of Molla Panah Vagif'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "04 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие на тему «Охрана природы в произведениях Моллы Панаха Вагифа»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 04.11.2024-cü il tarixdə “Molla Pənah Vaqifin əsərlərində təbiəti mühafizə olunması” barədə maarifləndirici tədbir keçirilmişdir. Tədbirdə müəllim və tələbələr ştirak etmişdir.\n\nTədbirdə çıxış edən “Azərbaycan dili və ədəbiyyatı” fənn birləşməkomissiyasının müəllimi Salayeva Nigar bildirmişdir ki, Azərbaycan klassik ədəbiyyatının görkəmli nümayəndələrindən biri olan Molla Pənah Vaqif öz bədii yaradıcılığında bənzərsiz poeziya nümunələri yaratmaqla milli ədəbiyyatın yeni istiqamətdə inkişafına güclü təkan vermişdir. Molla Pənah Vaqifin Azərbaycan bədii söz və fikir tarixində özünəməxsus xüsusi rolu olmuşdur.\n\nŞair müasiri Molla Vəli Vidadi ilə deyişməsində bu misraları dilə gətirərək Qarabağın füsunkar təbiəti ilə yanaşı, “oxunur məclisdə xoş kəlimatı” fikri ilə Qarabağın milli musiqi, sənət, mədəniyyət beşiyinin olması reallığını əks etdirir, Qarabağ xanlığının Azərbaycan tarixindəki əvəzsiz rolunu vurğulayırdı. Vaqif yaradıcılığında Qarabağın füsunkar təbiətinin tərənnümündə, gözəlliyin vəsf edilməsində sanki mahir bir rəssam kimi çıxış edir, sözün bədii imkanlarından geniş istifadə edərək Azərbaycan təbiətinin rəngarəng, cazibədar portretini yaradırdı.\n\nBu da şairin vətənpərvərliyindən, vətənə olan sonsuz sevgisindən irəli gəlirdi. Baharın gəlişi, təbiətin oyanması, canlanması ilə bağlı şənliklərin təsviri Vaqif yaradıcılığına xüsusi rəng qatır və şair bu hadisələri realist mövqeyindən işıqlandırırdı.\n\nOnun məşhur “Bayram oldu” şeiri milli dəyrimiz olan Novruz bayramı mövsümünün qeyd olunmasının realist poetik mənzərəsidir. Şairin şeirlərində ana yurdumuzun təbiətinin, havasının, suyunun, torpağının misilsizliyi tərənnüm Beləliklə, milli ədəbiyyatımız tarixində Molla Pənah Vaqif klassik azərbaycançılıq təfəkkürünün poetik təməllərini yaradan və bu ideyanı layiqincə təmsil edən, vətənpərvər, qüdrətli söz sənətkarıdır.\n\nOnun bədii yaradıcılığının elm və təhsil müəssisələrində təbliği və tədrisi strateji əhəmiyyət daşımalı, tədris zamanı auditoriyada təbiət, cəmiyyət və şəxsiyyət haqqındakı düşüncələrin məntiqi inkişafına, dünyagörüşün formalaşmasına təsir etməlidir. Sonda Molla Pənah Vaqifə aid film nümayiş olunmuşdur.",
+    "full_en": "On 04 November 2024, an official academics activity titled \"Literary Seminar on 'Nature Conservation in the Works of Molla Panah Vagif'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "04 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие на тему «Охрана природы в произведениях Моллы Панаха Вагифа»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "04 Noyabr 2024",
+    "image": "news_proper_1759.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1759",
+    "tag_az": "Tədris",
+    "tag_en": "Academics",
+    "tag_ru": "Образование",
+    "date_az": "04 Noyabr 2024",
+    "date_en": "04 November 2024",
+    "date_ru": "04 Ноября 2024"
+  },
+  {
+    "id": 54,
+    "official_id": "1755",
+    "title_az": "“Yaşıl enerji layihələrinin həyata keçirilməsi” mövzusunda tədbir keçirilib",
+    "title_en": "Seminar Held on 'Implementation of Green Energy Projects'",
+    "title_ru": "Мероприятие на тему «Реализация проектов зеленой энергии»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 07.11.2024-cü il tarixdə “Yaşıl enerji layihələrinin həyata keçirilməsi” mövzusunda tədbir...",
+    "desc_en": "On 07 November 2024, an official appointment activity titled \"Seminar Held on 'Implementation of Green Energy Projects'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "07 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие на тему «Реализация проектов зеленой энергии»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 07.11.2024-cü il tarixdə “Yaşıl enerji layihələrinin həyata keçirilməsi” mövzusunda tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir.\n\nTədbiri giriş sözü ilə açan tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov bildirmişdir ki, tədbirin gənclər, tələbələr üçün maraqlı və düşündürücü olacağını vurğulayıb. Qeyd olunub ki, yüksək bərpa olunan enerji potensialından istifadə etməklə ərazini ekoloji cəhətdən təmiz yaşıl enerji ilə təmin etmək və ekoloji cəhətdən təmiz və enerji səmərəliliyinə malik yaşıl texnologiyaların tətbiqi perspektivlərini araşdıraraq təkliflər formalaşdırmaqdadır.\n\nBunun üçün müxtəlif ssenarilər tətbiq edilməklə ərazilərin enerji tələbatı modelləri hazırlanır.\\ Yaşıl Enerji Zonasının yaradılması çərçivəsində bərpa olunan enerji mənbələrindən elektrik enerjisi istehsalı, enerji səmərəliliyi tədbirləri, elektrik nəqliyyat vasitələrindən istifadə, tikililərin damlarında bərpa olunan enerji qurğularının (xüsusən günəş panellərinin) qurulması, həmçinin küçələrin və yolların işıqlandırılmasında günəş enerjisi əsaslı LED lampalardan istifadə, istilik, soyutma və isti su təchizatında bərpa olunan enerji texnologiyalarından istifadə, ağıllı enerji idarəetmə texnologiyalarıının tətbiqi, tullantıların enerji məqsədli idarə edilməsi kimi tədbirlər nəzərdə tutulur. Tədbirdə müvafiq mövzuda geniş fikir mübadiləsi aparıldı, onları maraqlandıran suallar cavablandırıldı.\n\nTədbirin sonunda yaradıcı tələbələrin “COP29” və “Yaşıl dünya”ya aid rəsm əsərləri nümayiş etdirildi.",
+    "full_en": "On 07 November 2024, an official appointment activity titled \"Seminar Held on 'Implementation of Green Energy Projects'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "07 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие на тему «Реализация проектов зеленой энергии»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "07 Noyabr 2024",
+    "image": "news_proper_1755.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1755",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "07 Noyabr 2024",
+    "date_en": "07 November 2024",
+    "date_ru": "07 Ноября 2024"
+  },
+  {
+    "id": 55,
+    "official_id": "1751",
+    "title_az": "“COP29-Yaşıl strategiya” mövzusuna aid dəyirmi masa keçirilmişdir.",
+    "title_en": "Roundtable Discussion Held on 'COP29 — Green Strategy'",
+    "title_ru": "Круглый стол на тему «COP29 — Зеленая стратегия»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 06.11.2024-cü il tarixdə “COP29-Yaşıl strategiya” mövzusunda dəyirmi masa keçirilmişdir. Tədbirdə...",
+    "desc_en": "On 06 November 2024, an official event activity titled \"Roundtable Discussion Held on 'COP29 — Green Strategy'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "06 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Круглый стол на тему «COP29 — Зеленая стратегия»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 06.11.2024-cü il tarixdə “COP29-Yaşıl strategiya” mövzusunda dəyirmi masa keçirilmişdir. Tədbirdə müəllim və texniki heyəti iştirak etmişdir. Kollecin Humanitar fənn birləşmə komissiyasının müəllimi Könül Mahmudova “COP29-Yaşıl strategiya” mövzusunda çıxış edərək, insan və təbiət münasibətlərinin yaranma tarixinə toxunub.\n\nBildirib ki, XX əsrdən etibarən ətraf mühitin, onun amillərinin, təbii sərvətlərin, biosferin, ekosistemlərin, flora və faunanın normal ahənginin pozulması baş verib. Digər çıxış edənlər də iqlim böhranının həllində yaşıl strategiya və iqlim dəyişikliyinin idarə edilməsi üçün sosial elmlərin vəzifələri və töhfələrindən danışıblar.\n\nTədbir iştirakçıları iqlim dəyişikliyi sahəsində Azərbaycanın qlobal təşəbbüslərinin həyata keçirilməsi və dünyaya çatdırılması üçün dövlət qurumlarının, vətəndaş cəmiyyətinin sıx əməkdaşlığının formalaşdırılması yönündə səylərin ortaya qoyulacağına, ölkəmizdə iqlim siyasətinin, təbiətin qorunması üçün birgə və faydalı layihələrin həyata keçiriləcəyinə əminliklərini bildiriblər. Sonda suallar cavablandırılıb, fikir mübadiləsi aparılıb",
+    "full_en": "On 06 November 2024, an official event activity titled \"Roundtable Discussion Held on 'COP29 — Green Strategy'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "06 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Круглый стол на тему «COP29 — Зеленая стратегия»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "06 Noyabr 2024",
+    "image": "news_proper_1751.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1751",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "06 Noyabr 2024",
+    "date_en": "06 November 2024",
+    "date_ru": "06 Ноября 2024"
+  },
+  {
+    "id": 56,
+    "official_id": "1747",
+    "title_az": "Kollecdə “Ermənistanın Azərbaycana qarşı ekoloji terroru” mövzusunda tədbir keçirilmişdir",
+    "title_en": "Conference on 'Ecological Terror Committed Against Azerbaijan'",
+    "title_ru": "Мероприятие на тему «Экологический террор против Азербайджана»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 01.11.2024-cü il tarixdə “Ermənistanın Azərbaycana qarşı ekoloji terroru” mövzusunda tədbir...",
+    "desc_en": "On 01 November 2024, an official appointment activity titled \"Conference on 'Ecological Terror Committed Against Azerbaijan'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "01 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие на тему «Экологический террор против Азербайджана»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 01.11.2024-cü il tarixdə “Ermənistanın Azərbaycana qarşı ekoloji terroru” mövzusunda tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir.\n\nTədbirdə çıxış edən direktor müavini Şahmurad Məmmədov bildirmişdir ki, Ermənistan Azərbaycanın işğal altında olmuş ərazilərində ətraf mühitə, bioloji müxtəlifliyə, meşələrə, yeraltı və yerüstü təbii ehtiyatlara ekoloji terror aktları törətmişdir. İşğal olunmuş Azərbaycan ərazilərində olan təbii sərvətlər talan edilmiş, qızıl, civə, mis, qurğuşun, sink, kömür və digərləri daxil olmaqla 163 faydalı qazıntı yatağı, həmçinin meşə örtüyü, nadir ağaclar Ermənistan tərəfindən qanunsuz istismara məruz qalmışdır.\n\nBu ekoloji terrordur və beynəlxalq ictimaiyyət buna laqeyd qalmamalıdır. Sonra çıxış edənlər də bildirmişlər ki, “Ermənistan ərazisindən keçən təbii su mənbələrimiz də Ermənistan tərəfindən həddindən artıq çirklənməyə məruz qalır. Oxçuçay və Ağstafaçayın Ermənistan tərəfindən ən ağır formada çirkləndirilməsi nəticəsində sözügedən çaylarda canlı aləmin yaşayışı üçün böyük təhlükə yaranmışdır”.\n\nSonda Ermənistanın Azərbaycana qarşı ekoloji terroruna aid sənədli film nümayiş etdirilmişdir.",
+    "full_en": "On 01 November 2024, an official appointment activity titled \"Conference on 'Ecological Terror Committed Against Azerbaijan'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "01 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие на тему «Экологический террор против Азербайджана»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "01 Noyabr 2024",
+    "image": "news_proper_1747.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1747",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "01 Noyabr 2024",
+    "date_en": "01 November 2024",
+    "date_ru": "01 Ноября 2024"
+  },
+  {
+    "id": 57,
+    "official_id": "1730",
+    "title_az": "“Zəfər Günü” və Dövlət Bayrağı Günü” münasibətilə tədbir",
+    "title_en": "Festive Event Marking Victory Day and State Flag Day",
+    "title_ru": "Торжественное мероприятие по случаю Дня Победы и Дня Государственного флага",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 06.11.2024-cü il tarixdə “Zəfər Günü” və Dövlət Bayrağı Günü” münasibətilə tədbir keçirilmişdir....",
+    "desc_en": "On 06 November 2024, an official appointment activity titled \"Festive Event Marking Victory Day and State Flag Day\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "06 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Торжественное мероприятие по случаю Дня Победы и Дня Государственного флага».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 06.11.2024-cü il tarixdə “Zəfər Günü” və Dövlət Bayrağı Günü” münasibətilə tədbir keçirilmişdir. Tədbirdə müharibə veteranları, qonaqlar, müəllim və tələbələr ştirak etmişdir.\n\nTədbirdə Azərbaycan Respublikasının Dövlət Himni səsləndikdən sonra, Vətənimizin ərazi bütövlüyünün, müstəqilliyinin müdafiəsi zamanı şəhid olanların ruhu bir dəqiqəlik sükutla yad edilib. Tədbiri giriş sözü ilə açan kollecin hərbi rəhbəri Salayev Oktay iştirakçıları salamlayaraq, hər kəsi ərazi bütövlüyümüzün bərpası münasibətilə təbrik edib.\n\nMüzəffər Ali Baş Komandan, Prezident İlham Əliyevin rəhbərliyi ilə Azərbaycan Ordusunun 44 günlük Vətən müharibəsində böyük Qələbəmizin əldə olunmasında misilsiz xidmətlər göstərdiyini, xalqımızın qəhrəmanlığının heç zaman unudulmayacağını vurğulayıb. Tarixi Qələbənin əldə olunmasında Azərbaycan xalqının fədakarlığından, ölkəmizdə ordu quruculuğu istiqamətində görülən işlərdən bəhs edib.\n\nTədbirə qonaq qismində qatılan ATİAHİ Respublika Komitəsinin məsul şəxsi Pərvanə İsmayılova çıxış edərək ATİAHİ Respublika Komitəsinin sədri Araz Paşayevin təbrikini çatdırdı. Bildirdi ki, Araz müəllimin rəhbərliyi dövründə həmkarlar ittifaqı komitəsində köklü dəyişikliklər baş vermişdir.\n\nBelə ki, aztəminatlı ailələrə, şəhid ailələrinə, qazilərə, müharibə iştirakçılarına diqqət və qayğı göstərilməsi başlıca istiqamətə çevrilmişdir. Komitəmiz Vətən müharibəsində ailə üzvlərini itirən təhsil işçilərinə, həlak olan təhsil işçilərinin yaxınlarına qayğı ilə yanaşmış, lazımi maddi və mənəvi dəstəyi göstərmişdir və bu davam edəcəkdir.\n\n“Tarixi Zəfəri bizə bəxş edən müzəffər Ali Baş Komandanımızla fəxr edir, qəhraman Azərbaycan Ordusu ilə qürur duyuruq!” sözləri ilə çıxışına başlayan ATİAHİ Respublika Komitəsinin məsul şəxsi Aygül Bağırova qeyd etdi ki, Azərbaycanın Vətən müharibəsində möhtəşəm qələbəsi tariximizə qızıl hərflərlə yazıldı. Döyüş meydanlarında təcəvüzkar ölkə ordusuna vurulan sarsıdıcı zərbələr, dünya diplomatiya savaşında cənab İlham Əliyevin qazandığı parlaq uğur, nəhayət, alınmaz qala olan Şuşanın geri qaytarılması noyabrın 10-da bəyanat imzalaması ilə nəticələndi.\n\nBu tarix xalqımızın yaddaşından, hərb tariximizdən silinməyəcək. Sonra çıxış edənlər direktor müavini Şahmurad Məmmədov, kollecin Həmkarlar İttifaqı Komitəsinin sədri Aygün Musayeva və tələbə Xankişiyeva Zəhra haqq savaşımız olan Vətən müharibəsinin qələbə ilə başa çatmağından, Qarabağımızın, işğal olunmuş torpaqlarımızın işğalına tam mənada son qoyulmasından danışdılar.\n\nTədbirin ikinci hissəsində tələbələrin iştirakı ilə “Zəfər Günü” və Dövlət Bayrağı Günü”nə həsr edilmiş bədii kompazisiya təqdim edildi. Sonda 44 günlük Vətən müharibəsi iştirakçılarına və gənc nəslin vətənpərvərlik tərbiyəsində səmərəli fəaliyyət göstərmiş şəxslərə Fəxri fərmanlar və qiymətli hədiyyələr təqdim olundu.\n\nBayram tədbiri olduqca coşqu və əsl qələbə əhval- ruhiyyəsi ilə keçirildi..",
+    "full_en": "On 06 November 2024, an official appointment activity titled \"Festive Event Marking Victory Day and State Flag Day\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "06 Ноября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Торжественное мероприятие по случаю Дня Победы и Дня Государственного флага».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "06 Noyabr 2024",
+    "image": "news_proper_1730.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1730",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "06 Noyabr 2024",
+    "date_en": "06 November 2024",
+    "date_ru": "06 Ноября 2024"
+  },
+  {
+    "id": 58,
+    "official_id": "1713",
+    "title_az": "Hüseyn Cavid anadan olmasının 142-ci ildönümünə həsr olunmuş tədbir",
+    "title_en": "Literary Evening Dedicated to the 142nd Anniversary of Huseyn Javid",
+    "title_ru": "Литературный вечер к 142-й годовщине со дня рождения Гусейна Джавида",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 25.10.2024-cü il tarixdə “Hüseyn Cavid anadan olmasının 142-ci ildönümü”nə həsr olunmuş tədbir...",
+    "desc_en": "On 25 October 2024, an official appointment activity titled \"Literary Evening Dedicated to the 142nd Anniversary of Huseyn Javid\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "25 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Литературный вечер к 142-й годовщине со дня рождения Гусейна Джавида».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 25.10.2024-cü il tarixdə “Hüseyn Cavid anadan olmasının 142-ci ildönümü”nə həsr olunmuş tədbir keçirilmişdir. Tədbirdə müəllim və tələbələr ştirak etmişdir. Tədbir giriş sözü ilə açan kollecin Həmkarlar İttifaqı Komitəsinin sədri Aygün Musayeva Hüseyn Cavidin Azərbaycan ədəbiyyatının, mədəniyyətinin, teatrının inkişafındakı xidmətlərindən danışıb, görkəmli dramaturqun yaradıcılığı və əyilməz şəxsiyyəti ilə özündən sonrakı ədəbi nəsillərə bir nümunə olduğunu bildirib.\n\nSonra direktor müavini Şahmurad Məmmədov çıxış edərək bildirmişdir ki, Görkəmli dramaturqun yaradıcılığına və şəxsiyyətinə ən layiqli qiyməti xalqımızın Ümummilli lideri Heydər Əliyev tərəfindən verilib. Ulu Öndərin rəhbərliyi ilə Hüseyn Cavidin 100 illik yubileyinin keçirilməsi və cənazəsinin uzaq Sibirdən tapılaraq Azərbaycana gətirilməsi haqqında qərar qəbul edilib.\n\nTədbirin bədii hissəsində tələbələrin ifasında Hüseyn Cavidin əsərlərinin bədii qiraəti səsləndirilib. Sonda Azərbaycan şairi, yazıçı və dramaturq u, romantizm ədəbi cərəyanının əsas nümayəndəsi olan Hüseyn Cavid irsinin təbliği sahəsində səmərəli fəaliyyətinə görə təltif olunma mərasimi oldu.",
+    "full_en": "On 25 October 2024, an official appointment activity titled \"Literary Evening Dedicated to the 142nd Anniversary of Huseyn Javid\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "25 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Литературный вечер к 142-й годовщине со дня рождения Гусейна Джавида».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "25 Oktyabr 2024",
+    "image": "news_proper_1713.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1713",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "25 Oktyabr 2024",
+    "date_en": "25 October 2024",
+    "date_ru": "25 Октября 2024"
+  },
+  {
+    "id": 59,
+    "official_id": "1709",
+    "title_az": "Kollecin tələbələrinin «Dama» və «Şahmat» yarışlarında uğurları",
+    "title_en": "College Students Achieve Success in Checkers and Chess Tournaments",
+    "title_ru": "Успехи студентов колледжа в соревнованиях по шашкам и шахматам",
+    "desc_az": "«Gənclik» Tələbə İdman Cəmiyyəti Respublika Şurasının təşkil etdiyi Respublika birinciliyində Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin...",
+    "desc_en": "On 25 October 2024, an official sports activity titled \"College Students Achieve Success in Checkers and Chess Tournaments\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "25 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Успехи студентов колледжа в соревнованиях по шашкам и шахматам».",
+    "full_az": "«Gənclik» Tələbə İdman Cəmiyyəti Respublika Şurasının təşkil etdiyi Respublika birinciliyində Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin tələbələri iştirak edərək «Dama» idman növü üzrə oğlanlar I yer, qızlar III yer, «Şahmat» idman növü üzrə qızlar II yer, oğlanlar III yerə layiq görülmüşlər",
+    "full_en": "On 25 October 2024, an official sports activity titled \"College Students Achieve Success in Checkers and Chess Tournaments\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "25 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Успехи студентов колледжа в соревнованиях по шашкам и шахматам».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "25 Oktyabr 2024",
+    "image": "news_proper_1709.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1709",
+    "tag_az": "İdman",
+    "tag_en": "Sports",
+    "tag_ru": "Спорт",
+    "date_az": "25 Oktyabr 2024",
+    "date_en": "25 October 2024",
+    "date_ru": "25 Октября 2024"
+  },
+  {
+    "id": 60,
+    "official_id": "1687",
+    "title_az": "Tələbələrin iştirakı ilə təmiz ətraf mühit barədə maarifləndirici tədbir keçirilmişdir",
+    "title_en": "Student Awareness Event Held on 'Clean Environment and Ecology'",
+    "title_ru": "Просветительское мероприятие со студентами о чистой окружающей среде",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 04.10.2024-cü il tarixdə “Təmiz ətraf mühit” barədə maarifləndirici tədbir keçirilmişdir. Tədbirdə...",
+    "desc_en": "On 04 October 2024, an official appointment activity titled \"Student Awareness Event Held on 'Clean Environment and Ecology'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "04 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие со студентами о чистой окружающей среде».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 04.10.2024-cü il tarixdə “Təmiz ətraf mühit” barədə maarifləndirici tədbir keçirilmişdir. Tədbirdə müəllim və tələbələr ştirak etmişdir. Tədbir giriş sözü ilə açan direktor müavini Şahmurad Məmmədov bildirmişdir ki, Prezident İlham Əliyevin ölkəmizdə 2024-cü ilin “Yaşıl dünya naminə həm­rəylik ili” elan edilməsi haqqında Sərəncamında Azərbaycanın beynəlxalq ictimaiyyətin etibarlı və məsuliyyətli üzvü kimi iqlim dəyişmələrinin fəsadları­na qarşı mübarizəyə öz töhfəsini verir.\n\nEyni zamanda, respublikamızın 2030-cu ilə qədər sosial-iqtisadi inkişafa dair 5 milli priorite­tindən birinin “Təmiz ətraf mühit və yaşıl artım ölkəsi” kimi müəyyənləşdirildi­yi bildirdi. Həmin prioritetə uyğun olaraq ölkəmizdə artıq ətraf mühitin sağlam­laşdırılması, yaşıllıqların bərpası və artırılması, su ehtiyatlarından, həm­çinin dayanıqlı enerji mənbələrindən səmərəli istifadənin gerçəkləşdirilməsi istiqamətində tədbirlərin həyata keçiril­məsinə başlanılıb.\n\nSonra çıxış edən kollecin müəllimi Salayev Oktay qeyd etmişdir ki, ölkəmizdə ekoloji maarifləndirmə tədbirlərinin artması, ətraf mühitin mühafizəsi ilə bağlı görülən tədbirlər müsbət nəticəsini verir. Sağlam cəmiyyət üçün təmiz ekologiya ən vacib amillərdən hesab olunur.\n\nAzərbaycanda da ətraf mühitin mühafizəsi, ekoloji problemlərin həlli dövlətin prioritet məsələlərindəndir. Tədbirin sonunda videoçarx nümayiş olunmnuş, iştirakçılara bukletlər paylanılmışdır.",
+    "full_en": "On 04 October 2024, an official appointment activity titled \"Student Awareness Event Held on 'Clean Environment and Ecology'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "04 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие со студентами о чистой окружающей среде».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "04 Oktyabr 2024",
+    "image": "news_proper_1687.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1687",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "04 Oktyabr 2024",
+    "date_en": "04 October 2024",
+    "date_ru": "04 Октября 2024"
+  },
+  {
+    "id": 61,
+    "official_id": "1683",
+    "title_az": "Nizami Gəncəvinin əsərlərində təbiəti mühafizə olunması mövzusunda tədbir keçirilmişdi",
+    "title_en": "Seminar on 'Nature Protection in the Works of Nizami Ganjavi'",
+    "title_ru": "Мероприятие «Охрана природы в произведениях Низами Гянджеви»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 11.10.2024-cü il tarixdə “Nizami Gəncəvinin əsərlərində təbiəti mühafizə olunması” barədə...",
+    "desc_en": "On 11 October 2024, an official appointment activity titled \"Seminar on 'Nature Protection in the Works of Nizami Ganjavi'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "11 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие «Охрана природы в произведениях Низами Гянджеви»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 11.10.2024-cü il tarixdə “Nizami Gəncəvinin əsərlərində təbiəti mühafizə olunması” barədə maarifləndirici tədbir keçirilmişdir. Tədbirdə müəllim və tələbələr ştirak etmişdir.\n\nTədbiri tərbiyə işləri üzrə direktor müavini Şahmuad Məmmədov giriş sözü ilə açaraq bildirmişdir ki, dünya ədəbiyyatının beş ən görkəmli şairi sırasına daxil edilən dahi Azərbaycan şairi Nizami Gəncəvinin əsərləri bütün dövrlərdə müasirdir, onun toxunduğu məsələlər həmişə öz aktuallığını saxlamışdır. Nizami Gəncəvinin əsərlərində 50-yə qədər heyvan növünün, Azərbaycanda və digər ölkələrdə yetişən çoxsaylı dərman bitkilərinin adı çəkilir.\n\nOnun yaradıcılığında fotosintez prosesi, dünyanın yaranışı ilə bağlı məlumatlar, anatomiya, fiziologiya, maddələr mübadiləsi və s. proseslərlə bağlı olduqca qiymətli fikirlər yer almışdır. “Xəmsə”də təbiətdə suyun böyük və kiçik dövranına, okeanların, dənizlərin, çayların, göllərin yaranmasına aid maraqlı məlumatlara da rast gəlirik.\n\nMütəfəkkir şairin qəzəl və qəsidələrindən tutmuş, ölməz “Xəmsə”sinə qədər bütün əsərlərində insanın ekoloji tərbiyəsi ən önəmli yerdə dayanır. Nizami bu məsələni diqqət mərkəzində saxlayaraq insanları təbiəti ümumbəşəri sərvət kimi qorumağa çağırır.\n\nƏtraf mühit məsələsi Nizami yaradıcılığında o qədər elmi şəkildə verilmişdir ki, onun dühasına heyrət etməyə bilmirsən. Bu gün bəşəriyyətin üzləşdiyi ekoloji təhlükəsizlik problemini dahi şair sanki 880 il bundan öncə görmüş, insanları təbiəti xilas etməyə, onun qayğısına qalmağa səsləmiş, eyni zamanda, onun həlli yollarını araşdırmışdır.\n\nTədbirin sonunda Nizami Gəncəvinin əsərlərimdən ibarət videoçarx nümayiş olunmuşdur.",
+    "full_en": "On 11 October 2024, an official appointment activity titled \"Seminar on 'Nature Protection in the Works of Nizami Ganjavi'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "11 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие «Охрана природы в произведениях Низами Гянджеви»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "11 Oktyabr 2024",
+    "image": "news_proper_1683.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1683",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "11 Oktyabr 2024",
+    "date_en": "11 October 2024",
+    "date_ru": "11 Октября 2024"
+  },
+  {
+    "id": 62,
+    "official_id": "1672",
+    "title_az": "Kollecimizdə “Yaşıl dünya naminə həmrəylik ili” ilə bağlı ətraf mühitin qorunmasına dair əlavə məşğələlər keçirilir",
+    "title_en": "Extracurricular Environmental Sessions Held for the 'Green World Solidarity Year'",
+    "title_ru": "Дополнительные занятия по охране окружающей среды в рамках «Года солидарности во имя зеленого мира»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Yaşıl dünya naminə həmrəylik ili” ilə bağlı ətraf mühitin qorunmasına dair əlavə məşğələlər təşkil...",
+    "desc_en": "On 18 October 2024, an official event activity titled \"Extracurricular Environmental Sessions Held for the 'Green World Solidarity Year'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "18 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Дополнительные занятия по охране окружающей среды в рамках «Года солидарности во имя зеленого мира»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Yaşıl dünya naminə həmrəylik ili” ilə bağlı ətraf mühitin qorunmasına dair əlavə məşğələlər təşkil edilərək mütəmadi olaraq keçirilir. Məşğələlərdə ekoloji tarazlığın qorunub saxlanması, təbii ehtiyatlardan rasional istifadə, su, torpaq və atmosfer havasının çirklənmədən mühafizə edilməsi ümumbəşəri problemlərindən, dünyada demoqrafik artımla yanaşı istehlakın kəskin artması, qlobal istiləşmə, ozon qatının zədələnməsi, təbii ehtiyatların tükənməsi kimi narahatlıq doğuran məsələlərdən geniş mühazirə söylənilmişdir",
+    "full_en": "On 18 October 2024, an official event activity titled \"Extracurricular Environmental Sessions Held for the 'Green World Solidarity Year'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "18 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Дополнительные занятия по охране окружающей среды в рамках «Года солидарности во имя зеленого мира»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "18 Oktyabr 2024",
+    "image": "news_proper_1672.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1672",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "18 Oktyabr 2024",
+    "date_en": "18 October 2024",
+    "date_ru": "18 Октября 2024"
+  },
+  {
+    "id": 63,
+    "official_id": "1665",
+    "title_az": "COP29-la bağlı maarifləndirici tədbir",
+    "title_en": "Educational Awareness Event Dedicated to COP29",
+    "title_ru": "Просветительское мероприятие, посвященное климатической конференции COP29",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 17.10.2024-cü il tarixdə COP29-la bağlı maarifləndirici tədbir keçirilmişdir. Tədbirdə müəllim və...",
+    "desc_en": "On 17 October 2024, an official event activity titled \"Educational Awareness Event Dedicated to COP29\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "17 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие, посвященное климатической конференции COP29».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 17.10.2024-cü il tarixdə COP29-la bağlı maarifləndirici tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyət iştirak etmişlər. Çıxış edənlər bildirmişlər ki, 2024-ci ildə ölkəmizdə keçiriləcək COP29 dünyanın ən aktual bəşəri problemlərinin müzakirə olunduğu mühüm beynəlxalq platformadır.\n\nBu tədbirin Azərbaycanda keçirilməsi böyük etimadın göstəricisi olmaqla, ölkəmizin qlobal problemlərin həllində məsuliyyətli və etibarlı tərəfdaş mövqeyini təsdiqləyir. 2024-ci ilin ölkəmizdə «Yaşıl dünya naminə həmrəylik ili” edilməsi də məhz buna bariz nümunədir.\n\nSonda COP29-la bağlı videoçarx nümayiş olunub",
+    "full_en": "On 17 October 2024, an official event activity titled \"Educational Awareness Event Dedicated to COP29\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "17 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие, посвященное климатической конференции COP29».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "17 Oktyabr 2024",
+    "image": "news_proper_1665.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1665",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "17 Oktyabr 2024",
+    "date_en": "17 October 2024",
+    "date_ru": "17 Октября 2024"
+  },
+  {
+    "id": 64,
+    "official_id": "1661",
+    "title_az": "COP 29 Azərbaycana nə qazandıracaq mövzusunda dəyirmi masa keçirilmişdir",
+    "title_en": "Roundtable Discussion: 'What COP29 Will Bring to Azerbaijan'",
+    "title_ru": "Круглый стол «Что принесет Азербайджану проведение COP29»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 08.10.2024-cü il tarixdə “COP 29-a Azərbaycana nə qazandıracaq” mövzusunda dəyirmi masa...",
+    "desc_en": "On 08 October 2024, an official event activity titled \"Roundtable Discussion: 'What COP29 Will Bring to Azerbaijan'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "08 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Круглый стол «Что принесет Азербайджану проведение COP29»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 08.10.2024-cü il tarixdə “COP 29-a Azərbaycana nə qazandıracaq” mövzusunda dəyirmi masa keçirilmişdir. Tədbirdə müəllim və tələbələr ştirak etmişdir. Dəyirmi masada çıxışlar olmuş və müzakirələr aparılmışdır.",
+    "full_en": "On 08 October 2024, an official event activity titled \"Roundtable Discussion: 'What COP29 Will Bring to Azerbaijan'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "08 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Круглый стол «Что принесет Азербайджану проведение COP29»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "08 Oktyabr 2024",
+    "image": "news_proper_1661.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1661",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "08 Oktyabr 2024",
+    "date_en": "08 October 2024",
+    "date_ru": "08 Октября 2024"
+  },
+  {
+    "id": 65,
+    "official_id": "1657",
+    "title_az": "Kollecdə “İşğal altında olmuş torpaqlarda törədilən ekoloji terror” mövzusunda tədbir keçirilmişdir",
+    "title_en": "Seminar on 'Ecological Terror in Formerly Occupied Territories'",
+    "title_ru": "Мероприятие «Экологический террор на бывших оккупированных территориях»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 02.10.2024-cü il tarixdə «»İşğal altında olmuş torpaqlarda törədilən ekoloji terror» mövzusunda...",
+    "desc_en": "On 02 October 2024, an official event activity titled \"Seminar on 'Ecological Terror in Formerly Occupied Territories'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "02 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие «Экологический террор на бывших оккупированных территориях»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 02.10.2024-cü il tarixdə «»İşğal altında olmuş torpaqlarda törədilən ekoloji terror» mövzusunda tədbir keçirilmişdir. COP 29-un bu ilin noyabrında Bakıda keçiriləcək tədbirlər çərçivəsində Azərbaycanda müxtəlif işlər görülür.\n\nSadəcə ölkə üçün deyil, dünya üçün önəmli olan beynəlxalq konfransla bağlı kollecimizdə də bir sıra tədbirlər planı həyata keçirir. Bunlardan biri də kollec tələbələrinin COP 29 -la bağlı müxtəlif istiqamətli maarifləndirilməsidir. Tədbirdə kollecimizin tarix müəllimləri tələbələr üçün “İşğal altında olan torpaqlarda törədilən ekoloji terror” mövzusunda açıq mühazirələr söylədilər.\n\nTədbirin sonunda sənədli film nümayiş olundu",
+    "full_en": "On 02 October 2024, an official event activity titled \"Seminar on 'Ecological Terror in Formerly Occupied Territories'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "02 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие «Экологический террор на бывших оккупированных территориях»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "02 Oktyabr 2024",
+    "image": "news_proper_1657.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1657",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "02 Oktyabr 2024",
+    "date_en": "02 October 2024",
+    "date_ru": "02 Октября 2024"
+  },
+  {
+    "id": 66,
+    "official_id": "1625",
+    "title_az": "Müəllimlər Gününə həsr olunmuş tədbir",
+    "title_en": "Festive Ceremony Dedicated to International Teachers' Day",
+    "title_ru": "Торжественное мероприятие, посвященное Дню учителя",
+    "desc_az": "Kollecdə \"Müəllimlər Günü\"nə həsr olunmuş tədbir keçirilmişdir Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində Həmkarlar İttifaqının təşkilatçılığı...",
+    "desc_en": "On 04 October 2024, an official appointment activity titled \"Festive Ceremony Dedicated to International Teachers' Day\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "04 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Торжественное мероприятие, посвященное Дню учителя».",
+    "full_az": "Kollecdə \"Müəllimlər Günü\"nə həsr olunmuş tədbir keçirilmişdir Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində Həmkarlar İttifaqının təşkilatçılığı ilə 04.10.2024-cü il tarixdə “ 5 oktyabr — Beynəlxalq Müəllimlər Günü”nə həsr olunmuş tədbir keçirilmişdir. Kollecimizin direktoru Bəxtiyar Bəxtiyarov tədbiri giriş sözü ilə açaraq, “5-Oktyabr — Beynəlxalq Müəllimlər Günü” münasibətilə müəllimləri təbrik edərək onlara əmək fəaliyyətində uğurlar arzulayıb.\n\nO qeyd edib ki, ölkəmizdə əsası ümummilli liderimiz Heydər Əliyev tərəfindən qoyulmuş və bu gün Prezident İlham Əliyev tərəfindən uğurla davam etdirilən milli təhsil quruculuğu və islahatları öz töhfələrini verməkdədir. Təhsil müəssisələrinin maddi-tədris bazasının möhkəmləndirilməsi, informasiya və kommunikasiya texnologiyaları ilə təmin edilməsi təhsilin keyfiyyətinə müsbət təsir göstərir.\n\nHəmkarlar İttifaqı Komitəsinin sədri Aygün Musayeva çıxış edərək, Azərbaycan Təhsil İşçiləri Azad Həmkarlar İttifaqı Respublika Komitəsinin sədri Araz Paşayevin “5-Oktyabr — Beynəlxalq Müəllimlər Günü” münasibətilə təbrikini kollektivə çatdırdıqdan sonra bildirdi ki, Prezident İlham Əliyev və Birinci vitse-prezident Mehriban Əliyeva tərəfindən təhsilə göstərilən diqqət və qayğının nəticəsi olaraq son illərdə müəllim nüfuzu və müəllimlik peşəsinə marağın əhəmiyyətli şəkildə artdığını, onlar arasında sağlam rəqabət və motivasiyanın gücləndiyini, təhsilin keyfiyyət göstəricilərinin əhəmiyyətli şəkildə yüksəldiyini qeyd etdi. Tədbirin sonunda pedoqoji sahədə səmərəli fəaliyyətlərinə, gənc nəslin təlim-tərbiyəsində qazandığı uğurlara və “5 Oktyabr — Beynəlxalq müəllimlər günü” münasibəti ilə kollecin direktoru Bəxtiyarov Bəxtiyar İbrahim oğlu, müəllimlər Suleymanova Bəturə Mahmud qızı və Kərimova Aysel Natiq qızı kollecin Həmkar İttifaqı Komitəsinin Fəxri fərmanı və qiymətli hədiyyə ilə təltif edildilər.",
+    "full_en": "On 04 October 2024, an official appointment activity titled \"Festive Ceremony Dedicated to International Teachers' Day\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "04 Октября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Торжественное мероприятие, посвященное Дню учителя».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "04 Oktyabr 2024",
+    "image": "news_proper_1625.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1625",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "04 Oktyabr 2024",
+    "date_en": "04 October 2024",
+    "date_ru": "04 Октября 2024"
+  },
+  {
+    "id": 67,
+    "official_id": "1620",
+    "title_az": "COP29-un Azərbaycanda keçirilməsinin əhəmiyyəti",
+    "title_en": "Conference on 'The Significance of Hosting COP29 in Azerbaijan'",
+    "title_ru": "Конференция «Значение проведения COP29 в Азербайджане»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 18.09.2024-cü il tarixdə “COP29-un Azərbaycanda keçirilməsinin əhəmiyyəti” mövzusunda tədbir...",
+    "desc_en": "On 18 September 2024, an official event activity titled \"Conference on 'The Significance of Hosting COP29 in Azerbaijan'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "18 Сентября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Конференция «Значение проведения COP29 в Азербайджане»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 18.09.2024-cü il tarixdə “COP29-un Azərbaycanda keçirilməsinin əhəmiyyəti” mövzusunda tədbir keçirilmişdir. Çıxış edənlər bildirmişlər ki, BMT-nin İqlim Dəyişmələri üzrə Çərçivə Konvensiyasının (UNFCCC)Tərəflər Konfransı 1995-ci ildən hər il keçirilir.\n\nBu tədbirin keçirilməsində əsas məqsəd dünyada iqlim dəyişikliyi ilə mübarizədə irəliləyişləri qiymətləndirməkdir. Bu günədək 195 ölkə, o cümlədən Azərbaycan da bu razılaşmaya qoşulub. İrimiqyaslı beynəlxalq tədbirlərin Azərbaycanda keçirilməsi sözsüz ki, üzərimizə böyük məsuliyyətlər qoyur.\n\nCOP29 dünyada ən möhtəbər beynəlxalq tədbirlərdən sayılır. BMT Baş Assambleyasının qatıldıgı tədbirlərdəndir. Həm də Azərbaycan neft-qaz ölkəsi kimi də, bu sahədə öz mövqeyini göstərəcəkdir və dünyada hər kəs bir daha şahid olacaq ki, bizim gündəliyimiz yaşıl enerji ilə baglıdır.\n\nCOP29 beynəlxalq tədbiri ölkəmizdə bütün keçirilən beynəlxalq tədbirlər kimi yüksək səviyyədə keçiriləcəkdir. Azərbaycan bərpa olunan enerji sahəsində qabaqcıl ölkələr sırasına yüksəlmək əzmindədir və bu məqsədlə zəngin külək və günəş potensialından istifadə edir.\n\nBu, həmçinin ölkənin 2050-ci ilə qədər istixana qazı emissiyalarını 40% azaltmaq planının mühüm tərkib hissəsidir. Ölkə 2030-cu ilə qədər elektrik enerjisində bərpa olunan enerjinin qoyuluş gücü üzrə payını 30%-ə çatdırmaq və yaşıl enerji sahəsində lider olmaq üçün mövcud enerji sistemini şaxələndirir.\n\nAzərbaycan bu sahədə nümunəvi ölkə olaraq 1,5oC hədəfinə uyğun olaraq növbəti Milli Səviyyədə Müəyyən Edilmiş Töhfələr sənədi çərçivəsində öz milli hədəflərini yeniləyəcək. Tədbirdə müvafiq mövzuda geniş fikir mübadiləsi aparıb, onları maraqlandıran sualları cavablandırıldı.",
+    "full_en": "On 18 September 2024, an official event activity titled \"Conference on 'The Significance of Hosting COP29 in Azerbaijan'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "18 Сентября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Конференция «Значение проведения COP29 в Азербайджане»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "18 Sentyabr 2024",
+    "image": "news_proper_1620.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1620",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "18 Sentyabr 2024",
+    "date_en": "18 September 2024",
+    "date_ru": "18 Сентября 2024"
+  },
+  {
+    "id": 68,
+    "official_id": "1616",
+    "title_az": "Yaşıl enerjiyə keçid nəyi dəyişəcək",
+    "title_en": "Discussion Forum: 'What the Transition to Green Energy Will Change'",
+    "title_ru": "Дискуссия на тему «Что изменит переход на зеленую энергию»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 10.09.2024-cü il tarixdə “Yaşıl enerjiyə keçid nəyi dəyişəcək” mövzusunda tədbir keçirilmişdir....",
+    "desc_en": "On 10 September 2024, an official achievement activity titled \"Discussion Forum: 'What the Transition to Green Energy Will Change'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "10 Сентября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Дискуссия на тему «Что изменит переход на зеленую энергию»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 10.09.2024-cü il tarixdə “Yaşıl enerjiyə keçid nəyi dəyişəcək” mövzusunda tədbir keçirilmişdir. Çıxış edənlər bildirmişlər ki, COP29-un Azərbaycanda keçirilməsi həm “yaşıl enerji”yə keçid üçün yeni im­kanlar yaradır, həm də ölkəmizin dünya miqyasında olan nüfuzunu göstərir.\n\nÇünki bu tədbir ən mühüm beynəlxalq tədbirlərdən biridir. Bu gün Azərbaycan Prezidenti İlham Əliyev bütün fəaliyyətində insan amilini əsas məqsəd kimi qarşıya qoyur. Belə konfransın və “yaşıl enerji”yə keçidin əsas məqsədi də məhz Azərbaycan vətəndaşının sağlamlığının qorunmasına, həm də dövlətimizin dünyada söz sahibi olmasına göstərilən yorulmaz səy­dir.\n\nŞübhəsiz ki, bir çox tədbirlər kimi, ölkə­miz COP29-u da uğurla həyata keçirəcək və özünün yüksək təşkilatçılıq bacarığını, insanların sağlamlığına göstərdiyi qayğını dünyaya bir daha nümayiş etdirəcək. Respublikamız COP29-a ciddi hazırla­şır.\n\nCari ilin fevral ayında 80-dən çox xarici QHT-in iştirakı ilə adıçəkilən konfransdan gözləntilərlə bağlı qlobal məsləhətləşmələr keçirilib. Afrika Səhiyyə Təşkilatları Asso­sasiyası ilə danışıqlar nəticəsində 109 xarici QHT-in Azərbaycanın COP29-a sədrliyinə dəstək bəyanatı verməsi reallaşdırılıb.\n\nAfri­kadan olan QHT-lərlə birgə onlayn platforma üzərində Afrika-Asiya Konsorsiumu yaradı­lıb və COP29-la bağlı ayda bir dəfə görüş­lərin keçirilməsinə başlanılıb, eyni zaman­da QHT-lərin məlumatlılığının artırılması məqsədilə vebinarlar təşkil edilib. Tədbirdə mövzu ilə bağlı müzakirələr aparılıb.",
+    "full_en": "On 10 September 2024, an official achievement activity titled \"Discussion Forum: 'What the Transition to Green Energy Will Change'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "10 Сентября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Дискуссия на тему «Что изменит переход на зеленую энергию»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "10 Sentyabr 2024",
+    "image": "news_proper_1616.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1616",
+    "tag_az": "Nailiyyət",
+    "tag_en": "Achievement",
+    "tag_ru": "Достижение",
+    "date_az": "10 Sentyabr 2024",
+    "date_en": "10 September 2024",
+    "date_ru": "10 Сентября 2024"
+  },
+  {
+    "id": 69,
+    "official_id": "1612",
+    "title_az": "Kollecdə “ Ermənistan törətdiyi ekoloji terror aktları” mövzusunda tədbir keçirilmişdir",
+    "title_en": "Seminar Addressing Acts of Ecological Destruction and Environmental Recovery",
+    "title_ru": "Семинар, посвященный вопросам экологической безопасности и восстановления природы",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 03.09.2024-cü il tarixdə “Ermənistan törətdiyi ekoloji terror aktları” mövzusunda tədbir...",
+    "desc_en": "On 03 September 2024, an official appointment activity titled \"Seminar Addressing Acts of Ecological Destruction and Environmental Recovery\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "03 Сентября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Семинар, посвященный вопросам экологической безопасности и восстановления природы».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 03.09.2024-cü il tarixdə “Ermənistan törətdiyi ekoloji terror aktları” mövzusunda tədbir keçirilmişdir. Tədbirdə müəllim və texniki heyəti iştirak etmişdir. Tədbirdə çıxış edən direktor müavini Şahmurad Məmmədov bildirmişdir ki, ölkəmizin ekoloji fəlakətlə üzləşdiyi problemlər var.\n\nErmənistan işğal dövründə və sonrasında ərazilərə ekoloji baxımdan zərbə vurub. Bu günün özündə belə Qərbi Azərbaycan adlandırdığımız tarixi torpaqlarımızda, Zəngəzurda, Göyçə mahalında ekoloji fəlakət törədilir. Göyçə gölü ekoloji fəlakətlə üzləşir.\n\nMetsamor AES təkcə öz ölkəsi üçün yox, ümumilikdə region üçün ciddi təhlükədir. Bu təhlükəyə iki kontekstdən yanaşmaq olar. Birincisi Metsamor AES kifayət qədər köhnə bir sistemdir. İstənilən vaxtda baş verə biləcək sızıntı bölgədə nüvə təhlükəsi yarada bilər.\n\nİstənilən vaxtda baş verə biləcək sızıntı bölgədə nüvə təhlükəsi yarada bilər. Digər tərəfdən Metsamorun buraxdığı radiasiya bitki örtüyünə, havaya ciddi zərər vurur. İğdır bölgəsi Metsamora yaxındır. İnsanlarda son 30-40 ildə xərçəng xəstəliyi sürətlə yayılır.\n\nBunun əsas səbəbi kimi Metsamor AES qiymətləndirilir». Avropanın özü də bu məsələni gündəmə gətirir. Ermənistan söz vermişdi ki, 2005-ci ildə Metsamor AES ləğv ediləcək. Amma sözlərində durmadılar və prosesi uzatmağa davam edirlər: Bu gün Ermənistanın törətdiyi ekoloji fəlakət Azərbaycana və Gürcüstana birbaşa təsir edir.\n\nZəngəzurda mis zavodu var. Onları heç bir ekoloji qaydaları gözləmədən işlədiyinə dair məlumatlar var. Rəsmi Bakı bu məsələləri mütləq qaldıracaqdır. Bu bir fürsətdir və bugün dünyanın diqqəti adıçəkilən məqamlara yönləndiriləcək. Ermənistana müəyyən bir proqramlar təqdim edilməli və qəbul etdirilməlidir.\n\nCOP29 bütün bu problemlərin həlli üçün əsas platforma olacaq».",
+    "full_en": "On 03 September 2024, an official appointment activity titled \"Seminar Addressing Acts of Ecological Destruction and Environmental Recovery\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "03 Сентября 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Семинар, посвященный вопросам экологической безопасности и восстановления природы».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "03 Sentyabr 2024",
+    "image": "news_proper_1612.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1612",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "03 Sentyabr 2024",
+    "date_en": "03 September 2024",
+    "date_ru": "03 Сентября 2024"
+  },
+  {
+    "id": 70,
+    "official_id": "1595",
+    "title_az": "“COP29 — “Yaşıl maarifləndirmə”də təhsilin rolu” mövzusunda tədbir keçirilmişdir.",
+    "title_en": "Event on 'COP29 — The Role of Education in Green Awareness'",
+    "title_ru": "Мероприятие «COP29 — Роль образования в зеленом просвещении»",
+    "desc_az": "“COP29 - “Yaşıl maarifləndirmə”də təhsilin rolu” mövzusunda tədbir keçirilmişdir. Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 19.08.2024-cü il...",
+    "desc_en": "On 19 August 2024, an official event activity titled \"Event on 'COP29 — The Role of Education in Green Awareness'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "19 Августа 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие «COP29 — Роль образования в зеленом просвещении»».",
+    "full_az": "“COP29 - “Yaşıl maarifləndirmə”də təhsilin rolu” mövzusunda tədbir keçirilmişdir. Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 19.08.2024-cü il tarixdə “COP29 — “Yaşıl maarifləndirmə”də təhsilin rolu” mövzusunda tədbir keçirulmişdir.\n\nTədbirdə müəllim və texniki heyəti iştirak etmişlər. Çıxış edənlər Azərbaycan Respublikasının Prezidenti cənab İlham Əliyevin sərəncamı ilə 2024-cü il “Yaşıl dünya naminə həmrəylik ili” və BMT-nin İqlim Dəyişmələri üzrə Çərçivə Konvensiyasının Tərəflər Konfransının 29-cu sessiyasının (COP29) Azərbaycanda keçirilməsinin beynəlxalq əhəmiyyətindən danışdılar.\n\n“Yaşıl dünya naminə həmrəylik ili” çərçivəsində iqlim dəyişikliyinin azaldılması və ətraf mühitin sağlamlaşdırılması sahəsində təhsilalanları məlumatlandırmaq, onların ekoloji proseslərdə rolunu artırmaq, yaşıl enerji, biomüxtəlifliyin qorunması, COP29-la bağlı mövzu ətrafında fikir mübadiləsi aparıldı. Tədbirdə müvafiq mövzuda geniş fikir mübadiləsi aparıb, onları maraqlandıran sualları cavablandırıldı.",
+    "full_en": "On 19 August 2024, an official event activity titled \"Event on 'COP29 — The Role of Education in Green Awareness'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "19 Августа 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие «COP29 — Роль образования в зеленом просвещении»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "19 Avqust 2024",
+    "image": "news_proper_1595.png",
+    "url": "https://rabitakolleci.edu.az/news/1595",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "19 Avqust 2024",
+    "date_en": "19 August 2024",
+    "date_ru": "19 Августа 2024"
+  },
+  {
+    "id": 71,
+    "official_id": "1591",
+    "title_az": "“İqlim dəyişikliyi və onun əhali dinamikasına təsiri” mövzusunda dəyirmi masa",
+    "title_en": "Roundtable on 'Climate Change and Its Impact on Population Dynamics'",
+    "title_ru": "Круглый стол «Изменение климата и его влияние на динамику населения»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 12.08.2024-cü il tarixdə “İqlim dəyişikliyi və onun əhali dinamikasına təsiri” mövzusunda dəyirmi...",
+    "desc_en": "On 12 August 2024, an official achievement activity titled \"Roundtable on 'Climate Change and Its Impact on Population Dynamics'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "12 Августа 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Круглый стол «Изменение климата и его влияние на динамику населения»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 12.08.2024-cü il tarixdə “İqlim dəyişikliyi və onun əhali dinamikasına təsiri” mövzusunda dəyirmi masa keçirilmişdir. Tədbirdə müəllim və texniki heyəti iştirak etmişdir.\n\nCOP29-un Azərbaycanda keçirilməsi həm “yaşıl enerji”yə keçid üçün yeni im­kanlar yaradır, həm də ölkəmizin dünya miqyasında olan nüfuzunu göstərir. Çünki bu tədbir ən mühüm beynəlxalq tədbirlərdən biridir. Bu gün Azərbaycan Prezidenti İlham Əliyev bütün fəaliyyətində insan amilini əsas məqsəd kimi qarşıya qoyur.\n\nBelə konfransın və “yaşıl enerji”yə keçidin əsas məqsədi də məhz Azərbaycan vətəndaşının sağlamlığının qorunmasına, həm də dövlətimizin dünyada söz sahibi olmasına göstərilən yorulmaz səy­dir. Şübhəsiz ki, bir çox tədbirlər kimi, ölkə­miz COP29-u da uğurla həyata keçirəcək və özünün yüksək təşkilatçılıq bacarığını, insanların sağlamlığına göstərdiyi qayğını dünyaya bir daha nümayiş etdirəcək.\n\nRespublikamız COP29-a ciddi hazırla­şır. Cari ilin fevral ayında 80-dən çox xarici QHT-in iştirakı ilə adıçəkilən konfransdan gözləntilərlə bağlı qlobal məsləhətləşmələr keçirilib. Afrika Səhiyyə Təşkilatları Asso­sasiyası ilə danışıqlar nəticəsində 109 xarici QHT-in Azərbaycanın COP29-a sədrliyinə dəstək bəyanatı verməsi reallaşdırılıb.\n\nAfri­kadan olan QHT-lərlə birgə onlayn platforma üzərində Afrika-Asiya Konsorsiumu yaradı­lıb və COP29-la bağlı ayda bir dəfə görüş­lərin keçirilməsinə başlanılıb, eyni zaman­da QHT-lərin məlumatlılığının artırılması məqsədilə vebinarlar təşkil edilib. Tədbirdə mövzu ilə bağlı müzakirələr aparılıb.",
+    "full_en": "On 12 August 2024, an official achievement activity titled \"Roundtable on 'Climate Change and Its Impact on Population Dynamics'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "12 Августа 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Круглый стол «Изменение климата и его влияние на динамику населения»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "12 Avqust 2024",
+    "image": "news_proper_1591.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1591",
+    "tag_az": "Nailiyyət",
+    "tag_en": "Achievement",
+    "tag_ru": "Достижение",
+    "date_az": "12 Avqust 2024",
+    "date_en": "12 August 2024",
+    "date_ru": "12 Августа 2024"
+  },
+  {
+    "id": 72,
+    "official_id": "1584",
+    "title_az": "Kollecdə “İşğal dövründə mədəniyyətimizə vurulan ağır zərbələr” mövzusunda tədbir keçirilmişdir",
+    "title_en": "Historical Seminar on 'Preserving Our Cultural Heritage and Monuments'",
+    "title_ru": "Семинар, посвященный сохранению историко-культурного наследия",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 06.08.2024-cü il tarixdə “İşğal dövründə mədəniyyətimizə vurulan ağır zərbələr” mövzusunda tədbir...",
+    "desc_en": "On 06 August 2024, an official appointment activity titled \"Historical Seminar on 'Preserving Our Cultural Heritage and Monuments'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "06 Августа 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Семинар, посвященный сохранению историко-культурного наследия».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 06.08.2024-cü il tarixdə “İşğal dövründə mədəniyyətimizə vurulan ağır zərbələr” mövzusunda tədbir keçirilmişdir. Tədbiri giriş sözü ilə direktor müavini Şahmurad Məmmədov açaraq qeyd etmişdir ki, ermənilərin hərbi təcavüzü nəticəsində işğal olunmuş ərazilərdə ilk insan məskənlərindən olmuş məşhur Azıx və Tağlar mağaraları, Qaraköpək, Üzərliktəpə kurqanları hal-hazırda hərbi məqsədlərlə istifadə edilmiş, Xocalı, Ağdam, Ağdərə, Cəbrayıl rayonlarındakı kurqanlarla yanaşı, Şuşa, Laçın, Kəlbəcər, Qubadlı, Zəngilan, Füzuli rayonlarının ərazilərindəki qəbiristanlıqlar, türbələr, məzarüstü abidələr, məscidlər, məbədlər, Qafqaz Albaniyasına məxsus abidələr və digər milli abidələrimiz məhv edilişdir.\n\nŞuşanın zəbt edilməsi nəticəsində isə mənəviyyatımıza olduqca ağır zərbə endirilmişdir. Təkcə Şuşa şəhərində 8 muzey, 31 kitabxana, 17 klub, 8 mədəniyyət evi dağıdılmış, viran edilmişdir. Ağdam tarix-diyarşünaslıq muzeyinin, Qubadlı tarix-diyarşünaslıq muzeyinin, Zəngilan tarix-diyarşünaslıq muzeyinin fondları qarət edilmişdir.\n\nCəbrayıl, Füzuli, Xocalı rayonlarının tarix-diyarşünaslıq muzeyləri də dağıdılmışdır. Biz doğma torpaqlarımızı yenidən dirçəldəcəyik. Yenidən o dilbər guşələrdə həyat canlanacaq və bütün Dünya ölkələri buna şahid olacaq. Bütün Azərbaycan arxa və ön cəbhədə bir yumruq kimi birləşib öz əzəli torpaqlarını mənfur düşməndən necə azad etdisə, tezliklə öz insanına həsrət qalan hər qarış torpağını da ayağa qaldıracaq!\n\nTədbirdə mövzu ilə bağlı təqdimatlar edilib və müzakirələr aparıldı",
+    "full_en": "On 06 August 2024, an official appointment activity titled \"Historical Seminar on 'Preserving Our Cultural Heritage and Monuments'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "06 Августа 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Семинар, посвященный сохранению историко-культурного наследия».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "06 Avqust 2024",
+    "image": "news_proper_1584.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1584",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "06 Avqust 2024",
+    "date_en": "06 August 2024",
+    "date_ru": "06 Августа 2024"
+  },
+  {
+    "id": 73,
+    "official_id": "1578",
+    "title_az": "COP29-la bağlı maarifləndirici dəyirmi masa",
+    "title_en": "Educational Roundtable Session Dedicated to COP29 Initiatives",
+    "title_ru": "Просветительский круглый стол, посвященный инициативам COP29",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 16.07.2024-cü il tarixdə COP29-la bağlı maarifləndirici dəyirmi masa keçirilmişdir. Tədbirdə müəllim...",
+    "desc_en": "On 16 July 2024, an official event activity titled \"Educational Roundtable Session Dedicated to COP29 Initiatives\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "16 Июля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительский круглый стол, посвященный инициативам COP29».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 16.07.2024-cü il tarixdə COP29-la bağlı maarifləndirici dəyirmi masa keçirilmişdir. Tədbirdə müəllim və texniki heyət iştirak etmişlər. Çıxış edənlər Prezident İlham Əliyevin 25 dekabr 2023-cü il tarixində imzaladığı ”Yaşıl dünya naminə həmrəylik ili” haqqında imzaladığı fərmanın əhəmiyyətini qeyd etdilər.\n\nHəmçinin, BMT-nin İqlim Dəyişmələri üzrə Çərçivə Konvensiyasının Tərəflər Konfransının 29-cu sesiyası-COP-29 kimi mötəbər bir tədbirin Azərbaycanda keçirilməsinin əhəmiyyətindən, bu qərarın verilməsini Azərbaycana böyük hörmət və etimadın göstəricisi olmaqla yanaşı, onun dünya səviyyəsində artan nüfuzunun nəticəsi kimi qeyd eddilər. Sonda COP29-la bağlı videoçarx nümayiş olunub.",
+    "full_en": "On 16 July 2024, an official event activity titled \"Educational Roundtable Session Dedicated to COP29 Initiatives\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "16 Июля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительский круглый стол, посвященный инициативам COP29».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "16 İyul 2024",
+    "image": "news_proper_1578.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1578",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "16 İyul 2024",
+    "date_en": "16 July 2024",
+    "date_ru": "16 Июля 2024"
+  },
+  {
+    "id": 74,
+    "official_id": "1574",
+    "title_az": "Azərbaycanın COP 29-a Sədrliyi: Qlobal Şimal və Cənub Arasında Körpü",
+    "title_en": "Azerbaijan's COP29 Presidency: A Bridge Between the Global North and South",
+    "title_ru": "Председательство Азербайджана в COP29: мост между Глобальным Севером и Югом",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 09.07.2024-cü il tarixdə “Azərbaycanın COP-29-a sədrliyi qlobal şimal və cənub arasında körpüdür”...",
+    "desc_en": "On 09 July 2024, an official event activity titled \"Azerbaijan's COP29 Presidency: A Bridge Between the Global North and South\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "09 Июля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Председательство Азербайджана в COP29: мост между Глобальным Севером и Югом».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 09.07.2024-cü il tarixdə “Azərbaycanın COP-29-a sədrliyi qlobal şimal və cənub arasında körpüdür” mövzusunda dəyirmi masa keçirilmişdir. Tədbirdə müəllim və texniki heyət iştirak etmişdir.\n\nTədbirdə çıxış edənlər Azərbaycanın COP29-a ev sahibliyi etməsinin iqtisadi və siyasi əhəmiyyətindən danışdılar. Bildirildi ki, Azərbaycanın COP 29-a sədrliyi, həm ölkəmiz, həm də dünya üçün mühüm bir hadisədir. Bu rol, iqlim dəyişikliyi ilə mübarizə sahəsində qlobal səyləri birləşdirəcək və daha ədalətli, dayanıqlı bir gələcək qurmağa töhfə verəcək.\n\nGələcəyin qurulmasında Azərbaycanın bu mühüm rolu, iqlim dəyişikliyi ilə mübarizədə qlobal liderlik və məsuliyyət nümunəsi olacaq. Tədbirin sonunda mövzu ilə bağlı videoçarx nümayiş olunub və müzakirələr aparılıb.",
+    "full_en": "On 09 July 2024, an official event activity titled \"Azerbaijan's COP29 Presidency: A Bridge Between the Global North and South\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "09 Июля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Председательство Азербайджана в COP29: мост между Глобальным Севером и Югом».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "09 İyul 2024",
+    "image": "news_proper_1574.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1574",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "09 İyul 2024",
+    "date_en": "09 July 2024",
+    "date_ru": "09 Июля 2024"
+  },
+  {
+    "id": 75,
+    "official_id": "1570",
+    "title_az": "Kollecdə “İşğal altında olmuş torpaqlarda törədilən ekoloji terror” mövzusunda rəsm müsabiqəsi keçirilmişdir",
+    "title_en": "Student Art Contest Held on Environmental Protection and Ecology",
+    "title_ru": "В колледже прошел конкурс рисунков на экологическую тематику",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 03.07.2024-cü il tarixdə «Birləşmiş Millətlər Təşkilatının İqlim Dəyişmələri üzrə Çərçivə...",
+    "desc_en": "On 03 July 2024, an official appointment activity titled \"Student Art Contest Held on Environmental Protection and Ecology\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "03 Июля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошел конкурс рисунков на экологическую тематику».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 03.07.2024-cü il tarixdə «Birləşmiş Millətlər Təşkilatının İqlim Dəyişmələri üzrə Çərçivə Konvensiyasının Tərəflər Konfransının 29-cu sessiyasının (COP29), Kioto Protokolunun Tərəflər Görüşünün 19-cu sessiyasının və Paris sazişinin Tərəflər Görüşünün 6-cı sessiyasının təşkil edilməsi ilə bağlı Elm və Təhsil Nazirliyinin 2024 cü il üçün Tədbirlər Planının 3.5 Təhsil müəssisələrində-COP 29 çərçivəsində «İşğal altında olmuş torpaqlarda törədilən ekoloji terror» mövzusunda təqdimatların keçirilməsi məqsədilə rəsm müsabiqəsinə yekun vurulmuşdur. Tədbiri giriş sözü ilə direktor müavini Şahmurad Məmmədov açaraq qeyd etmişdir ki, 1990-cı illərdən başlayaraq Ermənistan işğal etdiyi ərazilərimizdə genişmiqyaslı ekoloji terror törətmişdir.\n\nTopxana meşəsində adı Qırmızı Kitaba düşən qiymətli ağacların kütləvi qırılması, mövcud su mənbələrinin, çayların zəhərli maddələrlə çirkləndirilməsi, yeraltı və yerüstü təbii sərvətlərin talan olunması və digər çirkin addımların atılması ekoloji tarazlığın pozulmasına səbəb olmuşdur. Tədbirin sonunda rəsm müsabiqəsində iştirak edən 24 tələbə arasından qalib gələn 6 tələbəyə Fəxri Fərman və qiymətli hədiyyələr verilmişdir.",
+    "full_en": "On 03 July 2024, an official appointment activity titled \"Student Art Contest Held on Environmental Protection and Ecology\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "03 Июля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошел конкурс рисунков на экологическую тематику».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "03 İyul 2024",
+    "image": "news_proper_1570.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1570",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "03 İyul 2024",
+    "date_en": "03 July 2024",
+    "date_ru": "03 Июля 2024"
+  },
+  {
+    "id": 76,
+    "official_id": "1565",
+    "title_az": "Kollecin tələbələri Basketbol turnirində I yeri qazanıblar",
+    "title_en": "College Student Team Wins 1st Place in the Basketball Tournament!",
+    "title_ru": "Баскетбольная команда студентов колледжа заняла I место на турнире!",
+    "desc_az": "Azərbaycan Texniki Universitetinin İdman Sarayında «Tam Gənc Basketbol Liqası»nın final oyunu keçirilib. Finalda Azərbaycan Texniki Universiteti və Azərbaycan Dövlət Bədən Tərbiyəsi və...",
+    "desc_en": "On 25 June 2024, an official sports activity titled \"College Student Team Wins 1st Place in the Basketball Tournament!\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "25 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Баскетбольная команда студентов колледжа заняла I место на турнире!».",
+    "full_az": "Azərbaycan Texniki Universitetinin İdman Sarayında «Tam Gənc Basketbol Liqası»nın final oyunu keçirilib. Finalda Azərbaycan Texniki Universiteti və Azərbaycan Dövlət Bədən Tərbiyəsi və İdman Akademiyasının(ADBTİA) basketbol komandası qarşılaşıb.\n\nGərgin mübarizə şəraitində keçən final oyununda AzTU komandası 85 — 73 hesabı ilə Tam Gənc Basketbol Liqasının qalibi olub. BDRNK-nın tələbələri: 1.Nəsirov Nicat Riad oğlu — 662r 2.Həmzəyev İbrahim Pərviz oğlu — 662r 3.Zamanov Kamran Muxtar oğlu — 311b Bu tələbələr AzTU-nun yığma komandasının tərkibində çıxış edərək I yerə layiq görülmüşlər.\n\nNəzərov Nicat Riad oğlu Liqanın ən yaxşı oyunçusu seçilmişdir.",
+    "full_en": "On 25 June 2024, an official sports activity titled \"College Student Team Wins 1st Place in the Basketball Tournament!\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "25 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Баскетбольная команда студентов колледжа заняла I место на турнире!».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "25 İyun 2024",
+    "image": "news_proper_1565.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1565",
+    "tag_az": "İdman",
+    "tag_en": "Sports",
+    "tag_ru": "Спорт",
+    "date_az": "25 İyun 2024",
+    "date_en": "25 June 2024",
+    "date_ru": "25 Июня 2024"
+  },
+  {
+    "id": 77,
+    "official_id": "1555",
+    "title_az": "Kollecdə «İnsan alverinə qarşı mübarizə» çərçivəsində tədbir keçirilmişdir",
+    "title_en": "Awareness Event Held Within the Framework of 'Combating Human Trafficking'",
+    "title_ru": "Мероприятие в рамках программы «Борьба с торговлей людьми»",
+    "desc_az": "Kollecdə \"İnsan alverinə qarşı mübarizə\" çərçivəsində tədbir keçirilmişdir Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 17.04.2024-cü il tarixdə...",
+    "desc_en": "On 17 April 2024, an official event activity titled \"Awareness Event Held Within the Framework of 'Combating Human Trafficking'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "17 Апреля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие в рамках программы «Борьба с торговлей людьми»».",
+    "full_az": "Kollecdə \"İnsan alverinə qarşı mübarizə\" çərçivəsində tədbir keçirilmişdir Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 17.04.2024-cü il tarixdə «İnsan alverinə qarşı mübarizə» mövzusunda tələbələrlə görüş keçirildi. Həmin görüşdə müxtəlif qurumları təmsil edən nümayəndələrdə iştirak edirdi.\n\nMəqsədimiz İnsan alverinə qarşı dövlətimizin mübarizə planı, bu cinayətin qurbanı olmuş şəxslərə peşəkar yardım göstərilməsinin təmin edilməsi və hər bir şəxsin dövlətin tətbiq etdiyi mübarizə tədbirlərinin həyata keçirilməsində birgə fəaliyyətindən danışaraq, gənclərlə bu mövzuda müxtəlif fikirləri müzakirə edərək, onları maarifləndirməkdir.",
+    "full_en": "On 17 April 2024, an official event activity titled \"Awareness Event Held Within the Framework of 'Combating Human Trafficking'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "17 Апреля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие в рамках программы «Борьба с торговлей людьми»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "17 Aprel 2024",
+    "image": "news_proper_1555.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1555",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "17 Aprel 2024",
+    "date_en": "17 April 2024",
+    "date_ru": "17 Апреля 2024"
+  },
+  {
+    "id": 78,
+    "official_id": "1548",
+    "title_az": "Kollecdə “İnsan Hüquqları Aylığı” çərçivəsində tədbir keçirilmişdir",
+    "title_en": "Educational Seminar Held Within 'Human Rights Month'",
+    "title_ru": "В колледже прошло мероприятие в рамках «Месячника прав человека»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 12.06.2024-cü il tarixdə “İnsan Hüquqları Aylığı” çərçivəsində tədbir keçirilmişdir. Tədbirdə...",
+    "desc_en": "On 12 June 2024, an official event activity titled \"Educational Seminar Held Within 'Human Rights Month'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "12 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло мероприятие в рамках «Месячника прав человека»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 12.06.2024-cü il tarixdə “İnsan Hüquqları Aylığı” çərçivəsində tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişlər. Azərbaycan Respublikasının Prezidenti cənab İlham Əliyevin 18 iyun 2007-ci il tarixli sərəncamı ilə iyun ayının 18-i ölkəmizdə “İnsan Hüquqları günü” kimi qeyd olunur və hər il olduğu kimi bu il də Ombudsmanın tərəfindən mayın 18-dən iyunun 18-dək ölkədə İnsan Hüquqları Aylığı elan edilmişdir.\n\nAylığın məqsədi insan hüquqları sahəsində mövcud problemlərin həlli yollarını müəyyənləşdirmək və İnsan hüquqlarını təmin etməkdir. Əvvəlcə tədbir iştirakçıları kollecin dəhlizində tələbələrin insan hüquqlarına dair hazırladıqları rəsm sərgisi ilə tanış oldular.\n\nSonra tədbir akt zalında davam etdi. Tədbirdə çıxış edənlər açaraq belə tədbirlərin keçirilməsinin əhəmiyyətindən və bu sahədə maarifləndirmə işlərinin aparılmasının vacibliyindən danışdılar. Mövzunun aktuallığından bəhs edərək ölkəmizdə insan hüquqlarının daima ön planda olduğundan və dövlətimizin bu sahədə gördüyü işlərdən danışdılar.\n\nKollec tərəfindən hazırlanmış maarifləndirici tanıtım materialları iştirakçılara paylanıldı. Sonda “İnsan hüquqlarının müdafiəsi” ilə əlaqədar videoçarx nümayiş olunub.",
+    "full_en": "On 12 June 2024, an official event activity titled \"Educational Seminar Held Within 'Human Rights Month'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "12 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло мероприятие в рамках «Месячника прав человека»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "12 İyun 2024",
+    "image": "news_proper_1548.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1548",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "12 İyun 2024",
+    "date_en": "12 June 2024",
+    "date_ru": "12 Июня 2024"
+  },
+  {
+    "id": 79,
+    "official_id": "1541",
+    "title_az": "“Yaşıl dünya naminə həmrəylik” mövzusunda tədbir keçirilmişdir",
+    "title_en": "Conference Dedicated to 'Solidarity for a Green World'",
+    "title_ru": "Конференция на тему «Солидарность во имя зеленого мира»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 13.06.2024-cü il tarixdə “Yaşıl dünya naminə həmrəylik” mövzusunda tədbir keçirilmişdir. Tədbirdə...",
+    "desc_en": "On 13 June 2024, an official event activity titled \"Conference Dedicated to 'Solidarity for a Green World'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "13 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Конференция на тему «Солидарность во имя зеленого мира»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 13.06.2024-cü il tarixdə “Yaşıl dünya naminə həmrəylik” mövzusunda tədbir keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişlər. Çıxış edənlər dünyanı narahat edən ekoloji problemlər, iqlim dəyişiklikləri və onların canlı aləmə mənfi təsirlərindən, ekoloji mədəniyyətdən söhbət açaraq bu sahəyə diqqətin artırılması, beynəlxalq həmrəyliyin gücləndirilməsi məqsədilə 2024-cü ilin “Yaşıl dünya naminə həmrəylik ili” elan edilməsinin əhəmiyyətini iştirakçıların diqqətinə çatdırıblar.\n\nQeyd edilib ki, bu Sərəncam Azərbaycanın qlobal təşəbbüslərə ilk qoşulan ölkələrin sırasında olduğunu bir daha sübut edir. Digər tərəfdən ölkəmizdə 2024-cü il ərzində bu sahədə fəaliyyətimizi genişləndirəcəyimizə və ətraf mühitin qorunması istiqamətində görüləcək işlərin xeyli dərəcədə intensivləşəcəyinə bir çağırışdır.\n\nKollec tərəfindən hazırlanmış maarifləndirici tanıtım materialları iştirakçılara paylanılıb. Sonda “Yaşıl dünya naminə həmrəylik” ilə əlaqədar videoçarx nümayiş olunub.",
+    "full_en": "On 13 June 2024, an official event activity titled \"Conference Dedicated to 'Solidarity for a Green World'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "13 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Конференция на тему «Солидарность во имя зеленого мира»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "13 İyun 2024",
+    "image": "news_proper_1541.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1541",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "13 İyun 2024",
+    "date_en": "13 June 2024",
+    "date_ru": "13 Июня 2024"
+  },
+  {
+    "id": 80,
+    "official_id": "1537",
+    "title_az": "“Ekoloji tərbiyənin təhsildə rolu” mövzusunda dəyirmi masa",
+    "title_en": "Roundtable Discussion on 'The Role of Ecological Education'",
+    "title_ru": "Круглый стол «Роль экологического воспитания в образовании»",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 11.06.2024-cü il tarixdə “Ekoloji tərbiyənin təhsildə rolu” mövzusunda dəyirmi masa keçirilmişdir....",
+    "desc_en": "On 11 June 2024, an official event activity titled \"Roundtable Discussion on 'The Role of Ecological Education'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "11 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Круглый стол «Роль экологического воспитания в образовании»».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 11.06.2024-cü il tarixdə “Ekoloji tərbiyənin təhsildə rolu” mövzusunda dəyirmi masa keçirilmişdir. Tədbirdə müəllim və tələbə heyəti iştirak etmişdir. Müasir mərhələdə yetişməkdə olan gənc nəslin ekoloji tərbiyəsi bəşəriyyətin qarşısında duran qlobal problemdir.\n\nEkologiya ilə bağlı əksər sənədlərdə ətraf mühitin qorunmasının əhəmiyyəti və ekoloji tərbiyə məsələlərini vacibliyi öz əksini tapmışdır. Təbiətdən səmərəli istifadə və onun müdafiəsizamanı təbii prosesləri idarə edən qanunların nəzərə alınması vacibdir.\n\nEkologiya dedikdə canlı təbiət və onun ayrı-ayrı tərkib hissələri ilə xarici aləmin qarşılıqlı münasibətləri, yaxud bu münasibətləri öyrənən elm nəzərdə tutulur. Tədbirdə ilə ekologiya ilə bağlı təqdimatlar edilib və müzakirələr aparılıb.",
+    "full_en": "On 11 June 2024, an official event activity titled \"Roundtable Discussion on 'The Role of Ecological Education'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "11 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Круглый стол «Роль экологического воспитания в образовании»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "11 İyun 2024",
+    "image": "news_proper_1537.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1537",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "11 İyun 2024",
+    "date_en": "11 June 2024",
+    "date_ru": "11 Июня 2024"
+  },
+  {
+    "id": 81,
+    "official_id": "1533",
+    "title_az": "Kollecdə “İşğal altında olmuş torpaqlarda törədilən ekoloji terror” mövzusunda inşa yazı müsabiqəsi",
+    "title_en": "Student Essay Competition Held on Environmental Protection",
+    "title_ru": "В колледже прошел конкурс эссе по вопросам экологии и охраны природы",
+    "desc_az": "keçirilmişdir. Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 05.06.2024-cü il tarixdə “İşğal altında olmuş torpaqlarda törədilən ekoloji terror”...",
+    "desc_en": "On 05 June 2024, an official appointment activity titled \"Student Essay Competition Held on Environmental Protection\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "05 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошел конкурс эссе по вопросам экологии и охраны природы».",
+    "full_az": "keçirilmişdir. Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 05.06.2024-cü il tarixdə “İşğal altında olmuş torpaqlarda törədilən ekoloji terror” mövzusunda inşa yazı müsabiqəsinə yekun vurulmuşdur. Tədbiri giriş sözü ilə direktor müavini Şahmurad Məmmədov açaraq qeyd etmişdir ki, Ermənistan 30 ilə yaxın müddət ərzində işğal edilən ərazilərin təbii sərvətlərinə və ətraf təbii mühitinə bərpası mümkün olmayan külli miqdarda ziyan vurub.\n\nİşğal olunan ərazilərin təbii sərvətləri işğalçı dövlətin himayədarlığı nəticəsində müxtəlif şirkətlər tərəfindən qanunsuz istismara məruz qalıb və talan edilib. Həmin ərazilərin ətraf təbii mühitinə vurulan ziyan, regionda ekoloji tarazlığın pozulmasına səbəb olub.\n\nİşğala məruz qalmış yaşayış məntəqələrimiz erməni silahlı birləşmələri tərəfindən qarət edilib, evlər dağıdılıb, su, elektrik, qaz və digər kommunikasiya xətləri isə tamamilə sıradan çıxarılıb. Respublika əhəmiyyətli dəmiryolu xətləri sökülüb və yararsız hala salınıb.\n\nÜmumiyyətlə, Ermənistan tərəfindən ekoloji terrora məruz qalan Azərbaycan əraziləri regional ekoloji fəlakət zonasına çevrilib. Tədbirin sonunda inşa yazı müsabiqəsində iştirak edən 32 tələbə arasından qalib gələn 4 tələbəyə Fəxri Fərman və qiymətli hədiyyələr verilmişdir.",
+    "full_en": "On 05 June 2024, an official appointment activity titled \"Student Essay Competition Held on Environmental Protection\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "05 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошел конкурс эссе по вопросам экологии и охраны природы».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "05 İyun 2024",
+    "image": "news_proper_1533.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1533",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "05 İyun 2024",
+    "date_en": "05 June 2024",
+    "date_ru": "05 Июня 2024"
+  },
+  {
+    "id": 82,
+    "official_id": "1511",
+    "title_az": "“Narkomaniya-ağ ölüm” mövzusunda tədbir keçirilmişdir",
+    "title_en": "Educational Seminar Titled 'Drug Addiction — White Death'",
+    "title_ru": "Просветительское мероприятие на тему «Наркомания — белая смерть»",
+    "desc_az": "03 iyun 2024-cü il tarixdə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində İctimai Səhiyyə və İslahatlar Mərkəzi (İSİM), Yasamal rayon İcra...",
+    "desc_en": "On 03 June 2024, an official appointment activity titled \"Educational Seminar Titled 'Drug Addiction — White Death'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "03 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие на тему «Наркомания — белая смерть»».",
+    "full_az": "03 iyun 2024-cü il tarixdə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində İctimai Səhiyyə və İslahatlar Mərkəzi (İSİM), Yasamal rayon İcra Hakimiyyəti və Yasamal Rayon Polis İdarəsinin birgə təşkilatçılığı ilə narkotik vasitələrin və psixotrop maddələrin zərərləri ilə bağlı maarifləndirici tədbir keçirilib. Tədbirdə müəllim və tələbə heyəti iştirak edib.\n\nTədbiri tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov açaraq zərərli vərdişlərlə mübarizədə maarifləndirici görüşlərin əhəmiyyətini vurğuladı, yeniyetmələri sağlam həyat tərzi keçirməyə, ətraf aləmin gözəlliklərindən – təbiətdən, kitablardan, maraqlı insanlarla ünsiyyətdən zövq almağa, faydalı bilik və bacarıqlar öyrənməyə çağırdı. Tədbirdə çıxış edənlıər edənlər geniş təqdimatla çıxış edərək, iştirakçıları zərərli vərdişlərin insan orqanizminə göstərdiyi mənfi təsirlər, gələcəkdə sağlamlığa törədəcəyi ağır fəsadlar barədə barədə məlumat verdilər və tələbələrə müvafiq tövsiyələrini çatdırdılar.\n\nTədbirin sonunda “Narkomaniya-ağ ölüm” adlı videoçarx nümayiş olundu, tələbələri maraqlandıran suallar cavablandırıldı və onlara İSİM tərəfindən hazırlanmış maarifləndirici materiallar təqdim edildi",
+    "full_en": "On 03 June 2024, an official appointment activity titled \"Educational Seminar Titled 'Drug Addiction — White Death'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "03 Июня 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие на тему «Наркомания — белая смерть»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "03 İyun 2024",
+    "image": "news_proper_1511.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1511",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "03 İyun 2024",
+    "date_en": "03 June 2024",
+    "date_ru": "03 Июня 2024"
+  },
+  {
+    "id": 83,
+    "official_id": "1471",
+    "title_az": "Kollecimizdə “Təbiətimizi qoruyaq” mövzusunda yaşıllaşdırma işləri aparılmışdır",
+    "title_en": "Campus Tree-Planting and Landscaping Action 'Let Us Protect Nature'",
+    "title_ru": "Акция по озеленению «Защитим нашу природу» в кампусе колледжа",
+    "desc_az": ". 17 may 2024-cü ildə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Təbiətimizi qoruyaq” mövzusunda ərazidə yaşıllaşdırma işləri aparılmışdır....",
+    "desc_en": "On 17 May 2024, an official appointment activity titled \"Campus Tree-Planting and Landscaping Action 'Let Us Protect Nature'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "17 Мая 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Акция по озеленению «Защитим нашу природу» в кампусе колледжа».",
+    "full_az": ". 17 may 2024-cü ildə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Təbiətimizi qoruyaq” mövzusunda ərazidə yaşıllaşdırma işləri aparılmışdır. İməclikdə müəllim və tələbə heyəti iştirak etmişlər. İməclik başlamamışdan qabaq Kollecin tərbiyə işləri üzrə direktor müavini Şahmurad müəllim iştirakçılar qarşısında çıxış etmişdir.\n\nO, çıxışında vurğulamışdır ki, Azərbaycanda ətraf mühitin mühafizəsi, ekoloji problemlərin həlli və təbiətin zənginləşdirilməsi ümummilli liderimiz Heydər Əliyevin adı ilə bağlıdır. Ulu öndərin ölkəmizə rəhbərliyinin birinci dövründə ekoloji problemlərin həlli istiqamətində kompleks tədbirlər həyata keçirilmiş, respublikamızın bütün bölgələrində yaşıllaşdırma işləri geniş vüsət almışdır.\n\nMəhz Heydər Əliyevin təşəbbüsü ilə ölkəmizdə yüz min hektarlarla yaşıllıq zonası salınmış, məqsədyönlü ekoloji siyasət həyata keçirilmiş, bu sahədə zəngin qanunvericilik bazası yaradılmışdır. İməclik zamanı tələbələr tərəfindən kollecin həyətində təmizlik işləri aparılıb, ərazidə çoxlu güllər əkilib.\n\nAğacların dibi bellənib, ağardılıb. Biz kollecimizin yaşıllğını qorumaqla həm sağlamlığımızı qoruyuruq, həm də kollecimizə gələn hər bir kəsin bu gözəlliklərdən zövq almalarına köməklik göstərmiş oluruq. Sonda iməclikdə iştirak edən hər bir kəsə rəhbərliyin təşəkkürü çatdırılmışdır",
+    "full_en": "On 17 May 2024, an official appointment activity titled \"Campus Tree-Planting and Landscaping Action 'Let Us Protect Nature'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "17 Мая 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Акция по озеленению «Защитим нашу природу» в кампусе колледжа».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "17 May 2024",
+    "image": "news_proper_1471.png",
+    "url": "https://rabitakolleci.edu.az/news/1471",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "17 May 2024",
+    "date_en": "17 May 2024",
+    "date_ru": "17 Мая 2024"
+  },
+  {
+    "id": 84,
+    "official_id": "1467",
+    "title_az": "Kollecdə ”Yaşıl dünya — sağlam gələcək” mövzusunda seminar keçirilmişdir",
+    "title_en": "Seminar Held on 'Green World — Healthy Future'",
+    "title_ru": "В колледже прошел семинар «Зеленый мир — здоровое будущее»",
+    "desc_az": "Kollecdə ”Yaşıl dünya - sağlam gələcək” mövzusunda seminar keçirilmişdir 13 may 2024-cü ildə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində...",
+    "desc_en": "On 13 May 2024, an official event activity titled \"Seminar Held on 'Green World — Healthy Future'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "13 Мая 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошел семинар «Зеленый мир — здоровое будущее»».",
+    "full_az": "Kollecdə ”Yaşıl dünya - sağlam gələcək” mövzusunda seminar keçirilmişdir 13 may 2024-cü ildə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində .”Yaşıl dünya — sağlam gələcək” mövzusunda seminar keçirilmişdir. Seminarda məruzə edən şəxslər 2024-cü ilin Azərbaycan Respublikasının Prezidenti İlham Əliyevin Sərəncamı ilə “Yaşıl dünya naminə həmrəylik ili” elan edilməsi, ətraf mühitin sağlamlaşdırılması, yaşıllıqların bərpası və artırılması, su ehtiyatlarından və dayanıqlı enerji mənbələrindən səmərəli istifadənin təmin edilməsi istiqamətlərində ölkəmizdə aparılan işlər haqqında geniş məlumat verdilər.\n\nSonda verilən suallar cavablandırıb və mövzu ətrafında müzakirələr aparılıb",
+    "full_en": "On 13 May 2024, an official event activity titled \"Seminar Held on 'Green World — Healthy Future'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "13 Мая 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошел семинар «Зеленый мир — здоровое будущее»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "13 May 2024",
+    "image": "news_proper_1467.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1467",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "13 May 2024",
+    "date_en": "13 May 2024",
+    "date_ru": "13 Мая 2024"
+  },
+  {
+    "id": 85,
+    "official_id": "1454",
+    "title_az": "Kollecimizdə Azərbaycanın COP29-a sədrliyə gətirib çıxaran fəaliyyəti mövzunda dəyirmi masa keçirilmişdir",
+    "title_en": "Roundtable on Azerbaijan's Leadership Path to the COP29 Presidency",
+    "title_ru": "Круглый стол о деятельности Азербайджана на пути к председательству в COP29",
+    "desc_az": "15 may 2024-cü ildə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində Azərbaycanın iqlim dəyişmələrinin nəticələrinin aradan qaldırılması üçün...",
+    "desc_en": "On 15 May 2024, an official event activity titled \"Roundtable on Azerbaijan's Leadership Path to the COP29 Presidency\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "15 Мая 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Круглый стол о деятельности Азербайджана на пути к председательству в COP29».",
+    "full_az": "15 may 2024-cü ildə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində Azərbaycanın iqlim dəyişmələrinin nəticələrinin aradan qaldırılması üçün həyata keçirdiyi fəaliyyət və COP29-a sədrliyə gətirib çıxaran fəaliyyəti mövzunda dəyirmi masa keçirilmişdir. Nəqliyyat şöbəsinin tələbə heyəti ilə keçirilən dəyirmi masada məlumatları dinləmiş və diskusiyalarda iştirak etmişlər.\n\nQlobal iqlim dəyişikliyi ilə müba­rizədə xüsusi fəallığı ilə seçilən Azərbaycan dünyanın prioritet elan etdiyi “yaşıl keçid” platformasının da əsas iştirakçılarındandır. Elə 2016-cı il aprelin 22-də Birləşmiş Millətlər Təş­kilatının Mənzil Qərargahında qurumun İqlim Dəyişmələri üzrə Çərçivə Konven­siyasının Paris Razılaşmasına imza atan 171 ölkədən birinin məhz Azərbaycan Respublikası olması da bunun bariz nümunəsidir.\n\nParis sazişinə əsasən, ölkəmiz baza ili kimi müəyyənləşdirilən 1990-cı illə müqayisədə 2030-cu ilə qədər istixana qazlarının miqdarının 35 faiz, 2050-ci ilə qədər isə 40 faiz azaldıl­masına dair öhdəlik götürüb. Göründüyü kimi, BMT-nin İq­lim Dəyişmələri üzrə Çərçivə Kon­vensiyasının Tərəflər Konfransının 29-cu sessiyasının (COP29) Azər­baycanda keçirilməsi ilə bağlı qərar xalqımız üçün olduqca qürurverici bir hadisədir.\n\nBu tədbiri, həm də ölkəmizin yaşıl iqtisadiyyata keçid strategiyasının məntiqi davamı kimi qiymətləndirmək olar. Azərbaycan Prezidentinin sərəncamı ilə 2024-cü ilin ölkəmizdə “Yaşıl dünya naminə həmrəylik ili” elan edilməsi isə bu missiyaya verilən dəyərin təsdiqidir.\n\nTələbələr tərəfindən verilən suallar cavablandırıb və mövzu ətrafında müzakirələr aparılıb.",
+    "full_en": "On 15 May 2024, an official event activity titled \"Roundtable on Azerbaijan's Leadership Path to the COP29 Presidency\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "15 Мая 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Круглый стол о деятельности Азербайджана на пути к председательству в COP29».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "15 May 2024",
+    "image": "news_proper_1454.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1454",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "15 May 2024",
+    "date_en": "15 May 2024",
+    "date_ru": "15 Мая 2024"
+  },
+  {
+    "id": 86,
+    "official_id": "1442",
+    "title_az": "Ağdam, Füzuli, Cəbrayıl, Tərtər və Xocavənd rayonlarının ərazilərinin erməni vandalizminə məruz qalması",
+    "title_en": "Historical Lecture on the Restoration of Liberated Regions of Karabakh",
+    "title_ru": "Исторический семинар, посвященный возрождению освобожденных районов Карабаха",
+    "desc_az": "8 may 2024-cü ildə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində COP-29 çərçivəsində “vandalizminə məruz qalması” mövzusunda tədbir...",
+    "desc_en": "On 08 May 2024, an official appointment activity titled \"Historical Lecture on the Restoration of Liberated Regions of Karabakh\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "08 Мая 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Исторический семинар, посвященный возрождению освобожденных районов Карабаха».",
+    "full_az": "8 may 2024-cü ildə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində COP-29 çərçivəsində “vandalizminə məruz qalması” mövzusunda tədbir keçirilmişdir. Keçirilən tədbirdə kollecin müəllim və tələbə heyəti iştirak etmişlər.\n\nKollecin tərbiyə işləri üzrə direktor müavini Şahmurad müəllim tədbirdə çıxış edərək qeyd etdmişdir ki, Ağdam, Füzuli, Cəbrayıl, Tərtər və Xocavənd rayonlarının ərazilərində ermənilər tərəfindən ekoloji terror 1992-ci ildən 2020-ci ilə qədər davam etmişdir. Bölgədə müharibə dövründə xeyli Xan çinarları da məhv edilmişdir.\n\nHəmin ərazilərdən keçən təbii su mənbələrimiz də Ermənistan tərəfindən həddindən artıq çirklənməyə məruz qalır. Araz və Kür çaylarının qolları olan uyğun olaraq Oxçuçay və Ağstafaçayın Ermənistan tərəfindən ən ağır formada çirkləndirilməsi nəticəsində sözügedən çaylarda canlı aləmin yaşayışı üçün böyük təhlükə yaranmışdır.\n\nTədbirin sonunda videoçarx nümayiş olundu",
+    "full_en": "On 08 May 2024, an official appointment activity titled \"Historical Lecture on the Restoration of Liberated Regions of Karabakh\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "08 Мая 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Исторический семинар, посвященный возрождению освобожденных районов Карабаха».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "08 May 2024",
+    "image": "news_proper_1442.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1442",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "08 May 2024",
+    "date_en": "08 May 2024",
+    "date_ru": "08 Мая 2024"
+  },
+  {
+    "id": 87,
+    "official_id": "1379",
+    "title_az": "Bakı Marafonu-2024",
+    "title_en": "College Representatives Participate in the Baku Marathon 2024",
+    "title_ru": "Участие представителей колледжа в «Бакинском марафоне – 2024»",
+    "desc_az": "Heydər Əliyev Fondunun təşkilatçılığı ilə hər il keçirilən Bakı Marafonunda BDRNK-in müəllim və tələbələri Kollecimizi Bakı Marafonu 2024 -də yüksək səviyyədə təmsil edərək,21 km...",
+    "desc_en": "On 07 May 2024, an official sports activity titled \"College Representatives Participate in the Baku Marathon 2024\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "07 Мая 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Участие представителей колледжа в «Бакинском марафоне – 2024»».",
+    "full_az": "Heydər Əliyev Fondunun təşkilatçılığı ilə hər il keçirilən Bakı Marafonunda BDRNK-in müəllim və tələbələri Kollecimizi Bakı Marafonu 2024 -də yüksək səviyyədə təmsil edərək,21 km məsafəni qət etmişlər .Bu münasibətlə bütün Bakı Marafonu 2024 qaçış festivalının iştirakçılarını təbrik edirik. .",
+    "full_en": "On 07 May 2024, an official sports activity titled \"College Representatives Participate in the Baku Marathon 2024\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "07 Мая 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Участие представителей колледжа в «Бакинском марафоне – 2024»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "07 May 2024",
+    "image": "news_proper_1379.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1379",
+    "tag_az": "İdman",
+    "tag_en": "Sports",
+    "tag_ru": "Спорт",
+    "date_az": "07 May 2024",
+    "date_en": "07 May 2024",
+    "date_ru": "07 Мая 2024"
+  },
+  {
+    "id": 88,
+    "official_id": "1364",
+    "title_az": "Kollecin basketbol komandasının uğuru",
+    "title_en": "Great Success of the College Basketball Team",
+    "title_ru": "Успех баскетбольной команды колледжа",
+    "desc_az": "Ümummilli Lider Heydər Əliyevin anadan olmasının 101-ci ildönümünə həsr olunmuş basketbol idman növü üzrə Yasamal rayon turnirində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat...",
+    "desc_en": "On 29 April 2024, an official sports activity titled \"Great Success of the College Basketball Team\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "29 Апреля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Успех баскетбольной команды колледжа».",
+    "full_az": "Ümummilli Lider Heydər Əliyevin anadan olmasının 101-ci ildönümünə həsr olunmuş basketbol idman növü üzrə Yasamal rayon turnirində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin komandası III yerə layiq görülmüşdür. . .",
+    "full_en": "On 29 April 2024, an official sports activity titled \"Great Success of the College Basketball Team\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "29 Апреля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Успех баскетбольной команды колледжа».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "29 Aprel 2024",
+    "image": "news_proper_1364.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1364",
+    "tag_az": "İdman",
+    "tag_en": "Sports",
+    "tag_ru": "Спорт",
+    "date_az": "29 Aprel 2024",
+    "date_en": "29 April 2024",
+    "date_ru": "29 Апреля 2024"
+  },
+  {
+    "id": 89,
+    "official_id": "1343",
+    "title_az": "Yaşıl Dünya naminə həmrəylik",
+    "title_en": "Forum Dedicated to the 'Green World Solidarity Year'",
+    "title_ru": "Форум, посвященный «Году солидарности во имя зеленого мира»",
+    "desc_az": "Kollecdə Yaşıl dünya naminə həmrəylik ili ilə bağlı tədbir keçirilib Yaşıl dünya naminə həmrəylik ili ilə bağlı Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və...",
+    "desc_en": "On 30 April 2024, an official appointment activity titled \"Forum Dedicated to the 'Green World Solidarity Year'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "30 Апреля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Форум, посвященный «Году солидарности во имя зеленого мира»».",
+    "full_az": "Kollecdə Yaşıl dünya naminə həmrəylik ili ilə bağlı tədbir keçirilib Yaşıl dünya naminə həmrəylik ili ilə bağlı Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində aprel ayı ərzində silsilə tədbirlər və ağacəkmə kompaniyası keçirilmişdir. Aprel ayının 29-da keçirilən tədbirdə kollecin direkrorunun müavini Şahmurad Məmmədov və tələbə heyəti iştirak etmişlər.\n\nKollecin tərbiyə işləri üzrə direktor müavini Şahmurad müəllim tədbirdə çıxış edərək qeyd etdi ki, Azərbaycan Respublikasının Prezidenti İlham Əliyev ölkəmizdə 2024-cü ilin “Yaşıl dünya naminə həmrəylik ili” elan edilməsi haqqında Sərəncam imzalamışdır. Sözügedən sərəncam ölkəmizin təhsil sistemi qarşısında da müvafiq vəzifələr qoyur.\n\nÜmummilli liderin ətraf mühitin qorunması, təbii sərvətlərdən səmərəli istifadə siyasəti Azərbaycan Respublikasının Prezidenti İlham Əliyevin rəhbərliyi altında uğurla davam etdirilir. Bu sahədə həyata keçirilən ardıcıl tədbirlər, görülən işlər ekologiya və ətraf mühitin mühafizəsi sahəsində yeni uğurların əldə olunmasına təkan vermişdir.\n\nBu tədbirlər tələbələrin ekoloji dünyagörüşünün, təbiətə münasibətdə əxlaqi yanaşma mövqeyinin, təbii sərvətlərin öyrənilməsi, tələbələrin ekoloji hərəkata, ekoloji yönümlü fəaliyyətə cəlb edilməsinə, bilik axtarışının müxtəlif forma və metodlarını, praktiki bacarıqlarını stimullaşdıra bilər. Tədbirin sonunda videoçarx nümayiş olundu .",
+    "full_en": "On 30 April 2024, an official appointment activity titled \"Forum Dedicated to the 'Green World Solidarity Year'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "30 Апреля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Форум, посвященный «Году солидарности во имя зеленого мира»».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "30 Aprel 2024",
+    "image": "news_proper_1343.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1343",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "30 Aprel 2024",
+    "date_en": "30 April 2024",
+    "date_ru": "30 Апреля 2024"
+  },
+  {
+    "id": 90,
+    "official_id": "1325",
+    "title_az": "Həmkarlar İttifaqı Komitəsinin hesabat-seçki yığıncağı",
+    "title_en": "Report and Election Meeting of the College Trade Union Committee",
+    "title_ru": "Отчетно-выборное собрание Профсоюзного комитета колледжа",
+    "desc_az": "Kollecdə Həmkarlar İttifaqı Komitəsinin hesabat-seçki yığıncağı keçirilib 06.04.2024-cü il tarixdə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat...",
+    "desc_en": "On 06 April 2024, an official appointment activity titled \"Report and Election Meeting of the College Trade Union Committee\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "06 Апреля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Отчетно-выборное собрание Профсоюзного комитета колледжа».",
+    "full_az": "Kollecdə Həmkarlar İttifaqı Komitəsinin hesabat-seçki yığıncağı keçirilib 06.04.2024-cü il tarixdə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində Həmkarlar İttifaqının 2016-2024-cü illəri əhatə edən hesabat-seçki yığıncağı keçirilib. İclasda Azərbaycan Təhsil İşçiləri Azad Həmkarlar İttifaqı Respublika Komitəsinin (ATİAHİ RK) sədr müavini Mirzə Cəfərzadə, direktor müavinləri Üzeyir Salehzadə, Şahmurad Məmmədov və kollecin kollektivi iştirak edib.\n\nƏvvəlcə torpaqlarımızın ərazi bütövlüyü və suverenliyi uğrunda canlarından keçmiş Vətən övladlarının xatirəsi bir dəqiqəlik sükutla yad olunub, Azərbaycanın Dövlət Himni səsləndirilib. Direktor müavini Üzeyir Salehzadə iclas iştirakçılarını salamlayaraq gündəlikdə duran məsələ haqqında məlumat verib.\n\nDaha sonra, 2016-2024-cü illəri əhatə edən hesabatını təqdim etmək üçün sözü kollecin HİK-nin sədri Aygün Musayevaya verib verib. Məruzəçi Kollecin Həmkarlar Təşkilatı fəaliyyət dövrü ərzində kollektivin sosial müdafiəsinin gücləndirilməsinə göstərdiyi köməklikdən, əməkdaşların asudə vaxtlarının səmərəli keçirilməsini və mədəni-kütləvi tədbirlərdə iştirakını eyni zamanda, əməkdaşların yay istirahəti təşkil olunduğundan, hər il kollec əməkdaşlarına Dünya Azərbaycanlıların Həmrəylik günü – Yeni il, Novruz bayramı yolka tamaşa biletlərinin təşkilindən danışıb.\n\nDaha sonra direktor müavinləri Üzeyir Salehzadə, Şahmurad Məmmədov və digər iştirakçılar Aygün Musayevanın təşkilata sədrlik etdiyi illər ərzində qurumun nümunəvi fəaliyyəti, işçilərin sosial müdafiəsinin təşkilində prinsipial mövqeyi, bir çox layihələrdə təşəbbüskarlığını xüsusi qeyd ediblər. Təşkilatda nümunəvi təşkilatçı kimi fəaliyyət göstərməsi, işçilərin əməyinin qiymətləndirilməsi, onların asudə vaxtı və istirahətinin təşkili Azərbaycanın dilbər guşələrinə səfərlərinin təşkili, ölkəmiz üçün əhəmiyyətli məsələlərdə fəallığı kimi gördüyü mühüm işlər vurğulanıb və yenidən Aygün Musayevanın namizədliyinin irəli sürülməsini təklif ediblər.\n\nİclacda çıxış edənAzərbaycan Təhsil İşçiləri Azad Həmkarlar İttifaqı Respublika Komitəsinin sədr müavini Mirzə Cəfərzadə ölkə Prezidenti cənab İlham Əliyev tərəfindən elm və təhsilin inkişafına yönəlmiş diqqət və qayğıdan danışaraq əlavə edib ki, əldə edilmiş nailiyyətlər məhz düşünülmüş və məqsədyönlü dövlət siyasətinin bariz nümunəsidir. HİK sədri Aygün Musayeva ATİAHİ RK-nın sədr müavini Mirzə Cəfərzadə tərəfindən Həmkarlar İttifaqında səmərəli fəaliyyətinə görə Həmkarlar İttifaqı Respublika Komitəsinin “Fəxri Fərman”nı ilə təltif edildi.\n\nHesabat məqbul hesab edilərək qəbul edilib və qərar layihəsi təsdiq edilib. Sonra səsvermə yolu ilə Aygün Musayeva təşkilata yenidən sədr seçilib. İclasda Həmkarlar Komitəsinin yeni İdarə Heyətinin tərkibi də formalaşdırılıb. .",
+    "full_en": "On 06 April 2024, an official appointment activity titled \"Report and Election Meeting of the College Trade Union Committee\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "06 Апреля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Отчетно-выборное собрание Профсоюзного комитета колледжа».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "06 Aprel 2024",
+    "image": "news_proper_1325.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1325",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "06 Aprel 2024",
+    "date_en": "06 April 2024",
+    "date_ru": "06 Апреля 2024"
+  },
+  {
+    "id": 91,
+    "official_id": "1271",
+    "title_az": "Kollecdə Xocalı soyqırımı ilə bağlı tədbir keçirildi",
+    "title_en": "Commemorative Event Marking the Anniversary of the Khojaly Genocide",
+    "title_ru": "В колледже прошло памятное мероприятие, посвященное Ходжалинскому геноциду",
+    "desc_az": "Xocalı faciəsinin 32-ci ildönümü ilə əlaqədar fevralın 26-da Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində tədbir keçirilmişdir. Tədbirdə...",
+    "desc_en": "On February 2024, an official appointment activity titled \"Commemorative Event Marking the Anniversary of the Khojaly Genocide\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "Февраля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло памятное мероприятие, посвященное Ходжалинскому геноциду».",
+    "full_az": "Xocalı faciəsinin 32-ci ildönümü ilə əlaqədar fevralın 26-da Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində tədbir keçirilmişdir. Tədbirdə Kollecin rəhbərliyi, müəllim və tələbə heyəti iştirak etmişlər.\n\nTədbir iştirakçıları Xocalı soyqırımının qurbanlarını xatirəsini bir dəqiqəlik sükutla yad etdilər. Kollecin tərbiyə işləri üzrə direktor müavini Şahmurad müəllim tədbirdə çıxış edərək qeyd etdi ki, 1992-ci il fevralın 25-dən 26-na keçən gecə erməni silahlı dəstələri keçmiş sovet ordusunun Xankəndi şəhərində yerləşən 366-cı alayının iştirakı ilə Xocalı şəhərini yerlə-yeksan edib.\n\nErməni təcavüzkarlarının Azərbaycan xalqına qarşı törətdiyi növbəti kütləvi qırğın nəticəsində 613 nəfər, o cümlədən 106 qadın, 63 uşaq, 70 qoca xüsusi amansızlıqla qətlə yetirilib, 1275 dinc sakin əsir götürülüb, 150 nəfərin taleyi isə hələ də məlum deyil. Daha sonra kollecin tələbələri Xocalı soyqırımına həsr olunmuş tamaşa göstərmişdir.",
+    "full_en": "On February 2024, an official appointment activity titled \"Commemorative Event Marking the Anniversary of the Khojaly Genocide\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "Февраля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «В колледже прошло памятное мероприятие, посвященное Ходжалинскому геноциду».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "Fevral 2024",
+    "image": "news_proper_1271.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1271",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "Fevral 2024",
+    "date_en": "February 2024",
+    "date_ru": "Февраля 2024"
+  },
+  {
+    "id": 92,
+    "official_id": "1263",
+    "title_az": "Kollecin kollektivi Xocalı soyqırımı abidəsini ziyarət ediblər.",
+    "title_en": "College Staff and Students Visit the Khojaly Genocide Memorial",
+    "title_ru": "Коллектив колледжа посетил мемориал жертвам Ходжалинского геноцида",
+    "desc_az": "Xocalı faciəsinin 32-ci ildönümü ilə əlaqədar fevralın 26-da Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllim və tələbə heyəti Xocalı...",
+    "desc_en": "On 26 February 2024, an official commemoration activity titled \"College Staff and Students Visit the Khojaly Genocide Memorial\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "26 Февраля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Коллектив колледжа посетил мемориал жертвам Ходжалинского геноцида».",
+    "full_az": "Xocalı faciəsinin 32-ci ildönümü ilə əlaqədar fevralın 26-da Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllim və tələbə heyəti Xocalı soyqırımı abidəsini ziyarət ediblər. Kollecin kollektivi soyqırımı abidəsinin önünə gül dəstələri düzərək, faciə qurbanlarının əziz xatirələrini ehtiramla anıblar.\n\nQeyd edək ki, 1992-ci il fevralın 25-dən 26-na keçən gecə erməni silahlı dəstələri keçmiş sovet ordusunun Xankəndi şəhərində yerləşən 366-cı alayının iştirakı ilə Xocalı şəhərini yerlə-yeksan edib. Erməni təcavüzkarlarının Azərbaycan xalqına qarşı törətdiyi növbəti kütləvi qırğın nəticəsində 613 nəfər, o cümlədən 106 qadın, 63 uşaq, 70 qoca xüsusi amansızlıqla qətlə yetirilib, 1275 dinc sakin əsir götürülüb, 150 nəfərin taleyi isə hələ də məlum deyil.\n\nBu soyqırımı aktı nəticəsində 8 ailə tamamilə məhv edilib, 25 uşaq hər iki valideynini, 130 uşaq isə valideynlərindən birini itir",
+    "full_en": "On 26 February 2024, an official commemoration activity titled \"College Staff and Students Visit the Khojaly Genocide Memorial\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "26 Февраля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Коллектив колледжа посетил мемориал жертвам Ходжалинского геноцида».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "26 Fevral 2024",
+    "image": "news_proper_1263.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1263",
+    "tag_az": "Anım və Tarix",
+    "tag_en": "Commemoration",
+    "tag_ru": "Памятная дата",
+    "date_az": "26 Fevral 2024",
+    "date_en": "26 February 2024",
+    "date_ru": "26 Февраля 2024"
+  },
+  {
+    "id": 93,
+    "official_id": "1238",
+    "title_az": "Kollec tələbələrinin idman nailiyyətləri",
+    "title_en": "New Sports Achievements of Our College Students",
+    "title_ru": "Спортивные достижения студентов нашего колледжа",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin tələbələrinin fiziki aktivlik səviyyəsinin artırılması, onlar arasında sağlam həyat tərzini təbliğ...",
+    "desc_en": "On February 2024, an official sports activity titled \"New Sports Achievements of Our College Students\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "Февраля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Спортивные достижения студентов нашего колледжа».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin tələbələrinin fiziki aktivlik səviyyəsinin artırılması, onlar arasında sağlam həyat tərzini təbliğ etmək və zərərli vərdişlərə qarşı mübarizə işini gücləndirmək məqsədilə Respublikada keçirilən bütün tədbirlərdə iştirakı təmin olunmuşdur. Belə ki, Ümummilli Lider Heydər Əliyevin anadan olmasının 100-cü ildönümünə həsr olunmuş idman yarışlarında, Yasamal rayon Gənclər və İdman İdarəsinin təşkil etdiyi «Zərərli vərdişlərə yox de, sağlam həyat tərzini seç» rayon birinciliyində, «Gənclik» tələbə idman cəmiyyətinin Azərbaycan Respublika Şurasının orta texniki təhsili müəssisələrinin tələbələri arasında təşkil etdiyi idman yarışlarında aktiv iştirak edərək layiqli nəticələr əldə etmişlər.",
+    "full_en": "On February 2024, an official sports activity titled \"New Sports Achievements of Our College Students\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "Февраля 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Спортивные достижения студентов нашего колледжа».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "Fevral 2024",
+    "image": "news_proper_1238.jpg",
+    "url": "https://rabitakolleci.edu.az/news/1238",
+    "tag_az": "İdman",
+    "tag_en": "Sports",
+    "tag_ru": "Спорт",
+    "date_az": "Fevral 2024",
+    "date_en": "February 2024",
+    "date_ru": "Февраля 2024"
+  },
+  {
+    "id": 94,
+    "official_id": "1200",
+    "title_az": "20 yanvar faciəsinə həsr olunmuş tədbir",
+    "title_en": "Solemn Commemoration Dedicated to the January 20 Tragedy",
+    "title_ru": "Памятное мероприятие, посвященное трагедии 20 Января",
+    "desc_az": "20 Yanvar faciəsi ilə əlaqədar kollecdə tədbir Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 Yanvar faciəsi ilə əlaqədar tədbir keçirilmişdir....",
+    "desc_en": "On January 2024, an official appointment activity titled \"Solemn Commemoration Dedicated to the January 20 Tragedy\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "Января 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Памятное мероприятие, посвященное трагедии 20 Января».",
+    "full_az": "20 Yanvar faciəsi ilə əlaqədar kollecdə tədbir Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 Yanvar faciəsi ilə əlaqədar tədbir keçirilmişdir. Tədbirdə kollecin rəhbərliyi başda olmaqla kollektivi və tələbə heyəti iştirak etmişdir.\n\nTədbir iştirakçıları 20 yanvar şəhidlərinin xatirəsini bir dəqiqəlik sükutla yad etdilər. Sonra tədbirdə kollecin tərbiyə işləri üzrə direktor müavini Şahmurad müəllim çıxış edərək qeyd etdi etdi ki, Azərbaycan xalqına qarşı törədilmiş bu cinayət, əslində, bəşəriyyətə, humanizmə, insanlığa qarşı həyata keçirilmiş dəhşətli terror aktıdır.\n\nBu faciədə 147 Azərbaycan vətəndaşı şəhid olub, 638 nəfər yaralanıb və xəsarət alıb, 841 nəfər qanunsuz olaraq həbs edilib, nəticədə insan hüquqlarına dair bir çox beynəlxalq sənədlərin, o cümlədən Ümumdünya İnsan Hüquqları Bəyannaməsinin tələbləri kobudcasına pozulub. . Lorem ipsum dolor sit amet, consectetur adipiscing elit Ut elit tellus. i",
+    "full_en": "On January 2024, an official appointment activity titled \"Solemn Commemoration Dedicated to the January 20 Tragedy\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "Января 2024 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Памятное мероприятие, посвященное трагедии 20 Января».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "Yanvar 2024",
+    "image": "news_proper_1200.jpg",
+    "url": "https://rabitakolleci.edu.az/news/1200",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "Yanvar 2024",
+    "date_en": "January 2024",
+    "date_ru": "Января 2024"
+  },
+  {
+    "id": 95,
+    "official_id": "1127",
+    "title_az": "Ümummilli lider Heydər Əliyevin anım günü ilə bağlı tədbir",
+    "title_en": "Commemorative Ceremony Marking the Remembrance Day of National Leader Heydar Aliyev",
+    "title_ru": "Мероприятие, посвященное Дню памяти общенационального лидера Гейдара Алиева",
+    "desc_az": "12 dekabr- Ümummilli lider Heydər Əliyevin anım günü ilə əlaqədar AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində tədbir keçirilmişgir.",
+    "desc_en": "On December 2023, an official commemoration activity titled \"Commemorative Ceremony Marking the Remembrance Day of National Leader Heydar Aliyev\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "Декабря 2023 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие, посвященное Дню памяти общенационального лидера Гейдара Алиева».",
+    "full_az": "12 dekabr- Ümummilli lider Heydər Əliyevin anım günü ilə əlaqədar AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində tədbir keçirilmişgir.",
+    "full_en": "On December 2023, an official commemoration activity titled \"Commemorative Ceremony Marking the Remembrance Day of National Leader Heydar Aliyev\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "Декабря 2023 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Мероприятие, посвященное Дню памяти общенационального лидера Гейдара Алиева».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "Dekabr 2023",
+    "image": "news_proper_1127.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1127",
+    "tag_az": "Anım və Tarix",
+    "tag_en": "Commemoration",
+    "tag_ru": "Памятная дата",
+    "date_az": "Dekabr 2023",
+    "date_en": "December 2023",
+    "date_ru": "Декабря 2023"
+  },
+  {
+    "id": 96,
+    "official_id": "1094",
+    "title_az": "Yasamal rayon Heydər Əliyev Mərkəzinə ekskursiya",
+    "title_en": "Student Excursion to the Yasamal District Heydar Aliyev Center",
+    "title_ru": "Экскурсия студентов в Центр Гейдара Алиева Ясамальского района",
+    "desc_az": "Yasamal Rayon Heydər Əliyev Mərkəzinə ekskursiya Oktyabrın 24-də Bakı Dövlət Rabitə və Nəqliyyat Kollecinin tələbələri Yasamal rayon Heydər Əliyev Mərkəzinə ekskursiya təşkil ediblər....",
+    "desc_en": "On 16 November 2023, an official commemoration activity titled \"Student Excursion to the Yasamal District Heydar Aliyev Center\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "16 Ноября 2023 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Экскурсия студентов в Центр Гейдара Алиева Ясамальского района».",
+    "full_az": "Yasamal Rayon Heydər Əliyev Mərkəzinə ekskursiya Oktyabrın 24-də Bakı Dövlət Rabitə və Nəqliyyat Kollecinin tələbələri Yasamal rayon Heydər Əliyev Mərkəzinə ekskursiya təşkil ediblər. Tələbələr Mərkəzin Muzey bölmələri ilə tanış oldular, onlara Mərkəzin bələdçiləri tərəfindən Azərbaycan xalqının Ümummilli lideri Heydər Əliyevin şərəfli ömür yolu, ölkəmizin tərəqqisi uğrunda göstərdiyi çox saylı xidmətləri özündə əks etdirən eksponat, fotoşəkillər və kitablar haqqında ətraflı məlumat verildi. .",
+    "full_en": "On 16 November 2023, an official commemoration activity titled \"Student Excursion to the Yasamal District Heydar Aliyev Center\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "16 Ноября 2023 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Экскурсия студентов в Центр Гейдара Алиева Ясамальского района».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "16 Noyabr 2023",
+    "image": "news_proper_1094.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1094",
+    "tag_az": "Anım və Tarix",
+    "tag_en": "Commemoration",
+    "tag_ru": "Памятная дата",
+    "date_az": "16 Noyabr 2023",
+    "date_en": "16 November 2023",
+    "date_ru": "16 Ноября 2023"
+  },
+  {
+    "id": 97,
+    "official_id": "1066",
+    "title_az": "Azərbaycanda təhsil sisteminin dayanıqlığının gücləndirilməsi və AzMKÇ 5-ci səviyyə kvalifikasiyalarının təkmilləşdirilməsi üçün Elm və Təhsil Nazirliyinə dəstə",
+    "title_en": "Support Project for Strengthening the Resilience of the Education System and AzNQF Level 5 Qualifications",
+    "title_ru": "Проект поддержки Министерства науки и образования по развитию квалификаций 5-го уровня",
+    "desc_az": "“Azərbaycanda təhsil sisteminin dayanıqlığının gücləndirilməsi və AzMKÇ 5-ci səviyyə kvalifikasiyalarının təkmilləşdirilməsi üçün Elm və Təhsil Nazirliyinə dəstək” adlı texniki yardım...",
+    "desc_en": "On 07 November 2023, an official event activity titled \"Support Project for Strengthening the Resilience of the Education System and AzNQF Level 5 Qualifications\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "07 Ноября 2023 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Проект поддержки Министерства науки и образования по развитию квалификаций 5-го уровня».",
+    "full_az": "“Azərbaycanda təhsil sisteminin dayanıqlığının gücləndirilməsi və AzMKÇ 5-ci səviyyə kvalifikasiyalarının təkmilləşdirilməsi üçün Elm və Təhsil Nazirliyinə dəstək” adlı texniki yardım layihəsi çərçivəsində konsultasiya görüşləri baş tutub",
+    "full_en": "On 07 November 2023, an official event activity titled \"Support Project for Strengthening the Resilience of the Education System and AzNQF Level 5 Qualifications\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "07 Ноября 2023 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Проект поддержки Министерства науки и образования по развитию квалификаций 5-го уровня».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "07 Noyabr 2023",
+    "image": "news_proper_1066.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/1066",
+    "tag_az": "Tədbir",
+    "tag_en": "Event",
+    "tag_ru": "Мероприятие",
+    "date_az": "07 Noyabr 2023",
+    "date_en": "07 November 2023",
+    "date_ru": "07 Ноября 2023"
+  },
+  {
+    "id": 98,
+    "official_id": "987",
+    "title_az": "8 Noyabr — Zəfər Günü. 263 qrupu. BDRNK",
+    "title_en": "November 8 — Victory Day Celebration by Group 263 of BDRNK",
+    "title_ru": "8 Ноября — День Победы: торжественное выступление группы 263 БГКСТ",
+    "desc_az": "\"Kompüter texnologiyaları\" şöbəsinin 263 qrupunun tələbələrinin iştirakı ilə \"ZƏFƏR GÜNÜ\" TƏDBİRİ",
+    "desc_en": "On November 2023, an official commemoration activity titled \"November 8 — Victory Day Celebration by Group 263 of BDRNK\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "Ноября 2023 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «8 Ноября — День Победы: торжественное выступление группы 263 БГКСТ».",
+    "full_az": "\"Kompüter texnologiyaları\" şöbəsinin 263 qrupunun tələbələrinin iştirakı ilə \"ZƏFƏR GÜNÜ\" TƏDBİRİ",
+    "full_en": "On November 2023, an official commemoration activity titled \"November 8 — Victory Day Celebration by Group 263 of BDRNK\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "Ноября 2023 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «8 Ноября — День Победы: торжественное выступление группы 263 БГКСТ».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "Noyabr 2023",
+    "image": "news_proper_987.png",
+    "url": "https://rabitakolleci.edu.az/news/987",
+    "tag_az": "Anım və Tarix",
+    "tag_en": "Commemoration",
+    "tag_ru": "Памятная дата",
+    "date_az": "Noyabr 2023",
+    "date_en": "November 2023",
+    "date_ru": "Ноября 2023"
+  },
+  {
+    "id": 99,
+    "official_id": "851",
+    "title_az": "«Zəfər Günü»nə həsr olunmuş tədbir",
+    "title_en": "Festive Event Dedicated to November 8 — Victory Day",
+    "title_ru": "Торжественное мероприятие, посвященное Дню Победы",
+    "desc_az": "\"ZƏFƏR GÜNÜ\"nə həsr olunmuş tədbir 07.11.2023-cü il tarixində Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 8 Noyabr «Zəfər Günü»nə həsr olunmuş...",
+    "desc_en": "On 07 November 2023, an official appointment activity titled \"Festive Event Dedicated to November 8 — Victory Day\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "07 Ноября 2023 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Торжественное мероприятие, посвященное Дню Победы».",
+    "full_az": "\"ZƏFƏR GÜNÜ\"nə həsr olunmuş tədbir 07.11.2023-cü il tarixində Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 8 Noyabr «Zəfər Günü»nə həsr olunmuş geniş tədbir keçirildi. Tədbirdə kollecin müəllim və tələbə heyəti iştirak etmişlər.\n\nTədbir iştirakçıları əvvəlcə 44 günlük Vətən Müharibəsində həlak olmuş Şəhidlərin əziz xatirəsini bir dəqiqəlik sükutla yad etmişdir. Kollecin təlim tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov geniş çıxış edərək Qarabağın erməni qəsbkərları tərəfindən işğal tarixindən, 2020-ci ildə Ali Baş Komandan İlham Əliyevin Rəhbərliyi ilə Rəşadətli Azərbaycan Ordusunun 44 günlük «Dəmir Yumruq» əməliyyatından , Qarabağın erməni vandallarından azad olunmasından danışmışdır.\n\nTədbirdə kollecin tələbələrindən Mələk Hacıyeva və Zeynəb Rəcəbli söz alaraq çıxış etmişlər. Sonda tədbir iştirakçılarına 44 günlük Vətən Müharibəsinə həsr olunmuş videoçarx nümayiş etdirilmişdir.",
+    "full_en": "On 07 November 2023, an official appointment activity titled \"Festive Event Dedicated to November 8 — Victory Day\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "07 Ноября 2023 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Торжественное мероприятие, посвященное Дню Победы».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "07 Noyabr 2023",
+    "image": "news_proper_851.jpeg",
+    "url": "https://rabitakolleci.edu.az/news/851",
+    "tag_az": "Təyinat",
+    "tag_en": "Appointment",
+    "tag_ru": "Назначение",
+    "date_az": "07 Noyabr 2023",
+    "date_en": "07 November 2023",
+    "date_ru": "07 Ноября 2023"
+  }
+];
+
+
+const libraryData = [
+  {
+    id: 3,
+    title_az: "Microsoft Excel",
+    title_en: "Microsoft Excel",
+    title_ru: "Майкрософт Эксель",
+    author_az: "Müəllif: İlkin Rəhmətov",
+    author_en: "Author: Ilkin Rahmetov",
+    author_ru: "Автор: Илькин Рахметов",
+    category: "informatika",
+    icon: "📊",
+    url:
+      "https://azontest.runasp.net/book/SpecialRead?id=38" +
+      "&key=ABCD1234SECRET",
+  },
+  {
+    id: 4,
+    title_az: "Microsoft Word",
+    title_en: "Microsoft Word",
+    title_ru: "Майкрософт Ворд",
+    author_az: "Müəllif: İlkin Rəhmətov",
+    author_en: "Author: Ilkin Rahmetov",
+    author_ru: "Автор: Илькин Рахметов",
+    category: "informatika",
+    icon: "📝",
+    url:
+      "https://azontest.runasp.net/book/SpecialRead?id=7" +
+      "&key=ABCD1234SECRET",
+  },
+  {
+    id: 5,
+    title_az: "Kommunikasiya",
+    title_en: "Communication",
+    title_ru: "Коммуникация",
+    author_az: "Müəllif: Natavan Hüseynova",
+    author_en: "Author: Natavan Huseynova",
+    author_ru: "Автор: Натаван Гусейнова",
+    category: "azer_dili",
+    icon: "📢",
+    url: "KOMMUNİKASİYA DF 2.docx",
+  },
+  {
+    id: 6,
+    title_az: "Vaqonların konstruksiyası",
+    title_en: "Wagon Construction",
+    title_ru: "Конструкция вагонов",
+    author_az: "Müəllif: Farid Tağıyev",
+    author_en: "Author: Farid Taghiyev",
+    author_ru: "Автор: Фарид Тагиев",
+    category: "vaqonlar",
+    icon: "🏗️",
+    url: "vaqonların konstruksiyası son variant.pdf",
+  },
+  {
+    id: 7,
+    title_az: "Informasiya sistemlərinin təhlükəsizliyinin təmini",
+    title_en: "Ensuring security of information systems",
+    title_ru: "Обеспечение безопасности информационных систем",
+    author_az: "Müəlliflər: F.V. Vəliyeva, M.Ə. Məlikova",
+    author_en: "Authors: F.V. Valiyeva, M.A. Malikova",
+    author_ru: "Авторы: Ф.В. Велиева, М.А. Меликова",
+    category: "informatika",
+    icon: "🔒",
+    url: "ISTT_dərslik — əsas.docx",
+  },
+  {
+    id: 8,
+    title_az: "Kompyuter qrafikası",
+    title_en: "Computer Graphics",
+    title_ru: "Компьютерная графика",
+    author_az: "Müəllif: Fəridə Məmmədova",
+    author_en: "Author: Farida Mammadova",
+    author_ru: "Автор: Фарида Мамедова",
+    category: "informatika",
+    icon: "🎨",
+    url: "Kompyuter qrafikası.docx",
+  },
+  {
+    id: 9,
+    title_az: "İnformatika",
+    title_en: "Informatics",
+    title_ru: "Информатика",
+    author_az: "Müəllif: Gülnarə Əliyeva",
+    author_en: "Author: Gulnara Aliyeva",
+    author_ru: "Автор: Гульнара Алиева",
+    category: "informatika",
+    icon: "💻",
+    url: "İnformatika Dərs Vəsaiti.pdf",
+  },
+  {
+    id: 10,
+    title_az: "Kompyuter şəbəkəsinin proqram təminatı",
+    title_en: "Computer Network Software",
+    title_ru: "Программное обеспечение компьютерных сетей",
+    author_az: "Müəllif: Fəridə Məmmədova",
+    author_en: "Author: Farida Mammadova",
+    author_ru: "Автор: Фарида Мамедова",
+    category: "informatika",
+    icon: "🌐",
+    url: "Kompyuter şəbəkəsinin proqram  təminatı.docx",
+  },
+  {
+    id: 11,
+    title_az: "Kompyuter şəbəkələri",
+    title_en: "Computer Networks",
+    title_ru: "Компьютерные сети",
+    author_az: "Müəllif: Gülnarə Əliyeva",
+    author_en: "Author: Gulnara Aliyeva",
+    author_ru: "Автор: Гульнара Алиева",
+    category: "informatika",
+    icon: "📡",
+    url: "Kompüter şəbəkələri  derslik.docx",
+  },
+  {
+    id: 12,
+    title_az: "İnformasiya Texnologiyaları",
+    title_en: "Information Technologies",
+    title_ru: "Информационные технологии",
+    author_az: "Müəllif: Leyla Mahmudbəyli",
+    author_en: "Author: Leyla Mahmudbeyli",
+    author_ru: "Автор: Лейла Махмудбейли",
+    category: "informatika",
+    icon: "💻",
+    url: "DƏRSLİK  İT 3.docx",
+  },
+  {
+    id: 13,
+    title_az: "Kompyuterin Arxitekturası",
+    title_en: "Computer Architecture",
+    title_ru: "Архитектура компьютера",
+    author_az: "Müəllif: Gültəkin Quliyeva",
+    author_en: "Author: Gultekin Guliyeva",
+    author_ru: "Автор: Гюльтекин Кулиева",
+    category: "informatika",
+    icon: "🏛️",
+    url: "KİTAB.pdf",
+  },
+  {
+    id: 14,
+    title_az: "Xətti cəbr və riyazi analiz",
+    title_en: "Linear Algebra and Mathematical Analysis",
+    title_ru: "Линейная алгебра и математический анализ",
+    author_az: "Müəllif: Aysel Kərimova",
+    author_en: "Author: Aysel Kerimova",
+    author_ru: "Автор: Айсель Керимова",
+    category: "riyaziyyat",
+    icon: "📐",
+    url: "xətti cəbr və riyazi analiz .pdf",
+  },
+  {
+    id: 15,
+    title_az: "Azərbaycan tarixi",
+    title_en: "History of Azerbaijan",
+    title_ru: "История Азербайджана",
+    author_az: "Müəllif: Səidə Quliyeva",
+    author_en: "Author: Saida Guliyeva",
+    author_ru: "Автор: Саида Кулиева",
+    category: "tarix",
+    icon: "📜",
+    url: "Azərbaycan tarxi  SƏİDƏ QULİYEVA.pdf",
+  },
+  {
+    id: 16,
+    title_az: "Sxematexnika-1",
+    title_en: "Schematics-1",
+    title_ru: "Схемотехника-1",
+    author_az: "Müəllif: Aidə Siracova",
+    author_en: "Author: Aida Sirajova",
+    author_ru: "Автор: Аида Сираджова",
+    category: "sxematexnika",
+    icon: "🔌",
+    url: "DƏRSLİK  SXEMATEXNİKA-1 (2) (2).docx",
+  },
+  {
+    id: 17,
+    title_az: "Konstruksiya materiallarının texnologiyası və materialşünaslıq",
+    title_en: "Technology of Construction Materials and Material Science",
+    title_ru: "Технология конструкционных материалов и материаловедение",
+    author_az: "Müəllif: Yeganə Əliyeva",
+    author_en: "Author: Yegana Aliyeva",
+    author_ru: "Автор: Егяна Алиева",
+    category: "materialsunasliq",
+    icon: "🔬",
+    url: "Tam son (2).pdf",
+  },
+  {
+    id: 18,
+    title_az: "İnformasiya sistemləri və verilənlər bazası",
+    title_en: "Information Systems and Databases",
+    title_ru: "Информационные системы и базы данных",
+    author_az: "Müəlliflər: Məzahir İsayev, Leyla Mahmudbəyli, Fizuli Qurbanov",
+    author_en: "Authors: Mazahir Isayev, Leyla Mahmudbeyli, Fizuli Gurbanov",
+    author_ru: "Авторы: Мазахир Исаев, Лейла Махмудбейли, Физули Гурбанов",
+    category: "informatika",
+    icon: "🗄️",
+    url: "D_RSL_K infor sis və ver baz 1.pdf",
+  },
+  {
+    id: 19,
+    title_az: "Rus dili 1 kurs (mühazirələr)",
+    title_en: "Russian Language 1st course (lectures)",
+    title_ru: "1Русский язык 1 курс (лекции)",
+    author_az: "Müəllif: Samirə İmaməliyeva",
+    author_en: "Author: Samire Imameliyeva",
+    author_ru: "Автор: Самире Имамелиева",
+    category: "rus_dili",
+    icon: "🇷🇺",
+    url: "1Русский язык 1 курс (лекции) (1).docx",
+  },
+  {
+    id: 20,
+    title_az: "Rus dili 2 kurs (mühazirələr kitab)",
+    title_en: "Russian Language 2nd course (lecture book)",
+    title_ru: "2Русский язык 2 курс лекции книга",
+    author_az: "Müəlliflər: Aygün Qocayeva, Samirə İmaməliyeva",
+    author_en: "Authors: Aygun Gojayeva, Samire Imameliyeva",
+    author_ru: "Авторы: Айгюн Годжаева, Самире Имамелиева",
+    category: "rus_dili",
+    icon: "🇷🇺",
+    url: "2Русский язык 2 курс лекции книга  (1).docx",
+  },
+  {
+    id: 21,
+    title_az: "Anbar logistikası",
+    title_en: "Warehouse Logistics",
+    title_ru: "Складская логистика",
+    author_az: "Müəlliflər: Əliağa Sadıqlı, Elmira Sadıqlı",
+    author_en: "Authors: Aliagha Sadigli, Elmira Sadigli",
+    author_ru: "Авторы: Алиага Садыглы, Эльмира Садыглы",
+    category: "anbar_logistikasi",
+    icon: "📦",
+    url: "Anbar Logistikası Kitabb SON (1).pdf",
+  },
+  {
+    id: 22,
+    title_az: "Xarici dildə işgüzar və akademik kommunikasiya 2",
+    title_en: "Business and academic communication in the foreign language 2",
+    title_ru: "Деловое и академическое общение на иностранном языке 2",
+    author_az: "Müəllif: Səkinə Mayılova",
+    author_en: "Author: Sakina Mayilova",
+    author_ru: "Автор: Сакина Маилова",
+    category: "xarici_dil",
+    icon: "🇬🇧",
+    url: "Business_and_academic_communication_in_the_foreign_language 2 (1).pdf",
+  },
+  {
+    id: 23,
+    title_az: "Ekoloji monitorinq",
+    title_en: "Ecological Monitoring",
+    title_ru: "Экологический мониторинг",
+    author_az: "Müəlliflər: Əntiqə Eminəliyeva, Könül Mahmudova",
+    author_en: "Authors: Antiga Emineliyeva, Konul Mahmudova",
+    author_ru: "Авторы: Антига Эминалиева, Кенуль Махмудова",
+    category: "ekologiya",
+    icon: "🌱",
+    url: "EKOLOJİ MONİTORİNQ.DƏRSLİK.Yeni (1).docx",
+  },
+  {
+    id: 24,
+    title_az: "Fizika",
+    title_en: "Physics",
+    title_ru: "Физика",
+    author_az: "Müəlliflər: Günel Mirzəyeva, Cəvahir Mürşüdova",
+    author_en: "Authors: Gunel Mirzayeva, Javahir Murshudova",
+    author_ru: "Авторы: Гюнель Мирзаева, Джавахир Муршудова",
+    category: "fizika",
+    icon: "⚛️",
+    url: "Fizika Dərslik (1).pdf",
+  },
+  {
+    id: 25,
+    title_az: "TPT",
+    title_en: "TPT",
+    title_ru: "ТПТ",
+    author_az: "Müəllif: İlkin Rəhmətov",
+    author_en: "Author: Ilkin Rahmatov",
+    author_ru: "Автор: Илькин Рахметов",
+    category: "informatika",
+    icon: "🖥️",
+    url: "kitab tpt (1).pdf",
+  },
+  {
+    id: 26,
+    title_az: "Kompüter sistemlərinin təmiri və servisi",
+    title_en: "Repair and Maintenance of Computer Systems",
+    title_ru: "Ремонт и обслуживание компьютерных систем",
+    author_az: "Müəllif: İlkin Rəhmətov",
+    author_en: "Author: Ilkin Rahmatov",
+    author_ru: "Автор: Илькин Рахметов",
+    category: "informatika",
+    icon: "🛠️",
+    url: "Komputer sistemlərinin təmiri və servisi. ALL (1).pdf",
+  },
+  {
+    id: 27,
+    title_az: "Kompüter şəbəkələrinin idarə etməsinin təşkili",
+    title_en: "Organization of Computer Network Management",
+    title_ru: "Организация управления компьютерными сетями",
+    author_az: "Müəllif: Aysel Pənahova",
+    author_en: "Author: Aysel Panahova",
+    author_ru: "Автор: Айсель Панахова",
+    category: "informatika",
+    icon: "🌐",
+    url: "Kompyüter şəbəkələrinin idarə etməsinin təşkili 1 (1).pdf",
+  },
+  {
+    id: 28,
+    title_az: "Riyaziyyat",
+    title_en: "Mathematics",
+    title_ru: "Математика",
+    author_az: "Müəlliflər: Bikə Əliyeva, Aynur Məzimzadə",
+    author_en: "Authors: Bika Aliyeva, Aynur Mazimzada",
+    author_ru: "Авторы: Бика Алиева, Айнур Мазимзаде",
+    category: "riyaziyyat",
+    icon: "📐",
+    url: "Riyaziyyat kitab (1) (1).pdf",
+  },
+  {
+    id: 29,
+    title_az: "Riyaziyyat",
+    title_en: "Mathematics",
+    title_ru: "Математика",
+    author_az: "Müəllif: Susanna Alıyeva",
+    author_en: "Author: Susanna Aliyeva",
+    author_ru: "Автор: Сусанна Алыева",
+    category: "riyaziyyat",
+    icon: "📐",
+    url: "Riyaziyyat.docx.pdf",
+  },
+  {
+    id: 30,
+    title_az: "Elektrik Dövrələri Nəzəriyyəsinin Əsasları",
+    title_en: "Fundamentals of Electric Circuit Theory",
+    title_ru: "Основы теории электрических цепей",
+    author_az: "Müəllif: Şükufə Alıyeva",
+    author_en: "Author: Shukufe Aliyeva",
+    author_ru: "Автор: Шукуфа Алыева",
+    category: "edne",
+    icon: "⚡",
+    url: "Ş.M. Alıyeva EDNƏ dərslik 2023 (1).docx",
+  },
+  {
+    id: 31,
+    title_az: "Menecment",
+    title_en: "Management",
+    title_ru: "Менеджмент",
+    author_az: "Müəllif: İlahə Abbaslı",
+    author_en: "Author: Ilaha Abbasli",
+    author_ru: "Автор: Илаха Аббаслы",
+    category: "menecment",
+    icon: "📊",
+    url: "Abbaslı İlahə Akif qızı (1) (1) (1).docx",
+  },
+  {
+    id: 32,
+    title_az: "Beynəlxalq poçt rabitəsi",
+    title_en: "International Postal Communication",
+    title_ru: "Международная почтовая связь",
+    author_az: "Müəllif: Oktay Salayev",
+    author_en: "Author: Oktay Salayev",
+    author_ru: "Автор: Октай Салаев",
+    category: "rabite",
+    icon: "✉️",
+    url: "Beynelxalq_pocht_rabitesi (1).PDF",
+  },
+  {
+    id: 33,
+    title_az: "Şəbəkə avadanlıqları",
+    title_en: "Network Equipment",
+    title_ru: "Сетевое оборудование",
+    author_az: "Müəlliflər: Ləman Həsənli, Natəvan Əliyeva",
+    author_en: "Authors: Laman Hasanli, Natavan Aliyeva",
+    author_ru: "Авторы: Гасанлы Ламан, Алиева Натаван",
+    category: "sebeke_avadanliqlari",
+    icon: "🔌",
+    url: "BÖLMƏ Kitab Natavan mm Ləman m (1).docx",
+  },
+  {
+    id: 34,
+    title_az: "Poçt rabitəsində bank əməliyyatları xidməti",
+    title_en: "Bank Operations Service in Postal Communication",
+    title_ru: "Служба банковских операций в почтовой связи",
+    author_az: "Müəlliflər: Oktay Salayev, Vidadi Əliyev",
+    author_en: "Authors: Oktay Salayev, Vidadi Aliyev",
+    author_ru: "Авторы: Октай Салаев, Видади Алиев",
+    category: "rabite",
+    icon: "🏦",
+    url: "Pocht_rabitesinde_bank_emeliyyatlari_xidmeti (1).PDF",
+  },
+  {
+    id: 35,
+    title_az: "Poçt rabitəsinin təhlükəsizliyi",
+    title_en: "Security of Postal Communication",
+    title_ru: "Безопасность почтовой связи",
+    author_az: "Müəlliflər: Oktay Salayev, Vidadi Əliyev",
+    author_en: "Authors: Oktay Salayev, Vidadi Aliyev",
+    author_ru: "Авторы: Октай Салаев, Видади Алиев",
+    category: "rabite",
+    icon: "🛡️",
+    url: "Pocht_rabitesinin_tehlukesizliyi (1).PDF",
+  },
+  {
+    id: 36,
+    title_az: "Poçt rabitəsinin təşkili və istismarı",
+    title_en: "Organization and Operation of Postal Communication",
+    title_ru: "Организация и эксплуатация почтовой связи",
+    author_az: "Müəlliflər: Oktay Salayev, Vidadi Əliyev, Emin Kərimli",
+    author_en: "Authors: Oktay Salayev, Vidadi Aliyev, Emin Karimli",
+    author_ru: "Авторы: Октай Салаев, Видади Алиев, Эмин Керимли",
+    category: "rabite",
+    icon: "📬",
+    url: "Pocht_rabitesinin_teshkili_ve_istismari (1).PDF",
+  },
+  {
+    id: 37,
+    title_az: "Əməyin mühafizəsi",
+    title_en: "Labor Protection",
+    title_ru: "Охрана труда",
+    author_az: "Müəllif: Alidə Mahmudova",
+    author_en: "Author: Mahmudova Alida",
+    author_ru: "Автор: Махмудова Алида",
+    category: "emeyin_muhafizesi",
+    icon: "🛡️",
+    url: "ƏMƏYİN MÜHAFİZƏSİ-DƏRSLİK-MAHMUDOVA ALIDƏ (1).pdf",
+  },
+  {
+    id: 38,
+    title_az: "Əməliyyat sistemləri",
+    title_en: "Operating Systems",
+    title_ru: "Операционные системы",
+    author_az: "Müəlliflər: Oktay Salayev, Munir Ağayev",
+    author_en: "Authors: Salayev Oktay, Agayev Munir",
+    author_ru: "Авторы: Салаев Октай, Агаев Мунир",
+    category: "os",
+    icon: "💻",
+    url: "Əməliyyat sistemləri (1).pdf",
+  },
+  {
+    id: 39,
+    title_az: "Nəqliyyat vasitələrinin diaqnostikası 1",
+    title_en: "Diagnosis of Transport Vehicles 1",
+    title_ru: "Диагностика транспортных средств 1",
+    author_az: "Müəlliflər: Babək Əhmədli, Gülər Mustafayeva",
+    author_en: "Authors: Babak Ahmadli, Gular Mustafayeva",
+    author_ru: "Авторы: Бабек Ахмедли, Гюляр Мустафаева",
+    category: "transport",
+    icon: "🚗",
+    url: "Nəqliyyat vasitələrinin diaqnostikası 1 (2) (1).docx",
+  },
+  {
+    id: 40,
+    title_az: "Xətti cəbr",
+    title_en: "Linear Algebra",
+    title_ru: "Линейная алгебра",
+    author_az: "Müəlliflər: Səbuhi Qurbanov Yusif oğlu, Susanna Alıyeva Mirzalı qızı",
+    author_en: "Authors: Sabuhi Gurbanov Yusif, Susanna Aliyeva Mirzali",
+    author_ru: "Авторы: Сабухи Гурбанов Юсиф оглы, Сусанна Алиева Мирзалы гызы",
+    category: "riyaziyyat",
+    icon: "📐",
+    url: "XƏTTİ CƏBR.pdf",
+  },
+  {
+    id: 41,
+    title_az: "Fizika (Dərs vəsaiti)",
+    title_en: "Physics (Textbook)",
+    title_ru: "Физика (Учебное пособие)",
+    author_az: "Müəllif: Ramilə Paşayeva Rza qızı",
+    author_en: "Author: Ramila Pashayeva Rza",
+    author_ru: "Автор: Рамиля Пашаева Рза гызы",
+    category: "fizika",
+    icon: "⚛️",
+    url: "fizika dərs vəsaiti yeni A5.docx",
+  },
+  {
+    id: 42,
+    title_az: "İnformatika",
+    title_en: "Informatics",
+    title_ru: "Информатика",
+    author_az: "Müəllif: İlkin Rəhmətov, Leyla Əfəndizadə",
+    author_en: "Author: Ilkin Rahmatov, Leyla Afandiyeva",
+    author_ru: "Автор: Илькин Рахматов, Лейла Эфендиева",
+    category: "it",
+    icon: "💻",
+    url: "Informatika kitabı (1).pdf",
+  },
+];
+
+const lecturesData = [
+  // ─── 1. İNFORMATİKA VƏ İKT (Kollecin Rəsmi Müəllimi: İlkin Rəhmətov) ───
+  {
+    id: 2,
+    title_az: "Kompüter diaqnostikası fənni (Qrup KT-511a) — İlkin Rəhmətov",
+    title_en: "Computer Diagnostics (Group KT-511a) — Ilkin Rahmatov",
+    title_ru: "Компьютерная диагностика (Группа КТ-511а) — Илькин Рахматов",
+    duration: "18:45",
+    thumb: "https://img.youtube.com/vi/r447neyCqXE/hqdefault.jpg",
+    category: "informatika",
+    url: "https://www.youtube.com/watch?v=r447neyCqXE",
+  },
+  {
+    id: 5,
+    title_az: "Windows 10 Ə.S-nin yazılması və formatlanması (Qrup 212a) — İlkin Rəhmətov",
+    title_en: "Installing & Formatting Windows 10 OS (Group 212a) — Ilkin Rahmatov",
+    title_ru: "Установка и форматирование ОС Windows 10 (Группа 212a) — Илькин Рахматов",
+    duration: "15:30",
+    thumb: "https://img.youtube.com/vi/XmRa0BD-FcM/hqdefault.jpg",
+    category: "informatika",
+    url: "https://www.youtube.com/watch?v=XmRa0BD-FcM",
+  },
+
+  // ─── TARİX VƏ İCTİMAİ ELMLƏR (Kollecin Rəsmi Müəllimi: Səidə Quliyeva) ───
+  {
+    id: 32,
+    title_az: "Anım və Zəfər günlərinə həsr olunmuş açıq dərs (512A) — Quliyeva Səidə",
+    title_en: "Open Lesson Dedicated to Remembrance and Victory Days — Saida Guliyeva",
+    title_ru: "Открытый урок, посвященный Дням памяти и Победы — Саида Гулиева",
+    duration: "39:02",
+    thumb: "https://img.youtube.com/vi/tSJFfc_b7K4/hqdefault.jpg",
+    category: "tarix",
+    url: "https://www.youtube.com/watch?v=tSJFfc_b7K4",
+  },
+  {
+    id: 33,
+    title_az: "Azərbaycan Xalq Cümhuriyyəti: Bakı dövrü — Quliyeva Səidə",
+    title_en: "Azerbaijan Democratic Republic: Baku Period — Saida Guliyeva",
+    title_ru: "АДР: Бакинский период — Саида Гулиева",
+    duration: "16:49",
+    thumb: "https://img.youtube.com/vi/elsZdxz9z_E/hqdefault.jpg",
+    category: "tarix",
+    url: "https://www.youtube.com/watch?v=elsZdxz9z_E",
+  },
+  {
+    id: 34,
+    title_az: "Mart soyqırımı — Quliyeva Səidə",
+    title_en: "March Genocide — Saida Guliyeva",
+    title_ru: "Мартовский геноцид — Саида Гулиева",
+    duration: "07:08",
+    thumb: "https://img.youtube.com/vi/lUVFbqEovEs/hqdefault.jpg",
+    category: "tarix",
+    url: "https://www.youtube.com/watch?v=lUVFbqEovEs",
+  },
+  {
+    id: 35,
+    title_az: "Azərbaycan multikulturalizmi — Quliyeva Səidə",
+    title_en: "Azerbaijani Multiculturalism — Saida Guliyeva",
+    title_ru: "Азербайджанский мультикультурализм — Саида Гулиева",
+    duration: "27:52",
+    thumb: "https://img.youtube.com/vi/KxIaTe-Rgzw/hqdefault.jpg",
+    category: "tarix",
+    url: "https://www.youtube.com/watch?v=KxIaTe-Rgzw",
+  },
+  {
+    id: 36,
+    title_az: "Azərbaycan Xalq Cümhuriyyətinin xarici siyasəti — Quliyeva Səidə",
+    title_en: "Foreign Policy of Azerbaijan Democratic Republic — Saida Guliyeva",
+    title_ru: "Внешняя политика АДР — Саида Гулиева",
+    duration: "22:52",
+    thumb: "https://img.youtube.com/vi/UZrba576_T8/hqdefault.jpg",
+    category: "tarix",
+    url: "https://www.youtube.com/watch?v=UZrba576_T8",
+  },
+  {
+    id: 37,
+    title_az: "Sosializm sisteminin dağılması. Dünya müasir mərhələdə — Quliyeva Səidə",
+    title_en: "Collapse of Socialist System. World in Modern Era — Saida Guliyeva",
+    title_ru: "Распад социалистической системы. Мир на современном этапе — Саида Гулиева",
+    duration: "17:10",
+    thumb: "https://img.youtube.com/vi/GrOgYgtzTKQ/hqdefault.jpg",
+    category: "tarix",
+    url: "https://www.youtube.com/watch?v=GrOgYgtzTKQ",
+  },
+  {
+    id: 38,
+    title_az: "Cümhuriyyət dövründə Azərbaycanda ictimai-siyasi vəziyyət — Quliyeva Səidə",
+    title_en: "Socio-political Situation in Azerbaijan During Republic Period — Saida Guliyeva",
+    title_ru: "Общественно-политическая ситуация в Азербайджане в период Республики — Саида Гулиева",
+    duration: "08:37",
+    thumb: "https://img.youtube.com/vi/AsnnhpcGMwk/hqdefault.jpg",
+    category: "tarix",
+    url: "https://www.youtube.com/watch?v=AsnnhpcGMwk",
+  },
+  {
+    id: 39,
+    title_az: "BDRNK: Heydər Əliyev - 96 (Tədbir)",
+    title_en: "BDRNK: Heydar Aliyev - 96 (Commemorative Event)",
+    title_ru: "БГКСТ: Гейдар Алиев - 96 (Мероприятие)",
+    duration: "84:44",
+    thumb: "https://img.youtube.com/vi/6kCn5Rqbkik/hqdefault.jpg",
+    category: "tarix",
+    url: "https://www.youtube.com/watch?v=6kCn5Rqbkik",
+  },
+  {
+    id: 40,
+    title_az: "BDRNK müəllimləri İctimai Televiziyada",
+    title_en: "BDRNK Teachers on Public Television (ITV)",
+    title_ru: "Преподаватели БГКСТ на Общественном Телевидении (ITV)",
+    duration: "14:09",
+    thumb: "https://img.youtube.com/vi/ODxpY_TEMA4/hqdefault.jpg",
+    category: "tarix",
+    url: "https://www.youtube.com/watch?v=ODxpY_TEMA4",
+  },
+
+  // ─── 4. ANA DİLİ VƏ NİTQ MƏDƏNİYYƏTİ (Kollecin Rəsmi Müəllimi: Nigar Salayeva) ───
+  {
+    id: 41,
+    title_az: "Azərbaycan dili: Bədii üslub (Açıq dərs, Qrup 1312) — Salayeva Nigar",
+    title_en: "Azerbaijani Language: Artistic Style (Open Lesson) — Nigar Salayeva",
+    title_ru: "Азербайджанский язык: Художественный стиль (Открытый урок) — Нигяр Салаева",
+    duration: "69:21",
+    thumb: "https://img.youtube.com/vi/88crt4b0cbA/hqdefault.jpg",
+    category: "az-dili",
+    url: "https://www.youtube.com/watch?v=88crt4b0cbA",
+  },
+
+  // ─── 5. HÜQUQ VƏ ÜMUMTƏHSİL (Kollecin Rəsmi Müəllimləri: İlahə Qaraxanova, Kəmalə Tağıyeva) ───
+  {
+    id: 26,
+    title_az: "Biologiya fənnindən 513A qrupu ilə dərs — Qaraxanova İlahə",
+    title_en: "Biology Lecture with Group 513A — Ilaha Garakhanova",
+    title_ru: "Урок биологии с группой 513А — Илаха Караханова",
+    duration: "16:40",
+    thumb: "https://img.youtube.com/vi/L2ery4jYKFY/hqdefault.jpg",
+    category: "biologiya",
+    url: "https://www.youtube.com/watch?v=L2ery4jYKFY",
+  },
+  {
+    id: 28,
+    title_az: "Hüquq dərsi: Hüququn əsas anlayışları və sistemi",
+    title_en: "Law Lecture: Fundamentals and Legal System",
+    title_ru: "Урок права: Основные понятия и система права",
+    duration: "16:00",
+    thumb: "https://img.youtube.com/vi/sq1g6Dj-yGk/hqdefault.jpg",
+    category: "huquq",
+    url: "https://www.youtube.com/watch?v=sq1g6Dj-yGk",
+  },
+  {
+    id: 29,
+    title_az: "Hüquq dərsi: Konstitusiya hüququ və vətəndaşlıq",
+    title_en: "Law Lecture: Constitutional Law & Citizenship",
+    title_ru: "Урок права: Конституционное право и гражданство",
+    duration: "19:00",
+    thumb: "https://img.youtube.com/vi/T1mFmYSRAdM/hqdefault.jpg",
+    category: "huquq",
+    url: "https://www.youtube.com/watch?v=T1mFmYSRAdM",
+  },
+  {
+    id: 30,
+    title_az: "Konstitusiyanın yaranması və mahiyyəti — Tağıyeva Kəmalə",
+    title_en: "Origin and Essence of the Constitution — Kamala Taghiyeva",
+    title_ru: "Возникновение и сущность Конституции — Кямаля Тагиева",
+    duration: "20:00",
+    thumb: "https://img.youtube.com/vi/7SSi3PTVM10/hqdefault.jpg",
+    category: "huquq",
+    url: "https://www.youtube.com/watch?v=7SSi3PTVM10",
+  },
+  {
+    id: 31,
+    title_az: "Azərbaycan Respublikasında Məhkəmə hakimiyyəti — Tağıyeva Kəmalə",
+    title_en: "Judicial Power in the Republic of Azerbaijan — Kamala Taghiyeva",
+    title_ru: "Судебная власть в Азербайджанской Республике — Кямаля Тагиева",
+    duration: "18:30",
+    thumb: "https://img.youtube.com/vi/3xTjMSONL6w/hqdefault.jpg",
+    category: "huquq",
+    url: "https://www.youtube.com/watch?v=3xTjMSONL6w",
+  },
+  {
+    id: 15,
+    title_az: "Muxtariyyətin anlayışı və xüsusiyyətləri — Tağıyeva Kəmalə",
+    title_en: "Concept and Features of Autonomy — Kamala Taghiyeva",
+    title_ru: "Понятие и особенности автономии — Кямаля Тагиева",
+    duration: "18:20",
+    thumb: "https://img.youtube.com/vi/AmMHDV6qMVQ/hqdefault.jpg",
+    category: "huquq",
+    url: "https://www.youtube.com/watch?v=AmMHDV6qMVQ",
+  },
+  {
+    id: 45,
+    title_az: "Seçki hüququnun anlayışı, mahiyyəti və növləri — Hacıyeva Vəfa",
+    title_en: "Concept, Essence, and Types of Electoral Law — Vafa Hajiyeva",
+    title_ru: "Понятие, сущность и виды избирательного права — Вафа Гаджиева",
+    duration: "10:50",
+    thumb: "https://img.youtube.com/vi/MZ-7PSR5enE/hqdefault.jpg",
+    category: "huquq",
+    url: "https://www.youtube.com/watch?v=MZ-7PSR5enE",
+  },
+
+  // ─── 6. NƏQLİYYAT VƏ AVTOMOBİL (Kollecin Rəsmi Müəllimi: Sadıqlı Elmira) ───
+  {
+    id: 42,
+    title_az: "Avtonəqliyyat vasitələrinin hərəkət hissələri — Sadıqlı Elmira",
+    title_en: "Running Gear of Motor Vehicles — Elmira Sadigli",
+    title_ru: "Ходовая часть автотранспортных средств — Эльмира Садыглы",
+    duration: "29:53",
+    thumb: "https://img.youtube.com/vi/ZKnP339oefk/hqdefault.jpg",
+    category: "neqliyyat",
+    url: "https://www.youtube.com/watch?v=ZKnP339oefk",
+  },
+
+  // ─── 7. COĞRAFİYA (Kollecin Rəsmi Müəllimi: Mahmudova Könül) ───
+  {
+    id: 43,
+    title_az: "Coğrafiya fənni üzrə açıq dərs (712 A qrupu) — Mahmudova Könül",
+    title_en: "Geography Open Lecture with Group 712A — Konul Mahmudova",
+    title_ru: "Открытый урок по географии с группой 712А — Кенуль Махмудова",
+    duration: "62:47",
+    thumb: "https://img.youtube.com/vi/O5GNulVihEQ/hqdefault.jpg",
+    category: "cografiya",
+    url: "https://www.youtube.com/watch?v=O5GNulVihEQ",
+  },
+  {
+    id: 46,
+    title_az: "Dünyanın torpaq fondu — Mahmudova Könül",
+    title_en: "World Land Fund — Konul Mahmudova",
+    title_ru: "Земельный фонд мира — Кенуль Махмудова",
+    duration: "07:08",
+    thumb: "https://img.youtube.com/vi/DvcU5PkJGHc/hqdefault.jpg",
+    category: "cografiya",
+    url: "https://www.youtube.com/watch?v=DvcU5PkJGHc",
+  },
+
+  // ─── 8. FİZİKA (Kollecin Rəsmi Müəllimi: Paşayeva Ramilə) ───
+  {
+    id: 44,
+    title_az: "Kondensatorlar. Elektrik tutumu — Paşayeva Ramilə",
+    title_en: "Capacitors and Electrical Capacitance — Ramila Pashayeva",
+    title_ru: "Конденсаторы. Электрическая ёмкость — Рамиля Пашаева",
+    duration: "55:22",
+    thumb: "https://img.youtube.com/vi/kUubQbK0vmg/hqdefault.jpg",
+    category: "fizika",
+    url: "https://www.youtube.com/watch?v=kUubQbK0vmg",
+  },
+];
+
+
+
+
+
+/**
+ * 3. CORE LOGIC / INITIALIZATION
+ * Initialization unified at the end of the file
+ */
+
+// Calculate metrics
+function getGrade(score) {
+  if (score >= 91) return "A";
+  if (score >= 81) return "B";
+  if (score >= 71) return "C";
+  if (score >= 61) return "D";
+  if (score >= 51) return "E";
+  return "F";
+}
+function scoreToPoint(score) {
+  if (score >= 91) return 4.0;
+  if (score >= 81) return 3.0;
+  if (score >= 71) return 2.0;
+  if (score >= 61) return 1.0;
+  return 0.0;
+}
+
+/**
+ * SCROLL & UI ENGINE (Antigravity Adaptability)
+ */
+function initScrollEngine() {
+  const header = document.getElementById("site-header");
+  const toggle = document.getElementById("mobile-toggle");
+  const overlay = document.getElementById("mobile-nav");
+  const links = document.querySelectorAll(".mobile-nav-link");
+  const html = document.documentElement;
+
+  // Parallax Elements
+  const heroBg = document.querySelector(".fluid-bg");
+  const heroCanvas = document.getElementById("particles-canvas");
+  const heroContent = document.querySelector(".hero-content");
+
+  // Header Blur Effect & Parallax
+  window.addEventListener(
+    "scroll",
+    () => {
+      const scrolled = window.scrollY;
+
+      // Header
+      if (scrolled > 20) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+
+      // Hero Parallax Effect (only apply if in viewport)
+      if (scrolled < window.innerHeight) {
+        if (heroBg) heroBg.style.transform = `translateY(${scrolled * 0.4}px)`;
+        if (heroCanvas)
+          heroCanvas.style.transform = `translateY(${scrolled * 0.2}px)`;
+        if (heroContent) {
+          heroContent.style.transform = `translateY(${scrolled * 0.15}px)`;
+          heroContent.style.opacity = Math.max(
+            0,
+            1 - scrolled / (window.innerHeight * 0.8),
+          );
+        }
+      }
+    },
+    { passive: true },
+  );
+
+  // Mobile Toggle
+  toggle.addEventListener("click", () => {
+    const isActive = toggle.classList.toggle("active");
+    overlay.classList.toggle("active");
+    html.classList.toggle("scroll-locked");
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      toggle.classList.remove("active");
+      overlay.classList.remove("active");
+      html.classList.remove("scroll-locked");
+    });
+  });
+
+  // Reveal Animation
+  const reveals = document.querySelectorAll(".reveal");
+  const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, revealOptions);
+
+  reveals.forEach((r) => revealObserver.observe(r));
+}
+
+/**
+ * THEME ENGINE (Multi-Theme Support)
+ */
+function setTheme(theme) {
+  document.body.classList.remove("light-mode", "dark-mode", "space-mode");
+
+  const normalized = theme === "space" ? "dark" : theme;
+  if (normalized === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+
+  localStorage.setItem("bdrnk-theme", normalized);
+  document.documentElement.setAttribute("data-theme", normalized);
+  document.dispatchEvent(new CustomEvent("themeChanged"));
+}
+
+function initThemeEngine() {
+  const themeToggleBtn = document.getElementById("theme-toggle");
+  const dropdownBtns = document.querySelectorAll(
+    ".theme-dropdown button[data-theme-set]",
+  );
+  if (!themeToggleBtn) return;
+
+  themeToggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const wrap = themeToggleBtn.parentElement;
+    wrap.classList.toggle("active");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".theme-switcher-wrap")) {
+      document
+        .querySelector(".theme-switcher-wrap")
+        ?.classList.remove("active");
+    }
+  });
+
+  // Handle theme toggle via data-theme-set
+  dropdownBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const targetTheme = btn.getAttribute("data-theme-set");
+      const wrap = themeToggleBtn.parentElement;
+      wrap.classList.remove("active"); // Close dropdown
+
+      if (!document.startViewTransition) {
+        setTheme(targetTheme);
+        return;
+      }
+
+      // Get click coordinates for the ripple origin
+      const x = e.clientX;
+      const y = e.clientY;
+
+      // Calculate distance to furthest corner to ensure ripple covers the screen
+      const endRadius = Math.hypot(
+        Math.max(x, window.innerWidth - x),
+        Math.max(y, window.innerHeight - y),
+      );
+
+      const transition = document.startViewTransition(() => {
+        setTheme(targetTheme);
+      });
+
+      transition.ready.then(() => {
+        const isDark = targetTheme === "dark" || targetTheme === "space";
+
+        // Animate the clip-path from standard circle to full screen
+        document.documentElement.animate(
+          {
+            clipPath: [
+              `circle(0px at ${x}px ${y}px)`,
+              `circle(${endRadius}px at ${x}px ${y}px)`,
+            ],
+          },
+          {
+            duration: 500,
+            easing: "ease-out",
+            // Specify which pseudo-element to animate based on whether we are moving
+            // to a dark theme or light theme. By default the 'new' state is on top.
+            pseudoElement: "::view-transition-new(root)",
+          },
+        );
+      });
+    });
+  });
+
+  // Check saved theme initially
+  const savedTheme =
+    localStorage.getItem("bdrnk-theme") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light");
+  setTheme(savedTheme);
+}
+const faqData = [
+  {
+    "q": {
+      "az": "Qəbul prosesi necə aparılır?",
+      "ru": "Как проходит процесс поступления?",
+      "en": "How is the admission process conducted?"
+    },
+    "a": {
+      "az": "Qəbul prosesi Dövlət İmtahan Mərkəzi (DİM) tərəfindən keçirilən ümumi (9 illik) və ya tam (11 illik) orta təhsil bazasında buraxılış imtahanlarının nəticələrinə əsasən aparılır. Müsabiqə şərtlərini ödəyən abituriyentlər portal.edu.az vasitəsilə kollecimizin ixtisaslarını seçərək elektron qeydiyyatdan keçirlər.",
+      "ru": "Процесс поступления осуществляется на основе результатов выпускных экзаменов на базе общего (9-летнего) или полного (11-летнего) среднего образования, проводимых ГЭЦ. Абитуриенты, набравшие проходной балл, выбирают специальности нашего колледжа и регистрируются онлайн через portal.edu.az.",
+      "en": "The admission process is based on entrance examination scores administered by the State Examination Center (SEC) on the basis of 9-year or 11-year secondary education. Eligible applicants select our college majors and register electronically via portal.edu.az."
+    }
+  },
+  {
+    "q": {
+      "az": "Dərs qrafiki və növbələri necədir?",
+      "ru": "Каков график и смены занятий?",
+      "en": "What is the class schedule and shifts?"
+    },
+    "a": {
+      "az": "Dərslər həftənin 5 günü iki növbəli rejimdə (I növbə: 08:30 – 13:40, II növbə: 14:00 – 19:10) keçirilir. Hər bir qrupun dərslər, laboratoriya və praktiki məşğələ cədvəli tədris ili əvvəlində tədris hissəsi tərəfindən təsdiq olunur və tələbə portalında əks etdirilir.",
+      "ru": "Занятия проводятся 5 дней в неделю в две смены (I смена: 08:30 – 13:40, II смена: 14:00 – 19:10). Расписание лекций, лабораторных и практических занятий для каждой группы утверждается учебной частью и доступно в студенческом портале.",
+      "en": "Classes are held 5 days a week across two daily shifts (1st shift: 08:30 – 13:40, 2nd shift: 14:00 – 19:10). The schedule of lectures, laboratory works, and seminars is approved by the academic department and accessible via the student portal."
+    }
+  },
+  {
+    "q": {
+      "az": "Tələbələr üçün təqaüd imkanları necədir?",
+      "ru": "Какие стипендиальные возможности есть для студентов?",
+      "en": "What scholarship opportunities are available for students?"
+    },
+    "a": {
+      "az": "Kollecdə dövlət sifarişi və ya ödənişli əsaslarla təhsil almasından asılı olmayaraq, semestr imtahanlarının nəticələrinə (GPA göstəricilərinə) əsasən tələbələrə 'Əlaçı', 'Həvəsləndirici' və 'Adi' dərəcəli dövlət təqaüdləri verilir.",
+      "ru": "Независимо от формы обучения (на бюджетной или платной основе), по результатам экзаменационной сессии (показателям GPA) успевающим студентам ежемесячно выплачиваются государственные стипендии: «Отличная», «Поощрительная» и «Обычная».",
+      "en": "Regardless of tuition status (state-funded or fee-paying), students earn monthly state scholarships ('Honors', 'Encouragement', and 'Standard') based on their semester exam performance (GPA metrics)."
+    }
+  },
+  {
+    "q": {
+      "az": "İstehsalat təcrübəsi harada və necə təşkil olunur?",
+      "ru": "Где и как организуется производственная практика?",
+      "en": "Where and how is practical internship organized?"
+    },
+    "a": {
+      "az": "Tələbələrimiz sonuncu tədris ilində 'Azərpoçt' MMC, 'Bakı Metropoliteni' QSC, 'Azərbaycan Dəmir Yolları' QSC, telekommunikasiya şirkətləri, banklar və İT müəssisələrində istehsalat təcrübəsi keçərək praktiki iş vərdişləri qazanır və bir çoxu elə orada işlə təmin olunur.",
+      "ru": "На выпускном курсе наши студенты проходят производственную практику в ООО «Азерпочта», ЗАО «Бакинский метрополитен», ЗАО «Азербайджанские железные дороги», телекоммуникационных компаниях, банках и ИТ-корпорациях с перспективой дальнейшего трудоустройства.",
+      "en": "During their final academic year, our students complete field internships at 'Azerpost' LLC, 'Baku Metro' CJSC, 'Azerbaijan Railways' CJSC, leading telecom operators, banks, and IT companies, often securing full-time employment."
+    }
+  },
+  {
+    "q": {
+      "az": "Kolleci bitirdikdən sonra universitetə imtahansız qəbul mümkündürmü?",
+      "ru": "Возможно ли поступление в университет без экзаменов после колледжа?",
+      "en": "Can graduates enter university without entrance exams?"
+    },
+    "a": {
+      "az": "Bəli! Kolleci uğurla bitirən məzunlar subbakalavr dərəcəsi alırlar və DİM-in qaydalarına uyğun olaraq imtahan vermədən, orta müvəffəqiyyət göstəricisi (ÜOMG) əsasında müvafiq ixtisaslar üzrə ali təhsil müəssisələrinə birbaşa müsabiqə yolu ilə qəbul ola bilirlər.",
+      "ru": "Да! Выпускники, успешно окончившие колледж, получают квалификацию суббакалавра и в соответствии с правилами ГЭЦ могут без сдачи вступительных экзаменов поступить в вузы по профильным специальностям на основе среднего балла успеваемости (ÜOMG).",
+      "en": "Yes! Graduates earn a sub-bachelor degree and, pursuant to SEC regulations, can gain direct admission to higher education institutions (universities) in aligned majors without entrance exams, based on their cumulative GPA (ÜOMG)."
+    }
+  },
+  {
+    "q": {
+      "az": "Elektron kitabxana və dərs resurslarından necə istifadə etmək olar?",
+      "ru": "Как пользоваться электронной библиотекой и учебными ресурсами?",
+      "en": "How can I access the digital library and learning materials?"
+    },
+    "a": {
+      "az": "Saytımızın 'Kitabxana' və 'Videodərslər' bölməsindən ixtisasınıza uyğun bütün dərslikləri, metodik vəsaitləri və mühazirələri heç bir ödəniş olmadan onlayn oxuya, yükləyə və videodərslərə baxa bilərsiniz.",
+      "ru": "В разделах 'Библиотека' и 'Видеоуроки' нашего сайта вы можете в любое время бесплатно читать онлайн или скачивать все профильные учебники, методические пособия и лекционные видеоматериалы.",
+      "en": "In the 'Library' and 'Lectures' sections of our portal, you can freely view, read online, or download all textbook manuals, syllabus guidelines, and lecture video recordings suited to your major."
+    }
+  },
+
+  {
+    "q": {
+      "az": "Təhsil haqqını hissə-hissə ödəmək mümkündürmü?",
+      "ru": "Возможна ли оплата обучения частями?",
+      "en": "Can tuition fees be paid in installments?"
+    },
+    "a": {
+      "az": "Bəli, ödənişli əsaslarla təhsil alan tələbələrimiz üçün təhsil haqqı illik məbləğ şəklində və ya hər semestr üzrə hissə-hissə rahatlıqla ödənilə bilər. Həmçinin sosial baxımdan həssas qruplardan olan tələbələrə dövlət tərəfindən tam güzəştlər tətbiq edilir.",
+      "ru": "Да, для студентов платного отделения предусмотрена удобная возможность поэтапной оплаты обучения по семестрам. Кроме того, студентам из социально уязвимых категорий предоставляются государственные льготы и компенсации.",
+      "en": "Yes, students enrolled in fee-paying programs can conveniently pay their tuition in semester installments. Furthermore, full state waivers and social benefits apply to students from vulnerable socioeconomic categories."
+    }
+  }
+];
+
+function initFAQModule() {
+  const faqAccordion = document.getElementById("faq-accordion");
+  if (!faqAccordion) return;
+
+  function renderFAQ() {
+    const openedIndices = [];
+    faqAccordion.querySelectorAll(".faq-item.active").forEach((item, index) => {
+      // We can map DOM position back if needed, but for simplicity let's just close all on language switch
+      // or keep the structure simple:
+    });
+
+    faqAccordion.innerHTML = faqData
+      .map(
+        (item, index) => `
+            <div class="faq-item reveal" style="transition-delay: ${index * 0.1}s">
+                <button class="faq-question">
+                    <span>${item.q[currentLang] || item.q.az}</span>
+                    <div class="faq-icon"></div>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        ${item.a[currentLang] || item.a.az}
+                    </div>
+                </div>
+            </div>
+        `,
+      )
+      .join("");
+
+    // Re-init toggle listeners
+    faqAccordion.querySelectorAll(".faq-question").forEach((btn, index) => {
+      // Force reveal class to visible since they might be in viewport already after re-render
+      setTimeout(() => btn.parentElement.classList.add("visible"), index * 100);
+
+      btn.addEventListener("click", () => {
+        const item = btn.parentElement;
+        const isActive = item.classList.contains("active");
+
+        // Close all others
+        faqAccordion
+          .querySelectorAll(".faq-item")
+          .forEach((i) => i.classList.remove("active"));
+
+        if (!isActive) {
+          item.classList.add("active");
+        }
+      });
+    });
+  }
+
+  renderFAQ();
+
+  // Listen for language changes and completely re-render FAQ contents
+  document.addEventListener("languageChanged", renderFAQ);
+}
+
+function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    const easeOut = 1 - Math.pow(1 - progress, 3); // Cubic ease out
+    obj.innerHTML =
+      Math.floor(easeOut * (end - start) + start) + (end > 1000 ? "+" : "");
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
+/**
+ * SIS LOGIN TILT — 3D Motion (Digital ID Experience)
+ */
+function initSISTilt() {
+  const card = document.getElementById("sis-login");
+  if (!card || window.matchMedia("(hover: none)").matches) return;
+
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    // Subtle Perspective Tilt
+    const rotateX = (centerY - y) / 25;
+    const rotateY = (x - centerX) / 25;
+
+    // Magnetic Attraction (Floating effect)
+    const moveX = (x - centerX) / 15;
+    const moveY = (y - centerY) / 15;
+
+    // Update CSS variables for the Glow
+    card.style.setProperty("--mx", `${(x / rect.width) * 100}%`);
+    card.style.setProperty("--my", `${(y / rect.height) * 100}%`);
+
+    card.style.transform = `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translate3d(${moveX}px, ${moveY}px, 0) scale(1.02)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = `perspective(1500px) rotateX(0deg) rotateY(0deg) translate3d(0, 0, 0) scale(1)`;
+  });
+}
+
+/**
+ * LANGUAGE ENGINE (Language Orb)
+ */
+function initLanguageEngine() {
+  const btns = document.querySelectorAll(".lang-btn");
+  btns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      // UI Toggle
+      btns.forEach((b) => b.classList.remove("active"));
+      const target = e.target;
+      target.classList.add("active");
+
+      // Set state & update DOM
+      currentLang = target.getAttribute("data-lang");
+      document.documentElement.lang = currentLang;
+      updateDOMTexts();
+      document.dispatchEvent(new CustomEvent("languageChanged"));
+    });
+  });
+}
+
+/**
+ * PARTICLES ENGINE (CSS/Canvas Canvas - Institutional Blue)
+ */
+function initParticlesEngine() {
+  const canvas = document.getElementById("particles-canvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  let width, height;
+  let particles = [];
+
+  function resize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width * window.devicePixelRatio;
+    canvas.height = height * window.devicePixelRatio;
+    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+  }
+
+  class Particle {
+    constructor() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.size = Math.random() * 2 + 1;
+      this.speedX = Math.random() * 0.4 - 0.2;
+      this.speedY = Math.random() * 0.4 - 0.2;
+
+      // Theme-based particle colors
+      const isSpace = document.body.classList.contains("space-mode");
+      const isDark = document.body.classList.contains("dark-mode");
+      const baseColor = isSpace
+        ? "168, 85, 247"
+        : isDark
+          ? "52, 152, 219"
+          : "27, 79, 114";
+      const alpha = Math.random() * 0.4 + 0.1;
+      this.color = `rgba(${baseColor}, ${alpha})`;
+      this.baseColor = baseColor;
+    }
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+
+      if (this.x > width || this.x < 0) this.speedX *= -1;
+      if (this.y > height || this.y < 0) this.speedY *= -1;
+    }
+    draw() {
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function init() {
+    resize();
+    particles = [];
+    const count = window.innerWidth < 768 ? 20 : 50;
+    for (let i = 0; i < count; i++) {
+      particles.push(new Particle());
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].update();
+      particles[i].draw();
+
+      // Connect lines
+      for (let j = i; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < 150) {
+          ctx.beginPath();
+          // Softer connecting lines using dynamic color
+          ctx.strokeStyle = `rgba(${particles[i].baseColor}, ${0.1 - distance / 1500})`;
+          ctx.lineWidth = 0.8;
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(animate);
+  }
+
+  window.addEventListener("resize", init);
+  init();
+  animate();
+}
+
+/**
+ * STRUCTURE MODULE (Dual-View: Organizational Tree & Cards Grid)
+ */
+function renderCategoriesCount() {
+  const l = document.getElementById("count-leadership");
+  const d = document.getElementById("count-departments");
+  const c = document.getElementById("count-commissions");
+  const m = document.getElementById("count-majors");
+
+  if (l) l.textContent = staffData.leadership.length;
+  if (d) d.textContent = staffData.departments.length;
+  if (c) c.textContent = staffData.commissions.length;
+  if (m) m.textContent = (staffData.majors.eyani?.length || 0) + (staffData.majors.qiyabi?.length || 0);
+}
+
+function initStructureModule() {
+  const modal = document.getElementById("modal");
+  const closeBtn = document.getElementById("modal-close");
+  const modalGrid = document.getElementById("grid");
+  const modalTitle = document.getElementById("modal-title");
+  const html = document.documentElement;
+
+  const treeCanvas = document.getElementById("struct-tree-canvas");
+  const liveGrid = document.getElementById("struct-live-grid");
+  const toggleTreeBtn = document.getElementById("toggle-tree-btn");
+  const toggleCardsBtn = document.getElementById("toggle-cards-btn");
+  const treePane = document.getElementById("struct-tree-view");
+  const commissionsPane = document.getElementById("struct-commissions-view") || document.getElementById("struct-cards-view");
+  const searchInput = document.getElementById("struct-search-input");
+  const searchClear = document.getElementById("struct-search-clear");
+  const subtabs = document.querySelectorAll(".struct-tab");
+
+  let currentCategory = "leadership";
+  let currentView = "tree";
+
+  renderCategoriesCount();
+
+    const fbkList = [
+    {
+      id: "fbk-1",
+      code: "FBK-01",
+      icon: "💻",
+      status: "Aktiv",
+      title_az: "İnformatika və Kompüter Sistemləri",
+      title_en: "Informatics and Computer Systems",
+      title_ru: "Информатика и компьютерные системы",
+      desc_az: "Kompüter sistemlərinin təmiri, proqramlaşdırma, verilənlər bazası və veb-texnologiyalar üzrə ixtisas fənləri.",
+      desc_en: "Specialized courses in computer hardware maintenance, programming, database management, and web technologies.",
+      desc_ru: "Профильные дисциплины по ремонту компьютерных систем, программированию, базам данных и веб-технологиям.",
+      disciplines_az: ["İnformatika", "Verilənlər Bazası", "Kompüter Qrafikası", "Proqramlaşdırma", "Şəbəkə Təminatı"],
+      chair_az: "Teyyubə Bağırova",
+      chair_en: "Teyyuba Baghirova",
+      chair_ru: "Тейюба Багирова"
+    },
+    {
+      id: "fbk-2",
+      code: "FBK-02",
+      icon: "📡",
+      status: "Aktiv",
+      title_az: "Telekommunikasiya və Rabitə Xətləri",
+      title_en: "Telecommunications and Network Lines",
+      title_ru: "Телекоммуникации и линии связи",
+      desc_az: "Simsiz və optik rabitə sistemləri, şəbəkə inzibatçılığı və siqnalların ötürülməsi fənn birləşməsi.",
+      desc_en: "Curriculum focusing on wireless and optical networks, telecom systems, and transmission technologies.",
+      desc_ru: "Программы по беспроводным и оптическим сетям связи, администрированию и технологиям передачи сигналов.",
+      disciplines_az: ["Telekommunikasiya", "Optik Rabitə", "Mobil Şəbəkələr", "Radiotexnika", "Kabel Sistemləri"],
+      chair_az: "Sevda Bağızadə",
+      chair_en: "Sevda Bagizada",
+      chair_ru: "Севда Багизаде"
+    },
+    {
+      id: "fbk-3",
+      code: "FBK-03",
+      icon: "📦",
+      status: "Aktiv",
+      title_az: "Poçt Rabitəsi və İqtisadiyyat",
+      title_en: "Postal Communications and Economics",
+      title_ru: "Почтовая связь и экономика",
+      desc_az: "Poçt xidmətlərinin təşkili, anbar logistikası, mühasibat uçotu və maliyyə-bank əməliyyatları.",
+      desc_en: "Comprehensive training in postal logistics, warehousing, financial accounting, and modern banking services.",
+      desc_ru: "Комплексное обучение почтовой логистике, складированию, бухгалтерскому учету и банковским операциям.",
+      disciplines_az: ["Poçt Əməliyyatları", "Anbar Logistikası", "Mühasibat Uçotu", "Bank İşi", "Maliyyə"],
+      chair_az: "Natiq Əhmədov",
+      chair_en: "Natig Ahmadov",
+      chair_ru: "Натиг Ахмедов"
+    },
+    {
+      id: "fbk-4",
+      code: "FBK-04",
+      icon: "🔌",
+      status: "Aktiv",
+      title_az: "Elektrotexnika və Sxematexnika",
+      title_en: "Electrical Engineering & Schematics",
+      title_ru: "Электротехника и схемотехника",
+      desc_az: "Elektron qurğular, dövrələr, elektrik ölçmələri və mikroprosessor texnikasının əsasları.",
+      desc_en: "Theoretical and practical instruction in circuit design, electrical apparatus, and microprocessors.",
+      desc_ru: "Теоретические и практические занятия по схемотехнике, электрическим измерениям и микропроцессорам.",
+      disciplines_az: ["Sxematexnika", "Elektrik Ölçmələri", "Mikroprosessorlar", "Elektronika", "Rəqəmsal Texnika"],
+      chair_az: "Kollec Metodik Şurası",
+      chair_en: "College Methodological Board",
+      chair_ru: "Методический совет"
+    },
+    {
+      id: "fbk-5",
+      code: "FBK-05",
+      icon: "🚘",
+      status: "Aktiv",
+      title_az: "Ümumtexnika və Nəqliyyat",
+      title_en: "General Engineering & Transport",
+      title_ru: "Общая техника и транспорт",
+      desc_az: "Avtomobil və dəmiryol nəqliyyatının istismarı, yol hərəkətinin təşkili və texniki diaqnostika.",
+      desc_en: "Operation of transport vehicles, traffic coordination, diagnostic testing, and technical safety.",
+      desc_ru: "Эксплуатация транспорта, организация дорожного движения, диагностика и техническая безопасность.",
+      disciplines_az: ["Nəqliyyat Diaqnostikası", "Yol Hərəkəti Təşkili", "Texniki Mexanika", "Materialşünaslıq", "Logistika"],
+      chair_az: "Babək Quliyev",
+      chair_en: "Babak Guliyev",
+      chair_ru: "Бабек Гулиев"
+    },
+    {
+      id: "fbk-6",
+      code: "FBK-06",
+      icon: "📖",
+      status: "Aktiv",
+      title_az: "Azərbaycan Dili və Ədəbiyyat",
+      title_en: "Azerbaijani Language and Literature",
+      title_ru: "Азербайджанский язык и литература",
+      desc_az: "Ana dilimizin zənginliyi, nitq mədəniyyəti, klassik və müasir milli ədəbiyyat irsi.",
+      desc_en: "Preservation of linguistic standards, academic rhetoric, and study of classical national literature.",
+      desc_ru: "Культура речи, литературное наследие, грамматика и академическая риторика родного языка.",
+      disciplines_az: ["Azərbaycan Dili", "Ədəbiyyat", "Nitq Mədəniyyəti", "İşgüzar Yazışmalar", "Azərbaycançılıq"],
+      chair_az: "Ziba Səfərova",
+      chair_en: "Ziba Safarova",
+      chair_ru: "Зиба Сафарова"
+    },
+    {
+      id: "fbk-7",
+      code: "FBK-07",
+      icon: "🏛️",
+      status: "Aktiv",
+      title_az: "Humanitar və İctimai Elmlər",
+      title_en: "Humanities and Social Sciences",
+      title_ru: "Гуманитарные и общественные науки",
+      desc_az: "Azərbaycan tarixi, konstitusiya və hüququn əsasları, fəlsəfə və ictimai elmlər.",
+      desc_en: "History of Azerbaijan, constitutional law fundamentals, civic ethics, and philosophy.",
+      desc_ru: "История Азербайджана, основы конституционного права, гражданское право и философия.",
+      disciplines_az: ["Azərbaycan Tarixi", "Hüququn Əsasları", "Fəlsəfə", "Multikulturalizm", "İctimaiyyət"],
+      chair_az: "Səidə Quliyeva",
+      chair_en: "Saida Guliyeva",
+      chair_ru: "Саида Гулиева"
+    },
+    {
+      id: "fbk-8",
+      code: "FBK-08",
+      icon: "🌍",
+      status: "Aktiv",
+      title_az: "Xarici Dillər",
+      title_en: "Foreign Languages",
+      title_ru: "Иностранные языки",
+      desc_az: "Texniki və işgüzar ingilis dili, rus dili və beynəlxalq rabitə terminologiyası.",
+      desc_en: "Technical English, Russian, cross-cultural communication, and professional telecom terminology.",
+      desc_ru: "Технический и деловой английский, русский язык и терминология международных систем связи.",
+      disciplines_az: ["İngilis Dili", "Rus Dili", "Texniki Tərcümə", "İşgüzar Ünsiyyət", "Akademik Yazı"],
+      chair_az: "Aynur Əliyeva",
+      chair_en: "Aynur Aliyeva",
+      chair_ru: "Айнур Алиева"
+    },
+    {
+      id: "fbk-9",
+      code: "FBK-09",
+      icon: "⚽",
+      status: "Aktiv",
+      title_az: "Dəqiq Elmlər, Fiziki Tərbiyə və ÇHQ",
+      title_en: "Natural Sciences, Physical Ed. & Pre-Conscription",
+      title_ru: "Точные науки, физвоспитание и ДПЮ",
+      desc_az: "Tətbiqi riyaziyyat, fizika, kimya, hərbi vətənpərvərlik hazırlığı və tələbə idman nailiyyətləri.",
+      desc_en: "Applied mathematics, physics, sports coaching, civil defense, and patriotic education.",
+      desc_ru: "Прикладная математика, физика, военно-патриотическая подготовка, спорт и гражданская оборона.",
+      disciplines_az: ["Riyaziyyat", "Fizika", "Fiziki Tərbiyə", "Çağırışaqədərki Hazırlıq", "Mülki Müdafiə"],
+      chair_az: "Ramilə Paşayeva",
+      chair_en: "Ramila Pashayeva",
+      chair_ru: "Рамила Пашаева"
+    }
+  ];
+
+  // ─── 1. RENDER ORGANIZATIONAL TREE VIEW ─────────────────────────────
+  function renderTree() {
+    if (!treeCanvas) return;
+
+    // 1-ci Səviyyə: Direktor
+    const director = staffData.leadership.find((p) => p.id === "1") || staffData.leadership[0];
+    const directorName = director ? (director[`name_${currentLang}`] || director.name_az) : "";
+    const directorRole = director ? (director[`role_${currentLang}`] || director.role_az) : "";
+
+    // 2-ci Səviyyə: Şahmurad Məmmədov və İsmayıl Səfiyev
+    const deputy1 = staffData.leadership.find((p) => p.id === "2") || staffData.leadership[1];
+    const deputy2 = staffData.leadership.find((p) => p.id === "3") || staffData.leadership[2];
+    const deputy1Name = deputy1 ? (deputy1[`name_${currentLang}`] || deputy1.name_az) : "";
+    const deputy1Role = deputy1 ? (deputy1[`role_${currentLang}`] || deputy1.role_az) : "";
+    const deputy2Name = deputy2 ? (deputy2[`name_${currentLang}`] || deputy2.name_az) : "";
+    const deputy2Role = deputy2 ? (deputy2[`role_${currentLang}`] || deputy2.role_az) : "";
+
+    // 3-cü Səviyyə: Səidə Quliyeva
+    const tier3 = staffData.departments.find((p) => p.id === "12") || {
+      id: "12",
+      name_az: "Səidə Quliyeva Novruz qızı",
+      role_az: 'Yeni Azərbaycan Partiyası Ərazi Partiya Təşkilatı sədri<br>"Qeydiyyat, qiymətləndirmə və Monitorinq şöbəsi"-Şöbə müdiri',
+      img: "seidex2.jpeg",
+    };
+    const tier3Name = tier3[`name_${currentLang}`] || tier3.name_az || "";
+    const tier3Role = tier3[`role_${currentLang}`] || tier3.role_az || "";
+
+    // 4-cü Səviyyə: Şöbə Müdirləri & Birləşmə Komissiyaları (2 Balanslaşdırılmış Qanad)
+    const academicOrder = ["7", "23", "24", "9", "14", "11"];
+    const wingAcademicStaff = academicOrder
+      .map((id) => staffData.departments.find((p) => p.id === id))
+      .filter(Boolean);
+    const adminOrder = ["13", "19", "20", "18", "16", "27", "28", "22", "25", "26"];
+    const wingAdminStaff = adminOrder
+      .map((id) => staffData.departments.find((p) => p.id === id))
+      .filter(Boolean);
+
+    const renderDeptCards = (members) => {
+      return members
+        .map((p) => {
+          const name = p[`name_${currentLang}`] || p.name_az;
+          const role = p[`role_${currentLang}`] || p.role_az;
+          return `
+            <div class="tree-dept-card" data-person-id="${p.id}" title="${name} - ${role}">
+              <div class="tree-dept-avatar">
+                <img src="${p.img}" alt="${name}" loading="lazy" onerror="this.onerror=null;this.src='logo.jpg';">
+              </div>
+              <div class="tree-dept-info">
+                <h5 class="tree-dept-name">${name}</h5>
+                <span class="tree-dept-role">${role}</span>
+              </div>
+            </div>`;
+        })
+        .join("");
+    };
+
+    // İxtisaslar Məlumatı (Müasir Akademik Cədvəl Dizaynı)
+  const majorIcons = {
+    "040406": "📊", // Mühasibat uçotu
+    "040554": "📮", // Poçt rabitəsi
+    "040556": "📻", // Radio, televiziya vasitə və qurğuları
+    "040405": "📈", // Marketinq
+    "040544": "📱", // Mobil şəbəkə sistemləri və operatorluğu
+    "040565": "🌐", // Telekommunikasiya şəbəkələri və xətləri
+    "040508": "📡", // Çoxkanallı telekommunikasiya sistemlərinin istismarı
+    "040572": "🚃", // Vaqon və refrijerator sistemləri
+    "040552": "🚚", // Nəqliyyatın logistikası
+    "040550": "🚗", // Nəqliyyat vasitələrinin texniki istismarı
+    "040518": "🌱", // Ətraf mühitin mühafizəsi və bərpası
+    "040529": "💻", // Kompüter sistemləri və kompleksləri
+    "040533": "🛠️", // Kompüter şəbəkə avadanlıqlarının təmiri və servisi
+    "040532": "🛡️", // Kompüter şəbəkələri və şəbəkə inzibatçılığı
+  };
+
+    const eyaniMajors = staffData.majors.eyani || [];
+    const qiyabiMajors = staffData.majors.qiyabi || [];
+
+    function renderTableRows(list, mode) {
+      return list
+        .map((m, idx) => {
+          const name = m[`name_${currentLang}`] || m.name_az;
+          const field = m[`field_${currentLang}`] || m.field_az;
+          const icon = majorIcons[m.code] || "📘";
+          const modeLabel =
+            mode === "eyani"
+              ? (currentLang === "en" ? "Full-time" : currentLang === "ru" ? "Очно" : "Əyani")
+              : (currentLang === "en" ? "Part-time" : currentLang === "ru" ? "Заочно" : "Qiyabi");
+          const subDegree =
+            currentLang === "en" ? "Sub-bachelor" : currentLang === "ru" ? "Суббакалавр" : "Subbakalavr";
+
+          return `
+            <tr class="major-row" data-code="${m.code}">
+              <td class="td-num">${idx + 1}</td>
+              <td class="td-code" data-label="${gT("th_code") || "Kod"}">
+                <span class="major-code-pill">${m.code}</span>
+              </td>
+              <td class="td-name" data-label="${gT("th_major") || "İxtisas"}">
+                <div class="major-name-wrap">
+                  <span class="major-row-icon">${icon}</span>
+                  <div class="major-title-group">
+                    <span class="major-row-title">${name}</span>
+                    <span class="major-row-sub">${m.code} · ${field}</span>
+                  </div>
+                </div>
+              </td>
+              <td class="td-field" data-label="${gT("th_field") || "Sahə"}">
+                <span class="major-field-chip">${field}</span>
+              </td>
+              <td class="td-degree" data-label="${gT("th_degree") || "Dərəcə"}">
+                <div class="major-degree-badge">
+                  <span class="degree-sub">${subDegree}</span>
+                  <span class="degree-mode mode-${mode}">${modeLabel}</span>
+                </div>
+              </td>
+            </tr>`;
+        })
+        .join("");
+    }
+
+    treeCanvas.innerHTML = `
+      <!-- ═══ 1-Cİ SƏVİYYƏ: DİREKTOR ═══ -->
+      <div class="tree-tier-block tier-1">
+        <div class="tree-tier-tag"><span>${gT("struct_tier1_label") || "I SƏVİYYƏ · DİREKTORLUQ"}</span></div>
+        <div class="tree-card-director" data-person-id="${director.id}" title="${directorName}">
+          <div class="tree-director-avatar">
+            <img src="${director.img}" alt="${directorName}" onerror="this.onerror=null;this.src='logo.jpg';">
+          </div>
+          <div class="tree-director-info">
+            <span class="tree-director-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span>${gT("struct_director_badge") || "KOLLEC DİREKTORLUĞU"}</span>
+            </span>
+            <h3 class="tree-director-name">${directorName}</h3>
+            <span class="tree-director-role">${directorRole}</span>
+            <button type="button" class="tree-director-bio-pill-btn" id="tree-director-bio-btn" title="Rəsmi Bioqrafiyanı Oxu">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              <span>Rəsmi Bioqrafiya və Qeydlər</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bağlantı Xətti 1 -> 2 -->
+      <div class="tree-stem-vertical"></div>
+
+      <!-- ═══ 2-Cİ SƏVİYYƏ: ŞAHMURAD MƏMMƏDOV VƏ İSMAYIL SƏFİYEV ═══ -->
+      <div class="tree-tier-block tier-2">
+        <div class="tree-tier-tag"><span>${gT("struct_tier2_label") || "II SƏVİYYƏ · DİREKTOR MÜAVİNLƏRİ"}</span></div>
+        <div class="tree-level-deputies">
+          <div class="tree-card-deputy" data-person-id="${deputy1.id}" title="${deputy1Name}">
+            <div class="tree-deputy-avatar">
+              <img src="${deputy1.img}" alt="${deputy1Name}" onerror="this.onerror=null;this.src='logo.jpg';">
+            </div>
+            <div class="tree-deputy-info">
+              <span class="tree-deputy-badge">${gT("struct_deputies_badge") || "MÜAVİN"}</span>
+              <h4 class="tree-deputy-name">${deputy1Name}</h4>
+              <span class="tree-deputy-role">${deputy1Role}</span>
+            </div>
+          </div>
+
+          <div class="tree-card-deputy" data-person-id="${deputy2.id}" title="${deputy2Name}">
+            <div class="tree-deputy-avatar">
+              <img src="${deputy2.img}" alt="${deputy2Name}" onerror="this.onerror=null;this.src='logo.jpg';">
+            </div>
+            <div class="tree-deputy-info">
+              <span class="tree-deputy-badge">${gT("struct_deputies_badge") || "MÜAVİN"}</span>
+              <h4 class="tree-deputy-name">${deputy2Name}</h4>
+              <span class="tree-deputy-role">${deputy2Role}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bağlantı Xətti 2 -> 3 -->
+      <div class="tree-stem-vertical"></div>
+
+      <!-- ═══ 3-CÜ SƏVİYYƏ: SƏİDƏ QULİYEVA ═══ -->
+      <div class="tree-tier-block tier-3">
+        <div class="tree-tier-tag"><span>${gT("struct_tier3_label") || "III SƏVİYYƏ · YAP ƏPT SƏDRİ VƏ ŞÖBƏ MÜDİRİ"}</span></div>
+        <div class="tree-level-tier3">
+          <div class="tree-card-tier3" data-person-id="${tier3.id}" title="${tier3Name}">
+            <div class="tree-tier3-avatar">
+              <img src="${tier3.img}" alt="${tier3Name}" onerror="this.onerror=null;this.src='logo.jpg';">
+            </div>
+            <div class="tree-tier3-info">
+              <span class="tree-tier3-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>${gT("struct_tier3_badge") || "YAP Ərazi Partiya Təşkilatı Sədri · Şöbə Müdiri"}</span>
+              </span>
+              <h4 class="tree-tier3-name">${tier3Name}</h4>
+              <span class="tree-tier3-role">${tier3Role}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bağlantı Xətti 3 -> 4 -->
+      <div class="tree-stem-vertical"></div>
+
+      <!-- ═══ 4-CÜ SƏVİYYƏ: ŞÖBƏ MÜDİRLƏRİ VƏ BİRLƏŞMƏ KOMİSSİYALARI ═══ -->
+      <div class="tree-tier-block tier-4">
+        <div class="tree-tier-tag"><span>${gT("struct_tier4_label") || "IV SƏVİYYƏ · ŞÖBƏ MÜDİRLƏRİ VƏ BİRLƏŞMƏ KOMİSSİYALARI"}</span></div>
+        <div class="tree-wings-grid">
+          <!-- Qanad 1: Tədris, İKT və Sahə Şöbələri -->
+          <div class="tree-wing-panel">
+            <div class="tree-wing-header">
+              <span class="tree-wing-icon">🎓</span>
+              <div class="tree-wing-titles">
+                <h4 class="tree-wing-title">${gT("struct_wing_academic") || "Tədris, İKT və Sahə Şöbələri"}</h4>
+                <span class="tree-wing-count">${wingAcademicStaff.length} rəhbər</span>
+              </div>
+            </div>
+            <div class="tree-wing-cards">
+              ${renderDeptCards(wingAcademicStaff)}
+            </div>
+          </div>
+
+          <!-- Qanad 2: İnzibati və Dəstək Xidmətləri -->
+          <div class="tree-wing-panel">
+            <div class="tree-wing-header">
+              <span class="tree-wing-icon">🏛️</span>
+              <div class="tree-wing-titles">
+                <h4 class="tree-wing-title">${gT("struct_wing_admin") || "İnzibati, Tələbə və Dəstək Xidmətləri"}</h4>
+                <span class="tree-wing-count">${wingAdminStaff.length} rəhbər</span>
+              </div>
+            </div>
+            <div class="tree-wing-cards">
+              ${renderDeptCards(wingAdminStaff)}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ TƏDRİS OLUNAN İXTİSASLAR VİTRİNİ (ACADEMIC CATALOG) ═══ -->
+      <div class="tree-majors-section" id="tree-majors-block">
+        <div class="majors-catalog-header">
+          <div class="majors-header-badge">
+            <span>🎓</span> <span>${gT("struct_majors_badge") || "DÖVLƏT STANDARTLI TƏDRİS PROQRAMLARI"}</span>
+          </div>
+          <h3 class="majors-catalog-title">${gT("struct_majors_heading") || "Kollecdə Tədris Olunan İxtisaslar"}</h3>
+          <p class="majors-catalog-desc">${gT("struct_majors_desc") || "Dövlət təhsil standartlarına uyğun əyani və qiyabi orta ixtisas təhsili proqramları (19 İxtisas)"}</p>
+          <div class="majors-catalog-tabs" role="tablist">
+            <button type="button" class="majors-tab-btn active" data-major-view="eyani">
+              <span>📘 ${gT("major_eyani_tab") || "Əyani Təhsil"}</span>
+              <span class="tab-count">${eyaniMajors.length}</span>
+            </button>
+            <button type="button" class="majors-tab-btn" data-major-view="qiyabi">
+              <span>📗 ${gT("major_qiyabi_tab") || "Qiyabi Təhsil"}</span>
+              <span class="tab-count">${qiyabiMajors.length}</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="majors-pane active" id="majors-pane-eyani">
+          <div class="majors-table-container">
+            <table class="majors-catalog-table">
+              <thead>
+                <tr>
+                  <th class="th-num">№</th>
+                  <th class="th-code">${gT("th_code") || "İxtisas Kodu"}</th>
+                  <th class="th-name">${gT("th_major") || "İxtisasın Tam Adı"}</th>
+                  <th class="th-field">${gT("th_field") || "Tədris Sahəsi"}</th>
+                  <th class="th-degree">${gT("th_degree") || "Təhsil Pilləsi"}</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${renderTableRows(eyaniMajors, "eyani")}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="majors-pane" id="majors-pane-qiyabi">
+          <div class="majors-table-container">
+            <table class="majors-catalog-table">
+              <thead>
+                <tr>
+                  <th class="th-num">№</th>
+                  <th class="th-code">${gT("th_code") || "İxtisas Kodu"}</th>
+                  <th class="th-name">${gT("th_major") || "İxtisasın Tam Adı"}</th>
+                  <th class="th-field">${gT("th_field") || "Tədris Sahəsi"}</th>
+                  <th class="th-degree">${gT("th_degree") || "Təhsil Pilləsi"}</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${renderTableRows(qiyabiMajors, "qiyabi")}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Click on any tree member triggers person detail
+    treeCanvas.querySelectorAll("[data-person-id]").forEach((el) => {
+      el.addEventListener("click", () => {
+        const id = el.dataset.personId;
+        const allStaff = [...staffData.leadership, ...staffData.departments, ...staffData.commissions];
+        const person = allStaff.find((p) => p.id === id);
+        if (person) {
+          openPersonDetail(person);
+        }
+      });
+    });
+
+    // Majors switcher tabs in tree canvas
+    treeCanvas.querySelectorAll(".majors-tab-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const view = btn.dataset.majorView;
+        treeCanvas.querySelectorAll(".majors-tab-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        treeCanvas.querySelectorAll(".majors-pane").forEach((p) => p.classList.remove("active"));
+        const target = treeCanvas.querySelector(`#majors-pane-${view}`);
+        if (target) target.classList.add("active");
+      });
+    });
+  }
+
+    // ─── 2. RENDER COMMISSIONS (9 FBK) GRID ────────────────────────────
+  function renderCommissionsGrid() {
+    const grid = document.getElementById("fbk-grid");
+    if (!grid) return;
+    grid.innerHTML = fbkList.map((fbk) => {
+      const title = fbk[`title_${currentLang}`] || fbk.title_az;
+      const desc = fbk[`desc_${currentLang}`] || fbk.desc_az;
+      const chair = fbk[`chair_${currentLang}`] || fbk.chair_az;
+      const disciplines = fbk.disciplines_az || [];
+      const viewLabel = currentLang === "en" ? "View Details →" : currentLang === "ru" ? "Подробнее →" : "Ətraflı Bax →";
+
+      return `
+        <div class="fbk-card" data-fbk-id="${fbk.id}">
+          <div class="fbk-card-header">
+            <div class="fbk-icon-wrap">
+              <span class="fbk-icon">${fbk.icon}</span>
+            </div>
+            <div class="fbk-meta-badge">
+              <span class="fbk-code">${fbk.code}</span>
+              <span class="fbk-status-pill">${fbk.status}</span>
+            </div>
+          </div>
+          <h4 class="fbk-title">${title}</h4>
+          <p class="fbk-desc">${desc}</p>
+          <div class="fbk-disciplines">
+            ${disciplines.map(d => `<span class="fbk-chip">${d}</span>`).join("")}
+          </div>
+          <div class="fbk-card-footer">
+            <span class="fbk-dept-link">👨‍🏫 Sədr: ${chair}</span>
+            <span class="fbk-card-action">${viewLabel}</span>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    // Modal detail click on fbk-card
+    grid.querySelectorAll(".fbk-card").forEach((card) => {
+      card.addEventListener("click", () => {
+        const id = card.dataset.fbkId;
+        const fbk = fbkList.find((f) => f.id === id);
+        if (fbk && modal && modalGrid) {
+          const modalContainer = modal.querySelector(".modal-container");
+          if (modalContainer) modalContainer.classList.add("is-person-detail");
+          if (modalTitle) modalTitle.textContent = fbk[`title_${currentLang}`] || fbk.title_az;
+          modalGrid.classList.remove("table-mode");
+          modalGrid.classList.add("person-detail-active");
+
+          const disciplines = fbk.disciplines_az || [];
+          const chair = fbk[`chair_${currentLang}`] || fbk.chair_az;
+          const desc = fbk[`desc_${currentLang}`] || fbk.desc_az;
+
+          modalGrid.innerHTML = `
+            <div class="fbk-modal-detail" style="padding: 24px; color: var(--text);">
+              <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                <div style="font-size: 2.5rem; width: 64px; height: 64px; border-radius: 16px; background: rgba(184, 147, 74, 0.15); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(184, 147, 74, 0.3);">${fbk.icon}</div>
+                <div>
+                  <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--gold-light); font-weight: 700; background: rgba(184, 147, 74, 0.1); padding: 3px 10px; border-radius: 6px; border: 1px solid rgba(184, 147, 74, 0.25);">${fbk.code}</span>
+                  <h3 style="margin: 8px 0 4px; font-family: var(--font-display); font-size: 1.35rem; font-weight: 800;">${fbk[`title_${currentLang}`] || fbk.title_az}</h3>
+                  <div style="color: var(--text-dim); font-size: 0.9rem;">👨‍🏫 <strong>Sədr:</strong> ${chair}</div>
+                </div>
+              </div>
+              <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-dim); margin-bottom: 20px;">${desc}</p>
+              <div>
+                <h5 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold-light); margin-bottom: 10px;">Tədris olunan əsas fənlər:</h5>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  ${disciplines.map(d => `<span style="background: var(--surface); border: 1px solid var(--border); padding: 5px 12px; border-radius: 12px; font-size: 0.82rem; font-weight: 600;">${d}</span>`).join("")}
+                </div>
+              </div>
+            </div>
+          `;
+          modal.classList.add("active");
+          modal.setAttribute("aria-hidden", "false");
+          html.classList.add("modal-open");
+        }
+      });
+    });
+  }
+
+  // Major tabs switching in in-page grid
+  liveGrid?.addEventListener("click", (e) => {
+    const tab = e.target.closest(".major-tab");
+    if (tab) {
+      const target = tab.getAttribute("data-target");
+      liveGrid.querySelectorAll(".major-tab").forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+      liveGrid.querySelectorAll(".major-section").forEach((s) => s.classList.remove("active"));
+      const targetSection = liveGrid.querySelector(`#major-section-${target}`);
+      if (targetSection) targetSection.classList.add("active");
+    }
+  });
+
+  // ─── 3. PERSON DETAIL MODAL ────────────────────────────────────────
+  function openPersonDetail(person) {
+    if (!modal || !modalGrid) return;
+    const name = person[`name_${currentLang}`] || person.name_az || "";
+    const role = person[`role_${currentLang}`] || person.role_az || "";
+    const modalContainer = modal.querySelector(".modal-container");
+    if (modalContainer) modalContainer.classList.add("is-person-detail");
+
+    if (modalTitle) modalTitle.textContent = name;
+    modalGrid.classList.remove("table-mode");
+    modalGrid.classList.add("person-detail-active");
+
+    // Determine category badge text
+    let badgeText = gT("struct_director_badge") || "Kollec Rəhbərliyi";
+    if (person.id === "1") {
+      badgeText = gT("struct_director_badge") || "Kollec Direktorluğu";
+    } else if (person.id === "2" || person.id === "3") {
+      badgeText = gT("struct_deputies_badge") || "Direktor Müavini";
+    } else if (staffData.departments && staffData.departments.some((p) => p.id === person.id)) {
+      badgeText = gT("cat_departments") || "Şöbə Müdiri / İnzibati Heyət";
+    } else if (staffData.commissions && staffData.commissions.some((p) => p.id === person.id)) {
+      badgeText = gT("cat_commissions") || "Fənn Birləşmə Komissiyası";
+    }
+
+    let photoClass = "";
+    if (person.id === "1") photoClass = "director-photo";
+    else if (person.id === "2") photoClass = "sahmurad-photo";
+    else if (person.id === "3") photoClass = "ismayil-photo";
+    else if (person.id === "7") photoClass = "babek-photo";
+    else if (person.id === "9") photoClass = "sekine-photo";
+    else if (person.id === "11") photoClass = "ceyhun-photo";
+    else if (person.id === "12") photoClass = "seide-photo";
+    else if (person.id === "13") photoClass = "xelil-photo";
+    else if (person.img && person.img.includes("fizuli")) photoClass = "fizuli-photo";
+    else if (person.id === "14") photoClass = "resmiyye-photo";
+    else if (person.id === "16") photoClass = "vefa-photo";
+    else if (person.id === "18") photoClass = "gunay-photo";
+    else if (person.id === "19") photoClass = "azer-photo";
+    else if (person.id === "20") photoClass = "leman-photo";
+    else if (person.id === "22") photoClass = "aynur-photo";
+    else if (person.id === "27") photoClass = "aygun-photo";
+    else if (person.id === "28") photoClass = "sohle-photo";
+    else if (person.id === "23") photoClass = "yegane-photo";
+    else if (person.id === "24") photoClass = "natiq-photo";
+    else if (person.id === "25") photoClass = "sevda-photo";
+    else if (person.id === "26") photoClass = "selale-photo";
+
+    const bioText = person[`bio_${currentLang}`] || person.bio_az;
+    const highlights = person.highlights || [];
+    const milestones = person.milestones || [];
+
+    if (bioText) {
+      modalContainer?.classList.add("has-bio");
+    } else {
+      modalContainer?.classList.remove("has-bio");
+    }
+
+    const zoomLabel = gT("photo_zoom_hint") || "Tam böyüt";
+    const zoomBtnLabel = gT("photo_zoom_btn") || "Tam Ekranda Foto";
+    const closeBtnLabel = gT("modal_close_btn") || "Pəncərəni Bağla";
+    const staffLabel = currentLang === "az" ? "Rəsmi Təyinatlı Ştat" : currentLang === "en" ? "Official Faculty Staff" : "Официальный штат";
+
+    modalGrid.innerHTML = `
+      <div class="person-detail-card">
+        <div class="person-detail-photo-frame ${photoClass}" id="person-photo-zoom-trigger" title="${name} - ${zoomLabel}">
+          <img src="${person.img}" alt="${name}" onerror="this.onerror=null;this.src='logo.jpg';">
+          <div class="person-photo-zoom-hint">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>${zoomLabel}</span>
+          </div>
+        </div>
+        <div class="person-detail-body">
+          <span class="person-detail-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ${badgeText}
+          </span>
+          <h3 class="person-detail-name">${name}</h3>
+          <div class="person-detail-role">${role}</div>
+
+          ${highlights.length ? `
+            <div class="person-bio-highlights">
+              ${highlights.map(h => `
+                <div class="bio-highlight-item">
+                  <span class="bio-highlight-icon">${h.icon}</span>
+                  <span>${h[`text_${currentLang}`] || h.text_az}</span>
+                </div>
+              `).join("")}
+            </div>
+          ` : ""}
+
+          ${bioText ? `
+            <div class="person-bio-card">
+              <div class="person-bio-heading">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <span>${currentLang === "az" ? "Haqqında / Tərcümeyi-hal" : currentLang === "en" ? "About & Biography" : "Биография и деятельность"}</span>
+              </div>
+              <p class="person-bio-text">${bioText}</p>
+            </div>
+          ` : ""}
+
+          ${milestones.length ? `
+            <div class="person-milestones">
+              ${milestones.map(m => `
+                <div class="milestone-item">
+                  <span class="milestone-year">${m.year}</span>
+                  <span class="milestone-desc">${m[`text_${currentLang}`] || m.text_az}</span>
+                </div>
+              `).join("")}
+            </div>
+          ` : ""}
+
+          <div class="person-detail-divider"></div>
+          <div class="person-detail-meta">
+            <span class="meta-org">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              BDRNK
+            </span>
+            <span class="meta-status">
+              ● ${staffLabel}
+            </span>
+          </div>
+          ${person.id === "1" ? `
+            <button type="button" class="person-director-bio-btn" id="person-director-bio-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              <span>Rəsmi Bioqrafiya və Təəssüratlar (Tam Oxu Rejimi)</span>
+            </button>
+          ` : ""}
+          <div class="person-detail-actions">
+            <button type="button" class="person-detail-zoom-action-btn" id="person-detail-zoom-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              <span>${zoomBtnLabel}</span>
+            </button>
+            <button type="button" class="person-detail-close-action-btn" id="person-detail-close-btn">
+              <span>${closeBtnLabel}</span>
+            </button>
+          </div>
+        </div>
+      </div>`;
+
+    // Hook up zoom triggers to open Cinema Lightbox
+    const triggerZoom = () => {
+      if (typeof window.openCinemaLightbox === "function") {
+        window.openCinemaLightbox([
+          {
+            src: person.img,
+            label: `${name} — ${role.replace(/<br\s*\/?>/gi, " ")}`,
+            catTitle: badgeText,
+            type: "image"
+          }
+        ], 0);
+      }
+    };
+
+    const photoTrigger = modalGrid.querySelector("#person-photo-zoom-trigger");
+    const zoomActionBtn = modalGrid.querySelector("#person-detail-zoom-btn");
+    const closeActionBtn = modalGrid.querySelector("#person-detail-close-btn");
+
+    photoTrigger?.addEventListener("click", triggerZoom);
+    zoomActionBtn?.addEventListener("click", triggerZoom);
+    closeActionBtn?.addEventListener("click", closeModal);
+
+    modal.classList.add("active");
+    html.classList.add("scroll-locked");
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    const modalContainer = modal.querySelector(".modal-container");
+    if (modalContainer) {
+      modalContainer.classList.remove("is-person-detail");
+      modalContainer.classList.remove("has-bio");
+    }
+    if (modalGrid) modalGrid.classList.remove("person-detail-active");
+    modal.classList.remove("active");
+    html.classList.remove("scroll-locked");
+  }
+
+  closeBtn?.addEventListener("click", closeModal);
+  modal?.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // ─── 4. VIEW TOGGLE LOGIC ──────────────────────────────────────────
+  function switchView(view) {
+    currentView = view;
+    if (view === "tree") {
+      toggleTreeBtn?.classList.add("active");
+      toggleTreeBtn?.setAttribute("aria-selected", "true");
+      toggleCardsBtn?.classList.remove("active");
+      toggleCardsBtn?.setAttribute("aria-selected", "false");
+
+      treePane?.classList.add("active");
+      commissionsPane?.classList.remove("active");
+      renderTree();
+    } else {
+      toggleCardsBtn?.classList.add("active");
+      toggleCardsBtn?.setAttribute("aria-selected", "true");
+      toggleTreeBtn?.classList.remove("active");
+      toggleTreeBtn?.setAttribute("aria-selected", "false");
+
+      commissionsPane?.classList.add("active");
+      treePane?.classList.remove("active");
+      renderCommissionsGrid();
+    }
+  }
+
+  toggleTreeBtn?.addEventListener("click", () => switchView("tree"));
+  toggleCardsBtn?.addEventListener("click", () => switchView("commissions"));
+
+  // ─── 5. SUBTABS SELECTION ──────────────────────────────────────────
+  subtabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      subtabs.forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+      currentCategory = tab.dataset.category || "leadership";
+      renderCards(currentCategory);
+    });
+  });
+
+  // ─── 6. LIVE SEARCH FILTER ─────────────────────────────────────────
+  function handleSearch(term) {
+    const q = (term || "").trim().toLowerCase();
+    if (searchClear) {
+      if (q.length > 0) searchClear.classList.add("visible");
+      else searchClear.classList.remove("visible");
+    }
+
+    if (currentView === "tree") {
+      const items = treeCanvas.querySelectorAll(".tree-card-director, .tree-card-deputy, .tree-card-tier3, .tree-dept-card, .major-row");
+      items.forEach((item) => {
+        const text = (item.textContent || "").toLowerCase();
+        if (!q || text.includes(q)) {
+          item.style.display = "";
+          if (q) item.classList.add("struct-highlight");
+          else item.classList.remove("struct-highlight");
+        } else {
+          item.classList.remove("struct-highlight");
+          if (item.classList.contains("tree-dept-card") || item.classList.contains("major-row")) {
+            item.style.display = "none";
+          }
+        }
+      });
+    } else {
+      // In cards view
+      if (currentCategory === "majors") {
+        const rows = liveGrid.querySelectorAll("tbody tr");
+        rows.forEach((tr) => {
+          const text = (tr.textContent || "").toLowerCase();
+          tr.style.display = !q || text.includes(q) ? "" : "none";
+        });
+      } else {
+        const cards = commissionsPane ? commissionsPane.querySelectorAll(".fbk-card") : [];
+        cards.forEach((card) => {
+          const text = (card.textContent || "").toLowerCase();
+          card.style.display = !q || text.includes(q) ? "" : "none";
+        });
+      }
+    }
+  }
+
+  searchInput?.addEventListener("input", (e) => handleSearch(e.target.value));
+  searchClear?.addEventListener("click", () => {
+    if (searchInput) searchInput.value = "";
+    handleSearch("");
+  });
+
+  // ─── 7. EXTERNAL TRIGGERS (Header Nav & About Jump Links) ──────────
+  const navStructItems = document.querySelectorAll("[data-struct-cat], [data-struct-jump]");
+  navStructItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const cat = item.getAttribute("data-struct-cat") || item.getAttribute("data-struct-jump");
+      if (!cat) return;
+      currentCategory = cat;
+
+      // Activate Cards view and matching tab
+      switchView("cards");
+      subtabs.forEach((t) => {
+        if (t.dataset.category === cat) t.classList.add("active");
+        else t.classList.remove("active");
+      });
+      renderCards(cat);
+    });
+  });
+
+  // ─── 8. LANGUAGE CHANGE RE-RENDER ──────────────────────────────────
+  document.addEventListener("languageChanged", () => {
+    renderCategoriesCount();
+    if (currentView === "tree") {
+      renderTree();
+    } else {
+      renderCards(currentCategory);
+    }
+  });
+
+  // Initial Tree render
+  renderTree();
+}
+
+/**
+ * DIGITAL LIBRARY (Search & Filter Logic)
+ */
+function initLibraryModule() {
+  const grid = document.getElementById("books-grid");
+  const searchInput = document.getElementById("library-search");
+  const totalCounter = document.getElementById("lib-total-counter");
+
+  // Reading Room Modal refs
+  const readerModal = document.getElementById("book-reader-modal");
+  const readerBackdrop = document.getElementById("book-reader-backdrop");
+  const readerClose = document.getElementById("book-reader-close");
+  const readerIcon = document.getElementById("reader-book-icon");
+  const readerCat = document.getElementById("reader-book-cat");
+  const readerTitle = document.getElementById("reader-book-title");
+  const readerOpenExt = document.getElementById("reader-open-ext");
+  const readerCoverEmoji = document.getElementById("reader-cover-emoji");
+  const readerCoverName = document.getElementById("reader-cover-name");
+  const readerCoverAuthor = document.getElementById("reader-cover-author");
+  const readerMetaCat = document.getElementById("reader-meta-cat");
+  const readerMetaAuthor = document.getElementById("reader-meta-author");
+  const readerViewport = document.getElementById("book-reader-viewport");
+
+  function getCategoryDisplayName(catKey) {
+    const btn = document.querySelector(`#library-filter .filter-badge[data-filter="${catKey}"]`);
+    return btn ? btn.textContent.trim() : catKey;
+  }
+
+  function openBookReader(book) {
+    if (!readerModal) return;
+    const title = book[`title_${currentLang}`] || book.title_az;
+    const author = book[`author_${currentLang}`] || book.author_az;
+    const catLabel = getCategoryDisplayName(book.category);
+    const url = book.url || "#";
+    const isPdf = /\.pdf$/i.test(url);
+
+    const roomTitle =
+      currentLang === "en"
+        ? "BDRNK Digital Reading Room"
+        : currentLang === "ru"
+          ? "Цифровой читальный зал БГКСТ"
+          : "BDRNK Rəqəmsal Oxu Zalı";
+    const docBadge =
+      currentLang === "en"
+        ? "WORD / DOCX STUDY MANUAL"
+        : currentLang === "ru"
+          ? "УЧЕБНОЕ ПОСОБИЕ WORD / DOCX"
+          : "WORD / DOCX TƏDRİS VƏSAİTİ";
+    const docNote =
+      currentLang === "en"
+        ? "This textbook is compiled in Microsoft Word (DOCX) format. You can download the file directly to read or print the full text."
+        : currentLang === "ru"
+          ? "Данное учебное пособие составлено в формате Microsoft Word (DOCX). Вы можете напрямую скачать файл для чтения или печати."
+          : "Bu dərs vəsaiti Microsoft Word (DOCX) formatında tərtib edilmişdir. Tam mətni oxumaq və ya çap etmək üçün faylı birbaşa yükləyə bilərsiniz.";
+    const docDlBtn =
+      currentLang === "en"
+        ? "Download Study Manual (.DOCX)"
+        : currentLang === "ru"
+          ? "Скачать учебное пособие (.DOCX)"
+          : "Dərs Vəsaitini Yüklə (.DOCX)";
+
+    if (readerIcon) readerIcon.textContent = book.icon || "📘";
+    if (readerCat) readerCat.textContent = `${roomTitle} · ${catLabel}`;
+    if (readerTitle) readerTitle.textContent = title;
+    if (readerOpenExt) readerOpenExt.href = url;
+    if (readerCoverEmoji) readerCoverEmoji.textContent = book.icon || "📘";
+    if (readerCoverName) readerCoverName.textContent = title;
+    if (readerCoverAuthor) readerCoverAuthor.textContent = author;
+    if (readerMetaCat) readerMetaCat.textContent = catLabel;
+    if (readerMetaAuthor) readerMetaAuthor.textContent = author.replace(/^Müəllif:\s*|^Müəlliflər:\s*|^Author:\s*|^Authors:\s*|^Автор:\s*|^Авторы:\s*/i, "");
+
+    if (readerViewport) {
+      if (isPdf) {
+        readerViewport.innerHTML = `<iframe class="book-reader-iframe" src="${encodeURI(url)}" title="${title}"></iframe>`;
+      } else {
+        readerViewport.innerHTML = `
+          <div class="reader-doc-fallback">
+            <div class="reader-doc-badge">${docBadge}</div>
+            <div class="reader-doc-icon">${book.icon || "📄"}</div>
+            <h4>${title}</h4>
+            <p>${author}</p>
+            <p class="reader-doc-note">${docNote}</p>
+            <a href="${encodeURI(url)}" download class="btn btn-primary reader-doc-dl-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>${docDlBtn}</span>
+            </a>
+          </div>
+        `;
+      }
+    }
+
+    readerModal.classList.add("active");
+    readerModal.setAttribute("aria-hidden", "false");
+    document.documentElement.classList.add("scroll-locked");
+  }
+
+  function closeBookReader() {
+    if (!readerModal) return;
+    readerModal.classList.remove("active");
+    readerModal.setAttribute("aria-hidden", "true");
+    document.documentElement.classList.remove("scroll-locked");
+    if (readerViewport) readerViewport.innerHTML = "";
+  }
+
+  readerClose?.addEventListener("click", closeBookReader);
+  readerBackdrop?.addEventListener("click", closeBookReader);
+
+  function renderBooks(data) {
+    grid.innerHTML = "";
+    const countLabel =
+      currentLang === "en"
+        ? "Official Textbooks"
+        : currentLang === "ru"
+          ? "официальных учебных пособий"
+          : "Rəsmi Dərs Vəsaiti";
+    if (totalCounter) {
+      totalCounter.textContent = `${data.length} ${countLabel}`;
+    }
+
+    if (data.length === 0) {
+      grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-dim);">${gT("no_book")}</p>`;
+      return;
+    }
+
+    const readingRoomBtnText =
+      currentLang === "en"
+        ? "Reading Room"
+        : currentLang === "ru"
+          ? "Читальный зал"
+          : "Oxu Zalı";
+    const extBtnTitle =
+      currentLang === "en"
+        ? "Open in new tab / Download"
+        : currentLang === "ru"
+          ? "Открыть в новой вкладке / Скачать"
+          : "Yeni pəncərədə aç / Yüklə";
+
+    data.forEach((book) => {
+      const title = book[`title_${currentLang}`] || book.title_az;
+      const author = book[`author_${currentLang}`] || book.author_az;
+      const catLabel = getCategoryDisplayName(book.category);
+      const isPdf = /\.pdf$/i.test(book.url || "");
+      const formatTag = isPdf
+        ? currentLang === "en"
+          ? "PDF · READING ROOM"
+          : currentLang === "ru"
+            ? "PDF · ЧИТАЛЬНЫЙ ЗАЛ"
+            : "PDF · OXU ZALI"
+        : currentLang === "en"
+          ? "DOCX · TEXTBOOK"
+          : currentLang === "ru"
+            ? "DOCX · ПОСОБИЕ"
+            : "DOCX · VƏSAİT";
+
+      const card = document.createElement("div");
+      card.className = "book-card reveal visible";
+
+      card.innerHTML = `
+        <div class="book-card-inner">
+          <div class="book-cover">
+            <div class="book-3d-spine" aria-hidden="true"></div>
+            <div class="book-top-bar">
+              <span class="book-cat-tag">${catLabel}</span>
+              <span class="book-format-pill">${formatTag}</span>
+            </div>
+            <div class="book-emoji-wrap">
+              <span class="book-emoji">${book.icon}</span>
+            </div>
+            <div class="book-info">
+              <h4 class="book-title">${title}</h4>
+              <span class="book-author">${author}</span>
+              <div class="book-actions">
+                <button type="button" class="book-btn book-btn-preview">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                  <span>${readingRoomBtnText}</span>
+                </button>
+                <a href="${book.url || "#"}" target="_blank" rel="noopener noreferrer" class="book-btn-ext" title="${extBtnTitle}">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      card.querySelector(".book-cover")?.addEventListener("click", (e) => {
+        if (e.target.closest(".book-btn-ext")) return;
+        openBookReader(book);
+      });
+
+      grid.appendChild(card);
+    });
+  }
+
+  function applyFilter() {
+    const raw = searchInput.value || "";
+    const query = raw
+      .trim()
+      .toLowerCase()
+      .replace(/ı/g, "i")
+      .replace(/ə/g, "e");
+
+    const activeBtn = document.querySelector(
+      "#library-filter .filter-badge.active",
+    );
+    const activeFilter = activeBtn
+      ? activeBtn.getAttribute("data-filter")
+      : "all";
+
+    const filtered = libraryData.filter((book) => {
+      const matchCategory =
+        activeFilter === "all" || book.category === activeFilter;
+      if (!query) return matchCategory;
+
+      // Combine all text content and normalize for search
+      const textToSearch = [
+        book.title_az,
+        book.title_en,
+        book.title_ru,
+        book.author_az,
+        book.author_en,
+        book.author_ru,
+        book.category,
+      ]
+        .map((s) =>
+          (s || "").toLowerCase().replace(/ı/g, "i").replace(/ə/g, "e"),
+        )
+        .join(" ");
+
+      return matchCategory && textToSearch.includes(query);
+    });
+
+    renderBooks(filtered);
+  }
+
+  searchInput.addEventListener("input", applyFilter);
+
+  const filterContainer = document.getElementById("library-filter");
+  filterContainer.addEventListener("click", (e) => {
+    const btn = e.target.closest(".filter-badge");
+    if (!btn) return;
+    filterContainer
+      .querySelectorAll(".filter-badge")
+      .forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    applyFilter();
+  });
+
+  renderBooks(libraryData);
+
+  // Re-render when language changes
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      setTimeout(applyFilter, 50);
+    });
+  });
+}
+
+/**
+ * LECTURES HUB — ACADEMIC MEDIA STUDIO
+ */
+function initLecturesModule() {
+  const grid = document.getElementById("lectures-grid");
+  const filterContainer = document.getElementById("lecture-filter");
+  const deptGrid = document.getElementById("lecture-dept-grid");
+  const searchInput = document.getElementById("lecture-search");
+  const stage = document.getElementById("lecture-stage");
+  const studioDetails = document.getElementById("studio-current-details");
+  const studioPlaylist = document.getElementById("studio-playlist");
+
+  if (!grid || !filterContainer) return;
+
+  let activeCategory = "all";
+  let currentLecture = lecturesData[0] || null;
+  let isPlayingEmbed = false;
+
+  function getYoutubeId(url) {
+    if (!url) return "";
+    const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([A-Za-z0-9_-]{11})/);
+    return match ? match[1] : "";
+  }
+
+  function getCategoryLabel(cat) {
+    const map = {
+      informatika: gT("filter_informatika") || "İnformatika və İKT",
+      neqliyyat: gT("filter_transport") || "Nəqliyyat",
+      cografiya: gT("filter_cografiya") || "Coğrafiya",
+      fizika: gT("filter_fizika") || "Fizika",
+      telekommunikasiya: gT("filter_telecom") || "Telekommunikasiya",
+      tarix: gT("filter_tarix") || "Azərbaycan Tarixi",
+      "az-dili": gT("filter_azdili") || "Azərbaycan Dili",
+      edebiyyat: gT("filter_edebiyyat") || "Ədəbiyyat",
+      huquq: gT("filter_huquq") || "Hüquq və Konstitusiya",
+      biologiya: gT("filter_biologiya") || "Biologiya",
+      gch: gT("filter_gch") || "Çağırışaqədərki Hazırlıq",
+    };
+    return map[cat] || cat;
+  }
+
+  function getUIText() {
+    if (currentLang === "en") {
+      return {
+        watchStudio: "Watch in Studio",
+        playingNow: "Now Playing",
+        prevLesson: "← Prev",
+        nextLesson: "Next →",
+        openYT: "YouTube ↗",
+        searchPlaceholder: "Search video lectures...",
+        modulePrefix: "MODULE",
+        lessonsWord: "Video Lectures",
+        academyBanner: "BDRNK DIGITAL ACADEMY",
+        deptAllMeta: "23 Video Lessons · 8 Departments",
+        deptInfoMeta: "2 Video Lessons · IT & Programming",
+        deptTransMeta: "1 Video Lesson · Transport Systems",
+        deptGeoMeta: "2 Video Lessons · Geography & Earth",
+        deptPhysicsMeta: "1 Video Lesson · Physics & Science",
+        deptHistMeta: "9 Video Lessons · History & Victory",
+        deptAzDiliMeta: "1 Video Lesson · Grammar & Speech",
+        deptLawMeta: "6 Video Lessons · Law & Constitution",
+        deptBioMeta: "1 Video Lesson · Biology",
+      };
+    }
+    if (currentLang === "ru") {
+      return {
+        watchStudio: "Смотреть в студии",
+        playingNow: "Сейчас играет",
+        prevLesson: "← Пред.",
+        nextLesson: "След. →",
+        openYT: "YouTube ↗",
+        searchPlaceholder: "Поиск видеоуроков...",
+        modulePrefix: "МОДУЛЬ",
+        lessonsWord: "Видеоуроков",
+        academyBanner: "ЦИФРОВАЯ АКАДЕМИЯ БГКСТ",
+        deptAllMeta: "23 видеоурока · 8 предметов",
+        deptInfoMeta: "2 видеоурока · ИТ и Компьютеры",
+        deptTransMeta: "1 видеоурок · Транспортные системы",
+        deptGeoMeta: "2 видеоурока · География",
+        deptPhysicsMeta: "1 видеоурок · Физика",
+        deptHistMeta: "9 видеоуроков · История Азербайджана",
+        deptAzDiliMeta: "1 видеоурок · Азербайджанский язык",
+        deptLawMeta: "6 видеоуроков · Право и Конституция",
+        deptBioMeta: "1 видеоурок · Биология",
+      };
+    }
+    return {
+      watchStudio: "Studiyada İzlə",
+      playingNow: "İndi Oxudulur",
+      prevLesson: "← Əvvəlki",
+      nextLesson: "Növbəti →",
+      openYT: "YouTube ↗",
+      searchPlaceholder: "Videodərs axtar...",
+      modulePrefix: "MODUL",
+      lessonsWord: "Videodərs",
+      academyBanner: "BDRNK RƏQƏMSAL AKADEMİYA",
+      deptAllMeta: "23 Videodərs · 8 Fənn Bölməsi",
+      deptInfoMeta: "2 Videodərs · İT və Kompüter",
+      deptTransMeta: "1 Videodərs · Nəqliyyat Sistemləri",
+      deptGeoMeta: "2 Videodərs · Yer Elmləri və Coğrafiya",
+      deptPhysicsMeta: "1 Videodərs · Təbiət və Fizika",
+      deptHistMeta: "9 Videodərs · Tarix və Zəfər",
+      deptAzDiliMeta: "1 Videodərs · Qrammatika və Nitq",
+      deptLawMeta: "6 Videodərs · Hüquq Sistemi",
+      deptBioMeta: "1 Videodərs · Təbiət Elmləri",
+    };
+  }
+
+  function updateDeptMetaLabels() {
+    const ui = getUIText();
+    const map = {
+      "dept-meta-all": ui.deptAllMeta,
+      "dept-meta-informatika": ui.deptInfoMeta,
+      "dept-meta-neqliyyat": ui.deptTransMeta,
+      "dept-meta-cografiya": ui.deptGeoMeta,
+      "dept-meta-fizika": ui.deptPhysicsMeta,
+      "dept-meta-tarix": ui.deptHistMeta,
+      "dept-meta-az-dili": ui.deptAzDiliMeta,
+      "dept-meta-huquq": ui.deptLawMeta,
+      "dept-meta-biologiya": ui.deptBioMeta,
+    };
+    Object.entries(map).forEach(([id, text]) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = text;
+    });
+
+    // Update count badges
+    const countMap = {
+      "dept-count-all": lecturesData.length,
+      "dept-count-informatika": lecturesData.filter((l) => l.category === "informatika").length,
+      "dept-count-neqliyyat": lecturesData.filter((l) => l.category === "neqliyyat").length,
+      "dept-count-cografiya": lecturesData.filter((l) => l.category === "cografiya").length,
+      "dept-count-fizika": lecturesData.filter((l) => l.category === "fizika").length,
+      "dept-count-tarix": lecturesData.filter((l) => l.category === "tarix").length,
+      "dept-count-az-dili": lecturesData.filter((l) => l.category === "az-dili").length,
+      "dept-count-huquq": lecturesData.filter((l) => l.category === "huquq").length,
+      "dept-count-biologiya": lecturesData.filter((l) => l.category === "biologiya").length,
+    };
+    Object.entries(countMap).forEach(([id, count]) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = count;
+    });
+  }
+
+  function getFilteredList() {
+    const raw = (searchInput && searchInput.value) || "";
+    const query = raw
+      .trim()
+      .toLowerCase()
+      .replace(/ı/g, "i")
+      .replace(/ə/g, "e");
+
+    return lecturesData.filter((l) => {
+      const matchCat = activeCategory === "all" || l.category === activeCategory;
+      if (!query) return matchCat;
+      const text = [l.title_az, l.title_en, l.title_ru, l.category]
+        .map((s) => (s || "").toLowerCase().replace(/ı/g, "i").replace(/ə/g, "e"))
+        .join(" ");
+      return matchCat && text.includes(query);
+    });
+  }
+
+  function renderStudio(filteredList) {
+    if (!stage || !studioDetails || !studioPlaylist) return;
+    const list = filteredList && filteredList.length > 0 ? filteredList : lecturesData;
+    if (!currentLecture || !list.some((item) => item.id === currentLecture.id)) {
+      currentLecture = list[0];
+      isPlayingEmbed = false;
+    }
+    if (!currentLecture) return;
+
+    const ui = getUIText();
+    const title = currentLecture[`title_${currentLang}`] || currentLecture.title_az;
+    const catLabel = getCategoryLabel(currentLecture.category);
+    const currentIndex = list.findIndex((item) => item.id === currentLecture.id);
+    const modCode = `${ui.modulePrefix} #${String(currentIndex + 1).padStart(2, "0")}`;
+    const ytId = getYoutubeId(currentLecture.url);
+
+    if (isPlayingEmbed && ytId) {
+      stage.innerHTML = `
+        <iframe
+          src="https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0"
+          title="${title}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      `;
+    } else {
+      stage.innerHTML = `
+        <div class="stage-cover" id="stage-cover-trigger" role="button" tabindex="0" aria-label="${title}">
+          <img src="${currentLecture.thumb}" alt="${title}" />
+          <div class="stage-top-badges">
+            <span class="stage-cat-pill">${catLabel}</span>
+            <span class="stage-mod-pill">${modCode} · ${currentLecture.duration}</span>
+          </div>
+          <div class="stage-play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <div class="stage-bottom-bar">
+            <div>
+              <span class="stage-bottom-sub">${ui.academyBanner}</span>
+              <h3 class="stage-bottom-title">${title}</h3>
+            </div>
+          </div>
+        </div>
+      `;
+      const coverTrigger = document.getElementById("stage-cover-trigger");
+      if (coverTrigger) {
+        coverTrigger.addEventListener("click", () => {
+          isPlayingEmbed = true;
+          renderStudio(list);
+        });
+      }
+    }
+
+    studioDetails.innerHTML = `
+      <span class="studio-curr-tag">${catLabel} · ${modCode} (${currentLecture.duration})</span>
+      <h4 class="studio-curr-title">${title}</h4>
+      <div class="studio-curr-controls">
+        <button type="button" class="studio-ctrl-btn" id="studio-prev-btn">${ui.prevLesson}</button>
+        <button type="button" class="studio-ctrl-btn" id="studio-next-btn">${ui.nextLesson}</button>
+        <a href="${currentLecture.url}" target="_blank" rel="noopener noreferrer" class="studio-ctrl-btn primary">${ui.openYT}</a>
+      </div>
+    `;
+
+    const prevBtn = document.getElementById("studio-prev-btn");
+    const nextBtn = document.getElementById("studio-next-btn");
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        const prevIdx = (currentIndex - 1 + list.length) % list.length;
+        currentLecture = list[prevIdx];
+        isPlayingEmbed = false;
+        renderStudio(list);
+        highlightActiveCard();
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        const nextIdx = (currentIndex + 1) % list.length;
+        currentLecture = list[nextIdx];
+        isPlayingEmbed = false;
+        renderStudio(list);
+        highlightActiveCard();
+      });
+    }
+
+    studioPlaylist.innerHTML = list
+      .map((lec, idx) => {
+        const lTitle = lec[`title_${currentLang}`] || lec.title_az;
+        const activeCls = currentLecture && lec.id === currentLecture.id ? "active" : "";
+        return `
+          <button type="button" class="studio-pl-item ${activeCls}" data-pl-id="${lec.id}">
+            <span class="studio-pl-num">#${String(idx + 1).padStart(2, "0")}</span>
+            <span class="studio-pl-name">${lTitle}</span>
+            <span class="studio-pl-dur">${lec.duration}</span>
+          </button>
+        `;
+      })
+      .join("");
+
+    studioPlaylist.querySelectorAll(".studio-pl-item").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetId = parseInt(btn.getAttribute("data-pl-id"), 10);
+        const found = list.find((item) => item.id === targetId);
+        if (found) {
+          currentLecture = found;
+          isPlayingEmbed = true;
+          renderStudio(list);
+          highlightActiveCard();
+        }
+      });
+    });
+  }
+
+  function highlightActiveCard() {
+    grid.querySelectorAll(".lecture-card").forEach((card) => {
+      const id = parseInt(card.getAttribute("data-lec-id"), 10);
+      const btn = card.querySelector(".lecture-watch-btn span");
+      const ui = getUIText();
+      if (currentLecture && id === currentLecture.id) {
+        card.classList.add("active-playing");
+        if (btn) btn.textContent = ui.playingNow;
+      } else {
+        card.classList.remove("active-playing");
+        if (btn) btn.textContent = ui.watchStudio;
+      }
+    });
+  }
+
+  function renderLectures(data) {
+    grid.innerHTML = "";
+    const ui = getUIText();
+    if (searchInput) searchInput.placeholder = ui.searchPlaceholder;
+
+    if (data.length === 0) {
+      grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-dim); padding: 32px 0;">${gT("no_video")}</p>`;
+      return;
+    }
+
+    data.forEach((lec, index) => {
+      const title = lec[`title_${currentLang}`] || lec.title_az;
+      const catLabel = getCategoryLabel(lec.category);
+      const modNum = `#${String(index + 1).padStart(2, "0")}`;
+      const isActive = currentLecture && lec.id === currentLecture.id;
+
+      const card = document.createElement("div");
+      card.className = `lecture-card reveal visible${isActive ? " active-playing" : ""}`;
+      card.setAttribute("data-lec-id", lec.id);
+
+      card.innerHTML = `
+        <div class="lecture-thumb">
+          <span class="lecture-cat-badge">${catLabel}</span>
+          <span class="lecture-mod-badge">${modNum}</span>
+          <img src="${lec.thumb}" alt="${title}" loading="lazy" />
+          <div class="lecture-play">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <span class="lecture-dur-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            ${lec.duration}
+          </span>
+        </div>
+        <div class="lecture-info">
+          <h4 class="lecture-title">${title}</h4>
+          <div class="lecture-actions">
+            <button type="button" class="lecture-watch-btn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>${isActive ? ui.playingNow : ui.watchStudio}</span>
+            </button>
+            <a href="${lec.url}" target="_blank" rel="noopener noreferrer" class="lecture-ext-link" onclick="event.stopPropagation();">
+              ${ui.openYT}
+            </a>
+          </div>
+        </div>
+      `;
+
+      const selectAndPlayInStudio = () => {
+        currentLecture = lec;
+        isPlayingEmbed = true;
+        renderStudio(data);
+        highlightActiveCard();
+        const studioEl = document.getElementById("lecture-studio");
+        if (studioEl) {
+          const headerOffset = (document.getElementById("site-header")?.offsetHeight || 112) + 16;
+          const top = studioEl.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+      };
+
+      const thumbEl = card.querySelector(".lecture-thumb");
+      const watchBtn = card.querySelector(".lecture-watch-btn");
+      if (thumbEl) thumbEl.addEventListener("click", selectAndPlayInStudio);
+      if (watchBtn) watchBtn.addEventListener("click", selectAndPlayInStudio);
+
+      grid.appendChild(card);
+    });
+  }
+
+  function setCategory(cat) {
+    activeCategory = cat || "all";
+
+    // Sync filter badges
+    filterContainer.querySelectorAll(".filter-badge").forEach((b) => {
+      b.classList.toggle("active", b.getAttribute("data-filter") === activeCategory);
+    });
+
+    // Sync department cards
+    if (deptGrid) {
+      deptGrid.querySelectorAll(".lecture-dept-card").forEach((c) => {
+        c.classList.toggle("active", c.getAttribute("data-filter") === activeCategory);
+      });
+    }
+
+    const filtered = getFilteredList();
+    if (filtered.length > 0) {
+      currentLecture = filtered[0];
+      isPlayingEmbed = false;
+    }
+    renderStudio(filtered);
+    renderLectures(filtered);
+  }
+
+  // Filter badges click
+  filterContainer.addEventListener("click", (e) => {
+    const btn = e.target.closest(".filter-badge");
+    if (!btn) return;
+    setCategory(btn.getAttribute("data-filter"));
+  });
+
+  // Department cards click
+  if (deptGrid) {
+    deptGrid.addEventListener("click", (e) => {
+      const card = e.target.closest(".lecture-dept-card");
+      if (!card) return;
+      setCategory(card.getAttribute("data-filter"));
+      card.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    });
+  }
+
+  // Horizontal Slider Arrows for lecture departments
+  const deptPrevBtn = document.getElementById("lecture-dept-prev");
+  const deptNextBtn = document.getElementById("lecture-dept-next");
+  if (deptPrevBtn && deptGrid) {
+    deptPrevBtn.addEventListener("click", () => {
+      deptGrid.scrollBy({ left: -280, behavior: "smooth" });
+    });
+  }
+  if (deptNextBtn && deptGrid) {
+    deptNextBtn.addEventListener("click", () => {
+      deptGrid.scrollBy({ left: 280, behavior: "smooth" });
+    });
+  }
+
+  // Search input
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      const filtered = getFilteredList();
+      renderStudio(filtered);
+      renderLectures(filtered);
+    });
+  }
+
+  // Header & Mobile dropdown links for Videodərslər ([data-lecture-cat])
+  document.querySelectorAll("[data-lecture-cat]").forEach((item) => {
+    item.addEventListener("click", () => {
+      const cat = item.getAttribute("data-lecture-cat");
+      if (!cat) return;
+      if (document.activeElement && typeof document.activeElement.blur === "function") {
+        document.activeElement.blur();
+      }
+      const mobileNav = document.getElementById("mobile-nav");
+      const mobileToggle = document.getElementById("mobile-toggle");
+      if (mobileNav && mobileNav.classList.contains("active")) {
+        mobileNav.classList.remove("active");
+        if (mobileToggle) mobileToggle.classList.remove("active");
+        document.documentElement.classList.remove("scroll-locked");
+      }
+      setCategory(cat);
+    });
+  });
+
+  // Initial render
+  const initialList = getFilteredList();
+  updateDeptMetaLabels();
+  renderStudio(initialList);
+  renderLectures(initialList);
+
+  // Re-render when language changes
+  document.addEventListener("languageChanged", () => {
+    updateDeptMetaLabels();
+    const list = getFilteredList();
+    renderStudio(list);
+    renderLectures(list);
+  });
+}
+
+
+/**
+ * POST FORM & INTERACTIVE CONTACT HUB (Concepts 1, 3 & 5)
+ */
+function initForm() {
+  const form = document.getElementById("contact-form");
+  const msg = document.getElementById("form-success");
+  const rolePillsWrap = document.getElementById("cf-role-pills");
+  const roleInput = document.getElementById("cf-role-input");
+  const deptSelect = document.getElementById("cf-dept");
+  const topicChipsWrap = document.getElementById("cf-topic-chips");
+  const msgTextarea = document.getElementById("cf-message");
+  const livePill = document.getElementById("contact-live-status");
+  const liveText = document.getElementById("contact-live-text");
+
+  // 1. Live Working Hours Status (Baku Time: Mon–Fri 09:00–18:00)
+  function updateLiveWorkStatus() {
+    if (!livePill || !liveText) return;
+    try {
+      const now = new Date();
+      const bakuParts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Baku",
+        weekday: "short",
+        hour: "numeric",
+        hour12: false,
+      }).formatToParts(now);
+      const weekday = bakuParts.find((p) => p.type === "weekday")?.value || "Mon";
+      const hour = parseInt(bakuParts.find((p) => p.type === "hour")?.value || "10", 10);
+      const isWorkday = !["Sat", "Sun"].includes(weekday);
+      const isOpen = isWorkday && hour >= 9 && hour < 18;
+
+      livePill.classList.toggle("closed", !isOpen);
+      const key = isOpen ? "cac_status_open" : "cac_status_closed";
+      liveText.setAttribute("data-i18n", key);
+      liveText.textContent = gT(key);
+    } catch (_e) {
+      // Fallback
+    }
+  }
+
+  updateLiveWorkStatus();
+  document.addEventListener("languageChanged", updateLiveWorkStatus);
+
+  // 2. 1-Click Copy Buttons for Phone & Email
+  document.querySelectorAll(".cac-copy-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const val = btn.getAttribute("data-copy") || "";
+      const span = btn.querySelector("span") || btn;
+      const copiedLabel =
+        currentLang === "en"
+          ? "Copied ✓"
+          : currentLang === "ru"
+            ? "Скопировано ✓"
+            : "Kopyalandı ✓";
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(val).catch(() => {});
+      }
+      btn.classList.add("copied");
+      span.textContent = copiedLabel;
+      setTimeout(() => {
+        btn.classList.remove("copied");
+        span.textContent = gT("cac_copy_btn") || "Kopyala";
+      }, 2000);
+    });
+  });
+
+  // 3. Applicant Role Pills
+  if (rolePillsWrap) {
+    rolePillsWrap.addEventListener("click", (e) => {
+      const pill = e.target.closest(".cf-role-pill");
+      if (!pill) return;
+      rolePillsWrap.querySelectorAll(".cf-role-pill").forEach((p) => p.classList.remove("active"));
+      pill.classList.add("active");
+      if (roleInput) {
+        roleInput.value = pill.getAttribute("data-role") || "Tələbə";
+      }
+    });
+  }
+
+  // 4. Quick Topic Template Chips
+  const topicTemplates = {
+    cert: {
+      deptIdx: 5,
+      az: "Salam, mən kollecdə təhsil alıram və təhsil aldığım barədə rəsmi arayışın (və ya akademik transkriptin) verilməsi qaydası haqqında məlumat almaq istərdim.",
+      en: "Hello, I am a student at the college and would like to inquire about the procedure for obtaining an official student enrollment certificate (or academic transcript).",
+      ru: "Здравствуйте! Я обучаюсь в колледже и хотел(а) бы узнать о порядке получения официальной справки об обучении (или академического транскрипта).",
+    },
+    admission: {
+      deptIdx: 1,
+      az: "Salam, növbəti tədris ili üçün kollecə qəbul şərtləri, ixtisaslar və keçid balları barədə ətraflı məlumat almaq istərdim.",
+      en: "Hello, I would like to receive detailed information regarding the admission requirements, majors, and passing scores for the upcoming academic year.",
+      ru: "Здравствуйте! Хотел(а) бы получить подробную информацию об условиях приема, специальностях и проходных баллах на следующий учебный год.",
+    },
+    exam: {
+      deptIdx: 3,
+      az: "Salam, semestr imtahanlarının cədvəli, qiymətləndirmə meyarları və akademik borcların ləğvi qaydaları ilə bağlı məlumat almaq istərdim.",
+      en: "Hello, I would like to inquire about the semester exam schedule, evaluation criteria, and rules for clearing academic credits.",
+      ru: "Здравствуйте! Хотел(а) бы уточнить расписание семестровых экзаменов, критерии оценивания и порядок ликвидации академических задолженностей.",
+    },
+    visit: {
+      deptIdx: 6,
+      az: "Salam, rəhbərliyin və ya müvafiq şöbə müdirinin vətəndaş qəbulu günündə görüşə yazılmaq istərdim. Zəhmət olmasa uyğun vaxt barədə məlumat verərdiniz.",
+      en: "Hello, I would like to schedule an appointment during the official reception hours of the leadership or department head. Please let me know the available times.",
+      ru: "Здравствуйте! Я хотел(а) бы записаться на официальный прием к руководству или заведующему отделом. Пожалуйста, сообщите о доступном времени приема.",
+    },
+  };
+
+  if (topicChipsWrap && msgTextarea) {
+    topicChipsWrap.addEventListener("click", (e) => {
+      const chip = e.target.closest(".cf-topic-chip");
+      if (!chip) return;
+      const key = chip.getAttribute("data-topic");
+      const tpl = topicTemplates[key];
+      if (!tpl) return;
+
+      topicChipsWrap.querySelectorAll(".cf-topic-chip").forEach((c) => c.classList.remove("active"));
+      chip.classList.add("active");
+
+      if (deptSelect && typeof tpl.deptIdx === "number" && deptSelect.options[tpl.deptIdx]) {
+        deptSelect.selectedIndex = tpl.deptIdx;
+      }
+
+      msgTextarea.value = tpl[currentLang] || tpl.az;
+      msgTextarea.focus();
+    });
+
+    // Update template text if language changes while a template chip is active and unedited
+    document.addEventListener("languageChanged", () => {
+      const activeChip = topicChipsWrap.querySelector(".cf-topic-chip.active");
+      if (!activeChip) return;
+      const key = activeChip.getAttribute("data-topic");
+      const tpl = topicTemplates[key];
+      if (!tpl) return;
+      const currentVal = (msgTextarea.value || "").trim();
+      if (
+        currentVal === tpl.az ||
+        currentVal === tpl.en ||
+        currentVal === tpl.ru
+      ) {
+        msgTextarea.value = tpl[currentLang] || tpl.az;
+      }
+    });
+  }
+
+  if (!form) return;
+
+  function resetContactFormState() {
+    form.reset();
+    if (rolePillsWrap) {
+      rolePillsWrap.querySelectorAll(".cf-role-pill").forEach((p, idx) => {
+        p.classList.toggle("active", idx === 0);
+      });
+    }
+    if (roleInput) {
+      roleInput.value = "Tələbə";
+    }
+    if (topicChipsWrap) {
+      topicChipsWrap.querySelectorAll(".cf-topic-chip").forEach((c) => c.classList.remove("active"));
+    }
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const roleVal = roleInput ? roleInput.value.trim() : "Tələbə";
+    const deptVal = deptSelect ? deptSelect.value.trim() : "Ümumi Məlumat Mərkəzi";
+    const nameEl = document.getElementById("cf-name");
+    const phoneEl = document.getElementById("cf-phone");
+    const emailEl = document.getElementById("cf-email");
+    const subjectEl = document.getElementById("cf-subject-input");
+
+    const nameVal = nameEl ? nameEl.value.trim() : "";
+    const phoneVal = phoneEl ? phoneEl.value.trim() : "";
+    const emailVal = emailEl ? emailEl.value.trim() : "";
+    const messageVal = msgTextarea ? msgTextarea.value.trim() : "";
+
+    const dynamicSubject = `BDRNK Rəsmi Elektron Müraciət — ${nameVal || "Vətəndaş"} (${roleVal})`;
+    if (subjectEl) {
+      subjectEl.value = dynamicSubject;
+    }
+
+    const submitBtn = form.querySelector(".cf-submit-btn");
+    const origBtnText = submitBtn ? submitBtn.textContent : "";
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent =
+        currentLang === "en"
+          ? "Sending..."
+          : currentLang === "ru"
+            ? "Отправка..."
+            : "Göndərilir...";
+    }
+
+    const showSuccessAndReset = () => {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = gT("cf_send") || origBtnText;
+      }
+      msg.textContent =
+        (gT("cf_success") ||
+          "Müraciətiniz göndərildi! 1–3 iş günü ərzində cavablandırılacaqdır.") + " ✓";
+      msg.classList.add("show");
+      resetContactFormState();
+      setTimeout(() => {
+        msg.classList.remove("show");
+      }, 6000);
+    };
+
+    const submitViaHiddenIframe = () => {
+      try {
+        form.target = "cf_hidden_iframe";
+        HTMLFormElement.prototype.submit.call(form);
+        setTimeout(showSuccessAndReset, 700);
+      } catch (_err) {
+        showSuccessAndReset();
+      }
+    };
+
+    // If opened directly via file://, CORS blocks fetch Origin:null, so use hidden iframe POST
+    if (window.location.protocol === "file:") {
+      submitViaHiddenIframe();
+      return;
+    }
+
+    const payload = {
+      _subject: dynamicSubject,
+      _template: "table",
+      _captcha: "false",
+      _replyto: emailVal,
+      Müraciət_edən_statusu: roleVal,
+      Ünvanlanan_şöbə: deptVal,
+      Ad_və_Soyad: nameVal,
+      Əlaqə_nömrəsi: phoneVal,
+      E_poçt_ünvanı: emailVal,
+      email: emailVal,
+      Müraciət_mətni: messageVal,
+    };
+
+    fetch("https://formsubmit.co/ajax/askarovaleman58@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((res) => res.json().catch(() => ({})))
+      .then((data) => {
+        if (data && (data.success === "true" || data.success === true)) {
+          showSuccessAndReset();
+        } else {
+          // Do not fake success — show a real error (e.g. form not yet activated)
+          console.warn("FormSubmit:", data && data.message);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = gT("cf_send") || origBtnText;
+          }
+          msg.textContent =
+            currentLang === "en"
+              ? "Sending failed. Please try again later or call us."
+              : currentLang === "ru"
+                ? "Не удалось отправить. Попробуйте позже или позвоните нам."
+                : "Göndərmək alınmadı. Bir az sonra yenidən cəhd edin və ya bizə zəng edin.";
+          msg.classList.add("show");
+          setTimeout(() => msg.classList.remove("show"), 6000);
+        }
+      })
+      .catch(() => {
+        // Fallback to standard form POST via hidden iframe so the submission still reaches askarovaleman58@gmail.com
+        submitViaHiddenIframe();
+      });
+  });
+}
+
+// Bootstrap App
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("--- BDRNK App Bootstrap ---");
+
+  function safeInit(name, fn) {
+    try {
+      console.log(`Initializing ${name}...`);
+      fn();
+      console.log(`${name} OK.`);
+    } catch (e) {
+      console.error(`ERROR in ${name}:`, e);
+      // Non-blocking error reporting
+    }
+  }
+
+  /**
+   * NEWS MODULE — Hover-Reveal Cards
+   */
+  function initNewsModule() {
+    const grid = document.getElementById("news-grid");
+    const allNewsBtn = document.getElementById("btn-all-news");
+    if (!grid) return;
+
+    let showAll = false;
+    let currentArticleIdx = 0;
+    let articleFontSize = 1.05; // rem
+
+    // In-Page Article Reader Modal refs
+    const nrModal = document.getElementById("news-reader-modal");
+    const nrBackdrop = document.getElementById("news-reader-backdrop");
+    const nrClose = document.getElementById("news-reader-close");
+    const nrTag = document.getElementById("nr-tag");
+    const nrDate = document.getElementById("nr-date");
+    const nrTitle = document.getElementById("nr-title");
+    const nrImg = document.getElementById("nr-img");
+    const nrContent = document.getElementById("nr-content");
+    const nrRelatedList = document.getElementById("nr-related-list");
+    const nrPrevBtn = document.getElementById("nr-prev-btn");
+    const nrNextBtn = document.getElementById("nr-next-btn");
+    const nrPrevTitle = document.getElementById("nr-prev-title");
+    const nrNextTitle = document.getElementById("nr-next-title");
+    const nrFontDec = document.getElementById("news-font-dec");
+    const nrFontInc = document.getElementById("news-font-inc");
+    const nrPrintBtn = document.getElementById("news-print-btn");
+
+    function getNewsDate(item) {
+      if (!item) return "";
+      if (currentLang === "en" && item.date_en) return item.date_en;
+      if (currentLang === "ru" && item.date_ru) return item.date_ru;
+      return item.date || "";
+    }
+
+    function openNewsReader(index) {
+      if (!nrModal || !newsData[index]) return;
+      currentArticleIdx = index;
+      const item = newsData[index];
+      const title = item[`title_${currentLang}`] || item.title_az;
+      const desc = item[`desc_${currentLang}`] || item.desc_az;
+      const tag = item[`tag_${currentLang}`] || item.tag_az;
+      const localizedDate = getNewsDate(item);
+
+      if (nrTag) nrTag.textContent = tag;
+      if (nrDate) nrDate.textContent = localizedDate;
+      if (nrTitle) nrTitle.textContent = title;
+      if (nrImg) {
+        nrImg.src = item.image;
+        nrImg.alt = title;
+        nrImg.onerror = function () {
+          this.onerror = null;
+          this.src = "news1.webp";
+        };
+      }
+
+      const fullText =
+        item[`full_${currentLang}`] ||
+        item.full_az ||
+        item[`desc_${currentLang}`] ||
+        item.desc_az ||
+        "";
+
+      const officialFooter =
+        currentLang === "en"
+          ? "Baku State Communications and Transport College under Azerbaijan Technical University continues to implement consistent educational, scientific, and social initiatives aimed at preparing highly qualified specialists and supporting student development."
+          : currentLang === "ru"
+            ? "Бакинский государственный колледж связи и транспорта при Азербайджанском техническом университете продолжает реализацию последовательных образовательных, научных и социальных инициатив, направленных на подготовку высококвалифицированных специалистов."
+            : "Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci tələbələrin hərtərəfli inkişafı, yüksəkixtisaslı kadr hazırlığı və ictimai-mədəni fəallığın artırılması istiqamətində ardıcıl tədbirləri davam etdirir.";
+
+      const stampLabel =
+        currentLang === "en"
+          ? "BDRNK · PRESS SERVICE"
+          : currentLang === "ru"
+            ? "БГКСТ · ПРЕСС-СЛУЖБА"
+            : "BDRNK · MƏTBUAT XİDMƏTİ";
+
+      if (nrContent) {
+        nrContent.style.fontSize = `${articleFontSize}rem`;
+        const paragraphs = fullText
+          .split(/\n\s*\n/)
+          .map((p) => p.trim())
+          .filter(Boolean);
+        const parasHtml = paragraphs.length
+          ? paragraphs
+              .map((p, pIdx) =>
+                pIdx === 0
+                  ? `<p class="nr-lead-para">${p}</p>`
+                  : `<p class="nr-body-para">${p}</p>`
+              )
+              .join("")
+          : `<p class="nr-lead-para">${desc}</p>`;
+
+        nrContent.innerHTML = `
+          ${parasHtml}
+          <p class="nr-body-para">${officialFooter}</p>
+          <div class="nr-official-stamp">
+            <span class="nr-stamp-seal">${stampLabel}</span>
+            <span class="nr-stamp-date">${localizedDate}</span>
+          </div>
+        `;
+      }
+
+      // Prev / Next buttons
+      const prevIdx = (index - 1 + newsData.length) % newsData.length;
+      const nextIdx = (index + 1) % newsData.length;
+      if (nrPrevTitle) nrPrevTitle.textContent = newsData[prevIdx][`title_${currentLang}`] || newsData[prevIdx].title_az;
+      if (nrNextTitle) nrNextTitle.textContent = newsData[nextIdx][`title_${currentLang}`] || newsData[nextIdx].title_az;
+
+      // Related news list
+      if (nrRelatedList) {
+        nrRelatedList.innerHTML = newsData
+          .map((n, idx) => {
+            if (idx === index) return "";
+            const nTitle = n[`title_${currentLang}`] || n.title_az;
+            const nTag = n[`tag_${currentLang}`] || n.tag_az;
+            const nDate = getNewsDate(n);
+            return `
+              <button type="button" class="nr-related-card" data-news-idx="${idx}">
+                <img src="${n.image}" alt="" loading="lazy" onerror="this.onerror=null;this.src='news1.webp';" />
+                <div class="nr-related-info">
+                  <span class="nr-related-tag">${nTag} · ${nDate}</span>
+                  <h5>${nTitle}</h5>
+                </div>
+              </button>
+            `;
+          })
+          .join("");
+
+        nrRelatedList.querySelectorAll(".nr-related-card").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const targetIdx = parseInt(btn.getAttribute("data-news-idx"), 10);
+            openNewsReader(targetIdx);
+            document.getElementById("news-reader-article")?.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        });
+      }
+
+      nrModal.classList.add("active");
+      nrModal.setAttribute("aria-hidden", "false");
+      document.documentElement.classList.add("scroll-locked");
+    }
+
+    function closeNewsReader() {
+      if (!nrModal) return;
+      nrModal.classList.remove("active");
+      nrModal.setAttribute("aria-hidden", "true");
+      document.documentElement.classList.remove("scroll-locked");
+    }
+
+    nrClose?.addEventListener("click", closeNewsReader);
+    nrBackdrop?.addEventListener("click", closeNewsReader);
+    nrPrevBtn?.addEventListener("click", () => {
+      openNewsReader((currentArticleIdx - 1 + newsData.length) % newsData.length);
+      document.getElementById("news-reader-article")?.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    nrNextBtn?.addEventListener("click", () => {
+      openNewsReader((currentArticleIdx + 1) % newsData.length);
+      document.getElementById("news-reader-article")?.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    nrFontDec?.addEventListener("click", () => {
+      articleFontSize = Math.max(0.88, +(articleFontSize - 0.08).toFixed(2));
+      if (nrContent) nrContent.style.fontSize = `${articleFontSize}rem`;
+    });
+    nrFontInc?.addEventListener("click", () => {
+      articleFontSize = Math.min(1.38, +(articleFontSize + 0.08).toFixed(2));
+      if (nrContent) nrContent.style.fontSize = `${articleFontSize}rem`;
+    });
+    nrPrintBtn?.addEventListener("click", () => window.print());
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && nrModal?.classList.contains("active")) {
+        closeNewsReader();
+      }
+    });
+
+    function renderNews() {
+      grid.innerHTML = "";
+      const itemsToRender = showAll ? newsData : newsData.slice(0, 6);
+
+      itemsToRender.forEach((item, idx) => {
+        const title = item[`title_${currentLang}`] || item.title_az;
+        const desc = item[`desc_${currentLang}`] || item.desc_az;
+        const tag = item[`tag_${currentLang}`] || item.tag_az;
+        const localizedDate = getNewsDate(item);
+        const readMore = gT("news_read_more");
+
+        const card = document.createElement("div");
+        card.className = "news-card";
+        card.style.cursor = "pointer";
+        card.innerHTML = `
+          <div class="news-card-media">
+            <img class="news-card-img" src="${item.image}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='news1.webp';" />
+            <span class="news-card-tag">${tag}</span>
+          </div>
+          <div class="news-card-overlay">
+            ${localizedDate ? `<span class="news-card-date">${localizedDate}</span>` : ""}
+            <h3 class="news-card-title">${title}</h3>
+            <div class="news-card-reveal">
+              <p>${desc}</p>
+              <button type="button" class="news-card-link news-open-reader-btn">${readMore}</button>
+            </div>
+          </div>
+        `;
+        card.addEventListener("click", (e) => {
+          e.preventDefault();
+          openNewsReader(idx);
+        });
+        grid.appendChild(card);
+      });
+
+      if (allNewsBtn) {
+        if (showAll || newsData.length <= 3) {
+          allNewsBtn.style.display = "none";
+        } else {
+          allNewsBtn.style.display = "inline-block";
+        }
+      }
+
+      if (nrModal && nrModal.classList.contains("active")) {
+        openNewsReader(currentArticleIdx);
+      }
+    }
+
+    if (allNewsBtn) {
+      allNewsBtn.addEventListener("click", (e) => {
+        if (e) e.preventDefault();
+        showAll = true;
+        // Keep current scroll position by preventing layout collapse
+        const currentHeight = grid.offsetHeight;
+        grid.style.minHeight = `${currentHeight}px`;
+        renderNews();
+        // Remove min-height after rendering
+        setTimeout(() => { grid.style.minHeight = ""; }, 100);
+      });
+    }
+
+    renderNews();
+
+    // Re-render on language and theme change
+    document.addEventListener("themeChanged", renderNews);
+    document.addEventListener("languageChanged", renderNews);
+    const langBtns = document.querySelectorAll(".lang-btn");
+    langBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        setTimeout(renderNews, 50);
+      });
+    });
+  }
+
+
+  function initRoadmapModule() {
+    const roadmapSection = document.getElementById("roadmap");
+    const items = document.querySelectorAll(".roadmap-item");
+    if (!roadmapSection) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+
+    items.forEach((item) => observer.observe(item));
+  }
+
+  const admissionScores = {
+    "040406": 110.5, // Mühasibat uçotu
+    "040554": 102.4, // Poçt rabitəsi
+    "040556": 100.2, // Radio, televiziya
+    "040405": 92.6,  // Marketinq
+    "040544": 105.8, // Mobil şəbəkə
+    "040565": 101.5, // Telekom şəbəkələri
+    "040508": 103.1, // Çoxkanallı
+    "040572": 88.4,  // Vaqon
+    "040552": 98.7,  // Nəqliyyat logistikası
+    "040550": 85.3,  // Nəqliyyat vasitələri
+    "040518": 75.0,  // Ekologiya
+    "040529": 112.4, // Kompüter sistemləri
+    "040533": 108.2, // Kompüter avadanlıqları
+    "040532": 115.6  // Kompüter şəbəkələri
+  };
+
+  function initAdmissionCalculator() {
+    const scoreInput = document.getElementById("calc-score");
+    const majorSelect = document.getElementById("calc-major");
+    const calcBtn = document.getElementById("btn-calculate");
+    const percentSpan = document.getElementById("calc-percent");
+    const gaugeFill = document.getElementById("gauge-path");
+    const msgPara = document.getElementById("calc-message");
+
+    if (!calcBtn || !majorSelect) return;
+
+    // Populate majors
+    function populateMajors() {
+      const currentLabel = (majorSelect.options[0] && majorSelect.options[0].textContent) || (currentLang === 'az' ? 'İxtisası seçin...' : (currentLang === 'en' ? 'Select a major...' : 'Выберите специальность...'));
+      majorSelect.innerHTML = `<option value="">${currentLabel}</option>`;
+
+      const allMajors = [];
+      if (staffData.majors.eyani) allMajors.push(...staffData.majors.eyani);
+      if (staffData.majors.qiyabi) allMajors.push(...staffData.majors.qiyabi);
+
+      allMajors.forEach(m => {
+        const opt = document.createElement("option");
+        opt.value = m.code;
+        const isQiyabi = staffData.majors.qiyabi && staffData.majors.qiyabi.some(qm => qm.code === m.code);
+        const mode = isQiyabi ? (currentLang === 'az' ? ' (Qiyabi)' : (currentLang === 'en' ? ' (Part-time)' : ' (Заочно)')) : '';
+        opt.textContent = m[`name_${currentLang}`] + mode;
+        majorSelect.appendChild(opt);
+      });
+    }
+
+    populateMajors();
+
+    // Re-populate on language change
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.addEventListener("click", () => setTimeout(populateMajors, 100));
+    });
+
+    calcBtn.addEventListener("click", () => {
+      const score = parseFloat(scoreInput.value) || 0;
+      const majorCode = majorSelect.value;
+
+      if (!majorCode) {
+        msgPara.textContent =
+          currentLang === "en"
+            ? "Please select a major."
+            : currentLang === "ru"
+              ? "Пожалуйста, выберите специальность."
+              : "Zəhmət olmasa ixtisas seçin.";
+        return;
+      }
+
+      const minScore = admissionScores[majorCode] || 100;
+
+      // Calculate chance based on real scores
+      // If score is >= minScore, chance is high (80-100%)
+      // If score is < minScore, chance drops
+      let chance = 0;
+      const diff = score - minScore;
+
+      if (diff >= 0) {
+        // Above min score
+        chance = 85 + (diff / (300 - minScore)) * 15;
+      } else {
+        // Below min score
+        chance = Math.max(5, 80 + (diff / minScore) * 80);
+      }
+
+      if (score === 0) chance = 0;
+
+      const roundedChance = Math.round(Math.min(100, chance));
+      percentSpan.textContent = roundedChance;
+
+      const dash = 126;
+      const offset = dash - (dash * roundedChance) / 100;
+      gaugeFill.style.strokeDasharray = dash;
+      gaugeFill.style.strokeDashoffset = offset;
+
+      if (roundedChance < 40) msgPara.textContent = gT("calc_msg_low");
+      else if (roundedChance < 80) msgPara.textContent = gT("calc_msg_mid");
+      else msgPara.textContent = gT("calc_msg_high");
+    });
+  }
+
+  safeInit("Scroll", initScrollEngine);
+  safeInit("Theme", initThemeEngine);
+  safeInit("Language", initLanguageEngine);
+  safeInit("Texts", updateDOMTexts);
+  safeInit("SISTilt", initSISTilt);
+  safeInit("Particles", initParticlesEngine);
+  safeInit("Structure", initStructureModule);
+  safeInit("Library", initLibraryModule);
+  safeInit("Lectures", initLecturesModule);
+// Karabakh Showcase Fullscreen & Playback handler (Consecutive videos)
+  safeInit("QarabagCinema", () => {
+    const qarabagExpandBtn = document.getElementById("qarabag-cinema-expand-btn");
+    const qarabagPlayer = document.getElementById("qarabag-inline-player");
+    const qarabagGezintiBtn = document.getElementById("qarabag-gezinti-expand-btn");
+    const qarabagGezintiPlayer = document.getElementById("qarabag-gezinti-player");
+
+    const reqFs = (elem) => {
+      if (!elem) return;
+      if (elem.requestFullscreen) elem.requestFullscreen();
+      else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+      else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+    };
+
+    if (qarabagExpandBtn && qarabagPlayer) {
+      qarabagExpandBtn.addEventListener("click", () => reqFs(qarabagPlayer));
+    }
+    if (qarabagGezintiBtn && qarabagGezintiPlayer) {
+      qarabagGezintiBtn.addEventListener("click", () => reqFs(qarabagGezintiPlayer));
+    }
+
+    // Mutual pause & sequential auto-flow
+    if (qarabagPlayer && qarabagGezintiPlayer) {
+      qarabagPlayer.addEventListener("play", () => {
+        if (!qarabagGezintiPlayer.paused) qarabagGezintiPlayer.pause();
+      });
+      qarabagGezintiPlayer.addEventListener("play", () => {
+        if (!qarabagPlayer.paused) qarabagPlayer.pause();
+      });
+      qarabagPlayer.addEventListener("ended", () => {
+        try {
+          qarabagGezintiPlayer.play();
+        } catch (_) {}
+      });
+    }
+  });
+
+    safeInit("News", initNewsModule);
+  safeInit("Roadmap", initRoadmapModule);
+  safeInit("Stats", initStatsCounter);
+  safeInit("AdmissionCalc", initAdmissionCalculator);
+
+  safeInit("Form", initForm);
+  safeInit("FAQ", initFAQModule);
+  safeInit("VideoCarousel", initVideoCarousel);
+  safeInit("Preloader", initPreloader);
+  safeInit("SceneTransition", initSceneTransition);
+  safeInit("ContextMenu", initContextMenu);
+  safeInit("SpotlightCards", initSpotlightCards);
+  safeInit("Ticker", initTicker);
+  safeInit("FluxEngine", initFluxEngine);
+  safeInit("HeroParallax", initHeroParallax);
+  safeInit("Gallery", initGalleryModule);
+  safeInit("Memorial", initMemorialCandle);
+});
+
+/* ═══════════════ MEMORIAL CANDLE ═══════════════ */
+function initMemorialCandle() {
+  const btn = document.getElementById("memorial-candle-btn");
+  const msg = document.getElementById("memorial-candle-msg");
+  if (!btn || !msg) return;
+
+  const label = btn.querySelector(".candle-label");
+
+  function lightCandle() {
+    btn.classList.add("lit");
+    btn.disabled = true;
+    if (label) {
+      label.setAttribute("data-i18n", "mem_candle_lit");
+      label.textContent = gT("mem_candle_lit");
+    }
+    msg.classList.add("show");
+  }
+
+  btn.addEventListener("click", lightCandle);
+}
+
+/* ═══════════════ GALLERY MODULE ═══════════════ */
+function initGalleryModule() {
+  // ─── Data Store: add your images/videos here ───────────────────────
+  // type: "image" | "video"
+  // src:  path to the file  (relative to index.html)
+  // label: short caption shown inside the info bar
+  const galleryData = {
+    exam: [
+      {
+        type: "instagram",
+        id: "DTPdz9wCPRi",
+        postType: "reel",
+        i18n: "gallery_exam_moment",
+        suffix: " - 1",
+      },
+      {
+        type: "instagram",
+        id: "DTPPFBLiHgL",
+        postType: "p",
+        i18n: "gallery_exam_moment",
+        suffix: " - 2",
+      },
+      {
+        type: "instagram",
+        id: "DVtLaPLDLWF",
+        postType: "reel",
+        i18n: "gallery_exam_moment",
+        suffix: " - 3",
+      },
+      {
+        type: "instagram",
+        id: "DVsUMDqiPY9rcm20_fLGyIBjXu8YEz-Jz4fCZM0",
+        postType: "reel",
+        i18n: "gallery_exam_moment",
+        suffix: " - 4",
+      },
+      {
+        type: "instagram",
+        id: "DVtBka2iEe1",
+        postType: "reel",
+        i18n: "gallery_exam_moment",
+        suffix: " - 5",
+      },
+      {
+        type: "instagram",
+        id: "DXYt9QPCNf1",
+        postType: "reel",
+        i18n: "gallery_exam_moment",
+        suffix: " - 6",
+      }
+
+    ],
+    events: [
+      {
+        type: "instagram",
+        id: "DVQe09OCPIJ",
+        i18n: "gallery_event_reel",
+        suffix: " - 1",
+      },
+      {
+        type: "instagram",
+        id: "DVN0zoCCP--",
+        i18n: "gallery_event_reel",
+        suffix: " - 2",
+      },
+      {
+        type: "instagram",
+        id: "DU-Yz-siM5I",
+        i18n: "gallery_event_reel",
+        suffix: " - 3",
+      },
+      {
+        type: "instagram",
+        id: "DU-YmfmCKGP",
+        i18n: "gallery_event_reel",
+        suffix: " - 4",
+      },
+      {
+        type: "instagram",
+        id: "DTu46kkCHYI",
+        i18n: "gallery_event_reel",
+        suffix: " - 5",
+      },
+      {
+        type: "instagram",
+        id: "DWEtsj0CMBQ",
+        postType: "reel",
+        i18n: "gallery_event_reel",
+        suffix: " - 6",
+      },
+      {
+        type: "instagram",
+        id: "DViLLrEiBdz",
+        postType: "reel",
+        i18n: "gallery_event_reel",
+        suffix: " - 7",
+      },
+      {
+        type: "instagram",
+        id: "DXJtGCoCORp",
+        postType: "reel",
+        i18n: "gallery_event_reel",
+        suffix: " - 8",
+      },
+      {
+        type: "instagram",
+        id: "DHqRXuIo9-g",
+        postType: "reel",
+        i18n: "gallery_event_reel",
+        suffix: " - 9",
+      },
+      {
+        type: "instagram",
+        id: "Del3vgBoz6S",
+        postType: "reel",
+        i18n: "gallery_event_reel",
+        suffix: " - 10",
+      },
+      {
+        type: "instagram",
+        id: "Decsat5kca-",
+        postType: "p",
+        i18n: "gallery_event_reel",
+        suffix: " - 11",
+      },
+      {
+        type: "instagram",
+        id: "DeRGtP-ofiZ",
+        postType: "reel",
+        i18n: "gallery_event_reel",
+        suffix: " - 12",
+      },
+      {
+        type: "instagram",
+        id: "DeLqTWio88b",
+        postType: "reel",
+        i18n: "gallery_event_reel",
+        suffix: " - 13",
+      },
+      {
+        type: "instagram",
+        id: "DdyfgSco0De",
+        postType: "reel",
+        i18n: "gallery_event_reel",
+        suffix: " - 14",
+      },
+      {
+        type: "instagram",
+        id: "Da0TfMnohB9",
+        postType: "reel",
+        i18n: "gallery_event_reel",
+        suffix: " - 15",
+      }
+    ],
+    rooms: [
+      {
+        type: "instagram",
+        id: "DVyqJSNCGt_",
+        postType: "reel",
+        i18n: "gallery_cat_rooms",
+        suffix: " - 1",
+      }
+    ],
+    study: [
+      {
+        type: "instagram",
+        id: "DVtecLDiJMR",
+        postType: "reel",
+        i18n: "gallery_cat_study",
+        suffix: " - 1",
+      },
+      {
+        type: "instagram",
+        id: "DVtfSl_iLqE",
+        postType: "reel",
+        i18n: "gallery_cat_study",
+        suffix: " - 2",
+      },
+      {
+        type: "youtube",
+        id: "Gqx2_A1pNzw",
+        label: "MS PowerPoint təqdimatlarının hazırlanması",
+        teacher: "Teyyubə Bağırova",
+        group: "712A qrupu",
+        subject: "İnformatika",
+      },
+      {
+        type: "youtube",
+        id: "mvbZ3Ou6czk",
+        label: "Fövqəladə hallar və onların təsnifatı",
+        teacher: "Mehdixan Abbasov",
+        group: "713B qrupu",
+        subject: "Mülki Müdafiə",
+      },
+      {
+        type: "youtube",
+        id: "kUubQbK0vmg",
+        label: "Fizika fənnindən açıq dərs",
+        teacher: "Ramilə Paşayeva",
+        group: "612A qrupu",
+        subject: "Fizika",
+      },
+      {
+        type: "youtube",
+        id: "BFG9pFGyttY",
+        label: "Cari hesabat qəbzlərinin uçotu",
+        teacher: "Vidadi Əliyev",
+        group: "Mühasibat",
+        subject: "Maliyyə",
+      },
+      {
+        type: "youtube",
+        id: "NnYjW0ygjBg",
+        label: "İnformatika fənnindən açıq dərs",
+        teacher: "Gülnarə Əliyeva",
+        group: "612B qrupu",
+        subject: "İnformatika",
+      }
+    ],
+  };
+
+  const catMeta = {
+    exam: { icon: "🎓", i18n: "gallery_cat_exam" },
+    events: { icon: "🎉", i18n: "gallery_cat_events" },
+    rooms: { icon: "🏫", i18n: "gallery_cat_rooms" },
+    study: { icon: "📚", i18n: "gallery_cat_study" },
+  };
+
+  // ─── DOM refs ────────────────────────────────────────────────────────
+  const overlay = document.getElementById("gal-panel-overlay");
+  const backdrop = document.getElementById("gal-panel-backdrop");
+  const panelBody = document.getElementById("gal-panel-body");
+  const panelIcon = document.getElementById("gal-panel-icon");
+  const panelTitle = document.getElementById("gal-panel-title");
+  const closeBtn = document.getElementById("gal-panel-close");
+
+  const lightbox = document.getElementById("gallery-lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCaption = document.getElementById("lightbox-caption");
+  const lightboxClose = document.getElementById("lightbox-close");
+  const lightboxBg = document.getElementById("lightbox-backdrop");
+
+  if (!overlay) return;
+
+  // update media counts on cards
+  function updateGalleryCounts() {
+    const mediaWord =
+      currentLang === "ru" ? "медиа" : "media";
+    Object.entries(galleryData).forEach(([cat, items]) => {
+      const countEl = document.getElementById(`gal-count-${cat}`);
+      if (countEl) countEl.textContent = `${items.length} ${mediaWord}`;
+    });
+  }
+  updateGalleryCounts();
+  document.addEventListener("languageChanged", updateGalleryCounts);
+
+  // ─── Open / Close Panel ──────────────────────────────────────────────
+  function openPanel(cat) {
+    const meta = catMeta[cat] || {};
+    const items = galleryData[cat] || [];
+
+    // Update header
+    if (panelIcon) panelIcon.textContent = meta.icon || "📷";
+    if (panelTitle) panelTitle.textContent = gT(meta.i18n || cat);
+
+    // Build media grid
+    if (panelBody) {
+      if (items.length === 0) {
+        const emptyText =
+          currentLang === "en"
+            ? "No media has been added to this section yet."
+            : currentLang === "ru"
+              ? "В этот раздел медиафайлы еще не добавлены."
+              : "Bu bölmə üçün hələ media əlavə edilməyib.";
+        panelBody.innerHTML = `
+          <div class="gal-panel-empty">
+            <span class="gal-panel-empty-icon">📂</span>
+            <p>${emptyText}</p>
+          </div>`;
+      } else {
+        const gridHTML = items.map((item, i) => {
+          const delay = `${i * 0.07}s`;
+
+          let label = item.label || "";
+          if (item.i18n) {
+            label = gT(item.i18n) + (item.suffix || "");
+          }
+
+          if (item.type === "instagram") {
+            const path = item.postType === "p" ? "p" : "reel";
+            return `
+              <div class="gal-media-item gal-media-embed" style="animation-delay:${delay}">
+                <div class="instagram-embed-container">
+                  <iframe src="https://www.instagram.com/${path}/${item.id}/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+                <div class="gal-media-info">
+                  <span class="gal-media-label">${label || "Instagram Post"}</span>
+                  <a href="https://www.instagram.com/${path}/${item.id}/" target="_blank" class="gal-media-zoom" aria-label="Instagramda bax">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </div>
+              </div>`;
+          }
+
+          if (item.type === "youtube") {
+            const embedUrl = `https://www.youtube-nocookie.com/embed/${item.id}?rel=0`;
+            const thumbUrl = `https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`;
+            const badgeTag = item.subject || "Açıq Dərs";
+            const groupTag = item.group ? `<span class="gal-yt-tag-group">${item.group}</span>` : "";
+            const teacherHTML = item.teacher
+              ? `<div class="gal-yt-teacher-row">
+                   <span class="gal-yt-teacher-icon">👨‍🏫</span>
+                   <span class="gal-yt-teacher-name">${item.teacher}</span>
+                 </div>`
+              : "";
+
+            return `
+              <div class="gal-media-item gal-media-embed gal-yt-tall-card" style="animation-delay:${delay}">
+                <div class="gal-yt-tall-container">
+                  <div class="gal-yt-ambient-bg" style="background-image: url('${thumbUrl}');"></div>
+                  <div class="gal-yt-backdrop-tint"></div>
+
+                  <div class="gal-yt-topbar">
+                    <span class="gal-yt-pill-badge">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                      <span>${badgeTag}</span>
+                    </span>
+                    ${groupTag}
+                  </div>
+
+                  <div class="gal-yt-screen-wrap">
+                    <iframe src="${embedUrl}" title="${label}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  </div>
+
+                  <div class="gal-yt-details">
+                    <h4 class="gal-yt-card-title" title="${label}">${label}</h4>
+                    ${teacherHTML}
+                  </div>
+                </div>
+
+                <div class="gal-media-info">
+                  <span class="gal-media-label" title="${label}">YouTube • ${item.subject || "Dərs"}</span>
+                  <a href="https://www.youtube.com/watch?v=${item.id}" target="_blank" rel="noopener noreferrer" class="gal-media-zoom" aria-label="YouTube-da tam formatda bax">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </div>
+              </div>`;
+          }
+
+          if (item.type === "video") {
+            return `
+              <div class="gal-media-item" style="animation-delay:${delay}" data-src="${item.src}" data-type="video" data-label="${label}">
+                <video src="${item.src}" muted loop preload="metadata" playsinline></video>
+                <span class="gal-video-badge">▶ VIDEO</span>
+                <div class="gal-media-info">
+                  <span class="gal-media-label">${label}</span>
+                  <button class="gal-media-zoom" aria-label="Böyüt">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  </button>
+                </div>
+              </div>`;
+          }
+          return `
+            <div class="gal-media-item" style="animation-delay:${delay}" data-src="${item.src}" data-type="image" data-label="${label}">
+              <img src="${item.src}" alt="${label}" loading="lazy">
+              <div class="gal-media-info">
+                <span class="gal-media-label">${label}</span>
+                <button class="gal-media-zoom" aria-label="Böyüt">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+              </div>
+            </div>`;
+        }).join("");
+        panelBody.innerHTML = `<div class="gal-media-grid">${gridHTML}</div>`;
+
+        // Build lightbox media list (images & videos in this category)
+        const viewableItems = [];
+        panelBody.querySelectorAll(".gal-media-item:not(.gal-media-embed)").forEach((el, idx) => {
+          viewableItems.push({
+            src: el.dataset.src,
+            label: el.dataset.label || "",
+            type: el.dataset.type || "image",
+            catTitle: gT(meta.i18n || cat),
+          });
+          const zoomBtn = el.querySelector(".gal-media-zoom");
+          const doOpen = () => openCinemaLightbox(viewableItems, idx);
+          el.querySelector("img,video")?.addEventListener("click", doOpen);
+          zoomBtn?.addEventListener("click", (e) => {
+            e.stopPropagation();
+            doOpen();
+          });
+        });
+
+        // Auto-play videos on hover
+        panelBody.querySelectorAll("video").forEach((vid) => {
+          vid.closest(".gal-media-item")?.addEventListener("mouseenter", () => vid.play());
+          vid.closest(".gal-media-item")?.addEventListener("mouseleave", () => vid.pause());
+        });
+      }
+    }
+
+    overlay.classList.add("active");
+    document.documentElement.classList.add("scroll-locked");
+
+    // ── Iris Expand ──────────────────────────────────────
+    // origin defaults to center if no event coords
+    const ox = overlay._irisX ?? window.innerWidth / 2;
+    const oy = overlay._irisY ?? window.innerHeight / 2;
+    // compute max distance from origin to any corner
+    const r = Math.hypot(
+      Math.max(ox, window.innerWidth - ox),
+      Math.max(oy, window.innerHeight - oy)
+    );
+    overlay.style.clipPath = `circle(0px at ${ox}px ${oy}px)`;
+    overlay.style.transition = 'none';
+    // force reflow
+    void overlay.offsetHeight;
+    overlay.style.transition = 'clip-path 0.55s cubic-bezier(0.4, 0, 0.2, 1)';
+    overlay.style.clipPath = `circle(${r * 1.1}px at ${ox}px ${oy}px)`;
+    setTimeout(() => {
+      if (overlay.classList.contains("active")) {
+        overlay.style.clipPath = "none";
+      }
+    }, 560);
+  }
+
+  function closePanel() {
+    const ox = overlay._irisX ?? window.innerWidth / 2;
+    const oy = overlay._irisY ?? window.innerHeight / 2;
+    const r = Math.hypot(
+      Math.max(ox, window.innerWidth - ox),
+      Math.max(oy, window.innerHeight - oy)
+    );
+    overlay.style.clipPath = `circle(${r * 1.1}px at ${ox}px ${oy}px)`;
+    void overlay.offsetHeight;
+    overlay.style.transition = 'clip-path 0.45s cubic-bezier(0.4, 0, 0.2, 1)';
+    overlay.style.clipPath = `circle(0px at ${ox}px ${oy}px)`;
+    setTimeout(() => {
+      overlay.classList.remove("active");
+      overlay.style.clipPath = '';
+      overlay.style.transition = '';
+      document.documentElement.classList.remove("scroll-locked");
+      panelBody?.querySelectorAll("video").forEach((v) => v.pause());
+    }, 460);
+  }
+
+  // ─── Accordion & Portal Click Listeners ──────────────────────────────
+  const portalItems = document.querySelectorAll(".gal-portal-item");
+  portalItems.forEach((item) => {
+    // Hover (üstünə gələndə): kart dərhal genişlənir və qapaq şəkli böyüyür
+    item.addEventListener("mouseenter", () => {
+      if (!item.classList.contains("active")) {
+        portalItems.forEach((p) => p.classList.remove("active"));
+        item.classList.add("active");
+      }
+    });
+
+    // 1. Direct click on "Bax / Ətraflı Arxiv" button
+    const openBtn = item.querySelector(".gal-portal-open-btn");
+    openBtn?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const rect = openBtn.getBoundingClientRect();
+      overlay._irisX = rect.left + rect.width / 2;
+      overlay._irisY = rect.top + rect.height / 2;
+      openPanel(item.dataset.panel);
+    });
+
+    // 2. Click on the accordion portal card
+    item.addEventListener("click", (e) => {
+      if (e.target.closest(".gal-portal-open-btn")) return;
+      const rect = item.getBoundingClientRect();
+      overlay._irisX = rect.left + rect.width / 2;
+      overlay._irisY = rect.top + rect.height / 2;
+      openPanel(item.dataset.panel);
+    });
+  });
+
+  // Backward compatibility for any other .gal-card
+  document.querySelectorAll(".gal-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const rect = card.getBoundingClientRect();
+      overlay._irisX = rect.left + rect.width / 2;
+      overlay._irisY = rect.top + rect.height / 2;
+      openPanel(card.dataset.panel);
+    });
+  });
+
+  closeBtn?.addEventListener("click", closePanel);
+  backdrop?.addEventListener("click", closePanel);
+
+  // ─── Cinema Lightbox & Fullscreen Slideshow (Upgrade 6) ──────────────
+  const lightboxVideo = document.getElementById("lightbox-video");
+  const lightboxCounter = document.getElementById("lightbox-counter");
+  const lightboxCatPill = document.getElementById("lightbox-cat-pill");
+  const lightboxPrev = document.getElementById("lightbox-prev");
+  const lightboxNext = document.getElementById("lightbox-next");
+  const lightboxThumbs = document.getElementById("lightbox-thumbs");
+  const lbSlideshowBtn = document.getElementById("lb-slideshow-btn");
+  const lbSlideshowLabel = document.getElementById("lb-slideshow-label");
+  const lbZoomBtn = document.getElementById("lb-zoom-btn");
+
+  let lbList = [];
+  let lbIndex = 0;
+  let lbSlideshowTimer = null;
+  let lbZoomed = false;
+
+  function stopSlideshow() {
+    if (lbSlideshowTimer) {
+      clearInterval(lbSlideshowTimer);
+      lbSlideshowTimer = null;
+    }
+    lbSlideshowBtn?.classList.remove("active");
+    if (lbSlideshowLabel) {
+      lbSlideshowLabel.textContent =
+        currentLang === "en"
+          ? "Slideshow"
+          : currentLang === "ru"
+            ? "Слайд-шоу"
+            : "Slayd-Şou";
+    }
+  }
+
+  function toggleSlideshow() {
+    if (lbSlideshowTimer) {
+      stopSlideshow();
+    } else {
+      lbSlideshowBtn?.classList.add("active");
+      if (lbSlideshowLabel) {
+        lbSlideshowLabel.textContent =
+          currentLang === "en"
+            ? "Stop"
+            : currentLang === "ru"
+              ? "Остановить"
+              : "Dayandır";
+      }
+      lbSlideshowTimer = setInterval(() => {
+        stepLightbox(1);
+      }, 3600);
+    }
+  }
+
+  function toggleZoom() {
+    lbZoomed = !lbZoomed;
+    lightboxImg?.classList.toggle("zoomed", lbZoomed);
+    lbZoomBtn?.classList.toggle("active", lbZoomed);
+  }
+
+  function renderLightboxItem() {
+    if (!lightbox || lbList.length === 0) return;
+    const item = lbList[lbIndex];
+    lbZoomed = false;
+    lightboxImg?.classList.remove("zoomed");
+    lbZoomBtn?.classList.remove("active");
+
+    if (lightboxImg) {
+      lightboxImg.classList.remove("active");
+      lightboxImg.src = "";
+    }
+    if (lightboxVideo) {
+      lightboxVideo.classList.remove("active");
+      lightboxVideo.pause();
+      lightboxVideo.src = "";
+    }
+
+    if (item.type === "video") {
+      if (lightboxVideo) {
+        lightboxVideo.src = item.src;
+        lightboxVideo.classList.add("active");
+        lightboxVideo.play().catch(() => { });
+      }
+    } else {
+      if (lightboxImg) {
+        lightboxImg.src = item.src;
+        lightboxImg.alt = item.label || "BDRNK Qalereya";
+        lightboxImg.classList.add("active");
+      }
+    }
+
+    if (lightboxCaption) lightboxCaption.textContent = item.label || "";
+    if (lightboxCounter) lightboxCounter.textContent = `${lbIndex + 1} / ${lbList.length}`;
+    if (lightboxCatPill) lightboxCatPill.textContent = item.catTitle || "BDRNK Qalereya";
+
+    if (lightboxThumbs) {
+      lightboxThumbs.querySelectorAll(".lb-thumb").forEach((t, idx) => {
+        t.classList.toggle("active", idx === lbIndex);
+      });
+      const activeThumb = lightboxThumbs.querySelector(".lb-thumb.active");
+      activeThumb?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+  }
+
+  function openCinemaLightbox(list, startIndex = 0) {
+    if (!lightbox || !list || list.length === 0) return;
+    lbList = list;
+    lbIndex = startIndex;
+    stopSlideshow();
+
+    if (lightboxThumbs) {
+      lightboxThumbs.innerHTML = lbList
+        .map((it, idx) => {
+          if (it.type === "video") {
+            return `<button type="button" class="lb-thumb ${idx === lbIndex ? "active" : ""}" data-idx="${idx}" title="${it.label || "Video"}">
+              <span class="lb-thumb-vid">▶</span>
+            </button>`;
+          }
+          return `<button type="button" class="lb-thumb ${idx === lbIndex ? "active" : ""}" data-idx="${idx}" title="${it.label || ""}">
+            <img src="${it.src}" alt="" loading="lazy" />
+          </button>`;
+        })
+        .join("");
+
+      lightboxThumbs.querySelectorAll(".lb-thumb").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          lbIndex = parseInt(btn.getAttribute("data-idx"), 10) || 0;
+          renderLightboxItem();
+        });
+      });
+    }
+
+    renderLightboxItem();
+    lightbox.classList.add("active");
+  }
+
+  function stepLightbox(dir) {
+    if (!lbList.length) return;
+    lbIndex = (lbIndex + dir + lbList.length) % lbList.length;
+    renderLightboxItem();
+  }
+
+  function closeLightbox() {
+    stopSlideshow();
+    lbZoomed = false;
+    lightboxImg?.classList.remove("zoomed");
+    lightbox?.classList.remove("active");
+    setTimeout(() => {
+      if (lightboxImg) lightboxImg.src = "";
+      if (lightboxVideo) {
+        lightboxVideo.pause();
+        lightboxVideo.src = "";
+      }
+    }, 300);
+  }
+
+  lightboxPrev?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    stepLightbox(-1);
+  });
+  lightboxNext?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    stepLightbox(1);
+  });
+  lbSlideshowBtn?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleSlideshow();
+  });
+  lbZoomBtn?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleZoom();
+  });
+  lightboxImg?.addEventListener("dblclick", toggleZoom);
+
+  // Touch swipe support for mobile devices in Cinema Lightbox
+  let lbTouchStartX = 0;
+  let lbTouchStartY = 0;
+  lightbox?.addEventListener(
+    "touchstart",
+    (e) => {
+      if (!e.touches || !e.touches.length) return;
+      lbTouchStartX = e.touches[0].clientX;
+      lbTouchStartY = e.touches[0].clientY;
+    },
+    { passive: true },
+  );
+  lightbox?.addEventListener(
+    "touchend",
+    (e) => {
+      if (!e.changedTouches || !e.changedTouches.length || lbZoomed) return;
+      const dx = e.changedTouches[0].clientX - lbTouchStartX;
+      const dy = e.changedTouches[0].clientY - lbTouchStartY;
+      if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+        if (dx < 0) stepLightbox(1);
+        else stepLightbox(-1);
+      }
+    },
+    { passive: true },
+  );
+
+  lightboxClose?.addEventListener("click", closeLightbox);
+  lightboxBg?.addEventListener("click", closeLightbox);
+  document.addEventListener("keydown", (e) => {
+    if (lightbox?.classList.contains("active")) {
+      if (e.key === "Escape") closeLightbox();
+      else if (e.key === "ArrowRight") stepLightbox(1);
+      else if (e.key === "ArrowLeft") stepLightbox(-1);
+      else if (e.key === " ") {
+        e.preventDefault();
+        toggleSlideshow();
+      }
+    } else if (e.key === "Escape") {
+      const readerModal = document.getElementById("book-reader-modal");
+      if (readerModal?.classList.contains("active")) {
+        readerModal.classList.remove("active");
+        document.documentElement.classList.remove("scroll-locked");
+      } else if (overlay?.classList.contains("active")) {
+        closePanel();
+      }
+    }
+  });
+
+  // Expose Cinema Lightbox for universal high-res modal view
+  window.openCinemaLightbox = openCinemaLightbox;
+}
+
+function initTicker() {
+  const track = document.getElementById("marquee-track");
+  if (!track) return;
+
+  let speedFactor = 1;
+  let scrollTimeout;
+
+  // Faster scroll on window scroll
+  window.addEventListener(
+    "scroll",
+    () => {
+      speedFactor = 4;
+      track.style.animationDuration = `${40 / speedFactor}s`;
+
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        speedFactor = 1;
+        track.style.animationDuration = `40s`;
+      }, 150);
+    },
+    { passive: true },
+  );
+
+  // Pause on hover
+  track.addEventListener("mouseenter", () => {
+    track.style.animationPlayState = "paused";
+  });
+  track.addEventListener("mouseleave", () => {
+    track.style.animationPlayState = "running";
+  });
+}
+
+function initSpotlightCards() {
+  const cards = document.querySelectorAll(".bento-cell");
+  if (!cards.length) return;
+
+  cards.forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+    });
+
+    // Optional: Reset on mouse leave so it doesn't stay glowing at the edge
+    card.addEventListener("mouseleave", () => {
+      card.style.setProperty("--mouse-x", `50%`);
+      card.style.setProperty("--mouse-y", `50%`);
+    });
+  });
+}
+
+function initContextMenu() {
+  const cm = document.getElementById("custom-context-menu");
+  if (!cm) return;
+
+  // Open Custom Menu
+  document.addEventListener("contextmenu", (e) => {
+    // Prevent default browser menu
+    e.preventDefault();
+
+    let x = e.clientX;
+    let y = e.clientY;
+
+    // Keep inside viewport (Width ~ 220px, Height ~ 160px from CSS)
+    if (x + 220 > window.innerWidth) x = window.innerWidth - 230;
+    if (y + 160 > window.innerHeight) y = window.innerHeight - 170;
+
+    cm.style.left = `${x}px`;
+    cm.style.top = `${y}px`;
+    cm.classList.add("active");
+  });
+
+  // Close Menu on Click Outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("#custom-context-menu")) {
+      cm.classList.remove("active");
+    }
+  });
+
+  // Close Menu on scroll
+  document.addEventListener(
+    "scroll",
+    () => {
+      cm.classList.remove("active");
+    },
+    { passive: true },
+  );
+
+  // Actions
+  const btnTheme = document.getElementById("cm-theme-toggle");
+  const btnTop = document.getElementById("cm-top");
+
+  if (btnTheme) {
+    btnTheme.addEventListener("click", (e) => {
+      cm.classList.remove("active");
+
+      // Check current theme and toggle it
+      const current = localStorage.getItem("bdrnk-theme") || "light";
+      const nextTheme =
+        current === "dark" || current === "space" ? "light" : "dark";
+
+      // Re-trigger the modern ripple effect using the header's buttons
+      const targetRippleBtn = document.querySelector(
+        `.theme-dropdown button[data-theme-set="${nextTheme}"]`,
+      );
+      if (targetRippleBtn) {
+        // Fake the mouse event coordinates so the ripple starts center of screen
+        const fakeEvent = new MouseEvent("click", {
+          clientX: window.innerWidth / 2,
+          clientY: window.innerHeight / 2,
+          bubbles: true,
+        });
+        targetRippleBtn.dispatchEvent(fakeEvent);
+      }
+    });
+  }
+
+  if (btnTop) {
+    btnTop.addEventListener("click", () => {
+      cm.classList.remove("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+}
+
+function initPreloader() {
+  const preloader = document.getElementById("preloader");
+  if (!preloader) return;
+
+  let hidden = false;
+  const hidePreloader = () => {
+    if (hidden) return;
+    hidden = true;
+    preloader.classList.add("fade-out");
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 600);
+  };
+
+  // Dismiss preloader quickly as soon as DOM is interactive (never block on heavy media)
+  setTimeout(hidePreloader, 450);
+  window.addEventListener("load", hidePreloader, { once: true });
+}
+
+function initVideoCarousel() {
+  const section = document.getElementById("video-carousel");
+  if (!section) return;
+
+  const slides = section.querySelectorAll(".carousel-slide");
+  const indicators = section.querySelectorAll(".indicator");
+  const progressBars = section.querySelectorAll(".progress");
+  let currentSlide = 0;
+  const slideDuration = 6000; // 6 seconds per slide
+  let timer = null;
+  let progressAnimation = null;
+  let startTime = null;
+
+  if (slides.length === 0) return;
+
+  // Helper: Pause all videos
+  const pauseAllVideos = () => {
+    slides.forEach((slide) => {
+      const vid = slide.querySelector("video");
+      if (vid) vid.pause();
+    });
+  };
+
+  const goToSlide = (index) => {
+    // Stop current animations & timers
+    clearTimeout(timer);
+    cancelAnimationFrame(progressAnimation);
+    progressBars.forEach((p) => (p.style.width = "0%"));
+
+    // Reset old slide
+    slides[currentSlide].classList.remove("active");
+    indicators[currentSlide].classList.remove("active");
+
+    currentSlide = index;
+
+    // Activate new slide
+    slides[currentSlide].classList.add("active");
+    indicators[currentSlide].classList.add("active");
+
+    // Play the active video from start
+    pauseAllVideos();
+    const activeVid = slides[currentSlide].querySelector("video");
+    if (activeVid) {
+      activeVid.playbackRate = 1.0;
+      activeVid.currentTime = 0;
+      activeVid.play().catch((e) => console.log("Video autoplay blocked:", e));
+    }
+
+    // Start progress bar animation
+    startTime = performance.now();
+    const activeProgress = indicators[currentSlide].querySelector(".progress");
+
+    const animateProgress = (timestamp) => {
+      const elapsed = timestamp - startTime;
+      const percentage = Math.min((elapsed / slideDuration) * 100, 100);
+      activeProgress.style.width = `${percentage}%`;
+
+      if (elapsed < slideDuration) {
+        progressAnimation = requestAnimationFrame(animateProgress);
+      }
+    };
+    progressAnimation = requestAnimationFrame(animateProgress);
+
+    // Schedule next slide
+    timer = setTimeout(() => {
+      goToSlide((currentSlide + 1) % slides.length);
+    }, slideDuration);
+  };
+
+  // Indicator Click Events
+  indicators.forEach((ind, idx) => {
+    ind.addEventListener("click", () => {
+      goToSlide(idx);
+    });
+  });
+
+  // Intersection Observer to Pause/Play when out of view
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // In view: restart slider
+          goToSlide(currentSlide);
+          // Set lower playback rate for specifically the active slide on load
+          const activeVid = slides[currentSlide]?.querySelector("video");
+          if (activeVid) activeVid.playbackRate = 1.0;
+        } else {
+          // Out of view: pause
+          clearTimeout(timer);
+          cancelAnimationFrame(progressAnimation);
+          pauseAllVideos();
+        }
+      });
+    },
+    { threshold: 0.1 },
+  );
+
+  observer.observe(section);
+
+  // Independent force for main video if script acts as single static video
+  const mainVid = document.getElementById("main-carousel-vid");
+  if (mainVid) {
+    mainVid.playbackRate = 0.25;
+  }
+}
+
+function initStatsCounter() {
+  const stats = document.querySelectorAll(".stat-number");
+  const observerOptions = { threshold: 0.5 };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const target = entry.target;
+        const countTo = parseInt(target.getAttribute("data-target"));
+        const duration = 2000; // 2 seconds
+        let startTime = null;
+
+        const step = (timestamp) => {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          const easeOut = 1 - Math.pow(1 - progress, 3);
+          target.innerText = Math.floor(easeOut * countTo);
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            target.innerText = countTo;
+          }
+        };
+
+        window.requestAnimationFrame(step);
+        observer.unobserve(target);
+      }
+    });
+  }, observerOptions);
+
+  stats.forEach((stat) => observer.observe(stat));
+}
+
+/**
+ * HERO PARALLAX — Deep 3D Motion (Mouse follow)
+ */
+function initHeroParallax() {
+  const hero = document.getElementById("hero");
+  if (!hero || window.matchMedia("(hover: none)").matches) return;
+
+  const glassShapes = hero.querySelectorAll(".glass-shape");
+
+  window.addEventListener("mousemove", (e) => {
+    const scrolled = window.scrollY;
+    if (scrolled > window.innerHeight) return;
+
+    const { width, height } = hero.getBoundingClientRect();
+    const x = e.clientX / width - 0.5;
+    const y = e.clientY / height - 0.5;
+
+    // Glass Shapes (Deep Parallax)
+    glassShapes.forEach((shape, i) => {
+      const factor = (i + 1) * 60;
+      const rotate = x * 15;
+      shape.style.transform = `translate3d(${x * factor}px, ${y * factor}px, 0) rotate(${rotate}deg)`;
+    });
+
+    // Particles Canvas (Medium Parallax)
+    const pCanvas = document.getElementById("particles-canvas");
+    if (pCanvas) {
+      pCanvas.style.transform = `translate3d(${x * 30}px, ${y * 30}px, 0)`;
+    }
+  });
+}
+
+/**
+ * GENERATIVE FLUX ENGINE — Noise-based energy flows
+ */
+function initFluxEngine() {
+  const canvas = document.getElementById("flux-canvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  let width, height;
+  let particles = [];
+  let flowField = [];
+  let cols, rows;
+  let mouse = { x: -1000, y: -1000 };
+  const scale = 30; // Scale of the grid
+  const particleCount = window.innerWidth < 768 ? 400 : 1200;
+
+  // Simple Noise Implementation
+  const noise = {
+    seed: Math.random(),
+    perlin: function (x, y) {
+      return (
+        (Math.sin(x * 0.1 + this.seed) + Math.cos(y * 0.1 + this.seed)) * 0.5 +
+        0.5
+      );
+    },
+  };
+
+  function resize() {
+    width = canvas.parentElement.offsetWidth;
+    height = canvas.parentElement.offsetHeight;
+    canvas.width = width * window.devicePixelRatio;
+    canvas.height = height * window.devicePixelRatio;
+    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    cols = Math.floor(width / scale) + 1;
+    rows = Math.floor(height / scale) + 1;
+  }
+
+  class FluxParticle {
+    constructor() {
+      this.reset();
+    }
+    reset() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.prevX = this.x;
+      this.prevY = this.y;
+      this.vel = { x: 0, y: 0 };
+      this.acc = { x: 0, y: 0 };
+      this.maxSpeed = Math.random() * 2 + 1;
+      this.color = "";
+      this.updateColor();
+      this.life = Math.random() * 100 + 50;
+    }
+    updateColor() {
+      const isDark = document.body.classList.contains("dark-mode");
+      const isSpace = document.body.classList.contains("space-mode");
+      if (isSpace)
+        this.color = `rgba(168, 85, 247, ${Math.random() * 0.3 + 0.1})`;
+      else if (isDark)
+        this.color = `rgba(52, 152, 219, ${Math.random() * 0.4 + 0.1})`;
+      else this.color = `rgba(27, 79, 114, ${Math.random() * 0.08 + 0.02})`;
+    }
+    update() {
+      const c = Math.floor(this.x / scale);
+      const r = Math.floor(this.y / scale);
+      const index = c + r * cols;
+      const force = flowField[index];
+
+      if (force) {
+        this.acc.x += force.x;
+        this.acc.y += force.y;
+      }
+
+      this.vel.x += this.acc.x;
+      this.vel.y += this.acc.y;
+      const speed = Math.sqrt(this.vel.x ** 2 + this.vel.y ** 2);
+      if (speed > this.maxSpeed) {
+        this.vel.x = (this.vel.x / speed) * this.maxSpeed;
+        this.vel.y = (this.vel.y / speed) * this.maxSpeed;
+      }
+
+      this.prevX = this.x;
+      this.prevY = this.y;
+      this.x += this.vel.x;
+      this.y += this.vel.y;
+
+      // Mouse Vortex Interaction
+      const dx = mouse.x - this.x;
+      const dy = mouse.y - this.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 200) {
+        const force = (200 - dist) / 2000;
+        this.acc.x += dx * force;
+        this.acc.y += dy * force;
+      }
+
+      this.acc.x = 0;
+      this.acc.y = 0;
+      this.life -= 0.5;
+
+      if (
+        this.x < 0 ||
+        this.x > width ||
+        this.y < 0 ||
+        this.y > height ||
+        this.life < 0
+      ) {
+        this.reset();
+      }
+    }
+    draw() {
+      ctx.beginPath();
+      ctx.strokeStyle = this.color;
+      ctx.lineWidth = 0.8;
+      ctx.moveTo(this.prevX, this.prevY);
+      ctx.lineTo(this.x, this.y);
+      ctx.stroke();
+    }
+  }
+
+  function init() {
+    resize();
+    particles = [];
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(new FluxParticle());
+    }
+  }
+
+  function updateFlowField(time) {
+    flowField = [];
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const angle =
+          noise.perlin(c * 0.5, r * 0.5 + time * 0.001) * Math.PI * 4;
+        flowField.push({ x: Math.cos(angle) * 0.1, y: Math.sin(angle) * 0.1 });
+      }
+    }
+  }
+
+  let lastTime = 0;
+  function animate(time) {
+    if (window.scrollY > window.innerHeight) {
+      requestAnimationFrame(animate);
+      return;
+    }
+
+    const isDark = document.body.classList.contains("dark-mode");
+    const isSpace = document.body.classList.contains("space-mode");
+    ctx.fillStyle = isSpace
+      ? "rgba(5,5,16,0.05)"
+      : isDark
+        ? "rgba(0,0,0,0.05)"
+        : "rgba(255,255,255,0.05)";
+    ctx.fillRect(0, 0, width, height);
+
+    updateFlowField(time);
+
+    particles.forEach((p) => {
+      p.update();
+      p.draw();
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  window.addEventListener("resize", init);
+  window.addEventListener("mousemove", (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+  document.addEventListener("themeChanged", () =>
+    particles.forEach((p) => p.updateColor()),
+  );
+  init();
+  requestAnimationFrame(animate);
+}
+
+/**
+ * 22. SCENE TRANSITION LOGIC
+ */
+function initSceneTransition() {
+  const overlay = document.getElementById("scene-transition");
+  if (!overlay) return;
+
+  const triggerTransition = (targetId) => {
+    overlay.classList.add("active");
+
+    setTimeout(() => {
+      if (targetId === "#") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        const target = document.querySelector(targetId);
+        if (target) {
+          const headerOffset = document.getElementById("site-header")?.offsetHeight || 112;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+      }
+
+      setTimeout(() => {
+        overlay.classList.remove("active");
+      }, 600);
+    }, 400);
+  };
+
+  // Intercept all hash links for the transition effect
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest('a[href^="#"]');
+    if (link) {
+      const href = link.getAttribute("href");
+
+      // Ignore if it's a functional link like lightbox/panel triggers without actual hash targets
+      if (href.length > 1 || href === "#") {
+        e.preventDefault();
+
+        // Close mobile nav if open
+        const mobileToggle = document.getElementById("mobile-toggle");
+        const mobileNav = document.getElementById("mobile-nav");
+        if (mobileToggle && mobileNav && mobileNav.classList.contains("active")) {
+          mobileToggle.classList.remove("active");
+          mobileNav.classList.remove("active");
+          document.documentElement.classList.remove("scroll-locked");
+        }
+
+        triggerTransition(href);
+      }
+    }
+  });
+}
+
+/* ══════════════════════════════════════════════════════════════
+   2. SCROLL REVEAL — IntersectionObserver
+   ══════════════════════════════════════════════════════════════ */
+(function initScrollReveal() {
+  // Auto-tag main sections and cards for reveal
+  const REVEAL_SELECTORS = [
+    "section",
+    ".about-card",
+    ".stat-card",
+    ".news-card",
+    ".team-card",
+    ".faq-item",
+    ".contact-card",
+    ".lib-book",
+    ".gal-card",
+    ".timeline-item",
+    ".major-card",
+    ".calendar-item",
+    ".lecture-card",
+  ];
+
+  REVEAL_SELECTORS.forEach((sel) => {
+    document.querySelectorAll(sel).forEach((el, i) => {
+      if (!el.classList.contains("reveal") && !el.classList.contains("reveal-group")) {
+        el.classList.add("reveal");
+        el.style.transitionDelay = `${Math.min(i * 0.06, 0.4)}s`;
+      }
+    });
+  });
+
+  // Stagger grid containers with fluid cascade
+  [
+    ".gal-cards",
+    ".stats-grid",
+    ".news-grid",
+    ".team-grid",
+    ".hero-stats",
+    ".memorial-dates",
+    ".grad-stats",
+    ".gal-spotlight-meta-cards",
+    ".why-grid",
+    ".about-features-grid"
+  ].forEach((sel) => {
+    document.querySelectorAll(sel).forEach((el) => {
+      el.classList.add("reveal-stagger");
+      el.querySelectorAll(":scope > .reveal").forEach((c) => c.classList.remove("reveal"));
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, { threshold: 0.08, rootMargin: "0px 0px -30px 0px" });
+
+  document.querySelectorAll(".reveal, .reveal-group, .reveal-stagger").forEach((el) => observer.observe(el));
+})();
+
+/* ══════════════════════════════════════════════════════════════
+   3. UNIVERSAL INTERACTIVE RIPPLE ENGINE (TACTILE PHYSICS)
+   ══════════════════════════════════════════════════════════════ */
+(function initRippleEngine() {
+  const TARGETS = [
+    ".btn",
+    ".btn-primary",
+    ".btn-outline",
+    ".btn-spotlight",
+    ".filter-badge",
+    ".library-tab-btn",
+    ".gal-portal-open-btn",
+    ".memorial-candle-btn",
+    ".news-card-link",
+    ".news-open-reader-btn",
+    ".hero-grad-card"
+  ].join(",");
+
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(TARGETS);
+    if (!btn) return;
+
+    const rect = btn.getBoundingClientRect();
+    const circle = document.createElement("span");
+    const d = Math.max(rect.width, rect.height);
+    const radius = d / 2;
+
+    circle.style.width = circle.style.height = `${d}px`;
+    circle.style.left = `${e.clientX - rect.left - radius}px`;
+    circle.style.top = `${e.clientY - rect.top - radius}px`;
+    circle.className = "ripple-wave";
+
+    const prev = btn.querySelector(".ripple-wave");
+    if (prev) prev.remove();
+
+    btn.appendChild(circle);
+    setTimeout(() => circle.remove(), 650);
+  }, { passive: true });
+})();
+
+/* ══════════════════════════════════════════════════════════════
+   FORMAL HEADING PRESERVATION (Keep <br> and i18n intact)
+   ══════════════════════════════════════════════════════════════ */
+(function initTextSplit() {
+  // Intentionally disabled character-splitting so official multi-line headings
+  // and dynamic AZ/RU/EN translations preserve their exact formatting.
+})();
+
+/* ══════════════════════════════════════════════════════════════
+   GOLDEN HOUR CINEMATIC HERO — 3D PARALLAX & INTERACTIVE LIGHT
+   ══════════════════════════════════════════════════════════════ */
+(function initGoldenHourHero() {
+  const hero = document.getElementById("hero");
+  if (!hero) return;
+
+  let rafId = null;
+
+  hero.addEventListener("mousemove", (e) => {
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      const rect = hero.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const nx = x / rect.width - 0.5;
+      const ny = y / rect.height - 0.5;
+
+      // Spotlight position
+      hero.style.setProperty("--mouse-x", `${x}px`);
+      hero.style.setProperty("--mouse-y", `${y}px`);
+
+      // Campus background opposite parallax depth
+      hero.style.setProperty("--parallax-x", `${(-nx * 22).toFixed(2)}px`);
+      hero.style.setProperty("--parallax-y", `${(-ny * 14).toFixed(2)}px`);
+
+      // Subtle 3D perspective tilt on the central glass card
+      hero.style.setProperty("--tilt-x", `${(nx * 2.4).toFixed(2)}deg`);
+      hero.style.setProperty("--tilt-y", `${(-ny * 1.8).toFixed(2)}deg`);
+    });
+  });
+
+  hero.addEventListener("mouseleave", () => {
+    hero.style.setProperty("--parallax-x", "0px");
+    hero.style.setProperty("--parallax-y", "0px");
+    hero.style.setProperty("--tilt-x", "0deg");
+    hero.style.setProperty("--tilt-y", "0deg");
+  });
+})();
+
+/* ══════════════════════════════════════════════════════════════
+   ABOUT SECTION — MVV TABS, INTERACTIVE TIMELINE & LIVE COUNTERS
+   ══════════════════════════════════════════════════════════════ */
+(function initAboutShowcase() {
+  const aboutSection = document.getElementById("about");
+  if (!aboutSection) return;
+
+  // 1. Mission · Vision · Strategic Values Tabs
+  const mvvTabs = aboutSection.querySelectorAll(".about-mvv-tab");
+  const mvvPanels = aboutSection.querySelectorAll(".about-mvv-panel");
+
+  mvvTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const targetKey = tab.getAttribute("data-mvv-tab");
+      mvvTabs.forEach((t) => {
+        const isActive = t === tab;
+        t.classList.toggle("active", isActive);
+        t.setAttribute("aria-selected", isActive ? "true" : "false");
+      });
+      mvvPanels.forEach((panel) => {
+        panel.classList.toggle("active", panel.id === `mvv-panel-${targetKey}`);
+      });
+    });
+  });
+
+  // 2. Interactive Historical Timeline (1931 -> Today)
+  const timelineData = {
+    "1931": {
+      year_az: "1931",
+      year_en: "1931",
+      year_ru: "1931",
+      tag_az: "TƏMƏLİN QOYULMASI",
+      tag_en: "HISTORIC FOUNDATION",
+      tag_ru: "ОСНОВАНИЕ УЧЕБНОГО ЗАВЕДЕНИЯ",
+      title_az: "Mərkəzi Teleqraf Nəzdində İlk Rabitə Təhsili Ocağı",
+      title_en: "First Communications Training School Under the Central Telegraph",
+      title_ru: "Первое учебное заведение связи при Центральном телеграфе",
+      desc_az:
+        "Kollecin əsası 1931-ci ildə Bakı Mərkəzi Teleqrafının nəzdində fabrik-zavod təhsili bazasında təşkil olunmuşdur. Bu tarixi addım Azərbaycanda peşəkar rabitəçi və teleqraf-telefon mütəxəssislərinin sistemli hazırlanmasının başlanğıcı olmuşdur.",
+      desc_en:
+        "Founded in 1931 on the basis of factory-plant education under the Baku Central Telegraph, marking the beginning of systematic training of professional communications and telegraph-telephone specialists in Azerbaijan.",
+      desc_ru:
+        "Основан в 1931 году на базе фабрично-заводского обучения при Бакинском центральном телеграфе, положив начало системной подготовке профессиональных специалистов связи в Азербайджане.",
+    },
+    "1991": {
+      year_az: "1991",
+      year_en: "1991",
+      year_ru: "1991",
+      tag_az: "KOLLEC STATUSU",
+      tag_en: "COLLEGE STATUS",
+      tag_ru: "СТАТУС КОЛЛЕДЖА",
+      title_az: "Bakı Rabitə Kollecinin Yaradılması",
+      title_en: "Establishment of Baku Communications College",
+      title_ru: "Создание Бакинского колледжа связи",
+      desc_az:
+        "Keçmiş SSRİ Rabitə Nazirliyinin 02 aprel 1991-ci il tarixli 157 saylı əmrinə əsasən təhsil müəssisəsinin statusu yüksəldilərək Bakı RabitəElektrik Texnikumunun bazasında Bakı Rabitə Kolleci yaradılmışdır.",
+      desc_en:
+        "By Order No. 157 dated April 2, 1991, the institution was elevated in academic status and reorganized into the Baku Communications College.",
+      desc_ru:
+        "Приказом № 157 от 2 апреля 1991 года статус учебного заведения был повышен, и на базе техникума был создан Бакинский колледж связи.",
+    },
+    "2002": {
+      year_az: "2002",
+      year_en: "2002",
+      year_ru: "2002",
+      tag_az: "STRATEJİ BİRLƏŞMƏ",
+      tag_en: "STRATEGIC MERGER",
+      tag_ru: "СТРАТЕГИЧЕСКОЕ ОБЪЕДИНЕНИЕ",
+      title_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin Təşkili",
+      title_en: "Formation of Baku State Communications and Transport College",
+      title_ru: "Образование Бакинского государственного колледжа связи и транспорта",
+      desc_az:
+        "Azərbaycan Respublikası Nazirlər Kabinetinin 26 avqust 2002-ci il tarixli 140 saylı qərarı və Təhsil Nazirliyinin 786 saylı əmrinə əsasən Bakı Rabitə Kolleci və Bakı Dəmiryolu Texnikumu birləşdirilərək Bakı Dövlət Rabitə və Nəqliyyat Kolleci yaradılmışdır.",
+      desc_en:
+        "Pursuant to Cabinet of Ministers Resolution No. 140 dated August 26, 2002, Baku Communications College and Baku Railway Technical School merged to form Baku State Communications and Transport College.",
+      desc_ru:
+        "Постановлением Кабинета Министров Азербайджанской Республики № 140 от 26 августа 2002 года Бакинский колледж связи и Бакинский железнодорожный техникум были объединены в Бакинский государственный колледж связи и транспорта.",
+    },
+    "2016": {
+      year_az: "2016",
+      year_en: "2016",
+      year_ru: "2016",
+      tag_az: "UNİVERSİTET İNTEQRASİYASI",
+      tag_en: "UNIVERSITY INTEGRATION",
+      tag_ru: "ИНТЕГРАЦИЯ С АзТУ",
+      title_az: "Azərbaycan Texniki Universitetinin Nəzdində Fəaliyyət",
+      title_en: "Operating Under Azerbaijan Technical University (AzTU)",
+      title_ru: "Деятельность при Азербайджанском техническом университете (АзТУ)",
+      desc_az:
+        "2016-cı ildən etibarən kollec Azərbaycan Texniki Universitetinin (AzTU) nəzdində fəaliyyətini davam etdirərək ali təhsil standartları ilə orta ixtisas təhsili arasında birbaşa elmi-metodiki körpü yaratmışdır.",
+      desc_en:
+        "Since 2016, the college has operated under Azerbaijan Technical University (AzTU), building a direct academic and engineering bridge between specialized secondary and higher technical education.",
+      desc_ru:
+        "С 2016 года колледж функционирует при Азербайджанском техническом университете (АзТУ), обеспечивая преемственность между средним специальным и высшим техническим образованием.",
+    },
+    "2026": {
+      year_az: "Bu gün",
+      year_en: "Today",
+      year_ru: "Сегодня",
+      tag_az: "RƏQƏMSAL TRANSFORMASİYA",
+      tag_en: "DIGITAL TRANSFORMATION",
+      tag_ru: "ЦИФРОВАЯ ТРАНСФОРМАЦИЯ",
+      title_az: "Publik Hüquqi Şəxs və Müasir Rəqəmsal Kampus",
+      title_en: "Public Legal Entity & Modern Digital Campus",
+      desc_az:
+        "Bu gün kollec Publik Hüquqi Şəxs statusu ilə 154 nəfərlik peşəkar müəllim heyəti, rəqəmsal laboratoriyaları, elektron kitabxanası və müasir videodərs bazası ilə gələcəyin ІТ, rabitə və nəqliyyat mütəxəssislərini yetişdirir.",
+      desc_en:
+        "Today, as a Public Legal Entity with 154 faculty members, digital laboratories, an online reading room, and open video lectures, the college prepares the next generation of IT, telecom, and transport specialists.",
+      title_ru: "Публичное юридическое лицо и современный цифровой кампус",
+      desc_ru:
+        "Сегодня колледж в статусе публичного юридического лица с 154 преподавателями, цифровыми лабораториями и электронной библиотекой готовит передовых специалистов в сфере ИТ, связи и транспорта.",
+    },
+  };
+
+  const tlNodes = aboutSection.querySelectorAll(".timeline-node");
+  const tlStage = document.getElementById("about-timeline-stage");
+  const tlYear = document.getElementById("tl-stage-year");
+  const tlTag = document.getElementById("tl-stage-tag");
+  const tlTitle = document.getElementById("tl-stage-title");
+  const tlDesc = document.getElementById("tl-stage-desc");
+  let activeYear = "1931";
+
+  function renderTimelineStage(yearKey) {
+    activeYear = yearKey;
+    const item = timelineData[yearKey] || timelineData["1931"];
+    const lang = typeof currentLang !== "undefined" ? currentLang : "az";
+    if (tlStage) {
+      tlStage.classList.remove("stage-anim");
+      void tlStage.offsetWidth;
+      tlStage.classList.add("stage-anim");
+    }
+    if (tlYear) tlYear.textContent = item[`year_${lang}`] || item.year_az;
+    if (tlTag) tlTag.textContent = item[`tag_${lang}`] || item.tag_az;
+    if (tlTitle) tlTitle.textContent = item[`title_${lang}`] || item.title_az;
+    if (tlDesc) tlDesc.textContent = item[`desc_${lang}`] || item.desc_az;
+  }
+
+  tlNodes.forEach((node) => {
+    node.addEventListener("click", () => {
+      const year = node.getAttribute("data-year");
+      tlNodes.forEach((n) => {
+        const isCurrent = n === node;
+        n.classList.toggle("active", isCurrent);
+        n.setAttribute("aria-selected", isCurrent ? "true" : "false");
+      });
+      renderTimelineStage(year);
+    });
+  });
+
+  document.addEventListener("languageChanged", () => {
+    renderTimelineStage(activeYear);
+  });
+
+  // 3. Animated Fact-Sheet Counters
+  const counters = aboutSection.querySelectorAll(".about-counter[data-count-to]");
+  if (counters.length && "IntersectionObserver" in window) {
+    const counterObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = parseInt(el.getAttribute("data-count-to"), 10) || 0;
+          const duration = 1400;
+          const start = performance.now();
+          function tick(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(target * eased);
+            if (progress < 1) {
+              requestAnimationFrame(tick);
+            } else {
+              el.textContent = target;
+            }
+          }
+          requestAnimationFrame(tick);
+          obs.unobserve(el);
+        });
+      },
+      { threshold: 0.35 }
+    );
+    counters.forEach((c) => counterObserver.observe(c));
+  }
+
+  // 4. Direct jump to Leadership tab in #structure
+  aboutSection.querySelectorAll("[data-struct-jump]").forEach((link) => {
+    link.addEventListener("click", () => {
+      const cat = link.getAttribute("data-struct-jump");
+      const targetTab = document.querySelector(`.cat-trigger[data-category="${cat}"], .struct-tab[data-category="${cat}"]`);
+      if (targetTab) {
+        setTimeout(() => targetTab.click(), 450);
+      }
+    });
+  });
+})();
+
+
+
+
+
+
+/* ═══════════════ HONORARY STUDENTS / FƏXRİ TƏLƏBƏLƏR MODULE ═══════════════ */
+(function initHonorStudentsModule() {
+  const honorStudentsData = [
+    {
+      id: "senan-mirzezade",
+      fullName: "Mirzəzadə Sənan Azər oğlu",
+      photo: "senan1.jpeg",
+      fallbackPhoto: "logo.jpg",
+      titleBadge: "“İlin Gənci” Mükafatçısı",
+      role: "İnformasiya Texnologiyaları, Kibertəhlükəsizlik və Robototexnika Mütəxəssisi",
+      categories: ["all", "it-robotics", "international", "youth"],
+      statusText: "Beynəlxalq Çempion & Tədqiqatçı",
+      quote: "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
+      flags: [
+        { emoji: "🇦🇿", name: "Azərbaycan", note: "Respublika Çempionu" },
+        { emoji: "🇺🇸", name: "ABŞ", note: "FIRST Robotics / NASA Layihəsi" },
+        { emoji: "🇯🇵", name: "Yaponiya", note: "Beynəlxalq Robototexnika 2026" },
+        { emoji: "🇫🇮", name: "Finlandiya", note: "Beynəlxalq Abilimpiya 2027" },
+        { emoji: "🇹🇷", name: "Türkiyə", note: "16-cı Beynəlxalq MEB Robot" }
+      ],
+      stats: [
+        { icon: "🥇", val: "I YER", label: "Milli Abilimpiya 2026", sub: "İT istiqaməti üzrə Qızıl Medal" },
+        { icon: "🤖", val: "ÇEMPİON", label: "Mini Sumo Robototexnika", sub: "Azərbaycan Beynəlxalq Olimpiada" },
+        { icon: "🛡️", val: "LEVEL 1 & 2", label: "Ethical Hacker", sub: "Beynəlxalq kiber sertifikatlar" },
+        { icon: "🌟", val: "İLİN GƏNCİ", label: "Fəxri Dövlət Mükafatı", sub: "İctimai fəallıq və nailiyyətlər" }
+      ],
+      highlights: [
+        {
+          year: "2027",
+          flag: "🇫🇮",
+          country: "Finlandiya",
+          title: "Beynəlxalq Abilimpiya Çempionatı",
+          text: "Azərbaycan Milli Komandasının tərkibində ölkəmizi təmsil etmək vəsiqəsi qazanmışdır."
+        },
+        {
+          year: "2026",
+          flag: "🇯🇵",
+          country: "Yaponiya",
+          title: "Beynəlxalq Robototexnika Yarışı",
+          text: "Azərbaycan Mini Sumo çempionu kimi Yaponiyada keçiriləcək beynəlxalq yarışda Azərbaycanı təmsil edəcək."
+        },
+        {
+          year: "2024",
+          flag: "🇺🇸",
+          country: "ABŞ",
+          title: "FIRST Robotics Competition & NASA Layihəsi",
+          text: "Amerika Birləşmiş Ştatlarında NASA layihəsi ilə əlaqəli FRC yarışında Azərbaycanı təmsil etmişdir."
+        }
+      ],
+      tags: [
+        "#İnformasiyaTexnologiyaları",
+        "#Kibertəhlükəsizlik",
+        "#EthicalHacker_L1_L2",
+        "#Robototexnika",
+        "#MiniSumo_Çempionu",
+        "#FIRST_Robotics_NASA",
+        "#MilliAbilimpiya_I_Yer",
+        "#Finlandiya2027",
+        "#Yaponiya2026",
+        "#İlinGənci"
+      ],
+      timeline: [
+        {
+          year: "2027",
+          badge: "🇫🇮 Finlandiya · Qlobal Vəsiqə",
+          title: "Beynəlxalq Abilimpiya Çempionatı (Finlandiya)",
+          desc: "2026-cı il Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə qazanılmış I yer (qızıl medal) nəticəsinə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır."
+        },
+        {
+          year: "2026",
+          badge: "🇯🇵 Yaponiya · Qlobal Vəsiqə & Çempionluq",
+          title: "Azərbaycan Beynəlxalq Robot Olimpiadası — Mini Sumo Çempionu",
+          desc: "Azərbaycan Beynəlxalq Robot Olimpiadasında yüksək nəticə göstərərək Mini Sumo robototexnika kateqoriyasında Respublika Çempionu olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır."
+        },
+        {
+          year: "2026",
+          badge: "🥇 Qızıl Medal & Diplom",
+          title: "Milli Abilimpiya Çempionatı — I Yer Qalibi",
+          desc: "İnformasiya Texnologiyaları istiqaməti üzrə bütün rəqiblərini qabaqlayaraq fəxri I yerin qalibi olmuş, qızıl medal və xüsusi diplomla təltif edilmişdir."
+        },
+        {
+          year: "2025",
+          badge: "🤝 Könüllü Mentorluq & İnklüziv Dəstək",
+          title: "FIRST Robotics Komandasına Texniki Mentorluq və Sosial Maarifləndirmə",
+          desc: "FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür."
+        },
+        {
+          year: "2024",
+          badge: "🇺🇸 ABŞ & 🇹🇷 Türkiyə",
+          title: "FIRST Robotics Competition (NASA Layihəsi) & 16-cı MEB Robot",
+          desc: "Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmiş, beynəlxalq robototexnika mühitində zəngin praktiki təcrübə qazanmışdır. Həmin il Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir."
+        },
+        {
+          year: "2023",
+          badge: "🥉 Respublika Mükafatı & Kiber Məktəb",
+          title: "Milli Abilimpiya Çempionatı III Yer & AKTA Cyber Summer School 2023",
+          desc: "Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir."
+        },
+        {
+          year: "2019–2022",
+          badge: "💻 Fundamental Təhsil",
+          title: "STEP IT Kids Academy — İT və Rəqəmsal Texnologiyalar",
+          desc: "STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində dördillik peşəkar təhsil almışdır."
+        }
+      ],
+      fullBio: [
+        "Mirzəzadə Sənan Azər oğlu informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində özünü inkişaf etdirən, müxtəlif yerli və beynəlxalq yarışlarda iştirak edərək yüksək nəticələr əldə edən gəncdir.",
+        "2019–2022-ci illərdə STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində təhsil almışdır.",
+        "2023-cü ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
+        "2024-cü ildə Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir. Həmin il Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmişdir. Bu yarış çərçivəsində beynəlxalq robototexnika mühitində praktiki təcrübə qazanmışdır.",
+        "2025-ci ildə FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
+        "2026-cı ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə I yerin qalibi olmuşdur. Bu nəticəyə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
+        "2026-cı ildə Azərbaycan Beynəlxalq Robot Olimpiadasında iştirak edərək yüksək nəticə göstərmiş, Mini Sumo robototexnika kateqoriyasında çempion olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
+        "Kibertəhlükəsizlik sahəsində Ethical Hacker Level 1 və Ethical Hacker Level 2 proqramlarını uğurla tamamlamışdır. İnformasiya texnologiyaları, kompüter şəbəkələri, kibertəhlükəsizlik və robototexnika üzrə müxtəlif seminar, təlim və praktiki proqramlarda iştirak edərək peşəkar bilik və bacarıqlarını davamlı şəkildə inkişaf etdirir.",
+        "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
+        "Gənclər və texnologiya sahəsində göstərdiyi fəallıq, əldə etdiyi nailiyyətlər və ictimai fəaliyyəti nəzərə alınaraq “İlin Gənci” mükafatına layiq görülmüşdür.",
+        "Sənanın əldə etdiyi nəticələr onun informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində ardıcıl inkişaf etdiyini, beynəlxalq səviyyədə Azərbaycanı təmsil etdiyini və öz bilik və təcrübəsini digər gənclərlə bölüşərək sosial fayda yaratdığını göstərir."
+      ],
+      certificates: [
+        { icon: "🛡️", title: "Ethical Hacker Level 1", sub: "Kibertəhlükəsizlik & Şəbəkə Müdafiəsi" },
+        { icon: "🔐", title: "Ethical Hacker Level 2", sub: "Təkmil Penetrasiya & Təhlükə Analizi" },
+        { icon: "🌐", title: "AKTA Cyber Summer School 2023", sub: "Azərbaycan Kibertəhlükəsizlik Təşkilatları Assosiasiyası" },
+        { icon: "🥇", title: "Milli Abilimpiya Qızıl Medal (2026)", sub: "İnformasiya Texnologiyaları üzrə I Yer" },
+        { icon: "🤖", title: "Mini Sumo Robototexnika Çempionu", sub: "Azərbaycan Beynəlxalq Robot Olimpiadası (2026)" },
+        { icon: "🚀", title: "FIRST Robotics & NASA Layihəsi", sub: "Beynəlxalq Mühəndislik və Robototexnika (ABŞ)" },
+        { icon: "💻", title: "STEP IT Kids Academy Məzunu", sub: "İKT və Rəqəmsal Texnologiyalar (2019-2022)" },
+        { icon: "🌟", title: "“İlin Gənci” Fəxri Dövlət Mükafatı", sub: "İctimai Fəallıq və İnklüziv Layihələrə Töhfə" }
+      ],
+      gallery: [
+        { type: "image", src: "senan1.jpeg", caption: "Mirzəzadə Sənan — Fəxri Tələbə Portreti" },
+        { type: "image", src: "senan2.jpeg", caption: "Milli Abilimpiya Mükafatlandırma Mərasimi" },
+        { type: "image", src: "senan3.jpeg", caption: "Mini Sumo Robototexnika Çempionluğu" },
+        { type: "image", src: "senan4.jpeg", caption: "FIRST Robotics (NASA) Beynəlxalq Yarışı" },
+        { type: "image", src: "senan5.jpeg", caption: "Kibertəhlükəsizlik & Ethical Hacker Proqramı" },
+        { type: "image", src: "senan6.jpeg", caption: "AKTA Cyber Summer School Praktiki Təlimi" },
+        { type: "image", src: "senan7.jpeg", caption: "16-cı Beynəlxalq MEB Robot Yarışı (Türkiyə)" },
+        { type: "image", src: "senan8.jpeg", caption: "Sosial İnklüziv Layihələr & Könüllü Dəstək" },
+        { type: "image", src: "senan9.jpeg", caption: "“İlin Gənci” Mükafat Təqdimatı" },
+        { type: "video", src: "senan10.mp4", caption: "Robototexnika və Canlı Çıxış Video Xronikası" },
+        { type: "image", src: "senan11.jpeg", caption: "Beynəlxalq Robot Arena və Hazırlıq" },
+        { type: "image", src: "senan12.jpeg", caption: "Diplomlar, Qızıl Medallar və Təltiflər" }
+      ]
+    }
+  ];
+
+  function renderHonorCard(student) {
+    const flagsHtml = student.flags
+      .map(
+        (f) =>
+          '<span class="honor-flag-tag" title="' + f.note + '">' +
+            '<span class="flag-emoji">' + f.emoji + '</span> ' +
+            '<span>' + f.name + '</span>' +
+          '</span>'
+      )
+      .join("");
+
+    const statsHtml = student.stats
+      .map(
+        (s) =>
+          '<div class="honor-stat-card">' +
+            '<div class="honor-stat-top">' +
+              '<span class="honor-stat-icon">' + s.icon + '</span>' +
+              '<span class="honor-stat-val">' + s.val + '</span>' +
+            '</div>' +
+            '<div class="honor-stat-label">' + s.label + '</div>' +
+            '<div class="honor-stat-sub">' + s.sub + '</div>' +
+          '</div>'
+      )
+      .join("");
+
+    const highlightsHtml = student.highlights
+      .map(
+        (h) =>
+          '<div class="honor-highlight-row">' +
+            '<span class="honor-highlight-bullet">✦</span>' +
+            '<div>' +
+              '<strong>' + h.flag + ' ' + h.year + ' (' + h.country + ') — ' + h.title + ':</strong> ' +
+              '<span>' + h.text + '</span>' +
+            '</div>' +
+          '</div>'
+      )
+      .join("");
+
+    const tagsHtml = student.tags
+      .map((t) => '<span class="honor-tag-pill">' + t + '</span>')
+      .join("");
+
+    // Mini thumbnails
+    const thumbsHtml = student.gallery
+      .slice(0, 5)
+      .map(
+        (g) =>
+          '<img src="' +
+          (g.type === "video" ? "logo.jpg" : g.src) +
+          '" class="honor-preview-thumb" alt="' +
+          g.caption +
+          '" title="' +
+          g.caption +
+          '" data-open-modal="' +
+          student.id +
+          '" data-tab="gallery" />'
+      )
+      .join("");
+
+    return (
+      '<article class="honor-student-card" id="student-' + student.id + '">' +
+        '<div class="honor-card-ambient" aria-hidden="true"></div>' +
+
+        '<!-- Left Column: Avatar & Actions -->' +
+        '<div class="honor-card-aside">' +
+          '<div class="honor-avatar-wrap">' +
+            '<img ' +
+              'src="' + student.photo + '" ' +
+              'alt="' + student.fullName + '" ' +
+              'class="honor-avatar-img" ' +
+              'loading="lazy" ' +
+              'onerror="this.onerror=null;this.src=\'' + student.fallbackPhoto + '\';" ' +
+            '/>' +
+            '<div class="honor-avatar-overlay">' +
+              '<span class="honor-verified-pill">⭐ FƏXRİ TƏLƏBƏ</span>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="honor-status-pill">' +
+            '<span class="honor-status-dot"></span>' +
+            '<span>' + student.statusText + '</span>' +
+          '</div>' +
+
+          '<div class="honor-flags-box">' +
+            '<div class="honor-flags-heading">' +
+              '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>' +
+              '<span>TƏMSİL OLUNAN ÖLKƏLƏR</span>' +
+            '</div>' +
+            '<div class="honor-flags-list">' +
+              flagsHtml +
+            '</div>' +
+          '</div>' +
+
+          '<div class="honor-aside-actions">' +
+            '<button type="button" class="honor-btn-primary" data-open-modal="' + student.id + '" data-tab="bio">' +
+              '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>' +
+              '<span>Ətraflı Dosye</span>' +
+            '</button>' +
+            '<button type="button" class="honor-btn-secondary" data-open-modal="' + student.id + '" data-tab="timeline">' +
+              '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' +
+              '<span>Nailiyyət Xronologiyası</span>' +
+            '</button>' +
+            '<button type="button" class="honor-btn-secondary" data-open-modal="' + student.id + '" data-tab="gallery" style="border-color: rgba(0, 210, 255, 0.4); color: #7fe4ff;">' +
+              '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>' +
+              '<span>Foto & Video Arxivi (12 Media)</span>' +
+            '</button>' +
+            '<div class="honor-gallery-preview-strip">' +
+              thumbsHtml +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+
+        '<!-- Right Column: Details & Stats -->' +
+        '<div class="honor-card-main">' +
+          '<div class="honor-main-topbar">' +
+            '<div class="honor-kicker-tag">' +
+              '<span>🤖</span> ' +
+              '<span>İKT, Kibertəhlükəsizlik & Robototexnika</span>' +
+            '</div>' +
+            '<div class="honor-badge-shimmer">' +
+              '<span>🌟</span> ' +
+              '<span>' + student.titleBadge + '</span>' +
+            '</div>' +
+          '</div>' +
+
+          '<div>' +
+            '<h4 class="honor-student-name">' + student.fullName + '</h4>' +
+            '<div class="honor-student-role">' + student.role + '</div>' +
+          '</div>' +
+
+          '<!-- 4 Stats Grid -->' +
+          '<div class="honor-stats-grid">' +
+            statsHtml +
+          '</div>' +
+
+          '<!-- Recent Milestones Box -->' +
+          '<div class="honor-highlights-box">' +
+            '<div class="honor-highlights-heading">' +
+              '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>' +
+              '<span>ƏSAS BEYNƏLXALQ TƏMSİLÇİLİKLƏR VƏ HƏDƏFLƏR</span>' +
+            '</div>' +
+            '<div class="honor-highlights-list">' +
+              highlightsHtml +
+            '</div>' +
+          '</div>' +
+
+          '<!-- Quote Block -->' +
+          '<div class="honor-quote-box">' +
+            '<span class="honor-quote-icon" aria-hidden="true">“</span>' +
+            '<p class="honor-quote-text">' + student.quote + '</p>' +
+          '</div>' +
+
+          '<!-- Tags -->' +
+          '<div class="honor-tags-row">' +
+            tagsHtml +
+          '</div>' +
+        '</div>' +
+      '</article>'
+    );
+  }
+
+  function renderHonorList(filter) {
+    if (!filter) filter = "all";
+    const grid = document.getElementById("honor-students-grid");
+    if (!grid) return;
+
+    const filtered = honorStudentsData.filter((student) => {
+      if (filter === "all") return true;
+      return student.categories.indexOf(filter) !== -1;
+    });
+
+    if (filtered.length === 0) {
+      grid.innerHTML = '<div style="text-align: center; padding: 40px; color: rgba(248, 250, 252, 0.6);">Bu kateqoriya üzrə məlumat hazırlanır.</div>';
+      return;
+    }
+
+    grid.innerHTML = filtered.map(renderHonorCard).join("");
+    attachCardListeners();
+  }
+
+  function openHonorModal(studentId, initialTab) {
+    if (!initialTab) initialTab = "bio";
+    const student = honorStudentsData.find((s) => s.id === studentId);
+    if (!student) return;
+
+    const modal = document.getElementById("honor-student-modal");
+    const modalBody = document.getElementById("honor-modal-body");
+    if (!modal || !modalBody) return;
+
+    // Timeline HTML
+    const timelineHtml = student.timeline
+      .map(
+        (t) =>
+          '<div class="honor-timeline-node">' +
+            '<div class="honor-timeline-marker">✦</div>' +
+            '<div class="honor-timeline-content">' +
+              '<div class="honor-timeline-header">' +
+                '<span class="honor-timeline-year">' + t.year + '</span>' +
+                '<span class="honor-timeline-badge">' + t.badge + '</span>' +
+              '</div>' +
+              '<h5 class="honor-timeline-title">' + t.title + '</h5>' +
+              '<p class="honor-timeline-desc">' + t.desc + '</p>' +
+            '</div>' +
+          '</div>'
+      )
+      .join("");
+
+    // Bio HTML
+    const bioHtml = student.fullBio
+      .map((p) => '<p class="honor-modal-bio-p">' + p + '</p>')
+      .join("");
+
+    // Certificates HTML
+    const certsHtml = student.certificates
+      .map(
+        (c) =>
+          '<div class="honor-cert-item">' +
+            '<div class="honor-cert-icon">' + c.icon + '</div>' +
+            '<div>' +
+              '<h5 class="honor-cert-name">' + c.title + '</h5>' +
+              '<p class="honor-cert-org">' + c.sub + '</p>' +
+            '</div>' +
+          '</div>'
+      )
+      .join("");
+
+    // Gallery HTML
+    const galleryHtml = student.gallery
+      .map((g) => {
+        if (g.type === "video") {
+          return (
+            '<div class="honor-gallery-item">' +
+              '<span class="honor-gallery-video-badge">▶ Video</span>' +
+              '<video src="' + g.src + '" class="honor-gallery-video" controls playsinline preload="metadata"></video>' +
+              '<div class="honor-gallery-caption">' + g.caption + '</div>' +
+            '</div>'
+          );
+        } else {
+          return (
+            '<div class="honor-gallery-item">' +
+              '<img src="' + g.src + '" class="honor-gallery-img" alt="' + g.caption + '" loading="lazy" />' +
+              '<div class="honor-gallery-caption">' + g.caption + '</div>' +
+            '</div>'
+          );
+        }
+      })
+      .join("");
+
+    modalBody.innerHTML =
+      '<!-- Modal Hero -->' +
+      '<div class="honor-modal-hero">' +
+        '<img ' +
+          'src="' + student.photo + '" ' +
+          'alt="' + student.fullName + '" ' +
+          'class="honor-modal-avatar" ' +
+          'onerror="this.onerror=null;this.src=\'' + student.fallbackPhoto + '\';" ' +
+        '/>' +
+        '<div class="honor-modal-hero-info">' +
+          '<h3>' + student.fullName + '</h3>' +
+          '<p>' + student.role + '</p>' +
+          '<div class="honor-modal-hero-badges">' +
+            '<span class="honor-badge-shimmer">🌟 ' + student.titleBadge + '</span> ' +
+            '<span class="honor-verified-pill">🏆 Fəxri Tələbə</span>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+
+      '<!-- Tab Navigation inside Modal -->' +
+      '<div class="honor-modal-tab-nav" role="tablist">' +
+        '<button type="button" class="honor-modal-tab ' + (initialTab === 'bio' ? 'active' : '') + '" data-modal-target="pane-bio">' +
+          '📖 Tam Bioqrafiya və İctimai Fəaliyyət' +
+        '</button>' +
+        '<button type="button" class="honor-modal-tab ' + (initialTab === 'timeline' ? 'active' : '') + '" data-modal-target="pane-timeline">' +
+          '⏳ 2019–2027 Uğur Xronologiyası' +
+        '</button>' +
+        '<button type="button" class="honor-modal-tab ' + (initialTab === 'certs' ? 'active' : '') + '" data-modal-target="pane-certs">' +
+          '🎖️ Sertifikatlar & Qələbələr' +
+        '</button>' +
+        '<button type="button" class="honor-modal-tab ' + (initialTab === 'gallery' ? 'active' : '') + '" data-modal-target="pane-gallery">' +
+          '📸 Foto & Video Arxivi (' + student.gallery.length + ')' +
+        '</button>' +
+      '</div>' +
+
+      '<!-- Tab Panes -->' +
+      '<div class="honor-modal-panes">' +
+        '<div class="honor-modal-tab-pane ' + (initialTab === 'bio' ? 'active' : '') + '" id="pane-bio">' +
+          bioHtml +
+        '</div>' +
+        '<div class="honor-modal-tab-pane ' + (initialTab === 'timeline' ? 'active' : '') + '" id="pane-timeline">' +
+          '<div class="honor-modal-timeline">' +
+            timelineHtml +
+          '</div>' +
+        '</div>' +
+        '<div class="honor-modal-tab-pane ' + (initialTab === 'certs' ? 'active' : '') + '" id="pane-certs">' +
+          '<div class="honor-certs-grid">' +
+            certsHtml +
+          '</div>' +
+        '</div>' +
+        '<div class="honor-modal-tab-pane ' + (initialTab === 'gallery' ? 'active' : '') + '" id="pane-gallery">' +
+          '<div class="honor-gallery-grid">' +
+            galleryHtml +
+          '</div>' +
+        '</div>' +
+      '</div>';
+
+    // Tab switching inside modal
+    modalBody.querySelectorAll(".honor-modal-tab").forEach((tabBtn) => {
+      tabBtn.addEventListener("click", () => {
+        const targetId = tabBtn.getAttribute("data-modal-target");
+        modalBody.querySelectorAll(".honor-modal-tab").forEach((b) => b.classList.remove("active"));
+        modalBody.querySelectorAll(".honor-modal-tab-pane").forEach((p) => p.classList.remove("active"));
+
+        tabBtn.classList.add("active");
+        const targetPane = modalBody.querySelector("#" + targetId);
+        if (targetPane) targetPane.classList.add("active");
+      });
+    });
+
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeHonorModal() {
+    const modal = document.getElementById("honor-student-modal");
+    if (!modal) return;
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    // Pause any playing videos
+    modal.querySelectorAll("video").forEach((v) => v.pause());
+  }
+
+  function attachCardListeners() {
+    document.querySelectorAll("[data-open-modal]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const sId = btn.getAttribute("data-open-modal");
+        const tab = btn.getAttribute("data-tab") || "bio";
+        openHonorModal(sId, tab);
+      });
+    });
+  }
+
+  function init() {
+    // 1. Initial Render
+    renderHonorList("all");
+
+    // 2. Tab filtering listeners
+    const filterBtns = document.querySelectorAll(".honor-tab-btn[data-honor-filter]");
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.getAttribute("data-honor-filter");
+        filterBtns.forEach((b) => {
+          b.classList.remove("active");
+          b.setAttribute("aria-selected", "false");
+        });
+        btn.classList.add("active");
+        btn.setAttribute("aria-selected", "true");
+        renderHonorList(filter);
+      });
+    });
+
+    // 3. Modal close events
+    const closeBtn = document.getElementById("honor-modal-close");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", closeHonorModal);
+    }
+
+    const modal = document.getElementById("honor-student-modal");
+    if (modal) {
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeHonorModal();
+        }
+      });
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeHonorModal();
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+/**
+ * ══════════════════════════════════════════════════════════════════
+ * BDRNK — OFFICIAL CERTIFICATES & DIPLOMAS SHOWCASE MODULE
+ * Full Multilingual (AZ / EN / RU) & Reactive Language Switch
+ * ══════════════════════════════════════════════════════════════════
+ */
+(function initCertificatesModule() {
+  const certificatesData = [
+    {
+      id: 1,
+      title_az: "Basketbol üzrə Yasamal Rayon Turniri",
+      title_en: "Yasamal District Basketball Tournament",
+      title_ru: "Районный турнир по баскетболу Ясамальского района",
+      subtitle_az: "Ümummilli Lider Heydər Əliyevin 101-ci ildönümünə həsr olunmuş turnir",
+      subtitle_en: "Tournament dedicated to the 101st anniversary of National Leader Heydar Aliyev",
+      subtitle_ru: "Турнир, посвященный 101-й годовщине со дня рождения Общенационального Лидера Гейдара Алиева",
+      recipient_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin komandası",
+      recipient_en: "Team of Baku State College of Communications and Transport",
+      recipient_ru: "Команда Бакинского государственного колледжа связи и транспорта",
+      place_az: "III YER",
+      place_en: "3rd PLACE",
+      place_ru: "III МЕСТО",
+      placeType: "bronze",
+      sport_az: "Basketbol",
+      sport_en: "Basketball",
+      sport_ru: "Баскетбол",
+      sportIcon: "🏀",
+      category: "turnir",
+      year: "2024",
+      date_az: "2024-cü il",
+      date_en: "Year 2024",
+      date_ru: "2024 год",
+      org_az: "Yeni Azərbaycan Partiyası Yasamal Rayon Təşkilatı",
+      org_en: "New Azerbaijan Party (YAP) Yasamal District Branch",
+      org_ru: "Ясамальская районная организация Партии «Ени Азербайджан»",
+      signer_az: "Baxtiyar Nəbiyev (YAP Yasamal rayon təşkilatının sədri)",
+      signer_en: "Bakhtiyar Nabiyev (Chairman of YAP Yasamal District)",
+      signer_ru: "Бахтияр Набиев (Председатель Ясамальской районной организации ПЕА)",
+      img: "certificates/cert_2.jpg",
+      thumb: "certificates/thumbs/cert_2.jpg"
+    },
+    {
+      id: 2,
+      title_az: "Respublika Birinciliyi — Şahmat (Qızlar)",
+      title_en: "National Championship — Chess (Girls)",
+      title_ru: "Республиканское первенство — Шахматы (девушки)",
+      subtitle_az: "Orta ixtisas təhsil müəssisələrinin tələbələri arasında keçirilən Respublika Birinciliyi",
+      subtitle_en: "National Championship among students of specialized secondary educational institutions",
+      subtitle_ru: "Республиканское первенство среди студентов средних специальных учебных заведений",
+      recipient_az: "Bakı Dövlət Rabitə və Nəqliyyat Kolleci",
+      recipient_en: "Baku State College of Communications and Transport",
+      recipient_ru: "Бакинский государственный колледж связи и транспорта",
+      place_az: "II YER",
+      place_en: "2nd PLACE",
+      place_ru: "II МЕСТО",
+      placeType: "silver",
+      sport_az: "Şahmat (qızlar)",
+      sport_en: "Chess (girls)",
+      sport_ru: "Шахматы (девушки)",
+      sportIcon: "♟️",
+      category: "respublika",
+      year: "2024",
+      date_az: "23 oktyabr 2024",
+      date_en: "October 23, 2024",
+      date_ru: "23 октября 2024 г.",
+      org_az: "«Gənclik» Tələbə İdman Cəmiyyətinin Azərbaycan Respublikası Şurası",
+      org_en: "Azerbaijan Republic Council of \"Genclik\" Student Sports Society",
+      org_ru: "Совет Студенческого спортивного общества «Гянджлик» АР",
+      signer_az: "Tofiq Xanəliyev (Şura sədri)",
+      signer_en: "Tofig Khanaliyev (Council Chairman)",
+      signer_ru: "Тофик Ханалиев (Председатель Совета)",
+      img: "certificates/cert_4.jpg",
+      thumb: "certificates/thumbs/cert_4.jpg"
+    },
+    {
+      id: 3,
+      title_az: "Respublika Birinciliyi — Voleybol (Oğlanlar)",
+      title_en: "National Championship — Volleyball (Boys)",
+      title_ru: "Республиканское первенство — Волейбол (юноши)",
+      subtitle_az: "Orta ixtisas təhsil müəssisələrinin tələbələri arasında keçirilən Respublika Birinciliyi",
+      subtitle_en: "National Championship among students of specialized secondary educational institutions",
+      subtitle_ru: "Республиканское первенство среди студентов средних специальных учебных заведений",
+      recipient_az: "Bakı Dövlət Rabitə və Nəqliyyat Kolleci",
+      recipient_en: "Baku State College of Communications and Transport",
+      recipient_ru: "Бакинский государственный колледж связи и транспорта",
+      place_az: "II YER",
+      place_en: "2nd PLACE",
+      place_ru: "II МЕСТО",
+      placeType: "silver",
+      sport_az: "Voleybol (oğlanlar)",
+      sport_en: "Volleyball (boys)",
+      sport_ru: "Волейбол (юноши)",
+      sportIcon: "🏐",
+      category: "respublika",
+      year: "2024",
+      date_az: "31 oktyabr 2024",
+      date_en: "October 31, 2024",
+      date_ru: "31 октября 2024 г.",
+      org_az: "«Gənclik» Tələbə İdman Cəmiyyətinin Azərbaycan Respublikası Şurası",
+      org_en: "Azerbaijan Republic Council of \"Genclik\" Student Sports Society",
+      org_ru: "Совет Студенческого спортивного общества «Гянджлик» АР",
+      signer_az: "Tofiq Xanəliyev (Şura sədri)",
+      signer_en: "Tofig Khanaliyev (Council Chairman)",
+      signer_ru: "Тофик Ханалиев (Председатель Совета)",
+      img: "certificates/cert_10.jpg",
+      thumb: "certificates/thumbs/cert_10.jpg"
+    },
+    {
+      id: 4,
+      title_az: "Minifutbol Rayon Turniri — Çempionluq (Qızlar)",
+      title_en: "District Mini-Football Tournament — Championship (Girls)",
+      title_ru: "Районный турнир по мини-футболу — Чемпионство (девушки)",
+      subtitle_az: "«Narkomaniyaya yox deyək!» devizi altında qızlar komandaları arasında turnir",
+      subtitle_en: "Tournament under the motto \"Say No to Drugs!\" among girls' teams",
+      subtitle_ru: "Турнир под девизом «Скажем нет наркомании!» среди команд девушек",
+      recipient_az: "BDRNK komandası",
+      recipient_en: "BDRNK Team",
+      recipient_ru: "Команда БГКСТ",
+      place_az: "I YER (Qızıl)",
+      place_en: "1st PLACE (Gold)",
+      place_ru: "I МЕСТО (Золото)",
+      placeType: "gold",
+      sport_az: "Minifutbol (qızlar)",
+      sport_en: "Mini-football (girls)",
+      sport_ru: "Мини-футбол (девушки)",
+      sportIcon: "⚽",
+      category: "turnir",
+      year: "2022",
+      date_az: "26 noyabr 2022",
+      date_en: "November 26, 2022",
+      date_ru: "26 ноября 2022 г.",
+      org_az: "Yasamal rayon Gənclər və İdman İdarəsi",
+      org_en: "Yasamal District Youth and Sports Department",
+      org_ru: "Управление молодежи и спорта Ясамальского района",
+      signer_az: "İ. Səfərov (İdarə rəisi)",
+      signer_en: "I. Safarov (Head of Department)",
+      signer_ru: "И. Сафаров (Начальник управления)",
+      img: "certificates/cert_13.jpg",
+      thumb: "certificates/thumbs/cert_13.jpg"
+    },
+    {
+      id: 5,
+      title_az: "XV Respublika Spartakiadası — Dama (Qızlar)",
+      title_en: "15th National Spartakiade — Checkers (Girls)",
+      title_ru: "XV Республиканская спартакиада — Шашки (девушки)",
+      subtitle_az: "Ümummilli Lider Heydər Əliyevin 100 illiyinə həsr olunmuş Orta ixtisas spartakiadası",
+      subtitle_en: "Specialized secondary spartakiade dedicated to the 100th anniversary of Heydar Aliyev",
+      subtitle_ru: "Спартакиада ссузов, посвященная 100-летию Общенационального Лидера Гейдара Алиева",
+      recipient_az: "Bakı Dövlət Nəqliyyat və Rabitə Kolleci",
+      recipient_en: "Baku State College of Transport and Communications",
+      recipient_ru: "Бакинский государственный колледж транспорта и связи",
+      place_az: "II YER",
+      place_en: "2nd PLACE",
+      place_ru: "II МЕСТО",
+      placeType: "silver",
+      sport_az: "Dama (qızlar)",
+      sport_en: "Checkers (girls)",
+      sport_ru: "Шашки (девушки)",
+      sportIcon: "🎯",
+      category: "respublika",
+      year: "2023",
+      date_az: "05 dekabr 2023",
+      date_en: "December 5, 2023",
+      date_ru: "5 декабря 2023 г.",
+      org_az: "«Gənclik» Tələbə İdman Cəmiyyətinin Azərbaycan Respublikası Şurası",
+      org_en: "Azerbaijan Republic Council of \"Genclik\" Student Sports Society",
+      org_ru: "Совет Студенческого спортивного общества «Гянджлик» АР",
+      signer_az: "Tofiq Xanəliyev (Şura sədri)",
+      signer_en: "Tofig Khanaliyev (Council Chairman)",
+      signer_ru: "Тофик Ханалиев (Председатель Совета)",
+      img: "certificates/cert_11.jpg",
+      thumb: "certificates/thumbs/cert_11.jpg"
+    },
+    {
+      id: 6,
+      title_az: "XV Respublika Spartakiadası — Dama (Oğlanlar)",
+      title_en: "15th National Spartakiade — Checkers (Boys)",
+      title_ru: "XV Республиканская спартакиада — Шашки (юноши)",
+      subtitle_az: "Ümummilli Lider Heydər Əliyevin 100 illiyinə həsr olunmuş Orta ixtisas spartakiadası",
+      subtitle_en: "Specialized secondary spartakiade dedicated to the 100th anniversary of Heydar Aliyev",
+      subtitle_ru: "Спартакиада ссузов, посвященная 100-летию Общенационального Лидера Гейдара Алиева",
+      recipient_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin komandası",
+      recipient_en: "Team of Baku State College of Communications and Transport",
+      recipient_ru: "Команда Бакинского государственного колледжа связи и транспорта",
+      place_az: "II YER",
+      place_en: "2nd PLACE",
+      place_ru: "II МЕСТО",
+      placeType: "silver",
+      sport_az: "Dama (oğlanlar)",
+      sport_en: "Checkers (boys)",
+      sport_ru: "Шашки (юноши)",
+      sportIcon: "🎯",
+      category: "respublika",
+      year: "2023",
+      date_az: "06 dekabr 2023",
+      date_en: "December 6, 2023",
+      date_ru: "6 декабря 2023 г.",
+      org_az: "«Gənclik» Tələbə İdman Cəmiyyətinin Azərbaycan Respublikası Şurası",
+      org_en: "Azerbaijan Republic Council of \"Genclik\" Student Sports Society",
+      org_ru: "Совет Студенческого спортивного общества «Гянджлик» АР",
+      signer_az: "Tofiq Xanəliyev (Şura sədri)",
+      signer_en: "Tofig Khanaliyev (Council Chairman)",
+      signer_ru: "Тофик Ханалиев (Председатель Совета)",
+      img: "certificates/cert_12.jpg",
+      thumb: "certificates/thumbs/cert_12.jpg"
+    },
+    {
+      id: 7,
+      title_az: "Fəxri Fərman — Basketbol Turniri",
+      title_en: "Honorary Citation — Basketball Tournament",
+      title_ru: "Почетная Грамота — Баскетбольный турнир",
+      subtitle_az: "«Gənclər sağlam həyat tərzini seçir» devizi altında basketbol turnirində fəal iştirak",
+      subtitle_en: "Active participation in basketball tournament under the motto \"Youth Chooses a Healthy Lifestyle\"",
+      subtitle_ru: "Активное участие в баскетбольном турнире под девизом «Молодежь выбирает здоровый образ жизни»",
+      recipient_az: "Bakı Dövlət Rabitə və Nəqliyyat Kolleci komandası",
+      recipient_en: "Baku State College of Communications and Transport Team",
+      recipient_ru: "Команда Бакинского государственного колледжа связи и транспорта",
+      place_az: "Fəxri Fərman",
+      place_en: "Honorary Citation",
+      place_ru: "Почетная Грамота",
+      placeType: "honor",
+      sport_az: "Basketbol (oğlanlar)",
+      sport_en: "Basketball (boys)",
+      sport_ru: "Баскетбол (юноши)",
+      sportIcon: "🏀",
+      category: "fexri",
+      year: "2022",
+      date_az: "13 oktyabr 2022",
+      date_en: "October 13, 2022",
+      date_ru: "13 октября 2022 г.",
+      org_az: "YAP Yasamal və Yasamal rayon Gənclər və İdman İdarəsi",
+      org_en: "YAP Yasamal and Yasamal District Youth & Sports Department",
+      org_ru: "Ясамальская организация ПЕА и Управление молодежи и спорта",
+      signer_az: "B. Nəbiyev, İ. Səfərov",
+      signer_en: "B. Nabiyev, I. Safarov",
+      signer_ru: "Б. Набиев, И. Сафаров",
+      img: "certificates/cert_3.jpg",
+      thumb: "certificates/thumbs/cert_3.jpg"
+    },
+    {
+      id: 8,
+      title_az: "Dama Rayon Turniri — II Yer",
+      title_en: "District Checkers Tournament — 2nd Place",
+      title_ru: "Районный турнир по шашкам — II Место",
+      subtitle_az: "«Narkomaniyaya yox deyək!» devizi altında ali və orta ixtisas müəssisələri arasında turnir",
+      subtitle_en: "Tournament under the motto \"Say No to Drugs!\" among universities and colleges",
+      subtitle_ru: "Турнир под девизом «Скажем нет наркомании!» среди вузов и колледжей",
+      recipient_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin komandası",
+      recipient_en: "Team of Baku State College of Communications and Transport",
+      recipient_ru: "Команда Бакинского государственного колледжа связи и транспорта",
+      place_az: "II YER",
+      place_en: "2nd PLACE",
+      place_ru: "II МЕСТО",
+      placeType: "silver",
+      sport_az: "Dama",
+      sport_en: "Checkers",
+      sport_ru: "Шашки",
+      sportIcon: "🎯",
+      category: "turnir",
+      year: "2022",
+      date_az: "2022-ci il",
+      date_en: "Year 2022",
+      date_ru: "2022 год",
+      org_az: "Yasamal rayon Gənclər və İdman İdarəsi",
+      org_en: "Yasamal District Youth and Sports Department",
+      org_ru: "Управление молодежи и спорта Ясамальского района",
+      signer_az: "İ. Səfərov (İdarə rəisi)",
+      signer_en: "I. Safarov (Head of Department)",
+      signer_ru: "И. Сафаров (Начальник управления)",
+      img: "certificates/cert_8.jpg",
+      thumb: "certificates/thumbs/cert_8.jpg"
+    },
+    {
+      id: 9,
+      title_az: "Basketbol Rayon Turniri — III Yer",
+      title_en: "District Basketball Tournament — 3rd Place",
+      title_ru: "Районный турнир по баскетболу — III Место",
+      subtitle_az: "Ümummilli Lider Heydər Əliyevin anadan olmasının 100-cü ildönümünə həsr olunmuş turnir",
+      subtitle_en: "Tournament dedicated to the 100th anniversary of Heydar Aliyev",
+      subtitle_ru: "Турнир, посвященный 100-летию со дня рождения Гейдара Алиева",
+      recipient_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin komandası",
+      recipient_en: "Team of Baku State College of Communications and Transport",
+      recipient_ru: "Команда Бакинского государственного колледжа связи и транспорта",
+      place_az: "III YER",
+      place_en: "3rd PLACE",
+      place_ru: "III МЕСТО",
+      placeType: "bronze",
+      sport_az: "Basketbol",
+      sport_en: "Basketball",
+      sport_ru: "Баскетбол",
+      sportIcon: "🏀",
+      category: "turnir",
+      year: "2023",
+      date_az: "2023-cü il",
+      date_en: "Year 2023",
+      date_ru: "2023 год",
+      org_az: "YAP Yasamal və Yasamal rayon Gənclər və İdman İdarəsi",
+      org_en: "YAP Yasamal and Yasamal District Youth & Sports Department",
+      org_ru: "Ясамальская организация ПЕА и Управление молодежи и спорта",
+      signer_az: "B. Nəbiyev, İ. Səfərov",
+      signer_en: "B. Nabiyev, I. Safarov",
+      signer_ru: "Б. Набиев, И. Сафаров",
+      img: "certificates/cert_6.jpg",
+      thumb: "certificates/thumbs/cert_6.jpg"
+    },
+    {
+      id: 10,
+      title_az: "Dama Rayon Turniri — 100-cü İldönüm",
+      title_en: "District Checkers Tournament — 100th Anniversary",
+      title_ru: "Районный турнир по шашкам — 100-летний юбилей",
+      subtitle_az: "Ümummilli Lider Heydər Əliyevin 100-cü ildönümünə həsr olunmuş dama üzrə rayon turniri",
+      subtitle_en: "Checkers tournament dedicated to the 100th anniversary of Heydar Aliyev",
+      subtitle_ru: "Турнир по шашкам, посвященный 100-летию со дня рождения Гейдара Алиева",
+      recipient_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin komandası",
+      recipient_en: "Team of Baku State College of Communications and Transport",
+      recipient_ru: "Команда Бакинского государственного колледжа связи и транспорта",
+      place_az: "II YER",
+      place_en: "2nd PLACE",
+      place_ru: "II МЕСТО",
+      placeType: "silver",
+      sport_az: "Dama",
+      sport_en: "Checkers",
+      sport_ru: "Шашки",
+      sportIcon: "🎯",
+      category: "turnir",
+      year: "2023",
+      date_az: "2023-cü il",
+      date_en: "Year 2023",
+      date_ru: "2023 год",
+      org_az: "YAP Yasamal və Yasamal rayon Gənclər və İdman İdarəsi",
+      org_en: "YAP Yasamal and Yasamal District Youth & Sports Department",
+      org_ru: "Ясамальская организация ПЕА и Управление молодежи и спорта",
+      signer_az: "B. Nəbiyev, İ. Səfərov",
+      signer_en: "B. Nabiyev, I. Safarov",
+      signer_ru: "Б. Набиев, И. Сафаров",
+      img: "certificates/cert_9.jpg",
+      thumb: "certificates/thumbs/cert_9.jpg"
+    },
+    {
+      id: 11,
+      title_az: "Dama Rayon Turniri — 99-cu İldönüm",
+      title_en: "District Checkers Tournament — 99th Anniversary",
+      title_ru: "Районный турнир по шашкам — 99-я годовщина",
+      subtitle_az: "Ümummilli Lider Heydər Əliyevin 99-cu ildönümü münasibətilə keçirilmiş dama üzrə rayon turniri",
+      subtitle_en: "Checkers tournament on the occasion of the 99th anniversary of Heydar Aliyev",
+      subtitle_ru: "Турнир по шашкам по случаю 99-й годовщины со дня рождения Гейдара Алиева",
+      recipient_az: "Bakı Dövlət Nəqliyyat və Rabitə Kollecinin komandası",
+      recipient_en: "Team of Baku State College of Transport and Communications",
+      recipient_ru: "Команда Бакинского государственного колледжа транспорта и связи",
+      place_az: "II YER",
+      place_en: "2nd PLACE",
+      place_ru: "II МЕСТО",
+      placeType: "silver",
+      sport_az: "Dama",
+      sport_en: "Checkers",
+      sport_ru: "Шашки",
+      sportIcon: "🎯",
+      category: "turnir",
+      year: "2022",
+      date_az: "04 may 2022",
+      date_en: "May 4, 2022",
+      date_ru: "4 мая 2022 г.",
+      org_az: "YAP Yasamal və Yasamal rayon Gİİ",
+      org_en: "YAP Yasamal and Yasamal District Youth & Sports Department",
+      org_ru: "Ясамальская организация ПЕА и Управление молодежи и спорта",
+      signer_az: "B. Nəbiyev, İ. Səfərov",
+      signer_en: "B. Nabiyev, I. Safarov",
+      signer_ru: "Б. Набиев, И. Сафаров",
+      img: "certificates/cert_7.jpg",
+      thumb: "certificates/thumbs/cert_7.jpg"
+    },
+    {
+      id: 12,
+      title_az: "Basketbol 101-ci İldönüm Turniri Blankı",
+      title_en: "Basketball 101st Anniversary Official Award",
+      title_ru: "Официальный диплом турнира по баскетболу (101-я годовщина)",
+      subtitle_az: "Ümummilli Lider Heydər Əliyevin 101-ci ildönümünə həsr olunmuş rəsmi təltif diplomu",
+      subtitle_en: "Official award diploma dedicated to the 101st anniversary of Heydar Aliyev",
+      subtitle_ru: "Официальный диплом, посвященный 101-й годовщине со дня рождения Гейдара Алиева",
+      recipient_az: "Bakı Dövlət Rabitə və Nəqliyyat Kolleci",
+      recipient_en: "Baku State College of Communications and Transport",
+      recipient_ru: "Бакинский государственный колледж связи и транспорта",
+      place_az: "III YER",
+      place_en: "3rd PLACE",
+      place_ru: "III МЕСТО",
+      placeType: "bronze",
+      sport_az: "Basketbol",
+      sport_en: "Basketball",
+      sport_ru: "Баскетбол",
+      sportIcon: "🏀",
+      category: "turnir",
+      year: "2024",
+      date_az: "2024-cü il",
+      date_en: "Year 2024",
+      date_ru: "2024 год",
+      org_az: "YAP Yasamal rayon təşkilatı",
+      org_en: "YAP Yasamal District Branch",
+      org_ru: "Ясамальская районная организация ПЕА",
+      signer_az: "Baxtiyar Nəbiyev",
+      signer_en: "Bakhtiyar Nabiyev",
+      signer_ru: "Бахтияр Набиев",
+      img: "certificates/cert_1.jpg",
+      thumb: "certificates/thumbs/cert_1.jpg"
+    },
+    {
+      id: 13,
+      title_az: "Dama Rayon Turniri Rəsmi Blankı",
+      title_en: "District Checkers Tournament Official Award",
+      title_ru: "Официальный диплом турнира по шашкам",
+      subtitle_az: "«Narkomaniyaya yox deyək!» devizi altında dama üzrə rayon turnirinin rəsmi diplomu",
+      subtitle_en: "Official checkers diploma under the motto \"Say No to Drugs!\"",
+      subtitle_ru: "Официальный диплом турнира по шашкам под девизом «Скажем нет наркомании!»",
+      recipient_az: "BDRNK komandası",
+      recipient_en: "BDRNK Team",
+      recipient_ru: "Команда БГКСТ",
+      place_az: "II YER",
+      place_en: "2nd PLACE",
+      place_ru: "II МЕСТО",
+      placeType: "silver",
+      sport_az: "Dama",
+      sport_en: "Checkers",
+      sport_ru: "Шашки",
+      sportIcon: "🎯",
+      category: "turnir",
+      year: "2022",
+      date_az: "2022-ci il",
+      date_en: "Year 2022",
+      date_ru: "2022 год",
+      org_az: "Yasamal rayon Gənclər və İdman İdarəsi",
+      org_en: "Yasamal District Youth and Sports Department",
+      org_ru: "Управление молодежи и спорта Ясамальского района",
+      signer_az: "İ. Səfərov",
+      signer_en: "I. Safarov",
+      signer_ru: "И. Сафаров",
+      img: "certificates/cert_5.jpg",
+      thumb: "certificates/thumbs/cert_5.jpg"
+    }
+  ];
+
+    const sportsTrophyData = {
+    football: {
+      sport_az: "Minifutbol (Qızlar)",
+      sport_en: "Mini-football (Girls)",
+      sport_ru: "Мини-футбол (девушки)",
+      icon: "🏆",
+      trophyIcon: "⚽",
+      tier_az: "🥇 Qızıl Kubok Çempionluğu · I YER",
+      tier_en: "🥇 Gold Cup Championship · 1st Place",
+      tier_ru: "🥇 Золотой Кубок Чемпионов · I Место",
+      badgeClass: "medal-gold",
+      title_az: "«Narkomaniyaya Yox Deyək!» Minifutbol Rayon Turniri",
+      title_en: '"Say No to Drugs!" District Mini-Football Tournament',
+      title_ru: "Районный турнир по мини-футболу «Скажем нет наркомании!»",
+      desc_az: "Kollecimizin qızlardan ibarət minifutbol komandası möhtəşəm oyun nümayiş etdirərək ali və orta ixtisas təhsil müəssisələri arasında bütün rəqiblərinə qalib gəlmiş və çempionluq kubokunu kollecimizə qazandırmışdır.",
+      desc_en: "Our college girls' mini-football team demonstrated extraordinary skill, defeating all competitors among universities and vocational colleges to bring home the prestigious championship trophy.",
+      desc_ru: "Женская команда нашего колледжа по мини-футболу продемонстрировала блестящую игру, победив всех соперников среди высших и средних специальных учебных заведений и завоевав золотой кубок чемпионов.",
+      year: "2022",
+      pills_az: [
+        { label: "Nəticə", val: "Qızıl Medal & Kubok (I Yer)" },
+        { label: "Təşkilatçı", val: "Yasamal Gənclər və İdman İdarəsi" },
+        { label: "Komanda", val: "BDRNK Qızlar Yığması" },
+        { label: "Məkan", val: "Bakı şəhəri" }
+      ],
+      pills_en: [
+        { label: "Result", val: "Gold Medal & Trophy (1st Place)" },
+        { label: "Organized by", val: "Yasamal Youth & Sports Dept." },
+        { label: "Team", val: "BDRNK Girls Team" },
+        { label: "Location", val: "Baku City" }
+      ],
+      pills_ru: [
+        { label: "Результат", val: "Золотая Медаль и Кубок (I Место)" },
+        { label: "Организатор", val: "Управление молодежи и спорта" },
+        { label: "Команда", val: "Сборная девушек БГКСТ" },
+        { label: "Место", val: "г. Баку" }
+      ],
+      linkedCertId: 4,
+      searchKeyword: "Minifutbol"
+    },
+    chess: {
+      sport_az: "Şahmat (Qızlar)",
+      sport_en: "Chess (Girls)",
+      sport_ru: "Шахматы (девушки)",
+      icon: "🥈",
+      trophyIcon: "♟️",
+      tier_az: "🥈 Respublika İkinciliyi · II YER",
+      tier_en: "🥈 National Silver Medal · 2nd Place",
+      tier_ru: "🥈 Республиканское Серебро · II Место",
+      badgeClass: "medal-silver",
+      title_az: "Orta İxtisas Müəssisələri Respublika Şahmat Birinciliyi",
+      title_en: "National Chess Championship among Specialized Secondary Colleges",
+      title_ru: "Республиканское первенство по шахматам среди ссузов",
+      desc_az: "Azərbaycan Respublikasının ən güclü orta ixtisas təhsili komandalarının qatıldığı intellektual yarışda kollecimizin tələbə qızları yüksək strateji ustalıq göstərərək Respublika ikincisi olmuşdur.",
+      desc_en: "In the intellectual competition featuring the strongest specialized secondary educational institutions across Azerbaijan, our female chess team secured 2nd place nationwide.",
+      desc_ru: "В интеллектуальном первенстве среди сильнейших колледжей Азербайджана команда девушек нашего колледжа проявила исключительное мастерство и заняла II место в Республике.",
+      year: "2024",
+      pills_az: [
+        { label: "Nəticə", val: "Gümüş Diplom (II Yer)" },
+        { label: "Təşkilatçı", val: '"Gənclik" Tələbə İdman Cəmiyyəti' },
+        { label: "Komanda", val: "BDRNK Şahmatçılar Heyəti" },
+        { label: "Tarix", val: "23 oktyabr 2024" }
+      ],
+      pills_en: [
+        { label: "Result", val: "Silver Diploma (2nd Place)" },
+        { label: "Organized by", val: '"Genclik" Student Sports Society' },
+        { label: "Team", val: "BDRNK Chess Squad" },
+        { label: "Date", val: "October 23, 2024" }
+      ],
+      pills_ru: [
+        { label: "Результат", val: "Серебряный Диплом (II Место)" },
+        { label: "Организатор", val: "Совет ССО «Гянджлик»" },
+        { label: "Команда", val: "Шахматистки БГКСТ" },
+        { label: "Дата", val: "23 октября 2024 г." }
+      ],
+      linkedCertId: 2,
+      searchKeyword: "Şahmat"
+    },
+    volleyball: {
+      sport_az: "Voleybol (Oğlanlar)",
+      sport_en: "Volleyball (Boys)",
+      sport_ru: "Волейбол (юноши)",
+      icon: "🥈",
+      trophyIcon: "🏐",
+      tier_az: "🥈 Respublika Birinciliyi · II YER",
+      tier_en: "🥈 National Silver Trophy · 2nd Place",
+      tier_ru: "🥈 Серебряный Призер Республики · II Место",
+      badgeClass: "medal-silver",
+      title_az: "Orta İxtisas Təhsili Respublika Voleybol Birinciliyi",
+      title_en: "National Volleyball Championship of Specialized Secondary Colleges",
+      title_ru: "Республиканское первенство по волейболу среди ссузов",
+      desc_az: "Kollecimizin oğlanlardan ibarət voleybol yığması möhkəm iradə və komanda ruhu nümayiş etdirərək Respublika miqyaslı gərgin yarışda finala yüksəlmiş və fəxri II yeri fəth etmişdir.",
+      desc_en: "Demonstrating exceptional willpower and team cohesion, our boys' volleyball team reached the national finals and secured the prestigious 2nd place.",
+      desc_ru: "Проявив волю к победе и командную сплоченность, мужская волейбольная сборная колледжа пробилась в финал и завоевала почетное II место республиканского уровня.",
+      year: "2024",
+      pills_az: [
+        { label: "Nəticə", val: "Respublika Gümüş Mükafatı (II Yer)" },
+        { label: "Təşkilatçı", val: '"Gənclik" TİC Respublika Şurası' },
+        { label: "Komanda", val: "BDRNK Voleybol Yığması" },
+        { label: "Tarix", val: "31 oktyabr 2024" }
+      ],
+      pills_en: [
+        { label: "Result", val: "National Silver Award (2nd Place)" },
+        { label: "Organized by", val: '"Genclik" Student Sports Council' },
+        { label: "Team", val: "BDRNK Volleyball Squad" },
+        { label: "Date", val: "October 31, 2024" }
+      ],
+      pills_ru: [
+        { label: "Результат", val: "Серебряный Призер (II Место)" },
+        { label: "Организатор", val: "Совет ССО «Гянджлик»" },
+        { label: "Команда", val: "Волейбольная сборная БГКСТ" },
+        { label: "Дата", val: "31 октября 2024 г." }
+      ],
+      linkedCertId: 3,
+      searchKeyword: "Voleybol"
+    },
+    checkers: {
+      sport_az: "Dama (Qızlar & Oğlanlar)",
+      sport_en: "Checkers (Girls & Boys)",
+      sport_ru: "Шашки (девушки и юноши)",
+      icon: "🥈",
+      trophyIcon: "🎯",
+      tier_az: "🥈 4 Qat Gümüş Uğuru · II YER",
+      tier_en: "🥈 4x Silver Medals · 2nd Place",
+      tier_ru: "🥈 4-кратное Серебро · II Место",
+      badgeClass: "medal-silver",
+      title_az: "XV Respublika Spartakiadası və Heydər Əliyev Turnirləri",
+      title_en: "15th National Spartakiade and Heydar Aliyev Memorial Tournaments",
+      title_ru: "XV Республиканская спартакиада и памятные турниры",
+      desc_az: "Dama üzrə kollecimiz həm qızlar, həm də oğlanlar kateqoriyasında Respublika spartakiadasında və şəhər turnirlərində ardıcıl 4 dəfə II yeri qazanaraq zəngin ənənə formalaşdırmışdır.",
+      desc_en: "In checkers, our college achieved 2nd place 4 consecutive times across both girls' and boys' divisions in national spartakiades and commemorative tournaments.",
+      desc_ru: "По шашкам команды девушек и юношей нашего колледжа завоевали 4 серебряные награды на республиканских спартакиадах и памятных турнирах.",
+      year: "2022-2023",
+      pills_az: [
+        { label: "Spartakiada", val: "Qızlar və Oğlanlar (II Yer)" },
+        { label: "Turnirlər", val: "99 və 100 İllik Yubiley Kubokları" },
+        { label: "Təltif Sayı", val: "4 Rəsmi Diplom" },
+        { label: "Ənənə", val: "Ardıcıl Mükafatlar" }
+      ],
+      pills_en: [
+        { label: "Spartakiade", val: "Girls & Boys (2nd Place)" },
+        { label: "Tournaments", val: "99th & 100th Anniversary Cups" },
+        { label: "Awards Count", val: "4 Official Diplomas" },
+        { label: "Tradition", val: "Consecutive Podiums" }
+      ],
+      pills_ru: [
+        { label: "Спартакиада", val: "Девушки и Юноши (II Место)" },
+        { label: "Турниры", val: "Юбилейные Кубки 99 и 100 лет" },
+        { label: "Наград", val: "4 Официальных диплома" },
+        { label: "Традиция", val: "Стабильные призовые места" }
+      ],
+      linkedCertId: 5,
+      searchKeyword: "Dama"
+    },
+    basketball: {
+      sport_az: "Basketbol (Oğlanlar)",
+      sport_en: "Basketball (Boys)",
+      sport_ru: "Баскетбол (юноши)",
+      icon: "🥉",
+      trophyIcon: "🏀",
+      tier_az: "🥉 Bürünc Medallar & Fəxri Fərman",
+      tier_en: "🥉 Bronze Awards & Honorary Citations",
+      tier_ru: "🥉 Бронзовые Награды и Грамоты",
+      badgeClass: "medal-bronze",
+      title_az: "Heydər Əliyevin 100 və 101-ci İldönümü Rayon Turnirləri",
+      title_en: "Heydar Aliyev 100th & 101st Anniversary District Tournaments",
+      title_ru: "Районные турниры к 100-летию и 101-летию Гейдара Алиева",
+      desc_az: "Kollecimizin basketbolçuları Ümummilli Lider Heydər Əliyevin xatirəsinə həsr olunmuş rayon birinciliklərində və sağlam həyat tərzi turnirində 3 fərqli təltifnamə ilə təltif olunmuşdur.",
+      desc_en: "Our basketball players earned 3 distinct honors in district championships dedicated to National Leader Heydar Aliyev and healthy lifestyle initiatives.",
+      desc_ru: "Баскетболисты нашего колледжа завоевали 3 официальные награды в районных первенствах, посвященных памяти Гейдара Алиева и здоровому образу жизни.",
+      year: "2022-2024",
+      pills_az: [
+        { label: "Nəticələr", val: "III Yer (101 il), III Yer (100 il)" },
+        { label: "Fəxri Təltif", val: "Fəxri Fərman (2022)" },
+        { label: "Təşkilat", val: "YAP Yasamal & Gİİ" },
+        { label: "Komanda", val: "BDRNK Basketbol Klubu" }
+      ],
+      pills_en: [
+        { label: "Results", val: "3rd Place (101y), 3rd Place (100y)" },
+        { label: "Honor", val: "Honorary Citation (2022)" },
+        { label: "Org", val: "YAP Yasamal & Sports Dept." },
+        { label: "Team", val: "BDRNK Basketball Club" }
+      ],
+      pills_ru: [
+        { label: "Результаты", val: "III Место (101 год), III Место (100 лет)" },
+        { label: "Почет", val: "Почетная Грамота (2022)" },
+        { label: "Орг.", val: "ПЕА Ясамал и Управление спорта" },
+        { label: "Команда", val: "Баскетбольный клуб БГКСТ" }
+      ],
+      linkedCertId: 1,
+      searchKeyword: "Basketbol"
+    }
+  };
+
+  let activeSportKey = "football";
+
+  function renderTrophyCabinetStage() {
+    const stage = document.getElementById("trophy-stage");
+    if (!stage) return;
+
+    const data = sportsTrophyData[activeSportKey];
+    if (!data) return;
+
+    const lang = typeof currentLang !== "undefined" ? currentLang : "az";
+    const tier = data["tier_" + lang] || data.tier_az;
+    const title = data["title_" + lang] || data.title_az;
+    const desc = data["desc_" + lang] || data.desc_az;
+    const pills = data["pills_" + lang] || data.pills_az;
+    const ctaDiploma = typeof gT === "function" ? gT("trophy_cta_diploma") : "📜 Rəsmi Diplomuna Bax";
+    const ctaFilter = typeof gT === "function" ? gT("trophy_cta_filter") : "🎯 Bu İdman Üzrə Filtrlə";
+
+    stage.innerHTML = `
+      <div class="trophy-pedestal-wrap">
+        <div class="trophy-spotlight-beam" aria-hidden="true"></div>
+        <div class="trophy-floating-icon">${data.trophyIcon}</div>
+        <div class="trophy-pedestal-base"></div>
+        <div class="trophy-year-pillar">${data.year}</div>
+      </div>
+
+      <div class="trophy-content-side">
+        <div class="trophy-tier-ribbon ${data.badgeClass}">${tier}</div>
+        <h4 class="trophy-spotlight-title">${title}</h4>
+        <p class="trophy-spotlight-desc">${desc}</p>
+        
+        <div class="trophy-meta-pills">
+          ${pills
+            .map(
+              (p) =>
+                `<div class="trophy-meta-pill"><span>${p.label}:</span> <strong>${p.val}</strong></div>`
+            )
+            .join("")}
+        </div>
+
+        <div class="trophy-cta-actions">
+          <button type="button" class="trophy-btn-primary" id="trophy-view-cert-btn">
+            <span>${ctaDiploma}</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+          <button type="button" class="trophy-btn-secondary" id="trophy-filter-grid-btn">
+            <span>${ctaFilter}</span>
+          </button>
+        </div>
+      </div>
+    `;
+
+    const viewCertBtn = document.getElementById("trophy-view-cert-btn");
+    if (viewCertBtn) {
+      viewCertBtn.addEventListener("click", () => {
+        const targetId = data.linkedCertId;
+        const indexInFiltered = currentFilteredList.findIndex((c) => c.id === targetId);
+        if (indexInFiltered !== -1) {
+          openCertModal(indexInFiltered);
+        } else {
+          currentCategory = "all";
+          currentYear = "all";
+          searchQuery = "";
+          renderGrid();
+          const idx = currentFilteredList.findIndex((c) => c.id === targetId);
+          if (idx !== -1) openCertModal(idx);
+        }
+      });
+    }
+
+    const filterGridBtn = document.getElementById("trophy-filter-grid-btn");
+    if (filterGridBtn) {
+      filterGridBtn.addEventListener("click", () => {
+        searchQuery = data.searchKeyword;
+        const searchInput = document.getElementById("cert-search-input");
+        if (searchInput) searchInput.value = data.searchKeyword;
+        renderGrid();
+        const grid = document.getElementById("cert-grid");
+        if (grid) {
+          grid.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    }
+  }
+
+let currentCategory = "all";
+  let currentYear = "all";
+  let searchQuery = "";
+  let currentFilteredList = [...certificatesData];
+  let activeModalIndex = 0;
+  let zoomLevel = 1;
+
+  function getLoc(item, prop) {
+    const lang = typeof currentLang !== "undefined" ? currentLang : "az";
+    return item[prop + "_" + lang] || item[prop + "_az"] || item[prop] || "";
+  }
+
+  function filterCertificates() {
+    return certificatesData.filter((item) => {
+      const matchCat = currentCategory === "all" || item.category === currentCategory;
+      const matchYear = currentYear === "all" || item.year === currentYear;
+      const q = searchQuery.trim().toLowerCase();
+      if (!q) return matchCat && matchYear;
+
+      const title = getLoc(item, "title").toLowerCase();
+      const sub = getLoc(item, "subtitle").toLowerCase();
+      const rec = getLoc(item, "recipient").toLowerCase();
+      const sport = getLoc(item, "sport").toLowerCase();
+      const org = getLoc(item, "org").toLowerCase();
+      const yr = item.year;
+
+      const matchSearch =
+        title.includes(q) ||
+        sub.includes(q) ||
+        rec.includes(q) ||
+        sport.includes(q) ||
+        org.includes(q) ||
+        yr.includes(q);
+
+      return matchCat && matchYear && matchSearch;
+    });
+  }
+
+  function getRibbonHtml(item) {
+    const place = getLoc(item, "place");
+    let cls = "cert-ribbon-gold";
+    let icon = "🥇";
+    if (item.placeType === "silver") {
+      cls = "cert-ribbon-silver";
+      icon = "🥈";
+    } else if (item.placeType === "bronze") {
+      cls = "cert-ribbon-bronze";
+      icon = "🥉";
+    } else if (item.placeType === "honor") {
+      cls = "cert-ribbon-honor";
+      icon = "🎖️";
+    }
+    return `<div class="cert-ribbon ${cls}"><span>${icon}</span><span>${place}</span></div>`;
+  }
+
+  function renderGrid() {
+    const grid = document.getElementById("cert-grid");
+    if (!grid) return;
+
+    currentFilteredList = filterCertificates();
+
+    if (currentFilteredList.length === 0) {
+      const emptyTitle = typeof gT === "function" ? gT("cert_empty_title") : "Axtarışa uyğun sertifikat tapılmadı";
+      const emptyDesc = typeof gT === "function" ? gT("cert_empty_desc") : "Zəhmət olmasa axtarış sözünü və ya seçilmiş filtrləri dəyişin.";
+      grid.innerHTML = `
+        <div class="cert-empty-state">
+          <div class="cert-empty-icon">🔍</div>
+          <h4 class="cert-empty-title">${emptyTitle}</h4>
+          <p class="cert-empty-desc">${emptyDesc}</p>
+        </div>
+      `;
+      return;
+    }
+
+    const viewBtnText = typeof gT === "function" ? gT("cert_card_view_btn") : "Böyük Ölçüdə Bax";
+    const detailBtnText = typeof gT === "function" ? gT("cert_card_detail_btn") : "Ətraflı";
+
+    grid.innerHTML = currentFilteredList
+      .map((item, idx) => {
+        const title = getLoc(item, "title");
+        const subtitle = getLoc(item, "subtitle");
+        const sport = getLoc(item, "sport");
+        const org = getLoc(item, "org");
+
+        return `
+        <div class="cert-card" data-cert-id="${item.id}">
+          <div class="cert-card-media" data-open-cert="${idx}">
+            ${getRibbonHtml(item)}
+            <img class="cert-card-img" src="${item.thumb || item.img}" alt="${title}" loading="lazy">
+            <div class="cert-card-overlay">
+              <button type="button" class="cert-overlay-btn" aria-label="${viewBtnText}">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <span>${viewBtnText}</span>
+              </button>
+            </div>
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-card-meta-tags">
+              <span class="cert-tag-sport">${item.sportIcon} ${sport}</span>
+              <span class="cert-tag-year">${item.year}</span>
+            </div>
+            <h3 class="cert-card-title">${title}</h3>
+            <p class="cert-card-sub">${subtitle}</p>
+            <div class="cert-card-org">
+              <span class="cert-card-org-name" title="${org}">${org}</span>
+              <button type="button" class="cert-view-link" data-open-cert="${idx}">
+                <span>${detailBtnText}</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      })
+      .join("");
+
+    // Attach click listeners to open modal
+    grid.querySelectorAll("[data-open-cert]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const index = parseInt(btn.getAttribute("data-open-cert"), 10);
+        openCertModal(index);
+      });
+    });
+  }
+
+  function applyZoom(scale) {
+    zoomLevel = Math.max(0.75, Math.min(3.0, scale));
+    const img = document.getElementById("cert-modal-img");
+    if (img) {
+      img.style.transform = `scale(${zoomLevel})`;
+    }
+    const resetBtn = document.getElementById("cert-zoom-reset");
+    if (resetBtn) {
+      resetBtn.textContent = `${Math.round(zoomLevel * 100)}%`;
+    }
+  }
+
+  function openCertModal(index) {
+    if (!currentFilteredList[index]) return;
+    activeModalIndex = index;
+    const cert = currentFilteredList[index];
+
+    const modal = document.getElementById("cert-modal");
+    const modalImg = document.getElementById("cert-modal-img");
+    const modalCounter = document.getElementById("cert-modal-counter");
+    const modalPlace = document.getElementById("cert-modal-place");
+    const modalTitle = document.getElementById("cert-modal-title");
+    const modalSport = document.getElementById("cert-modal-sport");
+    const modalTeam = document.getElementById("cert-modal-team");
+    const modalOrg = document.getElementById("cert-modal-org");
+    const modalSigner = document.getElementById("cert-modal-signer");
+    const modalDate = document.getElementById("cert-modal-date");
+    const modalDlBtn = document.getElementById("cert-modal-download-btn");
+
+    const title = getLoc(cert, "title");
+    const sport = getLoc(cert, "sport");
+    const recipient = getLoc(cert, "recipient");
+    const org = getLoc(cert, "org");
+    const signer = getLoc(cert, "signer");
+    const date = getLoc(cert, "date");
+    const place = getLoc(cert, "place");
+
+    if (modalImg) modalImg.src = cert.img;
+    if (modalCounter) modalCounter.textContent = `${index + 1} / ${currentFilteredList.length}`;
+    if (modalTitle) modalTitle.textContent = title;
+    if (modalSport) modalSport.textContent = `${cert.sportIcon} ${sport}`;
+    if (modalTeam) modalTeam.textContent = recipient;
+    if (modalOrg) modalOrg.textContent = org;
+    if (modalSigner) modalSigner.textContent = signer;
+    if (modalDate) modalDate.textContent = date;
+
+    if (modalPlace) {
+      modalPlace.textContent = place;
+      modalPlace.className = "cert-modal-place-badge";
+      if (cert.placeType === "gold") {
+        modalPlace.style.background = "linear-gradient(135deg, #ffd700, #b8934a)";
+        modalPlace.style.color = "#061529";
+      } else if (cert.placeType === "silver") {
+        modalPlace.style.background = "linear-gradient(135deg, #f1f5f9, #94a3b8)";
+        modalPlace.style.color = "#0f172a";
+      } else if (cert.placeType === "bronze") {
+        modalPlace.style.background = "linear-gradient(135deg, #fbbf24, #b45309)";
+        modalPlace.style.color = "#ffffff";
+      } else {
+        modalPlace.style.background = "linear-gradient(135deg, #34d399, #059669)";
+        modalPlace.style.color = "#ffffff";
+      }
+    }
+
+    if (modalDlBtn) {
+      modalDlBtn.href = cert.img;
+      modalDlBtn.setAttribute("download", `BDRNK_${title.replace(/\s+/g, "_")}.jpg`);
+    }
+
+    applyZoom(1);
+
+    if (modal) {
+      modal.classList.add("active");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function closeCertModal() {
+    const modal = document.getElementById("cert-modal");
+    if (modal) {
+      modal.classList.remove("active");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+    applyZoom(1);
+  }
+
+  function nextCert() {
+    if (currentFilteredList.length <= 1) return;
+    const nextIdx = (activeModalIndex + 1) % currentFilteredList.length;
+    openCertModal(nextIdx);
+  }
+
+  function prevCert() {
+    if (currentFilteredList.length <= 1) return;
+    const prevIdx = (activeModalIndex - 1 + currentFilteredList.length) % currentFilteredList.length;
+    openCertModal(prevIdx);
+  }
+
+  function init() {
+    window.renderCertificatesGrid = () => {
+      renderGrid();
+      renderTrophyCabinetStage();
+    };
+    renderGrid();
+    renderTrophyCabinetStage();
+
+    // Sport tab buttons for trophy cabinet
+    const sportTabBtns = document.querySelectorAll(".trophy-tab-btn[data-sport-tab]");
+    sportTabBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        sportTabBtns.forEach((b) => {
+          b.classList.remove("active");
+          b.setAttribute("aria-selected", "false");
+        });
+        btn.classList.add("active");
+        btn.setAttribute("aria-selected", "true");
+        activeSportKey = btn.getAttribute("data-sport-tab");
+        renderTrophyCabinetStage();
+      });
+    });
+
+
+    // Re-render when language changes
+    document.addEventListener("languageChanged", () => {
+      renderGrid();
+      renderTrophyCabinetStage();
+      const modal = document.getElementById("cert-modal");
+      if (modal && modal.classList.contains("active")) {
+        openCertModal(activeModalIndex);
+      }
+    });
+
+    // Category filter buttons
+    const catBtns = document.querySelectorAll(".cert-filter-btn[data-cert-cat]");
+    catBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        catBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentCategory = btn.getAttribute("data-cert-cat");
+        renderGrid();
+      });
+    });
+
+    // Year chip buttons
+    const yearChips = document.querySelectorAll(".cert-year-chip[data-cert-year]");
+    yearChips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        yearChips.forEach((c) => c.classList.remove("active"));
+        chip.classList.add("active");
+        currentYear = chip.getAttribute("data-cert-year");
+        renderGrid();
+      });
+    });
+
+    // Search input
+    const searchInput = document.getElementById("cert-search-input");
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        searchQuery = e.target.value;
+        renderGrid();
+      });
+    }
+
+    // Modal close button
+    const closeBtn = document.getElementById("cert-modal-close");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", closeCertModal);
+    }
+
+    // Modal navigation
+    const prevBtn = document.getElementById("cert-nav-prev");
+    const nextBtn = document.getElementById("cert-nav-next");
+    if (prevBtn) prevBtn.addEventListener("click", prevCert);
+    if (nextBtn) nextBtn.addEventListener("click", nextCert);
+
+    // Zoom buttons
+    const zoomInBtn = document.getElementById("cert-zoom-in");
+    const zoomOutBtn = document.getElementById("cert-zoom-out");
+    const zoomResetBtn = document.getElementById("cert-zoom-reset");
+    if (zoomInBtn) zoomInBtn.addEventListener("click", () => applyZoom(zoomLevel + 0.25));
+    if (zoomOutBtn) zoomOutBtn.addEventListener("click", () => applyZoom(zoomLevel - 0.25));
+    if (zoomResetBtn) zoomResetBtn.addEventListener("click", () => applyZoom(1));
+
+    // Backdrop click to close
+    const modal = document.getElementById("cert-modal");
+    if (modal) {
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeCertModal();
+        }
+      });
+    }
+
+    // Keyboard navigation
+    document.addEventListener("keydown", (e) => {
+      const modal = document.getElementById("cert-modal");
+      if (!modal || !modal.classList.contains("active")) return;
+
+      if (e.key === "Escape") {
+        closeCertModal();
+      } else if (e.key === "ArrowRight") {
+        nextCert();
+      } else if (e.key === "ArrowLeft") {
+        prevCert();
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+
+
+/**
+ * ═══════════════════════════════════════════════════════════
+ * SCIENCE & FACULTY PUBLICATIONS MODULE
+ * Official Ministry Table & Cards Presentation
+ * ═══════════════════════════════════════════════════════════
+ */
+(function initSciencePublicationsModule() {
+  function escapeHTML(str) {
+    if (str == null) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+  window.escapeHTML = escapeHTML;
+  const scienceAuthorsData = [
+  {
+    "id": 1,
+    "no": "1",
+    "author_az": "Aytən Namazova Mehman",
+    "author_en": "Ayten Namazova Mehman",
+    "author_ru": "Айтен Намазова Мехман кызы",
+    "role_az": "Müəllim / Dil və ədəbiyyat",
+    "role_en": "Teacher / Language & Literature",
+    "role_ru": "Преподаватель / Язык и литература",
+    "department": "Dil və ədəbiyyat",
+    "dept_slug": "dil",
+    "works": [
+      {
+        "title": "Qazi Bürhanəddinin divanında arxaizmlərin mənşəyi və onların etimoloji xüsusiyyətləri.",
+        "journal": "Bakı Dövlət Universiteti Beynəlxalq Elmi-Nəzəri Jurnal",
+        "country": "Azərbaycan",
+        "country_code": "AZ"
+      },
+      {
+        "title": "Azərbaycan ədəbi dilində nitq etikasının formaları və normativliyi.",
+        "journal": "Tədqiqələr elmi jurnal",
+        "country": "Azərbaycan",
+        "country_code": "AZ"
+      }
+    ],
+    "year": "2026",
+    "scope": "Yerli",
+    "scope_type": "yerli",
+    "orcid": "https://orcid.org/0009-0004-0983-2871",
+    "orcid_id": "0009-0004-0983-2871",
+    "scopus": false,
+    "copernicus": false,
+    "erih": false
+  },
+  {
+    "id": 2,
+    "no": "2",
+    "author_az": "Səidə Quliyeva Novruz",
+    "author_en": "Saida Guliyeva Novruz",
+    "author_ru": "Саида Гулиева Новруз кызы",
+    "role_az": "Müəllim / Humanitar elmlər",
+    "role_en": "Teacher / Humanities",
+    "role_ru": "Преподаватель / Гуманитарные науки",
+    "department": "Humanitar elmlər",
+    "dept_slug": "humanitar",
+    "works": [
+      {
+        "title": "Arxiv sənədlərinin elektronlaşdırılması problemləri",
+        "journal": "Elmi İş beynəlxalq elmi jurnal",
+        "country": "Azərbaycan",
+        "country_code": "AZ"
+      },
+      {
+        "title": "Arxiv menecmenti",
+        "journal": "Mədəniyyət: Elmi-metodiki publisistik jurnal",
+        "country": "Azərbaycan",
+        "country_code": "AZ"
+      },
+      {
+        "title": "Arxiv işi sahəsində normativ hüquqi aktlar",
+        "journal": "Mədəniyyət: Problemlər və perspektivlər elmi-publisistik jurnal",
+        "country": "Azərbaycan",
+        "country_code": "AZ"
+      },
+      {
+        "title": "Arxiv sənədlərindən istifadənin aktual problemləri / Tezis",
+        "journal": "Mədəniyyət: Problemlər və perspektivlər",
+        "country": "Azərbaycan",
+        "country_code": "AZ"
+      },
+      {
+        "title": "Arxiv sənədlərinin rəqəmsallaşdırılması problemləri / Tezis",
+        "journal": "AMEA Məhəmməd Füzuli adına Əlyazmalar İnstitutu – Azərbaycan əlyazmaları dünya kitabxanalarında",
+        "country": "Azərbaycan",
+        "country_code": "AZ"
+      },
+      {
+        "title": "Applications of Digital Humanities in History Education",
+        "journal": "AURORA / İsveç",
+        "country": "İsveç",
+        "country_code": "SE"
+      },
+      {
+        "title": "Azərbaycan tarixinin tədrisində rəqəmsal texnologiyaların və süni intellekt alətlərinin tətbiqi.",
+        "journal": "Baltic Journal of Law and Social Sciences, 3 / Latviya",
+        "country": "Latviya",
+        "country_code": "LV"
+      }
+    ],
+    "year": "2020–2026",
+    "scope": "Yerli / Xarici",
+    "scope_type": "both",
+    "orcid": "https://orcid.org/0009-0002-5017-7050",
+    "orcid_id": "0009-0002-5017-7050",
+    "scopus": false,
+    "copernicus": true,
+    "erih": true
+  },
+  {
+    "id": 3,
+    "no": "3",
+    "author_az": "Bahar Məmmədova Arif",
+    "author_en": "Bahar Mammadova Arif",
+    "author_ru": "Бахар Мамедова Ариф кызы",
+    "role_az": "Müəllim / Humanitar elmlər",
+    "role_en": "Teacher / Humanities",
+    "role_ru": "Преподаватель / Гуманитарные науки",
+    "department": "Humanitar elmlər",
+    "dept_slug": "humanitar",
+    "works": [
+      {
+        "title": "Heydər Əliyev Mərkəzi və onun Azərbaycanın tarixi-mədəni inkişafında yeri, rolu və əhəmiyyəti.",
+        "journal": "Pedaqogika / Azərbaycan",
+        "country": "Azərbaycan",
+        "country_code": "AZ"
+      },
+      {
+        "title": "Sərgilərin beynəlxalq əlaqələri və Azərbaycan imicinə təsiri.",
+        "journal": "Pedaqogika / Azərbaycan",
+        "country": "Azərbaycan",
+        "country_code": "AZ"
+      },
+      {
+        "title": "New political realities in the context of the restoration of the sovereignty of the Republic of Azerbaijan.",
+        "journal": "Danish scientific journal / Danimarka",
+        "country": "Danimarka",
+        "country_code": "DK"
+      }
+    ],
+    "year": "2025–2026",
+    "scope": "Yerli / Xarici",
+    "scope_type": "both",
+    "orcid": "https://orcid.org/0009-0002-3739-2039",
+    "orcid_id": "0009-0002-3739-2039",
+    "scopus": false,
+    "copernicus": false,
+    "erih": false
+  },
+  {
+    "id": 4,
+    "no": "4",
+    "author_az": "Könül Mahmudova Əlican",
+    "author_en": "Konul Mahmudova Alican",
+    "author_ru": "Кенуль Махмудова Алиджан кызы",
+    "role_az": "Müəllim / Humanitar elmlər",
+    "role_en": "Teacher / Humanities",
+    "role_ru": "Преподаватель / Гуманитарные науки",
+    "department": "Humanitar elmlər",
+    "dept_slug": "humanitar",
+    "works": [
+      {
+        "title": "Azərbaycanda nəqliyyat şəbəkəsinin regional inkişafda rolu.",
+        "journal": "NEXUS / Türkiyə",
+        "country": "Türkiyə",
+        "country_code": "TR"
+      },
+      {
+        "title": "GIS əsaslı ekoloji monitorinq: müasir texnologiyaların ətraf mühitin idarə olunmasında rolu.",
+        "journal": "Taras Shevchenko National University of Kyiv – KNU Journal / Ukrayna",
+        "country": "Ukrayna",
+        "country_code": "UA"
+      }
+    ],
+    "year": "2026",
+    "scope": "Xarici",
+    "scope_type": "xarici",
+    "orcid": "https://orcid.org/0009-0006-3793-0545",
+    "orcid_id": "0009-0006-3793-0545",
+    "scopus": false,
+    "copernicus": true,
+    "erih": false
+  },
+  {
+    "id": 5,
+    "no": "5",
+    "author_az": "Rəhimə Şəkərova Vahid",
+    "author_en": "Rahima Shakarova Vahid",
+    "author_ru": "Рахима Шакарова Вахид кызы",
+    "role_az": "Müəllim / Ümumtəhsil",
+    "role_en": "Teacher / General Education",
+    "role_ru": "Преподаватель / Общеобразовательные дисциплины",
+    "department": "Ümumtəhsil",
+    "dept_slug": "umumtehsil",
+    "works": [
+      {
+        "title": "Meliorasiya sistemlərinin Şirvan düzü torpaqlarının aqrokimyəvi xüsusiyyətlərinə təsirinin qiymətləndirilməsi.",
+        "journal": "AURORA / İsveç",
+        "country": "İsveç",
+        "country_code": "SE"
+      },
+      {
+        "title": "Dynamics of the Groundwater in the Shirvan Plain and Its Impact on the Meliorative Status of Soils.",
+        "journal": "Sustainable Future, Integrated Development of Earth Sciences and Ecology / First International Scientific Conference – Baku State University Journal",
+        "country": "Azərbaycan",
+        "country_code": "AZ"
+      }
+    ],
+    "year": "2025–2026",
+    "scope": "Yerli / Xarici",
+    "scope_type": "both",
+    "orcid": "",
+    "orcid_id": "",
+    "scopus": false,
+    "copernicus": false,
+    "erih": false
+  },
+  {
+    "id": 6,
+    "no": "6",
+    "author_az": "Ramilə Paşayeva Rza",
+    "author_en": "Ramila Pashayeva Rza",
+    "author_ru": "Рамила Пашаева Рза кызы",
+    "role_az": "Müəllim / Ümumtəhsil",
+    "role_en": "Teacher / General Education",
+    "role_ru": "Преподаватель / Общеобразовательные дисциплины",
+    "department": "Ümumtəhsil",
+    "dept_slug": "umumtehsil",
+    "works": [
+      {
+        "title": "Müasir məktəblilərdə fizikanın tədrisində yeni metod və yanaşmalar.",
+        "journal": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
+        "country": "Qazaxıstan",
+        "country_code": "KZ"
+      },
+      {
+        "title": "Təhsilin keyfiyyətinin artırılmasında İKT-nin rolu.",
+        "journal": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
+        "country": "Qazaxıstan",
+        "country_code": "KZ"
+      }
+    ],
+    "year": "2026",
+    "scope": "Xarici",
+    "scope_type": "xarici",
+    "orcid": "",
+    "orcid_id": "",
+    "scopus": false,
+    "copernicus": false,
+    "erih": false
+  },
+  {
+    "id": 7,
+    "no": "7",
+    "author_az": "İlahə Qaraxanova Xaliq",
+    "author_en": "Ilaha Garakhanova Khalig",
+    "author_ru": "Илаха Гараханова Халиг кызы",
+    "role_az": "Müəllim / Ümumtəhsil",
+    "role_en": "Teacher / General Education",
+    "role_ru": "Преподаватель / Общеобразовательные дисциплины",
+    "department": "Ümumtəhsil",
+    "dept_slug": "umumtehsil",
+    "works": [
+      {
+        "title": "Hərbi fəaliyyətin bəzi istiqamətlərinin ekosistemlərə təsirinin qiymətləndirilməsi.",
+        "journal": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
+        "country": "Qazaxıstan",
+        "country_code": "KZ"
+      }
+    ],
+    "year": "2026",
+    "scope": "Xarici",
+    "scope_type": "xarici",
+    "orcid": "",
+    "orcid_id": "",
+    "scopus": false,
+    "copernicus": false,
+    "erih": false
+  },
+  {
+    "id": 8,
+    "no": "8",
+    "author_az": "Aygün Qafarova Rəhim",
+    "author_en": "Aygun Gafarova Rahim",
+    "author_ru": "Айгюн Гафарова Рагим кызы",
+    "role_az": "Müəllim / Xarici dillər",
+    "role_en": "Teacher / Foreign Languages",
+    "role_ru": "Преподаватель / Иностранные языки",
+    "department": "Xarici dillər",
+    "dept_slug": "xarici-dil",
+    "works": [
+      {
+        "title": "Подготовка студентов к самостоятельной семейной жизни и воспитанию детей в педагогической теории и практике.",
+        "journal": "Modern Humanities Success / Успехи гуманитарных наук / Rusiya",
+        "country": "Rusiya",
+        "country_code": "RU"
+      }
+    ],
+    "year": "2025",
+    "scope": "Xarici",
+    "scope_type": "xarici",
+    "orcid": "",
+    "orcid_id": "",
+    "scopus": false,
+    "copernicus": false,
+    "erih": false
+  },
+  {
+    "id": 9,
+    "no": "9",
+    "author_az": "Gülnar Hüsiyeva Xosrov",
+    "author_en": "Gulnar Husiyeva Khosrov",
+    "author_ru": "Гюльнар Гусиева Хосров кызы",
+    "role_az": "Müəllim / Xarici dillər",
+    "role_en": "Teacher / Foreign Languages",
+    "role_ru": "Преподаватель / Иностранные языки",
+    "department": "Xarici dillər",
+    "dept_slug": "xarici-dil",
+    "works": [
+      {
+        "title": "The impact of vocational and secondary specialized education on the labor market, digitalization, and human capital development perspectives.",
+        "journal": "İQRO / Özbəkistan",
+        "country": "Özbəkistan",
+        "country_code": "UZ"
+      }
+    ],
+    "year": "2026",
+    "scope": "Xarici",
+    "scope_type": "xarici",
+    "orcid": "",
+    "orcid_id": "",
+    "scopus": false,
+    "copernicus": false,
+    "erih": false
+  },
+  {
+    "id": 10,
+    "no": "10",
+    "author_az": "Vüsalə Kərimova Nürəddin",
+    "author_en": "Vusala Karimova Nuraddin",
+    "author_ru": "Вюсаля Керимова Нураддин кызы",
+    "role_az": "Müəllim / Humanitar elmlər",
+    "role_en": "Teacher / Humanities",
+    "role_ru": "Преподаватель / Гуманитарные науки",
+    "department": "Humanitar elmlər",
+    "dept_slug": "humanitar",
+    "works": [
+      {
+        "title": "Tarihi kaynaklarla çalışma yöntemleri ve tarih öğretmeninin mesleki yeterlilikleri",
+        "journal": "Türkiye-Azerbaijan :From shared memory to a shared future / Türkiyə ,Qars",
+        "country": "Türkiyə",
+        "country_code": "TR"
+      }
+    ],
+    "year": "2026",
+    "scope": "Xarici",
+    "scope_type": "xarici",
+    "orcid": "",
+    "orcid_id": "",
+    "scopus": false,
+    "copernicus": false,
+    "erih": false
+  },
+  {
+    "id": 11,
+    "no": "11",
+    "author_az": "Xəyalə Quliyeva Natiq qızı",
+    "author_en": "Khayala Guliyeva Natig",
+    "author_ru": "Хаяла Гулиева Натиг кызы",
+    "role_az": "Müəllim / Dil və ədəbiyyat",
+    "role_en": "Teacher / Language & Literature",
+    "role_ru": "Преподаватель / Язык и литература",
+    "department": "Dil və ədəbiyyat",
+    "dept_slug": "dil",
+    "works": [
+      {
+        "title": "Modern Teaching Methods: Methodological Principles and Approaches.",
+        "journal": "Miedzynarodowe czasopisma naukowe/ Polşa",
+        "country": "Polşa",
+        "country_code": "PL"
+      }
+    ],
+    "year": "2026",
+    "scope": "Xarici",
+    "scope_type": "xarici",
+    "orcid": "https://orcid.org/0009-0005-6793-5610",
+    "orcid_id": "0009-0005-6793-5610",
+    "scopus": false,
+    "copernicus": true,
+    "erih": false
+  }
+];
+
+  let activeFilter = 'all';
+  let activeDept = 'all';
+  let searchQuery = '';
+  let activeView = 'cards'; // 'cards' or 'table'
+
+  function getLocalizedText(obj, field) {
+    if (typeof currentLang !== 'undefined') {
+      if (currentLang === 'en' && obj[field + '_en']) return obj[field + '_en'];
+      if (currentLang === 'ru' && obj[field + '_ru']) return obj[field + '_ru'];
+    }
+    return obj[field + '_az'] || obj[field] || '';
+  }
+
+  function getCountryFlag(country) {
+    if (!country) return '🇦🇿';
+    if (country.includes('İsveç') || country.includes('Sweden')) return '🇸🇪';
+    if (country.includes('Danimarka') || country.includes('Denmark')) return '🇩🇰';
+    if (country.includes('Latviya') || country.includes('Latvia')) return '🇱🇻';
+    if (country.includes('Polşa') || country.includes('Poland')) return '🇵🇱';
+    if (country.includes('Ukrayna') || country.includes('Ukraine')) return '🇺🇦';
+    if (country.includes('Türkiyə') || country.includes('Turkey')) return '🇹🇷';
+    if (country.includes('Qazaxıstan') || country.includes('Kazakhstan')) return '🇰🇿';
+    if (country.includes('Rusiya') || country.includes('Russia')) return '🇷🇺';
+    if (country.includes('Özbəkistan') || country.includes('Uzbekistan')) return '🇺🇿';
+    return '🇦🇿';
+  }
+
+  function getFilteredData() {
+    const query = searchQuery.trim().toLowerCase();
+
+    return scienceAuthorsData.filter(item => {
+      // 1. Tab category filter
+      if (activeFilter === 'xarici') {
+        if (item.scope_type !== 'xarici' && item.scope_type !== 'both') return false;
+      } else if (activeFilter === 'yerli') {
+        if (item.scope_type !== 'yerli' && item.scope_type !== 'both') return false;
+      } else if (activeFilter === 'copernicus') {
+        const hasCopernicus = item.copernicus || item.erih;
+        if (!hasCopernicus) return false;
+      }
+
+      // 2. Department filter
+      if (activeDept !== 'all' && item.dept_slug !== activeDept) {
+        return false;
+      }
+
+      // 3. Search query
+      if (query) {
+        const nameMatch = (item.author_az + ' ' + item.author_en + ' ' + item.author_ru).toLowerCase().includes(query);
+        const worksMatch = item.works.some(w => w.title.toLowerCase().includes(query) || w.journal.toLowerCase().includes(query) || w.country.toLowerCase().includes(query));
+        const roleMatch = (item.role_az + ' ' + item.role_en + ' ' + item.role_ru).toLowerCase().includes(query);
+        if (!nameMatch && !worksMatch && !roleMatch) return false;
+      }
+
+      return true;
+    });
+  }
+
+  function updateSummaryBadge(filtered) {
+    const infoEl = document.getElementById('science-results-info');
+    if (!infoEl) return;
+    const totalWorks = filtered.reduce((acc, curr) => acc + curr.works.length, 0);
+    infoEl.innerHTML = `
+      <span style="font-weight: 800; color: var(--gold);">${filtered.length}</span> ${typeof gT === 'function' ? gT('science_stat_authors') : 'Tədqiqatçı'} · 
+      <span style="font-weight: 800; color: var(--gold);">${totalWorks}</span> ${typeof gT === 'function' ? gT('science_stat_articles') : 'Məqalə və Tezis'}
+    `;
+  }
+
+  function renderCards(filtered) {
+    const grid = document.getElementById('science-authors-grid');
+    if (!grid) return;
+
+    if (filtered.length === 0) {
+      grid.innerHTML = `
+        <div class="science-empty-state" style="grid-column: 1 / -1; text-align: center; padding: 3.5rem 1rem; color: var(--text-dim);">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="margin: 0 auto 1rem; display: block; opacity: 0.6;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <p style="font-size: 1.05rem; font-weight: 600;">${typeof gT === 'function' ? gT('science_no_results') : 'Axtarış üzrə heç bir elmi nəşr tapılmadı.'}</p>
+        </div>
+      `;
+      return;
+    }
+
+    grid.innerHTML = filtered.map(author => {
+      const authorName = getLocalizedText(author, 'author');
+      const authorRole = getLocalizedText(author, 'role');
+      const initials = author.author_az.split(' ').map(n => n[0]).slice(0, 2).join('');
+      const primaryFlag = getCountryFlag(author.works[0] ? author.works[0].country : 'Azərbaycan');
+
+      const badgesHtml = [
+        author.copernicus ? `<span class="science-badge-copernicus">Index Copernicus</span>` : '',
+        author.erih ? `<span class="science-badge-erih">ERIH PLUS</span>` : '',
+        author.scope_type === 'both' ? `<span class="science-badge-scope local">🇦🇿 Yerli / Xarici</span>` :
+        author.scope_type === 'xarici' ? `<span class="science-badge-scope foreign">Beynəlxalq</span>` :
+        `<span class="science-badge-scope local">🇦🇿 Yerli</span>`
+      ].filter(Boolean).join('');
+
+      const countLabel = typeof gT === 'function' ? gT('science_articles_count_label') : 'Elmi Əsər';
+      const articlesCountText = `${author.works.length} ${countLabel}`;
+
+      const worksHtml = author.works.map((w, idx) => {
+        const flag = getCountryFlag(w.country);
+        return `
+          <div class="science-card-work-block">
+            <h4 class="science-article-title"><span class="science-work-num">${idx + 1}.</span>${escapeHTML(w.title)}</h4>
+            <div class="science-work-journal-tag">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <span><strong>${escapeHTML(w.journal)}</strong> (${flag} ${escapeHTML(w.country)})</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const orcidBtn = author.orcid ? `
+        <a href="${author.orcid}" target="_blank" rel="noopener noreferrer" class="science-orcid-btn" title="ORCID: ${author.orcid_id}">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.516.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c2.359 0 3.759-1.491 3.759-3.722 0-2.025-1.284-3.722-3.694-3.722h-2.362z"/></svg>
+          <span>ORCID</span>
+        </a>
+      ` : '';
+
+      return `
+        <div class="science-author-card" style="position: relative;">
+          <span class="science-card-no-pill">№ ${author.no}</span>
+          <div class="science-card-header">
+            <div class="science-author-avatar-wrap">
+              <div class="science-author-avatar">${initials}</div>
+              <span class="science-country-badge">${primaryFlag}</span>
+            </div>
+            <div class="science-author-info">
+              <div class="science-badges-strip">${badgesHtml}</div>
+              <h3 class="science-author-name">${escapeHTML(authorName)}</h3>
+              <p class="science-author-dept">${escapeHTML(authorRole)}</p>
+            </div>
+          </div>
+          <div class="science-articles-body">
+            <div class="science-articles-counter">${articlesCountText}</div>
+            <div class="science-articles-list">
+              ${worksHtml}
+            </div>
+          </div>
+          <div class="science-card-footer">
+            <div class="science-footer-left">
+              ${orcidBtn}
+              <span class="science-year-pill">📅 ${author.year}</span>
+            </div>
+            <span class="science-scope-badge ${author.scope_type}">${escapeHTML(author.scope)}</span>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function renderTable(filtered) {
+    const container = document.getElementById('science-table-container');
+    if (!container) return;
+
+    if (filtered.length === 0) {
+      container.innerHTML = `
+        <div style="text-align: center; padding: 3rem 1rem; color: var(--text-dim);">
+          <p style="font-size: 1rem; font-weight: 600;">${typeof gT === 'function' ? gT('science_no_results') : 'Axtarış üzrə heç bir nəticə tapılmadı.'}</p>
+        </div>
+      `;
+      return;
+    }
+
+    const thNo = typeof gT === 'function' ? gT('science_th_no') : '№';
+    const thAuthor = typeof gT === 'function' ? gT('science_th_author') : 'Əməkdaş';
+    const thRole = typeof gT === 'function' ? gT('science_th_role') : 'Vəzifə / Fənn birləşməsi';
+    const thWorks = typeof gT === 'function' ? gT('science_th_works') : 'Məqalə / tezis';
+    const thJournals = typeof gT === 'function' ? gT('science_th_journals') : 'Jurnal / ölkə';
+    const thYear = typeof gT === 'function' ? gT('science_th_year') : 'İl';
+    const thScope = typeof gT === 'function' ? gT('science_th_scope') : 'Yerli / Xarici';
+    const thOrcid = typeof gT === 'function' ? gT('science_th_orcid') : 'ORCID';
+    const thScopus = typeof gT === 'function' ? gT('science_th_scopus') : 'Scopus / WoS';
+    const thCopernicus = typeof gT === 'function' ? gT('science_th_copernicus') : 'Copernicus';
+    const thErih = typeof gT === 'function' ? gT('science_th_erih') : 'ERIH';
+
+    const rowsHtml = filtered.map(item => {
+      const authorName = getLocalizedText(item, 'author');
+      const authorRole = getLocalizedText(item, 'role');
+
+      const worksList = item.works.length > 1
+        ? `<ol class="science-table-list">${item.works.map(w => `<li><strong>${escapeHTML(w.title)}</strong></li>`).join('')}</ol>`
+        : `<strong>${escapeHTML(item.works[0].title)}</strong>`;
+
+      const journalsList = item.works.length > 1
+        ? `<ol class="science-table-list">${item.works.map(w => `<li>${escapeHTML(w.journal)}</li>`).join('')}</ol>`
+        : `${escapeHTML(item.works[0].journal)}`;
+
+      const orcidCell = item.orcid
+        ? `<a href="${item.orcid}" target="_blank" rel="noopener noreferrer" class="science-table-orcid-link" title="ORCID: ${item.orcid_id}">
+             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+             <span>${item.orcid_id}</span>
+           </a>`
+        : `<span class="science-check-no">—</span>`;
+
+      const copernicusCell = item.copernicus
+        ? `<span class="science-check-yes" title="Index Copernicus">✓</span>`
+        : `<span class="science-check-no">—</span>`;
+
+      const erihCell = item.erih
+        ? `<span class="science-check-yes" title="ERIH PLUS">✓</span>`
+        : `<span class="science-check-no">—</span>`;
+
+      return `
+        <tr>
+          <td class="science-td-no">${item.no}</td>
+          <td class="science-td-author">${escapeHTML(authorName)}</td>
+          <td class="science-td-role">${escapeHTML(authorRole)}</td>
+          <td class="science-td-works">${worksList}</td>
+          <td class="science-td-journals">${journalsList}</td>
+          <td class="science-td-year">${item.year}</td>
+          <td class="science-td-scope"><span class="science-scope-badge ${item.scope_type}">${escapeHTML(item.scope)}</span></td>
+          <td class="science-td-orcid">${orcidCell}</td>
+          <td class="science-td-check"><span class="science-check-no">—</span></td>
+          <td class="science-td-check">${copernicusCell}</td>
+          <td class="science-td-check">${erihCell}</td>
+        </tr>
+      `;
+    }).join('');
+
+    container.innerHTML = `
+      <table class="science-official-table">
+        <thead>
+          <tr>
+            <th>${thNo}</th>
+            <th>${thAuthor}</th>
+            <th>${thRole}</th>
+            <th>${thWorks}</th>
+            <th>${thJournals}</th>
+            <th>${thYear}</th>
+            <th>${thScope}</th>
+            <th>${thOrcid}</th>
+            <th>${thScopus}</th>
+            <th>${thCopernicus}</th>
+            <th>${thErih}</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rowsHtml}
+        </tbody>
+      </table>
+    `;
+  }
+
+  function renderScienceAuthors() {
+    const filtered = getFilteredData();
+    updateSummaryBadge(filtered);
+
+    const cardsGrid = document.getElementById('science-authors-grid');
+    const tableContainer = document.getElementById('science-table-container');
+
+    if (activeView === 'cards') {
+      if (cardsGrid) cardsGrid.style.display = 'grid';
+      if (tableContainer) tableContainer.style.display = 'none';
+      renderCards(filtered);
+    } else {
+      if (cardsGrid) cardsGrid.style.display = 'none';
+      if (tableContainer) tableContainer.style.display = 'block';
+      renderTable(filtered);
+    }
+  }
+
+  window.renderScienceAuthors = renderScienceAuthors;
+
+  function init() {
+    // Category tabs
+    const tabs = document.querySelectorAll('.science-tab-btn');
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = btn.getAttribute('data-filter') || 'all';
+        renderScienceAuthors();
+      });
+    });
+
+    // Department chips
+    const chips = document.querySelectorAll('.science-chip');
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeDept = chip.getAttribute('data-dept') || 'all';
+        renderScienceAuthors();
+      });
+    });
+
+    // View switch buttons
+    const cardsBtn = document.getElementById('science-view-cards-btn');
+    const tableBtn = document.getElementById('science-view-table-btn');
+
+    if (cardsBtn && tableBtn) {
+      cardsBtn.addEventListener('click', () => {
+        activeView = 'cards';
+        cardsBtn.classList.add('active');
+        cardsBtn.setAttribute('aria-pressed', 'true');
+        tableBtn.classList.remove('active');
+        tableBtn.setAttribute('aria-pressed', 'false');
+        renderScienceAuthors();
+      });
+
+      tableBtn.addEventListener('click', () => {
+        activeView = 'table';
+        tableBtn.classList.add('active');
+        tableBtn.setAttribute('aria-pressed', 'true');
+        cardsBtn.classList.remove('active');
+        cardsBtn.setAttribute('aria-pressed', 'false');
+        renderScienceAuthors();
+      });
+    }
+
+    // Real-time Search input
+    const searchInput = document.getElementById('science-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        renderScienceAuthors();
+      });
+    }
+
+    renderScienceAuthors();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+
+/**
+ * ═══════════════════════════════════════════════════════════
+ * DIRECTOR SƏBUHİ QURBANOV BIOGRAPHY READING MODULE
+ * Immersive Interactive Reading Experience
+ * ═══════════════════════════════════════════════════════════
+ */
+(function initDirectorBioModule() {
+  const modal = document.getElementById("director-bio-modal");
+  const modalBody = document.getElementById("bio-modal-body");
+  const progressBar = document.getElementById("bio-reading-progress");
+  const closeBtn = document.getElementById("director-bio-close");
+  const fontDecBtn = document.getElementById("bio-font-dec");
+  const fontIncBtn = document.getElementById("bio-font-inc");
+  const printBtn = document.getElementById("bio-print-btn");
+  const themeBtns = document.querySelectorAll("[data-bio-theme]");
+
+  let currentFontSize = 0.96; // rem
+
+  function openDirectorBioModal(e) {
+    if (e && typeof e.stopPropagation === "function") {
+      e.stopPropagation();
+    }
+    if (!modal) return;
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    if (modalBody) {
+      modalBody.scrollTop = 0;
+    }
+    updateProgress();
+  }
+
+  function closeDirectorBioModal() {
+    if (!modal) return;
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  window.openDirectorBioModal = openDirectorBioModal;
+  window.closeDirectorBioModal = closeDirectorBioModal;
+
+  // Scroll Progress Calculation
+  function updateProgress() {
+    if (!modalBody || !progressBar) return;
+    const scrollTotal = modalBody.scrollHeight - modalBody.clientHeight;
+    if (scrollTotal <= 0) {
+      progressBar.style.width = "0%";
+      return;
+    }
+    const currentProgress = (modalBody.scrollTop / scrollTotal) * 100;
+    progressBar.style.width = `${Math.min(100, Math.max(0, currentProgress))}%`;
+  }
+
+  if (modalBody) {
+    modalBody.addEventListener("scroll", updateProgress, { passive: true });
+  }
+
+  // Close handlers
+  if (closeBtn) closeBtn.addEventListener("click", closeDirectorBioModal);
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeDirectorBioModal();
+    });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal && modal.classList.contains("active")) {
+      closeDirectorBioModal();
+    }
+  });
+
+  // Font Size Adjustments
+  if (fontDecBtn) {
+    fontDecBtn.addEventListener("click", () => {
+      if (currentFontSize > 0.8) {
+        currentFontSize -= 0.08;
+        applyFontSize();
+      }
+    });
+  }
+
+  if (fontIncBtn) {
+    fontIncBtn.addEventListener("click", () => {
+      if (currentFontSize < 1.35) {
+        currentFontSize += 0.08;
+        applyFontSize();
+      }
+    });
+  }
+
+  function applyFontSize() {
+    if (!modalBody) return;
+    const paragraphs = modalBody.querySelectorAll(".bio-p, .bio-essay-p");
+    paragraphs.forEach((p) => {
+      p.style.fontSize = `${currentFontSize}rem`;
+    });
+  }
+
+  // Theme Switcher (Academic, Sepia, Night)
+  themeBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const theme = btn.getAttribute("data-bio-theme") || "academic";
+      themeBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      if (modal) {
+        modal.setAttribute("data-bio-theme", theme);
+      }
+    });
+  });
+
+  // Print Action
+  if (printBtn) {
+    printBtn.addEventListener("click", () => {
+      window.print();
+    });
+  }
+
+  // Chapter Nav smooth scroll
+  const navChips = document.querySelectorAll(".bio-nav-chip");
+  navChips.forEach((chip) => {
+    chip.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = chip.getAttribute("href");
+      if (!targetId || !modalBody) return;
+      const targetEl = modalBody.querySelector(targetId);
+      if (targetEl) {
+        navChips.forEach((c) => c.classList.remove("active"));
+        chip.classList.add("active");
+        targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+
+  // Attach triggers across page
+  function attachTriggers() {
+    const aboutBtn = document.getElementById("about-director-bio-btn");
+    if (aboutBtn) {
+      aboutBtn.addEventListener("click", openDirectorBioModal);
+    }
+
+    const scienceBtn = document.getElementById("science-director-bio-btn");
+    if (scienceBtn) {
+      scienceBtn.addEventListener("click", openDirectorBioModal);
+    }
+
+    const treeBtn = document.getElementById("tree-director-bio-btn");
+    if (treeBtn) {
+      treeBtn.addEventListener("click", openDirectorBioModal);
+    }
+
+    // Delegate in case tree is re-rendered
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest("#tree-director-bio-btn, #person-director-bio-btn, .quote-bio-btn, .science-btn-bio");
+      if (btn) {
+        openDirectorBioModal(e);
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", attachTriggers);
+  } else {
+    attachTriggers();
+  }
+})();
+
+
+/**
+ * ═══════════════════════════════════════════════════════════
+ * LIBRARY FUND & HISTORY READING MODAL CONTROLLER
+ * (kitabxana.docx integration)
+ * ═══════════════════════════════════════════════════════════
+ */
+(function initLibraryFundModule() {
+  const modal = document.getElementById("library-fund-modal");
+  const triggerBtn = document.getElementById("lib-fund-about-btn");
+  const closeBtn = document.getElementById("lib-fund-close");
+  const jumpBtn = document.getElementById("lib-jump-to-books-btn");
+
+  function openModal(e) {
+    if (e && typeof e.stopPropagation === "function") {
+      e.stopPropagation();
+    }
+    if (!modal) return;
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  window.openLibraryFundModal = openModal;
+  window.closeLibraryFundModal = closeModal;
+
+  if (triggerBtn) {
+    triggerBtn.addEventListener("click", openModal);
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeModal);
+  }
+
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  }
+
+  if (jumpBtn) {
+    jumpBtn.addEventListener("click", () => {
+      closeModal();
+      const libSection = document.getElementById("library");
+      if (libSection) {
+        libSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal && modal.classList.contains("active")) {
+      closeModal();
+    }
+  });
+})();

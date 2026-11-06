@@ -1,0 +1,225 @@
+[top] <title id="" class="">: BDRNK — Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik Hüquqi Şəxsi
+[preloader > aura-morph-hub > aura-caption] <span id="" class="aura-badge">: BDRNK
+[preloader > aura-morph-hub > aura-caption] <h1 id="" class="aura-inst-name">: BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ
+[preloader > aura-morph-hub > aura-caption] <p id="" class="aura-tagline">: Dövlət Standartı ilə Rəqəmsal Gələcəyə Doğru
+[site-header] <span id="" class="">: rabita-kolleci@mail.ru
+[site-header] <span id="" class="">: www.rabitakolleci.edu.az
+[site-header] <h1 id="" class="logo-title">: BDRNK
+[site-header > lang-switcher] <button id="" class="lang-btn active">: AZ
+[site-header > lang-switcher] <button id="" class="lang-btn">: RU
+[site-header > lang-switcher] <button id="" class="lang-btn">: EN
+[about > about-director-bio-btn] <span id="" class="">: Rəsmi Bioqrafiya
+[graduates > honor-students] <span id="" class="">: Qlobal Nailiyyətlər & Beynəlxalq Təmsilçilik
+[graduates > honor-students] <span id="" class="">: Hamısı
+[graduates > honor-students] <span id="" class="">: İKT & Robototexnika
+[graduates > honor-students] <span id="" class="">: Beynəlxalq Çempionatlar
+[graduates > honor-students] <span id="" class="">: İlin Gənci & Sosial İnklüzivlik
+[qarabag] <span id="" class="qarabag-video-tag-title">: Zəfər Xronikası · 8 Noyabr
+[qarabag > qarabag-inline-player] <strong id="" class="">: QARABAĞ AZƏRBAYCANDIR!
+[qarabag > qarabag-cinema-expand-btn] <span id="" class="">: Zəfər Xronikası (Tam Ekran)
+[qarabag] <span id="" class="qarabag-video-tag-title">: Qarabağ Gəzintisi · Ağdam - Xankəndi - Şuşa
+[qarabag > qarabag-gezinti-player] <strong id="" class="">: QARABAĞ GƏZİNTİSİ
+[qarabag > qarabag-gezinti-expand-btn] <span id="" class="">: Qarabağ Gəzintisi (Tam Ekran)
+[qarabag] <span id="" class="qarabag-eyebrow">: 🇦🇿 ZƏFƏR SALNAMƏSİ · 8 NOYABR
+[qarabag] <h2 id="" class="qarabag-heading">: ZƏFƏR YOLUNDA BİRLİK, HƏMRƏYLİK VƏ VƏTƏN SEVGİSİ
+[qarabag] <span id="" class="qarabag-pill">: 📍 Ağdam
+[qarabag] <span id="" class="qarabag-pill">: 📍 Xankəndi
+[qarabag] <span id="" class="qarabag-pill">: 📍 Şuşa
+[qarabag] <p id="" class="qarabag-lead">: 8 Noyabr – Zəfər Günü münasibətilə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin kollektivinin Ağdam, Xankəndi və Şuşaya təşkil olunan səfəri həm tarixi yaddaşımıza, milli-mənəvi dəyərlərimizə və Vətən sevgimizə bağlılığın, həm də kollektiv birliyinin və həmrəyliyinin parlaq təzahürü oldu.
+[qarabag] <p id="" class="">: Səfərin əsas dəyəri yalnız tarixi və mədəni məkanları ziyarət etməklə məhdudlaşmırdı. Müxtəlif vəzifə və fəaliyyət istiqamətlərində çalışan əməkdaşlarımızın vahid məqsəd, ortaq dəyərlər və eyni Vətən sevgisi ətrafında bir araya gəlməsi bu səfərə xüsusi məna və mənəvi dəyər qazandırdı. Birlikdə qət etdiyimiz yollar, səmimi ünsiyyətimiz, xoş təəssüratlarımız və bölüşdüyümüz qürur hissi kollektivimizin həm peşəkar, həm də insani münasibətlər baxımından möhkəm birliyini bir daha nümayiş etdirdi.
+[qarabag] <p id="" class="">: Belə səfərlər kollektiv üzvləri arasında qarşılıqlı hörmət və etimadı gücləndirir, işgüzar münasibətləri daha səmimi əməkdaşlığa çevirir, dostluq və həmrəylik bağlarını möhkəmləndirir. Çünki sağlam kollektiv mühiti yalnız birgə əmək fəaliyyəti ilə deyil, həm də ortaq dəyərlərin, sevincin, qürurun və məsuliyyətin bölüşülməsi ilə formalaşır.
+[qarabag] <blockquote id="" class="qarabag-quote">: “Ağdamın dirçəlişi və yenidən qurulan siması, Xankəndinin doğma yurda qovuşmasının yaratdığı qürur, Şuşanın tarixi və mədəni əzəməti hər birimizdə unudulmaz təəssüratlar yaratdı. Bu torpaqlarda olmaq bizə bir daha xatırlatdı ki, Zəfərimiz yalnız hərbi-siyasi qələbə deyil, həm də xalqımızın milli birliyinin, sarsılmaz iradəsinin, dövlətçilik əzminin və Vətən sevgisinin təntənəsidir.”
+[qarabag] <p id="" class="">: Bu səfər, eyni zamanda, torpaqlarımızın azadlığı uğrunda canlarından keçmiş şəhidlərimizin əziz xatirəsinə ehtiramımızın, qəhrəman qazilərimizə minnətdarlığımızın ifadəsi idi. Azad Qarabağın havasını udmaq, bu müqəddəs torpaqlarda Zəfər tariximizin izlərini görmək hər birimiz üçün böyük şərəf və qürur mənbəyinə çevrildi.
+[qarabag] <p id="" class="">: İnanırıq ki, belə mənəvi əhəmiyyət daşıyan tədbirlər kollektivimizin birliyini daha da gücləndirir, əməkdaşlarımız arasında dostluq və həmrəylik münasibətlərini inkişaf etdirir, gələcək fəaliyyətimizdə ortaq məqsədlər ətrafında daha sıx birləşməyimizə stimul verir.
+[qarabag] <p id="" class="">: Çünki güclü kollektiv yalnız birlikdə çalışan insanlar deyil, həm də eyni dəyərləri bölüşən, uğura birlikdə sevinən, çətinlikləri birgə aşan, məsuliyyəti və qüruru paylaşan insanlardan formalaşır.
+[qarabag] <p id="" class="">: Bu səfər bizə bir daha göstərdi ki, birliyimiz mənəvi gücümüz, həmrəyliyimiz uğurlarımızın təməli, Vətən sevgimiz isə bizi birləşdirən ən ali dəyərdir.
+[qarabag] <p id="" class="">: Şəhidlərimizin əziz xatirəsi daim qəlbimizdə yaşayacaq, onların bizə əmanət etdiyi Zəfər və azadlıq ruhu gələcək nəsillərə ötürüləcək!
+[qarabag] <p id="" class="">: Zəfər tariximizlə fəxr edir, azad Qarabağımızın dirçəlişinə sevinir və milli birliyimizi, kollektiv həmrəyliyimizi daim yaşatmağı özümüzə mənəvi borc bilirik.
+[qarabag] <strong id="" class="qarabag-credo-title">: 🇦🇿 Birliyimiz gücümüz, həmrəyliyimiz qürurumuz, Vətən sevgimiz ən böyük dəyərimizdir!
+[qarabag] <span id="" class="qarabag-credo-sub">: Zəfərimiz əbədi, Azərbaycanımız daim var olsun! Qarabağ Azərbaycandır!
+[qarabag > news-reader-modal > news-font-dec] <button id="news-font-dec" class="nr-tool-btn">: A−
+[qarabag > news-reader-modal > news-font-inc] <button id="news-font-inc" class="nr-tool-btn">: A+
+[qarabag > news-reader-modal > news-reader-article > nr-tag] <span id="nr-tag" class="nr-tag-badge">: Tədbir
+[qarabag > news-reader-modal > news-reader-article > nr-date] <span id="nr-date" class="nr-date-badge">: 10 May 2026
+[qarabag > structure > toggle-cards-btn] <span id="" class="struct-badge-count">: 9 FBK
+[qarabag > structure > struct-commissions-view] <span id="" class="">: 🎓 TƏDRİS-METODİK APARAT
+[qarabag > campus-navigator] <span id="" class="floor-num-badge">: II
+[qarabag > campus-navigator] <span id="" class="floor-num-badge">: III
+[qarabag > campus-navigator] <span id="" class="floor-num-badge">: IV
+[qarabag > campus-navigator] <span id="" class="floor-num-badge">: Bütün
+[qarabag > campus-navigator > campus-floor-banner] <h3 id="" class="cfb-title">: I MƏRTƏBƏ — İdman Kompleksi, Kimya & Rabitə Laboratoriyaları
+[qarabag > campus-navigator > campus-floor-banner] <p id="" class="cfb-desc">: Kollecin 1-ci mərtəbəsində tələbələrin fiziki hazırlığı üçün idman zalı, 2 kimya laboratoriyası, telekommunikasiya laboratoriyası və inzibati şöbələr yerləşir.
+[qarabag > campus-navigator > campus-floor-banner] <span id="" class="cfb-badge-count">: 12 Əsas Otaq və Məkan
+[qarabag > campus-navigator > campus-floor-banner] <strong id="" class="">: Qərb Qanadı:
+[qarabag > campus-navigator > campus-floor-banner] <span id="" class="cfb-wing-chip">: 107 (Qiyabi), 106A (Hərbi), 106 (Kimya-1), 107A (Telekom), 103 (Kimya-2)
+[qarabag > campus-navigator > campus-floor-banner] <strong id="" class="">: Mərkəzi:
+[qarabag > campus-navigator > campus-floor-banner] <span id="" class="cfb-wing-chip">: Kadrlar şöbəsi, Kompüter laboratoriyası
+[qarabag > campus-navigator > campus-floor-banner] <strong id="" class="">: Şərq Qanadı:
+[qarabag > campus-navigator > campus-floor-banner] <span id="" class="cfb-wing-chip">: 113 (Mühasibat - 2 otaq), 114 (Təsərrüfat), 115 (Təcrübə), 116 (Tərbiyə)
+[qarabag > campus-navigator > campus-floor-banner] <strong id="" class="">: İdman:
+[qarabag > campus-navigator > campus-floor-banner] <span id="" class="cfb-wing-chip">: İdman zalı (geyinmə otağı ilə)
+[qarabag > campus-navigator > campus-filter-status > campus-rooms-count-text] <span id="campus-rooms-count-text" class="">: Göstərilən otaqlar:
+[qarabag > campus-navigator > library > lib-total-counter] <span id="lib-total-counter" class="lib-bar-count">: 44 Rəsmi Dərs Vəsaiti
+[qarabag > campus-navigator > library > lib-fund-about-btn] <span id="" class="">: 🏛️ Kitabxana Fondu və Tarixi
+[qarabag > campus-navigator > book-reader-modal > reader-book-cat] <span id="reader-book-cat" class="book-reader-cat">: BDRNK Elektron Kitabxana
+[qarabag > campus-navigator > book-reader-modal > reader-book-title] <h3 id="reader-book-title" class="book-reader-title">: Dərs vəsaiti
+[qarabag > campus-navigator > book-reader-modal] <span id="" class="reader-cover-seal">: BDRNK · 1931
+[qarabag > campus-navigator > book-reader-modal > reader-cover-name] <h4 id="reader-cover-name" class="reader-cover-name">: Dərs Vəsaiti
+[qarabag > campus-navigator > book-reader-modal > reader-cover-author] <span id="reader-cover-author" class="reader-cover-author">: Tədris-Metodiki Mərkəz
+[qarabag > campus-navigator > book-reader-modal > reader-meta-cat] <strong id="reader-meta-cat" class="reader-meta-val">: İxtisas fənni
+[qarabag > campus-navigator > book-reader-modal > reader-meta-author] <strong id="reader-meta-author" class="reader-meta-val">: BDRNK
+[qarabag > campus-navigator > science > science-director-bio-btn] <span id="" class="">: Direktor Səbuhi Qurbanovun Bioqrafiyası
+[qarabag > campus-navigator > science > lectures > lecture-dept-grid > dept-meta-all] <span id="dept-meta-all" class="lecture-dept-meta">: 23 Videodərs · Bütün fənlər
+[qarabag > campus-navigator > science > lectures > lecture-dept-grid > dept-meta-informatika] <span id="dept-meta-informatika" class="lecture-dept-meta">: 2 Videodərs · Kompüter sistemləri
+[qarabag > campus-navigator > science > lectures > lecture-dept-grid > dept-meta-neqliyyat] <span id="dept-meta-neqliyyat" class="lecture-dept-meta">: 1 Videodərs · Nəqliyyat Sistemləri
+[qarabag > campus-navigator > science > lectures > lecture-dept-grid > dept-meta-cografiya] <span id="dept-meta-cografiya" class="lecture-dept-meta">: 2 Videodərs · Yer Elmləri və Coğrafiya
+[qarabag > campus-navigator > science > lectures > lecture-dept-grid > dept-meta-fizika] <span id="dept-meta-fizika" class="lecture-dept-meta">: 1 Videodərs · Təbiət və Fizika
+[qarabag > campus-navigator > science > lectures > lecture-dept-grid > dept-meta-tarix] <span id="dept-meta-tarix" class="lecture-dept-meta">: 9 Videodərs · Tarix və Zəfər
+[qarabag > campus-navigator > science > lectures > lecture-dept-grid > dept-meta-az-dili] <span id="dept-meta-az-dili" class="lecture-dept-meta">: 1 Videodərs · Qrammatika və Nitq
+[qarabag > campus-navigator > science > lectures > lecture-dept-grid > dept-meta-huquq] <span id="dept-meta-huquq" class="lecture-dept-meta">: 6 Videodərs · Hüquq sistemi
+[qarabag > campus-navigator > science > lectures > lecture-dept-grid > dept-meta-biologiya] <span id="dept-meta-biologiya" class="lecture-dept-meta">: 1 Videodərs · Təbiət elmləri
+[qarabag > campus-navigator > science > certificates] <span id="" class="trophy-tab-medal medal-silver">: 4x II Yer
+[qarabag > campus-navigator > science > certificates > gallery] <span id="" class="gal-spotlight-format">: 📸 Instagram Reel
+[qarabag > campus-navigator > science > certificates > gallery > gal-cards > gal-count-exam] <span id="gal-count-exam" class="gal-portal-count">: 6 media
+[qarabag > campus-navigator > science > certificates > gallery > gal-cards] <h3 id="" class="gal-portal-headline">: Şəffaf və Rəqəmsal İmtahan Sessiyaları
+[qarabag > campus-navigator > science > certificates > gallery > gal-cards] <p id="" class="gal-portal-summary">: Kollecimizdə tələbələrin biliyinin obyektiv qiymətləndirilməsi üçün müasir monitorinq və kompüterləşdirilmiş imtahan mərkəzi fəaliyyət göstərir.
+[qarabag > campus-navigator > science > certificates > gallery > gal-cards > gal-count-events] <span id="gal-count-events" class="gal-portal-count">: 15 media
+[qarabag > campus-navigator > science > certificates > gallery > gal-cards] <h3 id="" class="gal-portal-headline">: Təntənəli Toplantılar və Tarixi Günlər
+[qarabag > campus-navigator > science > certificates > gallery > gal-cards] <p id="" class="gal-portal-summary">: Dövlət bayramları, məzun buraxılışları, anım tədbirləri və beynəlxalq konfranslardan yaddaqalan rəsmi kadrlar toplusu.
+[qarabag > campus-navigator > science > certificates > gallery > gal-cards > gal-count-rooms] <span id="gal-count-rooms" class="gal-portal-count">: 1 media
+[qarabag > campus-navigator > science > certificates > gallery > gal-cards] <h3 id="" class="gal-portal-headline">: Müasir Tədris Zalları və İnfrastruktur
+[qarabag > campus-navigator > science > certificates > gallery > gal-cards] <p id="" class="gal-portal-summary">: Geniş amfiteatr zalları, multimedia lövhələri ilə təchiz olunmuş siniflər və texnoloji laboratoriyalarımız.
+[qarabag > campus-navigator > science > certificates > gallery > gal-cards > gal-count-study] <span id="gal-count-study" class="gal-portal-count">: 9 media
+[qarabag > campus-navigator > science > certificates > gallery > gal-cards] <h3 id="" class="gal-portal-headline">: Canlı Dərs Mühiti və Tələbə Praktikası
+[qarabag > campus-navigator > science > certificates > gallery > gal-cards] <p id="" class="gal-portal-summary">: Tələbələrimizin komanda işləri, interaktiv seminarlar, elektron kitabxana fəaliyyəti və laborator təcrübə saatları.
+[qarabag > campus-navigator > science > certificates > gal-panel-overlay > gal-panel > gal-panel-title] <h3 id="gal-panel-title" class="gal-panel-title">: İmtahan Mühiti
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > lightbox-cat-pill] <span id="lightbox-cat-pill" class="lightbox-cat-pill">: BDRNK Qalereya
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > lb-zoom-btn] <span id="" class="">: Zoom
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > contact] <a id="" class="cac-val-link">: rabita-kolleci@mail.ru
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > contact] <span id="" class="coord-label">: LAT
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > contact] <span id="" class="coord-val">: 40.3763° N
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > contact] <span id="" class="coord-label">: LNG
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > contact] <span id="" class="coord-val">: 49.8022° E
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > contact] <span id="" class="channel-name">: Instagram
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > contact] <strong id="" class="channel-handle">: @bdrnk__official
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > contact] <span id="" class="channel-name">: Facebook
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > contact] <strong id="" class="channel-handle">: BDRNK Rəsmi Səhifə
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > contact] <strong id="" class="channel-handle">: rabitakolleci.edu.az
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > contact] <strong id="" class="channel-handle">: dim.gov.az (DİM)
+[qarabag > campus-navigator > science > certificates > gallery-lightbox] <h3 id="" class="footer-logo">: BDRNK
+[qarabag > campus-navigator > science > certificates > gallery-lightbox] <span id="" class="">: rabita-kolleci@mail.ru
+[qarabag > campus-navigator > science > certificates > gallery-lightbox] <span id="" class="">: www.rabitakolleci.edu.az
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > cert-modal-place] <div id="cert-modal-place" class="cert-modal-place-badge">: II YER
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > cert-modal-title] <h3 id="cert-modal-title" class="cert-modal-title">: Sənədin Başlığı
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > cert-modal-team] <span id="cert-modal-team" class="cert-meta-val">: Bakı Dövlət Rabitə və Nəqliyyat Kolleci
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal] <span id="" class="bio-brand-title">: BDRNK · RƏSMİ DİREKTOR PORTALI
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal] <span id="" class="bio-brand-sub">: Səbuhi Qurbanov Yusif oğlu — Tərcümeyi-hal və Təəssüratlar
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-font-dec] <button id="bio-font-dec" class="bio-tool-btn">: A−
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-font-inc] <button id="bio-font-inc" class="bio-tool-btn">: A+
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body] <span id="" class="bio-pill-medal">: 🎖️ «TƏRƏQQİ» MEDALLI
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body] <span id="" class="bio-pill-entity">: KOLLEC DİREKTORLUĞU
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body] <h2 id="" class="bio-hero-name">: SƏBUHİ QURBANOV YUSİF OĞLU
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body] <p id="" class="bio-hero-title">: Azərbaycan Respublikası Elm və Təhsil Nazirliyi, Elm və Ali Təhsil üzrə Dövlət Agentliyi, Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin Direktoru
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body] <span id="" class="bio-fact-item">: 🎂 4 avqust 1980 · Şəki
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body] <span id="" class="bio-fact-item">: 🎓 BDU Riyaziyyat & UNEC MBA
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body] <span id="" class="bio-fact-item">: 📐 ETN Qrifli Dərslik Müəllifi
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body] <a id="" class="bio-nav-chip active">: 🎓 Təhsil və Həyatı
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body] <a id="" class="bio-nav-chip">: 💼 Əmək Fəaliyyəti
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body] <a id="" class="bio-nav-chip">: 📚 Elmi Əsərləri
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body] <a id="" class="bio-nav-chip">: 🌐 Beynəlxalq Fəaliyyət
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body] <a id="" class="bio-nav-chip">: 🏅 Dövlət Təltifləri
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body] <a id="" class="bio-nav-chip highlight">: ✍️ Kollec Haqqında Təəssüratlarım
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-personal] <span id="" class="">: BÖLMƏ I · DOĞUMU VƏ AKADEMİK TƏHSİLİ
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-personal] <h3 id="" class="bio-card-title">: Həyatı və Təhsil İlləri
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-personal] <strong id="" class="">: Səbuhi Qurbanov Yusif oğlu
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-personal] <p id="" class="bio-p bio-lead">: 4 avqust 1980-ci ildə Şəki rayonu Qayabaşı kəndində anadan olmuş, 1986-cı ildə Qayabaşı kənd tam orta məktəbinin 1-ci sinifinə qəbul olmuş, 1997-ci ildə məktəbi fərqlənmə ilə bitirmişdir.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-personal] <p id="" class="bio-p">: 1997–2001-ci illərdə
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-personal] <strong id="" class="">: Bakı Dövlət Universitetinin Riyaziyyat fakültəsində
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-personal] <p id="" class="bio-p">: bakalavr təhsili almışdır. 2001–2002-ci illərdə Azərbaycan Respublikası Silahlı Qüvvələrinin N saylı hərbi hissəsində hərbi xidmətdə olmuşdur. Daha sonra
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-personal] <strong id="" class="">: Azərbaycan Dövlət İqtisad Universitetində (UNEC)
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-personal] <p id="" class="bio-p">: «Biznesin təşkili və idarə edilməsi» ixtisası üzrə magistratura təhsili almışdır.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <span id="" class="">: BÖLMƏ II · ƏMƏK FƏALİYYƏTİNİN RƏSMİ XRONOLOGİYASI
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <h3 id="" class="bio-card-title">: Peşəkar İdarəçilik və Pedaqoji Yolu
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <p id="" class="bio-p">: Səbuhi Qurbanov əmək fəaliyyətinə 2002-ci ildə başlamış və 24 ildən artıq zəngin təhsil idarəçiliyi təcrübəsinə malikdir:
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <h4 id="" class="bio-tl-title">: Şəki şəhər 11 nömrəli tam orta məktəb
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <p id="" class="bio-tl-desc">: Riyaziyyat müəllimi, eyni zamanda Təlim-tərbiyə işləri üzrə direktor müavini vəzifəsində çalışmışdır.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <h4 id="" class="bio-tl-title">: Şəki şəhər 20 nömrəli tam orta məktəb
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <p id="" class="bio-tl-desc">: 10 il ərzində məktəbin direktoru vəzifəsində səmərəli idarəçilik fəaliyyəti göstərmişdir.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <h4 id="" class="bio-tl-title">: Şəki-Zaqatala Regional Təhsil İdarəsi
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <p id="" class="bio-tl-desc">: Tədrisin Keyfiyyəti sektorunda baş məsləhətçi vəzifəsində çalışmışdır.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <h4 id="" class="bio-tl-title">: Bakı Dövlət Rabitə və Nəqliyyat Kolleci
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <p id="" class="bio-tl-desc">: Tədris işləri üzrə direktor müavini vəzifəsinə təyin olunmuşdur.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <div id="" class="bio-tl-year gold">: 2026-cı ildən
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <h4 id="" class="bio-tl-title gold">: Bakı Dövlət Rabitə və Nəqliyyat Kollecinin Direktoru
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-career] <p id="" class="bio-tl-desc">: Azərbaycan Respublikası Elm və Təhsil Nazirliyi, Elm və Ali Təhsil üzrə Dövlət Agentliyi tərəfindən Kollecin direktoru vəzifəsinə təyin olunmuşdur.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-pedagogy] <span id="" class="">: BÖLMƏ III · ELMİ-METODİKİ VƏ PEDAQOJİ FƏALİYYƏT
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-pedagogy] <h3 id="" class="bio-card-title">: Dərsliklər və Elmi Vəsaitlər
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-pedagogy] <p id="" class="bio-p">: Səbuhi Qurbanov pedaqoji fəaliyyəti ilə yanaşı, riyaziyyat elminin tədrisi və ali təhsil metodikasının inkişafına mühüm töhfələr vermişdir:
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-pedagogy] <span id="" class="bio-book-year">: 2019 · ADPU Şurasının Qərarı
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-pedagogy] <h4 id="" class="bio-book-title">: «Riyaziyyat – 11»
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-pedagogy] <p id="" class="bio-book-desc">: Azərbaycan Dövlət Pedaqoji Universitetinin Tədris-Metodiki Şurasının qərarı ilə nəşrə tövsiyə edilmiş dərs vəsaiti.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-pedagogy] <span id="" class="bio-book-year gold">: 3 iyun 2026 · ETN Rəsmi Qrifi
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-pedagogy] <h4 id="" class="bio-book-title">: «Xətti cəbr və riyazi analiz»
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-pedagogy] <p id="" class="bio-book-desc">: Azərbaycan Respublikası Elm və Təhsil Nazirliyinin müvafiq əmri əsasında nəşr edilmiş və rəsmi qrif verilmiş fundamental dərslik.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-international] <span id="" class="">: BÖLMƏ IV · BEYNƏLXALQ ELMİ FORUMLAR VƏ SERTİFİKATLAR
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-international] <h3 id="" class="bio-card-title">: Beynəlxalq Təcrübə və İxtisasartırma
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-international] <div id="" class="bio-feat-badge">: 🇷🇺 Moskva · 2018
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-international] <p id="" class="">: 26 iyun 2018-ci il tarixində Moskva şəhərində keçirilən beynəlxalq elmi-praktiki konfransda iştirak etmiş və məruzə ilə çıxış etmişdir.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-international] <div id="" class="bio-feat-badge">: 🌍 Qlobal Forum · 2021
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-international] <strong id="" class="">: «Second International Forum on New Challenges in Education»
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-international] <p id="" class="">: 1 oktyabr 2021-ci il tarixində keçirilən beynəlxalq təhsil forumunda iştirak edərək müvafiq beynəlxalq sertifikatlar əldə etmişdir.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-international] <div id="" class="bio-feat-badge">: 🛡️ Dövlət Qulluğu · AC3
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-international] <strong id="" class="">: Liderlik və Dövlət İdarəçiliyi
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-international] <p id="" class="">: «Gənc liderlərin yay məktəbi» proqramında, Təhsil Nazirliyinin Təhsil Proqramları İnstitutu və «Mədəd Azərbaycan» MMC təlimlərində iştirak etmiş, Dövlət qulluğuna qəbul üzrə
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-international] <strong id="" class="">: AC3 sertifikatı
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-international] <p id="" class="">: əldə etmişdir.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-awards] <span id="" class="">: BÖLMƏ V · DÖVLƏT TƏLTİFLƏRİ VƏ NAİLİYYƏTLƏR
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-awards] <h3 id="" class="bio-card-title">: Dövlət və Qurumlar Tərəfindən Qiymətləndirilmə
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-awards] <span id="" class="bio-award-type">: AZƏRBAYCAN RESPUBLİKASI PREZİDENTİ
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-awards] <h4 id="" class="bio-award-name">: «Tərəqqi» Medalı
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-awards] <p id="" class="bio-award-desc">: Azərbaycan Respublikası Prezidentinin 2365 nömrəli Sərəncamına əsasən təhsil sahəsindəki səmərəli fəaliyyətinə görə təltif olunmuşdur.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-awards] <span id="" class="bio-award-type">: ELM VƏ TƏHSİL NAZİRLİYİ
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-awards] <h4 id="" class="bio-award-name">: Fəxri Fərman
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-awards] <p id="" class="bio-award-desc">: 5 oktyabr 2015-ci il tarixində Azərbaycan Respublikası Təhsil Nazirliyi tərəfindən təltif edilmişdir.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-awards] <span id="" class="bio-award-type">: İNNOVASİYALAR ÜZRƏ QRANT
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-awards] <h4 id="" class="bio-award-name">: III Qrant Müsabiqəsinin Qalibi
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-awards] <p id="" class="bio-award-desc">: Azərbaycan Respublikası Təhsil Nazirliyinin «Təhsildə inkişaf və innovasiyalar üzrə III qrant müsabiqəsi»nin qalibi olmuşdur.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <span id="" class="">: BÖLMƏ VI · DİREKTOR SƏBUHİ QURBANOVUN ŞƏXSİ QEYDLƏRİ
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <h3 id="" class="bio-card-title reflections-title">: Bakı Dövlət Rabitə və Nəqliyyat Kolleci Haqqında Təəssüratlarım
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <span id="" class="bio-reflections-subtitle">: 2026-cı il · Bakı Dövlət Rabitə və Nəqliyyat Kolleci
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <p id="" class="bio-essay-p">: 2026-cı ildə Bakı Dövlət Rabitə və Nəqliyyat Kollecinin direktoru vəzifəsinə təyin olunmağım mənim üçün həm böyük məsuliyyət, həm də yeni bir fəaliyyət mərhələsinin başlanğıcı oldu.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <p id="" class="bio-essay-p">: Kollecin kollektivinə qoşulduğum ilk gündən burada formalaşmış pedaqoji ənənələr, əməkdaşların peşəkarlığı, təhsilalanların potensialı və müəssisənin zəngin tarixi məndə xoş təəssürat yaratdı. Bu təhsil müəssisəsinin illər ərzində rabitə və nəqliyyat sahələri üçün ixtisaslı kadrların hazırlanmasında oynadığı rolu xüsusi qeyd etmək istərdim.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <p id="" class="bio-essay-p">: Kollecin fəaliyyəti ilə yaxından tanış olduqca gördüm ki, burada yalnız tədris prosesi deyil, həm də kollektivin birgə fəaliyyəti, qarşılıqlı hörmət, məsuliyyət və peşəkar yanaşma mühüm yer tutur. Mənim üçün rəhbər vəzifədə əsas məqsədlərdən biri mövcud müsbət ənənələri qorumaqla yanaşı, onların müasir dövrün tələblərinə uyğun inkişaf etdirilməsidir.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <p id="" class="bio-essay-p">: Fəaliyyətim dövründə diqqət yetirdiyim əsas istiqamətlərdən biri təhsilin keyfiyyətinin yüksəldilməsi, tədris prosesinin müasir tələblərə uyğun təşkili, qiymətləndirmə və monitorinq mexanizmlərinin təkmilləşdirilməsi, innovativ texnologiyaların tədrisə tətbiqi və tələbələrin praktiki bilik və bacarıqlarının inkişafıdır.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <p id="" class="bio-essay-p">: Xüsusilə kollecdə müəllim-tələbə münasibətlərinin sağlam əsaslar üzərində qurulmasını, tələbələrin təşəbbüskarlığının dəstəklənməsini, onların müxtəlif elmi, intellektual, idman və yaradıcılıq tədbirlərində iştirakını vacib hesab edirəm. Çünki müasir təhsil müəssisəsi yalnız bilik verən deyil, eyni zamanda şəxsiyyət yetişdirən, gənclərin dünyagörüşünü və vətəndaşlıq mövqeyini formalaşdıran bir məkandır.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <p id="" class="bio-essay-p">: Kollecin əməkdaşlarının təşəbbüskarlığı, müxtəlif tədbirlərin təşkili, şagird və tələbələrlə maarifləndirici görüşlərin keçirilməsi, digər təhsil müəssisələri ilə əməkdaşlıq əlaqələrinin genişləndirilməsi istiqamətində görülən işlər də məndə müsbət təəssürat yaradır. Bakı Avropa Liseyinin müəllim və şagird heyətinin kollecdə qonaq olması, robototexnika və süni intellekt sahəsində fikir mübadiləsinin aparılması kimi görüşlər təhsil müəssisələri arasında əməkdaşlığın əhəmiyyətini bir daha nümayiş etdirir.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <p id="" class="bio-essay-p">: Kollecin ictimai həyatında milli-mənəvi dəyərlərin, vətənpərvərlik ruhunun və dövlətçilik ənənələrinin qorunmasına da xüsusi önəm verirəm. Zəfər Günü münasibətilə kollektivimizin Ağdam, Xankəndi və Şuşaya səfəri, tələbələrin və əməkdaşların müxtəlif vətənpərvərlik tədbirlərində iştirakı bu baxımdan əlamətdar olmuşdur. İnanıram ki, gənclərimiz tariximizi dərindən öyrənməklə yanaşı, Vətənimizin bugünkü inkişafına da öz töhfələrini verməlidirlər.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <p id="" class="bio-essay-p">: Rəhbərlik etdiyim müddətdə kollecin kollektivində müşahidə etdiyim əməkdaşlıq, qarşılıqlı dəstək və ümumi məqsəd ətrafında birləşmək istəyi gələcək fəaliyyətimiz üçün mühüm zəmin yaradır. Mən hesab edirəm ki, hər bir təhsil müəssisəsinin uğuru onun maddi-texniki imkanları ilə yanaşı, insan kapitalından, kollektivin birliyindən və yeniliklərə açıq olmasından asılıdır.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <p id="" class="bio-essay-p">: Bakı Dövlət Rabitə və Nəqliyyat Kollecini daha müasir, rəqabətqabiliyyətli, innovativ və əmək bazarının tələblərinə cavab verən təhsil müəssisəsi kimi inkişaf etdirmək əsas hədəflərimizdəndir. Bu yolda kollecin hər bir əməkdaşının əməyini, təşəbbüsünü və məsuliyyətini yüksək qiymətləndirirəm.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <p id="" class="bio-essay-p highlight-conclusion">: İnanıram ki, birgə fəaliyyətimiz, qarşılıqlı etimadımız və peşəkar əməkdaşlığımız sayəsində kollecin qazandığı ənənələri qoruyaraq yeni uğurlara imza atacağıq. Mənim üçün bu kollecin rəhbəri olmaq sadəcə vəzifə deyil, həm də böyük bir kollektivin gələcəyinə, tələbələrin inkişafına və təhsilin tərəqqisinə xidmət etmək məsuliyyətidir.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <strong id="" class="">: Səbuhi Qurbanov
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <span id="" class="">: Bakı Dövlət Rabitə və Nəqliyyat Kollecinin Direktoru
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > bio-modal-body > bio-sec-reflections] <span id="" class="">: BDRNK
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <div id="" class="lib-fund-stat-val">: 57 Adda
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <p id="" class="lib-card-p">: Kitabxanada kitab fondu ilkin mərhələdə təxminən
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <strong id="" class="">: 22.000 nüsxədən
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <p id="" class="lib-card-p">: ibarət olmuşdur. Sonralar köhnəlmiş, indiki tələbatlara cavab verməyən ədəbiyyatların silinməsi nəticəsində hal-hazırda fondumuz
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <strong id="" class="">: 10.000 nüsxə ədəbiyyat
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <p id="" class="lib-card-p">: təşkil edir. Kitabxanamızda müxtəlif istiqamətlər üzrə zəngin ədəbiyyat fondu formalaşmışdır.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <p id="" class="lib-card-p">: Eyni zamanda bu dövrdə fondun müasir tələblərə uyğunlaşdırılması, ədəbiyyatın yenidən nəzərdən keçirilməsi və kitabxana resurslarından səmərəli istifadə istiqamətində vacib təşkilati işlər həyata keçirilmişdir.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <strong id="" class="">: Azərbaycan Respublikasının Prezidenti cənab İlham Əliyevin
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <p id="" class="lib-card-p">: “Azərbaycan dilində latın qrafikası ilə kütləvi nəşrlərin həyata keçirilməsi haqqında”
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <strong id="" class="">: 12 yanvar 2004-cü il tarixli Sərəncamına
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <p id="" class="lib-card-p">: əsasən bütün bədii ədəbiyyatlar yeni nəşrlərlə əvəz olunaraq, kitabxanamıza hədiyyə olunmuşdur.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <p id="" class="lib-card-p">: Tədris fondunun zənginləşdirilməsi istiqamətində kollecimizin müəllim heyəti tərəfindən tədris planına uyğun olaraq kitabxana fondu mütəmadi olaraq artırılır. Bu nəşrlərin olması tələbələrə ixtisaslarına uyğun olaraq informasiya təminatının yaxşılaşdırılmasına xidmət edir.
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <p id="" class="lib-card-p">: Hal-hazırda kitabxanamızda
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <strong id="" class="">: 57 adda dərslik
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <p id="" class="lib-card-p">: fondumuza daxil edilmişdir. 2026-cı ildə nəşr olunmuş yeni dərsliklərimizi xüsusi vurğulamaq istərdik:
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <strong id="" class="">: Xətti cəbr və riyazi analiz
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <span id="" class="">: Direktor Səbuhi Qurbanov · 2026
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <strong id="" class="">: Ekoloji Monitorinq
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <span id="" class="">: Kollec Pedaqoji Heyəti · 2026
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <strong id="" class="">: Dərslik Sxematexnika-1
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <span id="" class="">: Texniki Fənlər Kafedrası · 2026
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <strong id="" class="">: İnformasiya-Şəbəkə Texnologiyaları
+[qarabag > campus-navigator > science > certificates > gallery-lightbox > cert-modal > director-bio-modal > library-fund-modal > lib-fund-body] <span id="" class="">: İKT və Telekommunikasiya · 2026
