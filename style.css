@@ -1,7 +1,9 @@
-html, body {
+html,
+body {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
+
 /* ══════════════════════════════════════════════════════════════
    BDRNK 2026 — Official Institutional & University Edition
    Inspired by WCU (wcu.edu.az) & AzTU (aztu.edu.az) Standards
@@ -1338,9 +1340,12 @@ body.dark-mode .sun-and-moon>.moon>circle {
 }
 
 @keyframes majorsPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 0 3px var(--gold), 0 16px 40px rgba(184, 147, 74, 0.35);
   }
+
   50% {
     box-shadow: 0 0 0 6px var(--gold), 0 22px 55px rgba(184, 147, 74, 0.6);
   }
@@ -4517,24 +4522,29 @@ body.dark-mode .sun-and-moon>.moon>circle {
     max-width: 95vw;
     width: 95vw;
   }
+
   .modal-container.is-person-detail .modal-body {
     padding: 18px;
   }
+
   .person-detail-card,
   .person-detail-sheet {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+
   .person-detail-photo-frame {
     max-width: 200px;
     max-height: 260px;
     margin: 0 auto;
   }
+
   .person-detail-body {
     padding: 6px 0 0;
     align-items: center;
     text-align: center;
   }
+
   .person-detail-actions {
     justify-content: center;
   }
@@ -13073,10 +13083,12 @@ html {
 .qarabag-article-scroll::-webkit-scrollbar {
   width: 6px;
 }
+
 .qarabag-article-scroll::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
 }
+
 .qarabag-article-scroll::-webkit-scrollbar-thumb {
   background: var(--gold);
   border-radius: 10px;
@@ -13131,15 +13143,19 @@ html {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .qarabag-video-wrap {
     max-width: 320px;
   }
+
   .qarabag-text-card {
     padding: 28px 22px;
   }
+
   .qarabag-heading {
     font-size: 1.45rem;
   }
+
   .qarabag-article-scroll {
     max-height: 380px;
     padding-right: 10px;
@@ -13327,8 +13343,17 @@ body:not(.dark-mode) .sub-badge-star {
 }
 
 @keyframes honorPulse {
-  0%, 100% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.25); opacity: 1; }
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
 }
 
 .grad-honors-title {
@@ -13606,15 +13631,24 @@ body:not(.dark-mode) .honor-badge-shimmer {
 .honor-badge-shimmer::after {
   content: "";
   position: absolute;
-  top: 0; left: -100%; width: 50%; height: 100%;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   transform: skewX(-20deg);
   animation: honorShine 3.5s infinite;
 }
 
 @keyframes honorShine {
-  0% { left: -100%; }
-  30%, 100% { left: 180%; }
+  0% {
+    left: -100%;
+  }
+
+  30%,
+  100% {
+    left: 180%;
+  }
 }
 
 /* ── 2. Card Body Grid ── */
@@ -14236,6 +14270,7 @@ body:not(.dark-mode) .honor-btn-gallery:hover {
 }
 
 @media (max-width: 600px) {
+
   .honor-students-section,
   .grad-honors-wrap {
     padding: 14px 12px 18px;
@@ -14320,8 +14355,15 @@ body:not(.dark-mode) .honor-btn-gallery:hover {
 }
 
 @keyframes honorModalIn {
-  from { opacity: 0; transform: scale(0.92) translateY(20px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .honor-modal-close {
@@ -16104,8 +16146,15 @@ body.dark-mode .lecture-dept-nav-btn:hover {
 }
 
 @keyframes floatTrophy {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .trophy-pedestal-base {
@@ -16242,16 +16291,20 @@ body.dark-mode .lecture-dept-nav-btn:hover {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .trophy-content-side {
     text-align: center;
     align-items: center;
   }
+
   .trophy-tier-ribbon {
     align-self: center;
   }
+
   .trophy-meta-pills {
     justify-content: center;
   }
+
   .trophy-cta-actions {
     justify-content: center;
   }
@@ -16839,44 +16892,55 @@ body.dark-mode .lecture-dept-nav-btn:hover {
   .science-ceremony-banner {
     grid-template-columns: 1fr;
   }
+
   .science-stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .science-search-row {
     flex-direction: column;
     align-items: stretch;
   }
+
   .science-search-input-wrap {
     max-width: 100%;
   }
+
   .science-authors-grid {
     grid-template-columns: 1fr;
   }
+
   .science-author-card {
     padding: 18px 16px;
   }
+
   .science-card-header {
     gap: 10px;
     padding-bottom: 12px;
     margin-bottom: 12px;
   }
+
   .science-author-avatar {
     width: 44px;
     height: 44px;
     font-size: 1.05rem;
   }
+
   .science-author-name {
     font-size: 0.98rem;
     line-height: 1.3;
   }
+
   .science-author-dept,
   .science-author-role {
     font-size: 0.76rem;
   }
+
   .science-badges-strip {
     gap: 5px;
     margin-top: 5px;
   }
+
   .science-badge-copernicus,
   .science-badge-erih,
   .science-badge-scope {
@@ -17198,7 +17262,7 @@ body.dark-mode .lecture-dept-nav-btn:hover {
   border-radius: 50%;
   padding: 1px 3px;
   border: 1px solid var(--border);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   line-height: 1;
 }
 
@@ -18164,9 +18228,17 @@ body.dark-mode .cert-stat-label {
 }
 
 @keyframes pulseDot {
-  0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.5); }
-  70% { box-shadow: 0 0 0 8px rgba(255, 215, 0, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 8px rgba(255, 215, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+  }
 }
 
 .bio-tl-year {
@@ -18444,12 +18516,14 @@ body.dark-mode .cert-stat-label {
   background: #fbf0d9 !important;
   color: #2c2214 !important;
 }
+
 [data-bio-theme="sepia"] .bio-modal-body,
 [data-bio-theme="sepia"] .bio-section-card {
   background: #f7ebd0 !important;
   color: #2c2214 !important;
   border-color: #e2ceaa !important;
 }
+
 [data-bio-theme="sepia"] .bio-p,
 [data-bio-theme="sepia"] .bio-essay-p,
 [data-bio-theme="sepia"] .bio-card-title,
@@ -18458,6 +18532,7 @@ body.dark-mode .cert-stat-label {
 [data-bio-theme="sepia"] .bio-award-name {
   color: #2c2214 !important;
 }
+
 [data-bio-theme="sepia"] .bio-tl-desc,
 [data-bio-theme="sepia"] .bio-book-desc,
 [data-bio-theme="sepia"] .bio-award-desc {
@@ -18470,12 +18545,14 @@ body.dark-mode .cert-stat-label {
   color: #f1f5f9 !important;
   border-color: rgba(184, 147, 74, 0.3) !important;
 }
+
 [data-bio-theme="night"] .bio-modal-body,
 [data-bio-theme="night"] .bio-section-card {
   background: #0b1524 !important;
   color: #f1f5f9 !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
+
 [data-bio-theme="night"] .bio-p,
 [data-bio-theme="night"] .bio-essay-p,
 [data-bio-theme="night"] .bio-card-title,
@@ -18484,6 +18561,7 @@ body.dark-mode .cert-stat-label {
 [data-bio-theme="night"] .bio-award-name {
   color: #f8fafc !important;
 }
+
 [data-bio-theme="night"] .bio-tl-desc,
 [data-bio-theme="night"] .bio-book-desc,
 [data-bio-theme="night"] .bio-award-desc {
@@ -18495,16 +18573,20 @@ body.dark-mode .cert-stat-label {
     flex-direction: column;
     text-align: center;
   }
+
   .bio-hero-info {
     text-align: center;
     align-items: center;
   }
+
   .bio-content-stream {
     padding: 20px 16px 40px;
   }
+
   .bio-section-card {
     padding: 20px 18px;
   }
+
   .bio-essay-box {
     padding: 18px 16px;
   }
@@ -18840,6 +18922,7 @@ body.dark-mode .cert-stat-label {
   .lib-fund-stats {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .lib-fund-body {
     padding: 20px 18px 30px;
   }
@@ -20243,6 +20326,7 @@ body.dark-mode .majors-catalog-desc {
   .campus-floors-nav {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .campus-stats-bar {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -20252,12 +20336,15 @@ body.dark-mode .majors-catalog-desc {
   .campus-floors-nav {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .campus-stats-bar {
     grid-template-columns: 1fr;
   }
+
   .campus-rooms-grid {
     grid-template-columns: 1fr;
   }
+
   .cfb-header {
     flex-direction: column;
     align-items: flex-start;
@@ -20534,9 +20621,9 @@ body.dark-mode .theme-mode-toggle:hover .theme-switch-track,
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   background: linear-gradient(150deg,
-    rgba(7, 25, 48, 0.72) 0%,
-    rgba(10, 32, 60, 0.6) 55%,
-    rgba(7, 25, 48, 0.78) 100%);
+      rgba(7, 25, 48, 0.72) 0%,
+      rgba(10, 32, 60, 0.6) 55%,
+      rgba(7, 25, 48, 0.78) 100%);
   border: 1px solid rgba(212, 175, 55, 0.4);
   box-shadow:
     0 24px 60px rgba(4, 12, 24, 0.5),
@@ -20608,6 +20695,7 @@ body.dark-mode .theme-mode-toggle:hover .theme-switch-track,
     font-size: 0.72rem;
     line-height: 1.45;
   }
+
   .hero-institution-badge .inst-line-sep {
     display: none;
   }
@@ -20733,6 +20821,7 @@ body.dark-mode .theme-mode-toggle:hover .theme-switch-track,
   .hero-content {
     padding: 32px 20px;
   }
+
   .hero-stats {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -21479,6 +21568,7 @@ body.dark-mode .mobile-contact-line a {
 
 /* Mobile Screen Specific High-Contrast Polish (<= 768px & <= 480px) */
 @media (max-width: 768px) {
+
   body:not(.dark-mode) .stat-label,
   body:not(.dark-mode) .main-stat .stat-label {
     color: #cbd5e1 !important;
@@ -21563,11 +21653,11 @@ body.dark-mode .mobile-contact-line a {
   visibility: hidden;
   transform: translateY(20px) scale(0.9);
   transition: opacity 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
-              transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
-              visibility 0.35s,
-              background 0.3s ease,
-              border-color 0.3s ease,
-              box-shadow 0.3s ease;
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    visibility 0.35s,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28), 0 2px 6px rgba(0, 0, 0, 0.16);
   padding: 0;
   outline: none;
@@ -21657,8 +21747,8 @@ body.dark-mode .mobile-contact-line a {
   position: relative;
   overflow: hidden;
   transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
-              box-shadow 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
-              border-color 0.28s ease !important;
+    box-shadow 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.28s ease !important;
 }
 
 .mouse-glow-card::after {
@@ -21685,7 +21775,7 @@ body.dark-mode .mobile-contact-line a {
   background: radial-gradient(circle, rgba(0, 150, 230, 0.16), transparent 70%);
 }
 
-.mouse-glow-card > *:not(.honor-card-ambient):not([aria-hidden="true"]) {
+.mouse-glow-card>*:not(.honor-card-ambient):not([aria-hidden="true"]) {
   position: relative;
   z-index: 2;
 }
@@ -23082,6 +23172,7 @@ html.dark-mode #library .book-btn-ext:hover {
 }
 
 @media (max-width: 768px) {
+
   .lib-lectures-showcase {
     padding: 18px 14px;
     border-radius: 18px;
