@@ -42,33 +42,31 @@ const i18n = {
     nav_library: "Kitabxana",
 
     nav_science: "Elm və Nəşrlər",
-    science_badge: "Elmi Fəaliyyət və Beynəlxalq Nəşrlər",
-    science_title: "Fakültə Əməkdaşlarımızın Beynəlxalq və Yerli Elmi Nəşrləri",
-    science_desc: "Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin pedaqoji heyətinin nüfuzlu beynəlxalq indeksli jurnallarda və yerli elmi nəşrlərdə dərc olunmuş elmi məqalə və tezisləri.",
+    science_badge: "Tədqiqat Fəaliyyəti və Beynəlxalq Nəşrlər",
+    science_title: "Əməkdaşlarımızın Beynəlxalq və Yerli Nəşrləri",
+    science_desc: "Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin pedaqoji heyətinin nüfuzlu beynəlxalq indeksli jurnallarda və yerli nəşrlərdə dərc olunmuş məqalə və tezisləri.",
     science_ceremony_tag: "Rəsmi Təqdimat və Qəbul",
-    science_ceremony_kicker: "BDRNK Elmi Heyəti · 2026",
-    science_ceremony_heading: "Kollec rəhbərliyi və professor-müəllim heyətinin elmi nailiyyətləri",
-    science_ceremony_p: "Direktor Səbuhi Qurbanovun təşəbbüsü ilə pedaqoji heyətin beynəlxalq elmi arenada təmsil olunması, impakt faktorlu və Index Copernicus, ERIH PLUS indeksli nəşrlərdə dərc olunan elmi araşdırmaları yüksək qiymətləndirilmişdir.",
-    science_btn_table: "Rəsmi Nazirlik Cədvəlinə Bax (JPG)",
-    science_btn_table_title: "Rəsmi Nazirlik Cədvəlini Tam Ölçüdə Aç",
+    science_ceremony_kicker: "BDRNK Pedaqoji Heyəti · 2026",
+    science_ceremony_heading: "Kollec rəhbərliyi və professor-müəllim heyətinin nailiyyətləri",
+    science_ceremony_p: "Direktor Səbuhi Qurbanovun təşəbbüsü ilə pedaqoji heyətin beynəlxalq arenada təmsil olunması, impakt faktorlu və Index Copernicus, ERIH PLUS indeksli nəşrlərdə dərc olunan araşdırmaları yüksək qiymətləndirilmişdir.",
     science_stat_authors: "Tədqiqatçı Müəllim",
     science_stat_articles: "Məqalə və Tezis",
     science_stat_countries: "Xarici və Yerli Ölkə",
-    science_stat_indexed: "Index Copernicus & Respublika",
+    science_stat_indexed: "Beynəlxalq & Respublika",
     science_tab_all: "Bütün Nəşrlər (23)",
     science_tab_foreign: "Xarici Jurnallar (17)",
     science_tab_local: "Yerli Jurnallar (6)",
-    science_tab_copernicus: "Copernicus & ERIH (10)",
+    science_tab_copernicus: "Copernicus & ERIH (2)",
     dept_humanitar: "Humanitar elmlər",
     dept_dil: "Dil və ədəbiyyat",
     dept_umumtehsil: "Ümumtəhsil",
     dept_xaricidil: "Xarici dillər",
     science_search_ph: "Müəllif, məqalə və ya jurnal axtar...",
-    science_articles_count_label: "Elmi Əsər",
+    science_articles_count_label: "Məqalə / Əsər",
     science_journal_label: "Nəşr / Jurnal:",
     science_country_label: "Ölkə:",
     science_orcid_profile: "ORCID İD Profili",
-    science_no_results: "Axtarış üzrə heç bir elmi nəşr tapılmadı.",
+    science_no_results: "Axtarış üzrə heç bir nəşr tapılmadı.",
     science_view_cards: "🗂️ Kartlar Görünüşü",
     science_view_table: "📋 Rəsmi Cədvəl Rejimi",
     science_th_no: "№",
@@ -82,7 +80,7 @@ const i18n = {
     science_th_scopus: "Scopus / WoS",
     science_th_copernicus: "Copernicus",
     science_th_erih: "ERIH",
-    science_showing_summary: "Tədqiqatçı müəllim · Elmi əsər və tezis",
+    science_showing_summary: "Tədqiqatçı müəllim · Məqalə və tezis",
 
     nav_lectures: "Videodərslər",
     nav_sis: "Tələbə Portalı",
@@ -816,7 +814,7 @@ const i18n = {
     nav_academics: "Tədris & Elm",
     nav_lectures_sub: "23 rəsmi videodərs və multimedia arxivi",
     nav_library_sub: "44+ dərslik, fond və daxili oxu zalı",
-    nav_science_sub: "Fakültənin beynəlxalq və yerli elmi məqalələri",
+    nav_science_sub: "Beynəlxalq və yerli məqalə və nəşrlər",
     nav_media: "Media & Həyat",
     nav_news_sub: "Rəsmi elanlar və kollec tədbirləri",
     nav_qarabag: "Qarabağ Zəfər Salnaməsi",
@@ -938,36 +936,35 @@ const i18n = {
     nav_library: "Library",
 
     nav_science: "Science & Publications",
-    science_badge: "Scientific Activity & Publications",
-    science_title: "Faculty International & Domestic Scientific Publications",
-    science_desc: "Scientific articles and conference theses published by faculty members of Baku State Communications and Transport College under Azerbaijan Technical University in prestigious indexed journals and domestic editions.",
+    science_badge: "Research Activity & Publications",
+    science_title: "International & Domestic Publications of Our Staff",
+    science_desc: "Articles and conference theses published by teaching staff of Baku State Communications and Transport College under Azerbaijan Technical University in prestigious indexed journals and domestic editions.",
     science_ceremony_tag: "Official Ceremony & Reception",
-    science_ceremony_kicker: "BDRNK Academic Faculty · 2026",
-    science_ceremony_heading: "Scientific Achievements of College Leadership & Faculty",
-    science_ceremony_p: "On the initiative of Director Sabuhi Gurbanov, the representation of our academic faculty in the international scientific arena and their research published in impact factor, Index Copernicus, and ERIH PLUS indexed journals was commended.",
-    science_btn_table: "View Official Ministry Document (JPG)",
-    science_stat_authors: "Faculty Researchers",
+    science_ceremony_kicker: "BDRNK Teaching Staff · 2026",
+    science_ceremony_heading: "Achievements of College Leadership & Teaching Staff",
+    science_ceremony_p: "On the initiative of Director Sabuhi Gurbanov, the representation of our teaching staff in the international arena and their research published in impact factor, Index Copernicus, and ERIH PLUS indexed journals was commended.",
+    science_stat_authors: "Researchers",
     science_stat_articles: "Articles & Theses",
     science_stat_countries: "Target Countries",
-    science_stat_indexed: "Index Copernicus & National",
+    science_stat_indexed: "International & National",
     science_tab_all: "All Publications (23)",
     science_tab_foreign: "International Journals (17)",
     science_tab_local: "Domestic Journals (6)",
-    science_tab_copernicus: "Copernicus & ERIH (10)",
+    science_tab_copernicus: "Copernicus & ERIH (2)",
     dept_humanitar: "Humanities",
     dept_dil: "Language & Literature",
     dept_umumtehsil: "General Education",
     dept_xaricidil: "Foreign Languages",
     science_search_ph: "Search author, article or journal...",
-    science_articles_count_label: "Scientific Works",
+    science_articles_count_label: "Publications",
     science_journal_label: "Publication / Journal:",
     science_country_label: "Country:",
     science_orcid_profile: "ORCID Profile",
-    science_no_results: "No scientific publications found matching your search.",
+    science_no_results: "No publications found matching your search.",
     science_view_cards: "🗂️ Cards View",
     science_view_table: "📋 Official Table",
     science_th_no: "No.",
-    science_th_author: "Faculty Member",
+    science_th_author: "Staff Member",
     science_th_role: "Position / Department",
     science_th_works: "Article / Thesis",
     science_th_journals: "Journal / Country",
@@ -977,7 +974,7 @@ const i18n = {
     science_th_scopus: "Scopus / WoS",
     science_th_copernicus: "Copernicus",
     science_th_erih: "ERIH",
-    science_showing_summary: "Faculty Researchers · Scientific Works",
+    science_showing_summary: "Researchers · Articles & Theses",
 
     nav_lectures: "Lectures",
     nav_sis: "Student Portal",
@@ -1705,7 +1702,7 @@ const i18n = {
     nav_academics: "Academics & Science",
     nav_lectures_sub: "23 video lectures & media archive",
     nav_library_sub: "44+ textbooks, collection & reading room",
-    nav_science_sub: "Faculty international and local research",
+    nav_science_sub: "International and domestic articles & publications",
     nav_media: "Media & Campus Life",
     nav_news_sub: "Official announcements & college events",
     nav_qarabag: "Karabakh Victory Chronicle",
@@ -1822,32 +1819,31 @@ const i18n = {
     nav_library: "Библиотека",
 
     nav_science: "Наука и Публикации",
-    science_badge: "Научная Деятельность и Публикации",
-    science_title: "Международные и Отечественные Научные Публикации Преподавателей",
-    science_desc: "Научные статьи и тезисы преподавательского состава Бакинского государственного колледжа связи и транспорта при Азербайджанском техническом университете, опубликованные в авторитетных индексируемых и отечественных журналах.",
+    science_badge: "Исследовательская Деятельность и Публикации",
+    science_title: "Международные и Отечественные Публикации Преподавателей",
+    science_desc: "Статьи и тезисы преподавательского состава Бакинского государственного колледжа связи и транспорта при Азербайджанском техническом университете, опубликованные в авторитетных индексируемых и отечественных журналах.",
     science_ceremony_tag: "Официальная Презентация",
-    science_ceremony_kicker: "Научный состав БГКСТ · 2026",
-    science_ceremony_heading: "Научные достижения руководства и профессорско-преподавательского состава",
-    science_ceremony_p: "По инициативе директора Сабухи Гурбанова было высоко оценено представление педагогического состава на международной научной арене и публикация исследований в изданиях с импакт-фактором, Index Copernicus и ERIH PLUS.",
-    science_btn_table: "Смотреть Таблицу Министерства (JPG)",
-    science_stat_authors: "Преподавателей-ученых",
+    science_ceremony_kicker: "Педагогический состав БГКСТ · 2026",
+    science_ceremony_heading: "Достижения руководства и профессорско-преподавательского состава",
+    science_ceremony_p: "По инициативе директора Сабухи Гурбанова было высоко оценено представление педагогического состава на международной арене и публикация исследований в изданиях с импакт-фактором, Index Copernicus и ERIH PLUS.",
+    science_stat_authors: "Преподавателей",
     science_stat_articles: "Статей и тезисов",
     science_stat_countries: "Стран публикации",
-    science_stat_indexed: "Index Copernicus и Респ.",
+    science_stat_indexed: "Международные и Респ.",
     science_tab_all: "Все публикации (23)",
     science_tab_foreign: "Зарубежные журналы (17)",
     science_tab_local: "Отечественные журналы (6)",
-    science_tab_copernicus: "Copernicus и ERIH (10)",
+    science_tab_copernicus: "Copernicus и ERIH (2)",
     dept_humanitar: "Гуманитарные науки",
     dept_dil: "Язык и литература",
     dept_umumtehsil: "Общее образование",
     dept_xaricidil: "Иностранные языки",
     science_search_ph: "Поиск по автору, статье или журналу...",
-    science_articles_count_label: "Научных трудов",
+    science_articles_count_label: "Публикаций",
     science_journal_label: "Издание / Журнал:",
     science_country_label: "Страна:",
     science_orcid_profile: "Профиль ORCID",
-    science_no_results: "Научных публикаций по запросу не найдено.",
+    science_no_results: "Публикаций по запросу не найдено.",
     science_view_cards: "🗂️ Вид карточек",
     science_view_table: "📋 Официальная таблица",
     science_th_no: "№",
@@ -1861,7 +1857,7 @@ const i18n = {
     science_th_scopus: "Scopus / WoS",
     science_th_copernicus: "Copernicus",
     science_th_erih: "ERIH",
-    science_showing_summary: "Преподавателей · Научных трудов",
+    science_showing_summary: "Преподавателей · Публикаций",
 
     nav_lectures: "Видеоуроки",
     nav_sis: "Студенческий Портал",
@@ -2593,7 +2589,7 @@ const i18n = {
     nav_academics: "Учеба и Наука",
     nav_lectures_sub: "23 видеоурока и медиа-архив",
     nav_library_sub: "44+ учебника, фонд и читальный зал",
-    nav_science_sub: "Международные и местные научные статьи",
+    nav_science_sub: "Международные и местные статьи и публикации",
     nav_media: "Медиа и Жизнь",
     nav_news_sub: "Официальные объявления и события",
     nav_qarabag: "Летопись Карабахской Победы",
@@ -14554,7 +14550,7 @@ let currentCategory = "all";
     "orcid": null,
     "orcid_id": null,
     "scopus": false,
-    "copernicus": true,
+    "copernicus": false,
     "erih": false
   },
   {
@@ -14670,7 +14666,7 @@ let currentCategory = "all";
     "orcid": null,
     "orcid_id": null,
     "scopus": false,
-    "copernicus": true,
+    "copernicus": false,
     "erih": false
   },
   {
@@ -14728,7 +14724,7 @@ let currentCategory = "all";
     "orcid": null,
     "orcid_id": null,
     "scopus": false,
-    "copernicus": true,
+    "copernicus": false,
     "erih": false
   },
   {
@@ -14771,7 +14767,7 @@ let currentCategory = "all";
     "orcid": null,
     "orcid_id": null,
     "scopus": false,
-    "copernicus": true,
+    "copernicus": false,
     "erih": false
   },
   {
@@ -14814,7 +14810,7 @@ let currentCategory = "all";
     "orcid": "https://orcid.org/0009-0005-1845-6679",
     "orcid_id": "0009-0005-1845-6679",
     "scopus": false,
-    "copernicus": true,
+    "copernicus": false,
     "erih": false
   },
   {
@@ -14857,7 +14853,7 @@ let currentCategory = "all";
     "orcid": null,
     "orcid_id": null,
     "scopus": false,
-    "copernicus": true,
+    "copernicus": false,
     "erih": false
   },
   {
@@ -14900,7 +14896,7 @@ let currentCategory = "all";
     "orcid": null,
     "orcid_id": null,
     "scopus": false,
-    "copernicus": true,
+    "copernicus": false,
     "erih": false
   },
   {
@@ -14943,7 +14939,7 @@ let currentCategory = "all";
     "orcid": null,
     "orcid_id": null,
     "scopus": false,
-    "copernicus": true,
+    "copernicus": false,
     "erih": false
   }
 ];
@@ -15043,7 +15039,7 @@ let currentCategory = "all";
       grid.innerHTML = `
         <div class="science-empty-state" style="grid-column: 1 / -1; text-align: center; padding: 3.5rem 1rem; color: var(--text-dim);">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="margin: 0 auto 1rem; display: block; opacity: 0.6;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <p style="font-size: 1.05rem; font-weight: 600;">${typeof gT === 'function' ? gT('science_no_results') : 'Axtarış üzrə heç bir elmi nəşr tapılmadı.'}</p>
+          <p style="font-size: 1.05rem; font-weight: 600;">${typeof gT === 'function' ? gT('science_no_results') : 'Axtarış üzrə heç bir nəşr tapılmadı.'}</p>
         </div>
       `;
       return;
@@ -15064,7 +15060,7 @@ let currentCategory = "all";
         `<span class="science-badge-scope local">${typeof gT === 'function' ? gT('science_scope_local') : 'Yerli'}</span>`
       ].filter(Boolean).join('');
 
-      const countLabel = typeof gT === 'function' ? gT('science_articles_count_label') : 'Elmi Əsər';
+      const countLabel = typeof gT === 'function' ? gT('science_articles_count_label') : 'Məqalə / Əsər';
       const articlesCountText = `${author.works.length} ${countLabel}`;
 
       const worksHtml = author.works.map((w, idx) => {
