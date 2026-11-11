@@ -6434,19 +6434,10 @@ function initScrollEngine() {
     });
   });
 
-  // Reveal Animation
-  const reveals = document.querySelectorAll(".reveal");
-  const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, revealOptions);
-
-  reveals.forEach((r) => revealObserver.observe(r));
+  // Reveal Animation (Safe observer: never traps tall sections or hash targets at opacity: 0)
+  if (typeof window.syncSafeReveals === "function") {
+    window.syncSafeReveals(document.querySelectorAll(".reveal"));
+  }
 }
 
 /**
@@ -11790,12 +11781,17 @@ function initSceneTransition() {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   2. SCROLL REVEAL — IntersectionObserver
+   2. SCROLL REVEAL — Safe IntersectionObserver (Zero Blank Sections)
    ══════════════════════════════════════════════════════════════ */
 (function initScrollReveal() {
-  // Auto-tag main sections and cards for reveal
+  // Never hide full <section> wrappers (especially #hero or multi-screen sections like #library)
+  document.querySelectorAll("section.reveal, #hero .reveal").forEach((sec) => {
+    sec.classList.add("visible");
+    sec.style.transitionDelay = "0s";
+  });
+
+  // Auto-tag compact cards (NOT full <section> containers) for scroll reveal
   const REVEAL_SELECTORS = [
-    "section",
     ".about-card",
     ".stat-card",
     ".news-card",
@@ -11814,7 +11810,7 @@ function initSceneTransition() {
     document.querySelectorAll(sel).forEach((el, i) => {
       if (!el.classList.contains("reveal") && !el.classList.contains("reveal-group")) {
         el.classList.add("reveal");
-        el.style.transitionDelay = `${Math.min(i * 0.06, 0.4)}s`;
+        el.style.transitionDelay = `${Math.min(i * 0.05, 0.25)}s`;
       }
     });
   });
@@ -11838,16 +11834,44 @@ function initSceneTransition() {
     });
   });
 
+  function isRevealBypassedOrInView(el) {
+    if (!el || el.classList.contains("visible")) return true;
+    const vh = window.innerHeight || document.documentElement.clientHeight || 900;
+    const rect = el.getBoundingClientRect();
+    // Reveal immediately if element is tall (e.g. section-inner for #library/#structure), in/above viewport, or active hash target
+    if (el.tagName === "SECTION" || el.classList.contains("section-inner") || rect.height > vh * 0.65) {
+      return true;
+    }
+    return rect.top <= vh + 140;
+  }
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-        observer.unobserve(entry.target); // animate once
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: "0px 0px -30px 0px" });
+  }, { threshold: 0, rootMargin: "140px 0px 60px 0px" });
 
-  document.querySelectorAll(".reveal, .reveal-group, .reveal-stagger").forEach((el) => observer.observe(el));
+  function syncSafeReveals(nodeList) {
+    const targets = nodeList || document.querySelectorAll(".reveal, .reveal-group, .reveal-stagger");
+    targets.forEach((el) => {
+      if (isRevealBypassedOrInView(el)) {
+        el.classList.add("visible");
+        observer.unobserve(el);
+      } else {
+        observer.observe(el);
+      }
+    });
+  }
+
+  window.syncSafeReveals = syncSafeReveals;
+  syncSafeReveals();
+
+  window.addEventListener("scroll", () => syncSafeReveals(), { passive: true });
+  window.addEventListener("hashchange", () => setTimeout(() => syncSafeReveals(), 60));
+  window.addEventListener("load", () => syncSafeReveals());
 })();
 
 /* ══════════════════════════════════════════════════════════════
