@@ -5931,6 +5931,174 @@ const libraryData = [
     icon: "📖",
     url: "azdilifb.docx",
   },
+  {
+    id: 48,
+    title_az: "Hüququn əsasları (Mühazirələr toplusu, 8 Mövzu)",
+    title_en: "Fundamentals of Law (Lecture Notes, 8 Topics)",
+    title_ru: "Основы права (Курс лекций, 8 Темы)",
+    author_az: "Humanitar və İctimai Elmlər FBK",
+    author_en: "Humanities and Social Sciences Department",
+    author_ru: "ФБК Гуманитарных и общественных наук",
+    category: "humanitar",
+    icon: "⚖️",
+    url: "yeni mühazirələr.docx",
+  },
+  {
+    id: 49,
+    title_az: "Rəqəmsal elektronika və MPS (Leksiyalar toplusu, 56 səh.)",
+    title_en: "Digital Electronics and MPS (Lecture Notes, 56 p.)",
+    title_ru: "Цифровая электроника и МПС (Сборник лекций, 56 с.)",
+    author_az: "Elektrotexnika və Sxematexnika FBK",
+    author_en: "Electrical Engineering & Schematics Department",
+    author_ru: "ФБК Электротехники и схемотехники",
+    category: "sxematexnika",
+    icon: "🔌",
+    url: "RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf",
+  },
+  {
+    id: 50,
+    title_az: "Ətraf mühitin qorunması və bərpası — ƏMM (Mühazirələr toplusu, 98 səh.)",
+    title_en: "Environmental Protection and Restoration — EMM (Lecture Notes, 98 p.)",
+    title_ru: "Охрана и восстановление окружающей среды — ЭММ (Сборник лекций, 98 с.)",
+    author_az: "Müəllim: Ə. Mustafayeva (FBK-09)",
+    author_en: "Teacher: A. Mustafayeva (FBK-09)",
+    author_ru: "Преподаватель: А. Мустафаева (ФБК-09)",
+    category: "ekologiya",
+    icon: "🌱",
+    url: "ƏMM mühazirələr.pdf",
+  },
+  {
+    id: 51,
+    title_az: "Yol hərəkəti qaydaları və təhlükəsizliyi (15 mövzu, 59 səh.)",
+    title_en: "Traffic Rules and Road Safety (15 Topics, 59 p.)",
+    title_ru: "Правила дорожного движения и безопасность (15 тем, 59 с.)",
+    author_az: "Müəllim: Kərimov Faiq (FBK-05)",
+    author_en: "Teacher: Faig Karimov (FBK-05)",
+    author_ru: "Преподаватель: Фаиг Керимов (ФБК-05)",
+    category: "transport",
+    icon: "🚘",
+    url: "Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf",
+  },
+  {
+    id: 52,
+    title_az: "Konstruksiya materiallarının texnologiyası (Dərs vəsaiti, 28 səh.)",
+    title_en: "Construction Materials Technology (Textbook, 28 p.)",
+    title_ru: "Технология конструкционных материалов (Пособие, 28 с.)",
+    author_az: "Müəllif: Alidə Mahmudova (FBK-05)",
+    author_en: "Author: Alida Mahmudova (FBK-05)",
+    author_ru: "Автор: Алида Махмудова (ФБК-05)",
+    category: "materialsunasliq",
+    icon: "🔩",
+    url: "Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf",
+  },
+  {
+    id: 53,
+    title_az: "Materialşünaslıq (Mühazirələr toplusu, 15 mövzu, 33 səh.)",
+    title_en: "Materials Science (Lecture Notes, 15 Topics, 33 p.)",
+    title_ru: "Материаловедение (Сборник лекций, 15 тем, 33 с.)",
+    author_az: "Ümumtexnika və Nəqliyyat FBK (FBK-05)",
+    author_en: "General Engineering & Transport Department (FBK-05)",
+    author_ru: "ФБК Общей техники и транспорта (ФБК-05)",
+    category: "materialsunasliq",
+    icon: "🔬",
+    url: "materialşünasliq,mühazire, 15 mövzu.pdf",
+  },
+  {
+    id: 54,
+    title_az: "Yağlar və sürtkü materialları (Mühazirələr toplusu, 15 mövzu, 40 səh.)",
+    title_en: "Oils and Lubricants (Lecture Notes, 15 Topics, 40 p.)",
+    title_ru: "Масла и смазочные материалы (Сборник лекций, 15 тем, 40 с.)",
+    author_az: "Ümumtexnika və Nəqliyyat FBK (FBK-05)",
+    author_en: "General Engineering & Transport Department (FBK-05)",
+    author_ru: "ФБК Общей техники и транспорта (ФБК-05)",
+    category: "transport",
+    icon: "🛢️",
+    url: "yağlar mühazire 15 mövzu.pdf",
+  },
+  {
+    id: 55,
+    title_az: "Avtomobil daşımaları və VNS (Mühazirələr toplusu, 93 səh.)",
+    title_en: "Automobile Transportation and UTS (Lecture Notes, 93 p.)",
+    title_ru: "Автомобильные перевозки и ЕТС (Сборник лекций, 93 с.)",
+    author_az: "Ümumtexnika və Nəqliyyat FBK (FBK-05)",
+    author_en: "General Engineering & Transport Department (FBK-05)",
+    author_ru: "ФБК Общей техники и транспорта (ФБК-05)",
+    category: "transport",
+    icon: "🚛",
+    url: "AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf",
+  },
+  {
+    id: 56,
+    title_az: "Vahid Nəqliyyat Sistemi (Dərs vəsaiti, 63 səh.)",
+    title_en: "Unified Transport System (Textbook, 63 p.)",
+    title_ru: "Единая транспортная система (Учебное пособие, 63 с.)",
+    author_az: "Ümumtexnika və Nəqliyyat FBK (FBK-05)",
+    author_en: "General Engineering & Transport Department (FBK-05)",
+    author_ru: "ФБК Общей техники и транспорта (ФБК-05)",
+    category: "transport",
+    icon: "🌐",
+    url: "VAHİD NƏQLİYYAT SİSTEMİ.pdf",
+  },
+  {
+    id: 57,
+    title_az: "Nəqliyyat vasitələrinin diaqnostikası (Kollec dərs vəsaiti, 78 səh.)",
+    title_en: "Diagnostics of Transport Vehicles (College Textbook, 78 p.)",
+    title_ru: "Диагностика транспортных средств (Учебное пособие, 78 с.)",
+    author_az: "Ümumtexnika və Nəqliyyat FBK (FBK-05)",
+    author_en: "General Engineering & Transport Department (FBK-05)",
+    author_ru: "ФБК Общей техники и транспорта (ФБК-05)",
+    category: "transport",
+    icon: "🚗",
+    url: "2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf",
+  },
+  {
+    id: 58,
+    title_az: "Həyat fəaliyyətinin təhlükəsizliyi (Dərs vəsaiti, 74 səh.)",
+    title_en: "Life Safety (Textbook, 74 p.)",
+    title_ru: "Безопасность жизнедеятельности (Учебное пособие, 74 с.)",
+    author_az: "Müəlliflər: Alidə Mahmudova, Azadə Quliyeva (FBK-09)",
+    author_en: "Authors: Alida Mahmudova, Azada Guliyeva (FBK-09)",
+    author_ru: "Авторы: Алида Махмудова, Азада Гулиева (ФБК-09)",
+    category: "emeyin_muhafizesi",
+    icon: "🛡️",
+    url: "Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf",
+  },
+  {
+    id: 59,
+    title_az: "Elektronika və MPS (Dərs vəsaiti, 65 səh.)",
+    title_en: "Electronics and MPS (Textbook, 65 p.)",
+    title_ru: "Электроника и МПС (Учебное пособие, 65 с.)",
+    author_az: "Elektrotexnika və Sxematexnika FBK (FBK-04)",
+    author_en: "Electrical Engineering & Schematics Department (FBK-04)",
+    author_ru: "ФБК Электротехники и схемотехники (ФБК-04)",
+    category: "elektronika",
+    icon: "⚡",
+    url: "ELEKTRONIKA VE MPS.pdf",
+  },
+  {
+    id: 60,
+    title_az: "Metrologiya, standartlaşdırma və sertifikatlaşdırma (Dərs vəsaiti, 46 səh.)",
+    title_en: "Metrology, Standardization and Certification (Textbook, 46 p.)",
+    title_ru: "Метрология, стандартизация и сертификация (Учебное пособие, 46 с.)",
+    author_az: "Elektrotexnika və Sxematexnika FBK (FBK-04)",
+    author_en: "Electrical Engineering & Schematics Department (FBK-04)",
+    author_ru: "ФБК Электротехники и схемотехники (ФБК-04)",
+    category: "metrologiya",
+    icon: "📐",
+    url: "Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf",
+  },
+  {
+    id: 61,
+    title_az: "Azərbaycan dilində işgüzar və akademik kommunikasiya (Mühazirələr toplusu)",
+    title_en: "Business and Academic Communication in Azerbaijani (Lecture Notes)",
+    title_ru: "Деловая и академическая коммуникация на азербайджанском языке (Сборник лекций)",
+    author_az: "Müəllimə: Natəvan Hüseynova (FBK-06)",
+    author_en: "Teacher: Natavan Huseynova (FBK-06)",
+    author_ru: "Преподаватель: Натаван Гусейнова (ФБК-06)",
+    category: "humanitar",
+    icon: "💬",
+    url: "KOMMUNİKASİYA DF 2 (1).docx",
+  },
 ];
 
 const lecturesData = [
@@ -6819,7 +6987,7 @@ function initStructureModule() {
       desc_az: "Elektron qurğular, dövrələr, elektrik ölçmələri və mikroprosessor texnikasının əsasları.",
       desc_en: "Theoretical and practical instruction in circuit design, electrical apparatus, and microprocessors.",
       desc_ru: "Теоретические и практические занятия по схемотехнике, электрическим измерениям и микропроцессорам.",
-      disciplines_az: ["Sxematexnika", "Elektrik Ölçmələri", "Mikroprosessorlar", "Elektronika", "Rəqəmsal Texnika"],
+      disciplines_az: ["Sxematexnika", "Elektrik Ölçmələri və Metrologiya", "Elektronika", "Rəqəmsal Elektronika və MPS", "Mikroprosessorlar"],
       chair_az: "Kollec Metodik Şurası",
       chair_en: "College Methodological Board",
       chair_ru: "Методический совет"
@@ -6835,7 +7003,7 @@ function initStructureModule() {
       desc_az: "Avtomobil və dəmiryol nəqliyyatının istismarı, yol hərəkətinin təşkili və texniki diaqnostika.",
       desc_en: "Operation of transport vehicles, traffic coordination, diagnostic testing, and technical safety.",
       desc_ru: "Эксплуатация транспорта, организация дорожного движения, диагностика и техническая безопасность.",
-      disciplines_az: ["Nəqliyyat Diaqnostikası", "Yol Hərəkəti Təşkili", "Texniki Mexanika", "Materialşünaslıq", "Logistika"],
+      disciplines_az: ["Nəqliyyat Diaqnostikası", "Yol Hərəkəti Qaydaları və Təhlükəsizliyi", "Avtomobil Daşımaları", "Vahid Nəqliyyat Sistemi", "Materialşünaslıq (15 mövzu)", "Yağlar və Sürtkü Materialları (15 mövzu)", "Konstruksiya Materiallarının Texnologiyası", "Texniki Mexanika", "Logistika"],
       chair_az: "Babək Quliyev",
       chair_en: "Babak Guliyev",
       chair_ru: "Бабек Гулиев"
@@ -6851,7 +7019,7 @@ function initStructureModule() {
       desc_az: "Ana dilimizin zənginliyi, nitq mədəniyyəti, klassik və müasir milli ədəbiyyat irsi.",
       desc_en: "Preservation of linguistic standards, academic rhetoric, and study of classical national literature.",
       desc_ru: "Культура речи, литературное наследие, грамматика и академическая риторика родного языка.",
-      disciplines_az: ["Azərbaycan Dili", "Ədəbiyyat", "Nitq Mədəniyyəti", "İşgüzar Yazışmalar", "Azərbaycançılıq"],
+      disciplines_az: ["Azərbaycan Dili", "Ədəbiyyat", "İşgüzar və Akademik Kommunikasiya", "Nitq Mədəniyyəti", "Azərbaycançılıq"],
       chair_az: "Ziba Səfərova",
       chair_en: "Ziba Safarova",
       chair_ru: "Зиба Сафарова"
@@ -6891,15 +7059,15 @@ function initStructureModule() {
     {
       id: "fbk-9",
       code: "FBK-09",
-      icon: "⚽",
+      icon: "🌱",
       status: "Aktiv",
       title_az: "Dəqiq Elmlər, Fiziki Tərbiyə və ÇHQ",
       title_en: "Natural Sciences, Physical Ed. & Pre-Conscription",
       title_ru: "Точные науки, физвоспитание и ДПЮ",
-      desc_az: "Tətbiqi riyaziyyat, fizika, kimya, hərbi vətənpərvərlik hazırlığı və tələbə idman nailiyyətləri.",
-      desc_en: "Applied mathematics, physics, sports coaching, civil defense, and patriotic education.",
-      desc_ru: "Прикладная математика, физика, военно-патриотическая подготовка, спорт и гражданская оборона.",
-      disciplines_az: ["Riyaziyyat", "Fizika", "Fiziki Tərbiyə", "Çağırışaqədərki Hazırlıq", "Mülki Müdafiə"],
+      desc_az: "Tətbiqi riyaziyyat, fizika, kimya, ekologiya və ətraf mühitin mühafizəsi, hərbi hazırlıq və idman.",
+      desc_en: "Applied mathematics, physics, chemistry, ecology & environmental protection, civil defense, and sports.",
+      desc_ru: "Прикладная математика, физика, химия, экология и охрана природы, военная подготовка и спорт.",
+      disciplines_az: ["Riyaziyyat", "Fizika", "Ətraf Mühitin Mühafizəsi (ƏMM)", "Həyat Fəaliyyətinin Təhlükəsizliyi (HFT)", "Mülki Müdafiə", "Fiziki Tərbiyə", "Çağırışaqədərki Hazırlıq"],
       chair_az: "Ramilə Paşayeva",
       chair_en: "Ramila Pashayeva",
       chair_ru: "Рамила Пашаева"
@@ -7247,17 +7415,59 @@ function initStructureModule() {
           <p class="fbk-desc">${desc}</p>
           <div class="fbk-disciplines">
             ${disciplines.map(d => {
+              if (fbk.id === "fbk-4" && (d === "Rəqəmsal Elektronika və MPS" || d.includes("Rəqəmsal"))) {
+                return `<a href="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" target="_blank" download="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" class="fbk-chip fbk-chip-has-doc" title="Rəqəmsal elektronika və MPS fənnindən leksiyalar toplusu (56 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🔌</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+              }
+              if (fbk.id === "fbk-4" && (d === "Elektronika" || (d.includes("Elektronika") && !d.includes("Rəqəmsal")) || d.includes("MPS"))) {
+                return `<a href="ELEKTRONIKA VE MPS.pdf" target="_blank" download="ELEKTRONIKA VE MPS.pdf" class="fbk-chip fbk-chip-has-doc" title="Elektronika və MPS fənnindən dərs vəsaiti (65 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">⚡</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+              }
+              if (fbk.id === "fbk-4" && (d.includes("Ölçmə") || d.includes("Metrologiya") || d.includes("Standartlaşdırma"))) {
+                return `<a href="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" target="_blank" download="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" class="fbk-chip fbk-chip-has-doc" title="Metrologiya, standartlaşdırma və sertifikatlaşdırma (Dərs vəsaiti, 46 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">📐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+              }
+              if (fbk.id === "fbk-5" && (d.includes("Diaqnostika") || d.includes("Diaqnostikası"))) {
+                return `<a href="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" target="_blank" download="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" class="fbk-chip fbk-chip-has-doc" title="Nəqliyyat vasitələrinin diaqnostikası (Kollec dərs vəsaiti, 78 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🚗</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+              }
+              if (fbk.id === "fbk-5" && (d.includes("Yol Hərəkəti") || d.includes("Təhlükəsizliyi"))) {
+                return `<a href="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" target="_blank" download="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" class="fbk-chip fbk-chip-has-doc" title="Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi (15 mövzu, 59 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🚘</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+              }
+              if (fbk.id === "fbk-5" && (d === "Avtomobil Daşımaları" || (d.includes("Avtomobil") && !d.includes("Vahid")))) {
+                return `<a href="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" target="_blank" download="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" class="fbk-chip fbk-chip-has-doc" title="Avtomobil daşımaları mühazirələr toplusu (93 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🚛</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+              }
+              if (fbk.id === "fbk-5" && (d === "Vahid Nəqliyyat Sistemi" || d.includes("Vahid Nəqliyyat") || d.includes("VNS"))) {
+                return `<a href="VAHİD NƏQLİYYAT SİSTEMİ.pdf" target="_blank" download="VAHİD NƏQLİYYAT SİSTEMİ.pdf" class="fbk-chip fbk-chip-has-doc" title="Vahid Nəqliyyat Sistemi (VNS) mühazirələr toplusu və dərs vəsaiti (63 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+              }
+              if (fbk.id === "fbk-5" && d.includes("Materialşünaslıq")) {
+                return `<a href="materialşünasliq,mühazire, 15 mövzu.pdf" target="_blank" download="materialşünasliq,mühazire, 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" title="Materialşünaslıq fənni üzrə mühazirələr toplusu (15 mövzu, 33 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🔬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+              }
+              if (fbk.id === "fbk-5" && (d.includes("Yağlar") || d.includes("Sürtkü"))) {
+                return `<a href="yağlar mühazire 15 mövzu.pdf" target="_blank" download="yağlar mühazire 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" title="Yağlar və sürtkü materialları fənnindən mühazirələr toplusu (15 mövzu, 40 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🛢️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+              }
+              if (fbk.id === "fbk-5" && (d.includes("Material") || d.includes("Konstruksiya"))) {
+                return `<a href="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" target="_blank" download="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" class="fbk-chip fbk-chip-has-doc" title="Konstruksiya materiallarının texnologiyası (Alidə Mahmudova, 28 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🔩</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+              }
               if (fbk.id === "fbk-6" && (d === "Azərbaycan Dili" || d.includes("Azərbaycan Dili"))) {
                 return `<a href="azdilifb.docx" download="azdilifb.docx" class="fbk-chip fbk-chip-has-doc" title="Azərbaycan dili fənnindən mühazirələr toplusu (azdilifb.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
               }
               if (fbk.id === "fbk-6" && (d === "Ədəbiyyat" || d.includes("Ədəbiyyat"))) {
                 return `<a href="edebiyyatfb.docx" download="edebiyyatfb.docx" class="fbk-chip fbk-chip-has-doc" title="Ədəbiyyat fənnindən mühazirələr toplusu (edebiyyatfb.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
               }
+              if (fbk.id === "fbk-6" && (d.includes("Kommunikasiya") || d.includes("İşgüzar") || d.includes("Yazışmalar"))) {
+                return `<a href="KOMMUNİKASİYA DF 2 (1).docx" download="KOMMUNİKASİYA DF 2 (1).docx" class="fbk-chip fbk-chip-has-doc" title="İşgüzar və akademik kommunikasiya (Natəvan Hüseynova, 25 000+ söz, DOCX) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">💬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
+              }
               if (fbk.id === "fbk-7" && (d === "Azərbaycan Tarixi" || d.includes("Azərbaycan Tarixi"))) {
                 return `<a href="aztarixi2fb.pdf" target="_blank" download="aztarixi2fb.pdf" class="fbk-chip fbk-chip-has-doc" title="Azərbaycan tarixi rəsmi dərslik və mühazirə vəsaiti (495 səhifə, PDF & DOCX) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🏛️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF + DOCX</span></a>`;
               }
               if (fbk.id === "fbk-7" && (d === "Ümumi Tarix" || d.includes("Ümumi Tarix"))) {
                 return `<a href="umtarixfb.docx" download="umtarixfb.docx" class="fbk-chip fbk-chip-has-doc" title="Ümumi tarix fənnindən mühazirələr toplusu (umtarixfb.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌍</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
+              }
+              if (fbk.id === "fbk-7" && (d === "Hüququn Əsasları" || d.includes("Hüququn Əsasları") || d.includes("Hüquq"))) {
+                return `<a href="yeni mühazirələr.docx" download="yeni mühazirələr.docx" class="fbk-chip fbk-chip-has-doc" title="Hüququn əsasları fənnindən mühazirələr toplusu (yeni mühazirələr.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">⚖️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
+              }
+              if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
+                return `<a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" title="Ətraf mühitin qorunması və bərpası (ƏMM) fənnindən mühazirələr toplusu (98 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌱</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+              }
+              if (fbk.id === "fbk-9" && (d.includes("Həyat Fəaliyyəti") || d.includes("HFT") || d.includes("Mülki Müdafiə"))) {
+                return `<a href="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" target="_blank" download="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" class="fbk-chip fbk-chip-has-doc" title="Həyat fəaliyyətinin təhlükəsizliyi (Alidə Mahmudova, Azadə Quliyeva, 74 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🛡️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
               }
               return `<span class="fbk-chip">${d}</span>`;
             }).join("")}
@@ -7301,11 +7511,44 @@ function initStructureModule() {
                 <h5 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold-light); margin-bottom: 10px;">Tədris olunan əsas fənlər:</h5>
                 <div style="display: flex; flex-wrap: wrap; gap: 8px;">
                   ${disciplines.map(d => {
+                    if (fbk.id === "fbk-4" && (d === "Rəqəmsal Elektronika və MPS" || d.includes("Rəqəmsal"))) {
+                      return `<a href="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" target="_blank" download="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf (56 Səhifə PDF)"><span>🔌 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+                    }
+                    if (fbk.id === "fbk-4" && (d === "Elektronika" || (d.includes("Elektronika") && !d.includes("Rəqəmsal")) || d.includes("MPS"))) {
+                      return `<a href="ELEKTRONIKA VE MPS.pdf" target="_blank" download="ELEKTRONIKA VE MPS.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: ELEKTRONIKA VE MPS.pdf (65 Səhifə PDF)"><span>⚡ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+                    }
+                    if (fbk.id === "fbk-4" && (d.includes("Ölçmə") || d.includes("Metrologiya") || d.includes("Standartlaşdırma"))) {
+                      return `<a href="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" target="_blank" download="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf (46 Səhifə PDF)"><span>📐 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+                    }
+                    if (fbk.id === "fbk-5" && (d.includes("Diaqnostika") || d.includes("Diaqnostikası"))) {
+                      return `<a href="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" target="_blank" download="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: 2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf (78 Səhifə PDF)"><span>🚗 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+                    }
+                    if (fbk.id === "fbk-5" && (d.includes("Yol Hərəkəti") || d.includes("Təhlükəsizliyi"))) {
+                      return `<a href="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" target="_blank" download="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf (59 Səhifə PDF)"><span>🚘 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+                    }
+                    if (fbk.id === "fbk-5" && (d === "Avtomobil Daşımaları" || (d.includes("Avtomobil") && !d.includes("Vahid")))) {
+                      return `<a href="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" target="_blank" download="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf (93 Səhifə PDF)"><span>🚛 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+                    }
+                    if (fbk.id === "fbk-5" && (d === "Vahid Nəqliyyat Sistemi" || d.includes("Vahid Nəqliyyat") || d.includes("VNS"))) {
+                      return `<a href="VAHİD NƏQLİYYAT SİSTEMİ.pdf" target="_blank" download="VAHİD NƏQLİYYAT SİSTEMİ.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: VAHİD NƏQLİYYAT SİSTEMİ.pdf (63 Səhifə PDF)"><span>🌐 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+                    }
+                    if (fbk.id === "fbk-5" && d.includes("Materialşünaslıq")) {
+                      return `<a href="materialşünasliq,mühazire, 15 mövzu.pdf" target="_blank" download="materialşünasliq,mühazire, 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: materialşünasliq,mühazire, 15 mövzu.pdf (15 Mövzu, 33 Səhifə PDF)"><span>🔬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+                    }
+                    if (fbk.id === "fbk-5" && (d.includes("Yağlar") || d.includes("Sürtkü"))) {
+                      return `<a href="yağlar mühazire 15 mövzu.pdf" target="_blank" download="yağlar mühazire 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: yağlar mühazire 15 mövzu.pdf (15 Mövzu, 40 Səhifə PDF)"><span>🛢️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+                    }
+                    if (fbk.id === "fbk-5" && (d.includes("Material") || d.includes("Konstruksiya"))) {
+                      return `<a href="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" target="_blank" download="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf (28 Səhifə PDF)"><span>🔩 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+                    }
                     if (fbk.id === "fbk-6" && (d === "Azərbaycan Dili" || d.includes("Azərbaycan Dili"))) {
                       return `<a href="azdilifb.docx" download="azdilifb.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: azdilifb.docx (36 Saat)"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
                     }
                     if (fbk.id === "fbk-6" && (d === "Ədəbiyyat" || d.includes("Ədəbiyyat"))) {
                       return `<a href="edebiyyatfb.docx" download="edebiyyatfb.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: edebiyyatfb.docx"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
+                    }
+                    if (fbk.id === "fbk-6" && (d.includes("Kommunikasiya") || d.includes("İşgüzar") || d.includes("Yazışmalar"))) {
+                      return `<a href="KOMMUNİKASİYA DF 2 (1).docx" download="KOMMUNİKASİYA DF 2 (1).docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: KOMMUNİKASİYA DF 2 (1).docx (Natəvan Hüseynova, 25 000+ söz)"><span>💬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
                     }
                     if (fbk.id === "fbk-7" && (d === "Azərbaycan Tarixi" || d.includes("Azərbaycan Tarixi"))) {
                       return `<a href="aztarixi2fb.pdf" target="_blank" download="aztarixi2fb.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: aztarixi2fb.pdf (495 Səhifə)"><span>🏛️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF & DOCX</span></a>`;
@@ -7313,10 +7556,225 @@ function initStructureModule() {
                     if (fbk.id === "fbk-7" && (d === "Ümumi Tarix" || d.includes("Ümumi Tarix"))) {
                       return `<a href="umtarixfb.docx" download="umtarixfb.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: umtarixfb.docx (36 Saat)"><span>🌍 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
                     }
+                    if (fbk.id === "fbk-7" && (d === "Hüququn Əsasları" || d.includes("Hüququn Əsasları") || d.includes("Hüquq"))) {
+                      return `<a href="yeni mühazirələr.docx" download="yeni mühazirələr.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: yeni mühazirələr.docx (8 Mövzu, 16 000+ söz)"><span>⚖️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
+                    }
+                    if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
+                      return `<a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: ƏMM mühazirələr.pdf (98 Səhifə PDF)"><span>🌱 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+                    }
+                    if (fbk.id === "fbk-9" && (d.includes("Həyat Fəaliyyəti") || d.includes("HFT") || d.includes("Mülki Müdafiə"))) {
+                      return `<a href="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" target="_blank" download="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf (74 Səhifə PDF)"><span>🛡️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+                    }
                     return `<span style="background: var(--surface); border: 1px solid var(--border); padding: 5px 12px; border-radius: 12px; font-size: 0.82rem; font-weight: 600;">${d}</span>`;
                   }).join("")}
                 </div>
               </div>
+              ${fbk.id === "fbk-4" ? `
+                <div class="fbk-material-card" style="margin-top:20px; padding:18px 20px; background:linear-gradient(135deg, rgba(184,147,74,0.12), rgba(184,147,74,0.03)); border:1px solid rgba(184,147,74,0.35); border-radius:14px; display:flex; flex-direction:column; gap:16px;">
+                  <!-- Material 1: Rəqəmsal Elektronika və MPS -->
+                  <div style="display:flex; flex-direction:column; gap:10px;">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">🔌</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>56 Səhifə</span> • <span>Leksiyalar</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Rəqəmsal Elektronika və Mikroprosessor Sistemləri (MPS) Leksiyalar Toplusu</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Kollec Metodik Şurası (FBK-04). Məntiq elementləri, inteqral mikrosxemlər, kombinasion və ardıcıllıq qurğuları, triggerlər, sayğaclar, registrlər, mikroprosessor arxitekturası və idarəetmə sistemlərini əhatə edən 56 səhifəlik rəsmi PDF leksiya vəsaiti.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" target="_blank" download="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf Yüklə / Oxu (56 Səhifə PDF)</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Material 2: Elektronika və MPS (65 Səhifə PDF) -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">⚡</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>65 Səhifə</span> • <span>1.8 MB</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Elektronika və Mikroprosessor Sistemləri (MPS) Dərs Vəsaiti</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Elektrotexnika və Sxematexnika FBK (FBK-04). Yarımkeçirici cihazlar, diodlar, bipolyar və sahə tranzistorları, gücləndirici kaskadlar, kommutator və komparatorlar, multivibratorlar və mikroprosessor idarəetmə blokları üzrə 65 səhifəlik fundamental PDF dərs vəsaiti.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="ELEKTRONIKA VE MPS.pdf" target="_blank" download="ELEKTRONIKA VE MPS.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Elektronika və MPS Yüklə / Oxu (65 Səhifə PDF)</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Material 3: Metrologiya, Standartlaşdırma və Sertifikatlaşdırma (46 Səhifə PDF) -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">📐</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>46 Səhifə</span> • <span>747 KB</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Metrologiya, Standartlaşdırma və Sertifikatlaşdırma (Dərs Vəsaiti)</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Elektrotexnika və Sxematexnika FBK (FBK-04). Metrologiyanın elmi və nəzəri əsasları, fiziki kəmiyyətlər və ölçmə vahidləri, ISO 31 və ISO 1000 beynəlxalq standartları, ölçmə vasitələri, ölçmə xətalarının təhlili, standartlaşdırma sistemi və məhsulun sertifikatlaşdırılması qaydaları üzrə 46 səhifəlik rəsmi PDF dərs vəsaiti.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" target="_blank" download="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Metrologiya və Standartlaşdırma Yüklə / Oxu (46 Səhifə PDF)</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ` : ''}
+              ${fbk.id === "fbk-5" ? `
+                <div class="fbk-material-card" style="margin-top:20px; padding:18px 20px; background:linear-gradient(135deg, rgba(184,147,74,0.12), rgba(184,147,74,0.03)); border:1px solid rgba(184,147,74,0.35); border-radius:14px; display:flex; flex-direction:column; gap:16px;">
+                  <!-- Material 1: Yol Hərəkəti Qaydaları və Təhlükəsizliyi -->
+                  <div style="display:flex; flex-direction:column; gap:10px;">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">🚘</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>15 Mövzu</span> • <span>59 Səhifə</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Yol Hərəkəti Qaydaları və Hərəkətin Təhlükəsizliyi (Mühazirələr Toplusu)</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Müəllim: Kərimov Faiq (FBK-05). Yol hərəkətinin nizamlanması, svetofor və yol nişanları, nəqliyyat vasitələrinin təhlükəsiz idarə edilməsi, yol-nəqliyyat hadisələrinin profilaktikası və hərəkət təhlükəsizliyi qaydalarını əhatə edən 15 mövzuluq, 59 səhifəlik rəsmi PDF mühazirə vəsaiti.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" target="_blank" download="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Mühazirəni Yüklə / Oxu (59 Səhifə PDF)</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Material 2: Konstruksiya Materiallarının Texnologiyası -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">🔩</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>28 Səhifə</span> • <span>Materialşünaslıq</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Konstruksiya Materiallarının Texnologiyası (Dərs Vəsaiti)</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Müəllif: Alidə Mahmudova (FBK-05). Metallar və ərintilərin mexaniki, fiziki və kimyəvi xassələri, polad və çuqun istehsalı, əlvan metallar, termiki emal texnologiyaları və müasir konstruksiya materiallarının sənayedə tətbiqi üzrə 28 səhifəlik rəsmi dərs vəsaiti.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" target="_blank" download="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Konstruksiya Materialları Dərslik Yüklə / Oxu (28 Səhifə PDF)</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Material 3: Materialşünaslıq (15 Mövzu) -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">🔬</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>15 Mövzu</span> • <span>33 Səhifə</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Materialşünaslıq Fənni Üzrə Fundamental Mühazirələr Toplusu</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Ümumtexnika və Nəqliyyat FBK (FBK-05). Metalların strukturu və kristallik quruluşu, ərintilərin mexaniki xassələri, polad və çuqunlar, legirlənmiş materiallar, əlvan metallar, korroziya və ondan mühafizə, plastik kütlələr və kompozitləri əhatə edən 15 mövzuluq, 33 səhifəlik rəsmi PDF mühazirə toplusu.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="materialşünasliq,mühazire, 15 mövzu.pdf" target="_blank" download="materialşünasliq,mühazire, 15 mövzu.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Materialşünaslıq Mühazirə Yüklə / Oxu (33 Səhifə PDF)</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Material 4: Yağlar və Sürtkü Materialları (15 Mövzu) -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">🛢️</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>15 Mövzu</span> • <span>40 Səhifə</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Yağlar və Sürtkü Materialları Fənnindən Mühazirələr Toplusu</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Ümumtexnika və Nəqliyyat FBK (FBK-05). Neft və neft-kimya məhsulları, mühərrik və transmissiya yağları, sürtkü yağlarının özlülük-temperatur xassələri, konsistent sürtkülər, xüsusi aşqarlar, korroziyadan qorunma və yağların regenerasiyası üzrə 15 mövzuluq, 40 səhifəlik rəsmi PDF mühazirə toplusu.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="yağlar mühazire 15 mövzu.pdf" target="_blank" download="yağlar mühazire 15 mövzu.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Yağlar Mühazirə Yüklə / Oxu (40 Səhifə PDF)</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Material 5: Avtomobil Daşımaları və VNS (93 Səhifə PDF) -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">🚛</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>93 Səhifə</span> • <span>2.7 MB</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Avtomobil Daşımaları və Vahid Nəqliyyat Sistemi (VNS) Mühazirələr Toplusu</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Ümumtexnika və Nəqliyyat FBK (FBK-05). Nəqliyyat xidməti və daşınma prosesinin təşkili, Vahid Nəqliyyat Sistemi (VNS) anlayışı, nəqliyyat logistikası, sərnişin və yük daşımaları, marşrutlaşdırma, nəqliyyat qovşaqları və müasir avtomobil nəqliyyatının idarəedilməsi üzrə 93 səhifəlik əhatəli rəsmi PDF mühazirə toplusu.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" target="_blank" download="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Avtomobil Daşımaları və VNS Yüklə / Oxu (93 Səhifə PDF)</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Material 6: Vahid Nəqliyyat Sistemi (63 Səhifə PDF) -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">🌐</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>63 Səhifə</span> • <span>1.6 MB</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Vahid Nəqliyyat Sistemi (VNS) Mühazirələr və Dərs Vəsaiti</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Ümumtexnika və Nəqliyyat FBK (FBK-05). Vahid Nəqliyyat Sisteminin infrastrukturu, multimodal və birbaşa qarışıq daşımalar, dəmiryol, dəniz, avtomobil, hava və boru kəməri nəqliyyatının qarşılıqlı əlaqəsi, nəqliyyat qovşaqları və logistik mərkəzlərin idarə olunması üzrə 63 səhifəlik rəsmi PDF dərs vəsaiti.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="VAHİD NƏQLİYYAT SİSTEMİ.pdf" target="_blank" download="VAHİD NƏQLİYYAT SİSTEMİ.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Vahid Nəqliyyat Sistemi Yüklə / Oxu (63 Səhifə PDF)</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Material 7: Nəqliyyat Vasitələrinin Diaqnostikası (78 Səhifə PDF) -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">🚗</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>78 Səhifə</span> • <span>1.6 MB</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Nəqliyyat Vasitələrinin Diaqnostikası (Kollec Dərs Vəsaiti)</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Ümumtexnika və Nəqliyyat FBK (FBK-05). Diaqnostika nəzəriyyəsi, avtomobillərin texniki vəziyyətinin qiymətləndirilməsi, mühərrik, transmissiya, əyləc və sükan sistemlərinin funksional diaqnostikası, müasir elektron stendlər və parametrlərin təyini üzrə 78 səhifəlik əhatəli rəsmi PDF dərs vəsaiti.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" target="_blank" download="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Nəqliyyat Diaqnostikası Yüklə / Oxu (78 Səhifə PDF)</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ` : ''}
               ${fbk.id === "fbk-6" ? `
                 <div class="fbk-material-card" style="margin-top:20px; padding:18px 20px; background:linear-gradient(135deg, rgba(184,147,74,0.12), rgba(184,147,74,0.03)); border:1px solid rgba(184,147,74,0.35); border-radius:14px; display:flex; flex-direction:column; gap:16px;">
                   <!-- Material 1: Azərbaycan Dili -->
@@ -7355,6 +7813,26 @@ function initStructureModule() {
                       <a href="edebiyyatfb.docx" download="edebiyyatfb.docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         <span>edebiyyatfb.docx Faylını Yüklə</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Material 3: İşgüzar və Akademik Kommunikasiya -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">💬</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>DOCX</span> • <span>25 000+ söz</span> • <span>257 KB</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Azərbaycan Dilində İşgüzar və Akademik Kommunikasiya (Mühazirələr Toplusu)</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Müəllimə: Natəvan Hüseynova (FBK-06). Ünsiyyətin formaları və növləri (formal, qeyri-formal, şaquli, üfüqi), şifahi və yazılı akademik nitq mədəniyyəti, elmi mətnlərin növləri (tezis, məqalə, annotasiya, avtoreferat), işgüzar danışıqlar və auditoriya qarşısında çıxış qaydalarını əhatə edən 25 000-dən artıq sözlük əhatəli rəsmi mühazirə vəsaiti.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="KOMMUNİKASİYA DF 2 (1).docx" download="KOMMUNİKASİYA DF 2 (1).docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Kommunikasiya Mühazirəsini Yüklə (DOCX)</span>
                       </a>
                     </div>
                   </div>
@@ -7402,6 +7880,69 @@ function initStructureModule() {
                       <a href="umtarixfb.docx" download="umtarixfb.docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         <span>umtarixfb.docx Faylını Yüklə</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Material 3: Hüququn Əsasları -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">⚖️</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>DOCX</span> • <span>8 Mövzu</span> • <span>16 000+ söz</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Hüququn Əsasları Fənnindən Fundamental Mühazirələr Toplusu</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Dövlət və hüququn nəzəriyyəsi, Azərbaycan Respublikasının Konstitusiyası, insan hüquq və azadlıqları, dövlət quruluşu, seçki sistemi, dövlət hakimiyyət orqanları, əmək və cinayət hüququnu əhatə edən 8 mövzuluq rəsmi mühazirə vəsaiti (yeni mühazirələr.docx).</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="yeni mühazirələr.docx" download="yeni mühazirələr.docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>yeni mühazirələr.docx Faylını Yüklə</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ` : ''}
+              ${fbk.id === "fbk-9" ? `
+                <div class="fbk-material-card" style="margin-top:20px; padding:18px 20px; background:linear-gradient(135deg, rgba(184,147,74,0.12), rgba(184,147,74,0.03)); border:1px solid rgba(184,147,74,0.35); border-radius:14px; display:flex; flex-direction:column; gap:16px;">
+                  <!-- Material 1: Ətraf Mühitin Mühafizəsi (ƏMM) -->
+                  <div style="display:flex; flex-direction:column; gap:10px;">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">🌱</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>98 Səhifə</span> • <span>Mühazirələr</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Ətraf Mühitin Qorunması və Bərpası (ƏMM) Mühazirələr Toplusu</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Müəllim: Ə. Mustafayeva (FBK-09). Ekologiya elminin əsasları, ətraf mühit amilləri, biosfer və litosfer, ekosistemin enerjisi, təbii ehtiyatların və torpaq-su ehtiyatlarının qorunması, təbii məhsuldarlıq və bərpa mexanizmlərini əhatə edən 98 səhifəlik fundamental mühazirə vəsaiti.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>ƏMM mühazirələr.pdf Yüklə / Oxu (98 Səhifə PDF)</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Material 2: Həyat Fəaliyyətinin Təhlükəsizliyi (74 Səhifə PDF) -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">🛡️</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>74 Səhifə</span> • <span>1.6 MB</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Həyat Fəaliyyətinin Təhlükəsizliyi (Dərs Vəsaiti)</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Müəlliflər: Alidə Mahmudova, Azadə Quliyeva (FBK-09). Həyat fəaliyyətinin təhlükəsizliyinin nəzəri əsasları, əməyin mühafizəsi qanunvericiliyi, sənaye sanitariyası, fövqəladə hallar və mülki müdafiə, yanğın təhlükəsizliyi, zərərli amillərdən mühafizə və ilk tibbi yardım üzrə 74 səhifəlik rəsmi PDF dərs vəsaiti.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" target="_blank" download="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Həyat Fəaliyyətinin Təhlükəsizliyi Yüklə / Oxu (74 Səhifə PDF)</span>
                       </a>
                     </div>
                   </div>
@@ -13827,18 +14368,18 @@ let currentCategory = "all";
       ` : '';
 
       return `
-        <div class="science-author-card mouse-glow-card" style="position: relative;">
-          <span class="science-card-no-pill">№ ${author.no}</span>
+        <div class="science-author-card mouse-glow-card">
           <div class="science-card-header">
             <div class="science-author-avatar-wrap">
               <div class="science-author-avatar">${initials}</div>
               <span class="science-country-badge">${primaryFlag}</span>
             </div>
             <div class="science-author-info">
-              <div class="science-badges-strip">${badgesHtml}</div>
               <h3 class="science-author-name">${escapeHTML(authorName)}</h3>
               <p class="science-author-dept">${escapeHTML(authorRole)}</p>
+              ${badgesHtml ? `<div class="science-badges-strip">${badgesHtml}</div>` : ''}
             </div>
+            <span class="science-card-no-pill">№ ${author.no}</span>
           </div>
           <div class="science-articles-body">
             <div class="science-articles-counter">${articlesCountText}</div>
@@ -13974,6 +14515,7 @@ let currentCategory = "all";
   }
 
   window.renderScienceAuthors = renderScienceAuthors;
+  window.scienceAuthorsData = scienceAuthorsData;
 
   function init() {
     // Category tabs
@@ -14109,8 +14651,6 @@ let currentCategory = "all";
       closeModal();
     }
   });
-
-  window.scienceAuthorsData = scienceAuthorsData;
 })();
 
 /**
@@ -15625,6 +16165,326 @@ function initGlobalSearchModule() {
         const link = document.createElement("a");
         link.href = "umtarixfb.docx";
         link.download = "umtarixfb.docx";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4e. HÜQUQUN ƏSASLARI DƏRS VƏSAİTİ (yeni mühazirələr.docx - 8 Mövzu)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "⚖️",
+      badge: "DOCX • Mühazirə",
+      title: "yeni mühazirələr.docx — Hüququn Əsasları Fənnindən Mühazirələr Toplusu",
+      desc: "Humanitar və İctimai Elmlər FBK · Dövlət və hüquq nəzəriyyəsi, AR Konstitusiyası, insan hüquqları, əmək və cinayət hüququ üzrə 8 mövzuluq rəsmi mühazirə vəsaiti (16 000+ söz)",
+      tokens: "yeni muhazireler yeni mühazirələr docx huququn esaslari hüququn əsasları dovlet ve huquq konstitusiya emek cinayet fbk 07 fenn birlesmesi muhazire ders vesaiti",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "yeni mühazirələr.docx";
+        link.download = "yeni mühazirələr.docx";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4f. RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR (PDF - 56 Səhifə)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "🔌",
+      badge: "PDF • 56 Səh.",
+      title: "RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf — Dərs Vəsaiti",
+      desc: "Elektrotexnika və Sxematexnika FBK · Rəqəmsal elektronika, məntiq sxemləri və mikroprosessor sistemləri (MPS) üzrə 56 səhifəlik rəsmi leksiya vəsaiti",
+      tokens: "reqemsal elektronika mps leksiyalar rəqəmsal elektronika mikroprosessor sistemleri sxematexnika fbk 04 elektrotexnika pdf muhazire leksiya derslik",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf";
+        link.download = "RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf";
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4g. ƏTRAF MÜHİTİN MÜHAFİZƏSİ VƏ BƏRPASI — ƏMM (ƏMM mühazirələr.pdf - 98 Səhifə)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "🌱",
+      badge: "PDF • 98 Səh.",
+      title: "ƏMM mühazirələr.pdf — Ətraf Mühitin Qorunması və Bərpası",
+      desc: "Dəqiq Elmlər, FT və ÇHQ FBK (FBK-09) · Müəllim: Ə. Mustafayeva · Ekologiya, biosfer, litosfer, ekosistemin enerjisi və ətraf mühitin bərpası üzrə 98 səhifəlik rəsmi mühazirələr toplusu",
+      tokens: "emm əmm muhazireler mühazirələr pdf etraf muhitin muhafizesi berpa qorunmasi ekologiya fbk 09 mustafayeva ders vesaiti deqiq tebiet elmleri",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "ƏMM mühazirələr.pdf";
+        link.download = "ƏMM mühazirələr.pdf";
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4h. YOL HƏRƏKƏTİ QAYDALARI VƏ TƏHLÜKƏSİZLİYİ (PDF - 15 Mövzu, 59 Səhifə)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "🚘",
+      badge: "PDF • 59 Səh.",
+      title: "Yol Hərəkəti Qaydaları və Hərəkətin Təhlükəsizliyi — Mühazirələr",
+      desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Müəllim: Kərimov Faiq · Yol hərəkətinin nizamlanması, svetofor və yol nişanları, hərəkət təhlükəsizliyi üzrə 15 mövzuluq rəsmi mühazirə vəsaiti (59 səhifə)",
+      tokens: "yol hereketi qaydalari tehlukesizliyi muellim kerimov faiq mühazirə 15 movzu fbk 05 umumtexnika neqliyyat pdf derslik",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf";
+        link.download = "Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf";
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4i. KONSTRUKSİYA MATERİALLARININ TEXNOLOGİYASI (PDF - 28 Səhifə)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "🔩",
+      badge: "PDF • 28 Səh.",
+      title: "Konstruksiya Materiallarının Texnologiyası — Alidə Mahmudova",
+      desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Müəllif: Alidə Mahmudova · Metallar, ərintilər, polad, çuqun, termiki emal və materialşünaslıq üzrə 28 səhifəlik rəsmi dərs vəsaiti",
+      tokens: "konstruksiya materiallarinin texnologiyasi alide alidə mahmudova materialşünaslıq materialsunasliq fbk 05 umumtexnika neqliyyat pdf derslik vesait",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf";
+        link.download = "Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf";
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4j. MATERİALŞÜNASLIQ MÜHAZİRƏLƏR TOPLUSU (PDF - 15 Mövzu, 33 Səhifə)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "🔬",
+      badge: "PDF • 33 Səh.",
+      title: "Materialşünaslıq — Mühazirələr Toplusu (15 Mövzu)",
+      desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Metalların strukturu, polad, çuqun, legirlənmiş ərintilər, korroziya və polimer materiallar üzrə 15 mövzuluq rəsmi mühazirə vəsaiti (33 səhifə)",
+      tokens: "materialsunasliq materialşünaslıq materialşünasliq muhazire mühazirə 15 movzu mövzu fbk 05 umumtexnika neqliyyat pdf derslik vesait",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "materialşünasliq,mühazire, 15 mövzu.pdf";
+        link.download = "materialşünasliq,mühazire, 15 mövzu.pdf";
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4k. YAĞLAR VƏ SÜRTKÜ MATERİALLARI (PDF - 15 Mövzu, 40 Səhifə)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "🛢️",
+      badge: "PDF • 40 Səh.",
+      title: "Yağlar və Sürtkü Materialları — Mühazirələr (15 Mövzu)",
+      desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Neft məhsulları, mühərrik yağları, transmissiya sürtküləri, özlülük və aşqarlar üzrə 15 mövzuluq rəsmi mühazirə toplusu (40 səhifə)",
+      tokens: "yaglar yağlar muhazire mühazirə 15 movzu mövzu surtku sürtkü materiallari fbk 05 umumtexnika neqliyyat pdf derslik",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "yağlar mühazire 15 mövzu.pdf";
+        link.download = "yağlar mühazire 15 mövzu.pdf";
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4l. AVTOMOBİL DAŞIMALARI VƏ VNS (PDF - 93 Səhifə)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "🚛",
+      badge: "PDF • 93 Səh.",
+      title: "Avtomobil Daşımaları və VNS — Mühazirələr Toplusu",
+      desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Nəqliyyat xidməti, Vahid Nəqliyyat Sistemi, yük və sərnişin daşımaları üzrə əhatəli rəsmi mühazirələr toplusu (93 səhifə)",
+      tokens: "avtomobil dasimalari daşımaları vns vahid neqliyyat nəqliyyat sistemi muhazire mühazirə fbk 05 umumtexnika pdf derslik",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf";
+        link.download = "AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf";
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4m. VAHİD NƏQLİYYAT SİSTEMİ (PDF - 63 Səhifə)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "🌐",
+      badge: "PDF • 63 Səh.",
+      title: "Vahid Nəqliyyat Sistemi (VNS) — Dərs Vəsaiti",
+      desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Nəqliyyat qovşaqları, multimodal daşımalar və vahid nəqliyyat şəbəkəsinin təşkili üzrə rəsmi PDF dərs vəsaiti (63 səhifə)",
+      tokens: "vahid neqliyyat nəqliyyat sistemi vns multimodal qovsaqlar fbk 05 umumtexnika pdf derslik muhazire",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "VAHİD NƏQLİYYAT SİSTEMİ.pdf";
+        link.download = "VAHİD NƏQLİYYAT SİSTEMİ.pdf";
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4n. NƏQLİYYAT VASİTƏLƏRİNİN DİAQNOSTİKASI (PDF - 78 Səhifə)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "🚗",
+      badge: "PDF • 78 Səh.",
+      title: "Nəqliyyat Vasitələrinin Diaqnostikası — Dərs Vəsaiti",
+      desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Nəqliyyat vasitələrinin texniki vəziyyəti, funksional diaqnostika, mühərrik və transmissiya sistemləri üzrə rəsmi PDF dərs vəsaiti (78 səhifə)",
+      tokens: "neqliyyat nəqliyyat vasitelerinin vasitələrinin diaqnostikasi diaqnostikası kollec fbk 05 umumtexnika pdf derslik 2026",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf";
+        link.download = "2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf";
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4o. HƏYAT FƏALİYYƏTİNİN TƏHLÜKƏSİZLİYİ (PDF - 74 Səhifə)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "🛡️",
+      badge: "PDF • 74 Səh.",
+      title: "Həyat Fəaliyyətinin Təhlükəsizliyi — Alidə Mahmudova, Azadə Quliyeva",
+      desc: "Dəqiq Elmlər, Fiziki Tərbiyə və ÇHQ FBK (FBK-09) · Əməyin mühafizəsi, sənaye sanitariyası, fövqəladə hallar və mülki müdafiə üzrə rəsmi PDF dərs vəsaiti (74 səhifə)",
+      tokens: "heyat heyat fealiyyetinin həyat fəaliyyətinin tehlukesizliyi təhlükəsizliyi hft alide alidə mahmudova azade azadə quliyeva mulki mülki müdafiə mudafie emeyin əməyin muhafizesi mühafizəsi fbk 09 pdf derslik",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf";
+        link.download = "Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf";
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4p. ELEKTRONİKA VƏ MPS (PDF - 65 Səhifə)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "⚡",
+      badge: "PDF • 65 Səh.",
+      title: "Elektronika və MPS — Dərs Vəsaiti",
+      desc: "Elektrotexnika və Sxematexnika FBK (FBK-04) · Yarımkeçiricilər, tranzistorlar, gücləndiricilər və mikroprosessor texnikası üzrə rəsmi PDF dərs vəsaiti (65 səhifə)",
+      tokens: "elektronika mps mikroprosessor sistemleri yarimkeciriciler tranzistor sxematexnika fbk 04 pdf derslik",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "ELEKTRONIKA VE MPS.pdf";
+        link.download = "ELEKTRONIKA VE MPS.pdf";
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4q. METROLOGİYA, STANDARTLAŞDIRMA VƏ SERTİFİKATLAŞDIRMA (PDF - 46 Səhifə)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "📐",
+      badge: "PDF • 46 Səh.",
+      title: "Metrologiya, Standartlaşdırma və Sertifikatlaşdırma — Dərs Vəsaiti",
+      desc: "Elektrotexnika və Sxematexnika FBK (FBK-04) · Ölçmə nəzəriyyəsi, beynəlxalq ISO standartları, ölçmə xətaları və sertifikatlaşdırma üzrə rəsmi PDF dərs vəsaiti (46 səhifə)",
+      tokens: "metrologiya standartlasdirma standartlaşdırma sertifikatlasdirma sertifikatlaşdırma olcme ölçmə iso standartlar fbk 04 pdf derslik",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf";
+        link.download = "Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf";
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (window.switchStructureView) window.switchStructureView("commissions");
+        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4r. İŞGÜZAR VƏ AKADEMİK KOMMUNİKASİYA (DOCX - Natəvan Hüseynova)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "💬",
+      badge: "DOCX • 25k+ Söz",
+      title: "İşgüzar və Akademik Kommunikasiya — Natəvan Hüseynova",
+      desc: "Azərbaycan Dili və Ədəbiyyat FBK (FBK-06) · Ünsiyyət növləri, akademik yazı, elmi mətnlər və nitq mədəniyyəti üzrə rəsmi mühazirələr toplusu (257 KB)",
+      tokens: "kommunikasiya isguzar işgüzar akademik unsiyyet ünsiyyət nitq medeniyyeti mədəniyyəti natevan natəvan huseynova hüseynova fbk 06 docx derslik",
+      action: () => {
+        const link = document.createElement("a");
+        link.href = "KOMMUNİKASİYA DF 2 (1).docx";
+        link.download = "KOMMUNİKASİYA DF 2 (1).docx";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

@@ -7090,8 +7090,9 @@ body.dark-mode .sun-and-moon>.moon>circle {
 @media (max-width: 768px) {
   .logo-group {
     gap: 10px;
-    max-width: 68%;
-    overflow: hidden;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: none;
   }
 
   .logo-icon {
@@ -7106,25 +7107,21 @@ body.dark-mode .sun-and-moon>.moon>circle {
   }
 
   .logo-title {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.1;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     max-width: 100%;
+    font-weight: 900;
   }
 
   .logo-subtitle {
-    font-size: 0.56rem;
+    font-size: 0.68rem;
     max-width: 100%;
     white-space: normal;
     line-height: 1.25;
     margin-top: 2px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    display: block;
+    overflow: visible;
   }
 
   .header-actions {
@@ -10554,30 +10551,36 @@ body {
   }
 
   .logo-title {
-    font-size: 0.9rem !important;
-    line-height: 1.05 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.1 !important;
     white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
   }
 
   .logo-subtitle {
-    font-size: 0.52rem !important;
-    line-height: 1.15 !important;
-    margin-top: 1px !important;
+    font-size: 0.68rem !important;
+    line-height: 1.25 !important;
+    margin-top: 2px !important;
     max-width: 100% !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 3 !important;
-    line-clamp: 3 !important;
-    -webkit-box-orient: vertical !important;
-    overflow: hidden !important;
-    word-break: break-word;
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+    line-clamp: unset !important;
+    -webkit-box-orient: unset !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    word-break: normal !important;
+  }
+
+  .logo-subtitle-entity {
+    display: block !important;
+    font-size: 0.92em !important;
+    color: var(--gold-light) !important;
+    font-weight: 700 !important;
   }
 
   .header-actions {
     display: flex !important;
     align-items: center !important;
-    gap: 4px !important;
+    gap: 5px !important;
     flex-shrink: 0 !important;
   }
 
@@ -10793,16 +10796,30 @@ body {
   }
 
   .logo-title {
-    font-size: 0.82rem !important;
+    font-size: 0.88rem !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;
   }
 
   .logo-subtitle {
-    font-size: 0.48rem !important;
-    line-height: 1.14 !important;
+    font-size: 0.62rem !important;
+    line-height: 1.22 !important;
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+    line-clamp: unset !important;
+    overflow: visible !important;
+    white-space: normal !important;
+  }
+
+  .logo-subtitle-entity {
+    display: block !important;
+    font-size: 0.9em !important;
+    color: var(--gold-light) !important;
+    font-weight: 700 !important;
   }
 
   .header-actions {
-    gap: 3px !important;
+    gap: 4px !important;
   }
 
   .theme-toggle {
@@ -14791,53 +14808,184 @@ body:not(.dark-mode) .honor-cert-org {
   border-radius: 999px;
 }
 
+/* ═══════════════ LECTURE DEPARTMENT CARDS — BASE & MODE-AWARE ═══════════════ */
 .lecture-dept-card {
   min-width: 255px !important;
   max-width: 280px !important;
   flex: 0 0 auto !important;
   cursor: pointer;
-  border-radius: 20px !important;
+  border-radius: 18px !important;
   user-select: none;
-  background: linear-gradient(145deg, rgba(10, 32, 60, 0.9), rgba(6, 19, 38, 0.98)) !important;
-  border: 1.5px solid rgba(207, 169, 94, 0.3) !important;
-  transition: all 0.28s ease !important;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  padding: 16px 18px !important;
+  transition: all 0.28s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
 }
 
-.lecture-dept-card:hover {
+/* DAYTIME (LIGHT MODE) — Crisp, High-Contrast Academic Styling */
+body:not(.dark-mode) .lecture-dept-card {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-top: 3.5px solid #0b2545 !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+}
+
+body:not(.dark-mode) .lecture-dept-card:hover {
+  background: #ffffff !important;
+  border-color: #c59b27 !important;
+  border-top-color: #c59b27 !important;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.12) !important;
+  transform: translateY(-4px) !important;
+}
+
+body:not(.dark-mode) .lecture-dept-card .lecture-dept-icon {
+  background: #f1f5f9 !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0b2545 !important;
+}
+
+body:not(.dark-mode) .lecture-dept-card:hover .lecture-dept-icon {
+  background: #0b2545 !important;
+  border-color: #0b2545 !important;
+  color: #ffd700 !important;
+}
+
+body:not(.dark-mode) .lecture-dept-card .lecture-dept-name {
+  color: #0b2545 !important;
+  font-weight: 800 !important;
+  font-size: 0.96rem !important;
+  letter-spacing: -0.01em !important;
+}
+
+body:not(.dark-mode) .lecture-dept-card .lecture-dept-meta {
+  color: #334155 !important;
+  font-weight: 600 !important;
+}
+
+body:not(.dark-mode) .lecture-dept-card .lecture-dept-badge {
+  background: #f1f5f9 !important;
+  color: #0b2545 !important;
+  border: 1px solid #cbd5e1 !important;
+  font-weight: 800 !important;
+}
+
+/* Active Subject Card in Daytime Mode */
+body:not(.dark-mode) .lecture-dept-card.active {
+  background: linear-gradient(135deg, #071930 0%, #0d2b52 100%) !important;
+  border: 1.5px solid #c59b27 !important;
+  border-top: 3.5px solid #c59b27 !important;
+  box-shadow: 0 12px 30px rgba(7, 25, 48, 0.25) !important;
+}
+
+body:not(.dark-mode) .lecture-dept-card.active .lecture-dept-icon {
+  background: rgba(197, 155, 39, 0.2) !important;
+  border-color: rgba(197, 155, 39, 0.5) !important;
+  color: #ffd700 !important;
+}
+
+body:not(.dark-mode) .lecture-dept-card.active .lecture-dept-name {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+body:not(.dark-mode) .lecture-dept-card.active .lecture-dept-meta {
+  color: #cbd5e1 !important;
+  font-weight: 500 !important;
+}
+
+body:not(.dark-mode) .lecture-dept-card.active .lecture-dept-badge {
+  background: #c59b27 !important;
+  border-color: #c59b27 !important;
+  color: #071930 !important;
+  font-weight: 900 !important;
+}
+
+body:not(.dark-mode) .lecture-dept-nav-btn {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  color: #0b2545 !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.1) !important;
+}
+
+body:not(.dark-mode) .lecture-dept-nav-btn:hover {
+  background: #0b2545 !important;
+  border-color: #0b2545 !important;
+  color: #ffd700 !important;
+  box-shadow: 0 8px 22px rgba(11, 37, 69, 0.25) !important;
+}
+
+/* NIGHTTIME (DARK MODE) — Glowing Glass Aesthetics */
+body.dark-mode .lecture-dept-card {
+  background: linear-gradient(145deg, rgba(10, 32, 60, 0.95), rgba(6, 19, 38, 0.98)) !important;
+  border: 1.5px solid rgba(207, 169, 94, 0.35) !important;
+  border-top: 3.5px solid rgba(207, 169, 94, 0.6) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+body.dark-mode .lecture-dept-card:hover {
   transform: translateY(-4px) !important;
   border-color: var(--gold) !important;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(207, 169, 94, 0.25) !important;
 }
 
-.lecture-dept-card.active {
+body.dark-mode .lecture-dept-card .lecture-dept-icon {
+  background: rgba(15, 34, 64, 0.8) !important;
+  border: 1px solid rgba(207, 169, 94, 0.3) !important;
+  color: var(--gold-light) !important;
+}
+
+body.dark-mode .lecture-dept-card .lecture-dept-name {
+  color: #f8fafc !important;
+  font-weight: 800 !important;
+}
+
+body.dark-mode .lecture-dept-card .lecture-dept-meta {
+  color: #94a3b8 !important;
+  font-weight: 500 !important;
+}
+
+body.dark-mode .lecture-dept-card .lecture-dept-badge {
+  background: rgba(15, 34, 64, 0.8) !important;
+  border: 1px solid rgba(207, 169, 94, 0.3) !important;
+  color: var(--gold-light) !important;
+}
+
+body.dark-mode .lecture-dept-card.active {
+  background: linear-gradient(145deg, rgba(207, 169, 94, 0.25), rgba(6, 19, 38, 0.98)) !important;
   border-color: var(--gold) !important;
-  background: linear-gradient(145deg, rgba(207, 169, 94, 0.22), rgba(6, 19, 38, 0.98)) !important;
+  border-top-color: var(--gold) !important;
   box-shadow: 0 10px 30px rgba(207, 169, 94, 0.35) !important;
 }
 
-.lecture-dept-nav-btn {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: rgba(10, 34, 64, 0.95);
-  border: 1.5px solid var(--gold);
-  color: var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: all 0.25s ease;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  z-index: 5;
+body.dark-mode .lecture-dept-card.active .lecture-dept-icon {
+  background: rgba(207, 169, 94, 0.25) !important;
+  border-color: var(--gold) !important;
+  color: #ffd700 !important;
 }
 
-.lecture-dept-nav-btn:hover {
-  background: var(--gold);
-  color: #061326;
-  transform: scale(1.1);
-  box-shadow: 0 8px 25px rgba(207, 169, 94, 0.5);
+body.dark-mode .lecture-dept-card.active .lecture-dept-name {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+body.dark-mode .lecture-dept-card.active .lecture-dept-meta {
+  color: #cbd5e1 !important;
+}
+
+body.dark-mode .lecture-dept-card.active .lecture-dept-badge {
+  background: var(--gold) !important;
+  border-color: var(--gold) !important;
+  color: #061326 !important;
+  font-weight: 900 !important;
+}
+
+body.dark-mode .lecture-dept-nav-btn {
+  background: rgba(10, 34, 64, 0.95) !important;
+  border: 1.5px solid var(--gold) !important;
+  color: var(--gold) !important;
+}
+
+body.dark-mode .lecture-dept-nav-btn:hover {
+  background: var(--gold) !important;
+  color: #061326 !important;
 }
 
 .lecture-filter {
@@ -16512,8 +16660,12 @@ body:not(.dark-mode) .honor-cert-org {
 
 .science-author-info {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .science-author-avatar {
@@ -16690,6 +16842,37 @@ body:not(.dark-mode) .honor-cert-org {
   }
   .science-authors-grid {
     grid-template-columns: 1fr;
+  }
+  .science-author-card {
+    padding: 18px 16px;
+  }
+  .science-card-header {
+    gap: 10px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+  .science-author-avatar {
+    width: 44px;
+    height: 44px;
+    font-size: 1.05rem;
+  }
+  .science-author-name {
+    font-size: 0.98rem;
+    line-height: 1.3;
+  }
+  .science-author-dept,
+  .science-author-role {
+    font-size: 0.76rem;
+  }
+  .science-badges-strip {
+    gap: 5px;
+    margin-top: 5px;
+  }
+  .science-badge-copernicus,
+  .science-badge-erih,
+  .science-badge-scope {
+    font-size: 0.64rem;
+    padding: 2px 6px;
   }
 }
 
@@ -16921,17 +17104,20 @@ body:not(.dark-mode) .honor-cert-org {
 
 /* Card Number Pill */
 .science-card-no-pill {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 800;
-  color: var(--gold);
-  background: rgba(184, 147, 74, 0.12);
-  padding: 2px 8px;
-  border-radius: 6px;
-  border: 1px solid rgba(184, 147, 74, 0.25);
+  position: static !important;
+  flex-shrink: 0 !important;
+  align-self: flex-start !important;
+  margin-left: auto !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  color: var(--gold) !important;
+  background: rgba(184, 147, 74, 0.12) !important;
+  padding: 3px 9px !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(184, 147, 74, 0.28) !important;
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
 }
 
 .science-card-work-block {
@@ -16969,12 +17155,23 @@ body:not(.dark-mode) .honor-cert-org {
 /* ═══════════════ SCIENCE CARD COMPONENT POLISH ═══════════════ */
 .science-card-header,
 .science-card-head {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  margin-bottom: 14px !important;
+  padding-bottom: 14px !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.science-author-info {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 14px;
-  margin-bottom: 14px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--border);
+  justify-content: center;
+  gap: 3px;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .science-author-avatar-wrap {
@@ -16999,8 +17196,10 @@ body:not(.dark-mode) .honor-cert-org {
 .science-badges-strip {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 6px;
-  margin-bottom: 6px;
+  margin-top: 6px;
+  margin-bottom: 0;
 }
 
 .science-badge-copernicus {
@@ -19544,6 +19743,142 @@ body:not(.dark-mode) .campus-modal-title {
 
 body:not(.dark-mode) .campus-modal-desc {
   color: #334155;
+}
+
+/* ── Additional Comprehensive Contrast & Legibility Overrides (Daytime & Dark Mode) ── */
+/* 1. Structure / FBK */
+.fbk-desc {
+  color: #cbd5e1 !important;
+}
+
+.fbk-status-pill {
+  color: #94a3b8 !important;
+}
+
+/* 2. Video Lessons Grid & Cards */
+body:not(.dark-mode) .lecture-card {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-top: 3.5px solid #0b2545 !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+}
+
+body:not(.dark-mode) .lecture-title {
+  color: #0f172a !important;
+  font-weight: 800 !important;
+}
+
+body:not(.dark-mode) .lecture-watch-btn {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #0b2545 !important;
+  font-weight: 800 !important;
+}
+
+body:not(.dark-mode) .lecture-watch-btn:hover {
+  background: #0b2545 !important;
+  border-color: #0b2545 !important;
+  color: #ffffff !important;
+}
+
+body:not(.dark-mode) .lecture-ext-link {
+  color: #0b2545 !important;
+  font-weight: 700 !important;
+}
+
+body.dark-mode .lecture-card {
+  background: var(--surface) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  border-top-color: var(--gold) !important;
+}
+
+body.dark-mode .lecture-title {
+  color: #f8fafc !important;
+}
+
+body.dark-mode .lecture-watch-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .lecture-ext-link {
+  color: var(--gold-light) !important;
+}
+
+/* 3. Library Book Covers & Details */
+body:not(.dark-mode) .book-cover {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-left: 5px solid #0b2545 !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+}
+
+body:not(.dark-mode) .book-title {
+  color: #0f172a !important;
+  font-weight: 800 !important;
+}
+
+body:not(.dark-mode) .book-author {
+  color: #334155 !important;
+  font-weight: 600 !important;
+}
+
+body:not(.dark-mode) .book-btn {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #0b2545 !important;
+  font-weight: 800 !important;
+}
+
+body:not(.dark-mode) .book-btn:hover {
+  background: #0b2545 !important;
+  border-color: #0b2545 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .book-cover {
+  background: var(--surface) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  border-left-color: var(--gold) !important;
+}
+
+body.dark-mode .book-title {
+  color: #f8fafc !important;
+}
+
+body.dark-mode .book-author {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .book-btn {
+  background: rgba(184, 147, 74, 0.16) !important;
+  border-color: rgba(184, 147, 74, 0.35) !important;
+  color: #ffd700 !important;
+}
+
+/* 4. Section Badges & Section Descs Across Site */
+body:not(.dark-mode) .section-desc {
+  color: #334155 !important;
+  font-weight: 500 !important;
+}
+
+body.dark-mode .section-desc {
+  color: #94a3b8 !important;
+}
+
+body:not(.dark-mode) .section-badge {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  border-left: 3.5px solid #0b2545 !important;
+  color: #0b2545 !important;
+  font-weight: 800 !important;
+}
+
+body.dark-mode .section-badge {
+  background: rgba(184, 147, 74, 0.12) !important;
+  border-color: rgba(184, 147, 74, 0.35) !important;
+  color: var(--gold-light) !important;
 }
 
 /* Responsive Breakpoints */
