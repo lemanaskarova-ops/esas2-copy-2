@@ -23,13 +23,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261111_20" />
+    <link rel="stylesheet" href="style.css?v=20261111_23" />
     <script>
         (function () {
             try {
                 var savedTheme = localStorage.getItem('bdrnk-theme');
-                var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                if (savedTheme === 'dark') {
                     document.documentElement.classList.add('dark-mode');
                     document.documentElement.setAttribute('data-theme', 'dark');
                 }
@@ -1763,6 +1762,13 @@
                         <p class="fbk-banner-desc" data-i18n="fbk_banner_desc">Tədris planlarının icrası, fənn
                             proqramlarının hazırlanması və tədris-metodiki işlərin koordinasiyasını təmin edən 9
                             ixtisaslaşmış fənn birliyi.</p>
+                        <div style="margin-top: 14px;">
+                            <a href="#library-lectures-section" class="fbk-to-lib-lectures-btn" onclick="if(window.openLibraryLecturesView){event.preventDefault();window.openLibraryLecturesView('all');}">
+                                <span>🎓</span>
+                                <span data-i18n="fbk_to_lib_lectures_btn">Kitabxana Mühazirə Bölməsində Bütün Mühazirələrə Bax (21 Mühazirə)</span>
+                                <span>→</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="fbk-grid" id="fbk-grid">
                         <!-- 9 FBK Cards rendered by JS -->
@@ -1973,100 +1979,286 @@
                 Dərs vəsaitləri və metodik materiallar — baxış və yükləmə imkanı ilə.
             </p>
 
-            <!-- Rəqəmsal Oxu Zalı Məlumat Zolağı (Upgrade 4) -->
-            <div class="library-reading-bar">
-                <div class="lib-bar-left">
-                    <span class="lib-live-indicator"></span>
-                    <span class="lib-bar-title" data-i18n="lib_reading_room_title">BDRNK RƏQƏMSAL OXU ZALI</span>
-                    <span class="lib-bar-sep">·</span>
-                    <span class="lib-bar-count" id="lib-total-counter" data-i18n="lib_total_counter">44 Rəsmi Dərs
-                        Vəsaiti</span>
+            <!-- Library Master Mode Switcher -->
+            <div class="lib-master-switcher" id="lib-master-switcher" role="tablist" aria-label="Kitabxana Rejimləri">
+                <button type="button" class="lib-switch-btn active" data-view="all" role="tab" aria-selected="true">
+                    <span class="lib-switch-icon">🏛️</span>
+                    <span class="lib-switch-text" data-i18n="lib_switch_all">Bütün Kitabxana Fondu</span>
+                    <span class="lib-switch-badge">Mühazirə + Kitab</span>
+                </button>
+                <button type="button" class="lib-switch-btn" data-view="lectures" role="tab" aria-selected="false">
+                    <span class="lib-switch-icon">🎓</span>
+                    <span class="lib-switch-text" data-i18n="lib_switch_lectures">Mühazirələr Bölməsi</span>
+                    <span class="lib-switch-badge lib-badge-gold">21 Mühazirə</span>
+                </button>
+                <button type="button" class="lib-switch-btn" data-view="books" role="tab" aria-selected="false">
+                    <span class="lib-switch-icon">📘</span>
+                    <span class="lib-switch-text" data-i18n="lib_switch_books">Dərs Vəsaitləri və Kitablar</span>
+                    <span class="lib-switch-badge">59 Kitab</span>
+                </button>
+            </div>
+
+            <!-- ═══════════════ ULTRA-AESTHETIC MÜHAZİRƏLƏR BÖLMƏSİ ═══════════════ -->
+            <div class="lib-lectures-showcase" id="library-lectures-section">
+                <!-- Hero Header -->
+                <div class="lib-lec-hero">
+                    <div class="lib-lec-hero-content">
+                        <div class="lib-lec-badge-row">
+                            <span class="lib-lec-gold-pill">
+                                <span class="lib-pulse-dot"></span>
+                                <span data-i18n="lib_lec_hero_tag">AKADEMİK MÜHAZİRƏLƏR FONDU</span>
+                            </span>
+                            <span class="lib-lec-stat-pill">21 Rəsmi Mühazirə Vəsaiti</span>
+                            <span class="lib-lec-stat-pill">6 Tədris Sahəsi</span>
+                        </div>
+                        <h3 class="lib-lec-hero-title" data-i18n="lib_lec_hero_title">
+                            Akademik Mühazirələr Bölməsi
+                        </h3>
+                        <p class="lib-lec-hero-subtitle" data-i18n="lib_lec_hero_desc">
+                            Kollecimizin müəllimləri və metodik heyəti tərəfindən fənlər üzrə hazırlanmış bütün mühazirə mətnləri, leksiyalar, dərslik-konspektlər və tədris vəsaitləri bir arada. İstər daxili oxu zalında interaktiv vərəqləyin, istərsə də orijinal formatda (PDF / DOCX) birbaşa yükləyin.
+                        </p>
+                    </div>
+
+                    <!-- 4 Aesthetic Quick KPI Stats Cards -->
+                    <div class="lib-lec-stats-grid">
+                        <div class="lib-lec-stat-card">
+                            <div class="lib-stat-icon">📚</div>
+                            <div class="lib-stat-data">
+                                <span class="lib-stat-number" id="lib-stat-total-lec">21</span>
+                                <span class="lib-stat-label">Cəmi Mühazirə</span>
+                            </div>
+                        </div>
+                        <div class="lib-lec-stat-card">
+                            <div class="lib-stat-icon">📕</div>
+                            <div class="lib-stat-data">
+                                <span class="lib-stat-number">13</span>
+                                <span class="lib-stat-label">PDF Oxu Zalı</span>
+                            </div>
+                        </div>
+                        <div class="lib-lec-stat-card">
+                            <div class="lib-stat-icon">📘</div>
+                            <div class="lib-stat-data">
+                                <span class="lib-stat-number">8</span>
+                                <span class="lib-stat-label">DOCX Konspekt</span>
+                            </div>
+                        </div>
+                        <div class="lib-lec-stat-card">
+                            <div class="lib-stat-icon">🎓</div>
+                            <div class="lib-stat-data">
+                                <span class="lib-stat-number">6</span>
+                                <span class="lib-stat-label">Tədris İstiqaməti</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="lib-bar-right">
-                    <button type="button" class="lib-fund-about-btn" id="lib-fund-about-btn"
-                        title="Kitabxana Fondu və Tarixi Haqqında Rəsmi Məlumat">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.2" aria-hidden="true">
-                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                        </svg>
-                        <span data-i18n="lib_fund_about_btn">🏛️ Kitabxana Fondu və Tarixi</span>
+
+                <!-- Academic Discipline Filter Bar -->
+                <div class="lib-lec-fbk-bar" id="lib-lec-fbk-bar" role="tablist" aria-label="Fənn İstiqaməti Filterləri">
+                    <button type="button" class="lib-lec-chip active" data-fbk="all">
+                        <span class="lib-chip-icon">🌟</span>
+                        <span class="lib-chip-title">Bütün İstiqamətlər</span>
+                        <span class="lib-chip-count">21</span>
                     </button>
-                    <span class="lib-bar-hint" data-i18n="lib_reading_room_hint">📖 Kitabın üzərinə klikləyərək daxili
-                        oxu zalında dərhal vərəqləyin</span>
+                    <button type="button" class="lib-lec-chip" data-fbk="fbk-4">
+                        <span class="lib-chip-icon">⚡</span>
+                        <span class="lib-chip-title">Elektronika və Metrologiya</span>
+                        <span class="lib-chip-count">3</span>
+                    </button>
+                    <button type="button" class="lib-lec-chip" data-fbk="fbk-5">
+                        <span class="lib-chip-icon">🚗</span>
+                        <span class="lib-chip-title">Nəqliyyat və Materialşünaslıq</span>
+                        <span class="lib-chip-count">7</span>
+                    </button>
+                    <button type="button" class="lib-lec-chip" data-fbk="fbk-6">
+                        <span class="lib-chip-icon">📖</span>
+                        <span class="lib-chip-title">Azərb. Dili və Ədəbiyyat</span>
+                        <span class="lib-chip-count">3</span>
+                    </button>
+                    <button type="button" class="lib-lec-chip" data-fbk="fbk-7">
+                        <span class="lib-chip-icon">🏛️</span>
+                        <span class="lib-chip-title">Tarix və Hüquq</span>
+                        <span class="lib-chip-count">4</span>
+                    </button>
+                    <button type="button" class="lib-lec-chip" data-fbk="fbk-8">
+                        <span class="lib-chip-icon">🇷🇺</span>
+                        <span class="lib-chip-title">Xarici Dillər (Rus dili)</span>
+                        <span class="lib-chip-count">2</span>
+                    </button>
+                    <button type="button" class="lib-lec-chip" data-fbk="fbk-9">
+                        <span class="lib-chip-icon">🌱</span>
+                        <span class="lib-chip-title">Ekologiya və Təhlükəsizlik</span>
+                        <span class="lib-chip-count">2</span>
+                    </button>
+                </div>
+
+                <!-- Search & Format Filter Row -->
+                <div class="lib-lec-controls-row">
+                    <div class="lib-lec-search-wrap">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="lib-lec-search" class="lib-lec-search-input" placeholder="Mühazirə adı, müəllif, mövzu və ya fənn axtar..." />
+                        <button type="button" id="lib-lec-clear-search" class="lib-lec-search-clear" title="Axtarışı təmizlə" aria-label="Təmizlə">✕</button>
+                    </div>
+
+                    <div class="lib-lec-format-group" id="lib-lec-format-group">
+                        <button type="button" class="lib-format-btn active" data-format="all">
+                            <span>Hamısı</span>
+                            <span class="format-num">21</span>
+                        </button>
+                        <button type="button" class="lib-format-btn" data-format="pdf">
+                            <span class="format-dot dot-pdf"></span>
+                            <span>📕 PDF (Oxu Zalı)</span>
+                            <span class="format-num">13</span>
+                        </button>
+                        <button type="button" class="lib-format-btn" data-format="docx">
+                            <span class="format-dot dot-docx"></span>
+                            <span>📘 DOCX (Word)</span>
+                            <span class="format-num">8</span>
+                        </button>
+                    </div>
+
+                    <div class="lib-lec-results-meta">
+                        <span id="lib-lec-results-count">21 mühazirə tapıldı</span>
+                    </div>
+                </div>
+
+                <!-- Ultra-Aesthetic Lectures Dynamic Grid -->
+                <div class="lib-lec-grid" id="lib-lectures-grid">
+                    <!-- 21 FBK Lecture Cards dynamically rendered by JS -->
                 </div>
             </div>
 
-            <!-- Search & Category Filters -->
-            <div class="library-filter" id="library-filter">
-                <input type="text" class="library-search" id="library-search" placeholder="Kitab axtar..."
-                    data-i18n-placeholder="library_search_placeholder" />
-                <button class="filter-badge active" data-filter="all" data-i18n="filter_all">
-                    Hamısı
-                </button>
-                <button class="filter-badge" data-filter="informatika" data-i18n="filter_informatika">
-                    İnformatika
-                </button>
-                <button class="filter-badge" data-filter="azer_dili" data-i18n="filter_azer_dili">
-                    Azərbaycan dili və ədəbiyyat
-                </button>
-                <button class="filter-badge" data-filter="vaqonlar" data-i18n="filter_vaqonlar">
-                    Vaqonların konstruksiyası
-                </button>
-                <button class="filter-badge" data-filter="riyaziyyat" data-i18n="filter_riyaziyyat">
-                    Riyaziyyat
-                </button>
-                <button class="filter-badge" data-filter="tarix" data-i18n="filter_tarix">
-                    Tarix
-                </button>
-                <button class="filter-badge" data-filter="sxematexnika" data-i18n="filter_sxematexnika">
-                    Sxematexnika
-                </button>
-                <button class="filter-badge" data-filter="materialsunasliq" data-i18n="filter_materialsunasliq">
-                    Materialşünaslıq
-                </button>
-                <button class="filter-badge" data-filter="rus_dili" data-i18n="filter_rus_dili">
-                    Rus dili
-                </button>
-                <button class="filter-badge" data-filter="anbar_logistikasi" data-i18n="filter_anbar_logistikasi">
-                    Anbar logistikası
-                </button>
-                <button class="filter-badge" data-filter="xarici_dil" data-i18n="filter_xarici_dil">
-                    Xarici dil
-                </button>
-                <button class="filter-badge" data-filter="ekologiya" data-i18n="filter_ekologiya">
-                    Ekologiya
-                </button>
-                <button class="filter-badge" data-filter="fizika" data-i18n="filter_fizika">
-                    Fizika
-                </button>
-                <button class="filter-badge" data-filter="kimya" data-i18n="filter_kimya">
-                    Kimya
-                </button>
-                <button class="filter-badge" data-filter="edne" data-i18n="filter_edne">
-                    EDNƏ
-                </button>
-                <button class="filter-badge" data-filter="menecment" data-i18n="filter_menecment">
-                    Menecment
-                </button>
-                <button class="filter-badge" data-filter="rabite" data-i18n="filter_rabite">
-                    Rabitə
-                </button>
-                <button class="filter-badge" data-filter="sebeke_avadanliqlari" data-i18n="filter_sebeke_avadanliqlari">
-                    Şəbəkə avadanlıqları
-                </button>
-                <button class="filter-badge" data-filter="emeyin_muhafizesi" data-i18n="filter_emeyin_muhafizesi">
-                    Əməyin mühafizəsi
-                </button>
-                <button class="filter-badge" data-filter="os" data-i18n="filter_os">
-                    Əməliyyat sistemləri
-                </button>
-                <button class="filter-badge" data-filter="transport" data-i18n="filter_transport">
-                    Nəqliyyat
-                </button>
-            </div>
-            <div class="books-grid" id="books-grid">
-                <!-- Books rendered by JS -->
+            <!-- ═══════════════ TEXTBOOKS & MANUALS SHOWCASE ═══════════════ -->
+            <div class="lib-books-showcase" id="library-books-pane">
+                <div class="lib-books-section-head">
+                    <div class="lib-books-head-left">
+                        <span class="lib-books-head-badge">📘 RƏSMİ FOND</span>
+                        <h3 class="lib-books-head-title">Dərs Vəsaitləri və Kitablar</h3>
+                        <p class="lib-books-head-desc">İxtisaslar və fənlər üzrə təsdiqlənmiş əsas və əlavə dərs vəsaitləri arxivi.</p>
+                    </div>
+                </div>
+
+                <!-- Rəqəmsal Oxu Zalı Məlumat Zolağı (Upgrade 4) -->
+                <div class="library-reading-bar">
+                    <div class="lib-bar-left">
+                        <span class="lib-live-indicator"></span>
+                        <span class="lib-bar-title" data-i18n="lib_reading_room_title">BDRNK RƏQƏMSAL OXU ZALI</span>
+                        <span class="lib-bar-sep">·</span>
+                        <span class="lib-bar-count" id="lib-total-counter" data-i18n="lib_total_counter">59 Rəsmi Dərs
+                            Vəsaiti</span>
+                    </div>
+                    <div class="lib-bar-right">
+                        <button type="button" class="lib-fund-about-btn" id="lib-fund-about-btn"
+                            title="Kitabxana Fondu və Tarixi Haqqında Rəsmi Məlumat">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.2" aria-hidden="true">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                            <span data-i18n="lib_fund_about_btn">🏛️ Kitabxana Fondu və Tarixi</span>
+                        </button>
+                        <span class="lib-bar-hint" data-i18n="lib_reading_room_hint">📖 Kitabın üzərinə klikləyərək daxili
+                            oxu zalında dərhal vərəqləyin</span>
+                    </div>
+                </div>
+
+                <!-- Search & Category Filters -->
+                <div class="library-filter" id="library-filter">
+                    <div class="lib-books-search-row">
+                        <div class="lib-books-search-wrap">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <input type="text" class="library-search" id="library-search" placeholder="Kitab adı, müəllif və ya fənn axtar..."
+                                data-i18n-placeholder="library_search_placeholder" />
+                            <button type="button" id="lib-books-clear-search" class="lib-lec-search-clear" title="Axtarışı təmizlə" aria-label="Təmizlə">✕</button>
+                        </div>
+                        <div class="lib-books-meta-pill" id="lib-books-meta-pill">59 kitab</div>
+                    </div>
+                    <div class="lib-books-badges-wrap">
+                        <button class="filter-badge active" data-filter="all" data-i18n="filter_all">
+                            Hamısı
+                        </button>
+                        <button class="filter-badge" data-filter="informatika" data-i18n="filter_informatika">
+                            İnformatika
+                        </button>
+                        <button class="filter-badge" data-filter="it">
+                            İT və Proqramlaşdırma
+                        </button>
+                        <button class="filter-badge" data-filter="azer_dili" data-i18n="filter_azer_dili">
+                            Azərbaycan dili və ədəbiyyat
+                        </button>
+                        <button class="filter-badge" data-filter="humanitar">
+                            Humanitar və İctimai
+                        </button>
+                        <button class="filter-badge" data-filter="elektronika">
+                            Elektronika və MPS
+                        </button>
+                        <button class="filter-badge" data-filter="metrologiya">
+                            Metrologiya və Ölçmələr
+                        </button>
+                        <button class="filter-badge" data-filter="vaqonlar" data-i18n="filter_vaqonlar">
+                            Vaqonların konstruksiyası
+                        </button>
+                        <button class="filter-badge" data-filter="riyaziyyat" data-i18n="filter_riyaziyyat">
+                            Riyaziyyat
+                        </button>
+                        <button class="filter-badge" data-filter="tarix" data-i18n="filter_tarix">
+                            Tarix
+                        </button>
+                        <button class="filter-badge" data-filter="sxematexnika" data-i18n="filter_sxematexnika">
+                            Sxematexnika
+                        </button>
+                        <button class="filter-badge" data-filter="materialsunasliq" data-i18n="filter_materialsunasliq">
+                            Materialşünaslıq
+                        </button>
+                        <button class="filter-badge" data-filter="rus_dili" data-i18n="filter_rus_dili">
+                            Rus dili
+                        </button>
+                        <button class="filter-badge" data-filter="anbar_logistikasi" data-i18n="filter_anbar_logistikasi">
+                            Anbar logistikası
+                        </button>
+                        <button class="filter-badge" data-filter="xarici_dil" data-i18n="filter_xarici_dil">
+                            Xarici dil
+                        </button>
+                        <button class="filter-badge" data-filter="ekologiya" data-i18n="filter_ekologiya">
+                            Ekologiya
+                        </button>
+                        <button class="filter-badge" data-filter="fizika" data-i18n="filter_fizika">
+                            Fizika
+                        </button>
+                        <button class="filter-badge" data-filter="kimya" data-i18n="filter_kimya">
+                            Kimya
+                        </button>
+                        <button class="filter-badge" data-filter="edne" data-i18n="filter_edne">
+                            EDNƏ
+                        </button>
+                        <button class="filter-badge" data-filter="menecment" data-i18n="filter_menecment">
+                            Menecment
+                        </button>
+                        <button class="filter-badge" data-filter="rabite" data-i18n="filter_rabite">
+                            Rabitə
+                        </button>
+                        <button class="filter-badge" data-filter="sebeke_avadanliqlari" data-i18n="filter_sebeke_avadanliqlari">
+                            Şəbəkə avadanlıqları
+                        </button>
+                        <button class="filter-badge" data-filter="emeyin_muhafizesi" data-i18n="filter_emeyin_muhafizesi">
+                            Əməyin mühafizəsi
+                        </button>
+                        <button class="filter-badge" data-filter="os" data-i18n="filter_os">
+                            Əməliyyat sistemləri
+                        </button>
+                        <button class="filter-badge" data-filter="transport" data-i18n="filter_transport">
+                            Nəqliyyat
+                        </button>
+                    </div>
+                </div>
+                <div class="books-grid" id="books-grid">
+                    <!-- Books rendered by JS -->
+                </div>
             </div>
         </div>
     </section>
@@ -3803,8 +3995,7 @@
                         <strong>22.000 nüsxədən</strong> ibarət olmuşdur. Sonralar köhnəlmiş, indiki tələbatlara cavab
                         verməyən ədəbiyyatların silinməsi nəticəsində hal-hazırda fondumuz <strong>10.000 nüsxə
                             ədəbiyyat</strong> təşkil edir. Kitabxanamızda müxtəlif istiqamətlər üzrə zəngin ədəbiyyat
-                        fondu formalaşmışdır.
-                    </p>
+                        fondu formalaşmışdır.</p>
                     <p class="lib-card-p" data-i18n="lib_fund_p2">Eyni zamanda bu dövrdə fondun müasir tələblərə
                         uyğunlaşdırılması, ədəbiyyatın yenidən nəzərdən keçirilməsi və kitabxana resurslarından səmərəli
                         istifadə istiqamətində vacib təşkilati işlər həyata keçirilmişdir.</p>
@@ -3878,7 +4069,7 @@
     </div>
 
 
-    <script src="script.js?v=20261111_20"></script>
+    <script src="script.js?v=20261111_23"></script>
 
     <!-- ═══ SMART LIVE SEARCH MODAL (Ağıllı Canlı Axtarış) ═══ -->
     <div class="search-modal-overlay" id="global-search-modal" role="dialog" aria-modal="true" aria-hidden="true">

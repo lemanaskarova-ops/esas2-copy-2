@@ -688,7 +688,7 @@ const i18n = {
     struct_badge_count: "9 FBK",
     struct_commissions_view_title: "🎓 TƏDRİS-METODİK APARAT",
     campus_rooms_count_text: "Göstərilən otaqlar:",
-    lib_total_counter: "44 Rəsmi Dərs Vəsaiti",
+    lib_total_counter: "59 Rəsmi Dərs Vəsaiti",
     lib_fund_about_btn: "🏛️ Kitabxana Fondu və Tarixi",
     science_director_bio_btn: "Direktor Səbuhi Qurbanovun Bioqrafiyası",
     dept_meta_all: "23 Videodərs · Bütün fənlər",
@@ -1577,7 +1577,7 @@ const i18n = {
     struct_badge_count: "9 PDC",
     struct_commissions_view_title: "🎓 TEACHING & METHODOLOGICAL APPARATUS",
     campus_rooms_count_text: "Rooms shown:",
-    lib_total_counter: "44 Official Textbooks",
+    lib_total_counter: "59 Official Textbooks",
     lib_fund_about_btn: "🏛️ Library Fund & History",
     science_director_bio_btn: "Director Sabuhi Gurbanov's Biography",
     dept_meta_all: "23 Video Lectures · All subjects",
@@ -2465,7 +2465,7 @@ const i18n = {
     struct_badge_count: "9 ПЦК",
     struct_commissions_view_title: "🎓 УЧЕБНО-МЕТОДИЧЕСКИЙ АППАРАТ",
     campus_rooms_count_text: "Показано комнат:",
-    lib_total_counter: "44 Официальных учебных пособия",
+    lib_total_counter: "59 Официальных учебных пособий",
     lib_fund_about_btn: "🏛️ Библиотечный фонд и история",
     science_director_bio_btn: "Биография директора Сабухи Гурбанова",
     dept_meta_all: "23 Видеоурока · Все предметы",
@@ -6557,8 +6557,8 @@ function initThemeEngine() {
     toggleThemeDirect();
   });
 
-  // Apply initially saved theme
-  const savedTheme = localStorage.getItem("bdrnk-theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  // Apply initially saved theme (default to light unless user explicitly chose dark)
+  const savedTheme = localStorage.getItem("bdrnk-theme") === "dark" ? "dark" : "light";
   setTheme(savedTheme);
 }
 
@@ -7463,6 +7463,9 @@ function initStructureModule() {
               if (fbk.id === "fbk-7" && (d === "Hüququn Əsasları" || d.includes("Hüququn Əsasları") || d.includes("Hüquq"))) {
                 return `<a href="yeni mühazirələr.docx" download="yeni mühazirələr.docx" class="fbk-chip fbk-chip-has-doc" title="Hüququn əsasları fənnindən mühazirələr toplusu (yeni mühazirələr.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">⚖️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
               }
+              if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
+                return `<a href="1Русский язык 1 курс (лекции) (1).docx" download="1Русский язык 1 курс (лекции) (1).docx" class="fbk-chip fbk-chip-has-doc" title="Rus dili I və II kurs mühazirələr toplusu (DOCX) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">🇷🇺</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 2 DOCX</span></a>`;
+              }
               if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
                 return `<a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" title="Ətraf mühitin qorunması və bərpası (ƏMM) fənnindən mühazirələr toplusu (98 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌱</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
               }
@@ -7558,6 +7561,9 @@ function initStructureModule() {
                     }
                     if (fbk.id === "fbk-7" && (d === "Hüququn Əsasları" || d.includes("Hüququn Əsasları") || d.includes("Hüquq"))) {
                       return `<a href="yeni mühazirələr.docx" download="yeni mühazirələr.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: yeni mühazirələr.docx (8 Mövzu, 16 000+ söz)"><span>⚖️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
+                    }
+                    if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
+                      return `<a href="1Русский язык 1 курс (лекции) (1).docx" download="1Русский язык 1 курс (лекции) (1).docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: Rus Dili I və II Kurs Mühazirələr (DOCX)"><span>🇷🇺 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 2 DOCX</span></a>`;
                     }
                     if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
                       return `<a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: ƏMM mühazirələr.pdf (98 Səhifə PDF)"><span>🌱 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
@@ -7905,6 +7911,48 @@ function initStructureModule() {
                   </div>
                 </div>
               ` : ''}
+              ${fbk.id === "fbk-8" ? `
+                <div class="fbk-material-card" style="margin-top:20px; padding:18px 20px; background:linear-gradient(135deg, rgba(184,147,74,0.12), rgba(184,147,74,0.03)); border:1px solid rgba(184,147,74,0.35); border-radius:14px; display:flex; flex-direction:column; gap:16px;">
+                  <!-- Material 1: Rus Dili I Kurs -->
+                  <div style="display:flex; flex-direction:column; gap:10px;">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">🇷🇺</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>DOCX</span> • <span>I Kurs</span> • <span>Leksiyalar</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Rus Dili — I Kurs Üçün Mühazirələr və Praktik Dərs Toplusu</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Müəllif: Samirə İmaməliyeva (FBK-08). Rus dilinin fonetikası, leksikası, qrammatik kateqoriyaları, dialoqlar və rabitə-nəqliyyat sahəsi üzrə ilkin kommunikasiya bacarıqlarını əhatə edən I kurs mühazirə vəsaiti.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="1Русский язык 1 курс (лекции) (1).docx" download="1Русский язык 1 курс (лекции) (1).docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Rus Dili I Kurs Mühazirə Yüklə (DOCX)</span>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Material 2: Rus Dili II Kurs -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">📘</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>DOCX</span> • <span>II Kurs</span> • <span>Mühazirə Kitabı</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Rus Dili — II Kurs Üçün Mühazirələr Kitabı və İxtisas Terminologiyası</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Müəlliflər: Aygün Qocayeva, Samirə İmaməliyeva (FBK-08). İxtisas yönümlü rus dili, texniki mətnlərin tərcüməsi, işgüzar yazışmalar və peşəkar ünsiyyət üzrə II kurs mühazirə kitabı.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <a href="2Русский язык 2 курс лекции книга  (1).docx" download="2Русский язык 2 курс лекции книга  (1).docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Rus Dili II Kurs Mühazirə Kitabı Yüklə (DOCX)</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ` : ''}
               ${fbk.id === "fbk-9" ? `
                 <div class="fbk-material-card" style="margin-top:20px; padding:18px 20px; background:linear-gradient(135deg, rgba(184,147,74,0.12), rgba(184,147,74,0.03)); border:1px solid rgba(184,147,74,0.35); border-radius:14px; display:flex; flex-direction:column; gap:16px;">
                   <!-- Material 1: Ətraf Mühitin Mühafizəsi (ƏMM) -->
@@ -7948,8 +7996,28 @@ function initStructureModule() {
                   </div>
                 </div>
               ` : ''}
+              ${["fbk-4", "fbk-5", "fbk-6", "fbk-7", "fbk-8", "fbk-9"].includes(fbk.id) ? `
+                <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed rgba(184,147,74,0.3); display: flex; justify-content: flex-end;">
+                  <button type="button" class="fbk-modal-open-lib-btn" data-open-lib-fbk="${fbk.id}" style="display:inline-flex; align-items:center; gap:8px; background:rgba(184,147,74,0.16); border:1px solid rgba(184,147,74,0.45); color:var(--text); padding:9px 16px; border-radius:10px; font-weight:700; font-size:0.86rem; cursor:pointer; transition:all 0.2s ease;">
+                    <span>🎓</span>
+                    <span>Kitabxana Mühazirə Bölməsində Bax (${fbk.code})</span>
+                    <span>→</span>
+                  </button>
+                </div>
+              ` : ''}
             </div>
           `;
+          const jumpLibBtn = modalGrid.querySelector(".fbk-modal-open-lib-btn");
+          if (jumpLibBtn) {
+            jumpLibBtn.addEventListener("click", () => {
+              modal.classList.remove("active");
+              modal.setAttribute("aria-hidden", "true");
+              html.classList.remove("modal-open");
+              if (window.openLibraryLecturesView) {
+                window.openLibraryLecturesView(fbk.id);
+              }
+            });
+          }
           modal.classList.add("active");
           modal.setAttribute("aria-hidden", "false");
           html.classList.add("modal-open");
@@ -8454,8 +8522,29 @@ function initLibraryModule() {
       totalCounter.textContent = `${data.length} ${countLabel}`;
     }
 
+    const booksMetaPill = document.getElementById("lib-books-meta-pill");
+    if (booksMetaPill) {
+      booksMetaPill.textContent = `${data.length} kitab`;
+    }
+
     if (data.length === 0) {
-      grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-dim);">${gT("no_book")}</p>`;
+      grid.innerHTML = `
+        <div class="lib-lec-empty">
+          <div class="lib-lec-empty-icon">📚</div>
+          <h4>${gT("no_book") || "Axtarışa uyğun dərs vəsaiti tapılmadı"}</h4>
+          <p>Kateqoriya və ya axtarış sözünü dəyişdirərək yenidən cəhd edin.</p>
+          <button type="button" class="lib-lec-reset-btn" id="lib-books-empty-reset">Bütün Kitabları Göstər (${libraryData.length})</button>
+        </div>
+      `;
+      document.getElementById("lib-books-empty-reset")?.addEventListener("click", () => {
+        if (searchInput) searchInput.value = "";
+        document.getElementById("lib-books-clear-search")?.classList.remove("visible");
+        const fc = document.getElementById("library-filter");
+        fc?.querySelectorAll(".filter-badge").forEach((b) =>
+          b.classList.toggle("active", b.getAttribute("data-filter") === "all")
+        );
+        applyFilter();
+      });
       return;
     }
 
@@ -8570,7 +8659,21 @@ function initLibraryModule() {
     renderBooks(filtered);
   }
 
-  searchInput.addEventListener("input", applyFilter);
+  const booksClearBtn = document.getElementById("lib-books-clear-search");
+
+  searchInput.addEventListener("input", () => {
+    if (booksClearBtn) {
+      booksClearBtn.classList.toggle("visible", (searchInput.value || "").trim().length > 0);
+    }
+    applyFilter();
+  });
+
+  booksClearBtn?.addEventListener("click", () => {
+    searchInput.value = "";
+    booksClearBtn.classList.remove("visible");
+    searchInput.focus();
+    applyFilter();
+  });
 
   const filterContainer = document.getElementById("library-filter");
   filterContainer.addEventListener("click", (e) => {
@@ -8586,6 +8689,601 @@ function initLibraryModule() {
   renderBooks(libraryData);
 
   document.addEventListener("languageChanged", applyFilter);
+
+  // =========================================================================
+  // ACADEMIC LECTURES ARCHIVE (All 21 Lectures — Pure Subject Classification)
+  // =========================================================================
+  const fbkLecturesArchive = [
+    // --- Elektronika və Metrologiya (3) ---
+    {
+      id: "fbk-lec-1",
+      fbkId: "fbk-4",
+      fieldBadge: "ELEKTRONİKA",
+      fieldName_az: "Elektronika və Metrologiya",
+      subject_az: "Rəqəmsal Elektronika və MPS",
+      title_az: "Rəqəmsal Elektronika və Mikroprosessor Sistemləri (MPS) — Leksiyalar Toplusu",
+      author_az: "Kollec Metodik Şurası",
+      format: "pdf",
+      icon: "🔌",
+      volume: "56 Səhifə · Leksiyalar",
+      fileSize: "PDF Vəsait",
+      desc_az: "Məntiq elementləri, inteqral mikrosxemlər, kombinasion və ardıcıllıq qurğuları, triggerlər, sayğaclar, registrlər, mikroprosessor arxitekturası və idarəetmə sistemlərini əhatə edən 56 səhifəlik rəsmi PDF leksiya vəsaiti.",
+      topics_az: ["Məntiq Cəbri", "Kombinasion Qurğular", "Triggerlər və Sayğaclar", "MPS Arxitekturası"],
+      url: "RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf"
+    },
+    {
+      id: "fbk-lec-2",
+      fbkId: "fbk-4",
+      fieldBadge: "ELEKTRONİKA",
+      fieldName_az: "Elektronika və Metrologiya",
+      subject_az: "Elektronika və MPS",
+      title_az: "Elektronika və Mikroprosessor Sistemləri (MPS) — Fundamental Dərs Vəsaiti",
+      author_az: "Elektrotexnika və Sxematexnika İstiqaməti",
+      format: "pdf",
+      icon: "⚡",
+      volume: "65 Səhifə · 1.8 MB",
+      fileSize: "1.8 MB",
+      desc_az: "Yarımkeçirici cihazlar, diodlar, bipolyar və sahə tranzistorları, gücləndirici kaskadlar, kommutator və komparatorlar, multivibratorlar və mikroprosessor idarəetmə blokları üzrə 65 səhifəlik fundamental PDF dərs vəsaiti.",
+      topics_az: ["Yarımkeçirici Cihazlar", "Tranzistor Kaskadları", "Multivibratorlar", "İdarəetmə Blokları"],
+      url: "ELEKTRONIKA VE MPS.pdf"
+    },
+    {
+      id: "fbk-lec-3",
+      fbkId: "fbk-4",
+      fieldBadge: "METROLOGİYA",
+      fieldName_az: "Elektronika və Metrologiya",
+      subject_az: "Elektrik Ölçmələri və Metrologiya",
+      title_az: "Metrologiya, Standartlaşdırma və Sertifikatlaşdırma — Mühazirə və Dərs Vəsaiti",
+      author_az: "Elektrotexnika və Sxematexnika İstiqaməti",
+      format: "pdf",
+      icon: "📐",
+      volume: "46 Səhifə · 747 KB",
+      fileSize: "747 KB",
+      desc_az: "Metrologiyanın elmi və nəzəri əsasları, fiziki kəmiyyətlər və ölçmə vahidləri, ISO 31 və ISO 1000 beynəlxalq standartları, ölçmə vasitələri, ölçmə xətalarının təhlili, standartlaşdırma sistemi və məhsulun sertifikatlaşdırılması qaydaları üzrə 46 səhifəlik rəsmi PDF dərs vəsaiti.",
+      topics_az: ["Metrologiya və ISO", "Ölçmə Xətaları", "Standartlaşdırma", "Sertifikatlaşdırma"],
+      url: "Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf"
+    },
+
+    // --- Nəqliyyat və Materialşünaslıq (7) ---
+    {
+      id: "fbk-lec-4",
+      fbkId: "fbk-5",
+      fieldBadge: "NƏQLİYYAT",
+      fieldName_az: "Nəqliyyat və Materialşünaslıq",
+      subject_az: "Yol Hərəkəti Qaydaları və Təhlükəsizliyi",
+      title_az: "Yol Hərəkəti Qaydaları və Hərəkətin Təhlükəsizliyi — Mühazirələr Toplusu (15 Mövzu)",
+      author_az: "Müəllim: Kərimov Faiq",
+      format: "pdf",
+      icon: "🚘",
+      volume: "15 Mövzu · 59 Səhifə",
+      fileSize: "PDF Vəsait",
+      desc_az: "Yol hərəkətinin nizamlanması, svetofor və yol nişanları, nəqliyyat vasitələrinin təhlükəsiz idarə edilməsi, yol-nəqliyyat hadisələrinin profilaktikası və hərəkət təhlükəsizliyi qaydalarını əhatə edən 15 mövzuluq, 59 səhifəlik rəsmi PDF mühazirə vəsaiti.",
+      topics_az: ["Hərəkətin Nizamlanması", "Svetofor və Nişanlar", "Təhlükəsiz İdarəetmə", "Profilaktika"],
+      url: "Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf"
+    },
+    {
+      id: "fbk-lec-5",
+      fbkId: "fbk-5",
+      fieldBadge: "NƏQLİYYAT",
+      fieldName_az: "Nəqliyyat və Materialşünaslıq",
+      subject_az: "Nəqliyyat Diaqnostikası",
+      title_az: "Nəqliyyat Vasitələrinin Diaqnostikası — Kollec Mühazirə və Dərs Vəsaiti",
+      author_az: "Müəllim: Babək Quliyev",
+      format: "pdf",
+      icon: "🚗",
+      volume: "78 Səhifə · 1.6 MB",
+      fileSize: "1.6 MB",
+      desc_az: "Diaqnostika nəzəriyyəsi, avtomobillərin texniki vəziyyətinin qiymətləndirilməsi, mühərrik, transmissiya, əyləc və sükan sistemlərinin funksional diaqnostikası, müasir elektron stendlər və parametrlərin təyini üzrə 78 səhifəlik əhatəli rəsmi PDF dərs vəsaiti.",
+      topics_az: ["Diaqnostika Nəzəriyyəsi", "Mühərrik və Transmissiya", "Əyləc və Sükan", "Elektron Stendlər"],
+      url: "2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf"
+    },
+    {
+      id: "fbk-lec-6",
+      fbkId: "fbk-5",
+      fieldBadge: "NƏQLİYYAT",
+      fieldName_az: "Nəqliyyat və Materialşünaslıq",
+      subject_az: "Avtomobil Daşımaları",
+      title_az: "Avtomobil Daşımaları və Vahid Nəqliyyat Sistemi (VNS) — Mühazirələr Toplusu",
+      author_az: "Ümumtexnika və Nəqliyyat İstiqaməti",
+      format: "pdf",
+      icon: "🚛",
+      volume: "93 Səhifə · 2.7 MB",
+      fileSize: "2.7 MB",
+      desc_az: "Nəqliyyat xidməti və daşınma prosesinin təşkili, Vahid Nəqliyyat Sistemi (VNS) anlayışı, nəqliyyat logistikası, sərnişin və yük daşımaları, marşrutlaşdırma, nəqliyyat qovşaqları və müasir avtomobil nəqliyyatının idarəedilməsi üzrə 93 səhifəlik əhatəli rəsmi PDF mühazirə toplusu.",
+      topics_az: ["Daşınma Prosesi", "Nəqliyyat Logistikası", "Marşrutlaşdırma", "Yük və Sərnişin Daşımaları"],
+      url: "AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf"
+    },
+    {
+      id: "fbk-lec-7",
+      fbkId: "fbk-5",
+      fieldBadge: "NƏQLİYYAT",
+      fieldName_az: "Nəqliyyat və Materialşünaslıq",
+      subject_az: "Vahid Nəqliyyat Sistemi (VNS)",
+      title_az: "Vahid Nəqliyyat Sistemi (VNS) — Mühazirələr və Dərs Vəsaiti",
+      author_az: "Ümumtexnika və Nəqliyyat İstiqaməti",
+      format: "pdf",
+      icon: "🌐",
+      volume: "63 Səhifə · 1.6 MB",
+      fileSize: "1.6 MB",
+      desc_az: "Vahid Nəqliyyat Sisteminin infrastrukturu, multimodal və birbaşa qarışıq daşımalar, dəmiryol, dəniz, avtomobil, hava və boru kəməri nəqliyyatının qarşılıqlı əlaqəsi, nəqliyyat qovşaqları və logistik mərkəzlərin idarə olunması üzrə 63 səhifəlik rəsmi PDF dərs vəsaiti.",
+      topics_az: ["VNS İnfrastrukturu", "Multimodal Daşımalar", "Qovşaq Koordinasiyası", "Logistik Mərkəzlər"],
+      url: "VAHİD NƏQLİYYAT SİSTEMİ.pdf"
+    },
+    {
+      id: "fbk-lec-8",
+      fbkId: "fbk-5",
+      fieldBadge: "MATERİALŞÜNASLIQ",
+      fieldName_az: "Nəqliyyat və Materialşünaslıq",
+      subject_az: "Materialşünaslıq",
+      title_az: "Materialşünaslıq Fənni Üzrə Fundamental Mühazirələr Toplusu (15 Mövzu)",
+      author_az: "Ümumtexnika və Nəqliyyat İstiqaməti",
+      format: "pdf",
+      icon: "🔬",
+      volume: "15 Mövzu · 33 Səhifə",
+      fileSize: "PDF Vəsait",
+      desc_az: "Metalların strukturu və kristallik quruluşu, ərintilərin mexaniki xassələri, polad və çuqunlar, legirlənmiş materiallar, əlvan metallar, korroziya və ondan mühafizə, plastik kütlələr və kompozitləri əhatə edən 15 mövzuluq, 33 səhifəlik rəsmi PDF mühazirə toplusu.",
+      topics_az: ["Kristallik Quruluş", "Polad və Çuqunlar", "Əlvan Metallar", "Korroziyadan Mühafizə"],
+      url: "materialşünasliq,mühazire, 15 mövzu.pdf"
+    },
+    {
+      id: "fbk-lec-9",
+      fbkId: "fbk-5",
+      fieldBadge: "MATERİALŞÜNASLIQ",
+      fieldName_az: "Nəqliyyat və Materialşünaslıq",
+      subject_az: "Yağlar və Sürtkü Materialları",
+      title_az: "Yağlar və Sürtkü Materialları Fənnindən Mühazirələr Toplusu (15 Mövzu)",
+      author_az: "Ümumtexnika və Nəqliyyat İstiqaməti",
+      format: "pdf",
+      icon: "🛢️",
+      volume: "15 Mövzu · 40 Səhifə",
+      fileSize: "PDF Vəsait",
+      desc_az: "Neft və neft-kimya məhsulları, mühərrik və transmissiya yağları, sürtkü yağlarının özlülük-temperatur xassələri, konsistent sürtkülər, xüsusi aşqarlar, korroziyadan qorunma və yağların regenerasiyası üzrə 15 mövzuluq, 40 səhifəlik rəsmi PDF mühazirə toplusu.",
+      topics_az: ["Mühərrik Yağları", "Özlülük Xassələri", "Konsistent Sürtkülər", "Aşqarlar və Regenerasiya"],
+      url: "yağlar mühazire 15 mövzu.pdf"
+    },
+    {
+      id: "fbk-lec-10",
+      fbkId: "fbk-5",
+      fieldBadge: "MATERİALŞÜNASLIQ",
+      fieldName_az: "Nəqliyyat və Materialşünaslıq",
+      subject_az: "Konstruksiya Materiallarının Texnologiyası",
+      title_az: "Konstruksiya Materiallarının Texnologiyası — Mühazirə və Dərs Vəsaiti",
+      author_az: "Müəllif: Alidə Mahmudova",
+      format: "pdf",
+      icon: "🔩",
+      volume: "28 Səhifə · Materialşünaslıq",
+      fileSize: "PDF Vəsait",
+      desc_az: "Metallar və ərintilərin mexaniki, fiziki və kimyəvi xassələri, polad və çuqun istehsalı, əlvan metallar, termiki emal texnologiyaları və müasir konstruksiya materiallarının sənayedə tətbiqi üzrə 28 səhifəlik rəsmi dərs vəsaiti.",
+      topics_az: ["Fiziki-Mexaniki Xassələr", "Polad İstehsalı", "Termiki Emal", "Konstruksiya Materialları"],
+      url: "Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf"
+    },
+
+    // --- Azərbaycan Dili və Ədəbiyyat (3) ---
+    {
+      id: "fbk-lec-11",
+      fbkId: "fbk-6",
+      fieldBadge: "DİL VƏ ƏDƏBİYYAT",
+      fieldName_az: "Azərbaycan Dili və Ədəbiyyat",
+      subject_az: "Azərbaycan Dili",
+      title_az: "Azərbaycan Dili Fənnindən Mühazirələr Toplusu (36 Saat)",
+      author_az: "Müəllimə: Məmmədova Vüsalə",
+      format: "docx",
+      icon: "📖",
+      volume: "36 Saat · Tədris Proqramı",
+      fileSize: "DOCX Konspekt",
+      desc_az: "I kurs I semestr 36 saatlıq tədris proqramı, dilin funksiyaları, nitq mədəniyyəti, leksikologiya, frazeologiya və orfoqrafiya-qrammatika təlimini əhatə edən rəsmi mühazirə vəsaiti.",
+      topics_az: ["Dilin Funksiyaları", "Nitq Mədəniyyəti", "Leksikologiya və Frazeologiya", "Qrammatika Təlimi"],
+      url: "azdilifb.docx"
+    },
+    {
+      id: "fbk-lec-12",
+      fbkId: "fbk-6",
+      fieldBadge: "DİL VƏ ƏDƏBİYYAT",
+      fieldName_az: "Azərbaycan Dili və Ədəbiyyat",
+      subject_az: "Ədəbiyyat",
+      title_az: "Ədəbiyyat Fənnindən Mühazirələr Toplusu",
+      author_az: "Tərtibçi: Ziba Səfərova",
+      format: "docx",
+      icon: "📑",
+      volume: "15 000+ Söz · Tam Kurs",
+      fileSize: "DOCX Konspekt",
+      desc_az: "Dədə Qorqud eposundan başlayaraq klassik və müasir Azərbaycan ədəbiyyatını, ədəbi cərəyanları, nəzəriyyə və əsər təhlillərini əhatə edən tam akademik tədris və mühazirə vəsaiti.",
+      topics_az: ["Dədə Qorqud Eposu", "Klassik Şeir və Nəsr", "Maarifçi Realizm", "Müasir Ədəbiyyat"],
+      url: "edebiyyatfb.docx"
+    },
+    {
+      id: "fbk-lec-13",
+      fbkId: "fbk-6",
+      fieldBadge: "KOMMUNİKASİYA",
+      fieldName_az: "Azərbaycan Dili və Ədəbiyyat",
+      subject_az: "İşgüzar və Akademik Kommunikasiya",
+      title_az: "Azərbaycan Dilində İşgüzar və Akademik Kommunikasiya — Mühazirələr Toplusu",
+      author_az: "Müəllimə: Natəvan Hüseynova",
+      format: "docx",
+      icon: "💬",
+      volume: "25 000+ Söz · 257 KB",
+      fileSize: "257 KB",
+      desc_az: "Ünsiyyətin formaları və növləri (formal, qeyri-formal, şaquli, üfüqi), şifahi və yazılı akademik nitq mədəniyyəti, elmi mətnlərin növləri (tezis, məqalə, annotasiya, avtoreferat), işgüzar danışıqlar və auditoriya qarşısında çıxış qaydalarını əhatə edən 25 000-dən artıq sözlük əhatəli rəsmi mühazirə vəsaiti.",
+      topics_az: ["Ünsiyyət Modelləri", "Akademik Nitq", "Elmi Mətn Növləri", "İşgüzar Danışıqlar"],
+      url: "KOMMUNİKASİYA DF 2 (1).docx"
+    },
+
+    // --- Tarix və Hüquq (4) ---
+    {
+      id: "fbk-lec-14",
+      fbkId: "fbk-7",
+      fieldBadge: "TARİX VƏ HÜQUQ",
+      fieldName_az: "Tarix və Hüquq Elmləri",
+      subject_az: "Azərbaycan Tarixi",
+      title_az: "Azərbaycan Tarixi Fənnindən Fundamental Mühazirə və Dərs Vəsaiti (495 Səhifə)",
+      author_az: "Müəllif: Səidə Quliyeva",
+      format: "pdf",
+      icon: "🏛️",
+      volume: "495 Səhifə · 72 Saat",
+      fileSize: "PDF Vəsait",
+      desc_az: "İbtidai icma quruluşundan başlayaraq Manna, Atropatena, Albaniya, Sasanilər, orta əsrlər, müasir dövr və Zəfər tariximizə qədər bütün tarixi dövrləri əhatə edən 495 səhifəlik fundamental tədris və mühazirə vəsaiti.",
+      topics_az: ["Manna və Albaniya", "Orta Əsrlər Dövrü", "AXC və Müstəqillik", "Vətən Müharibəsi Zəfəri"],
+      url: "aztarixi2fb.pdf",
+      extraDocUrl: "aztarixifb.docx"
+    },
+    {
+      id: "fbk-lec-15",
+      fbkId: "fbk-7",
+      fieldBadge: "TARİX VƏ HÜQUQ",
+      fieldName_az: "Tarix və Hüquq Elmləri",
+      subject_az: "Azərbaycan Tarixi (Mühazirə Konspekti)",
+      title_az: "Azərbaycan Tarixi Fənnindən Mühazirələr Toplusu (72 Saat · DOCX Konspekt)",
+      author_az: "Müəllif: Səidə Quliyeva",
+      format: "docx",
+      icon: "📜",
+      volume: "72 Saat · Word Nəşri",
+      fileSize: "DOCX Konspekt",
+      desc_az: "72 saatlıq rəsmi tədris proqramına uyğun hazırlanmış, mühazirə konspekti və tezislər şəklində redaktə edilə bilən Word (DOCX) nəşri.",
+      topics_az: ["72 Saatlıq Proqram", "Dövlətçilik Tarixi", "Milli Qurtuluş", "Xronologiya və Tezislər"],
+      url: "aztarixifb.docx"
+    },
+    {
+      id: "fbk-lec-16",
+      fbkId: "fbk-7",
+      fieldBadge: "TARİX VƏ HÜQUQ",
+      fieldName_az: "Tarix və Hüquq Elmləri",
+      subject_az: "Ümumi Tarix",
+      title_az: "Ümumi Tarix Fənnindən Mühazirələr Toplusu (36 Saat)",
+      author_az: "Tərtibçi: Səidə Quliyeva",
+      format: "docx",
+      icon: "🌍",
+      volume: "36 Saat · 20 000+ Söz",
+      fileSize: "DOCX Konspekt",
+      desc_az: "Qədim Misir, Mesopotamiya, Qədim Yunanıstan və Roma, Türk dövlətləri, İslam Xilafəti, Bizans, Səlcuq və Osmanlı imperiyalarını əhatə edən 36 saatlıq rəsmi mühazirə vəsaiti.",
+      topics_az: ["Qədim Sivilizasiyalar", "Türk Dövlətləri", "İslam Xilafəti", "Yeni Dövr Tarixi"],
+      url: "umtarixfb.docx"
+    },
+    {
+      id: "fbk-lec-17",
+      fbkId: "fbk-7",
+      fieldBadge: "HÜQUQ",
+      fieldName_az: "Tarix və Hüquq Elmləri",
+      subject_az: "Hüququn Əsasları",
+      title_az: "Hüququn Əsasları Fənnindən Fundamental Mühazirələr Toplusu (8 Mövzu)",
+      author_az: "Humanitar və İctimai Elmlər İstiqaməti",
+      format: "docx",
+      icon: "⚖️",
+      volume: "8 Mövzu · 16 000+ Söz",
+      fileSize: "DOCX Konspekt",
+      desc_az: "Dövlət və hüququn nəzəriyyəsi, Azərbaycan Respublikasının Konstitusiyası, insan hüquq və azadlıqları, dövlət quruluşu, seçki sistemi, dövlət hakimiyyət orqanları, əmək və cinayət hüququnu əhatə edən 8 mövzuluq rəsmi mühazirə vəsaiti.",
+      topics_az: ["Hüquq Nəzəriyyəsi", "AR Konstitusiyası", "Seçki və İdarəetmə", "Əmək və Cinayət Hüququ"],
+      url: "yeni mühazirələr.docx"
+    },
+
+    // --- Xarici Dillər / Rus Dili (2) ---
+    {
+      id: "fbk-lec-18",
+      fbkId: "fbk-8",
+      fieldBadge: "XARİCİ DİLLƏR",
+      fieldName_az: "Xarici Dillər (Rus Dili)",
+      subject_az: "Rus Dili (I Kurs)",
+      title_az: "Rus Dili — I Kurs Üçün Mühazirələr və Praktik Dərs Toplusu",
+      author_az: "Müəllif: Samirə İmaməliyeva",
+      format: "docx",
+      icon: "🇷🇺",
+      volume: "I Kurs · Leksiyalar",
+      fileSize: "DOCX Konspekt",
+      desc_az: "Rus dilinin fonetikası, leksikası, qrammatik kateqoriyaları, dialoqlar və rabitə-nəqliyyat sahəsi üzrə ilkin kommunikasiya bacarıqlarını əhatə edən I kurs mühazirə vəsaiti.",
+      topics_az: ["Fonetika və Leksika", "Qrammatik Kateqoriyalar", "Dialoqlar və Lüğət", "İlkin Kommunikasiya"],
+      url: "1Русский язык 1 курс (лекции) (1).docx"
+    },
+    {
+      id: "fbk-lec-19",
+      fbkId: "fbk-8",
+      fieldBadge: "XARİCİ DİLLƏR",
+      fieldName_az: "Xarici Dillər (Rus Dili)",
+      subject_az: "Rus Dili (II Kurs)",
+      title_az: "Rus Dili — II Kurs Üçün Mühazirələr Kitabı və İxtisas Terminologiyası",
+      author_az: "Müəlliflər: Aygün Qocayeva, Samirə İmaməliyeva",
+      format: "docx",
+      icon: "📘",
+      volume: "II Kurs · Mühazirə Kitabı",
+      fileSize: "DOCX Konspekt",
+      desc_az: "İxtisas yönümlü rus dili, texniki mətnlərin tərcüməsi, rabitə və nəqliyyat sahələrinə aid terminologiya, işgüzar yazışmalar və peşəkar ünsiyyət üzrə II kurs mühazirə kitabı.",
+      topics_az: ["Texniki Terminologiya", "Mətnlərin Tərcüməsi", "İşgüzar Yazışmalar", "Peşəkar Ünsiyyət"],
+      url: "2Русский язык 2 курс лекции книга  (1).docx"
+    },
+
+    // --- Ekologiya və Təhlükəsizlik (2) ---
+    {
+      id: "fbk-lec-20",
+      fbkId: "fbk-9",
+      fieldBadge: "EKOLOGİYA",
+      fieldName_az: "Ekologiya və Təhlükəsizlik",
+      subject_az: "Ətraf Mühitin Mühafizəsi (ƏMM)",
+      title_az: "Ətraf Mühitin Qorunması və Bərpası (ƏMM) — Mühazirələr Toplusu",
+      author_az: "Müəllim: Ə. Mustafayeva",
+      format: "pdf",
+      icon: "🌱",
+      volume: "98 Səhifə · Mühazirələr",
+      fileSize: "PDF Vəsait",
+      desc_az: "Ekologiya elminin əsasları, ətraf mühit amilləri, biosfer və litosfer, ekosistemin enerjisi, təbii ehtiyatların və torpaq-su ehtiyatlarının qorunması, təbii məhsuldarlıq və bərpa mexanizmlərini əhatə edən 98 səhifəlik fundamental mühazirə vəsaiti.",
+      topics_az: ["Ekologiyanın Əsasları", "Biosfer və Ekosistem", "Su-Torpaq Mühafizəsi", "Bərpa Mexanizmləri"],
+      url: "ƏMM mühazirələr.pdf"
+    },
+    {
+      id: "fbk-lec-21",
+      fbkId: "fbk-9",
+      fieldBadge: "TƏHLÜKƏSİZLİK",
+      fieldName_az: "Ekologiya və Təhlükəsizlik",
+      subject_az: "Həyat Fəaliyyətinin Təhlükəsizliyi (HFT)",
+      title_az: "Həyat Fəaliyyətinin Təhlükəsizliyi — Mühazirə və Dərs Vəsaiti",
+      author_az: "Müəlliflər: Alidə Mahmudova, Azadə Quliyeva",
+      format: "pdf",
+      icon: "🛡️",
+      volume: "74 Səhifə · 1.6 MB",
+      fileSize: "1.6 MB",
+      desc_az: "Həyat fəaliyyətinin təhlükəsizliyinin nəzəri əsasları, əməyin mühafizəsi qanunvericiliyi, sənaye sanitariyası, fövqəladə hallar və mülki müdafiə, yanğın təhlükəsizliyi, zərərli amillərdən mühafizə və ilk tibbi yardım üzrə 74 səhifəlik rəsmi PDF dərs vəsaiti.",
+      topics_az: ["HFT Nəzəriyyəsi", "Əmək Mühafizəsi", "Mülki Müdafiə", "Yanğın və İlk Yardım"],
+      url: "Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf"
+    }
+  ];
+
+  const libLecturesGrid = document.getElementById("lib-lectures-grid");
+  const libLecturesSection = document.getElementById("library-lectures-section");
+  const libBooksPane = document.getElementById("library-books-pane");
+  const libMasterSwitcher = document.getElementById("lib-master-switcher");
+  const libLecFbkBar = document.getElementById("lib-lec-fbk-bar");
+  const libLecFormatGroup = document.getElementById("lib-lec-format-group");
+  const libLecSearch = document.getElementById("lib-lec-search");
+  const libLecClearSearch = document.getElementById("lib-lec-clear-search");
+  const libLecResultsCount = document.getElementById("lib-lec-results-count");
+  const libStatTotalLec = document.getElementById("lib-stat-total-lec");
+
+  if (libStatTotalLec) libStatTotalLec.textContent = fbkLecturesArchive.length;
+
+  let activeLecFbk = "all";
+  let activeLecFormat = "all";
+  let activeLecQuery = "";
+
+  function normalizeAz(str) {
+    return (str || "")
+      .toLowerCase()
+      .replace(/ı/g, "i")
+      .replace(/ə/g, "e")
+      .replace(/ö/g, "o")
+      .replace(/ü/g, "u")
+      .replace(/ğ/g, "g")
+      .replace(/ş/g, "s")
+      .replace(/ç/g, "c");
+  }
+
+  function renderLibraryLectures() {
+    if (!libLecturesGrid) return;
+
+    const q = normalizeAz(activeLecQuery.trim());
+    const filtered = fbkLecturesArchive.filter((item) => {
+      const matchFbk = activeLecFbk === "all" || item.fbkId === activeLecFbk;
+      const matchFormat = activeLecFormat === "all" || item.format === activeLecFormat;
+      if (!matchFbk || !matchFormat) return false;
+      if (!q) return true;
+
+      const haystack = normalizeAz(
+        [
+          item.title_az,
+          item.subject_az,
+          item.author_az,
+          item.fieldName_az,
+          item.fieldBadge,
+          item.desc_az,
+          ...(item.topics_az || []),
+        ].join(" ")
+      );
+      return haystack.includes(q);
+    });
+
+    if (libLecResultsCount) {
+      libLecResultsCount.textContent = `${filtered.length} mühazirə tapıldı`;
+    }
+
+    if (filtered.length === 0) {
+      libLecturesGrid.innerHTML = `
+        <div class="lib-lec-empty">
+          <div class="lib-lec-empty-icon">🔍</div>
+          <h4>Axtarışa uyğun mühazirə tapılmadı</h4>
+          <p>Fənn istiqaməti, format və ya axtarış sözünü dəyişdirərək yenidən cəhd edin.</p>
+          <button type="button" class="lib-lec-reset-btn" id="lib-lec-empty-reset">Bütün Mühazirələri Göstər (21)</button>
+        </div>
+      `;
+      document.getElementById("lib-lec-empty-reset")?.addEventListener("click", () => {
+        activeLecFbk = "all";
+        activeLecFormat = "all";
+        activeLecQuery = "";
+        if (libLecSearch) libLecSearch.value = "";
+        if (libLecClearSearch) libLecClearSearch.classList.remove("visible");
+        libLecFbkBar?.querySelectorAll(".lib-lec-chip").forEach((c) => c.classList.toggle("active", c.dataset.fbk === "all"));
+        libLecFormatGroup?.querySelectorAll(".lib-format-btn").forEach((b) => b.classList.toggle("active", b.dataset.format === "all"));
+        renderLibraryLectures();
+      });
+      return;
+    }
+
+    libLecturesGrid.innerHTML = filtered
+      .map((lec) => {
+        const isPdf = lec.format === "pdf";
+        const formatBadgeClass = isPdf ? "fmt-pdf" : "fmt-docx";
+        const formatLabel = isPdf ? "📕 PDF · Oxu Zalı" : "📘 DOCX · Word";
+        const safeUrl = encodeURI(lec.url);
+
+        return `
+          <article class="lib-lec-card ${lec.fbkId}" data-lec-id="${lec.id}">
+            <div class="lib-lec-card-accent" aria-hidden="true"></div>
+            <div class="lib-lec-card-top">
+              <div class="lib-lec-fbk-badge">
+                <span class="lib-lec-code">${lec.fieldBadge}</span>
+                <span class="lib-lec-dept">${lec.fieldName_az}</span>
+              </div>
+              <span class="lib-lec-fmt-pill ${formatBadgeClass}">${formatLabel}</span>
+            </div>
+
+            <div class="lib-lec-card-head">
+              <div class="lib-lec-icon-box" aria-hidden="true">${lec.icon}</div>
+              <div class="lib-lec-head-text">
+                <span class="lib-lec-subject-tag">${lec.subject_az}</span>
+                <h4 class="lib-lec-title">${lec.title_az}</h4>
+              </div>
+            </div>
+
+            <p class="lib-lec-desc">${lec.desc_az}</p>
+
+            <div class="lib-lec-topics">
+              ${(lec.topics_az || []).map((t) => `<span class="lib-lec-topic-pill">${t}</span>`).join("")}
+            </div>
+
+            <div class="lib-lec-meta-row">
+              <span class="lib-lec-author" title="${lec.author_az}">👨‍🏫 ${lec.author_az}</span>
+              <span class="lib-lec-volume">📄 ${lec.volume}</span>
+            </div>
+
+            <div class="lib-lec-actions">
+              <button type="button" class="lib-lec-btn-read" data-open-lec="${lec.id}">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                <span>${isPdf ? "Oxu Zalında Aç" : "Məlumat və Yüklə"}</span>
+              </button>
+              <a href="${safeUrl}" download class="lib-lec-btn-dl" title="${lec.url} — Birbaşa Yüklə">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Yüklə</span>
+              </a>
+              ${lec.extraDocUrl ? `
+                <a href="${encodeURI(lec.extraDocUrl)}" download class="lib-lec-btn-dl-alt" title="Alternativ DOCX Konspekti Yüklə">DOCX</a>
+              ` : ""}
+            </div>
+          </article>
+        `;
+      })
+      .join("");
+
+    libLecturesGrid.querySelectorAll("[data-open-lec]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-open-lec");
+        const lec = fbkLecturesArchive.find((x) => x.id === id);
+        if (!lec) return;
+        openBookReader({
+          title_az: lec.title_az,
+          author_az: lec.author_az,
+          category: lec.subject_az,
+          icon: lec.icon,
+          url: lec.url
+        });
+      });
+    });
+  }
+
+  function setMasterView(viewMode) {
+    if (!libMasterSwitcher) return;
+    libMasterSwitcher.querySelectorAll(".lib-switch-btn").forEach((btn) => {
+      const isMatch = btn.getAttribute("data-view") === viewMode;
+      btn.classList.toggle("active", isMatch);
+      btn.setAttribute("aria-selected", isMatch ? "true" : "false");
+    });
+
+    if (libLecturesSection) {
+      libLecturesSection.style.display = viewMode === "books" ? "none" : "";
+    }
+    if (libBooksPane) {
+      libBooksPane.style.display = viewMode === "lectures" ? "none" : "";
+    }
+  }
+
+  libMasterSwitcher?.addEventListener("click", (e) => {
+    const btn = e.target.closest(".lib-switch-btn");
+    if (!btn) return;
+    setMasterView(btn.getAttribute("data-view") || "all");
+  });
+
+  libLecFbkBar?.addEventListener("click", (e) => {
+    const chip = e.target.closest(".lib-lec-chip");
+    if (!chip) return;
+    activeLecFbk = chip.getAttribute("data-fbk") || "all";
+    libLecFbkBar.querySelectorAll(".lib-lec-chip").forEach((c) => c.classList.remove("active"));
+    chip.classList.add("active");
+    renderLibraryLectures();
+  });
+
+  libLecFormatGroup?.addEventListener("click", (e) => {
+    const btn = e.target.closest(".lib-format-btn");
+    if (!btn) return;
+    activeLecFormat = btn.getAttribute("data-format") || "all";
+    libLecFormatGroup.querySelectorAll(".lib-format-btn").forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    renderLibraryLectures();
+  });
+
+  libLecSearch?.addEventListener("input", () => {
+    activeLecQuery = libLecSearch.value || "";
+    if (libLecClearSearch) {
+      libLecClearSearch.classList.toggle("visible", activeLecQuery.trim().length > 0);
+    }
+    renderLibraryLectures();
+  });
+
+  libLecClearSearch?.addEventListener("click", () => {
+    activeLecQuery = "";
+    if (libLecSearch) {
+      libLecSearch.value = "";
+      libLecSearch.focus();
+    }
+    libLecClearSearch.classList.remove("visible");
+    renderLibraryLectures();
+  });
+
+  // Global cross-navigation helper from FBK section / modals -> Library Lectures Showcase
+  window.openLibraryLecturesView = function (fbkFilter = "all") {
+    setMasterView("lectures");
+    activeLecFbk = fbkFilter || "all";
+    activeLecFormat = "all";
+    activeLecQuery = "";
+    if (libLecSearch) libLecSearch.value = "";
+    if (libLecClearSearch) libLecClearSearch.classList.remove("visible");
+
+    libLecFbkBar?.querySelectorAll(".lib-lec-chip").forEach((c) => {
+      c.classList.toggle("active", c.getAttribute("data-fbk") === activeLecFbk);
+    });
+    libLecFormatGroup?.querySelectorAll(".lib-format-btn").forEach((b) => {
+      b.classList.toggle("active", b.getAttribute("data-format") === "all");
+    });
+
+    renderLibraryLectures();
+
+    const scrollTarget = libMasterSwitcher || libLecturesSection || document.getElementById("library");
+    if (scrollTarget) {
+      const y = scrollTarget.getBoundingClientRect().top + window.scrollY - 96;
+      window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+    }
+  };
+
+  // Update textbooks badge count dynamically if present
+  const booksSwitchBadge = document.querySelector('#lib-master-switcher [data-view="books"] .lib-switch-badge');
+  if (booksSwitchBadge && typeof libraryData !== "undefined") {
+    booksSwitchBadge.textContent = `${libraryData.length} Kitab`;
+  }
+
+  renderLibraryLectures();
 }
 
 /**
