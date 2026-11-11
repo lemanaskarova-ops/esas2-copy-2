@@ -159,18 +159,14 @@ const i18n = {
     struct_view_tree: "İerarxiya Sxemi",
     struct_view_cards: "Heyət Kartları",
     struct_tab_hierarchy: "İdarəetmə və Şöbələr",
-    struct_tab_commissions: "Fənn Birləşmə Komissiyaları",
-    fbk_banner_title: "Kollecin Fənn Birləşmə Komissiyaları (FBK)",
-    fbk_banner_desc: "Tədris planlarının icrası, fənn proqramlarının hazırlanması və tədris-metodiki işlərin koordinasiyasını təmin edən 9 ixtisaslaşmış fənn birliyi.",
-    fbk_metodic_label: "Tədris-Metodik",
-    struct_search_placeholder: "İerarxiya və ya fənn birliyi üzrə axtarış...",
+    struct_search_placeholder: "İerarxiya və ya şöbə üzrə axtarış...",
     struct_director_badge: "Kollec Rəhbərliyi",
     struct_deputies_badge: "Direktor Müavinləri",
     struct_departments_badge: "Şöbə Müdirləri və Xidmətlər",
     struct_tier1_label: "I SƏVİYYƏ · DİREKTORLUQ",
     struct_tier2_label: "II SƏVİYYƏ · DİREKTOR MÜAVİNLƏRİ",
     struct_tier3_label: "III SƏVİYYƏ · YAP ƏPT SƏDRİ VƏ ŞÖBƏ MÜDİRİ",
-    struct_tier4_label: "IV SƏVİYYƏ · ŞÖBƏ MÜDİRLƏRİ VƏ BİRLƏŞMƏ KOMİSSİYALARI",
+    struct_tier4_label: "IV SƏVİYYƏ · ŞÖBƏ MÜDİRLƏRİ VƏ XİDMƏTLƏR",
     struct_tier3_badge: "YAP Ərazi Partiya Təşkilatı Sədri · Şöbə Müdiri",
     struct_wing_academic: "Tədris, İKT və Sahə Şöbələri",
     struct_wing_admin: "İnzibati, Tələbə və Dəstək Xidmətləri",
@@ -1053,18 +1049,14 @@ const i18n = {
     struct_view_tree: "Hierarchy Tree",
     struct_view_cards: "Staff Cards",
     struct_tab_hierarchy: "Management & Departments",
-    struct_tab_commissions: "Subject Commissions",
-    fbk_banner_title: "Subject Commissions of the College (FBK)",
-    fbk_banner_desc: "9 specialized subject commissions ensuring curriculum delivery, syllabi development, and methodological excellence.",
-    fbk_metodic_label: "Academic Methodological",
-    struct_search_placeholder: "Search hierarchy or subject commissions...",
+    struct_search_placeholder: "Search hierarchy or departments...",
     struct_director_badge: "College Directorate",
     struct_deputies_badge: "Vice Directors",
     struct_departments_badge: "Department Heads & Services",
     struct_tier1_label: "LEVEL I · DIRECTORATE",
     struct_tier2_label: "LEVEL II · VICE DIRECTORS",
     struct_tier3_label: "LEVEL III · CHAIR OF YAP ORGANIZATION & DEPT HEAD",
-    struct_tier4_label: "LEVEL IV · DEPARTMENT HEADS & COMMISSIONS",
+    struct_tier4_label: "LEVEL IV · DEPARTMENT HEADS & SERVICES",
     struct_tier3_badge: "Chair of YAP Organization · Department Head",
     struct_wing_academic: "Academic, ICT & Field Departments",
     struct_wing_admin: "Administrative, Student & Support Services",
@@ -1697,7 +1689,7 @@ const i18n = {
     cert_placeholder_title: "Document Title",
     nav_college: "Our College",
     nav_about_sub: "College history and mission",
-    nav_structure_sub: "Leadership, departments & commissions",
+    nav_structure_sub: "Leadership & departments",
     nav_honors_sub: "International champions & honor roll",
     nav_academics: "Academics & Science",
     nav_lectures_sub: "23 video lectures & media archive",
@@ -1936,18 +1928,14 @@ const i18n = {
     struct_view_tree: "Иерархическая Схема",
     struct_view_cards: "Карточки Сотрудников",
     struct_tab_hierarchy: "Руководство и отделы",
-    struct_tab_commissions: "Предметные комиссии",
-    fbk_banner_title: "Предметные цикловые комиссии колледжа (ПЦК)",
-    fbk_banner_desc: "9 специализированных предметных комиссий, обеспечивающих реализацию учебных планов и методическое руководство.",
-    fbk_metodic_label: "Учебно-методическая",
-    struct_search_placeholder: "Поиск по структуре или предметным комиссиям...",
+    struct_search_placeholder: "Поиск по структуре и отделам...",
     struct_director_badge: "Руководство Колледжа",
     struct_deputies_badge: "Заместители Директора",
     struct_departments_badge: "Заведующие Отделами и Службы",
     struct_tier1_label: "I УРОВЕНЬ · ДИРЕКТОРАТ",
     struct_tier2_label: "II УРОВЕНЬ · ЗАМЕСТИТЕЛИ ДИРЕКТОРА",
     struct_tier3_label: "III УРОВЕНЬ · ПРЕДСЕДАТЕЛЬ ОРГАНИЗАЦИИ YAP И ЗАВ. ОТДЕЛОМ",
-    struct_tier4_label: "IV УРОВЕНЬ · ЗАВЕДУЮЩИЕ ОТДЕЛАМИ И КОМИССИИ",
+    struct_tier4_label: "IV УРОВЕНЬ · ЗАВЕДУЮЩИЕ ОТДЕЛАМИ И СЛУЖБЫ",
     struct_tier3_badge: "Председатель организации YAP · Зав. отделом",
     struct_wing_academic: "Учебные, ИКТ и отраслевые отделения",
     struct_wing_admin: "Административные, студенческие и сервисные службы",
@@ -6461,15 +6449,9 @@ function initScrollEngine() {
     const hash = window.location.hash;
     if (!hash) return;
 
-    if (hash === "#commissions" || hash === "#fbk" || hash === "#struct-commissions-view") {
-      if (window.switchStructureView) window.switchStructureView("commissions");
-      setTimeout(() => {
-        const el = document.getElementById("struct-commissions-view") || document.getElementById("commissions");
-        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 80);
-    } else if (hash === "#majors" || hash === "#tree-majors-block") {
+    if (hash === "#majors" || hash === "#tree-majors-block") {
       if (window.switchStructureView) window.switchStructureView("majors");
-    } else if (hash === "#structure") {
+    } else if (hash === "#structure" || hash === "#commissions" || hash === "#fbk" || hash === "#struct-commissions-view") {
       if (window.switchStructureView) window.switchStructureView("tree");
     } else if (hash.startsWith("#campus-floor-")) {
       const fl = hash.replace("#campus-floor-", "");
@@ -8206,26 +8188,19 @@ function initStructureModule() {
 
   // ─── 4. VIEW TOGGLE LOGIC ──────────────────────────────────────────
   function switchView(view) {
-    currentView = view;
+    const normalizedView = view === "majors" ? "majors" : "tree";
+    currentView = normalizedView;
 
-    toggleTreeBtn?.classList.toggle("active", view === "tree");
-    toggleTreeBtn?.setAttribute("aria-selected", view === "tree" ? "true" : "false");
-    toggleCardsBtn?.classList.toggle("active", view === "commissions");
-    toggleCardsBtn?.setAttribute("aria-selected", view === "commissions" ? "true" : "false");
-    toggleMajorsBtn?.classList.toggle("active", view === "majors");
-    toggleMajorsBtn?.setAttribute("aria-selected", view === "majors" ? "true" : "false");
+    toggleTreeBtn?.classList.toggle("active", normalizedView === "tree");
+    toggleTreeBtn?.setAttribute("aria-selected", normalizedView === "tree" ? "true" : "false");
+    toggleMajorsBtn?.classList.toggle("active", normalizedView === "majors");
+    toggleMajorsBtn?.setAttribute("aria-selected", normalizedView === "majors" ? "true" : "false");
 
-    if (view === "tree") {
+    if (normalizedView === "tree") {
       treePane?.classList.add("active");
-      commissionsPane?.classList.remove("active");
       renderTree();
-    } else if (view === "commissions") {
-      commissionsPane?.classList.add("active");
-      treePane?.classList.remove("active");
-      renderCommissionsGrid();
-    } else if (view === "majors") {
+    } else if (normalizedView === "majors") {
       treePane?.classList.add("active");
-      commissionsPane?.classList.remove("active");
       renderTree();
       setTimeout(() => {
         const majorsBlock = document.getElementById("tree-majors-block");
@@ -8248,7 +8223,6 @@ function initStructureModule() {
 
   window.switchStructureView = switchView;
   toggleTreeBtn?.addEventListener("click", () => switchView("tree"));
-  toggleCardsBtn?.addEventListener("click", () => switchView("commissions"));
   toggleMajorsBtn?.addEventListener("click", () => switchView("majors"));
 
   // ─── 5. SUBTABS SELECTION ──────────────────────────────────────────
@@ -8326,23 +8300,8 @@ function initStructureModule() {
       }
 
       if (cat === "majors") {
-        // Go directly to MAJORS (19 İxtisas), NOT commissions!
+        // Go directly to MAJORS (19 İxtisas)
         switchView("majors");
-      } else if (cat === "commissions" || cat === "fbk") {
-        // Go directly to FƏNN BİRLƏŞMƏLƏRİ (FBK)!
-        switchView("commissions");
-        setTimeout(() => {
-          const commEl = document.getElementById("struct-commissions-view");
-          if (commEl) {
-            const headerOffset = 90;
-            const elementPosition = commEl.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: "smooth"
-            });
-          }
-        }, 70);
       } else if (cat === "departments") {
         switchView("tree");
         setTimeout(() => {
@@ -8379,11 +8338,7 @@ function initStructureModule() {
   // ─── 8. LANGUAGE CHANGE RE-RENDER ──────────────────────────────────
   document.addEventListener("languageChanged", () => {
     renderCategoriesCount();
-    if (currentView === "tree" || currentView === "majors") {
-      renderTree();
-    } else {
-      renderCommissionsGrid();
-    }
+    renderTree();
   });
 
   // Initial Tree render
@@ -16753,34 +16708,6 @@ function initGlobalSearchModule() {
       });
     }
 
-    // 3. FBK Commissions (9 Fənn Birləşməsi)
-    const fbks = window.FBK_LIST || [];
-    fbks.forEach(f => {
-      const titleName = f["title_" + l] || f.title_az || "";
-      const chairName = f["chair_" + l] || f.chair_az || "";
-      const badgeText = l === "en" ? "Commission (FBK)" : l === "ru" ? "Предметная комиссия (ЦК)" : "FBK";
-      const chairPrefix = l === "en" ? "Head: " : l === "ru" ? "Председатель: " : "Sədr: ";
-      const disc = (f.disciplines_az || []).join(", ");
-
-      catalog.push({
-        type: "structure",
-        category: "structure",
-        categories: ["structure"],
-        icon: f.icon || "📚",
-        badge: badgeText,
-        title: (f.code || "") + " - " + titleName,
-        desc: chairPrefix + chairName + (disc ? " (" + disc + ")" : ""),
-        tokens: [(f.code || ""), (f.title_az || ""), (f.title_en || ""), (f.title_ru || ""), (f.chair_az || ""), (f.desc_az || ""), disc, "fenn birlesmesi", "komissiya"].join(" ").toLowerCase(),
-        action: () => {
-          if (window.switchStructureView) window.switchStructureView("commissions");
-          setTimeout(() => {
-            const commEl = document.getElementById("struct-commissions-view") || document.getElementById("commissions");
-            commEl?.scrollIntoView({ behavior: "smooth" });
-          }, 80);
-        }
-      });
-    });
-
     // 4. AZƏRBAYCAN DİLİ DƏRS VƏSAİTİ (azdilifb.docx)
     catalog.push({
       type: "structure",
@@ -16798,8 +16725,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -16820,8 +16750,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -16842,8 +16775,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -16865,8 +16801,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -16887,8 +16826,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -16909,8 +16851,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -16932,8 +16877,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -16955,8 +16903,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -16978,8 +16929,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -17001,8 +16955,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -17024,8 +16981,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -17047,8 +17007,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -17070,8 +17033,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -17093,8 +17059,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -17116,8 +17085,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -17139,8 +17111,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -17162,8 +17137,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -17185,8 +17163,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 
@@ -17207,8 +17188,11 @@ function initGlobalSearchModule() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        if (window.switchStructureView) window.switchStructureView("commissions");
-        document.getElementById("structure")?.scrollIntoView({ behavior: "smooth" });
+        if (window.openLibraryLecturesView) {
+          window.openLibraryLecturesView("all");
+        } else {
+          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
 

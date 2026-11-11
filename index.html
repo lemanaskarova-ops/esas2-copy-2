@@ -23,7 +23,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261111_31" />
+    <link rel="stylesheet" href="style.css?v=20261111_32" />
     <script>
         (function () {
             try {
@@ -235,19 +235,6 @@
                             <span class="nav-dd-text">
                                 <span class="nav-dd-title" data-i18n="nav_structure">Rəhbərlik & Struktur</span>
                                 <span class="nav-dd-sub" data-i18n="nav_structure_sub">İdarə heyəti və şöbələr</span>
-                            </span>
-                            <svg class="nav-dd-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </a>
-                        <a href="#commissions" class="nav-dropdown-item" data-struct-cat="commissions" role="menuitem">
-                            <span class="nav-dd-icon" aria-hidden="true">📚</span>
-                            <span class="nav-dd-text">
-                                <span class="nav-dd-title" data-i18n="nav_fbk">Fənn Birləşmə Komissiyaları</span>
-                                <span class="nav-dd-sub" data-i18n="nav_fbk_sub">9 tədris-metodiki fənn
-                                    komissiyası</span>
                             </span>
                             <svg class="nav-dd-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -609,10 +596,6 @@
                     <a href="#structure" class="mobile-nav-sublink" data-struct-cat="leadership">
                         <span class="mobile-sub-bullet" aria-hidden="true">▫️</span>
                         <span data-i18n="nav_structure">Rəhbərlik & Struktur</span>
-                    </a>
-                    <a href="#commissions" class="mobile-nav-sublink" data-struct-cat="commissions">
-                        <span class="mobile-sub-bullet" aria-hidden="true">▫️</span>
-                        <span data-i18n="nav_fbk">Fənn Birləşmə Komissiyaları (9 FBK)</span>
                     </a>
                     <a href="#honor-students" class="mobile-nav-sublink">
                         <span class="mobile-sub-bullet" aria-hidden="true">▫️</span>
@@ -1709,12 +1692,6 @@
                         <span aria-hidden="true">🏛️</span>
                         <span data-i18n="struct_tab_hierarchy">İdarəetmə və Şöbələr</span>
                     </button>
-                    <button type="button" class="struct-toggle-btn" id="toggle-cards-btn" data-view="commissions"
-                        role="tab" aria-selected="false" aria-controls="struct-commissions-view">
-                        <span aria-hidden="true">📚</span>
-                        <span data-i18n="struct_tab_commissions">Fənn Birləşmə Komissiyaları</span>
-                        <span class="struct-badge-count" data-i18n="struct_badge_count">9 FBK</span>
-                    </button>
                     <button type="button" class="struct-toggle-btn" id="toggle-majors-btn" data-view="majors" role="tab"
                         aria-selected="false" aria-controls="struct-tree-canvas">
                         <span aria-hidden="true">🎓</span>
@@ -1730,49 +1707,21 @@
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
                     <input type="text" id="struct-search-input"
-                        placeholder="İerarxiya və ya fənn birliyi üzrə axtarış..."
+                        placeholder="İerarxiya və ya şöbə üzrə axtarış..."
                         data-i18n-placeholder="struct_search_placeholder" autocomplete="off" />
                     <button type="button" id="struct-search-clear" class="struct-search-clear"
                         aria-label="Təmizlə">✕</button>
                 </div>
             </div>
 
-            <!-- Target ID Anchors for Direct Navigation -->
+            <!-- Target ID Anchor for Direct Navigation -->
             <div id="majors" class="struct-majors-anchor" style="position:relative; top:-90px; visibility:hidden;">
             </div>
-            <div id="commissions" class="struct-commissions-anchor"
-                style="position:relative; top:-90px; visibility:hidden;"></div>
 
             <!-- ── PANE 1: ORGANIZATIONAL HIERARCHY TREE ── -->
             <div class="struct-view-pane struct-tree-view active" id="struct-tree-view" role="tabpanel">
                 <div class="struct-tree-canvas" id="struct-tree-canvas">
                     <!-- Dynamic Tree Hierarchy rendered by JS -->
-                </div>
-            </div>
-
-            <!-- ── PANE 2: SUBJECT COMMISSIONS (9 FBK) ── -->
-            <div class="struct-view-pane struct-commissions-view" id="struct-commissions-view" role="tabpanel">
-                <div class="fbk-container">
-                    <div class="fbk-banner">
-                        <div class="fbk-banner-badge">
-                            <span data-i18n="struct_commissions_view_title">🎓 TƏDRİS-METODİK APARAT</span>
-                        </div>
-                        <h3 class="fbk-banner-title" data-i18n="fbk_banner_title">Kollecin Fənn Birləşmə Komissiyaları
-                            (FBK)</h3>
-                        <p class="fbk-banner-desc" data-i18n="fbk_banner_desc">Tədris planlarının icrası, fənn
-                            proqramlarının hazırlanması və tədris-metodiki işlərin koordinasiyasını təmin edən 9
-                            ixtisaslaşmış fənn birliyi.</p>
-                        <div style="margin-top: 14px;">
-                            <a href="#library-lectures-section" class="fbk-to-lib-lectures-btn" onclick="if(window.openLibraryLecturesView){event.preventDefault();window.openLibraryLecturesView('all');}">
-                                <span>🎓</span>
-                                <span data-i18n="fbk_to_lib_lectures_btn">Kitabxana Mühazirə Bölməsində Bütün Mühazirələrə Bax (21 Mühazirə)</span>
-                                <span>→</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="fbk-grid" id="fbk-grid">
-                        <!-- 9 FBK Cards rendered by JS -->
-                    </div>
                 </div>
             </div>
         </div>
@@ -4038,7 +3987,7 @@
     </div>
 
 
-    <script src="script.js?v=20261111_31"></script>
+    <script src="script.js?v=20261111_32"></script>
 
     <!-- ═══ SMART LIVE SEARCH MODAL (Ağıllı Canlı Axtarış) ═══ -->
     <div class="search-modal-overlay" id="global-search-modal" role="dialog" aria-modal="true" aria-hidden="true">
