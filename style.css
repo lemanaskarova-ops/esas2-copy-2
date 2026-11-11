@@ -23218,7 +23218,8 @@ html.dark-mode #library .book-btn-ext:hover {
   }
 
   .lib-switch-btn {
-    flex: 1 1 auto;
+    flex: 0 0 auto;
+    width: 100%;
     justify-content: space-between;
   }
 
@@ -23230,6 +23231,17 @@ html.dark-mode #library .book-btn-ext:hover {
   .lib-lec-controls-row {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
+  }
+
+  .lib-lec-search-wrap,
+  .lib-books-search-wrap {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .lib-lec-format-group {
+    justify-content: center;
   }
 
   .lib-lec-results-meta {

@@ -9078,7 +9078,6 @@ function initLibraryModule() {
         [
           item.title_az,
           item.subject_az,
-          item.author_az,
           item.fieldName_az,
           item.fieldBadge,
           item.desc_az,
@@ -9147,7 +9146,6 @@ function initLibraryModule() {
             </div>
 
             <div class="lib-lec-meta-row">
-              <span class="lib-lec-author" title="${lec.author_az}">👨‍🏫 ${lec.author_az}</span>
               <span class="lib-lec-volume">📄 ${lec.volume}</span>
             </div>
 
@@ -9176,7 +9174,7 @@ function initLibraryModule() {
         if (!lec) return;
         openBookReader({
           title_az: lec.title_az,
-          author_az: lec.author_az,
+          author_az: lec.fieldName_az || "Akademik Mühazirələr Fondu",
           category: lec.subject_az,
           icon: lec.icon,
           url: lec.url
