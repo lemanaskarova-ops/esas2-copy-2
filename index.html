@@ -23,7 +23,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261111_25" />
+    <link rel="stylesheet" href="style.css?v=20261111_26" />
     <script>
         (function () {
             try {
@@ -1979,78 +1979,93 @@
                 Dərs vəsaitləri və metodik materiallar — baxış və yükləmə imkanı ilə.
             </p>
 
-            <!-- Library Master Mode Switcher -->
-            <div class="lib-master-switcher" id="lib-master-switcher" role="tablist" aria-label="Kitabxana Rejimləri">
-                <button type="button" class="lib-switch-btn active" data-view="all" role="tab" aria-selected="true">
-                    <span class="lib-switch-icon">🏛️</span>
-                    <span class="lib-switch-text" data-i18n="lib_switch_all">Bütün Kitabxana Fondu</span>
-                    <span class="lib-switch-badge">Mühazirə + Kitab</span>
-                </button>
-                <button type="button" class="lib-switch-btn" data-view="lectures" role="tab" aria-selected="false">
-                    <span class="lib-switch-icon">🎓</span>
-                    <span class="lib-switch-text" data-i18n="lib_switch_lectures">Mühazirələr Bölməsi</span>
-                    <span class="lib-switch-badge lib-badge-gold">21 Mühazirə</span>
-                </button>
-                <button type="button" class="lib-switch-btn" data-view="books" role="tab" aria-selected="false">
-                    <span class="lib-switch-icon">📘</span>
-                    <span class="lib-switch-text" data-i18n="lib_switch_books">Dərs Vəsaitləri və Kitablar</span>
-                    <span class="lib-switch-badge">59 Kitab</span>
-                </button>
-            </div>
-
-            <!-- ═══════════════ ULTRA-AESTHETIC MÜHAZİRƏLƏR BÖLMƏSİ ═══════════════ -->
-            <div class="lib-lectures-showcase" id="library-lectures-section">
-                <!-- Hero Header -->
+            <!-- ═══════════════ VAHİD ULTRA-ESTETİK KİTABXANA VƏ MÜHAZİRƏLƏR FONDU ═══════════════ -->
+            <div class="lib-lectures-showcase" id="library-showcase">
+                <!-- Hero Header + Integrated Kitabxana Fondu və Tarixi -->
                 <div class="lib-lec-hero">
                     <div class="lib-lec-hero-content">
                         <div class="lib-lec-badge-row">
                             <span class="lib-lec-gold-pill">
                                 <span class="lib-pulse-dot"></span>
-                                <span data-i18n="lib_lec_hero_tag">AKADEMİK MÜHAZİRƏLƏR FONDU</span>
+                                <span data-i18n="lib_lec_hero_tag">AKADEMİK RESURSLAR FONDU</span>
                             </span>
-                            <span class="lib-lec-stat-pill">21 Rəsmi Mühazirə Vəsaiti</span>
-                            <span class="lib-lec-stat-pill">6 Tədris Sahəsi</span>
+                            <span class="lib-lec-stat-pill">21 Rəsmi Mühazirə</span>
+                            <span class="lib-lec-stat-pill">59 Dərs Vəsaiti</span>
                         </div>
                         <h3 class="lib-lec-hero-title" data-i18n="lib_lec_hero_title">
-                            Akademik Mühazirələr Bölməsi
+                            Akademik Mühazirələr və Dərs Vəsaitləri Fondu
                         </h3>
                         <p class="lib-lec-hero-subtitle" data-i18n="lib_lec_hero_desc">
-                            Kollecimizin müəllimləri və metodik heyəti tərəfindən fənlər üzrə hazırlanmış bütün mühazirə mətnləri, leksiyalar, dərslik-konspektlər və tədris vəsaitləri bir arada. İstər daxili oxu zalında interaktiv vərəqləyin, istərsə də orijinal formatda (PDF / DOCX) birbaşa yükləyin.
+                            Kollecimizin müəllimləri və metodik heyəti tərəfindən hazırlanmış bütün mühazirə mətnləri, leksiyalar və dərs vəsaitləri vahid rəqəmsal oxu zalında. İstər daxili oxu zalında vərəqləyin, istərsə də orijinal formatda (PDF / DOCX) birbaşa yükləyin.
                         </p>
+
+                        <!-- Kitabxana Fondu və Tarixi — Yeni Bölməyə Birləşdirilmiş Zərif Zolak -->
+                        <div class="lib-hero-fund-strip">
+                            <button type="button" class="lib-fund-about-btn lib-hero-fund-btn" id="lib-fund-about-btn"
+                                title="Kitabxana Fondu və Tarixi Haqqında Rəsmi Məlumat">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2" aria-hidden="true">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                </svg>
+                                <span data-i18n="lib_fund_about_btn">🏛️ Kitabxana Fondu və Tarixi</span>
+                            </button>
+                            <span class="lib-hero-fund-divider" aria-hidden="true">·</span>
+                            <span class="lib-hero-fund-count" id="lib-total-counter" data-i18n="lib_total_counter">59 Rəsmi Dərs Vəsaiti</span>
+                            <span class="lib-hero-fund-divider" aria-hidden="true">·</span>
+                            <span class="lib-hero-fund-room">📍 II Mərtəbə, Otaq 206</span>
+                        </div>
                     </div>
 
                     <!-- 4 Aesthetic Quick KPI Stats Cards -->
                     <div class="lib-lec-stats-grid">
                         <div class="lib-lec-stat-card">
-                            <div class="lib-stat-icon">📚</div>
+                            <div class="lib-stat-icon">🎓</div>
                             <div class="lib-stat-data">
                                 <span class="lib-stat-number" id="lib-stat-total-lec">21</span>
-                                <span class="lib-stat-label">Cəmi Mühazirə</span>
-                            </div>
-                        </div>
-                        <div class="lib-lec-stat-card">
-                            <div class="lib-stat-icon">📕</div>
-                            <div class="lib-stat-data">
-                                <span class="lib-stat-number">13</span>
-                                <span class="lib-stat-label">PDF Oxu Zalı</span>
+                                <span class="lib-stat-label">Mühazirə Vəsaiti</span>
                             </div>
                         </div>
                         <div class="lib-lec-stat-card">
                             <div class="lib-stat-icon">📘</div>
                             <div class="lib-stat-data">
-                                <span class="lib-stat-number">8</span>
-                                <span class="lib-stat-label">DOCX Konspekt</span>
+                                <span class="lib-stat-number">59</span>
+                                <span class="lib-stat-label">Dərs Vəsaiti & Kitab</span>
                             </div>
                         </div>
                         <div class="lib-lec-stat-card">
-                            <div class="lib-stat-icon">🎓</div>
+                            <div class="lib-stat-icon">📕</div>
                             <div class="lib-stat-data">
-                                <span class="lib-stat-number">6</span>
-                                <span class="lib-stat-label">Tədris İstiqaməti</span>
+                                <span class="lib-stat-number">PDF</span>
+                                <span class="lib-stat-label">Daxili Oxu Zalı</span>
+                            </div>
+                        </div>
+                        <div class="lib-lec-stat-card">
+                            <div class="lib-stat-icon">📄</div>
+                            <div class="lib-stat-data">
+                                <span class="lib-stat-number">DOCX</span>
+                                <span class="lib-stat-label">Birbaşa Yükləmə</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Unified Library Tab Switcher -->
+                <div class="lib-master-switcher" id="lib-master-switcher" role="tablist" aria-label="Kitabxana Rejimləri">
+                    <button type="button" class="lib-switch-btn active" data-view="lectures" role="tab" aria-selected="true">
+                        <span class="lib-switch-icon">🎓</span>
+                        <span class="lib-switch-text" data-i18n="lib_switch_lectures">Mühazirələr Bölməsi</span>
+                        <span class="lib-switch-badge lib-badge-gold">21 Mühazirə</span>
+                    </button>
+                    <button type="button" class="lib-switch-btn" data-view="books" role="tab" aria-selected="false">
+                        <span class="lib-switch-icon">📘</span>
+                        <span class="lib-switch-text" data-i18n="lib_switch_books">Dərs Vəsaitləri və Kitablar</span>
+                        <span class="lib-switch-badge">59 Kitab</span>
+                    </button>
+                </div>
+
+                <!-- Tab Pane 1: Akademik Mühazirələr Bölməsi (21 Mühazirə) -->
+                <div id="library-lectures-section">
 
                 <!-- Academic Discipline Filter Bar -->
                 <div class="lib-lec-fbk-bar" id="lib-lec-fbk-bar" role="tablist" aria-label="Fənn İstiqaməti Filterləri">
@@ -2130,42 +2145,10 @@
                 </div>
             </div>
 
-            <!-- ═══════════════ TEXTBOOKS & MANUALS SHOWCASE ═══════════════ -->
-            <div class="lib-books-pane" id="library-books-pane">
-                <div class="lib-books-section-head">
-                    <div class="lib-books-head-left">
-                        <span class="lib-books-head-badge">📘 RƏSMİ FOND</span>
-                        <h3 class="lib-books-head-title">Dərs Vəsaitləri və Kitablar</h3>
-                        <p class="lib-books-head-desc">İxtisaslar və fənlər üzrə təsdiqlənmiş əsas və əlavə dərs vəsaitləri arxivi.</p>
-                    </div>
-                </div>
-
-                <!-- Rəqəmsal Oxu Zalı Məlumat Zolağı (Upgrade 4) -->
-                <div class="library-reading-bar">
-                    <div class="lib-bar-left">
-                        <span class="lib-live-indicator"></span>
-                        <span class="lib-bar-title" data-i18n="lib_reading_room_title">BDRNK RƏQƏMSAL OXU ZALI</span>
-                        <span class="lib-bar-sep">·</span>
-                        <span class="lib-bar-count" id="lib-total-counter" data-i18n="lib_total_counter">59 Rəsmi Dərs
-                            Vəsaiti</span>
-                    </div>
-                    <div class="lib-bar-right">
-                        <button type="button" class="lib-fund-about-btn" id="lib-fund-about-btn"
-                            title="Kitabxana Fondu və Tarixi Haqqında Rəsmi Məlumat">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.2" aria-hidden="true">
-                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                            </svg>
-                            <span data-i18n="lib_fund_about_btn">🏛️ Kitabxana Fondu və Tarixi</span>
-                        </button>
-                        <span class="lib-bar-hint" data-i18n="lib_reading_room_hint">📖 Kitabın üzərinə klikləyərək daxili
-                            oxu zalında dərhal vərəqləyin</span>
-                    </div>
-                </div>
-
-                <!-- Search & Category Filters -->
-                <div class="library-filter" id="library-filter">
+                <!-- Tab Pane 2: Dərs Vəsaitləri və Kitablar (59 Kitab — Vahid Bölmə İçi) -->
+                <div class="lib-books-pane" id="library-books-pane" style="display: none;">
+                    <!-- Search & Category Filters -->
+                    <div class="library-filter" id="library-filter">
                     <div class="lib-books-search-row">
                         <div class="lib-books-search-wrap">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
@@ -2260,6 +2243,7 @@
                     <!-- Books rendered by JS -->
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -4069,7 +4053,7 @@
     </div>
 
 
-    <script src="script.js?v=20261111_25"></script>
+    <script src="script.js?v=20261111_26"></script>
 
     <!-- ═══ SMART LIVE SEARCH MODAL (Ağıllı Canlı Axtarış) ═══ -->
     <div class="search-modal-overlay" id="global-search-modal" role="dialog" aria-modal="true" aria-hidden="true">

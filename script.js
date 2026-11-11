@@ -9186,25 +9186,27 @@ function initLibraryModule() {
   }
 
   function setMasterView(viewMode) {
-    if (!libMasterSwitcher) return;
-    libMasterSwitcher.querySelectorAll(".lib-switch-btn").forEach((btn) => {
-      const isMatch = btn.getAttribute("data-view") === viewMode;
-      btn.classList.toggle("active", isMatch);
-      btn.setAttribute("aria-selected", isMatch ? "true" : "false");
-    });
+    const mode = viewMode === "books" ? "books" : "lectures";
+    if (libMasterSwitcher) {
+      libMasterSwitcher.querySelectorAll(".lib-switch-btn").forEach((btn) => {
+        const isMatch = btn.getAttribute("data-view") === mode;
+        btn.classList.toggle("active", isMatch);
+        btn.setAttribute("aria-selected", isMatch ? "true" : "false");
+      });
+    }
 
     if (libLecturesSection) {
-      libLecturesSection.style.display = viewMode === "books" ? "none" : "";
+      libLecturesSection.style.display = mode === "books" ? "none" : "";
     }
     if (libBooksPane) {
-      libBooksPane.style.display = viewMode === "lectures" ? "none" : "";
+      libBooksPane.style.display = mode === "books" ? "" : "none";
     }
   }
 
   libMasterSwitcher?.addEventListener("click", (e) => {
     const btn = e.target.closest(".lib-switch-btn");
     if (!btn) return;
-    setMasterView(btn.getAttribute("data-view") || "all");
+    setMasterView(btn.getAttribute("data-view") || "lectures");
   });
 
   libLecFbkBar?.addEventListener("click", (e) => {
@@ -9275,6 +9277,7 @@ function initLibraryModule() {
   }
 
   renderLibraryLectures();
+  setMasterView("lectures");
 }
 
 /**
