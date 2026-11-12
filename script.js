@@ -5569,9 +5569,9 @@ const libraryData = [
   },
   {
     id: 19,
-    title_az: "Rus dili 1 kurs (mühazirələr)",
-    title_en: "Russian Language 1st course (lectures)",
-    title_ru: "1Русский язык 1 курс (лекции)",
+    title_az: "Rus dili (I kurs — Dərslik)",
+    title_en: "Russian Language (1st Year Textbook)",
+    title_ru: "Русский язык (1 курс — учебник)",
     author_az: "Müəllif: Samirə İmaməliyeva",
     author_en: "Author: Samire Imameliyeva",
     author_ru: "Автор: Самире Имамелиева",
@@ -5581,9 +5581,9 @@ const libraryData = [
   },
   {
     id: 20,
-    title_az: "Rus dili 2 kurs (mühazirələr kitab)",
-    title_en: "Russian Language 2nd course (lecture book)",
-    title_ru: "2Русский язык 2 курс лекции книга",
+    title_az: "Rus dili (II kurs — Dərslik)",
+    title_en: "Russian Language (2nd Year Textbook)",
+    title_ru: "Русский язык (2 курс — учебник)",
     author_az: "Müəlliflər: Aygün Qocayeva, Samirə İmaməliyeva",
     author_en: "Authors: Aygun Gojayeva, Samire Imameliyeva",
     author_ru: "Авторы: Айгюн Годжаева, Самире Имамелиева",
@@ -8915,40 +8915,6 @@ function initLibraryModule() {
       desc_az: "Dövlət və hüququn nəzəriyyəsi, Azərbaycan Respublikasının Konstitusiyası, insan hüquq və azadlıqları, dövlət quruluşu, seçki sistemi, dövlət hakimiyyət orqanları, əmək və cinayət hüququnu əhatə edən 8 mövzuluq rəsmi mühazirə vəsaiti.",
       topics_az: ["Hüquq Nəzəriyyəsi", "AR Konstitusiyası", "Seçki və İdarəetmə", "Əmək və Cinayət Hüququ"],
       url: "yeni mühazirələr.docx"
-    },
-
-    // --- Xarici Dillər / Rus Dili (2) ---
-    {
-      id: "fbk-lec-18",
-      fbkId: "fbk-8",
-      fieldBadge: "XARİCİ DİLLƏR",
-      fieldName_az: "Xarici Dillər (Rus Dili)",
-      subject_az: "Rus Dili (I Kurs)",
-      title_az: "Rus Dili — I Kurs Üçün Mühazirələr və Praktik Dərs Toplusu",
-      author_az: "Müəllif: Samirə İmaməliyeva",
-      format: "docx",
-      icon: "🇷🇺",
-      volume: "I Kurs · Leksiyalar",
-      fileSize: "DOCX Konspekt",
-      desc_az: "Rus dilinin fonetikası, leksikası, qrammatik kateqoriyaları, dialoqlar və rabitə-nəqliyyat sahəsi üzrə ilkin kommunikasiya bacarıqlarını əhatə edən I kurs mühazirə vəsaiti.",
-      topics_az: ["Fonetika və Leksika", "Qrammatik Kateqoriyalar", "Dialoqlar və Lüğət", "İlkin Kommunikasiya"],
-      url: "1Русский язык 1 курс (лекции) (1).docx"
-    },
-    {
-      id: "fbk-lec-19",
-      fbkId: "fbk-8",
-      fieldBadge: "XARİCİ DİLLƏR",
-      fieldName_az: "Xarici Dillər (Rus Dili)",
-      subject_az: "Rus Dili (II Kurs)",
-      title_az: "Rus Dili — II Kurs Üçün Mühazirələr Kitabı və İxtisas Terminologiyası",
-      author_az: "Müəlliflər: Aygün Qocayeva, Samirə İmaməliyeva",
-      format: "docx",
-      icon: "📘",
-      volume: "II Kurs · Mühazirə Kitabı",
-      fileSize: "DOCX Konspekt",
-      desc_az: "İxtisas yönümlü rus dili, texniki mətnlərin tərcüməsi, rabitə və nəqliyyat sahələrinə aid terminologiya, işgüzar yazışmalar və peşəkar ünsiyyət üzrə II kurs mühazirə kitabı.",
-      topics_az: ["Texniki Terminologiya", "Mətnlərin Tərcüməsi", "İşgüzar Yazışmalar", "Peşəkar Ünsiyyət"],
-      url: "2Русский язык 2 курс лекции книга  (1).docx"
     },
 
     // --- Ekologiya və Təhlükəsizlik (2) ---
