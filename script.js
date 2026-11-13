@@ -418,6 +418,9 @@ const i18n = {
     about_director_name: "Səbuhi Qurbanov",
     about_director_role: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin Direktoru · «Tərəqqi» medallı",
     about_meet_leadership: "Rəhbərliklə tanış ol",
+    about_memo_btn_pill: "RƏSMİ SAZİŞLƏR",
+    about_memo_btn_title: "Beynəlxalq Əməkdaşlıq Memorandumları",
+    about_memo_btn_desc: "Qazaxıstan və Özbəkistan ilə rəsmi tərəfdaşlıq sənədləri və tədbirlər planı",
     about_metric_years: "İl Akademik Tarix və Təcrübə",
     about_metric_teachers: "Peşəkar Müəllim və Pedaqoji Heyət",
     about_metric_books: "Elektron Dərslik və Tədris Vəsaiti",
@@ -510,7 +513,7 @@ const i18n = {
     cac_status_open: "Açıqdır · İş Saatı",
     cac_status_closed: "Bağlıdır · Qeyri-iş Saatı",
     cac_hours_title: "İş Rejimi və Qəbul",
-    cac_hours_days: "Bazar ertəsi – Cümə: 09:00 – 18:00",
+    cac_hours_days: "Bazar ertəsi – Cümə: 08:30 – 17:00",
     cac_hours_weekend: "Şənbə – Bazar: Qeyri-iş günləri",
     cac_online_apply: "Onlayn Müraciət Et",
     map_header_label: "BDRNK Əsas Tədris Korpusu",
@@ -1316,6 +1319,9 @@ const i18n = {
     about_director_name: "Sabuhi Gurbanov",
     about_director_role: "Director of Baku State Communications and Transport College · Awarded the 'Taraggi' Medal",
     about_meet_leadership: "Meet the Leadership",
+    about_memo_btn_pill: "OFFICIAL AGREEMENTS",
+    about_memo_btn_title: "International Cooperation Memorandums",
+    about_memo_btn_desc: "Official partnership agreements and action plan with Kazakhstan and Uzbekistan",
     about_metric_years: "Years of Academic Heritage",
     about_metric_teachers: "Professional Faculty Members",
     about_metric_books: "Digital Textbooks & Manuals",
@@ -1408,7 +1414,7 @@ const i18n = {
     cac_status_open: "Open Now · Working Hours",
     cac_status_closed: "Closed · Off Hours",
     cac_hours_title: "Working Hours & Reception",
-    cac_hours_days: "Monday – Friday: 09:00 – 18:00",
+    cac_hours_days: "Monday – Friday: 08:30 – 17:00",
     cac_hours_weekend: "Saturday – Sunday: Closed",
     cac_online_apply: "Submit Online Inquiry",
     map_header_label: "BDRNK Main Academic Campus",
@@ -2212,6 +2218,9 @@ const i18n = {
     about_director_name: "Сабухи Гурбанов",
     about_director_role: "Директор Бакинского государственного колледжа связи и транспорта · Награжден медалью «Терегги»",
     about_meet_leadership: "Ознакомиться с руководством",
+    about_memo_btn_pill: "ОФИЦИАЛЬНЫЕ СОГЛАШЕНИЯ",
+    about_memo_btn_title: "Меморандумы о международном сотрудничестве",
+    about_memo_btn_desc: "Официальные партнерские документы и план мероприятий с Казахстаном и Узбекистаном",
     about_metric_years: "Лет академической истории и опыта",
     about_metric_teachers: "Профессиональных преподавателей",
     about_metric_books: "Электронных учебников и пособий",
@@ -2304,7 +2313,7 @@ const i18n = {
     cac_status_open: "Открыто · Рабочее время",
     cac_status_closed: "Закрыто · Нерабочее время",
     cac_hours_title: "Режим работы и прием",
-    cac_hours_days: "Понедельник – Пятница: 09:00 – 18:00",
+    cac_hours_days: "Понедельник – Пятница: 08:30 – 17:00",
     cac_hours_weekend: "Суббота – Воскресенье: Выходные дни",
     cac_online_apply: "Онлайн-обращение",
     map_header_label: "Главный учебный корпус БГКСТ",
@@ -10511,7 +10520,7 @@ function initForm() {
   const livePill = document.getElementById("contact-live-status");
   const liveText = document.getElementById("contact-live-text");
 
-  // 1. Live Working Hours Status (Baku Time: Mon–Fri 09:00–18:00)
+  // 1. Live Working Hours Status (Baku Time: Mon–Fri 08:30–17:00)
   function updateLiveWorkStatus() {
     if (!livePill || !liveText) return;
     try {
@@ -10520,12 +10529,15 @@ function initForm() {
         timeZone: "Asia/Baku",
         weekday: "short",
         hour: "numeric",
+        minute: "numeric",
         hour12: false,
       }).formatToParts(now);
       const weekday = bakuParts.find((p) => p.type === "weekday")?.value || "Mon";
       const hour = parseInt(bakuParts.find((p) => p.type === "hour")?.value || "10", 10);
+      const minute = parseInt(bakuParts.find((p) => p.type === "minute")?.value || "0", 10);
+      const totalMinutes = hour * 60 + minute;
       const isWorkday = !["Sat", "Sun"].includes(weekday);
-      const isOpen = isWorkday && hour >= 9 && hour < 18;
+      const isOpen = isWorkday && totalMinutes >= (8 * 60 + 30) && totalMinutes < (17 * 60);
 
       livePill.classList.toggle("closed", !isOpen);
       const key = isOpen ? "cac_status_open" : "cac_status_closed";
