@@ -6351,6 +6351,30 @@ const libraryData = [
     icon: "💰",
     url: "maliyye ucotu.docx",
   },
+  {
+    id: 81,
+    title_az: "Maliyyə və kredit (Mühazirələr toplusu)",
+    title_en: "Finance and Credit (Lecture Notes)",
+    title_ru: "Финансы и кредит (Сборник лекций)",
+    author_az: "Müəllim: Nuriyeva Gülsüm (İqtisadiyyat və Maliyyə FBK)",
+    author_en: "Teacher: Nuriyeva Gulsum (Economics & Finance Dept.)",
+    author_ru: "Преподаватель: Нуриева Гюльсум (ФБК Экономики и финансов)",
+    category: "menecment",
+    icon: "💳",
+    url: "Maliyye kredit.docx",
+  },
+  {
+    id: 82,
+    title_az: "Beynəlxalq poçt rabitəsi (BPR) (Mühazirələr toplusu — Rus bölməsi)",
+    title_en: "International Postal Communications (Lecture Notes — Russian Sector)",
+    title_ru: "Международная почтовая связь (БПР) (Курс лекций — Русский сектор)",
+    author_az: "Müəllim: Mansurova Sevda (Мансурова Севда)",
+    author_en: "Teacher: Mansurova Sevda",
+    author_ru: "Преподаватель: Мансурова Севда",
+    category: "rabite",
+    icon: "📮",
+    url: "BPR(rus).docx",
+  },
 ];
 
 const lecturesData = [
@@ -8979,6 +9003,22 @@ function initLibraryModule() {
       topics_az: ["Poçt-Bank Əməliyyatları", "COLVIR və APUS Sistemləri", "Maliyyə Xidmətləri", "Bank Hesablaşmaları"],
       url: "P RAB BANK EMEL.pdf"
     },
+    {
+      id: "fbk-lec-bpr-rus",
+      fbkId: "fbk-4",
+      fieldBadge: "RUS BÖLMƏSİ · ПОЧТА",
+      fieldName_az: "Elektronika, Rabitə və Metrologiya (Rus bölməsi)",
+      subject_az: "Beynəlxalq Poçt Rabitəsi (Rus bölməsi)",
+      title_az: "Международная Почтовая Связь (БПР) — Курс Лекций (Rus bölməsi)",
+      author_az: "Müəllim: Mansurova Sevda (Мансурова Севда)",
+      format: "docx",
+      icon: "📮",
+      volume: "52 Стр. · Курс Лекций · DOCX",
+      fileSize: "130 KB DOCX",
+      desc_az: "Rus bölməsi tələbələri üçün «Международная почтовая связь» fənni üzrə hazırlanmış, beynəlxalq poçt göndərişlərinin növləri və kateqoriyaları, poçt mübadiləsi, gömrük nəzarəti və beynəlxalq poçt konvensiyalarını əhatə edən 52 səhifəlik rəsmi mühazirə vəsaiti.",
+      topics_az: ["Международная Почта", "Виды Отправлений", "Таможенный Контроль", "Почтовые Конвенции"],
+      url: "BPR(rus).docx"
+    },
 
     // --- Nəqliyyat və Materialşünaslıq (7) ---
     {
@@ -9453,6 +9493,22 @@ function initLibraryModule() {
       desc_az: "Mühasibat uçotunun mahiyyəti və təyinatı, təsərrüfat əməliyyatlarının ilkin qeydiyyatı, ikili yazılış sistemi, aktivlər, kapital və öhdəliklər, maliyyə hesabatlarının tərtibi və təqdimatı üzrə 62 səhifəlik fundamental mühazirə toplusu.",
       topics_az: ["Mühasibat Uçotu", "İkili Yazılış", "Aktivlər və Öhdəliklər", "Maliyyə Hesabatları"],
       url: "maliyye ucotu.docx"
+    },
+    {
+      id: "fbk-lec-maliyye-kredit",
+      fbkId: "fbk-7",
+      fieldBadge: "MALİYYƏ VƏ KREDİT",
+      fieldName_az: "İqtisadiyyat, Maliyyə və Kredit",
+      subject_az: "Maliyyə və Kredit",
+      title_az: "Maliyyə və Kredit — Fundamental Mühazirələr Toplusu",
+      author_az: "Müəllim: Nuriyeva Gülsüm",
+      format: "docx",
+      icon: "💳",
+      volume: "150 Səhifə · Fundamental Vəsait",
+      fileSize: "197 KB DOCX",
+      desc_az: "Pulun mahiyyəti və funksiyaları, pul tədavülü və emissiyası, kredit sistemi və kreditin formaları, bank sistemi, inflyasiya və maliyyə bazarlarının təşkili üzrə 150 səhifəlik fundamental mühazirə vəsaiti.",
+      topics_az: ["Pulun Mahiyyəti", "Kredit Sistemi", "Bank Əməliyyatları", "Maliyyə Münasibətləri"],
+      url: "Maliyye kredit.docx"
     },
 
     // --- Ekologiya və Təhlükəsizlik (2) ---
