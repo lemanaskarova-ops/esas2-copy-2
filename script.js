@@ -6327,6 +6327,30 @@ const libraryData = [
     icon: "📣",
     url: "Marketinq (rus).docx",
   },
+  {
+    id: 79,
+    title_az: "Marketinq (Mühazirələr toplusu — Azərbaycan bölməsi)",
+    title_en: "Marketing (Lecture Notes — Azerbaijani Sector)",
+    title_ru: "Маркетинг (Сборник лекций — Азербайджанский сектор)",
+    author_az: "İqtisadiyyat və İdarəetmə FBK",
+    author_en: "Economics and Management Department",
+    author_ru: "ФБК Экономики и управления",
+    category: "menecment",
+    icon: "📣",
+    url: "Marketinq (az).docx",
+  },
+  {
+    id: 80,
+    title_az: "Maliyyə və mühasibat uçotu (Mühazirələr toplusu)",
+    title_en: "Financial and Accounting Records (Lecture Notes)",
+    title_ru: "Финансовый и бухгалтерский учет (Сборник лекций)",
+    author_az: "Müəllim: Əzizə Quliyeva (İqtisadiyyat və Maliyyə FBK)",
+    author_en: "Teacher: Aziza Guliyeva (Economics & Finance Dept.)",
+    author_ru: "Преподаватель: Азиза Кулиева (ФБК Экономики и финансов)",
+    category: "menecment",
+    icon: "💰",
+    url: "maliyye ucotu.docx",
+  },
 ];
 
 const lecturesData = [
@@ -9383,6 +9407,22 @@ function initLibraryModule() {
       url: "Menecment (rus).docx"
     },
     {
+      id: "fbk-lec-marketinq-az",
+      fbkId: "fbk-7",
+      fieldBadge: "MARKETİNQ",
+      fieldName_az: "İqtisadiyyat və Marketinq",
+      subject_az: "Marketinq Haqqında Anlayış, Məqsəd və Vəzifələri",
+      title_az: "Marketinqin Əsasları — Fundamental Mühazirələr Toplusu",
+      author_az: "İqtisadiyyat və İdarəetmə Kafedrası",
+      format: "docx",
+      icon: "📣",
+      volume: "34 Səhifə · Fundamental Vəsait",
+      fileSize: "356 KB DOCX",
+      desc_az: "Marketinqin anlayışı, məqsəd və vəzifələri, tələb və tələbat anlayışları, bazar subyektləri, mübadilə və sövdələşmə şərtləri, strateji və taktiki marketinq hədəfləri üzrə rəsmi mühazirə vəsaiti.",
+      topics_az: ["Marketinq Anlayışı", "Tələb və Tələbat", "Bazar Subyektləri", "Mübadilə və Sövdələşmə"],
+      url: "Marketinq (az).docx"
+    },
+    {
       id: "fbk-lec-marketinq-rus",
       fbkId: "fbk-7",
       fieldBadge: "RUS BÖLMƏSİ · МАРКЕТИНГ",
@@ -9397,6 +9437,22 @@ function initLibraryModule() {
       desc_az: "Rus bölməsi tələbələri üçün «Основы маркетинга» fənni üzrə hazırlanmış, bazar iqtisadiyyatında marketinqin rolu, marketinq kompleksi (4P), bazar seqmentasiyası və istehlakçı davranışının tədqiqini əhatə edən 57 səhifəlik rəsmi mühazirə vəsaiti.",
       topics_az: ["Основы Маркетинга", "Комплекс Маркетинга", "Рыночная Экономика", "Поведение Потребителей"],
       url: "Marketinq (rus).docx"
+    },
+    {
+      id: "fbk-lec-maliyye-ucot",
+      fbkId: "fbk-7",
+      fieldBadge: "MALİYYƏ VƏ UÇOT",
+      fieldName_az: "İqtisadiyyat, Maliyyə və Mühasibat",
+      subject_az: "Mühasibat Uçotunun Mahiyyəti və Təyinatı",
+      title_az: "Maliyyə və Mühasibat Uçotu — Fundamental Mühazirələr Toplusu",
+      author_az: "Müəllim: Əzizə Quliyeva",
+      format: "docx",
+      icon: "💰",
+      volume: "62 Səhifə · Fundamental Vəsait",
+      fileSize: "119 KB DOCX",
+      desc_az: "Mühasibat uçotunun mahiyyəti və təyinatı, təsərrüfat əməliyyatlarının ilkin qeydiyyatı, ikili yazılış sistemi, aktivlər, kapital və öhdəliklər, maliyyə hesabatlarının tərtibi və təqdimatı üzrə 62 səhifəlik fundamental mühazirə toplusu.",
+      topics_az: ["Mühasibat Uçotu", "İkili Yazılış", "Aktivlər və Öhdəliklər", "Maliyyə Hesabatları"],
+      url: "maliyye ucotu.docx"
     },
 
     // --- Ekologiya və Təhlükəsizlik (2) ---
