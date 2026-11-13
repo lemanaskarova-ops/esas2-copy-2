@@ -6279,6 +6279,42 @@ const libraryData = [
     icon: "🏦",
     url: "P RAB BANK EMEL.pdf",
   },
+  {
+    id: 75,
+    title_az: "Nəqliyyatda sığorta (Mühazirələr toplusu)",
+    title_en: "Insurance in Transport (Lecture Notes)",
+    title_ru: "Страхование на транспорте (Сборник лекций)",
+    author_az: "Nəqliyyat və Logistika FBK",
+    author_en: "Transport and Logistics Department",
+    author_ru: "ФБК Транспорта и логистики",
+    category: "transport",
+    icon: "🛡️",
+    url: "Neqliyyatda siqorta.docx",
+  },
+  {
+    id: 76,
+    title_az: "Menecment (Mühazirələr toplusu — Rus bölməsi)",
+    title_en: "Management (Lecture Notes — Russian Sector)",
+    title_ru: "Менеджмент (Курс лекций — Русский сектор)",
+    author_az: "İqtisadiyyat və İdarəetmə FBK (Rus bölməsi)",
+    author_en: "Economics and Management Department (Russian Sector)",
+    author_ru: "ФБК Экономики и управления (Русский сектор)",
+    category: "menecment",
+    icon: "📈",
+    url: "Menecment (rus).docx",
+  },
+  {
+    id: 77,
+    title_az: "Menecmentin metodoloji əsasları (Mühazirələr toplusu — Azərbaycan bölməsi)",
+    title_en: "Methodological Foundations of Management (Lecture Notes — Azerbaijani Sector)",
+    title_ru: "Методологические основы менеджмента (Сборник лекций — Азербайджанский сектор)",
+    author_az: "İqtisadiyyat və İdarəetmə FBK",
+    author_en: "Economics and Management Department",
+    author_ru: "ФБК Экономики и управления",
+    category: "menecment",
+    icon: "📈",
+    url: "Menecment (az).docx",
+  },
 ];
 
 const lecturesData = [
@@ -9021,6 +9057,22 @@ function initLibraryModule() {
       topics_az: ["Fiziki-Mexaniki Xassələr", "Polad İstehsalı", "Termiki Emal", "Konstruksiya Materialları"],
       url: "Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf"
     },
+    {
+      id: "fbk-lec-neqliyyat-siqorta",
+      fbkId: "fbk-5",
+      fieldBadge: "NƏQLİYYATDA SIĞORTA",
+      fieldName_az: "Nəqliyyat və Materialşünaslıq",
+      subject_az: "Nəqliyyatda Sığorta İşi",
+      title_az: "Nəqliyyatda Sığorta — Fundamental Mühazirələr Toplusu",
+      author_az: "Nəqliyyat və Logistika Kafedrası",
+      format: "docx",
+      icon: "🛡️",
+      volume: "Mühazirələr Toplusu · DOCX",
+      fileSize: "80 KB DOCX",
+      desc_az: "Sığortanın iqtisadi mahiyyəti, sərnişin və yüklərin sığortalanması, yerüstü nəqliyyat vasitələrinin sığortası, nəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası (NVSMMİS) üzrə fundamental mühazirə toplusu.",
+      topics_az: ["Sığorta İşi", "Nəqliyyat Sığortası", "Sərnişin və Yük Daşımaları", "NVSMMİS İcbari Sığorta"],
+      url: "Neqliyyatda siqorta.docx"
+    },
 
     // --- Azərbaycan Dili və Ədəbiyyat (3) ---
     {
@@ -9285,6 +9337,38 @@ function initLibraryModule() {
       desc_az: "Rus bölməsi tələbələri üçün «Предпринимательская деятельность и основы бизнеса» fənni üzrə hazırlanmış, biznesin təşkili, sahibkarlıq riski, innovasiyalar və bazar iqtisadiyyatında fəaliyyət növlərini əhatə edən rəsmi mühazirə vəsaiti.",
       topics_az: ["Основы Бизнеса", "Предпринимательская Деятельность", "Факторы Производства", "Виды Предпринимательства"],
       url: "Sahib.esas.ve biznese giris(rus).docx"
+    },
+    {
+      id: "fbk-lec-menecment-az",
+      fbkId: "fbk-7",
+      fieldBadge: "MENECMENT",
+      fieldName_az: "İqtisadiyyat və İdarəetmə",
+      subject_az: "Menecmentin Metodoloji Əsasları",
+      title_az: "Menecmentin Metodoloji Əsasları — Fundamental Mühazirələr Toplusu",
+      author_az: "İqtisadiyyat və İdarəetmə Kafedrası",
+      format: "docx",
+      icon: "📈",
+      volume: "280 Səhifə · Fundamental Vəsait",
+      fileSize: "1.2 MB DOCX",
+      desc_az: "Menecmentin mahiyyəti və prinsipləri, idarəetmə funksiyaları, planlaşdırma, motivasiya nəzəriyyələri, strateji idarəetmə, rəhbərin əməyinin rasionallaşdırılması və bazar iqtisadiyyatında idarəetmə metodları üzrə 280 səhifəlik fundamental mühazirə vəsaiti.",
+      topics_az: ["Menecmentin Mahiyyəti", "İdarəetmə Funksiyaları", "Motivasiya Nəzəriyyələri", "Strateji İdarəetmə"],
+      url: "Menecment (az).docx"
+    },
+    {
+      id: "fbk-lec-menecment-rus",
+      fbkId: "fbk-7",
+      fieldBadge: "RUS BÖLMƏSİ · МЕНЕДЖМЕНТ",
+      fieldName_az: "İqtisadiyyat və İdarəetmə (Rus bölməsi)",
+      subject_az: "Menecment (Rus bölməsi)",
+      title_az: "Менеджмент — Курс Лекций (Rus bölməsi)",
+      author_az: "İqtisadiyyat və İdarəetmə Kafedrası (Rus bölməsi)",
+      format: "docx",
+      icon: "📈",
+      volume: "Курс Лекций · DOCX",
+      fileSize: "173 KB DOCX",
+      desc_az: "Rus bölməsi tələbələri üçün «Менеджмент» fənni üzrə hazırlanmış, idarəetmənin metodoloji əsasları, prinsipləri, təşkilati strukturlar, qərarların qəbulu, motivasiya və liderlik nəzəriyyələrini əhatə edən rəsmi mühazirə vəsaiti.",
+      topics_az: ["Основы Менеджмента", "Принципы Управления", "Организационные Структуры", "Принятие Решений"],
+      url: "Menecment (rus).docx"
     },
 
     // --- Ekologiya və Təhlükəsizlik (2) ---
