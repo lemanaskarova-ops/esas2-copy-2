@@ -11168,6 +11168,41 @@ function initGalleryModule() {
         postType: "reel",
         i18n: "gallery_event_reel",
         suffix: " - 15",
+      },
+      {
+        type: "instagram",
+        id: "DekZHaEMAIC",
+        postType: "reel",
+        i18n: "gallery_event_reel",
+        suffix: " - 16",
+      },
+      {
+        type: "instagram",
+        id: "DeOJeqosro8",
+        postType: "reel",
+        i18n: "gallery_event_reel",
+        suffix: " - 17",
+      },
+      {
+        type: "instagram",
+        id: "DeeOurIMWmp",
+        postType: "reel",
+        i18n: "gallery_event_reel",
+        suffix: " - 18",
+      },
+      {
+        type: "instagram",
+        id: "DecsTtqDLET",
+        postType: "p",
+        i18n: "gallery_event_reel",
+        suffix: " - 19",
+      },
+      {
+        type: "instagram",
+        id: "DeOJGyjMEJ_",
+        postType: "reel",
+        i18n: "gallery_event_reel",
+        suffix: " - 20",
       }
     ],
     rooms: [
