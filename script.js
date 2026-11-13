@@ -3230,6 +3230,28 @@ const staffData = {
 
 const newsData = [
   {
+    "id": 110,
+    "official_id": "122111796171146162",
+    "title_az": "Kollecdə 20 Yanvar faciəsinin 36-cı ildönümünə həsr olunmuş anım tədbiri keçirilib",
+    "title_en": "Commemorative Event Dedicated to the 36th Anniversary of the 20 January Tragedy Held at the College",
+    "title_ru": "В колледже состоялось памятное мероприятие, посвященное 36-й годовщине трагедии 20 Января",
+    "desc_az": "Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 Yanvar faciəsinin 36-cı ildönümünə həsr olunmuş anım tədbiri keçirilmişdir...",
+    "desc_en": "A commemorative event dedicated to the 36th anniversary of the 20 January tragedy was held at Baku State Communications and Transport College under AzTU...",
+    "desc_ru": "В Бакинском государственном колледже связи и транспорта при АзТУ прошло памятное мероприятие, посвященное 36-й годовщине трагедии 20 Января...",
+    "full_az": "🇦🇿 20 Yanvar – Ümumxalq Hüzn Günü\n\nAzərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 Yanvar faciəsinin 36-cı ildönümünə həsr olunmuş anım tədbiri keçirilmişdir.\n\nTədbirdə kollec rəhbərliyi, müəllimlər və tələbələr iştirak etmiş, Vətənimizin azadlığı və müstəqilliyi uğrunda canlarından keçmiş şəhidlərin əziz xatirəsi bir dəqiqəlik sükutla yad edilmiş, 20 Yanvar hadisələrinin milli azadlıq mübarizəsindəki həlledici rolundan bəhs olunmuşdur. Tələbələrin çıxışlarında 20 Yanvar şəhidlərinə həsr olunmuş şeirlər səsləndirilmiş, mövzuya uyğun səhnəciklər nümayiş etdirilmişdir.\n\n20 Yanvar şəhidləri xalqımızın yaddaşında əbədi yaşayacaq. 🕯️🇦🇿",
+    "full_en": "🇦🇿 20 January – National Mourning Day\n\nA solemn commemorative event dedicated to the 36th anniversary of the 20 January tragedy was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event was attended by the college administration, faculty, and students. The dear memory of our martyrs who sacrificed their lives for the freedom, sovereignty, and independence of Azerbaijan was honored with a minute of silence, and speeches highlighted the pivotal role of 20 January in our national liberation movement. Students recited poems dedicated to the martyrs and performed thematic theatrical sketches.\n\nThe martyrs of 20 January will live forever in the memory of our people. 🕯️🇦🇿",
+    "full_ru": "🇦🇿 20 Января — День всенародной скорби\n\nВ Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось памятное мероприятие, посвященное 36-й годовщине трагедии 20 Января.\n\nВ мероприятии приняли участие руководство колледжа, преподаватели и студенты. Светлая память шехидов, отдавших свои жизни во имя свободы и независимости Родины, была почтена минутой молчания. Выступающие подчеркнули историческое значение событий 20 Января в национально-освободительном движении нашего народа. Студенты прочитали патриотические стихи и представили тематические постановки.\n\nПамять о шехидах 20 Января будет вечно жить в сердцах нашего народа. 🕯️🇦🇿",
+    "date": "19 Yanvar 2026",
+    "image": "yanvar20_tedbir.jpg",
+    "url": "https://www.facebook.com/share/r/1JFLjDQSho/",
+    "tag_az": "Anım Günü / 20 Yanvar",
+    "tag_en": "Memorial Day / 20 January",
+    "tag_ru": "День памяти / 20 Января",
+    "date_az": "19 Yanvar 2026",
+    "date_en": "19 January 2026",
+    "date_ru": "19 Января 2026"
+  },
+  {
     "id": 109,
     "official_id": "122117943057146162",
     "title_az": "Kollecdə BMT-nin Ümumdünya Şəhərsalma Forumuna (WUF13) həsr olunmuş maarifləndirici tədbir keçirilib",
