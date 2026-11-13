@@ -39,7 +39,9 @@ const i18n = {
     nav_home: "Ana Səhifə",
     nav_about: "Haqqımızda",
     nav_structure: "Struktur",
+    nav_teacher_certs: "Fəxri Əməkdaşlarımız",
     nav_library: "Kitabxana",
+    nav_lectures_archive: "Mühazirələr",
 
     nav_science: "Elm və Nəşrlər",
     science_badge: "Tədqiqat Fəaliyyəti və Beynəlxalq Nəşrlər",
@@ -550,7 +552,7 @@ const i18n = {
     cf_guarantee_text: "Müraciətiniz rəsmi qeydiyyata alınır və 1–3 iş günü ərzində e-poçt və ya telefon vasitəsilə cavablandırılır.",
     footer_copyright:
       "© 2026 BDRNK - Müəllif hüquqları qorunur. Hazırlayan: Ləman Əskərova",
-  
+
     // CAMPUS & ROOMS
     nav_campus: "Kampus & Otaqlar",
     nav_campus_sub: "5 mərtəbəli bina naviqasiyası",
@@ -618,9 +620,9 @@ const i18n = {
     lecture_sub_neqliyyat: "1 videodərs · Avtonəqliyyat",
     lecture_sub_cografiya: "1 videodərs · Təbiət və Cəmiyyət",
     lecture_sub_fizika: "1 videodərs · Təbiət və Fizika",
-    lecture_sub_tarix: "9 videodərs · Tarix və Zəfər",
+    lecture_sub_tarix: "7 videodərs · Tarix və Zəfər",
     lecture_sub_azdili: "1 videodərs · Qrammatika və Nitq",
-    lecture_sub_huquq: "6 videodərs · Hüquq Sistemi",
+    lecture_sub_huquq: "5 videodərs · Hüquq Sistemi",
     lecture_sub_biologiya: "1 videodərs · Təbiət Elmləri",
 
     // HONOR & FAME TABS
@@ -685,14 +687,14 @@ const i18n = {
     lib_total_counter: "59 Rəsmi Dərs Vəsaiti",
     lib_fund_about_btn: "🏛️ Kitabxana Fondu və Tarixi",
     science_director_bio_btn: "Direktor Səbuhi Qurbanovun Bioqrafiyası",
-    dept_meta_all: "22 Videodərs · Bütün fənlər",
+    dept_meta_all: "19 Videodərs · Bütün fənlər",
     dept_meta_it: "2 Videodərs · Kompüter sistemləri",
     dept_meta_transport: "1 Videodərs · Nəqliyyat Sistemləri",
     dept_meta_geography: "1 Videodərs · Yer Elmləri və Coğrafiya",
     dept_meta_physics: "1 Videodərs · Təbiət və Fizika",
-    dept_meta_history: "9 Videodərs · Tarix və Zəfər",
+    dept_meta_history: "7 Videodərs · Tarix və Zəfər",
     dept_meta_az_lang: "1 Videodərs · Qrammatika və Nitq",
-    dept_meta_law: "6 Videodərs · Hüquq sistemi",
+    dept_meta_law: "5 Videodərs · Hüquq sistemi",
     dept_meta_biology: "1 Videodərs · Təbiət elmləri",
     gal_headline_exam: "Şəffaf və Rəqəmsal İmtahan Sessiyaları",
     gal_summary_exam: "Kollecimizdə tələbələrin biliyinin obyektiv qiymətləndirilməsi üçün müasir monitorinq və kompüterləşdirilmiş imtahan mərkəzi fəaliyyət göstərir.",
@@ -806,10 +808,22 @@ const i18n = {
     nav_college: "Kollecimiz",
     nav_about_sub: "Kollecin yaranma tarixi və missiyası",
     nav_structure_sub: "İdarə heyəti, şöbələr və FBK-lar",
+    nav_teacher_certs_sub: "Pedaqoji heyətin sertifikatları və təltifləri",
+    teacher_certs_badge: "Pedaqoji İxtisaslaşma və Fəxri Təltiflər",
+    teacher_certs_title: "Fəxri Əməkdaşlarımız və Sertifikatlar Portfeli",
+    teacher_certs_desc: "Kollecimizin pedaqoji və mühəndis heyətinin ARTİ, Təhsil Nazirliyi, beynəlxalq İKT şirkətləri və elmi konfranslar tərəfindən verilmiş rəsmi sertifikatları və fəxri nailiyyətləri.",
+    t_cert_feat_badge: "Qlobal Akkreditasiya & Beynəlxalq Reyestr",
+    t_cert_feat_title: "Pedaqoji Heyətin Beynəlxalq Sertifikatlar Məcmuəsi",
+    t_cert_feat_desc: "Kollecimizin müəllim və mühəndis heyətinin beynəlxalq təhsil qurumları, İKT nəhəngləri (Cisco, Microsoft, Cambridge) və beynəlxalq elmi simpoziumlar tərəfindən təqdim edilmiş rəsmi beynəlxalq sertifikatlar toplusu.",
+    t_cert_view_doc: "Sənədə Bax (PDF)",
+    t_cert_dl_doc: "PDF Yüklə",
     nav_honors_sub: "Beynəlxalq çempionlar və şərəf lövhəsi",
     nav_academics: "Tədris & Elm",
-    nav_lectures_sub: "23 rəsmi videodərs və multimedia arxivi",
-    nav_library_sub: "44+ dərslik, fond və daxili oxu zalı",
+    nav_lectures_sub: "19 rəsmi videodərs və multimedia arxivi",
+    nav_library_sub: "59 dərs vəsaiti, fond və daxili oxu zalı",
+    nav_lectures_archive_sub: "24 rəsmi mühazirə və tədris vəsaiti",
+    mobile_nav_lectures_archive: "Mühazirələr (24 Vəsait)",
+    nav_lectures_archive: "Mühazirələr",
     nav_science_sub: "Beynəlxalq və yerli məqalə və nəşrlər",
     nav_media: "Media & Həyat",
     nav_news_sub: "Rəsmi elanlar və kollec tədbirləri",
@@ -929,7 +943,9 @@ const i18n = {
     nav_home: "Home",
     nav_about: "About Us",
     nav_structure: "Structure",
-    nav_library: "Library",
+    nav_teacher_certs: "Honored Faculty & Staff",
+    nav_library: "Digital Library",
+    nav_lectures_archive: "Lectures Archive",
 
     nav_science: "Science & Publications",
     science_badge: "Research Activity & Publications",
@@ -1434,7 +1450,7 @@ const i18n = {
     cf_guarantee_text: "Your inquiry is officially registered and answered within 1–3 business days via email or phone.",
     footer_copyright:
       "© 2026 BDRNK - All rights reserved. Created by: Ləman Əskərova",
-  
+
     // CAMPUS & ROOMS
     nav_campus: "Campus & Rooms",
     nav_campus_sub: "5-floor building navigator",
@@ -1502,9 +1518,9 @@ const i18n = {
     lecture_sub_neqliyyat: "1 video lesson · Transport Systems",
     lecture_sub_cografiya: "1 video lesson · Nature & Society",
     lecture_sub_fizika: "1 video lesson · Nature & Physics",
-    lecture_sub_tarix: "9 video lessons · History & Victory",
+    lecture_sub_tarix: "7 video lessons · History & Victory",
     lecture_sub_azdili: "1 video lesson · Grammar & Speech",
-    lecture_sub_huquq: "6 video lessons · Legal System",
+    lecture_sub_huquq: "5 video lessons · Legal System",
     lecture_sub_biologiya: "1 video lesson · Natural Sciences",
 
     // HONOR & FAME TABS
@@ -1569,14 +1585,14 @@ const i18n = {
     lib_total_counter: "59 Official Textbooks",
     lib_fund_about_btn: "🏛️ Library Fund & History",
     science_director_bio_btn: "Director Sabuhi Gurbanov's Biography",
-    dept_meta_all: "22 Video Lectures · All subjects",
+    dept_meta_all: "19 Video Lectures · All subjects",
     dept_meta_it: "2 Video Lectures · Computer Systems",
     dept_meta_transport: "1 Video Lecture · Transport Systems",
     dept_meta_geography: "1 Video Lecture · Earth Sciences & Geography",
     dept_meta_physics: "1 Video Lecture · Nature & Physics",
-    dept_meta_history: "9 Video Lectures · History & Victory",
+    dept_meta_history: "7 Video Lectures · History & Victory",
     dept_meta_az_lang: "1 Video Lecture · Grammar & Speech",
-    dept_meta_law: "6 Video Lectures · Legal System",
+    dept_meta_law: "5 Video Lectures · Legal System",
     dept_meta_biology: "1 Video Lecture · Life Sciences",
     gal_headline_exam: "Transparent & Digital Exam Sessions",
     gal_summary_exam: "Our college operates a modern computerized examination center equipped for objective monitoring and student assessment.",
@@ -1690,10 +1706,21 @@ const i18n = {
     nav_college: "Our College",
     nav_about_sub: "College history and mission",
     nav_structure_sub: "Leadership & departments",
+    nav_teacher_certs_sub: "Faculty certificates and official awards",
+    teacher_certs_badge: "Pedagogical Qualification & Honors",
+    teacher_certs_title: "Our Honored Faculty & Certificate Portfolio",
+    teacher_certs_desc: "Official certificates and professional qualifications awarded to our honored faculty by the Ministry of Science and Education, ARTİ, international ICT corporations, and scientific conferences.",
+    t_cert_feat_badge: "Global Accreditation & International Registry",
+    t_cert_feat_title: "Faculty International Certificates Compendium",
+    t_cert_feat_desc: "Official unified compendium of international certificates awarded to our faculty and engineering staff by global education bodies, ICT leaders (Cisco, Microsoft, Cambridge), and international symposiums.",
+    t_cert_view_doc: "View Document (PDF)",
+    t_cert_dl_doc: "Download PDF",
     nav_honors_sub: "International champions & honor roll",
     nav_academics: "Academics & Science",
-    nav_lectures_sub: "23 video lectures & media archive",
-    nav_library_sub: "44+ textbooks, collection & reading room",
+    nav_lectures_sub: "19 video lectures & media archive",
+    nav_library_sub: "59 textbooks, collection & reading room",
+    nav_lectures_archive_sub: "24 official lectures & study materials",
+    mobile_nav_lectures_archive: "Lectures (24 Resources)",
     nav_science_sub: "International and domestic articles & publications",
     nav_media: "Media & Campus Life",
     nav_news_sub: "Official announcements & college events",
@@ -1808,7 +1835,9 @@ const i18n = {
     nav_home: "Главная",
     nav_about: "О нас",
     nav_structure: "Структура",
-    nav_library: "Библиотека",
+    nav_teacher_certs: "Почетные Сотрудники",
+    nav_library: "Электронная Библиотека",
+    nav_lectures_archive: "Лекции",
 
     nav_science: "Наука и Публикации",
     science_badge: "Исследовательская Деятельность и Публикации",
@@ -2317,7 +2346,7 @@ const i18n = {
     cf_guarantee_text: "Ваше обращение официально регистрируется и рассматривается в течение 1–3 рабочих дней по эл. почте или телефону.",
     footer_copyright:
       "© 2026 BDRNK - Все права защищены. Разработчик: Ləman Əskərova",
-  
+
     // CAMPUS & ROOMS
     nav_campus: "Кампус и Аудитории",
     nav_campus_sub: "Навигатор по 5 этажам корпуса",
@@ -2385,9 +2414,9 @@ const i18n = {
     lecture_sub_neqliyyat: "1 видеоурок · Автотранспорт",
     lecture_sub_cografiya: "1 видеоурок · Природа и общество",
     lecture_sub_fizika: "1 видеоурок · Природа и физика",
-    lecture_sub_tarix: "9 видеоуроков · История и Победа",
+    lecture_sub_tarix: "7 видеоуроков · История и Победа",
     lecture_sub_azdili: "1 видеоурок · Грамматика и речь",
-    lecture_sub_huquq: "6 видеоуроков · Правовая система",
+    lecture_sub_huquq: "5 видеоуроков · Правовая система",
     lecture_sub_biologiya: "1 видеоурок · Естественные науки",
 
     // HONOR & FAME TABS
@@ -2452,14 +2481,14 @@ const i18n = {
     lib_total_counter: "59 Официальных учебных пособий",
     lib_fund_about_btn: "🏛️ Библиотечный фонд и история",
     science_director_bio_btn: "Биография директора Сабухи Гурбанова",
-    dept_meta_all: "23 Видеоурока · Все предметы",
+    dept_meta_all: "19 Видеоуроков · Все предметы",
     dept_meta_it: "2 Видеоурока · Компьютерные системы",
     dept_meta_transport: "1 Видеоурок · Транспортные системы",
-    dept_meta_geography: "2 Видеоурока · Науки о Земле и география",
+    dept_meta_geography: "1 Видеоурок · Науки о Земле и география",
     dept_meta_physics: "1 Видеоурок · Естествознание и физика",
-    dept_meta_history: "9 Видеоуроков · История и Победа",
+    dept_meta_history: "7 Видеоуроков · История и Победа",
     dept_meta_az_lang: "1 Видеоурок · Грамматика и речь",
-    dept_meta_law: "6 Видеоуроков · Правовая система",
+    dept_meta_law: "5 Видеоуроков · Правовая система",
     dept_meta_biology: "1 Видеоурок · Естественные науки",
     gal_headline_exam: "Прозрачные и цифровые экзаменационные сессии",
     gal_summary_exam: "В нашем колледже действует современный компьютеризированный экзаменационный центр с объективным мониторингом оценки знаний студентов.",
@@ -2573,10 +2602,21 @@ const i18n = {
     nav_college: "Наш Колледж",
     nav_about_sub: "История создания и миссия колледжа",
     nav_structure_sub: "Руководство, отделы и ПЦК",
+    nav_teacher_certs_sub: "Сертификаты и награды педагогического состава",
+    teacher_certs_badge: "Педагогическая Квалификация и Награды",
+    teacher_certs_title: "Наши Почетные Сотрудники и Портфолио Сертификатов",
+    teacher_certs_desc: "Официальные сертификаты и квалификационные достижения почетного педагогического состава колледжа от Министерства науки и образования, ARTİ, международных ИКТ-компаний и научных конференций.",
+    t_cert_feat_badge: "Глобальная Аккредитация и Международный Реестр",
+    t_cert_feat_title: "Сборник Международных Сертификатов Преподавательского Состава",
+    t_cert_feat_desc: "Официальный сводный сборник международных сертификатов преподавательского и инженерного состава колледжа от мировых образовательных институтов, лидеров ИКТ (Cisco, Microsoft, Cambridge) и международных симпозиумов.",
+    t_cert_view_doc: "Смотреть Документ (PDF)",
+    t_cert_dl_doc: "Скачать PDF",
     nav_honors_sub: "Международные чемпионы и доска почета",
     nav_academics: "Учеба и Наука",
-    nav_lectures_sub: "23 видеоурока и медиа-архив",
-    nav_library_sub: "44+ учебника, фонд и читальный зал",
+    nav_lectures_sub: "19 видеоуроков и медиа-архив",
+    nav_library_sub: "59 учебников, фонд и читальный зал",
+    nav_lectures_archive_sub: "24 официальные лекции и учебные материалы",
+    mobile_nav_lectures_archive: "Лекции (24 пособия)",
     nav_science_sub: "Международные и местные статьи и публикации",
     nav_media: "Медиа и Жизнь",
     nav_news_sub: "Официальные объявления и события",
@@ -6083,6 +6123,162 @@ const libraryData = [
     icon: "💬",
     url: "KOMMUNİKASİYA DF 2 (1).docx",
   },
+  {
+    id: 62,
+    title_az: "Coğrafiya (I Semestr Mühazirələr Toplusu)",
+    title_en: "Geography (1st Semester Lecture Notes)",
+    title_ru: "География (Сборник лекций за 1-й семестр)",
+    author_az: "Eminəliyeva Əntiqə, Mahmudova Könül",
+    author_en: "Antiga Eminaliyeva, Konul Mahmudova",
+    author_ru: "Антига Эминалиева, Кенуль Махмудова",
+    category: "cografiya",
+    icon: "🌍",
+    url: "COĞRAFİYA .MUHAZİRƏ.1-ci semestr.2023.pdf",
+  },
+  {
+    id: 63,
+    title_az: "Coğrafiya (II Semestr Mühazirələr — 18 Mövzu)",
+    title_en: "Geography (2nd Semester Lectures — 18 Topics)",
+    title_ru: "География (2-й семестр лекции — 18 тем)",
+    author_az: "Eminəliyeva Əntiqə, Mahmudova Könül",
+    author_en: "Antiga Eminaliyeva, Konul Mahmudova",
+    author_ru: "Антига Эминалиева, Кенуль Махмудова",
+    category: "cografiya",
+    icon: "🗺️",
+    url: "II-yarımil.Coğrafiyadan mövzular.2024.docx",
+  },
+  {
+    id: 64,
+    title_az: "Naqilsiz Rabitə Texnologiyaları (Mühazirələr Konspekti)",
+    title_en: "Wireless Communication Technologies (Lecture Notes)",
+    title_ru: "Технологии беспроводной связи (Конспект лекций)",
+    author_az: "Rabitə və Şəbəkə Texnologiyaları",
+    author_en: "Communications and Network Technologies",
+    author_ru: "Технологии связи и сетей",
+    category: "rabite",
+    icon: "📡",
+    url: "naqilsiz muhazirə.docx",
+  },
+  {
+    id: 65,
+    title_az: "Mobil Rabitə Kommutasiya Mərkəzləri (Yenilənmiş Tədris Vəsaiti)",
+    title_en: "Mobile Switching Centers (Updated Study Manual)",
+    title_ru: "Центры коммутации мобильной связи (Обновленное пособие)",
+    author_az: "Mobil Rabitə Sistemləri FBK",
+    author_en: "Mobile Communication Systems Department",
+    author_ru: "ФБК Систем мобильной связи",
+    category: "rabite",
+    icon: "📲",
+    url: "Mobil_rabite_kommutasiya_merkezleri_yenilenmis_tedris_vesaiti.docx",
+  },
+  {
+    id: 66,
+    title_az: "Siqnallar və Sistemlər 2023 (Fundamental Mühazirələr Toplusu)",
+    title_en: "Signals and Systems 2023 (Fundamental Lecture Notes)",
+    title_ru: "Сигналы и системы 2023 (Сборник фундаментальных лекций)",
+    author_az: "Elektrik Rabitəsi Nəzəriyyəsi",
+    author_en: "Theory of Electrical Communications",
+    author_ru: "Теория электрической связи",
+    category: "rabite",
+    icon: "📶",
+    url: "Siqnallar ve sistemler 2023.docx",
+  },
+  {
+    id: 67,
+    title_az: "Vergi Sistemi və Vergitutma (Mühazirələr Toplusu)",
+    title_en: "Tax System and Taxation (Lecture Notes)",
+    title_ru: "Налоговая система и налогообложение (Сборник лекций)",
+    author_az: "Müəllim: Nuriyeva Gülsüm Səməd qızı",
+    author_en: "Teacher: Gulsum Nuriyeva",
+    author_ru: "Преподаватель: Гюльсум Нуриева",
+    category: "menecment",
+    icon: "💰",
+    url: "Vergi sistemi  Vergitutma.docx",
+  },
+  {
+    id: 68,
+    title_az: "Налог и налогообложение (Курс лекций — Rus bölməsi)",
+    title_en: "Tax and Taxation (Lecture Notes — Russian Sector)",
+    title_ru: "Налог и налогообложение (Курс лекций — Русский сектор)",
+    author_az: "Müəllim: Mansurova Sevda",
+    author_en: "Teacher: Sevda Mansurova",
+    author_ru: "Преподаватель: Мансурова Севда",
+    category: "rus_dili",
+    icon: "📊",
+    url: "Vergi (rus).docx",
+  },
+  {
+    id: 69,
+    title_az: "Statistika (Mühazirələr Toplusu və Tədris Vəsaiti)",
+    title_en: "Statistics (Lecture Notes & Study Manual)",
+    title_ru: "Статистика (Сборник лекций и учебное пособие)",
+    author_az: "İqtisadiyyat və İdarəetmə FBK",
+    author_en: "Economics and Management Department",
+    author_ru: "ФБК Экономики и управления",
+    category: "menecment",
+    icon: "📈",
+    url: "Statistika.docx",
+  },
+  {
+    id: 70,
+    title_az: "Предпринимательская деятельность и основы бизнеса (Курс лекций — Rus bölməsi)",
+    title_en: "Entrepreneurship and Fundamentals of Business (Lecture Notes — Russian Sector)",
+    title_ru: "Предпринимательская деятельность и основы бизнеса (Курс лекций — Русский сектор)",
+    author_az: "Müəllim: Mansurova S.M.",
+    author_en: "Teacher: S.M. Mansurova",
+    author_ru: "Преподаватель: Мансурова С.М.",
+    category: "rus_dili",
+    icon: "💼",
+    url: "Sahib.esas.ve biznese giris(rus).docx",
+  },
+  {
+    id: 71,
+    title_az: "Sahibkarlığın əsasları və biznesə giriş (Mühazirələr toplusu)",
+    title_en: "Fundamentals of Entrepreneurship & Introduction to Business (Lecture Notes)",
+    title_ru: "Основы предпринимательства и введение в бизнес (Сборник лекций)",
+    author_az: "İqtisadiyyat və İdarəetmə FBK",
+    author_en: "Economics and Management Department",
+    author_ru: "ФБК Экономики и управления",
+    category: "menecment",
+    icon: "💼",
+    url: "Sahib.esas. ve bizn.giris (az).docx",
+  },
+  {
+    id: 72,
+    title_az: "Rabitə statistikası (Mühazirələr toplusu — Azərbaycan bölməsi)",
+    title_en: "Communications Statistics (Lecture Notes — Azerbaijani Sector)",
+    title_ru: "Статистика связи (Сборник лекций — Азербайджанский сектор)",
+    author_az: "İqtisadiyyat və Statistika FBK",
+    author_en: "Economics and Statistics Department",
+    author_ru: "ФБК Экономики и статистики",
+    category: "rabite",
+    icon: "📊",
+    url: "Rabite statistikasi(az).docx",
+  },
+  {
+    id: 73,
+    title_az: "Rabitə statistikası (Mühazirələr toplusu — Rus bölməsi)",
+    title_en: "Communications Statistics (Lecture Notes — Russian Sector)",
+    title_ru: "Статистика связи (Сборник лекций — Русский сектор)",
+    author_az: "İqtisadiyyat və Statistika FBK (Rus bölməsi)",
+    author_en: "Economics and Statistics Department (Russian Sector)",
+    author_ru: "ФБК Экономики и статистики (Русский сектор)",
+    category: "rabite",
+    icon: "📊",
+    url: "Rabite statistikasi (rus).docx",
+  },
+  {
+    id: 74,
+    title_az: "Poçt rabitəsində bank əməliyyatları xidməti (Mühazirələr toplusu)",
+    title_en: "Bank Operations Service in Postal Communication (Lecture Notes)",
+    title_ru: "Служба банковских операций в почтовой связи (Сборник лекций)",
+    author_az: "Rabitə və Poçt Şəbəkələri FBK",
+    author_en: "Communications and Postal Networks Department",
+    author_ru: "ФБК Связи и почтовых сетей",
+    category: "rabite",
+    icon: "🏦",
+    url: "P RAB BANK EMEL.pdf",
+  },
 ];
 
 const lecturesData = [
@@ -6179,26 +6375,6 @@ const lecturesData = [
     category: "tarix",
     url: "https://www.youtube.com/watch?v=AsnnhpcGMwk",
   },
-  {
-    id: 39,
-    title_az: "BDRNK: Heydər Əliyev - 96 (Tədbir)",
-    title_en: "BDRNK: Heydar Aliyev - 96 (Commemorative Event)",
-    title_ru: "БГКСТ: Гейдар Алиев - 96 (Мероприятие)",
-    duration: "84:44",
-    thumb: "https://img.youtube.com/vi/6kCn5Rqbkik/hqdefault.jpg",
-    category: "tarix",
-    url: "https://www.youtube.com/watch?v=6kCn5Rqbkik",
-  },
-  {
-    id: 40,
-    title_az: "BDRNK müəllimləri İctimai Televiziyada",
-    title_en: "BDRNK Teachers on Public Television (ITV)",
-    title_ru: "Преподаватели БГКСТ на Общественном Телевидении (ITV)",
-    duration: "14:09",
-    thumb: "https://img.youtube.com/vi/ODxpY_TEMA4/hqdefault.jpg",
-    category: "tarix",
-    url: "https://www.youtube.com/watch?v=ODxpY_TEMA4",
-  },
 
   // ─── 4. ANA DİLİ VƏ NİTQ MƏDƏNİYYƏTİ (Kollecin Rəsmi Müəllimi: Nigar Salayeva) ───
   {
@@ -6272,16 +6448,6 @@ const lecturesData = [
     thumb: "https://img.youtube.com/vi/AmMHDV6qMVQ/hqdefault.jpg",
     category: "huquq",
     url: "https://www.youtube.com/watch?v=AmMHDV6qMVQ",
-  },
-  {
-    id: 45,
-    title_az: "Seçki hüququnun anlayışı, mahiyyəti və növləri — Hacıyeva Vəfa",
-    title_en: "Concept, Essence, and Types of Electoral Law — Vafa Hajiyeva",
-    title_ru: "Понятие, сущность и виды избирательного права — Вафа Гаджиева",
-    duration: "10:50",
-    thumb: "https://img.youtube.com/vi/MZ-7PSR5enE/hqdefault.jpg",
-    category: "huquq",
-    url: "https://www.youtube.com/watch?v=MZ-7PSR5enE",
   },
 
   // ─── 6. NƏQLİYYAT VƏ AVTOMOBİL (Kollecin Rəsmi Müəllimi: Sadıqlı Elmira) ───
@@ -6422,39 +6588,39 @@ function initScrollEngine() {
  * THEME ENGINE (Direct Single-Click Dark/Light Toggle)
  */
 
-  // Mobile Nav Accordions
-  const mobileHeaders = document.querySelectorAll(".mobile-nav-header");
-  mobileHeaders.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const parentGroup = btn.closest(".mobile-nav-group");
-      if (parentGroup) {
-        const isOpen = parentGroup.classList.toggle("open");
-        btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      }
-    });
-  });
-
-  // Hash Navigation Handler
-  function handleHashNavigation() {
-    const hash = window.location.hash;
-    if (!hash) return;
-
-    if (hash === "#majors" || hash === "#tree-majors-block") {
-      if (window.switchStructureView) window.switchStructureView("majors");
-    } else if (hash === "#structure" || hash === "#commissions" || hash === "#fbk" || hash === "#struct-commissions-view") {
-      if (window.switchStructureView) window.switchStructureView("tree");
-    } else if (hash.startsWith("#campus-floor-")) {
-      const fl = hash.replace("#campus-floor-", "");
-      if (window.switchCampusFloor) window.switchCampusFloor(fl);
-      setTimeout(() => {
-        const sec = document.getElementById("campus-navigator");
-        if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 80);
+// Mobile Nav Accordions
+const mobileHeaders = document.querySelectorAll(".mobile-nav-header");
+mobileHeaders.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const parentGroup = btn.closest(".mobile-nav-group");
+    if (parentGroup) {
+      const isOpen = parentGroup.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
     }
-  }
+  });
+});
 
-  window.addEventListener("hashchange", handleHashNavigation);
-  setTimeout(handleHashNavigation, 250);
+// Hash Navigation Handler
+function handleHashNavigation() {
+  const hash = window.location.hash;
+  if (!hash) return;
+
+  if (hash === "#majors" || hash === "#tree-majors-block") {
+    if (window.switchStructureView) window.switchStructureView("majors");
+  } else if (hash === "#structure" || hash === "#commissions" || hash === "#fbk" || hash === "#struct-commissions-view") {
+    if (window.switchStructureView) window.switchStructureView("tree");
+  } else if (hash.startsWith("#campus-floor-")) {
+    const fl = hash.replace("#campus-floor-", "");
+    if (window.switchCampusFloor) window.switchCampusFloor(fl);
+    setTimeout(() => {
+      const sec = document.getElementById("campus-navigator");
+      if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 80);
+  }
+}
+
+window.addEventListener("hashchange", handleHashNavigation);
+setTimeout(handleHashNavigation, 250);
 
 function setTheme(theme) {
   document.body.classList.remove("light-mode", "dark-mode", "space-mode");
@@ -6726,7 +6892,7 @@ function initLanguageEngine() {
     currentLang = lang;
     try {
       localStorage.setItem("bdrnk_lang", lang);
-    } catch (_e) {}
+    } catch (_e) { }
     document.documentElement.lang = lang;
     btns.forEach((b) => b.classList.toggle("active", b.getAttribute("data-lang") === lang));
     if (i18n[lang] && i18n[lang].page_title) {
@@ -6751,7 +6917,7 @@ function initLanguageEngine() {
     if (saved && ["az", "en", "ru"].includes(saved) && saved !== "az") {
       applyLanguage(saved);
     }
-  } catch (_e) {}
+  } catch (_e) { }
 }
 
 /**
@@ -6886,7 +7052,7 @@ function initStructureModule() {
 
   renderCategoriesCount();
 
-    const fbkList = [
+  const fbkList = [
     {
       id: "fbk-1",
       code: "FBK-01",
@@ -7090,22 +7256,22 @@ function initStructureModule() {
     };
 
     // İxtisaslar Məlumatı (Müasir Akademik Cədvəl Dizaynı)
-  const majorIcons = {
-    "040406": "📊", // Mühasibat uçotu
-    "040554": "📮", // Poçt rabitəsi
-    "040556": "📻", // Radio, televiziya vasitə və qurğuları
-    "040405": "📈", // Marketinq
-    "040544": "📱", // Mobil şəbəkə sistemləri və operatorluğu
-    "040565": "🌐", // Telekommunikasiya şəbəkələri və xətləri
-    "040508": "📡", // Çoxkanallı telekommunikasiya sistemlərinin istismarı
-    "040572": "🚃", // Vaqon və refrijerator sistemləri
-    "040552": "🚚", // Nəqliyyatın logistikası
-    "040550": "🚗", // Nəqliyyat vasitələrinin texniki istismarı
-    "040518": "🌱", // Ətraf mühitin mühafizəsi və bərpası
-    "040529": "💻", // Kompüter sistemləri və kompleksləri
-    "040533": "🛠️", // Kompüter şəbəkə avadanlıqlarının təmiri və servisi
-    "040532": "🛡️", // Kompüter şəbəkələri və şəbəkə inzibatçılığı
-  };
+    const majorIcons = {
+      "040406": "📊", // Mühasibat uçotu
+      "040554": "📮", // Poçt rabitəsi
+      "040556": "📻", // Radio, televiziya vasitə və qurğuları
+      "040405": "📈", // Marketinq
+      "040544": "📱", // Mobil şəbəkə sistemləri və operatorluğu
+      "040565": "🌐", // Telekommunikasiya şəbəkələri və xətləri
+      "040508": "📡", // Çoxkanallı telekommunikasiya sistemlərinin istismarı
+      "040572": "🚃", // Vaqon və refrijerator sistemləri
+      "040552": "🚚", // Nəqliyyatın logistikası
+      "040550": "🚗", // Nəqliyyat vasitələrinin texniki istismarı
+      "040518": "🌱", // Ətraf mühitin mühafizəsi və bərpası
+      "040529": "💻", // Kompüter sistemləri və kompleksləri
+      "040533": "🛠️", // Kompüter şəbəkə avadanlıqlarının təmiri və servisi
+      "040532": "🛡️", // Kompüter şəbəkələri və şəbəkə inzibatçılığı
+    };
 
     const eyaniMajors = staffData.majors.eyani || [];
     const qiyabiMajors = staffData.majors.qiyabi || [];
@@ -7348,7 +7514,7 @@ function initStructureModule() {
     });
   }
 
-    // ─── 2. RENDER COMMISSIONS (9 FBK) GRID ────────────────────────────
+  // ─── 2. RENDER COMMISSIONS (9 FBK) GRID ────────────────────────────
   function renderCommissionsGrid() {
     const grid = document.getElementById("fbk-grid");
     if (!grid) return;
@@ -7374,65 +7540,65 @@ function initStructureModule() {
           <p class="fbk-desc">${desc}</p>
           <div class="fbk-disciplines">
             ${disciplines.map(d => {
-              if (fbk.id === "fbk-4" && (d === "Rəqəmsal Elektronika və MPS" || d.includes("Rəqəmsal"))) {
-                return `<a href="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" target="_blank" download="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" class="fbk-chip fbk-chip-has-doc" title="Rəqəmsal elektronika və MPS fənnindən leksiyalar toplusu (56 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🔌</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
-              }
-              if (fbk.id === "fbk-4" && (d === "Elektronika" || (d.includes("Elektronika") && !d.includes("Rəqəmsal")) || d.includes("MPS"))) {
-                return `<a href="ELEKTRONIKA VE MPS.pdf" target="_blank" download="ELEKTRONIKA VE MPS.pdf" class="fbk-chip fbk-chip-has-doc" title="Elektronika və MPS fənnindən dərs vəsaiti (65 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">⚡</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
-              }
-              if (fbk.id === "fbk-4" && (d.includes("Ölçmə") || d.includes("Metrologiya") || d.includes("Standartlaşdırma"))) {
-                return `<a href="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" target="_blank" download="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" class="fbk-chip fbk-chip-has-doc" title="Metrologiya, standartlaşdırma və sertifikatlaşdırma (Dərs vəsaiti, 46 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">📐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
-              }
-              if (fbk.id === "fbk-5" && (d.includes("Diaqnostika") || d.includes("Diaqnostikası"))) {
-                return `<a href="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" target="_blank" download="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" class="fbk-chip fbk-chip-has-doc" title="Nəqliyyat vasitələrinin diaqnostikası (Kollec dərs vəsaiti, 78 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🚗</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
-              }
-              if (fbk.id === "fbk-5" && (d.includes("Yol Hərəkəti") || d.includes("Təhlükəsizliyi"))) {
-                return `<a href="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" target="_blank" download="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" class="fbk-chip fbk-chip-has-doc" title="Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi (15 mövzu, 59 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🚘</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
-              }
-              if (fbk.id === "fbk-5" && (d === "Avtomobil Daşımaları" || (d.includes("Avtomobil") && !d.includes("Vahid")))) {
-                return `<a href="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" target="_blank" download="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" class="fbk-chip fbk-chip-has-doc" title="Avtomobil daşımaları mühazirələr toplusu (93 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🚛</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
-              }
-              if (fbk.id === "fbk-5" && (d === "Vahid Nəqliyyat Sistemi" || d.includes("Vahid Nəqliyyat") || d.includes("VNS"))) {
-                return `<a href="VAHİD NƏQLİYYAT SİSTEMİ.pdf" target="_blank" download="VAHİD NƏQLİYYAT SİSTEMİ.pdf" class="fbk-chip fbk-chip-has-doc" title="Vahid Nəqliyyat Sistemi (VNS) mühazirələr toplusu və dərs vəsaiti (63 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
-              }
-              if (fbk.id === "fbk-5" && d.includes("Materialşünaslıq")) {
-                return `<a href="materialşünasliq,mühazire, 15 mövzu.pdf" target="_blank" download="materialşünasliq,mühazire, 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" title="Materialşünaslıq fənni üzrə mühazirələr toplusu (15 mövzu, 33 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🔬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
-              }
-              if (fbk.id === "fbk-5" && (d.includes("Yağlar") || d.includes("Sürtkü"))) {
-                return `<a href="yağlar mühazire 15 mövzu.pdf" target="_blank" download="yağlar mühazire 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" title="Yağlar və sürtkü materialları fənnindən mühazirələr toplusu (15 mövzu, 40 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🛢️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
-              }
-              if (fbk.id === "fbk-5" && (d.includes("Material") || d.includes("Konstruksiya"))) {
-                return `<a href="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" target="_blank" download="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" class="fbk-chip fbk-chip-has-doc" title="Konstruksiya materiallarının texnologiyası (Alidə Mahmudova, 28 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🔩</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
-              }
-              if (fbk.id === "fbk-6" && (d === "Azərbaycan Dili" || d.includes("Azərbaycan Dili"))) {
-                return `<a href="azdilifb.docx" download="azdilifb.docx" class="fbk-chip fbk-chip-has-doc" title="Azərbaycan dili fənnindən mühazirələr toplusu (azdilifb.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
-              }
-              if (fbk.id === "fbk-6" && (d === "Ədəbiyyat" || d.includes("Ədəbiyyat"))) {
-                return `<a href="edebiyyatfb.docx" download="edebiyyatfb.docx" class="fbk-chip fbk-chip-has-doc" title="Ədəbiyyat fənnindən mühazirələr toplusu (edebiyyatfb.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
-              }
-              if (fbk.id === "fbk-6" && (d.includes("Kommunikasiya") || d.includes("İşgüzar") || d.includes("Yazışmalar"))) {
-                return `<a href="KOMMUNİKASİYA DF 2 (1).docx" download="KOMMUNİKASİYA DF 2 (1).docx" class="fbk-chip fbk-chip-has-doc" title="İşgüzar və akademik kommunikasiya (Natəvan Hüseynova, 25 000+ söz, DOCX) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">💬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
-              }
-              if (fbk.id === "fbk-7" && (d === "Azərbaycan Tarixi" || d.includes("Azərbaycan Tarixi"))) {
-                return `<a href="aztarixi2fb.pdf" target="_blank" download="aztarixi2fb.pdf" class="fbk-chip fbk-chip-has-doc" title="Azərbaycan tarixi rəsmi dərslik və mühazirə vəsaiti (495 səhifə, PDF & DOCX) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🏛️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF + DOCX</span></a>`;
-              }
-              if (fbk.id === "fbk-7" && (d === "Ümumi Tarix" || d.includes("Ümumi Tarix"))) {
-                return `<a href="umtarixfb.docx" download="umtarixfb.docx" class="fbk-chip fbk-chip-has-doc" title="Ümumi tarix fənnindən mühazirələr toplusu (umtarixfb.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌍</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
-              }
-              if (fbk.id === "fbk-7" && (d === "Hüququn Əsasları" || d.includes("Hüququn Əsasları") || d.includes("Hüquq"))) {
-                return `<a href="yeni mühazirələr.docx" download="yeni mühazirələr.docx" class="fbk-chip fbk-chip-has-doc" title="Hüququn əsasları fənnindən mühazirələr toplusu (yeni mühazirələr.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">⚖️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
-              }
-              if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
-                return `<a href="1Русский язык 1 курс (лекции) (1).docx" download="1Русский язык 1 курс (лекции) (1).docx" class="fbk-chip fbk-chip-has-doc" title="Rus dili I və II kurs mühazirələr toplusu (DOCX) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">🇷🇺</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 2 DOCX</span></a>`;
-              }
-              if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
-                return `<a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" title="Ətraf mühitin qorunması və bərpası (ƏMM) fənnindən mühazirələr toplusu (98 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌱</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
-              }
-              if (fbk.id === "fbk-9" && (d.includes("Həyat Fəaliyyəti") || d.includes("HFT") || d.includes("Mülki Müdafiə"))) {
-                return `<a href="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" target="_blank" download="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" class="fbk-chip fbk-chip-has-doc" title="Həyat fəaliyyətinin təhlükəsizliyi (Alidə Mahmudova, Azadə Quliyeva, 74 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🛡️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
-              }
-              return `<span class="fbk-chip">${d}</span>`;
-            }).join("")}
+        if (fbk.id === "fbk-4" && (d === "Rəqəmsal Elektronika və MPS" || d.includes("Rəqəmsal"))) {
+          return `<a href="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" target="_blank" download="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" class="fbk-chip fbk-chip-has-doc" title="Rəqəmsal elektronika və MPS fənnindən leksiyalar toplusu (56 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🔌</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+        }
+        if (fbk.id === "fbk-4" && (d === "Elektronika" || (d.includes("Elektronika") && !d.includes("Rəqəmsal")) || d.includes("MPS"))) {
+          return `<a href="ELEKTRONIKA VE MPS.pdf" target="_blank" download="ELEKTRONIKA VE MPS.pdf" class="fbk-chip fbk-chip-has-doc" title="Elektronika və MPS fənnindən dərs vəsaiti (65 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">⚡</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+        }
+        if (fbk.id === "fbk-4" && (d.includes("Ölçmə") || d.includes("Metrologiya") || d.includes("Standartlaşdırma"))) {
+          return `<a href="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" target="_blank" download="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" class="fbk-chip fbk-chip-has-doc" title="Metrologiya, standartlaşdırma və sertifikatlaşdırma (Dərs vəsaiti, 46 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">📐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+        }
+        if (fbk.id === "fbk-5" && (d.includes("Diaqnostika") || d.includes("Diaqnostikası"))) {
+          return `<a href="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" target="_blank" download="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" class="fbk-chip fbk-chip-has-doc" title="Nəqliyyat vasitələrinin diaqnostikası (Kollec dərs vəsaiti, 78 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🚗</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+        }
+        if (fbk.id === "fbk-5" && (d.includes("Yol Hərəkəti") || d.includes("Təhlükəsizliyi"))) {
+          return `<a href="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" target="_blank" download="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" class="fbk-chip fbk-chip-has-doc" title="Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi (15 mövzu, 59 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🚘</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+        }
+        if (fbk.id === "fbk-5" && (d === "Avtomobil Daşımaları" || (d.includes("Avtomobil") && !d.includes("Vahid")))) {
+          return `<a href="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" target="_blank" download="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" class="fbk-chip fbk-chip-has-doc" title="Avtomobil daşımaları mühazirələr toplusu (93 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🚛</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+        }
+        if (fbk.id === "fbk-5" && (d === "Vahid Nəqliyyat Sistemi" || d.includes("Vahid Nəqliyyat") || d.includes("VNS"))) {
+          return `<a href="VAHİD NƏQLİYYAT SİSTEMİ.pdf" target="_blank" download="VAHİD NƏQLİYYAT SİSTEMİ.pdf" class="fbk-chip fbk-chip-has-doc" title="Vahid Nəqliyyat Sistemi (VNS) mühazirələr toplusu və dərs vəsaiti (63 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+        }
+        if (fbk.id === "fbk-5" && d.includes("Materialşünaslıq")) {
+          return `<a href="materialşünasliq,mühazire, 15 mövzu.pdf" target="_blank" download="materialşünasliq,mühazire, 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" title="Materialşünaslıq fənni üzrə mühazirələr toplusu (15 mövzu, 33 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🔬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+        }
+        if (fbk.id === "fbk-5" && (d.includes("Yağlar") || d.includes("Sürtkü"))) {
+          return `<a href="yağlar mühazire 15 mövzu.pdf" target="_blank" download="yağlar mühazire 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" title="Yağlar və sürtkü materialları fənnindən mühazirələr toplusu (15 mövzu, 40 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🛢️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+        }
+        if (fbk.id === "fbk-5" && (d.includes("Material") || d.includes("Konstruksiya"))) {
+          return `<a href="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" target="_blank" download="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" class="fbk-chip fbk-chip-has-doc" title="Konstruksiya materiallarının texnologiyası (Alidə Mahmudova, 28 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🔩</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+        }
+        if (fbk.id === "fbk-6" && (d === "Azərbaycan Dili" || d.includes("Azərbaycan Dili"))) {
+          return `<a href="azdilifb.docx" download="azdilifb.docx" class="fbk-chip fbk-chip-has-doc" title="Azərbaycan dili fənnindən mühazirələr toplusu (azdilifb.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
+        }
+        if (fbk.id === "fbk-6" && (d === "Ədəbiyyat" || d.includes("Ədəbiyyat"))) {
+          return `<a href="edebiyyatfb.docx" download="edebiyyatfb.docx" class="fbk-chip fbk-chip-has-doc" title="Ədəbiyyat fənnindən mühazirələr toplusu (edebiyyatfb.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
+        }
+        if (fbk.id === "fbk-6" && (d.includes("Kommunikasiya") || d.includes("İşgüzar") || d.includes("Yazışmalar"))) {
+          return `<a href="KOMMUNİKASİYA DF 2 (1).docx" download="KOMMUNİKASİYA DF 2 (1).docx" class="fbk-chip fbk-chip-has-doc" title="İşgüzar və akademik kommunikasiya (Natəvan Hüseynova, 25 000+ söz, DOCX) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">💬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
+        }
+        if (fbk.id === "fbk-7" && (d === "Azərbaycan Tarixi" || d.includes("Azərbaycan Tarixi"))) {
+          return `<a href="aztarixi2fb.pdf" target="_blank" download="aztarixi2fb.pdf" class="fbk-chip fbk-chip-has-doc" title="Azərbaycan tarixi rəsmi dərslik və mühazirə vəsaiti (495 səhifə, PDF & DOCX) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🏛️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF + DOCX</span></a>`;
+        }
+        if (fbk.id === "fbk-7" && (d === "Ümumi Tarix" || d.includes("Ümumi Tarix"))) {
+          return `<a href="umtarixfb.docx" download="umtarixfb.docx" class="fbk-chip fbk-chip-has-doc" title="Ümumi tarix fənnindən mühazirələr toplusu (umtarixfb.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌍</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
+        }
+        if (fbk.id === "fbk-7" && (d === "Hüququn Əsasları" || d.includes("Hüququn Əsasları") || d.includes("Hüquq"))) {
+          return `<a href="yeni mühazirələr.docx" download="yeni mühazirələr.docx" class="fbk-chip fbk-chip-has-doc" title="Hüququn əsasları fənnindən mühazirələr toplusu (yeni mühazirələr.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">⚖️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
+        }
+        if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
+          return `<a href="1Русский язык 1 курс (лекции) (1).docx" download="1Русский язык 1 курс (лекции) (1).docx" class="fbk-chip fbk-chip-has-doc" title="Rus dili I və II kurs mühazirələr toplusu (DOCX) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">🇷🇺</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 2 DOCX</span></a>`;
+        }
+        if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
+          return `<a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" title="Ətraf mühitin qorunması və bərpası (ƏMM) fənnindən mühazirələr toplusu (98 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌱</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+        }
+        if (fbk.id === "fbk-9" && (d.includes("Həyat Fəaliyyəti") || d.includes("HFT") || d.includes("Mülki Müdafiə"))) {
+          return `<a href="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" target="_blank" download="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" class="fbk-chip fbk-chip-has-doc" title="Həyat fəaliyyətinin təhlükəsizliyi (Alidə Mahmudova, Azadə Quliyeva, 74 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🛡️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+        }
+        return `<span class="fbk-chip">${d}</span>`;
+      }).join("")}
           </div>
           <div class="fbk-card-footer">
             <span class="fbk-dept-link">👨‍🏫 Sədr: ${chair}</span>
@@ -7473,65 +7639,65 @@ function initStructureModule() {
                 <h5 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold-light); margin-bottom: 10px;">Tədris olunan əsas fənlər:</h5>
                 <div style="display: flex; flex-wrap: wrap; gap: 8px;">
                   ${disciplines.map(d => {
-                    if (fbk.id === "fbk-4" && (d === "Rəqəmsal Elektronika və MPS" || d.includes("Rəqəmsal"))) {
-                      return `<a href="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" target="_blank" download="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf (56 Səhifə PDF)"><span>🔌 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
-                    }
-                    if (fbk.id === "fbk-4" && (d === "Elektronika" || (d.includes("Elektronika") && !d.includes("Rəqəmsal")) || d.includes("MPS"))) {
-                      return `<a href="ELEKTRONIKA VE MPS.pdf" target="_blank" download="ELEKTRONIKA VE MPS.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: ELEKTRONIKA VE MPS.pdf (65 Səhifə PDF)"><span>⚡ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
-                    }
-                    if (fbk.id === "fbk-4" && (d.includes("Ölçmə") || d.includes("Metrologiya") || d.includes("Standartlaşdırma"))) {
-                      return `<a href="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" target="_blank" download="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf (46 Səhifə PDF)"><span>📐 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
-                    }
-                    if (fbk.id === "fbk-5" && (d.includes("Diaqnostika") || d.includes("Diaqnostikası"))) {
-                      return `<a href="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" target="_blank" download="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: 2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf (78 Səhifə PDF)"><span>🚗 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
-                    }
-                    if (fbk.id === "fbk-5" && (d.includes("Yol Hərəkəti") || d.includes("Təhlükəsizliyi"))) {
-                      return `<a href="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" target="_blank" download="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf (59 Səhifə PDF)"><span>🚘 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
-                    }
-                    if (fbk.id === "fbk-5" && (d === "Avtomobil Daşımaları" || (d.includes("Avtomobil") && !d.includes("Vahid")))) {
-                      return `<a href="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" target="_blank" download="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf (93 Səhifə PDF)"><span>🚛 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
-                    }
-                    if (fbk.id === "fbk-5" && (d === "Vahid Nəqliyyat Sistemi" || d.includes("Vahid Nəqliyyat") || d.includes("VNS"))) {
-                      return `<a href="VAHİD NƏQLİYYAT SİSTEMİ.pdf" target="_blank" download="VAHİD NƏQLİYYAT SİSTEMİ.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: VAHİD NƏQLİYYAT SİSTEMİ.pdf (63 Səhifə PDF)"><span>🌐 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
-                    }
-                    if (fbk.id === "fbk-5" && d.includes("Materialşünaslıq")) {
-                      return `<a href="materialşünasliq,mühazire, 15 mövzu.pdf" target="_blank" download="materialşünasliq,mühazire, 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: materialşünasliq,mühazire, 15 mövzu.pdf (15 Mövzu, 33 Səhifə PDF)"><span>🔬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
-                    }
-                    if (fbk.id === "fbk-5" && (d.includes("Yağlar") || d.includes("Sürtkü"))) {
-                      return `<a href="yağlar mühazire 15 mövzu.pdf" target="_blank" download="yağlar mühazire 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: yağlar mühazire 15 mövzu.pdf (15 Mövzu, 40 Səhifə PDF)"><span>🛢️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
-                    }
-                    if (fbk.id === "fbk-5" && (d.includes("Material") || d.includes("Konstruksiya"))) {
-                      return `<a href="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" target="_blank" download="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf (28 Səhifə PDF)"><span>🔩 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
-                    }
-                    if (fbk.id === "fbk-6" && (d === "Azərbaycan Dili" || d.includes("Azərbaycan Dili"))) {
-                      return `<a href="azdilifb.docx" download="azdilifb.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: azdilifb.docx (36 Saat)"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
-                    }
-                    if (fbk.id === "fbk-6" && (d === "Ədəbiyyat" || d.includes("Ədəbiyyat"))) {
-                      return `<a href="edebiyyatfb.docx" download="edebiyyatfb.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: edebiyyatfb.docx"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
-                    }
-                    if (fbk.id === "fbk-6" && (d.includes("Kommunikasiya") || d.includes("İşgüzar") || d.includes("Yazışmalar"))) {
-                      return `<a href="KOMMUNİKASİYA DF 2 (1).docx" download="KOMMUNİKASİYA DF 2 (1).docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: KOMMUNİKASİYA DF 2 (1).docx (Natəvan Hüseynova, 25 000+ söz)"><span>💬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
-                    }
-                    if (fbk.id === "fbk-7" && (d === "Azərbaycan Tarixi" || d.includes("Azərbaycan Tarixi"))) {
-                      return `<a href="aztarixi2fb.pdf" target="_blank" download="aztarixi2fb.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: aztarixi2fb.pdf (495 Səhifə)"><span>🏛️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF & DOCX</span></a>`;
-                    }
-                    if (fbk.id === "fbk-7" && (d === "Ümumi Tarix" || d.includes("Ümumi Tarix"))) {
-                      return `<a href="umtarixfb.docx" download="umtarixfb.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: umtarixfb.docx (36 Saat)"><span>🌍 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
-                    }
-                    if (fbk.id === "fbk-7" && (d === "Hüququn Əsasları" || d.includes("Hüququn Əsasları") || d.includes("Hüquq"))) {
-                      return `<a href="yeni mühazirələr.docx" download="yeni mühazirələr.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: yeni mühazirələr.docx (8 Mövzu, 16 000+ söz)"><span>⚖️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
-                    }
-                    if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
-                      return `<a href="1Русский язык 1 курс (лекции) (1).docx" download="1Русский язык 1 курс (лекции) (1).docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: Rus Dili I və II Kurs Mühazirələr (DOCX)"><span>🇷🇺 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 2 DOCX</span></a>`;
-                    }
-                    if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
-                      return `<a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: ƏMM mühazirələr.pdf (98 Səhifə PDF)"><span>🌱 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
-                    }
-                    if (fbk.id === "fbk-9" && (d.includes("Həyat Fəaliyyəti") || d.includes("HFT") || d.includes("Mülki Müdafiə"))) {
-                      return `<a href="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" target="_blank" download="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf (74 Səhifə PDF)"><span>🛡️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
-                    }
-                    return `<span style="background: var(--surface); border: 1px solid var(--border); padding: 5px 12px; border-radius: 12px; font-size: 0.82rem; font-weight: 600;">${d}</span>`;
-                  }).join("")}
+            if (fbk.id === "fbk-4" && (d === "Rəqəmsal Elektronika və MPS" || d.includes("Rəqəmsal"))) {
+              return `<a href="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" target="_blank" download="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf (56 Səhifə PDF)"><span>🔌 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+            }
+            if (fbk.id === "fbk-4" && (d === "Elektronika" || (d.includes("Elektronika") && !d.includes("Rəqəmsal")) || d.includes("MPS"))) {
+              return `<a href="ELEKTRONIKA VE MPS.pdf" target="_blank" download="ELEKTRONIKA VE MPS.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: ELEKTRONIKA VE MPS.pdf (65 Səhifə PDF)"><span>⚡ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+            }
+            if (fbk.id === "fbk-4" && (d.includes("Ölçmə") || d.includes("Metrologiya") || d.includes("Standartlaşdırma"))) {
+              return `<a href="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" target="_blank" download="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf (46 Səhifə PDF)"><span>📐 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+            }
+            if (fbk.id === "fbk-5" && (d.includes("Diaqnostika") || d.includes("Diaqnostikası"))) {
+              return `<a href="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" target="_blank" download="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: 2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf (78 Səhifə PDF)"><span>🚗 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+            }
+            if (fbk.id === "fbk-5" && (d.includes("Yol Hərəkəti") || d.includes("Təhlükəsizliyi"))) {
+              return `<a href="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" target="_blank" download="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf (59 Səhifə PDF)"><span>🚘 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+            }
+            if (fbk.id === "fbk-5" && (d === "Avtomobil Daşımaları" || (d.includes("Avtomobil") && !d.includes("Vahid")))) {
+              return `<a href="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" target="_blank" download="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf (93 Səhifə PDF)"><span>🚛 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+            }
+            if (fbk.id === "fbk-5" && (d === "Vahid Nəqliyyat Sistemi" || d.includes("Vahid Nəqliyyat") || d.includes("VNS"))) {
+              return `<a href="VAHİD NƏQLİYYAT SİSTEMİ.pdf" target="_blank" download="VAHİD NƏQLİYYAT SİSTEMİ.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: VAHİD NƏQLİYYAT SİSTEMİ.pdf (63 Səhifə PDF)"><span>🌐 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+            }
+            if (fbk.id === "fbk-5" && d.includes("Materialşünaslıq")) {
+              return `<a href="materialşünasliq,mühazire, 15 mövzu.pdf" target="_blank" download="materialşünasliq,mühazire, 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: materialşünasliq,mühazire, 15 mövzu.pdf (15 Mövzu, 33 Səhifə PDF)"><span>🔬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+            }
+            if (fbk.id === "fbk-5" && (d.includes("Yağlar") || d.includes("Sürtkü"))) {
+              return `<a href="yağlar mühazire 15 mövzu.pdf" target="_blank" download="yağlar mühazire 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: yağlar mühazire 15 mövzu.pdf (15 Mövzu, 40 Səhifə PDF)"><span>🛢️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+            }
+            if (fbk.id === "fbk-5" && (d.includes("Material") || d.includes("Konstruksiya"))) {
+              return `<a href="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" target="_blank" download="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf (28 Səhifə PDF)"><span>🔩 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+            }
+            if (fbk.id === "fbk-6" && (d === "Azərbaycan Dili" || d.includes("Azərbaycan Dili"))) {
+              return `<a href="azdilifb.docx" download="azdilifb.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: azdilifb.docx (36 Saat)"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
+            }
+            if (fbk.id === "fbk-6" && (d === "Ədəbiyyat" || d.includes("Ədəbiyyat"))) {
+              return `<a href="edebiyyatfb.docx" download="edebiyyatfb.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: edebiyyatfb.docx"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
+            }
+            if (fbk.id === "fbk-6" && (d.includes("Kommunikasiya") || d.includes("İşgüzar") || d.includes("Yazışmalar"))) {
+              return `<a href="KOMMUNİKASİYA DF 2 (1).docx" download="KOMMUNİKASİYA DF 2 (1).docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: KOMMUNİKASİYA DF 2 (1).docx (Natəvan Hüseynova, 25 000+ söz)"><span>💬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
+            }
+            if (fbk.id === "fbk-7" && (d === "Azərbaycan Tarixi" || d.includes("Azərbaycan Tarixi"))) {
+              return `<a href="aztarixi2fb.pdf" target="_blank" download="aztarixi2fb.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: aztarixi2fb.pdf (495 Səhifə)"><span>🏛️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF & DOCX</span></a>`;
+            }
+            if (fbk.id === "fbk-7" && (d === "Ümumi Tarix" || d.includes("Ümumi Tarix"))) {
+              return `<a href="umtarixfb.docx" download="umtarixfb.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: umtarixfb.docx (36 Saat)"><span>🌍 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
+            }
+            if (fbk.id === "fbk-7" && (d === "Hüququn Əsasları" || d.includes("Hüququn Əsasları") || d.includes("Hüquq"))) {
+              return `<a href="yeni mühazirələr.docx" download="yeni mühazirələr.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: yeni mühazirələr.docx (8 Mövzu, 16 000+ söz)"><span>⚖️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
+            }
+            if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
+              return `<a href="1Русский язык 1 курс (лекции) (1).docx" download="1Русский язык 1 курс (лекции) (1).docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: Rus Dili I və II Kurs Mühazirələr (DOCX)"><span>🇷🇺 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 2 DOCX</span></a>`;
+            }
+            if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
+              return `<a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: ƏMM mühazirələr.pdf (98 Səhifə PDF)"><span>🌱 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+            }
+            if (fbk.id === "fbk-9" && (d.includes("Həyat Fəaliyyəti") || d.includes("HFT") || d.includes("Mülki Müdafiə"))) {
+              return `<a href="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" target="_blank" download="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf (74 Səhifə PDF)"><span>🛡️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+            }
+            return `<span style="background: var(--surface); border: 1px solid var(--border); padding: 5px 12px; border-radius: 12px; font-size: 0.82rem; font-weight: 600;">${d}</span>`;
+          }).join("")}
                 </div>
               </div>
               ${fbk.id === "fbk-4" ? `
@@ -8676,6 +8842,72 @@ function initLibraryModule() {
       url: "Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf"
     },
 
+    // --- Naqilsiz və Mobil Rabitə Sistemləri (3) ---
+    {
+      id: "fbk-lec-naqilsiz",
+      fbkId: "fbk-4",
+      fieldBadge: "RABİTƏ VƏ ŞƏBƏKƏ",
+      fieldName_az: "Elektronika, Rabitə və Metrologiya",
+      subject_az: "Naqilsiz Rabitə Texnologiyaları",
+      title_az: "Naqilsiz Rabitə Texnologiyaları — Mühazirələr Konspekti",
+      author_az: "Rabitə və Şəbəkə Texnologiyaları Kafedrası",
+      format: "docx",
+      icon: "📡",
+      volume: "Geniş Konspekt · DOCX",
+      fileSize: "5.3 MB DOCX",
+      desc_az: "Müasir telekommunikasiya infrastrukturu, NGN (Next Generation Networks), Wi-Fi, QGND, MGND, şanvari mobil rabitə (3G, 4G, 5G, GSM, UMTS, CDMA), tezlik modulyasiyası və radiointerfeyslər üzrə fundamental mühazirə toplusu.",
+      topics_az: ["NGN Şəbəkələri", "Wi-Fi və Genişzolaqlı Daxilolma", "3GPP və Mobil Rabitə", "Radiointerfeyslər"],
+      url: "naqilsiz muhazirə.docx"
+    },
+    {
+      id: "fbk-lec-mobil-kommutasiya",
+      fbkId: "fbk-4",
+      fieldBadge: "MOBİL RABİTƏ",
+      fieldName_az: "Elektronika, Rabitə və Metrologiya",
+      subject_az: "Mobil Rabitə Kommutasiya Mərkəzləri",
+      title_az: "Mobil Rabitə Kommutasiya Mərkəzləri — Yenilənmiş Dərs Vəsaiti",
+      author_az: "Mobil Rabitə Sistemləri Fənn Birləşməsi",
+      format: "docx",
+      icon: "📲",
+      volume: "Yenilənmiş Vəsait · DOCX",
+      fileSize: "DOCX Vəsait",
+      desc_az: "Şanvari mobil rabitə şəbəkələrinin kommutasiya sistemləri, kommutasiya mərkəzlərinin strukturu (MSC), HLR, VLR reyestrləri, siqnallaşma protokolları və mobil şəbəkə arxitekturası üzrə rəsmi yenilənmiş tədris vəsaiti.",
+      topics_az: ["Kommutasiya Mərkəzi (MSC)", "HLR və VLR Reyestrləri", "Mobil Şəbəkə Strukturu", "Siqnallaşma Sistemləri"],
+      url: "Mobil_rabite_kommutasiya_merkezleri_yenilenmis_tedris_vesaiti.docx"
+    },
+    {
+      id: "fbk-lec-siqnallar",
+      fbkId: "fbk-4",
+      fieldBadge: "SİQNALLAR",
+      fieldName_az: "Elektronika, Rabitə və Metrologiya",
+      subject_az: "Siqnallar və Sistemlər",
+      title_az: "Siqnallar və Sistemlər (2023) — Fundamental Mühazirələr Toplusu",
+      author_az: "Elektrik Rabitəsi Nəzəriyyəsi Kafedrası",
+      format: "docx",
+      icon: "📶",
+      volume: "Mühazirələr Toplusu (2023) · DOCX",
+      fileSize: "2.7 MB DOCX",
+      desc_az: "Elektrik rabitəsi nəzəriyyəsi, fasiləsiz, diskret və rəqəm siqnalları, siqnalların kodlaşdırılması, modulyasiya və demodulyasiya, informasiya ötürmə kanalları, maneəyədavamlılıq və rabitə sistemlərinin riyazi modelləri üzrə fundamental mühazirə vəsaiti.",
+      topics_az: ["Elektrik Rabitəsi Nəzəriyyəsi", "Diskret və Rəqəm Siqnalları", "Modulyasiya və Kodlaşdırma", "Rabitə Kanalları"],
+      url: "Siqnallar ve sistemler 2023.docx"
+    },
+    {
+      id: "fbk-lec-poct-bank",
+      fbkId: "fbk-4",
+      fieldBadge: "POÇT VƏ BANK RABİTƏSİ",
+      fieldName_az: "Elektronika, Rabitə və Metrologiya",
+      subject_az: "Poçt Rabitəsində Bank Əməliyyatları Xidməti",
+      title_az: "Poçt Rabitəsində Bank Əməliyyatları Xidməti — Mühazirələr Toplusu",
+      author_az: "Rabitə və Poçt Şəbəkələri Kafedrası",
+      format: "pdf",
+      icon: "🏦",
+      volume: "46 Səhifə · Fundamental Mühazirə",
+      fileSize: "4.2 MB PDF",
+      desc_az: "Poçt rabitəsi şəbəkələrində bank və maliyyə xidmətləri, APUS, KÖMİS və COLVIR korporativ sistemləri, hesabların açılması, sığorta və rüsum ödənişlərinin icrası üzrə 46 səhifəlik rəsmi PDF mühazirə vəsaiti.",
+      topics_az: ["Poçt-Bank Əməliyyatları", "COLVIR və APUS Sistemləri", "Maliyyə Xidmətləri", "Bank Hesablaşmaları"],
+      url: "P RAB BANK EMEL.pdf"
+    },
+
     // --- Nəqliyyat və Materialşünaslıq (7) ---
     {
       id: "fbk-lec-4",
@@ -8905,6 +9137,154 @@ function initLibraryModule() {
       desc_az: "Dövlət və hüququn nəzəriyyəsi, Azərbaycan Respublikasının Konstitusiyası, insan hüquq və azadlıqları, dövlət quruluşu, seçki sistemi, dövlət hakimiyyət orqanları, əmək və cinayət hüququnu əhatə edən 8 mövzuluq rəsmi mühazirə vəsaiti.",
       topics_az: ["Hüquq Nəzəriyyəsi", "AR Konstitusiyası", "Seçki və İdarəetmə", "Əmək və Cinayət Hüququ"],
       url: "yeni mühazirələr.docx"
+    },
+
+    // --- Coğrafiya və Təbiət Elmləri (2) ---
+    {
+      id: "fbk-lec-cografiya-1",
+      fbkId: "fbk-7",
+      fieldBadge: "COĞRAFİYA",
+      fieldName_az: "Humanitar və Təbiət Elmləri",
+      subject_az: "Coğrafiya",
+      title_az: "Coğrafiya Fənnindən Fundamental Mühazirələr Toplusu (I Semestr)",
+      author_az: "Müəllimlər: Eminəliyeva Əntiqə, Mahmudova Könül",
+      format: "pdf",
+      icon: "🌍",
+      volume: "I Semestr · 36 Saat",
+      fileSize: "2.8 MB PDF",
+      desc_az: "Ümumtəhsil qrupları üçün I semestr üzrə hazırlanmış, təbiət hadisələri, yer qabığı, relyef və iqlim qanunauyğunluqlarını əhatə edən 36 saatlıq rəsmi mühazirə vəsaiti.",
+      topics_az: ["Təbiət və Cəmiyyət", "Relyef və İqlim", "Litosfer və Quru Suları", "I Semestr Mövzuları"],
+      url: "COĞRAFİYA .MUHAZİRƏ.1-ci semestr.2023.pdf"
+    },
+    {
+      id: "fbk-lec-cografiya-2",
+      fbkId: "fbk-7",
+      fieldBadge: "COĞRAFİYA",
+      fieldName_az: "Humanitar və Təbiət Elmləri",
+      subject_az: "Coğrafiya",
+      title_az: "Coğrafiya Fənnindən Mühazirələr Toplusu (II Semestr — 18 Mövzu)",
+      author_az: "Müəllimlər: Eminəliyeva Əntiqə, Mahmudova Könül",
+      format: "docx",
+      icon: "🗺️",
+      volume: "II Semestr · 18 Mövzu (36 Saat)",
+      fileSize: "DOCX Konspekt",
+      desc_az: "Təsərrüfat sahələrinin xəritələrə əsasən təhlili, mineral ehtiyatlar, demoqrafiya, Azərbaycanın iqtisadi rayonları (14 iqtisadi rayon), nəqliyyat və beynəlxalq inteqrasiyanı əhatə edən 18 mövzuluq rəsmi mühazirə konspekti.",
+      topics_az: ["Təsərrüfat Sahələri", "Azərbaycanın 14 İqtisadi Rayonu", "Demoqrafiya və Əmək", "Ekoloji Problemlər"],
+      url: "II-yarımil.Coğrafiyadan mövzular.2024.docx"
+    },
+
+    // --- İqtisadiyyat, Vergi, Statistika və Biznes (6) ---
+    {
+      id: "fbk-lec-vergi",
+      fbkId: "fbk-7",
+      fieldBadge: "VERGİ VƏ İQTİSADİYYAT",
+      fieldName_az: "İqtisadiyyat, Vergi və Hüquq",
+      subject_az: "Vergi Sistemi və Vergitutma",
+      title_az: "Vergi Sistemi və Vergitutma — Fundamental Mühazirələr Toplusu",
+      author_az: "Müəllim: Nuriyeva Gülsüm Səməd qızı",
+      format: "docx",
+      icon: "💰",
+      volume: "Mühazirələr Konspekti · DOCX",
+      fileSize: "180 KB DOCX",
+      desc_az: "Vergilərin iqtisadi mahiyyəti və funksiyaları, vergitutmanın iqtisadi və hüquqi prinsipləri, vergi yükü, AR Vergi Məcəlləsinin müddəaları və vergi növləri üzrə rəsmi mühazirə vəsaiti.",
+      topics_az: ["Vergilərin Mahiyyəti", "Fiskal Mexanizmlər", "Vergitutma Prinsipləri", "AR Vergi Məcəlləsi"],
+      url: "Vergi sistemi  Vergitutma.docx"
+    },
+    {
+      id: "fbk-lec-vergi-rus",
+      fbkId: "fbk-7",
+      fieldBadge: "RUS BÖLMƏSİ · НАЛОГИ",
+      fieldName_az: "İqtisadiyyat, Vergi və Hüquq (Rus bölməsi)",
+      subject_az: "Vergi və Vergitutma (Rus bölməsi)",
+      title_az: "Налог и Налогообложение — Курс Лекций (Rus bölməsi)",
+      author_az: "Müəllim: Mansurova Sevda (Мансурова Севда)",
+      format: "docx",
+      icon: "📊",
+      volume: "Курс Лекций · DOCX",
+      fileSize: "238 KB DOCX",
+      desc_az: "Rus bölməsi tələbələri üçün «Налог и налогообложение» fənni üzrə hazırlanmış, vergilərin iqtisadi mahiyyəti, fiskal siyasət, büdcənin formalaşması və vergitutma mexanizmlərini əhatə edən rəsmi mühazirə vəsaiti.",
+      topics_az: ["Сущность Налогов", "Налоговая Система", "Фискальные Функции", "Налогообложение в АР"],
+      url: "Vergi (rus).docx"
+    },
+    {
+      id: "fbk-lec-statistika",
+      fbkId: "fbk-7",
+      fieldBadge: "STATİSTİKA",
+      fieldName_az: "İqtisadiyyat, Statistika və İdarəetmə",
+      subject_az: "Statistika",
+      title_az: "Statistika Elminin Predmeti və Metodu — Mühazirələr Toplusu",
+      author_az: "İqtisadiyyat və Statistika Kafedrası",
+      format: "docx",
+      icon: "📈",
+      volume: "Mühazirələr Toplusu · DOCX",
+      fileSize: "82 KB DOCX",
+      desc_az: "Statistika elminin predmeti və metodu, sosial-iqtisadi hadisələrin kəmiyyət təhlili, statistik məcmu və əlamətlər, müşahidə və qruplaşdırma üsulları, statistik cədvəllərin qurulması üzrə rəsmi mühazirə toplusu.",
+      topics_az: ["Statistikanın Predmeti", "Statistik Məcmu və Əlamət", "Qruplaşdırma Üsulları", "Statistik Cədvəllər"],
+      url: "Statistika.docx"
+    },
+    {
+      id: "fbk-lec-rabite-stat",
+      fbkId: "fbk-7",
+      fieldBadge: "RABİTƏ STATİSTİKASI",
+      fieldName_az: "Rabitə Statistikası və İdarəetmə",
+      subject_az: "Rabitə Statistikası",
+      title_az: "Rabitə Statistikası — Mühazirələr Toplusu (Azərbaycan bölməsi)",
+      author_az: "İqtisadiyyat və Statistika Kafedrası",
+      format: "docx",
+      icon: "📊",
+      volume: "Mühazirələr Toplusu · DOCX",
+      fileSize: "97 KB DOCX",
+      desc_az: "Rabitə və telekommunikasiya sahəsində statistika elminin predmeti və metodu, rabitə şəbəkələrinin və xidmətlərinin statistik analizi, qruplaşdırma və cədvəllərin qurulması üzrə rəsmi mühazirə vəsaiti.",
+      topics_az: ["Rabitə Statistikası", "Müşahidə və Qruplaşdırma", "Xidmətlərin Analizi", "Statistik Cədvəllər"],
+      url: "Rabite statistikasi(az).docx"
+    },
+    {
+      id: "fbk-lec-rabite-stat-rus",
+      fbkId: "fbk-7",
+      fieldBadge: "RUS BÖLMƏSİ · СТАТИСТИКА",
+      fieldName_az: "İqtisadiyyat və Statistika (Rus bölməsi)",
+      subject_az: "Rabitə Statistikası (Rus bölməsi)",
+      title_az: "Статистика Связи — Курс Лекций (Rus bölməsi)",
+      author_az: "İqtisadiyyat və Statistika Kafedrası (Rus bölməsi)",
+      format: "docx",
+      icon: "📊",
+      volume: "Курс Лекций · 16 Стр. · DOCX",
+      fileSize: "81 KB DOCX",
+      desc_az: "Rus bölməsi tələbələri üçün «Статистика связи» fənni üzrə hazırlanmış, rabitə sahəsində statistika elminin predmeti və metodları, statistik müşahidənin formaları, hesabatlıq və göstəricilər sistemini əhatə edən rəsmi mühazirə vəsaiti.",
+      topics_az: ["Статистика Связи", "Предмет и Метод", "Формы Наблюдения", "Статистическая Отчетность"],
+      url: "Rabite statistikasi (rus).docx"
+    },
+    {
+      id: "fbk-lec-biznes-az",
+      fbkId: "fbk-7",
+      fieldBadge: "BİZNES VƏ SAHİBKARLIQ",
+      fieldName_az: "İqtisadiyyat və Biznesin Əsasları",
+      subject_az: "Sahibkarlığın Əsasları və Biznesə Giriş",
+      title_az: "Sahibkarlığın Əsasları və Biznesə Giriş — Mühazirələr Toplusu",
+      author_az: "İqtisadiyyat və İdarəetmə Kafedrası",
+      format: "docx",
+      icon: "💼",
+      volume: "Mühazirələr Toplusu · DOCX",
+      fileSize: "126 KB DOCX",
+      desc_az: "Sahibkarlıq fəaliyyətinin mahiyyəti və növləri, innovasiya sahibkarlığı, sahibkarlığın hüquqi subyektləri, təşəbbüskarlıq və biznes mühitinin formalaşması üzrə rəsmi mühazirə vəsaiti.",
+      topics_az: ["Sahibkarlığın Mahiyyəti", "İnnovasiya Sahibkarlığı", "Biznes Subyektləri", "Bazar Münasibətləri"],
+      url: "Sahib.esas. ve bizn.giris (az).docx"
+    },
+    {
+      id: "fbk-lec-biznes-rus",
+      fbkId: "fbk-7",
+      fieldBadge: "RUS BÖLMƏSİ · БИЗНЕС",
+      fieldName_az: "İqtisadiyyat və Biznesin Əsasları (Rus bölməsi)",
+      subject_az: "Sahibkarlıq və Biznesin Əsasları (Rus bölməsi)",
+      title_az: "Предпринимательская Деятельность и Основы Бизнеса — Курс Лекций (Rus bölməsi)",
+      author_az: "Müəllim: Mansurova S.M. (Мансурова С.М.)",
+      format: "docx",
+      icon: "💼",
+      volume: "Курс Лекций (2023) · DOCX",
+      fileSize: "185 KB DOCX",
+      desc_az: "Rus bölməsi tələbələri üçün «Предпринимательская деятельность и основы бизнеса» fənni üzrə hazırlanmış, biznesin təşkili, sahibkarlıq riski, innovasiyalar və bazar iqtisadiyyatında fəaliyyət növlərini əhatə edən rəsmi mühazirə vəsaiti.",
+      topics_az: ["Основы Бизнеса", "Предпринимательская Деятельность", "Факторы Производства", "Виды Предпринимательства"],
+      url: "Sahib.esas.ve biznese giris(rus).docx"
     },
 
     // --- Ekologiya və Təhlükəsizlik (2) ---
@@ -9238,14 +9618,14 @@ function initLecturesModule() {
         modulePrefix: "MODULE",
         lessonsWord: "Video Lectures",
         academyBanner: "BDRNK DIGITAL ACADEMY",
-        deptAllMeta: "22 Video Lessons · 8 Departments",
+        deptAllMeta: "19 Video Lessons · 8 Departments",
         deptInfoMeta: "2 Video Lessons · IT & Programming",
         deptTransMeta: "1 Video Lesson · Transport Systems",
-        deptGeoMeta: "2 Video Lessons · Geography & Earth",
+        deptGeoMeta: "1 Video Lesson · Geography & Earth",
         deptPhysicsMeta: "1 Video Lesson · Physics & Science",
-        deptHistMeta: "9 Video Lessons · History & Victory",
+        deptHistMeta: "7 Video Lessons · History & Victory",
         deptAzDiliMeta: "1 Video Lesson · Grammar & Speech",
-        deptLawMeta: "6 Video Lessons · Law & Constitution",
+        deptLawMeta: "5 Video Lessons · Law & Constitution",
         deptBioMeta: "1 Video Lesson · Biology",
       };
     }
@@ -9260,14 +9640,14 @@ function initLecturesModule() {
         modulePrefix: "МОДУЛЬ",
         lessonsWord: "Видеоуроков",
         academyBanner: "ЦИФРОВАЯ АКАДЕМИЯ БГКСТ",
-        deptAllMeta: "23 видеоурока · 8 предметов",
+        deptAllMeta: "19 видеоуроков · 8 предметов",
         deptInfoMeta: "2 видеоурока · ИТ и Компьютеры",
         deptTransMeta: "1 видеоурок · Транспортные системы",
-        deptGeoMeta: "2 видеоурока · География",
+        deptGeoMeta: "1 видеоурок · География",
         deptPhysicsMeta: "1 видеоурок · Физика",
-        deptHistMeta: "9 видеоуроков · История Азербайджана",
+        deptHistMeta: "7 видеоуроков · История Азербайджана",
         deptAzDiliMeta: "1 видеоурок · Азербайджанский язык",
-        deptLawMeta: "6 видеоуроков · Право и Конституция",
+        deptLawMeta: "5 видеоуроков · Право и Конституция",
         deptBioMeta: "1 видеоурок · Биология",
       };
     }
@@ -9281,14 +9661,14 @@ function initLecturesModule() {
       modulePrefix: "MODUL",
       lessonsWord: "Videodərs",
       academyBanner: "BDRNK RƏQƏMSAL AKADEMİYA",
-      deptAllMeta: "22 Videodərs · 8 Fənn Bölməsi",
+      deptAllMeta: "19 Videodərs · 8 Fənn Bölməsi",
       deptInfoMeta: "2 Videodərs · İT və Kompüter",
       deptTransMeta: "1 Videodərs · Nəqliyyat Sistemləri",
       deptGeoMeta: "1 Videodərs · Yer Elmləri və Coğrafiya",
       deptPhysicsMeta: "1 Videodərs · Təbiət və Fizika",
-      deptHistMeta: "9 Videodərs · Tarix və Zəfər",
+      deptHistMeta: "7 Videodərs · Tarix və Zəfər",
       deptAzDiliMeta: "1 Videodərs · Qrammatika və Nitq",
-      deptLawMeta: "6 Videodərs · Hüquq Sistemi",
+      deptLawMeta: "5 Videodərs · Hüquq Sistemi",
       deptBioMeta: "1 Videodərs · Təbiət Elmləri",
     };
   }
@@ -9706,7 +10086,7 @@ function initForm() {
             : "Kopyalandı ✓";
 
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(val).catch(() => {});
+        navigator.clipboard.writeText(val).catch(() => { });
       }
       btn.classList.add("copied");
       span.textContent = copiedLabel;
@@ -10027,12 +10407,12 @@ document.addEventListener("DOMContentLoaded", () => {
           .filter(Boolean);
         const parasHtml = paragraphs.length
           ? paragraphs
-              .map((p, pIdx) =>
-                pIdx === 0
-                  ? `<p class="nr-lead-para">${p}</p>`
-                  : `<p class="nr-body-para">${p}</p>`
-              )
-              .join("")
+            .map((p, pIdx) =>
+              pIdx === 0
+                ? `<p class="nr-lead-para">${p}</p>`
+                : `<p class="nr-body-para">${p}</p>`
+            )
+            .join("")
           : `<p class="nr-lead-para">${desc}</p>`;
 
         nrContent.innerHTML = `
@@ -10312,7 +10692,7 @@ document.addEventListener("DOMContentLoaded", () => {
   safeInit("Structure", initStructureModule);
   safeInit("Library", initLibraryModule);
   safeInit("Lectures", initLecturesModule);
-// Karabakh Showcase Fullscreen & Playback handler (Consecutive videos)
+  // Karabakh Showcase Fullscreen & Playback handler (Consecutive videos)
   safeInit("QarabagCinema", () => {
     const qarabagExpandBtn = document.getElementById("qarabag-cinema-expand-btn");
     const qarabagPlayer = document.getElementById("qarabag-inline-player");
@@ -10344,12 +10724,12 @@ document.addEventListener("DOMContentLoaded", () => {
       qarabagPlayer.addEventListener("ended", () => {
         try {
           qarabagGezintiPlayer.play();
-        } catch (_) {}
+        } catch (_) { }
       });
     }
   });
 
-    safeInit("News", initNewsModule);
+  safeInit("News", initNewsModule);
   safeInit("Roadmap", initRoadmapModule);
   safeInit("Stats", initStatsCounter);
   safeInit("AdmissionCalc", initAdmissionCalculator);
@@ -10366,6 +10746,7 @@ document.addEventListener("DOMContentLoaded", () => {
   safeInit("HeroParallax", initHeroParallax);
   safeInit("Gallery", initGalleryModule);
   safeInit("Memorial", initMemorialCandle);
+  safeInit("TeacherCertificates", initTeacherCertificatesModule);
 });
 
 /* ═══════════════ MEMORIAL CANDLE ═══════════════ */
@@ -10451,6 +10832,18 @@ function initGalleryModule() {
         label_ru: "Торжественное мероприятие ко Дню Победы 8 Ноября",
         badge: "8 NOYABR · ZƏFƏR GÜNÜ",
         i18n: "gallery_event_8noyabr",
+      },
+      {
+        type: "youtube",
+        id: "6kCn5Rqbkik",
+        label: "BDRNK: Heydər Əliyev - 96 (Təntənəli Tədbir)",
+        label_az: "BDRNK: Heydər Əliyev - 96 (Təntənəli Tədbir)",
+        label_en: "BDRNK: Heydar Aliyev - 96 (Commemorative Event)",
+        label_ru: "БГКСТ: Гейдар Алиев - 96 (Торжественное мероприятие)",
+        subject: "Tədbir · Heydər Əliyev - 96",
+        group: "BDRNK Kollektivi",
+        teacher: "Bakı Dövlət Rabitə və Nəqliyyat Kolleci",
+        badge: "HEYDƏR ƏLİYEV - 96",
       },
       {
         type: "instagram",
@@ -10810,7 +11203,7 @@ function initGalleryModule() {
         panelBody.querySelectorAll("video").forEach((vid) => {
           const card = vid.closest(".gal-media-item");
           card?.addEventListener("mouseenter", () => {
-            vid.play().catch(() => {});
+            vid.play().catch(() => { });
             card.classList.add("is-playing");
           });
           card?.addEventListener("mouseleave", () => {
@@ -12076,601 +12469,601 @@ function initSceneTransition() {
 (function initHonorStudentsModule() {
   const honorStudentsData = [
     {
-        "id": "senan-mirzezade",
-        "fullName": "Mirzəzadə Sənan Azər oğlu",
-        "fullName_az": "Mirzəzadə Sənan Azər oğlu",
-        "fullName_en": "Sanan Mirzazada Azer",
-        "fullName_ru": "Мирзазаде Санан Азер оглы",
-        "photo": "senan1.jpeg",
-        "fallbackPhoto": "logo.jpg",
-        "titleBadge": "“İlin Gənci” Mükafatçısı",
-        "titleBadge_az": "“İlin Gənci” Mükafatçısı",
-        "titleBadge_en": "“Youth of the Year” Laureate",
-        "titleBadge_ru": "Лауреат премии «Молодежь года»",
-        "role": "İnformasiya Texnologiyaları, Kibertəhlükəsizlik və Robototexnika Mütəxəssisi",
-        "role_az": "İnformasiya Texnologiyaları, Kibertəhlükəsizlik və Robototexnika Mütəxəssisi",
-        "role_en": "Information Technology, Cybersecurity & Robotics Specialist",
-        "role_ru": "Специалист по информационным технологиям, кибербезопасности и робототехнике",
-        "categories": [
-            "all",
-            "it-robotics",
-            "international",
-            "youth"
-        ],
-        "statusText": "Beynəlxalq Çempion & Tədqiqatçı",
-        "statusText_az": "Beynəlxalq Çempion & Tədqiqatçı",
-        "statusText_en": "International Champion & Researcher",
-        "statusText_ru": "Международный чемпион и исследователь",
-        "quote": "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
-        "quote_az": "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
-        "quote_en": "Sanan uses the knowledge and experience he has gained not only for personal advancement, but also to mentor children and young talents preparing for competitions, share his expertise, and contribute to social inclusivity in technology.",
-        "quote_ru": "Санан использует приобретенные знания и опыт не только для личного развития, но и для поддержки детей и молодежи при подготовке к соревнованиям, обмена опытом и содействия социальной инклюзивности в сфере технологий.",
-        "flags": [
-            {
-                "emoji": "🇦🇿",
-                "name": "Azərbaycan",
-                "name_az": "Azərbaycan",
-                "name_en": "Azerbaijan",
-                "name_ru": "Азербайджан",
-                "note": "Respublika Çempionu",
-                "note_az": "Respublika Çempionu",
-                "note_en": "National Champion",
-                "note_ru": "Чемпион Республики"
-            },
-            {
-                "emoji": "🇺🇸",
-                "name": "ABŞ",
-                "name_az": "ABŞ",
-                "name_en": "USA",
-                "name_ru": "США",
-                "note": "FIRST Robotics / NASA Layihəsi",
-                "note_az": "FIRST Robotics / NASA Layihəsi",
-                "note_en": "FIRST Robotics / NASA Project",
-                "note_ru": "FIRST Robotics / Проект NASA"
-            },
-            {
-                "emoji": "🇯🇵",
-                "name": "Yaponiya",
-                "name_az": "Yaponiya",
-                "name_en": "Japan",
-                "name_ru": "Япония",
-                "note": "Beynəlxalq Robototexnika 2026",
-                "note_az": "Beynəlxalq Robototexnika 2026",
-                "note_en": "International Robotics 2026",
-                "note_ru": "Международная Робототехника 2026"
-            },
-            {
-                "emoji": "🇫🇮",
-                "name": "Finlandiya",
-                "name_az": "Finlandiya",
-                "name_en": "Finland",
-                "name_ru": "Финляндия",
-                "note": "Beynəlxalq Abilimpiya 2027",
-                "note_az": "Beynəlxalq Abilimpiya 2027",
-                "note_en": "International Abilympics 2027",
-                "note_ru": "Международный Абилимпикс 2027"
-            },
-            {
-                "emoji": "🇹🇷",
-                "name": "Türkiyə",
-                "name_az": "Türkiyə",
-                "name_en": "Türkiye",
-                "name_ru": "Турция",
-                "note": "16-cı Beynəlxalq MEB Robot",
-                "note_az": "16-cı Beynəlxalq MEB Robot",
-                "note_en": "16th International MEB Robot",
-                "note_ru": "16-й Международный MEB Robot"
-            }
-        ],
-        "stats": [
-            {
-                "icon": "🥇",
-                "val": "I YER",
-                "val_az": "I YER",
-                "val_en": "1st PLACE",
-                "val_ru": "I МЕСТО",
-                "label": "Milli Abilimpiya 2026",
-                "label_az": "Milli Abilimpiya 2026",
-                "label_en": "National Abilympics 2026",
-                "label_ru": "Национальный Абилимпикс 2026",
-                "sub": "İT istiqaməti üzrə Qızıl Medal",
-                "sub_az": "İT istiqaməti üzrə Qızıl Medal",
-                "sub_en": "Gold Medal in IT Specialization",
-                "sub_ru": "Золотая Медаль по направлению ИТ"
-            },
-            {
-                "icon": "🤖",
-                "val": "ÇEMPİON",
-                "val_az": "ÇEMPİON",
-                "val_en": "CHAMPION",
-                "val_ru": "ЧЕМПИОН",
-                "label": "Mini Sumo Robototexnika",
-                "label_az": "Mini Sumo Robototexnika",
-                "label_en": "Mini Sumo Robotics",
-                "label_ru": "Мини-Сумо Робототехника",
-                "sub": "Azərbaycan Beynəlxalq Olimpiada",
-                "sub_az": "Azərbaycan Beynəlxalq Olimpiada",
-                "sub_en": "Azerbaijan Int. Olympiad",
-                "sub_ru": "Азербайджанская Межд. Олимпиада"
-            },
-            {
-                "icon": "🛡️",
-                "val": "LEVEL 1 & 2",
-                "val_az": "LEVEL 1 & 2",
-                "val_en": "LEVEL 1 & 2",
-                "val_ru": "LEVEL 1 & 2",
-                "label": "Ethical Hacker",
-                "label_az": "Ethical Hacker",
-                "label_en": "Ethical Hacker",
-                "label_ru": "Этичный Хакер (Ethical Hacker)",
-                "sub": "Beynəlxalq kiber sertifikatlar",
-                "sub_az": "Beynəlxalq kiber sertifikatlar",
-                "sub_en": "International cyber certifications",
-                "sub_ru": "Международные кибер-сертификаты"
-            },
-            {
-                "icon": "🌟",
-                "val": "İLİN GƏNCİ",
-                "val_az": "İLİN GƏNCİ",
-                "val_en": "YOUTH OF YEAR",
-                "val_ru": "МОЛОДЕЖЬ ГОДА",
-                "label": "Fəxri Dövlət Mükafatı",
-                "label_az": "Fəxri Dövlət Mükafatı",
-                "label_en": "Honorary State Award",
-                "label_ru": "Почетная Государственная Награда",
-                "sub": "İctimai fəallıq və nailiyyətlər",
-                "sub_az": "İctimai fəallıq və nailiyyətlər",
-                "sub_en": "Social engagement & achievements",
-                "sub_ru": "Общественная активность и успехи"
-            }
-        ],
-        "highlights": [
-            {
-                "year": "2027",
-                "flag": "🇫🇮",
-                "country": "Finlandiya",
-                "country_az": "Finlandiya",
-                "country_en": "Finland",
-                "country_ru": "Финляндия",
-                "title": "Beynəlxalq Abilimpiya Çempionatı",
-                "title_az": "Beynəlxalq Abilimpiya Çempionatı",
-                "title_en": "International Abilympics Championship",
-                "title_ru": "Международный Чемпионат Абилимпикс",
-                "text": "Azərbaycan Milli Komandasının tərkibində ölkəmizi təmsil etmək vəsiqəsi qazanmışdır.",
-                "text_az": "Azərbaycan Milli Komandasının tərkibində ölkəmizi təmsil etmək vəsiqəsi qazanmışdır.",
-                "text_en": "Earned the official right to represent Azerbaijan as a member of the National Team.",
-                "text_ru": "Завоевал право представлять Азербайджан в составе Национальной Сборной."
-            },
-            {
-                "year": "2026",
-                "flag": "🇯🇵",
-                "country": "Yaponiya",
-                "country_az": "Yaponiya",
-                "country_en": "Japan",
-                "country_ru": "Япония",
-                "title": "Beynəlxalq Robototexnika Yarışı",
-                "title_az": "Beynəlxalq Robototexnika Yarışı",
-                "title_en": "International Robotics Competition",
-                "title_ru": "Международные Соревнования по Робототехнике",
-                "text": "Azərbaycan Mini Sumo çempionu kimi Yaponiyada keçiriləcək beynəlxalq yarışda Azərbaycanı təmsil edəcək.",
-                "text_az": "Azərbaycan Mini Sumo çempionu kimi Yaponiyada keçiriləcək beynəlxalq yarışda Azərbaycanı təmsil edəcək.",
-                "text_en": "As the Azerbaijan Mini Sumo champion, will represent our country at the international contest in Japan.",
-                "text_ru": "В качестве чемпиона Азербайджана по Мини-Сумо представит страну на международном турнире в Японии."
-            },
-            {
-                "year": "2024",
-                "flag": "🇺🇸",
-                "country": "ABŞ",
-                "country_az": "ABŞ",
-                "country_en": "USA",
-                "country_ru": "США",
-                "title": "FIRST Robotics Competition & NASA Layihəsi",
-                "title_az": "FIRST Robotics Competition & NASA Layihəsi",
-                "title_en": "FIRST Robotics Competition & NASA Project",
-                "title_ru": "FIRST Robotics Competition и Проект NASA",
-                "text": "Amerika Birləşmiş Ştatlarında NASA layihəsi ilə əlaqəli FRC yarışında Azərbaycanı təmsil etmişdir.",
-                "text_az": "Amerika Birləşmiş Ştatlarında NASA layihəsi ilə əlaqəli FRC yarışında Azərbaycanı təmsil etmişdir.",
-                "text_en": "Represented Azerbaijan in the USA at the FIRST Robotics Competition associated with the NASA project.",
-                "text_ru": "Представлял Азербайджан в США на соревнованиях FIRST Robotics Competition в рамках проекта NASA."
-            }
-        ],
-        "tags": [
-            "#İnformasiyaTexnologiyaları",
-            "#Kibertəhlükəsizlik",
-            "#EthicalHacker_L1_L2",
-            "#Robototexnika",
-            "#MiniSumo_Çempionu",
-            "#FIRST_Robotics_NASA",
-            "#MilliAbilimpiya_I_Yer",
-            "#Finlandiya2027",
-            "#Yaponiya2026",
-            "#İlinGənci"
-        ],
-        "tags_az": [
-            "#İnformasiyaTexnologiyaları",
-            "#Kibertəhlükəsizlik",
-            "#EthicalHacker_L1_L2",
-            "#Robototexnika",
-            "#MiniSumo_Çempionu",
-            "#FIRST_Robotics_NASA",
-            "#MilliAbilimpiya_I_Yer",
-            "#Finlandiya2027",
-            "#Yaponiya2026",
-            "#İlinGənci"
-        ],
-        "tags_en": [
-            "#InformationTechnology",
-            "#Cybersecurity",
-            "#EthicalHacker_L1_L2",
-            "#Robotics",
-            "#MiniSumo_Champion",
-            "#FIRST_Robotics_NASA",
-            "#NationalAbilympics_1stPlace",
-            "#Finland2027",
-            "#Japan2026",
-            "#YouthOfTheYear"
-        ],
-        "tags_ru": [
-            "#ИнформационныеТехнологии",
-            "#Кибербезопасность",
-            "#EthicalHacker_L1_L2",
-            "#Робототехника",
-            "#Чемпион_МиниСумо",
-            "#FIRST_Robotics_NASA",
-            "#НациональныйАбилимпикс_1Место",
-            "#Финляндия2027",
-            "#Япония2026",
-            "#МолодежьГода"
-        ],
-        "timeline": [
-            {
-                "year": "2027",
-                "badge": "🇫🇮 Finlandiya · Qlobal Vəsiqə",
-                "badge_az": "🇫🇮 Finlandiya · Qlobal Vəsiqə",
-                "badge_en": "🇫🇮 Finland · Global Qualification",
-                "badge_ru": "🇫🇮 Финляндия · Международная Путевка",
-                "title": "Beynəlxalq Abilimpiya Çempionatı (Finlandiya)",
-                "title_az": "Beynəlxalq Abilimpiya Çempionatı (Finlandiya)",
-                "title_en": "International Abilympics Championship (Finland)",
-                "title_ru": "Международный Чемпионат Абилимпикс (Финляндия)",
-                "desc": "2026-cı il Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə qazanılmış I yer (qızıl medal) nəticəsinə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
-                "desc_az": "2026-cı il Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə qazanılmış I yer (qızıl medal) nəticəsinə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
-                "desc_en": "Based on achieving 1st place (Gold Medal) in Information Technology at the 2026 National Abilympics, earned the right to represent our country as part of the Azerbaijan National Team at the International Abilympics in Finland in 2027.",
-                "desc_ru": "По итогам 1-го места (золотая медаль) по направлению Информационные Технологии на Национальном Чемпионате Абилимпикс 2026 года, завоевал право представлять Азербайджан в составе национальной сборной на Международном Чемпионате Абилимпикс в Финляндии в 2027 году."
-            },
-            {
-                "year": "2026",
-                "badge": "🇯🇵 Yaponiya · Qlobal Vəsiqə & Çempionluq",
-                "badge_az": "🇯🇵 Yaponiya · Qlobal Vəsiqə & Çempionluq",
-                "badge_en": "🇯🇵 Japan · Global Ticket & Championship",
-                "badge_ru": "🇯🇵 Япония · Путевка и Чемпионский Титул",
-                "title": "Azərbaycan Beynəlxalq Robot Olimpiadası — Mini Sumo Çempionu",
-                "title_az": "Azərbaycan Beynəlxalq Robot Olimpiadası — Mini Sumo Çempionu",
-                "title_en": "Azerbaijan International Robot Olympiad — Mini Sumo Champion",
-                "title_ru": "Азербайджанская Международная Робот Олимпиада — Чемпион Мини-Сумо",
-                "desc": "Azərbaycan Beynəlxalq Robot Olimpiadasında yüksək nəticə göstərərək Mini Sumo robototexnika kateqoriyasında Respublika Çempionu olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
-                "desc_az": "Azərbaycan Beynəlxalq Robot Olimpiadasında yüksək nəticə göstərərək Mini Sumo robototexnika kateqoriyasında Respublika Çempionu olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
-                "desc_en": "Demonstrated top performance at the Azerbaijan International Robot Olympiad, becoming National Champion in the Mini Sumo robotics category. Based on these achievements, secured the right to represent Azerbaijan at the international robotics tournament in Japan.",
-                "desc_ru": "Продемонстрировал выдающиеся результаты на Азербайджанской Международной Робототехнической Олимпиаде, став Чемпионом Республики в категории робототехники «Мини-Сумо». Завоевал путевку на представление Азербайджана на международных соревнованиях в Японии."
-            },
-            {
-                "year": "2026",
-                "badge": "🥇 Qızıl Medal & Diplom",
-                "badge_az": "🥇 Qızıl Medal & Diplom",
-                "badge_en": "🥇 Gold Medal & Diploma",
-                "badge_ru": "🥇 Золотая Медаль и Диплом",
-                "title": "Milli Abilimpiya Çempionatı — I Yer Qalibi",
-                "title_az": "Milli Abilimpiya Çempionatı — I Yer Qalibi",
-                "title_en": "National Abilympics Championship — 1st Place Winner",
-                "title_ru": "Национальный Чемпионат Абилимпикс — Победитель I Места",
-                "desc": "İnformasiya Texnologiyaları istiqaməti üzrə bütün rəqiblərini qabaqlayaraq fəxri I yerin qalibi olmuş, qızıl medal və xüsusi diplomla təltif edilmişdir.",
-                "desc_az": "İnformasiya Texnologiyaları istiqaməti üzrə bütün rəqiblərini qabaqlayaraq fəxri I yerin qalibi olmuş, qızıl medal və xüsusi diplomla təltif edilmişdir.",
-                "desc_en": "Outperformed all competitors in Information Technology, winning honorary 1st place, awarded with a gold medal and special diploma.",
-                "desc_ru": "Опередил всех соперников по направлению Информационные Технологии, завоевав почетное I место, награжден золотой медалью и специальным дипломом."
-            },
-            {
-                "year": "2025",
-                "badge": "🤝 Könüllü Mentorluq & İnklüziv Dəstək",
-                "badge_az": "🤝 Könüllü Mentorluq & İnklüziv Dəstək",
-                "badge_en": "🤝 Voluntary Mentorship & Inclusive Support",
-                "badge_ru": "🤝 Волонтерское Наставничество и Инклюзивная Поддержка",
-                "title": "FIRST Robotics Komandasına Texniki Mentorluq və Sosial Maarifləndirmə",
-                "title_az": "FIRST Robotics Komandasına Texniki Mentorluq və Sosial Maarifləndirmə",
-                "title_en": "Technical Mentorship to FIRST Robotics Team & Social Advocacy",
-                "title_ru": "Техническое Менторство Команде FIRST Robotics и Социальное Просвещение",
-                "desc": "FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
-                "desc_az": "FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
-                "desc_en": "Voluntarily contributed knowledge and technical mentorship to the team traveling abroad for FIRST Robotics Competition, assisting team preparation and skill building. Participated actively in technology-driven social inclusivity projects, mentoring children and youth.",
-                "desc_ru": "На волонтерских началах делился опытом и знаниями с командой, выезжающей за рубеж для участия в FIRST Robotics Competition, внося вклад в их подготовку. Участвовал в инклюзивных технологических проектах, передавая навыки молодому поколению."
-            },
-            {
-                "year": "2024",
-                "badge": "🇺🇸 ABŞ & 🇹🇷 Türkiyə",
-                "badge_az": "🇺🇸 ABŞ & 🇹🇷 Türkiyə",
-                "badge_en": "🇺🇸 USA & 🇹🇷 Türkiye",
-                "badge_ru": "🇺🇸 США и 🇹🇷 Турция",
-                "title": "FIRST Robotics Competition (NASA Layihəsi) & 16-cı MEB Robot",
-                "title_az": "FIRST Robotics Competition (NASA Layihəsi) & 16-cı MEB Robot",
-                "title_en": "FIRST Robotics Competition (NASA Project) & 16th MEB Robot",
-                "title_ru": "FIRST Robotics Competition (Проект NASA) и 16-й MEB Robot",
-                "desc": "Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmiş, beynəlxalq robototexnika mühitində zəngin praktiki təcrübə qazanmışdır. Həmin il Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir.",
-                "desc_az": "Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmiş, beynəlxalq robototexnika mühitində zəngin praktiki təcrübə qazanmışdır. Həmin il Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir.",
-                "desc_en": "Represented Azerbaijan in the USA at the FIRST Robotics Competition associated with the NASA project, acquiring invaluable hands-on engineering experience. That same year participated in the 16th International MEB Robot Contest in Türkiye.",
-                "desc_ru": "Представлял Азербайджан в США на соревнованиях FIRST Robotics Competition в партнерстве с проектом NASA, получив ценнейший практический опыт. В том же году участвовал в 16-м Международном Конкурсе MEB Robot в Турции."
-            },
-            {
-                "year": "2023",
-                "badge": "🥉 Respublika Mükafatı & Kiber Məktəb",
-                "badge_az": "🥉 Respublika Mükafatı & Kiber Məktəb",
-                "badge_en": "🥉 National Award & Cyber School",
-                "badge_ru": "🥉 Республиканская Награда и Кибершкола",
-                "title": "Milli Abilimpiya Çempionatı III Yer & AKTA Cyber Summer School 2023",
-                "title_az": "Milli Abilimpiya Çempionatı III Yer & AKTA Cyber Summer School 2023",
-                "title_en": "National Abilympics 3rd Place & AKTA Cyber Summer School 2023",
-                "title_ru": "Национальный Абилимпикс III Место и AKTA Cyber Summer School 2023",
-                "desc": "Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
-                "desc_az": "Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
-                "desc_en": "Won 3rd place in Information Technology at the National Abilympics, awarded medal and diploma. Participated in the AKTA Cyber Summer School 2023, advancing knowledge and applied cybersecurity skills.",
-                "desc_ru": "Занял III место по направлению Информационные Технологии на Национальном Чемпионате Абилимпикс, награжден медалью и дипломом. Участвовал в программе AKTA Cyber Summer School 2023, развивая навыки кибербезопасности."
-            },
-            {
-                "year": "2019–2022",
-                "badge": "💻 Fundamental Təhsil",
-                "badge_az": "💻 Fundamental Təhsil",
-                "badge_en": "💻 Foundational Education",
-                "badge_ru": "💻 Фундаментальное Образование",
-                "title": "STEP IT Kids Academy — İT və Rəqəmsal Texnologiyalar",
-                "title_az": "STEP IT Kids Academy — İT və Rəqəmsal Texnologiyalar",
-                "title_en": "STEP IT Kids Academy — IT and Digital Technologies",
-                "title_ru": "STEP IT Kids Academy — ИТ и Цифровые Технологии",
-                "desc": "STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində dördillik peşəkar təhsil almışdır.",
-                "desc_az": "STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində dördillik peşəkar təhsil almışdır.",
-                "desc_en": "Completed a comprehensive four-year professional education in information technology and digital innovations at STEP IT Kids Academy.",
-                "desc_ru": "Прошел четырехлетнее профессиональное обучение по направлению информационных и цифровых технологий в STEP IT Kids Academy."
-            }
-        ],
-        "fullBio": [
-            "Mirzəzadə Sənan Azər oğlu informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində özünü inkişaf etdirən, müxtəlif yerli və beynəlxalq yarışlarda iştirak edərək yüksək nəticələr əldə edən gəncdir.",
-            "2019–2022-ci illərdə STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində təhsil almışdır.",
-            "2023-cü ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
-            "2024-cü ildə Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir. Həmin il Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmişdir. Bu yarış çərçivəsində beynəlxalq robototexnika mühitində praktiki təcrübə qazanmışdır.",
-            "2025-ci ildə FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
-            "2026-cı ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə I yerin qalibi olmuşdur. Bu nəticəyə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
-            "2026-cı ildə Azərbaycan Beynəlxalq Robot Olimpiadasında iştirak edərək yüksək nəticə göstərmiş, Mini Sumo robototexnika kateqoriyasında çempion olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
-            "Kibertəhlükəsizlik sahəsində Ethical Hacker Level 1 və Ethical Hacker Level 2 proqramlarını uğurla tamamlamışdır. İnformasiya texnologiyaları, kompüter şəbəkələri, kibertəhlükəsizlik və robototexnika üzrə müxtəlif seminar, təlim və praktiki proqramlarda iştirak edərək peşəkar bilik və bacarıqlarını davamlı şəkildə inkişaf etdirir.",
-            "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
-            "Gənclər və texnologiya sahəsində göstərdiyi fəallıq, əldə etdiyi nailiyyətlər və ictimai fəaliyyəti nəzərə alınaraq “İlin Gənci” mükafatına layiq görülmüşdür.",
-            "Sənanın əldə etdiyi nəticələr onun informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində ardıcıl inkişaf etdiyini, beynəlxalq səviyyədə Azərbaycanı təmsil etdiyini və öz bilik və təcrübəsini digər gənclərlə bölüşərək sosial fayda yaratdığını göstərir."
-        ],
-        "fullBio_az": [
-            "Mirzəzadə Sənan Azər oğlu informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində özünü inkişaf etdirən, müxtəlif yerli və beynəlxalq yarışlarda iştirak edərək yüksək nəticələr əldə edən gəncdir.",
-            "2019–2022-ci illərdə STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində təhsil almışdır.",
-            "2023-cü ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
-            "2024-cü ildə Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir. Həmin il Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmişdir. Bu yarış çərçivəsində beynəlxalq robototexnika mühitində praktiki təcrübə qazanmışdır.",
-            "2025-ci ildə FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
-            "2026-cı ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə I yerin qalibi olmuşdur. Bu nəticəyə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
-            "2026-cı ildə Azərbaycan Beynəlxalq Robot Olimpiadasında iştirak edərək yüksək nəticə göstərmiş, Mini Sumo robototexnika kateqoriyasında çempion olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
-            "Kibertəhlükəsizlik sahəsində Ethical Hacker Level 1 və Ethical Hacker Level 2 proqramlarını uğurla tamamlamışdır. İnformasiya texnologiyaları, kompüter şəbəkələri, kibertəhlükəsizlik və robototexnika üzrə müxtəlif seminar, təlim və praktiki proqramlarda iştirak edərək peşəkar bilik və bacarıqlarını davamlı şəkildə inkişaf etdirir.",
-            "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
-            "Gənclər və texnologiya sahəsində göstərdiyi fəallıq, əldə etdiyi nailiyyətlər və ictimai fəaliyyəti nəzərə alınaraq “İlin Gənci” mükafatına layiq görülmüşdür.",
-            "Sənanın əldə etdiyi nəticələr onun informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində ardıcıl inkişaf etdiyini, beynəlxalq səviyyədə Azərbaycanı təmsil etdiyini və öz bilik və təcrübəsini digər gənclərlə bölüşərək sosial fayda yaratdığını göstərir."
-        ],
-        "fullBio_en": [
-            "Mirzazada Sanan Azer is an accomplished young specialist who continually develops himself in the fields of information technology, cybersecurity, and robotics, achieving stellar results at numerous national and international competitions.",
-            "From 2019 to 2022, he studied information technology and digital innovations at the STEP IT Kids Academy, completing four years of foundational tech education.",
-            "In 2023, he won 3rd place in Information Technology at the National Abilympics Championship, being awarded a bronze medal and diploma. In that same year, he joined the AKTA Cyber Summer School 2023 program, enhancing his practical competencies in cybersecurity.",
-            "In 2024, he took part in the 16th International MEB Robot Competition in Türkiye. That year, he had the distinction of representing Azerbaijan in the United States at the prestigious FIRST Robotics Competition associated with the NASA project, gaining substantial international engineering experience.",
-            "In 2025, he volunteered as a technical mentor for the team traveling abroad for the FIRST Robotics Competition, helping train participants and boosting their technical skills. Concurrently, he engaged in various tech-driven social inclusivity initiatives, generously sharing his knowledge with other children and youth.",
-            "In 2026, he secured 1st place (Gold Medal) in Information Technology at the National Abilympics Championship. Through this victory, he earned the privilege of representing Azerbaijan at the International Abilympics Championship to be held in Finland in 2027.",
-            "In 2026, he achieved outstanding success at the Azerbaijan International Robot Olympiad, winning the National Championship in the Mini Sumo robotics category. Based on this feat, he secured the right to represent Azerbaijan at the international robotics competition in Japan.",
-            "In the domain of cybersecurity, he has successfully completed Ethical Hacker Level 1 and Ethical Hacker Level 2 certifications. He continuously enhances his qualifications through technical seminars, hands-on masterclasses, and specialized networking programs.",
-            "Sanan utilizes his accrued expertise not merely for personal achievement, but to guide youth entering robotics and tech competitions, share insights, and advocate for technological accessibility and social inclusion.",
-            "In recognition of his active community leadership, stellar technical achievements, and dedicated social service, he was honored with the prestigious “Youth of the Year” state award.",
-            "Sanan's achievements demonstrate his persistent dedication to IT, cybersecurity, and robotics, his proud international representation of Azerbaijan, and his commitment to generating positive social impact by empowering younger generations."
-        ],
-        "fullBio_ru": [
-            "Мирзазаде Санан Азер оглы — целеустремленный молодой специалист в сферах информационных технологий, кибербезопасности и робототехники, демонстрирующий высокие результаты на республиканских и международных соревнованиях.",
-            "В 2019–2022 годах получил углубленное четырехлетнее образование по направлению информационных и цифровых технологий в STEP IT Kids Academy.",
-            "В 2023 году завоевал III место по направлению «Информационные Технологии» на Национальном Чемпионате Абилимпикс, будучи награжден медалью и дипломом. В том же году успешно прошел программу AKTA Cyber Summer School 2023, расширив практические навыки в сфере кибербезопасности.",
-            "В 2024 году принял участие в 16-м Международном Конкурсе MEB Robot в Турции. В том же году представлял Азербайджан в США на престижных соревнованиях FIRST Robotics Competition в рамках проекта NASA, получив ценный международный опыт в сфере робототехники.",
-            "В 2025 году оказал добровольную менторскую поддержку национальной команде, направлявшейся за рубеж для участия в FIRST Robotics Competition, способствуя подготовке участников и повышению их технического уровня. Одновременно участвовал в социальных инклюзивных IT-проектах, обучая детей и молодежь.",
-            "В 2026 году завоевал I место (золотая медаль) по направлению «Информационные Технологии» на Национальном Чемпионате Абилимпикс. Благодаря этой победе он получил право представлять Азербайджан на Международном Чемпионате Абилимпикс в Финляндии в 2027 году.",
-            "В 2026 году добился триумфа на Азербайджанской Международной Робототехнической Олимпиаде, став чемпионом в категории «Мини-Сумо». По итогам соревнований он завоевал путевку на участие в международном турнире по робототехнике в Японии.",
-            "В сфере кибербезопасности успешно завершил сертификационные программы Ethical Hacker Level 1 и Ethical Hacker Level 2. Постоянно повышает уровень мастерства, участвуя в семинарах, тренингах и практических курсах по сетевой безопасности.",
-            "Санан применяет накопленные знания и опыт не только для индивидуального прогресса, но и для наставничества юных участников турниров, содействуя расширению социальной инклюзивности в технологическом сообществе.",
-            "За выдающиеся успехи, лидерские качества и активную общественную деятельность в молодежной среде был удостоен государственной премии «Молодежь года».",
-            "Достижения Санана наглядно свидетельствуют о его профессиональном росте в сфере ИКТ и кибербезопасности, достойном представлении Азербайджана на мировой арене и стремлении приносить реальную пользу обществу."
-        ],
-        "certificates": [
-            {
-                "icon": "🛡️",
-                "title": "Ethical Hacker Level 1",
-                "title_az": "Ethical Hacker Level 1",
-                "title_en": "Ethical Hacker Level 1",
-                "title_ru": "Ethical Hacker Level 1",
-                "sub": "Kibertəhlükəsizlik & Şəbəkə Müdafiəsi",
-                "sub_az": "Kibertəhlükəsizlik & Şəbəkə Müdafiəsi",
-                "sub_en": "Cybersecurity & Network Defense",
-                "sub_ru": "Кибербезопасность и Сетевая Защита"
-            },
-            {
-                "icon": "🔐",
-                "title": "Ethical Hacker Level 2",
-                "title_az": "Ethical Hacker Level 2",
-                "title_en": "Ethical Hacker Level 2",
-                "title_ru": "Ethical Hacker Level 2",
-                "sub": "Təkmil Penetrasiya & Təhlükə Analizi",
-                "sub_az": "Təkmil Penetrasiya & Təhlükə Analizi",
-                "sub_en": "Advanced Penetration & Threat Analysis",
-                "sub_ru": "Продвинутое Тестирование на Проникновение"
-            },
-            {
-                "icon": "🌐",
-                "title": "AKTA Cyber Summer School 2023",
-                "title_az": "AKTA Cyber Summer School 2023",
-                "title_en": "AKTA Cyber Summer School 2023",
-                "title_ru": "AKTA Cyber Summer School 2023",
-                "sub": "Azərbaycan Kibertəhlükəsizlik Təşkilatları Assosiasiyası",
-                "sub_az": "Azərbaycan Kibertəhlükəsizlik Təşkilatları Assosiasiyası",
-                "sub_en": "Association of Cybersecurity Organizations of Azerbaijan",
-                "sub_ru": "Ассоциация Организаций Кибербезопасности Азербайджана"
-            },
-            {
-                "icon": "🥇",
-                "title": "Milli Abilimpiya Qızıl Medal (2026)",
-                "title_az": "Milli Abilimpiya Qızıl Medal (2026)",
-                "title_en": "National Abilympics Gold Medal (2026)",
-                "title_ru": "Золотая Медаль Национального Абилимпикса (2026)",
-                "sub": "İnformasiya Texnologiyaları üzrə I Yer",
-                "sub_az": "İnformasiya Texnologiyaları üzrə I Yer",
-                "sub_en": "1st Place in Information Technology",
-                "sub_ru": "I Место по Информационным Технологиям"
-            },
-            {
-                "icon": "🤖",
-                "title": "Mini Sumo Robototexnika Çempionu",
-                "title_az": "Mini Sumo Robototexnika Çempionu",
-                "title_en": "Mini Sumo Robotics Champion",
-                "title_ru": "Чемпион по Робототехнике Мини-Сумо",
-                "sub": "Azərbaycan Beynəlxalq Robot Olimpiadası (2026)",
-                "sub_az": "Azərbaycan Beynəlxalq Robot Olimpiadası (2026)",
-                "sub_en": "Azerbaijan International Robot Olympiad (2026)",
-                "sub_ru": "Азербайджанская Межд. Робот Олимпиада (2026)"
-            },
-            {
-                "icon": "🚀",
-                "title": "FIRST Robotics & NASA Layihəsi",
-                "title_az": "FIRST Robotics & NASA Layihəsi",
-                "title_en": "FIRST Robotics & NASA Project",
-                "title_ru": "FIRST Robotics и Проект NASA",
-                "sub": "Beynəlxalq Mühəndislik və Robototexnika (ABŞ)",
-                "sub_az": "Beynəlxalq Mühəndislik və Robototexnika (ABŞ)",
-                "sub_en": "International Engineering & Robotics (USA)",
-                "sub_ru": "Международная Инженерия и Робототехника (США)"
-            },
-            {
-                "icon": "💻",
-                "title": "STEP IT Kids Academy Məzunu",
-                "title_az": "STEP IT Kids Academy Məzunu",
-                "title_en": "STEP IT Kids Academy Graduate",
-                "title_ru": "Выпускник STEP IT Kids Academy",
-                "sub": "İKT və Rəqəmsal Texnologiyalar (2019-2022)",
-                "sub_az": "İKT və Rəqəmsal Texnologiyalar (2019-2022)",
-                "sub_en": "ICT & Digital Technologies (2019-2022)",
-                "sub_ru": "ИКТ и Цифровые Технологии (2019-2022)"
-            },
-            {
-                "icon": "🌟",
-                "title": "“İlin Gənci” Fəxri Dövlət Mükafatı",
-                "title_az": "“İlin Gənci” Fəxri Dövlət Mükafatı",
-                "title_en": "“Youth of the Year” State Award",
-                "title_ru": "Почетная Госпремия «Молодежь года»",
-                "sub": "İctimai Fəallıq və İnklüziv Layihələrə Töhfə",
-                "sub_az": "İctimai Fəallıq və İnklüziv Layihələrə Töhfə",
-                "sub_en": "Social Engagement & Contribution to Inclusive Projects",
-                "sub_ru": "Общественная Активность и Вклад в Инклюзивные Проекты"
-            }
-        ],
-        "gallery": [
-            {
-                "type": "image",
-                "src": "senan1.jpeg",
-                "caption": "Mirzəzadə Sənan — Fəxri Tələbə Portreti",
-                "caption_az": "Mirzəzadə Sənan — Fəxri Tələbə Portreti",
-                "caption_en": "Sanan Mirzazada — Honor Student Portrait",
-                "caption_ru": "Мирзазаде Санан — Портрет Почетного Студента"
-            },
-            {
-                "type": "image",
-                "src": "senan2.jpeg",
-                "caption": "Milli Abilimpiya Mükafatlandırma Mərasimi",
-                "caption_az": "Milli Abilimpiya Mükafatlandırma Mərasimi",
-                "caption_en": "National Abilympics Awarding Ceremony",
-                "caption_ru": "Церемония Награждения Национального Абилимпикса"
-            },
-            {
-                "type": "image",
-                "src": "senan3.jpeg",
-                "caption": "Mini Sumo Robototexnika Çempionluğu",
-                "caption_az": "Mini Sumo Robototexnika Çempionluğu",
-                "caption_en": "Mini Sumo Robotics Championship",
-                "caption_ru": "Чемпионство по Робототехнике Мини-Сумо"
-            },
-            {
-                "type": "image",
-                "src": "senan4.jpeg",
-                "caption": "FIRST Robotics (NASA) Beynəlxalq Yarışı",
-                "caption_az": "FIRST Robotics (NASA) Beynəlxalq Yarışı",
-                "caption_en": "FIRST Robotics (NASA) International Competition",
-                "caption_ru": "FIRST Robotics (NASA) Международные Соревнования"
-            },
-            {
-                "type": "image",
-                "src": "senan5.jpeg",
-                "caption": "Kibertəhlükəsizlik & Ethical Hacker Proqramı",
-                "caption_az": "Kibertəhlükəsizlik & Ethical Hacker Proqramı",
-                "caption_en": "Cybersecurity & Ethical Hacker Program",
-                "caption_ru": "Кибербезопасность и Программа Ethical Hacker"
-            },
-            {
-                "type": "image",
-                "src": "senan6.jpeg",
-                "caption": "AKTA Cyber Summer School Praktiki Təlimi",
-                "caption_az": "AKTA Cyber Summer School Praktiki Təlimi",
-                "caption_en": "AKTA Cyber Summer School Hands-on Training",
-                "caption_ru": "Практический Тренинг AKTA Cyber Summer School"
-            },
-            {
-                "type": "image",
-                "src": "senan7.jpeg",
-                "caption": "16-cı Beynəlxalq MEB Robot Yarışı (Türkiyə)",
-                "caption_az": "16-cı Beynəlxalq MEB Robot Yarışı (Türkiyə)",
-                "caption_en": "16th International MEB Robot Contest (Türkiye)",
-                "caption_ru": "16-й Международный Конкурс MEB Robot (Турция)"
-            },
-            {
-                "type": "image",
-                "src": "senan8.jpeg",
-                "caption": "Sosial İnklüziv Layihələr & Könüllü Dəstək",
-                "caption_az": "Sosial İnklüziv Layihələr & Könüllü Dəstək",
-                "caption_en": "Social Inclusivity Projects & Volunteer Support",
-                "caption_ru": "Социальные Инклюзивные Проекты и Менторство"
-            },
-            {
-                "type": "image",
-                "src": "senan9.jpeg",
-                "caption": "“İlin Gənci” Mükafat Təqdimatı",
-                "caption_az": "“İlin Gənci” Mükafat Təqdimatı",
-                "caption_en": "“Youth of the Year” Award Presentation",
-                "caption_ru": "Вручение Награды «Молодежь года»"
-            },
-            {
-                "type": "video",
-                "src": "senan10.mp4",
-                "caption": "Robototexnika və Canlı Çıxış Video Xronikası",
-                "caption_az": "Robototexnika və Canlı Çıxış Video Xronikası",
-                "caption_en": "Robotics & Live Demonstration Video Chronicle",
-                "caption_ru": "Видеохроника Робототехники и Выступлений"
-            },
-            {
-                "type": "image",
-                "src": "senan11.jpeg",
-                "caption": "Beynəlxalq Robot Arena və Hazırlıq",
-                "caption_az": "Beynəlxalq Robot Arena və Hazırlıq",
-                "caption_en": "International Robot Arena & Preparation",
-                "caption_ru": "Международная Робот-Арена и Подготовка"
-            },
-            {
-                "type": "image",
-                "src": "senan12.jpeg",
-                "caption": "Diplomlar, Qızıl Medallar və Təltiflər",
-                "caption_az": "Diplomlar, Qızıl Medallar və Təltiflər",
-                "caption_en": "Diplomas, Gold Medals and Distinctions",
-                "caption_ru": "Дипломы, Золотые Медали и Награды"
-            }
-        ]
+      "id": "senan-mirzezade",
+      "fullName": "Mirzəzadə Sənan Azər oğlu",
+      "fullName_az": "Mirzəzadə Sənan Azər oğlu",
+      "fullName_en": "Sanan Mirzazada Azer",
+      "fullName_ru": "Мирзазаде Санан Азер оглы",
+      "photo": "senan1.jpeg",
+      "fallbackPhoto": "logo.jpg",
+      "titleBadge": "“İlin Gənci” Mükafatçısı",
+      "titleBadge_az": "“İlin Gənci” Mükafatçısı",
+      "titleBadge_en": "“Youth of the Year” Laureate",
+      "titleBadge_ru": "Лауреат премии «Молодежь года»",
+      "role": "İnformasiya Texnologiyaları, Kibertəhlükəsizlik və Robototexnika Mütəxəssisi",
+      "role_az": "İnformasiya Texnologiyaları, Kibertəhlükəsizlik və Robototexnika Mütəxəssisi",
+      "role_en": "Information Technology, Cybersecurity & Robotics Specialist",
+      "role_ru": "Специалист по информационным технологиям, кибербезопасности и робототехнике",
+      "categories": [
+        "all",
+        "it-robotics",
+        "international",
+        "youth"
+      ],
+      "statusText": "Beynəlxalq Çempion & Tədqiqatçı",
+      "statusText_az": "Beynəlxalq Çempion & Tədqiqatçı",
+      "statusText_en": "International Champion & Researcher",
+      "statusText_ru": "Международный чемпион и исследователь",
+      "quote": "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
+      "quote_az": "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
+      "quote_en": "Sanan uses the knowledge and experience he has gained not only for personal advancement, but also to mentor children and young talents preparing for competitions, share his expertise, and contribute to social inclusivity in technology.",
+      "quote_ru": "Санан использует приобретенные знания и опыт не только для личного развития, но и для поддержки детей и молодежи при подготовке к соревнованиям, обмена опытом и содействия социальной инклюзивности в сфере технологий.",
+      "flags": [
+        {
+          "emoji": "🇦🇿",
+          "name": "Azərbaycan",
+          "name_az": "Azərbaycan",
+          "name_en": "Azerbaijan",
+          "name_ru": "Азербайджан",
+          "note": "Respublika Çempionu",
+          "note_az": "Respublika Çempionu",
+          "note_en": "National Champion",
+          "note_ru": "Чемпион Республики"
+        },
+        {
+          "emoji": "🇺🇸",
+          "name": "ABŞ",
+          "name_az": "ABŞ",
+          "name_en": "USA",
+          "name_ru": "США",
+          "note": "FIRST Robotics / NASA Layihəsi",
+          "note_az": "FIRST Robotics / NASA Layihəsi",
+          "note_en": "FIRST Robotics / NASA Project",
+          "note_ru": "FIRST Robotics / Проект NASA"
+        },
+        {
+          "emoji": "🇯🇵",
+          "name": "Yaponiya",
+          "name_az": "Yaponiya",
+          "name_en": "Japan",
+          "name_ru": "Япония",
+          "note": "Beynəlxalq Robototexnika 2026",
+          "note_az": "Beynəlxalq Robototexnika 2026",
+          "note_en": "International Robotics 2026",
+          "note_ru": "Международная Робототехника 2026"
+        },
+        {
+          "emoji": "🇫🇮",
+          "name": "Finlandiya",
+          "name_az": "Finlandiya",
+          "name_en": "Finland",
+          "name_ru": "Финляндия",
+          "note": "Beynəlxalq Abilimpiya 2027",
+          "note_az": "Beynəlxalq Abilimpiya 2027",
+          "note_en": "International Abilympics 2027",
+          "note_ru": "Международный Абилимпикс 2027"
+        },
+        {
+          "emoji": "🇹🇷",
+          "name": "Türkiyə",
+          "name_az": "Türkiyə",
+          "name_en": "Türkiye",
+          "name_ru": "Турция",
+          "note": "16-cı Beynəlxalq MEB Robot",
+          "note_az": "16-cı Beynəlxalq MEB Robot",
+          "note_en": "16th International MEB Robot",
+          "note_ru": "16-й Международный MEB Robot"
+        }
+      ],
+      "stats": [
+        {
+          "icon": "🥇",
+          "val": "I YER",
+          "val_az": "I YER",
+          "val_en": "1st PLACE",
+          "val_ru": "I МЕСТО",
+          "label": "Milli Abilimpiya 2026",
+          "label_az": "Milli Abilimpiya 2026",
+          "label_en": "National Abilympics 2026",
+          "label_ru": "Национальный Абилимпикс 2026",
+          "sub": "İT istiqaməti üzrə Qızıl Medal",
+          "sub_az": "İT istiqaməti üzrə Qızıl Medal",
+          "sub_en": "Gold Medal in IT Specialization",
+          "sub_ru": "Золотая Медаль по направлению ИТ"
+        },
+        {
+          "icon": "🤖",
+          "val": "ÇEMPİON",
+          "val_az": "ÇEMPİON",
+          "val_en": "CHAMPION",
+          "val_ru": "ЧЕМПИОН",
+          "label": "Mini Sumo Robototexnika",
+          "label_az": "Mini Sumo Robototexnika",
+          "label_en": "Mini Sumo Robotics",
+          "label_ru": "Мини-Сумо Робототехника",
+          "sub": "Azərbaycan Beynəlxalq Olimpiada",
+          "sub_az": "Azərbaycan Beynəlxalq Olimpiada",
+          "sub_en": "Azerbaijan Int. Olympiad",
+          "sub_ru": "Азербайджанская Межд. Олимпиада"
+        },
+        {
+          "icon": "🛡️",
+          "val": "LEVEL 1 & 2",
+          "val_az": "LEVEL 1 & 2",
+          "val_en": "LEVEL 1 & 2",
+          "val_ru": "LEVEL 1 & 2",
+          "label": "Ethical Hacker",
+          "label_az": "Ethical Hacker",
+          "label_en": "Ethical Hacker",
+          "label_ru": "Этичный Хакер (Ethical Hacker)",
+          "sub": "Beynəlxalq kiber sertifikatlar",
+          "sub_az": "Beynəlxalq kiber sertifikatlar",
+          "sub_en": "International cyber certifications",
+          "sub_ru": "Международные кибер-сертификаты"
+        },
+        {
+          "icon": "🌟",
+          "val": "İLİN GƏNCİ",
+          "val_az": "İLİN GƏNCİ",
+          "val_en": "YOUTH OF YEAR",
+          "val_ru": "МОЛОДЕЖЬ ГОДА",
+          "label": "Fəxri Dövlət Mükafatı",
+          "label_az": "Fəxri Dövlət Mükafatı",
+          "label_en": "Honorary State Award",
+          "label_ru": "Почетная Государственная Награда",
+          "sub": "İctimai fəallıq və nailiyyətlər",
+          "sub_az": "İctimai fəallıq və nailiyyətlər",
+          "sub_en": "Social engagement & achievements",
+          "sub_ru": "Общественная активность и успехи"
+        }
+      ],
+      "highlights": [
+        {
+          "year": "2027",
+          "flag": "🇫🇮",
+          "country": "Finlandiya",
+          "country_az": "Finlandiya",
+          "country_en": "Finland",
+          "country_ru": "Финляндия",
+          "title": "Beynəlxalq Abilimpiya Çempionatı",
+          "title_az": "Beynəlxalq Abilimpiya Çempionatı",
+          "title_en": "International Abilympics Championship",
+          "title_ru": "Международный Чемпионат Абилимпикс",
+          "text": "Azərbaycan Milli Komandasının tərkibində ölkəmizi təmsil etmək vəsiqəsi qazanmışdır.",
+          "text_az": "Azərbaycan Milli Komandasının tərkibində ölkəmizi təmsil etmək vəsiqəsi qazanmışdır.",
+          "text_en": "Earned the official right to represent Azerbaijan as a member of the National Team.",
+          "text_ru": "Завоевал право представлять Азербайджан в составе Национальной Сборной."
+        },
+        {
+          "year": "2026",
+          "flag": "🇯🇵",
+          "country": "Yaponiya",
+          "country_az": "Yaponiya",
+          "country_en": "Japan",
+          "country_ru": "Япония",
+          "title": "Beynəlxalq Robototexnika Yarışı",
+          "title_az": "Beynəlxalq Robototexnika Yarışı",
+          "title_en": "International Robotics Competition",
+          "title_ru": "Международные Соревнования по Робототехнике",
+          "text": "Azərbaycan Mini Sumo çempionu kimi Yaponiyada keçiriləcək beynəlxalq yarışda Azərbaycanı təmsil edəcək.",
+          "text_az": "Azərbaycan Mini Sumo çempionu kimi Yaponiyada keçiriləcək beynəlxalq yarışda Azərbaycanı təmsil edəcək.",
+          "text_en": "As the Azerbaijan Mini Sumo champion, will represent our country at the international contest in Japan.",
+          "text_ru": "В качестве чемпиона Азербайджана по Мини-Сумо представит страну на международном турнире в Японии."
+        },
+        {
+          "year": "2024",
+          "flag": "🇺🇸",
+          "country": "ABŞ",
+          "country_az": "ABŞ",
+          "country_en": "USA",
+          "country_ru": "США",
+          "title": "FIRST Robotics Competition & NASA Layihəsi",
+          "title_az": "FIRST Robotics Competition & NASA Layihəsi",
+          "title_en": "FIRST Robotics Competition & NASA Project",
+          "title_ru": "FIRST Robotics Competition и Проект NASA",
+          "text": "Amerika Birləşmiş Ştatlarında NASA layihəsi ilə əlaqəli FRC yarışında Azərbaycanı təmsil etmişdir.",
+          "text_az": "Amerika Birləşmiş Ştatlarında NASA layihəsi ilə əlaqəli FRC yarışında Azərbaycanı təmsil etmişdir.",
+          "text_en": "Represented Azerbaijan in the USA at the FIRST Robotics Competition associated with the NASA project.",
+          "text_ru": "Представлял Азербайджан в США на соревнованиях FIRST Robotics Competition в рамках проекта NASA."
+        }
+      ],
+      "tags": [
+        "#İnformasiyaTexnologiyaları",
+        "#Kibertəhlükəsizlik",
+        "#EthicalHacker_L1_L2",
+        "#Robototexnika",
+        "#MiniSumo_Çempionu",
+        "#FIRST_Robotics_NASA",
+        "#MilliAbilimpiya_I_Yer",
+        "#Finlandiya2027",
+        "#Yaponiya2026",
+        "#İlinGənci"
+      ],
+      "tags_az": [
+        "#İnformasiyaTexnologiyaları",
+        "#Kibertəhlükəsizlik",
+        "#EthicalHacker_L1_L2",
+        "#Robototexnika",
+        "#MiniSumo_Çempionu",
+        "#FIRST_Robotics_NASA",
+        "#MilliAbilimpiya_I_Yer",
+        "#Finlandiya2027",
+        "#Yaponiya2026",
+        "#İlinGənci"
+      ],
+      "tags_en": [
+        "#InformationTechnology",
+        "#Cybersecurity",
+        "#EthicalHacker_L1_L2",
+        "#Robotics",
+        "#MiniSumo_Champion",
+        "#FIRST_Robotics_NASA",
+        "#NationalAbilympics_1stPlace",
+        "#Finland2027",
+        "#Japan2026",
+        "#YouthOfTheYear"
+      ],
+      "tags_ru": [
+        "#ИнформационныеТехнологии",
+        "#Кибербезопасность",
+        "#EthicalHacker_L1_L2",
+        "#Робототехника",
+        "#Чемпион_МиниСумо",
+        "#FIRST_Robotics_NASA",
+        "#НациональныйАбилимпикс_1Место",
+        "#Финляндия2027",
+        "#Япония2026",
+        "#МолодежьГода"
+      ],
+      "timeline": [
+        {
+          "year": "2027",
+          "badge": "🇫🇮 Finlandiya · Qlobal Vəsiqə",
+          "badge_az": "🇫🇮 Finlandiya · Qlobal Vəsiqə",
+          "badge_en": "🇫🇮 Finland · Global Qualification",
+          "badge_ru": "🇫🇮 Финляндия · Международная Путевка",
+          "title": "Beynəlxalq Abilimpiya Çempionatı (Finlandiya)",
+          "title_az": "Beynəlxalq Abilimpiya Çempionatı (Finlandiya)",
+          "title_en": "International Abilympics Championship (Finland)",
+          "title_ru": "Международный Чемпионат Абилимпикс (Финляндия)",
+          "desc": "2026-cı il Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə qazanılmış I yer (qızıl medal) nəticəsinə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
+          "desc_az": "2026-cı il Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə qazanılmış I yer (qızıl medal) nəticəsinə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
+          "desc_en": "Based on achieving 1st place (Gold Medal) in Information Technology at the 2026 National Abilympics, earned the right to represent our country as part of the Azerbaijan National Team at the International Abilympics in Finland in 2027.",
+          "desc_ru": "По итогам 1-го места (золотая медаль) по направлению Информационные Технологии на Национальном Чемпионате Абилимпикс 2026 года, завоевал право представлять Азербайджан в составе национальной сборной на Международном Чемпионате Абилимпикс в Финляндии в 2027 году."
+        },
+        {
+          "year": "2026",
+          "badge": "🇯🇵 Yaponiya · Qlobal Vəsiqə & Çempionluq",
+          "badge_az": "🇯🇵 Yaponiya · Qlobal Vəsiqə & Çempionluq",
+          "badge_en": "🇯🇵 Japan · Global Ticket & Championship",
+          "badge_ru": "🇯🇵 Япония · Путевка и Чемпионский Титул",
+          "title": "Azərbaycan Beynəlxalq Robot Olimpiadası — Mini Sumo Çempionu",
+          "title_az": "Azərbaycan Beynəlxalq Robot Olimpiadası — Mini Sumo Çempionu",
+          "title_en": "Azerbaijan International Robot Olympiad — Mini Sumo Champion",
+          "title_ru": "Азербайджанская Международная Робот Олимпиада — Чемпион Мини-Сумо",
+          "desc": "Azərbaycan Beynəlxalq Robot Olimpiadasında yüksək nəticə göstərərək Mini Sumo robototexnika kateqoriyasında Respublika Çempionu olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
+          "desc_az": "Azərbaycan Beynəlxalq Robot Olimpiadasında yüksək nəticə göstərərək Mini Sumo robototexnika kateqoriyasında Respublika Çempionu olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
+          "desc_en": "Demonstrated top performance at the Azerbaijan International Robot Olympiad, becoming National Champion in the Mini Sumo robotics category. Based on these achievements, secured the right to represent Azerbaijan at the international robotics tournament in Japan.",
+          "desc_ru": "Продемонстрировал выдающиеся результаты на Азербайджанской Международной Робототехнической Олимпиаде, став Чемпионом Республики в категории робототехники «Мини-Сумо». Завоевал путевку на представление Азербайджана на международных соревнованиях в Японии."
+        },
+        {
+          "year": "2026",
+          "badge": "🥇 Qızıl Medal & Diplom",
+          "badge_az": "🥇 Qızıl Medal & Diplom",
+          "badge_en": "🥇 Gold Medal & Diploma",
+          "badge_ru": "🥇 Золотая Медаль и Диплом",
+          "title": "Milli Abilimpiya Çempionatı — I Yer Qalibi",
+          "title_az": "Milli Abilimpiya Çempionatı — I Yer Qalibi",
+          "title_en": "National Abilympics Championship — 1st Place Winner",
+          "title_ru": "Национальный Чемпионат Абилимпикс — Победитель I Места",
+          "desc": "İnformasiya Texnologiyaları istiqaməti üzrə bütün rəqiblərini qabaqlayaraq fəxri I yerin qalibi olmuş, qızıl medal və xüsusi diplomla təltif edilmişdir.",
+          "desc_az": "İnformasiya Texnologiyaları istiqaməti üzrə bütün rəqiblərini qabaqlayaraq fəxri I yerin qalibi olmuş, qızıl medal və xüsusi diplomla təltif edilmişdir.",
+          "desc_en": "Outperformed all competitors in Information Technology, winning honorary 1st place, awarded with a gold medal and special diploma.",
+          "desc_ru": "Опередил всех соперников по направлению Информационные Технологии, завоевав почетное I место, награжден золотой медалью и специальным дипломом."
+        },
+        {
+          "year": "2025",
+          "badge": "🤝 Könüllü Mentorluq & İnklüziv Dəstək",
+          "badge_az": "🤝 Könüllü Mentorluq & İnklüziv Dəstək",
+          "badge_en": "🤝 Voluntary Mentorship & Inclusive Support",
+          "badge_ru": "🤝 Волонтерское Наставничество и Инклюзивная Поддержка",
+          "title": "FIRST Robotics Komandasına Texniki Mentorluq və Sosial Maarifləndirmə",
+          "title_az": "FIRST Robotics Komandasına Texniki Mentorluq və Sosial Maarifləndirmə",
+          "title_en": "Technical Mentorship to FIRST Robotics Team & Social Advocacy",
+          "title_ru": "Техническое Менторство Команде FIRST Robotics и Социальное Просвещение",
+          "desc": "FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
+          "desc_az": "FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
+          "desc_en": "Voluntarily contributed knowledge and technical mentorship to the team traveling abroad for FIRST Robotics Competition, assisting team preparation and skill building. Participated actively in technology-driven social inclusivity projects, mentoring children and youth.",
+          "desc_ru": "На волонтерских началах делился опытом и знаниями с командой, выезжающей за рубеж для участия в FIRST Robotics Competition, внося вклад в их подготовку. Участвовал в инклюзивных технологических проектах, передавая навыки молодому поколению."
+        },
+        {
+          "year": "2024",
+          "badge": "🇺🇸 ABŞ & 🇹🇷 Türkiyə",
+          "badge_az": "🇺🇸 ABŞ & 🇹🇷 Türkiyə",
+          "badge_en": "🇺🇸 USA & 🇹🇷 Türkiye",
+          "badge_ru": "🇺🇸 США и 🇹🇷 Турция",
+          "title": "FIRST Robotics Competition (NASA Layihəsi) & 16-cı MEB Robot",
+          "title_az": "FIRST Robotics Competition (NASA Layihəsi) & 16-cı MEB Robot",
+          "title_en": "FIRST Robotics Competition (NASA Project) & 16th MEB Robot",
+          "title_ru": "FIRST Robotics Competition (Проект NASA) и 16-й MEB Robot",
+          "desc": "Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmiş, beynəlxalq robototexnika mühitində zəngin praktiki təcrübə qazanmışdır. Həmin il Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir.",
+          "desc_az": "Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmiş, beynəlxalq robototexnika mühitində zəngin praktiki təcrübə qazanmışdır. Həmin il Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir.",
+          "desc_en": "Represented Azerbaijan in the USA at the FIRST Robotics Competition associated with the NASA project, acquiring invaluable hands-on engineering experience. That same year participated in the 16th International MEB Robot Contest in Türkiye.",
+          "desc_ru": "Представлял Азербайджан в США на соревнованиях FIRST Robotics Competition в партнерстве с проектом NASA, получив ценнейший практический опыт. В том же году участвовал в 16-м Международном Конкурсе MEB Robot в Турции."
+        },
+        {
+          "year": "2023",
+          "badge": "🥉 Respublika Mükafatı & Kiber Məktəb",
+          "badge_az": "🥉 Respublika Mükafatı & Kiber Məktəb",
+          "badge_en": "🥉 National Award & Cyber School",
+          "badge_ru": "🥉 Республиканская Награда и Кибершкола",
+          "title": "Milli Abilimpiya Çempionatı III Yer & AKTA Cyber Summer School 2023",
+          "title_az": "Milli Abilimpiya Çempionatı III Yer & AKTA Cyber Summer School 2023",
+          "title_en": "National Abilympics 3rd Place & AKTA Cyber Summer School 2023",
+          "title_ru": "Национальный Абилимпикс III Место и AKTA Cyber Summer School 2023",
+          "desc": "Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
+          "desc_az": "Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
+          "desc_en": "Won 3rd place in Information Technology at the National Abilympics, awarded medal and diploma. Participated in the AKTA Cyber Summer School 2023, advancing knowledge and applied cybersecurity skills.",
+          "desc_ru": "Занял III место по направлению Информационные Технологии на Национальном Чемпионате Абилимпикс, награжден медалью и дипломом. Участвовал в программе AKTA Cyber Summer School 2023, развивая навыки кибербезопасности."
+        },
+        {
+          "year": "2019–2022",
+          "badge": "💻 Fundamental Təhsil",
+          "badge_az": "💻 Fundamental Təhsil",
+          "badge_en": "💻 Foundational Education",
+          "badge_ru": "💻 Фундаментальное Образование",
+          "title": "STEP IT Kids Academy — İT və Rəqəmsal Texnologiyalar",
+          "title_az": "STEP IT Kids Academy — İT və Rəqəmsal Texnologiyalar",
+          "title_en": "STEP IT Kids Academy — IT and Digital Technologies",
+          "title_ru": "STEP IT Kids Academy — ИТ и Цифровые Технологии",
+          "desc": "STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində dördillik peşəkar təhsil almışdır.",
+          "desc_az": "STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində dördillik peşəkar təhsil almışdır.",
+          "desc_en": "Completed a comprehensive four-year professional education in information technology and digital innovations at STEP IT Kids Academy.",
+          "desc_ru": "Прошел четырехлетнее профессиональное обучение по направлению информационных и цифровых технологий в STEP IT Kids Academy."
+        }
+      ],
+      "fullBio": [
+        "Mirzəzadə Sənan Azər oğlu informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində özünü inkişaf etdirən, müxtəlif yerli və beynəlxalq yarışlarda iştirak edərək yüksək nəticələr əldə edən gəncdir.",
+        "2019–2022-ci illərdə STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində təhsil almışdır.",
+        "2023-cü ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
+        "2024-cü ildə Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir. Həmin il Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmişdir. Bu yarış çərçivəsində beynəlxalq robototexnika mühitində praktiki təcrübə qazanmışdır.",
+        "2025-ci ildə FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
+        "2026-cı ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə I yerin qalibi olmuşdur. Bu nəticəyə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
+        "2026-cı ildə Azərbaycan Beynəlxalq Robot Olimpiadasında iştirak edərək yüksək nəticə göstərmiş, Mini Sumo robototexnika kateqoriyasında çempion olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
+        "Kibertəhlükəsizlik sahəsində Ethical Hacker Level 1 və Ethical Hacker Level 2 proqramlarını uğurla tamamlamışdır. İnformasiya texnologiyaları, kompüter şəbəkələri, kibertəhlükəsizlik və robototexnika üzrə müxtəlif seminar, təlim və praktiki proqramlarda iştirak edərək peşəkar bilik və bacarıqlarını davamlı şəkildə inkişaf etdirir.",
+        "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
+        "Gənclər və texnologiya sahəsində göstərdiyi fəallıq, əldə etdiyi nailiyyətlər və ictimai fəaliyyəti nəzərə alınaraq “İlin Gənci” mükafatına layiq görülmüşdür.",
+        "Sənanın əldə etdiyi nəticələr onun informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində ardıcıl inkişaf etdiyini, beynəlxalq səviyyədə Azərbaycanı təmsil etdiyini və öz bilik və təcrübəsini digər gənclərlə bölüşərək sosial fayda yaratdığını göstərir."
+      ],
+      "fullBio_az": [
+        "Mirzəzadə Sənan Azər oğlu informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində özünü inkişaf etdirən, müxtəlif yerli və beynəlxalq yarışlarda iştirak edərək yüksək nəticələr əldə edən gəncdir.",
+        "2019–2022-ci illərdə STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində təhsil almışdır.",
+        "2023-cü ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
+        "2024-cü ildə Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir. Həmin il Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmişdir. Bu yarış çərçivəsində beynəlxalq robototexnika mühitində praktiki təcrübə qazanmışdır.",
+        "2025-ci ildə FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
+        "2026-cı ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə I yerin qalibi olmuşdur. Bu nəticəyə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
+        "2026-cı ildə Azərbaycan Beynəlxalq Robot Olimpiadasında iştirak edərək yüksək nəticə göstərmiş, Mini Sumo robototexnika kateqoriyasında çempion olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
+        "Kibertəhlükəsizlik sahəsində Ethical Hacker Level 1 və Ethical Hacker Level 2 proqramlarını uğurla tamamlamışdır. İnformasiya texnologiyaları, kompüter şəbəkələri, kibertəhlükəsizlik və robototexnika üzrə müxtəlif seminar, təlim və praktiki proqramlarda iştirak edərək peşəkar bilik və bacarıqlarını davamlı şəkildə inkişaf etdirir.",
+        "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
+        "Gənclər və texnologiya sahəsində göstərdiyi fəallıq, əldə etdiyi nailiyyətlər və ictimai fəaliyyəti nəzərə alınaraq “İlin Gənci” mükafatına layiq görülmüşdür.",
+        "Sənanın əldə etdiyi nəticələr onun informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində ardıcıl inkişaf etdiyini, beynəlxalq səviyyədə Azərbaycanı təmsil etdiyini və öz bilik və təcrübəsini digər gənclərlə bölüşərək sosial fayda yaratdığını göstərir."
+      ],
+      "fullBio_en": [
+        "Mirzazada Sanan Azer is an accomplished young specialist who continually develops himself in the fields of information technology, cybersecurity, and robotics, achieving stellar results at numerous national and international competitions.",
+        "From 2019 to 2022, he studied information technology and digital innovations at the STEP IT Kids Academy, completing four years of foundational tech education.",
+        "In 2023, he won 3rd place in Information Technology at the National Abilympics Championship, being awarded a bronze medal and diploma. In that same year, he joined the AKTA Cyber Summer School 2023 program, enhancing his practical competencies in cybersecurity.",
+        "In 2024, he took part in the 16th International MEB Robot Competition in Türkiye. That year, he had the distinction of representing Azerbaijan in the United States at the prestigious FIRST Robotics Competition associated with the NASA project, gaining substantial international engineering experience.",
+        "In 2025, he volunteered as a technical mentor for the team traveling abroad for the FIRST Robotics Competition, helping train participants and boosting their technical skills. Concurrently, he engaged in various tech-driven social inclusivity initiatives, generously sharing his knowledge with other children and youth.",
+        "In 2026, he secured 1st place (Gold Medal) in Information Technology at the National Abilympics Championship. Through this victory, he earned the privilege of representing Azerbaijan at the International Abilympics Championship to be held in Finland in 2027.",
+        "In 2026, he achieved outstanding success at the Azerbaijan International Robot Olympiad, winning the National Championship in the Mini Sumo robotics category. Based on this feat, he secured the right to represent Azerbaijan at the international robotics competition in Japan.",
+        "In the domain of cybersecurity, he has successfully completed Ethical Hacker Level 1 and Ethical Hacker Level 2 certifications. He continuously enhances his qualifications through technical seminars, hands-on masterclasses, and specialized networking programs.",
+        "Sanan utilizes his accrued expertise not merely for personal achievement, but to guide youth entering robotics and tech competitions, share insights, and advocate for technological accessibility and social inclusion.",
+        "In recognition of his active community leadership, stellar technical achievements, and dedicated social service, he was honored with the prestigious “Youth of the Year” state award.",
+        "Sanan's achievements demonstrate his persistent dedication to IT, cybersecurity, and robotics, his proud international representation of Azerbaijan, and his commitment to generating positive social impact by empowering younger generations."
+      ],
+      "fullBio_ru": [
+        "Мирзазаде Санан Азер оглы — целеустремленный молодой специалист в сферах информационных технологий, кибербезопасности и робототехники, демонстрирующий высокие результаты на республиканских и международных соревнованиях.",
+        "В 2019–2022 годах получил углубленное четырехлетнее образование по направлению информационных и цифровых технологий в STEP IT Kids Academy.",
+        "В 2023 году завоевал III место по направлению «Информационные Технологии» на Национальном Чемпионате Абилимпикс, будучи награжден медалью и дипломом. В том же году успешно прошел программу AKTA Cyber Summer School 2023, расширив практические навыки в сфере кибербезопасности.",
+        "В 2024 году принял участие в 16-м Международном Конкурсе MEB Robot в Турции. В том же году представлял Азербайджан в США на престижных соревнованиях FIRST Robotics Competition в рамках проекта NASA, получив ценный международный опыт в сфере робототехники.",
+        "В 2025 году оказал добровольную менторскую поддержку национальной команде, направлявшейся за рубеж для участия в FIRST Robotics Competition, способствуя подготовке участников и повышению их технического уровня. Одновременно участвовал в социальных инклюзивных IT-проектах, обучая детей и молодежь.",
+        "В 2026 году завоевал I место (золотая медаль) по направлению «Информационные Технологии» на Национальном Чемпионате Абилимпикс. Благодаря этой победе он получил право представлять Азербайджан на Международном Чемпионате Абилимпикс в Финляндии в 2027 году.",
+        "В 2026 году добился триумфа на Азербайджанской Международной Робототехнической Олимпиаде, став чемпионом в категории «Мини-Сумо». По итогам соревнований он завоевал путевку на участие в международном турнире по робототехнике в Японии.",
+        "В сфере кибербезопасности успешно завершил сертификационные программы Ethical Hacker Level 1 и Ethical Hacker Level 2. Постоянно повышает уровень мастерства, участвуя в семинарах, тренингах и практических курсах по сетевой безопасности.",
+        "Санан применяет накопленные знания и опыт не только для индивидуального прогресса, но и для наставничества юных участников турниров, содействуя расширению социальной инклюзивности в технологическом сообществе.",
+        "За выдающиеся успехи, лидерские качества и активную общественную деятельность в молодежной среде был удостоен государственной премии «Молодежь года».",
+        "Достижения Санана наглядно свидетельствуют о его профессиональном росте в сфере ИКТ и кибербезопасности, достойном представлении Азербайджана на мировой арене и стремлении приносить реальную пользу обществу."
+      ],
+      "certificates": [
+        {
+          "icon": "🛡️",
+          "title": "Ethical Hacker Level 1",
+          "title_az": "Ethical Hacker Level 1",
+          "title_en": "Ethical Hacker Level 1",
+          "title_ru": "Ethical Hacker Level 1",
+          "sub": "Kibertəhlükəsizlik & Şəbəkə Müdafiəsi",
+          "sub_az": "Kibertəhlükəsizlik & Şəbəkə Müdafiəsi",
+          "sub_en": "Cybersecurity & Network Defense",
+          "sub_ru": "Кибербезопасность и Сетевая Защита"
+        },
+        {
+          "icon": "🔐",
+          "title": "Ethical Hacker Level 2",
+          "title_az": "Ethical Hacker Level 2",
+          "title_en": "Ethical Hacker Level 2",
+          "title_ru": "Ethical Hacker Level 2",
+          "sub": "Təkmil Penetrasiya & Təhlükə Analizi",
+          "sub_az": "Təkmil Penetrasiya & Təhlükə Analizi",
+          "sub_en": "Advanced Penetration & Threat Analysis",
+          "sub_ru": "Продвинутое Тестирование на Проникновение"
+        },
+        {
+          "icon": "🌐",
+          "title": "AKTA Cyber Summer School 2023",
+          "title_az": "AKTA Cyber Summer School 2023",
+          "title_en": "AKTA Cyber Summer School 2023",
+          "title_ru": "AKTA Cyber Summer School 2023",
+          "sub": "Azərbaycan Kibertəhlükəsizlik Təşkilatları Assosiasiyası",
+          "sub_az": "Azərbaycan Kibertəhlükəsizlik Təşkilatları Assosiasiyası",
+          "sub_en": "Association of Cybersecurity Organizations of Azerbaijan",
+          "sub_ru": "Ассоциация Организаций Кибербезопасности Азербайджана"
+        },
+        {
+          "icon": "🥇",
+          "title": "Milli Abilimpiya Qızıl Medal (2026)",
+          "title_az": "Milli Abilimpiya Qızıl Medal (2026)",
+          "title_en": "National Abilympics Gold Medal (2026)",
+          "title_ru": "Золотая Медаль Национального Абилимпикса (2026)",
+          "sub": "İnformasiya Texnologiyaları üzrə I Yer",
+          "sub_az": "İnformasiya Texnologiyaları üzrə I Yer",
+          "sub_en": "1st Place in Information Technology",
+          "sub_ru": "I Место по Информационным Технологиям"
+        },
+        {
+          "icon": "🤖",
+          "title": "Mini Sumo Robototexnika Çempionu",
+          "title_az": "Mini Sumo Robototexnika Çempionu",
+          "title_en": "Mini Sumo Robotics Champion",
+          "title_ru": "Чемпион по Робототехнике Мини-Сумо",
+          "sub": "Azərbaycan Beynəlxalq Robot Olimpiadası (2026)",
+          "sub_az": "Azərbaycan Beynəlxalq Robot Olimpiadası (2026)",
+          "sub_en": "Azerbaijan International Robot Olympiad (2026)",
+          "sub_ru": "Азербайджанская Межд. Робот Олимпиада (2026)"
+        },
+        {
+          "icon": "🚀",
+          "title": "FIRST Robotics & NASA Layihəsi",
+          "title_az": "FIRST Robotics & NASA Layihəsi",
+          "title_en": "FIRST Robotics & NASA Project",
+          "title_ru": "FIRST Robotics и Проект NASA",
+          "sub": "Beynəlxalq Mühəndislik və Robototexnika (ABŞ)",
+          "sub_az": "Beynəlxalq Mühəndislik və Robototexnika (ABŞ)",
+          "sub_en": "International Engineering & Robotics (USA)",
+          "sub_ru": "Международная Инженерия и Робототехника (США)"
+        },
+        {
+          "icon": "💻",
+          "title": "STEP IT Kids Academy Məzunu",
+          "title_az": "STEP IT Kids Academy Məzunu",
+          "title_en": "STEP IT Kids Academy Graduate",
+          "title_ru": "Выпускник STEP IT Kids Academy",
+          "sub": "İKT və Rəqəmsal Texnologiyalar (2019-2022)",
+          "sub_az": "İKT və Rəqəmsal Texnologiyalar (2019-2022)",
+          "sub_en": "ICT & Digital Technologies (2019-2022)",
+          "sub_ru": "ИКТ и Цифровые Технологии (2019-2022)"
+        },
+        {
+          "icon": "🌟",
+          "title": "“İlin Gənci” Fəxri Dövlət Mükafatı",
+          "title_az": "“İlin Gənci” Fəxri Dövlət Mükafatı",
+          "title_en": "“Youth of the Year” State Award",
+          "title_ru": "Почетная Госпремия «Молодежь года»",
+          "sub": "İctimai Fəallıq və İnklüziv Layihələrə Töhfə",
+          "sub_az": "İctimai Fəallıq və İnklüziv Layihələrə Töhfə",
+          "sub_en": "Social Engagement & Contribution to Inclusive Projects",
+          "sub_ru": "Общественная Активность и Вклад в Инклюзивные Проекты"
+        }
+      ],
+      "gallery": [
+        {
+          "type": "image",
+          "src": "senan1.jpeg",
+          "caption": "Mirzəzadə Sənan — Fəxri Tələbə Portreti",
+          "caption_az": "Mirzəzadə Sənan — Fəxri Tələbə Portreti",
+          "caption_en": "Sanan Mirzazada — Honor Student Portrait",
+          "caption_ru": "Мирзазаде Санан — Портрет Почетного Студента"
+        },
+        {
+          "type": "image",
+          "src": "senan2.jpeg",
+          "caption": "Milli Abilimpiya Mükafatlandırma Mərasimi",
+          "caption_az": "Milli Abilimpiya Mükafatlandırma Mərasimi",
+          "caption_en": "National Abilympics Awarding Ceremony",
+          "caption_ru": "Церемония Награждения Национального Абилимпикса"
+        },
+        {
+          "type": "image",
+          "src": "senan3.jpeg",
+          "caption": "Mini Sumo Robototexnika Çempionluğu",
+          "caption_az": "Mini Sumo Robototexnika Çempionluğu",
+          "caption_en": "Mini Sumo Robotics Championship",
+          "caption_ru": "Чемпионство по Робототехнике Мини-Сумо"
+        },
+        {
+          "type": "image",
+          "src": "senan4.jpeg",
+          "caption": "FIRST Robotics (NASA) Beynəlxalq Yarışı",
+          "caption_az": "FIRST Robotics (NASA) Beynəlxalq Yarışı",
+          "caption_en": "FIRST Robotics (NASA) International Competition",
+          "caption_ru": "FIRST Robotics (NASA) Международные Соревнования"
+        },
+        {
+          "type": "image",
+          "src": "senan5.jpeg",
+          "caption": "Kibertəhlükəsizlik & Ethical Hacker Proqramı",
+          "caption_az": "Kibertəhlükəsizlik & Ethical Hacker Proqramı",
+          "caption_en": "Cybersecurity & Ethical Hacker Program",
+          "caption_ru": "Кибербезопасность и Программа Ethical Hacker"
+        },
+        {
+          "type": "image",
+          "src": "senan6.jpeg",
+          "caption": "AKTA Cyber Summer School Praktiki Təlimi",
+          "caption_az": "AKTA Cyber Summer School Praktiki Təlimi",
+          "caption_en": "AKTA Cyber Summer School Hands-on Training",
+          "caption_ru": "Практический Тренинг AKTA Cyber Summer School"
+        },
+        {
+          "type": "image",
+          "src": "senan7.jpeg",
+          "caption": "16-cı Beynəlxalq MEB Robot Yarışı (Türkiyə)",
+          "caption_az": "16-cı Beynəlxalq MEB Robot Yarışı (Türkiyə)",
+          "caption_en": "16th International MEB Robot Contest (Türkiye)",
+          "caption_ru": "16-й Международный Конкурс MEB Robot (Турция)"
+        },
+        {
+          "type": "image",
+          "src": "senan8.jpeg",
+          "caption": "Sosial İnklüziv Layihələr & Könüllü Dəstək",
+          "caption_az": "Sosial İnklüziv Layihələr & Könüllü Dəstək",
+          "caption_en": "Social Inclusivity Projects & Volunteer Support",
+          "caption_ru": "Социальные Инклюзивные Проекты и Менторство"
+        },
+        {
+          "type": "image",
+          "src": "senan9.jpeg",
+          "caption": "“İlin Gənci” Mükafat Təqdimatı",
+          "caption_az": "“İlin Gənci” Mükafat Təqdimatı",
+          "caption_en": "“Youth of the Year” Award Presentation",
+          "caption_ru": "Вручение Награды «Молодежь года»"
+        },
+        {
+          "type": "video",
+          "src": "senan10.mp4",
+          "caption": "Robototexnika və Canlı Çıxış Video Xronikası",
+          "caption_az": "Robototexnika və Canlı Çıxış Video Xronikası",
+          "caption_en": "Robotics & Live Demonstration Video Chronicle",
+          "caption_ru": "Видеохроника Робототехники и Выступлений"
+        },
+        {
+          "type": "image",
+          "src": "senan11.jpeg",
+          "caption": "Beynəlxalq Robot Arena və Hazırlıq",
+          "caption_az": "Beynəlxalq Robot Arena və Hazırlıq",
+          "caption_en": "International Robot Arena & Preparation",
+          "caption_ru": "Международная Робот-Арена и Подготовка"
+        },
+        {
+          "type": "image",
+          "src": "senan12.jpeg",
+          "caption": "Diplomlar, Qızıl Medallar və Təltiflər",
+          "caption_az": "Diplomlar, Qızıl Medallar və Təltiflər",
+          "caption_en": "Diplomas, Gold Medals and Distinctions",
+          "caption_ru": "Дипломы, Золотые Медали и Награды"
+        }
+      ]
     }
-];
+  ];
 
   function renderHonorCard(student) {
     const fullName = student["fullName_" + currentLang] || student.fullName;
@@ -12690,8 +13083,8 @@ function initSceneTransition() {
       .map(
         (f) =>
           '<span class="honor-flag-tag" title="' + (f["note_" + currentLang] || f.note) + '">' +
-            '<span class="flag-emoji">' + f.emoji + '</span> ' +
-            '<span>' + (f["name_" + currentLang] || f.name) + '</span>' +
+          '<span class="flag-emoji">' + f.emoji + '</span> ' +
+          '<span>' + (f["name_" + currentLang] || f.name) + '</span>' +
           '</span>'
       )
       .join("");
@@ -12700,12 +13093,12 @@ function initSceneTransition() {
       .map(
         (s) =>
           '<div class="honor-stat-card mouse-glow-card">' +
-            '<div class="honor-stat-top">' +
-              '<span class="honor-stat-icon">' + s.icon + '</span>' +
-              '<span class="honor-stat-val">' + (s["val_" + currentLang] || s.val) + '</span>' +
-            '</div>' +
-            '<div class="honor-stat-label">' + (s["label_" + currentLang] || s.label) + '</div>' +
-            '<div class="honor-stat-sub">' + (s["sub_" + currentLang] || s.sub) + '</div>' +
+          '<div class="honor-stat-top">' +
+          '<span class="honor-stat-icon">' + s.icon + '</span>' +
+          '<span class="honor-stat-val">' + (s["val_" + currentLang] || s.val) + '</span>' +
+          '</div>' +
+          '<div class="honor-stat-label">' + (s["label_" + currentLang] || s.label) + '</div>' +
+          '<div class="honor-stat-sub">' + (s["sub_" + currentLang] || s.sub) + '</div>' +
           '</div>'
       )
       .join("");
@@ -12714,11 +13107,11 @@ function initSceneTransition() {
       .map(
         (h) =>
           '<div class="honor-highlight-row">' +
-            '<span class="honor-highlight-bullet">✦</span>' +
-            '<div>' +
-              '<strong>' + h.flag + ' ' + h.year + ' (' + (h["country_" + currentLang] || h.country) + ') — ' + (h["title_" + currentLang] || h.title) + ':</strong> ' +
-              '<span>' + (h["text_" + currentLang] || h.text) + '</span>' +
-            '</div>' +
+          '<span class="honor-highlight-bullet">✦</span>' +
+          '<div>' +
+          '<strong>' + h.flag + ' ' + h.year + ' (' + (h["country_" + currentLang] || h.country) + ') — ' + (h["title_" + currentLang] || h.title) + ':</strong> ' +
+          '<span>' + (h["text_" + currentLang] || h.text) + '</span>' +
+          '</div>' +
           '</div>'
       )
       .join("");
@@ -12737,7 +13130,7 @@ function initSceneTransition() {
         const cap = g["caption_" + currentLang] || g.caption;
         return (
           '<button type="button" class="honor-teaser-thumb-btn" data-open-modal="' + student.id + '" data-tab="gallery" title="' + cap + '" aria-label="' + cap + '">' +
-            '<img src="' + g.src + '" class="honor-preview-thumb" alt="' + cap + '" loading="lazy" />' +
+          '<img src="' + g.src + '" class="honor-preview-thumb" alt="' + cap + '" loading="lazy" />' +
           '</button>'
         );
       })
@@ -12745,118 +13138,118 @@ function initSceneTransition() {
 
     return (
       '<article class="honor-student-card mouse-glow-card" id="student-' + student.id + '">' +
-        '<div class="honor-card-ambient" aria-hidden="true" style="position: absolute !important; top: -100px; right: -100px; width: 400px; height: 400px; pointer-events: none;"></div>' +
+      '<div class="honor-card-ambient" aria-hidden="true" style="position: absolute !important; top: -100px; right: -100px; width: 400px; height: 400px; pointer-events: none;"></div>' +
 
-        '<!-- 1. Unified Card Top Header Bar -->' +
-        '<div class="honor-card-topbar">' +
-          '<div class="honor-topbar-badges">' +
-            '<span class="honor-verified-pill">' + verifiedLabel + '</span>' +
-            '<span class="honor-status-pill">' +
-              '<span class="honor-status-dot" aria-hidden="true"></span>' +
-              '<span>' + statusText + '</span>' +
-            '</span>' +
-            '<span class="honor-kicker-tag">' +
-              '<span aria-hidden="true">🤖</span> ' +
-              '<span>' + kickerLabel + '</span>' +
-            '</span>' +
-          '</div>' +
-          '<div class="honor-badge-shimmer">' +
-            '<span aria-hidden="true">🌟</span> ' +
-            '<span>' + titleBadge + '</span>' +
-          '</div>' +
-        '</div>' +
+      '<!-- 1. Unified Card Top Header Bar -->' +
+      '<div class="honor-card-topbar">' +
+      '<div class="honor-topbar-badges">' +
+      '<span class="honor-verified-pill">' + verifiedLabel + '</span>' +
+      '<span class="honor-status-pill">' +
+      '<span class="honor-status-dot" aria-hidden="true"></span>' +
+      '<span>' + statusText + '</span>' +
+      '</span>' +
+      '<span class="honor-kicker-tag">' +
+      '<span aria-hidden="true">🤖</span> ' +
+      '<span>' + kickerLabel + '</span>' +
+      '</span>' +
+      '</div>' +
+      '<div class="honor-badge-shimmer">' +
+      '<span aria-hidden="true">🌟</span> ' +
+      '<span>' + titleBadge + '</span>' +
+      '</div>' +
+      '</div>' +
 
-        '<!-- 2. Main Two-Column Body -->' +
-        '<div class="honor-card-body">' +
-          '<!-- Left Column: Visual Crest, Flags & Teaser -->' +
-          '<div class="honor-card-aside">' +
-            '<div class="honor-avatar-wrap">' +
-              '<img ' +
-                'src="' + student.photo + '" ' +
-                'alt="' + fullName + '" ' +
-                'class="honor-avatar-img zoomable-img" ' +
-                'loading="lazy" ' +
-                'onerror="this.onerror=null;this.src=\'' + student.fallbackPhoto + '\';" ' +
-              '/>' +
-              '<div class="honor-avatar-overlay">' +
-                '<span class="honor-avatar-award-tag">🏆 2024–2026</span>' +
-              '</div>' +
-            '</div>' +
+      '<!-- 2. Main Two-Column Body -->' +
+      '<div class="honor-card-body">' +
+      '<!-- Left Column: Visual Crest, Flags & Teaser -->' +
+      '<div class="honor-card-aside">' +
+      '<div class="honor-avatar-wrap">' +
+      '<img ' +
+      'src="' + student.photo + '" ' +
+      'alt="' + fullName + '" ' +
+      'class="honor-avatar-img zoomable-img" ' +
+      'loading="lazy" ' +
+      'onerror="this.onerror=null;this.src=\'' + student.fallbackPhoto + '\';" ' +
+      '/>' +
+      '<div class="honor-avatar-overlay">' +
+      '<span class="honor-avatar-award-tag">🏆 2024–2026</span>' +
+      '</div>' +
+      '</div>' +
 
-            '<div class="honor-flags-box">' +
-              '<div class="honor-flags-heading">' +
-                '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>' +
-                '<span>' + countriesLabel + '</span>' +
-              '</div>' +
-              '<div class="honor-flags-list">' +
-                flagsHtml +
-              '</div>' +
-            '</div>' +
+      '<div class="honor-flags-box">' +
+      '<div class="honor-flags-heading">' +
+      '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>' +
+      '<span>' + countriesLabel + '</span>' +
+      '</div>' +
+      '<div class="honor-flags-list">' +
+      flagsHtml +
+      '</div>' +
+      '</div>' +
 
-            '<div class="honor-teaser-box">' +
-              '<div class="honor-teaser-top">' +
-                '<span class="honor-teaser-title">📸 ' + (currentLang === "en" ? "Media Archive Preview" : currentLang === "ru" ? "Медиа Превью" : "Media Arxivindən") + '</span>' +
-                '<button type="button" class="honor-teaser-link" data-open-modal="' + student.id + '" data-tab="gallery">' +
-                  (currentLang === "en" ? "All (12) →" : currentLang === "ru" ? "Все (12) →" : "Hamısı (12) →") +
-                '</button>' +
-              '</div>' +
-              '<div class="honor-gallery-preview-strip">' +
-                thumbsHtml +
-              '</div>' +
-            '</div>' +
-          '</div>' +
+      '<div class="honor-teaser-box">' +
+      '<div class="honor-teaser-top">' +
+      '<span class="honor-teaser-title">📸 ' + (currentLang === "en" ? "Media Archive Preview" : currentLang === "ru" ? "Медиа Превью" : "Media Arxivindən") + '</span>' +
+      '<button type="button" class="honor-teaser-link" data-open-modal="' + student.id + '" data-tab="gallery">' +
+      (currentLang === "en" ? "All (12) →" : currentLang === "ru" ? "Все (12) →" : "Hamısı (12) →") +
+      '</button>' +
+      '</div>' +
+      '<div class="honor-gallery-preview-strip">' +
+      thumbsHtml +
+      '</div>' +
+      '</div>' +
+      '</div>' +
 
-          '<!-- Right Column: Profile, Metrics, Milestones, Quote & Tags -->' +
-          '<div class="honor-card-main">' +
-            '<div class="honor-profile-header">' +
-              '<h4 class="honor-student-name">' + fullName + '</h4>' +
-              '<div class="honor-student-role">' + role + '</div>' +
-            '</div>' +
+      '<!-- Right Column: Profile, Metrics, Milestones, Quote & Tags -->' +
+      '<div class="honor-card-main">' +
+      '<div class="honor-profile-header">' +
+      '<h4 class="honor-student-name">' + fullName + '</h4>' +
+      '<div class="honor-student-role">' + role + '</div>' +
+      '</div>' +
 
-            '<!-- 4 Stats Grid -->' +
-            '<div class="honor-stats-grid">' +
-              statsHtml +
-            '</div>' +
+      '<!-- 4 Stats Grid -->' +
+      '<div class="honor-stats-grid">' +
+      statsHtml +
+      '</div>' +
 
-            '<!-- Recent Milestones Box -->' +
-            '<div class="honor-highlights-box">' +
-              '<div class="honor-highlights-heading">' +
-                '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>' +
-                '<span>' + highlightsHeading + '</span>' +
-              '</div>' +
-              '<div class="honor-highlights-list">' +
-                highlightsHtml +
-              '</div>' +
-            '</div>' +
+      '<!-- Recent Milestones Box -->' +
+      '<div class="honor-highlights-box">' +
+      '<div class="honor-highlights-heading">' +
+      '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>' +
+      '<span>' + highlightsHeading + '</span>' +
+      '</div>' +
+      '<div class="honor-highlights-list">' +
+      highlightsHtml +
+      '</div>' +
+      '</div>' +
 
-            '<!-- Quote Block -->' +
-            '<div class="honor-quote-box">' +
-              '<span class="honor-quote-icon" aria-hidden="true">“</span>' +
-              '<p class="honor-quote-text">' + quoteText + '</p>' +
-            '</div>' +
+      '<!-- Quote Block -->' +
+      '<div class="honor-quote-box">' +
+      '<span class="honor-quote-icon" aria-hidden="true">“</span>' +
+      '<p class="honor-quote-text">' + quoteText + '</p>' +
+      '</div>' +
 
-            '<!-- Tags -->' +
-            '<div class="honor-tags-row">' +
-              tagsHtml +
-            '</div>' +
-          '</div>' +
-        '</div>' +
+      '<!-- Tags -->' +
+      '<div class="honor-tags-row">' +
+      tagsHtml +
+      '</div>' +
+      '</div>' +
+      '</div>' +
 
-        '<!-- 3. Full-Width Unified Action Bar at Bottom of Card -->' +
-        '<div class="honor-card-actions-bar">' +
-          '<button type="button" class="honor-btn-action honor-btn-primary" data-open-modal="' + student.id + '" data-tab="bio">' +
-            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>' +
-            '<span>' + dossierBtn + '</span>' +
-          '</button>' +
-          '<button type="button" class="honor-btn-action honor-btn-secondary" data-open-modal="' + student.id + '" data-tab="timeline">' +
-            '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' +
-            '<span>' + timelineBtn + '</span>' +
-          '</button>' +
-          '<button type="button" class="honor-btn-action honor-btn-gallery" data-open-modal="' + student.id + '" data-tab="gallery">' +
-            '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>' +
-            '<span>' + archiveBtn + '</span>' +
-          '</button>' +
-        '</div>' +
+      '<!-- 3. Full-Width Unified Action Bar at Bottom of Card -->' +
+      '<div class="honor-card-actions-bar">' +
+      '<button type="button" class="honor-btn-action honor-btn-primary" data-open-modal="' + student.id + '" data-tab="bio">' +
+      '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>' +
+      '<span>' + dossierBtn + '</span>' +
+      '</button>' +
+      '<button type="button" class="honor-btn-action honor-btn-secondary" data-open-modal="' + student.id + '" data-tab="timeline">' +
+      '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' +
+      '<span>' + timelineBtn + '</span>' +
+      '</button>' +
+      '<button type="button" class="honor-btn-action honor-btn-gallery" data-open-modal="' + student.id + '" data-tab="gallery">' +
+      '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>' +
+      '<span>' + archiveBtn + '</span>' +
+      '</button>' +
+      '</div>' +
       '</article>'
     );
   }
@@ -12901,15 +13294,15 @@ function initSceneTransition() {
       .map(
         (t) =>
           '<div class="honor-timeline-node">' +
-            '<div class="honor-timeline-marker">✦</div>' +
-            '<div class="honor-timeline-content">' +
-              '<div class="honor-timeline-header">' +
-                '<span class="honor-timeline-year">' + t.year + '</span>' +
-                '<span class="honor-timeline-badge">' + (t["badge_" + currentLang] || t.badge) + '</span>' +
-              '</div>' +
-              '<h5 class="honor-timeline-title">' + (t["title_" + currentLang] || t.title) + '</h5>' +
-              '<p class="honor-timeline-desc">' + (t["desc_" + currentLang] || t.desc) + '</p>' +
-            '</div>' +
+          '<div class="honor-timeline-marker">✦</div>' +
+          '<div class="honor-timeline-content">' +
+          '<div class="honor-timeline-header">' +
+          '<span class="honor-timeline-year">' + t.year + '</span>' +
+          '<span class="honor-timeline-badge">' + (t["badge_" + currentLang] || t.badge) + '</span>' +
+          '</div>' +
+          '<h5 class="honor-timeline-title">' + (t["title_" + currentLang] || t.title) + '</h5>' +
+          '<p class="honor-timeline-desc">' + (t["desc_" + currentLang] || t.desc) + '</p>' +
+          '</div>' +
           '</div>'
       )
       .join("");
@@ -12926,11 +13319,11 @@ function initSceneTransition() {
       .map(
         (c) =>
           '<div class="honor-cert-item">' +
-            '<div class="honor-cert-icon">' + c.icon + '</div>' +
-            '<div>' +
-              '<h5 class="honor-cert-name">' + (c["title_" + currentLang] || c.title) + '</h5>' +
-              '<p class="honor-cert-org">' + (c["sub_" + currentLang] || c.sub) + '</p>' +
-            '</div>' +
+          '<div class="honor-cert-icon">' + c.icon + '</div>' +
+          '<div>' +
+          '<h5 class="honor-cert-name">' + (c["title_" + currentLang] || c.title) + '</h5>' +
+          '<p class="honor-cert-org">' + (c["sub_" + currentLang] || c.sub) + '</p>' +
+          '</div>' +
           '</div>'
       )
       .join("");
@@ -12943,16 +13336,16 @@ function initSceneTransition() {
         if (g.type === "video") {
           return (
             '<div class="honor-gallery-item">' +
-              '<span class="honor-gallery-video-badge">' + videoBadge + '</span>' +
-              '<video src="' + g.src + '" class="honor-gallery-video" controls playsinline preload="metadata"></video>' +
-              '<div class="honor-gallery-caption">' + caption + '</div>' +
+            '<span class="honor-gallery-video-badge">' + videoBadge + '</span>' +
+            '<video src="' + g.src + '" class="honor-gallery-video" controls playsinline preload="metadata"></video>' +
+            '<div class="honor-gallery-caption">' + caption + '</div>' +
             '</div>'
           );
         } else {
           return (
             '<div class="honor-gallery-item">' +
-              '<img src="' + g.src + '" class="honor-gallery-img" alt="' + caption + '" loading="lazy" />' +
-              '<div class="honor-gallery-caption">' + caption + '</div>' +
+            '<img src="' + g.src + '" class="honor-gallery-img" alt="' + caption + '" loading="lazy" />' +
+            '<div class="honor-gallery-caption">' + caption + '</div>' +
             '</div>'
           );
         }
@@ -12962,58 +13355,58 @@ function initSceneTransition() {
     modalBody.innerHTML =
       '<!-- Modal Hero -->' +
       '<div class="honor-modal-hero">' +
-        '<img ' +
-          'src="' + student.photo + '" ' +
-          'alt="' + fullName + '" ' +
-          'class="honor-modal-avatar" ' +
-          'onerror="this.onerror=null;this.src=\'' + student.fallbackPhoto + '\';" ' +
-        '/>' +
-        '<div class="honor-modal-hero-info">' +
-          '<h3>' + fullName + '</h3>' +
-          '<p>' + role + '</p>' +
-          '<div class="honor-modal-hero-badges">' +
-            '<span class="honor-badge-shimmer">🌟 ' + titleBadge + '</span> ' +
-            '<span class="honor-verified-pill">' + modalVerified + '</span>' +
-          '</div>' +
-        '</div>' +
+      '<img ' +
+      'src="' + student.photo + '" ' +
+      'alt="' + fullName + '" ' +
+      'class="honor-modal-avatar" ' +
+      'onerror="this.onerror=null;this.src=\'' + student.fallbackPhoto + '\';" ' +
+      '/>' +
+      '<div class="honor-modal-hero-info">' +
+      '<h3>' + fullName + '</h3>' +
+      '<p>' + role + '</p>' +
+      '<div class="honor-modal-hero-badges">' +
+      '<span class="honor-badge-shimmer">🌟 ' + titleBadge + '</span> ' +
+      '<span class="honor-verified-pill">' + modalVerified + '</span>' +
+      '</div>' +
+      '</div>' +
       '</div>' +
 
       '<!-- Tab Navigation inside Modal -->' +
       '<div class="honor-modal-tab-nav" role="tablist">' +
-        '<button type="button" class="honor-modal-tab ' + (initialTab === 'bio' ? 'active' : '') + '" data-modal-target="pane-bio">' +
-          (gT("honor_tab_bio") || "📖 Tam Bioqrafiya və İctimai Fəaliyyət") +
-        '</button>' +
-        '<button type="button" class="honor-modal-tab ' + (initialTab === 'timeline' ? 'active' : '') + '" data-modal-target="pane-timeline">' +
-          (gT("honor_tab_timeline") || "⏳ 2019–2027 Uğur Xronologiyası") +
-        '</button>' +
-        '<button type="button" class="honor-modal-tab ' + (initialTab === 'certs' ? 'active' : '') + '" data-modal-target="pane-certs">' +
-          (gT("honor_tab_certs") || "🎖️ Sertifikatlar & Qələbələr") +
-        '</button>' +
-        '<button type="button" class="honor-modal-tab ' + (initialTab === 'gallery' ? 'active' : '') + '" data-modal-target="pane-gallery">' +
-          (gT("honor_tab_gallery") || "📸 Foto & Video Arxivi") + ' (' + student.gallery.length + ')' +
-        '</button>' +
+      '<button type="button" class="honor-modal-tab ' + (initialTab === 'bio' ? 'active' : '') + '" data-modal-target="pane-bio">' +
+      (gT("honor_tab_bio") || "📖 Tam Bioqrafiya və İctimai Fəaliyyət") +
+      '</button>' +
+      '<button type="button" class="honor-modal-tab ' + (initialTab === 'timeline' ? 'active' : '') + '" data-modal-target="pane-timeline">' +
+      (gT("honor_tab_timeline") || "⏳ 2019–2027 Uğur Xronologiyası") +
+      '</button>' +
+      '<button type="button" class="honor-modal-tab ' + (initialTab === 'certs' ? 'active' : '') + '" data-modal-target="pane-certs">' +
+      (gT("honor_tab_certs") || "🎖️ Sertifikatlar & Qələbələr") +
+      '</button>' +
+      '<button type="button" class="honor-modal-tab ' + (initialTab === 'gallery' ? 'active' : '') + '" data-modal-target="pane-gallery">' +
+      (gT("honor_tab_gallery") || "📸 Foto & Video Arxivi") + ' (' + student.gallery.length + ')' +
+      '</button>' +
       '</div>' +
 
       '<!-- Tab Panes -->' +
       '<div class="honor-modal-panes">' +
-        '<div class="honor-modal-tab-pane ' + (initialTab === 'bio' ? 'active' : '') + '" id="pane-bio">' +
-          bioHtml +
-        '</div>' +
-        '<div class="honor-modal-tab-pane ' + (initialTab === 'timeline' ? 'active' : '') + '" id="pane-timeline">' +
-          '<div class="honor-modal-timeline">' +
-            timelineHtml +
-          '</div>' +
-        '</div>' +
-        '<div class="honor-modal-tab-pane ' + (initialTab === 'certs' ? 'active' : '') + '" id="pane-certs">' +
-          '<div class="honor-certs-grid">' +
-            certsHtml +
-          '</div>' +
-        '</div>' +
-        '<div class="honor-modal-tab-pane ' + (initialTab === 'gallery' ? 'active' : '') + '" id="pane-gallery">' +
-          '<div class="honor-gallery-grid">' +
-            galleryHtml +
-          '</div>' +
-        '</div>' +
+      '<div class="honor-modal-tab-pane ' + (initialTab === 'bio' ? 'active' : '') + '" id="pane-bio">' +
+      bioHtml +
+      '</div>' +
+      '<div class="honor-modal-tab-pane ' + (initialTab === 'timeline' ? 'active' : '') + '" id="pane-timeline">' +
+      '<div class="honor-modal-timeline">' +
+      timelineHtml +
+      '</div>' +
+      '</div>' +
+      '<div class="honor-modal-tab-pane ' + (initialTab === 'certs' ? 'active' : '') + '" id="pane-certs">' +
+      '<div class="honor-certs-grid">' +
+      certsHtml +
+      '</div>' +
+      '</div>' +
+      '<div class="honor-modal-tab-pane ' + (initialTab === 'gallery' ? 'active' : '') + '" id="pane-gallery">' +
+      '<div class="honor-gallery-grid">' +
+      galleryHtml +
+      '</div>' +
+      '</div>' +
       '</div>';
 
     // Tab switching inside modal
@@ -13556,7 +13949,7 @@ function initSceneTransition() {
     }
   ];
 
-    const sportsTrophyData = {
+  const sportsTrophyData = {
     football: {
       sport_az: "Minifutbol (Qızlar)",
       sport_en: "Mini-football (Girls)",
@@ -13781,11 +14174,11 @@ function initSceneTransition() {
         
         <div class="trophy-meta-pills">
           ${pills
-            .map(
-              (p) =>
-                `<div class="trophy-meta-pill"><span>${p.label}:</span> <strong>${p.val}</strong></div>`
-            )
-            .join("")}
+        .map(
+          (p) =>
+            `<div class="trophy-meta-pill"><span>${p.label}:</span> <strong>${p.val}</strong></div>`
+        )
+        .join("")}
         </div>
 
         <div class="trophy-cta-actions">
@@ -13833,7 +14226,7 @@ function initSceneTransition() {
     }
   }
 
-let currentCategory = "all";
+  let currentCategory = "all";
   let currentYear = "all";
   let searchQuery = "";
   let currentFilteredList = [...certificatesData];
@@ -14200,660 +14593,660 @@ let currentCategory = "all";
   window.escapeHTML = escapeHTML;
 
   const scienceAuthorsData = [
-  {
-    "id": 1,
-    "no": "1",
-    "author_az": "Aytən Namazova Mehman",
-    "author_en": "Ayten Namazova Mehman",
-    "author_ru": "Айтен Намазова Мехман кызы",
-    "role_az": "Müəllim / Dil və ədəbiyyat",
-    "role_en": "Teacher / Language & Literature",
-    "role_ru": "Преподаватель / Язык и литература",
-    "department": "Dil və ədəbiyyat",
-    "department_az": "Dil və ədəbiyyat",
-    "department_en": "Language & Literature",
-    "department_ru": "Язык и литература",
-    "dept_slug": "dil",
-    "works": [
-      {
-        "title": "Qazi Bürhanəddinin divanında arxaizmlərin mənşəyi və onların etimoloji xüsusiyyətləri.",
-        "title_az": "Qazi Bürhanəddinin divanında arxaizmlərin mənşəyi və onların etimoloji xüsusiyyətləri.",
-        "title_en": "Origin and Etymological Characteristics of Archaisms in the Divan of Gazi Burhaneddin.",
-        "title_ru": "Происхождение и этимологические особенности архаизмов в диване Гази Бурханеддина.",
-        "journal": "Bakı Dövlət Universiteti Beynəlxalq Elmi-Nəzəri Jurnal",
-        "journal_az": "Bakı Dövlət Universiteti Beynəlxalq Elmi-Nəzəri Jurnal",
-        "journal_en": "Baku State University International Scientific-Theoretical Journal",
-        "journal_ru": "Бакинский Государственный Университет Международный Научно-Теоретический Журнал",
-        "country": "Azərbaycan",
-        "country_az": "Azərbaycan",
-        "country_en": "Azerbaijan",
-        "country_ru": "Азербайджан",
-        "country_code": "AZ"
-      },
-      {
-        "title": "Azərbaycan ədəbi dilində nitq etikasının formaları və normativliyi.",
-        "title_az": "Azərbaycan ədəbi dilində nitq etikasının formaları və normativliyi.",
-        "title_en": "Forms and Normativity of Speech Ethics in the Azerbaijani Literary Language.",
-        "title_ru": "Формы и нормативность речевого этикета в азербайджанском литературном языке.",
-        "journal": "Tədqiqələr elmi jurnal",
-        "journal_az": "Tədqiqələr elmi jurnal",
-        "journal_en": "Tadgigalar (Researches) Scientific Journal",
-        "journal_ru": "Научный журнал «Тэдгигалар» (Исследования)",
-        "country": "Azərbaycan",
-        "country_az": "Azərbaycan",
-        "country_en": "Azerbaijan",
-        "country_ru": "Азербайджан",
-        "country_code": "AZ"
-      }
-    ],
-    "year": "2026",
-    "scope": "Yerli",
-    "scope_az": "Yerli",
-    "scope_en": "Domestic",
-    "scope_ru": "Республиканский",
-    "scope_type": "yerli",
-    "orcid": null,
-    "orcid_id": null,
-    "scopus": false,
-    "copernicus": false,
-    "erih": false
-  },
-  {
-    "id": 2,
-    "no": "2",
-    "author_az": "Səidə Quliyeva Novruz",
-    "author_en": "Saida Guliyeva Novruz",
-    "author_ru": "Саида Гулиева Новруз кызы",
-    "role_az": "Müəllim / Humanitar elmlər",
-    "role_en": "Teacher / Humanities",
-    "role_ru": "Преподаватель / Гуманитарные науки",
-    "department": "Humanitar elmlər",
-    "department_az": "Humanitar elmlər",
-    "department_en": "Humanities",
-    "department_ru": "Гуманитарные науки",
-    "dept_slug": "humanitar",
-    "works": [
-      {
-        "title": "Arxiv sənədlərinin elektronlaşdırılması problemləri",
-        "title_az": "Arxiv sənədlərinin elektronlaşdırılması problemləri",
-        "title_en": "Challenges in the Digitalization of Archival Documents",
-        "title_ru": "Проблемы электронизации архивных документов",
-        "journal": "Elmi İş beynəlxalq elmi jurnal",
-        "journal_az": "Elmi İş beynəlxalq elmi jurnal",
-        "journal_en": "Elmi Ish International Scientific Journal",
-        "journal_ru": "Международный научный журнал «Элми Иш»",
-        "country": "Azərbaycan",
-        "country_az": "Azərbaycan",
-        "country_en": "Azerbaijan",
-        "country_ru": "Азербайджан",
-        "country_code": "AZ"
-      },
-      {
-        "title": "Arxiv menecmenti",
-        "title_az": "Arxiv menecmenti",
-        "title_en": "Archive Management",
-        "title_ru": "Архивный менеджмент",
-        "journal": "Mədəniyyət: Elmi-metodiki publisistik jurnal",
-        "journal_az": "Mədəniyyət: Elmi-metodiki publisistik jurnal",
-        "journal_en": "Culture: Scientific-Methodical & Publicistic Journal",
-        "journal_ru": "Культура: научно-методический публицистический журнал",
-        "country": "Azərbaycan",
-        "country_az": "Azərbaycan",
-        "country_en": "Azerbaijan",
-        "country_ru": "Азербайджан",
-        "country_code": "AZ"
-      },
-      {
-        "title": "Arxiv işi sahəsində normativ hüquqi aktlar",
-        "title_az": "Arxiv işi sahəsində normativ hüquqi aktlar",
-        "title_en": "Regulatory Legal Acts in the Field of Archival Affairs",
-        "title_ru": "Нормативно-правовые акты в сфере архивного дела",
-        "journal": "Mədəniyyət: Problemlər və perspektivlər elmi-publisistik jurnal",
-        "journal_az": "Mədəniyyət: Problemlər və perspektivlər elmi-publisistik jurnal",
-        "journal_en": "Culture: Problems & Perspectives Scientific-Publicistic Journal",
-        "journal_ru": "Культура: Проблемы и перспективы, научно-публицистический журнал",
-        "country": "Azərbaycan",
-        "country_az": "Azərbaycan",
-        "country_en": "Azerbaijan",
-        "country_ru": "Азербайджан",
-        "country_code": "AZ"
-      },
-      {
-        "title": "Arxiv sənədlərindən istifadənin aktual problemləri / Tezis",
-        "title_az": "Arxiv sənədlərindən istifadənin aktual problemləri / Tezis",
-        "title_en": "Current Challenges in the Utilization of Archival Documents / Thesis",
-        "title_ru": "Актуальные проблемы использования архивных документов / Тезис",
-        "journal": "Mədəniyyət: Problemlər və perspektivlər",
-        "journal_az": "Mədəniyyət: Problemlər və perspektivlər",
-        "journal_en": "Culture: Problems and Perspectives",
-        "journal_ru": "Культура: Проблемы и перспективы",
-        "country": "Azərbaycan",
-        "country_az": "Azərbaycan",
-        "country_en": "Azerbaijan",
-        "country_ru": "Азербайджан",
-        "country_code": "AZ"
-      },
-      {
-        "title": "Arxiv sənədlərinin rəqəmsallaşdırılması problemləri / Tezis",
-        "title_az": "Arxiv sənədlərinin rəqəmsallaşdırılması problemləri / Tezis",
-        "title_en": "Challenges in the Digitization of Archival Documents / Thesis",
-        "title_ru": "Проблемы оцифровки архивных документов / Тезис",
-        "journal": "AMEA Məhəmməd Füzuli adına Əlyazmalar İnstitutu – Azərbaycan əlyazmaları dünya kitabxanalarında",
-        "journal_az": "AMEA Məhəmməd Füzuli adına Əlyazmalar İnstitutu – Azərbaycan əlyazmaları dünya kitabxanalarında",
-        "journal_en": "ANAS Institute of Manuscripts named after Muhammad Fuzuli – Azerbaijani Manuscripts in World Libraries",
-        "journal_ru": "Институт рукописей имени Мухаммеда Физули НАНА – Азербайджанские рукописи в библиотеках мира",
-        "country": "Azərbaycan",
-        "country_az": "Azərbaycan",
-        "country_en": "Azerbaijan",
-        "country_ru": "Азербайджан",
-        "country_code": "AZ"
-      },
-      {
-        "title": "Applications of Digital Humanities in History Education",
-        "title_az": "Applications of Digital Humanities in History Education",
-        "title_en": "Applications of Digital Humanities in History Education",
-        "title_ru": "Применение цифровых гуманитарных наук в преподавании истории",
-        "journal": "AURORA / İsveç",
-        "journal_az": "AURORA / İsveç",
-        "journal_en": "AURORA / Sweden",
-        "journal_ru": "AURORA / Швеция",
-        "country": "İsveç",
-        "country_az": "İsveç",
-        "country_en": "Sweden",
-        "country_ru": "Швеция",
-        "country_code": "SE"
-      },
-      {
-        "title": "Azərbaycan tarixinin tədrisində rəqəmsal texnologiyaların və süni intellekt alətlərinin tətbiqi.",
-        "title_az": "Azərbaycan tarixinin tədrisində rəqəmsal texnologiyaların və süni intellekt alətlərinin tətbiqi.",
-        "title_en": "Application of Digital Technologies and Artificial Intelligence Tools in Teaching Azerbaijani History.",
-        "title_ru": "Применение цифровых технологий и инструментов искусственного интеллекта в преподавании истории Азербайджана.",
-        "journal": "Baltic Journal of Law and Social Sciences, 3 / Latviya",
-        "journal_az": "Baltic Journal of Law and Social Sciences, 3 / Latviya",
-        "journal_en": "Baltic Journal of Law and Social Sciences, 3 / Latvia",
-        "journal_ru": "Baltic Journal of Law and Social Sciences, 3 / Латвия",
-        "country": "Latviya",
-        "country_az": "Latviya",
-        "country_en": "Latvia",
-        "country_ru": "Латвия",
-        "country_code": "LV"
-      }
-    ],
-    "year": "2020–2026",
-    "scope": "Yerli / Xarici",
-    "scope_az": "Yerli / Xarici",
-    "scope_en": "Domestic / International",
-    "scope_ru": "Республиканский / Международный",
-    "scope_type": "both",
-    "orcid": null,
-    "orcid_id": null,
-    "scopus": false,
-    "copernicus": true,
-    "erih": true
-  },
-  {
-    "id": 3,
-    "no": "3",
-    "author_az": "Bahar Məmmədova Arif",
-    "author_en": "Bahar Mammadova Arif",
-    "author_ru": "Бахар Мамедова Ариф кызы",
-    "role_az": "Müəllim / Humanitar elmlər",
-    "role_en": "Teacher / Humanities",
-    "role_ru": "Преподаватель / Гуманитарные науки",
-    "department": "Humanitar elmlər",
-    "department_az": "Humanitar elmlər",
-    "department_en": "Humanities",
-    "department_ru": "Гуманитарные науки",
-    "dept_slug": "humanitar",
-    "works": [
-      {
-        "title": "Heydər Əliyev Mərkəzi və onun Azərbaycanın tarixi-mədəni inkişafında yeri, rolu və əhəmiyyəti.",
-        "title_az": "Heydər Əliyev Mərkəzi və onun Azərbaycanın tarixi-mədəni inkişafında yeri, rolu və əhəmiyyəti.",
-        "title_en": "Heydar Aliyev Center: Its Place, Role, and Significance in Azerbaijan's Historical and Cultural Development.",
-        "title_ru": "Центр Гейдара Алиева: его место, роль и значение в историко-культурном развитии Азербайджана.",
-        "journal": "Pedaqogika / Azərbaycan",
-        "journal_az": "Pedaqogika / Azərbaycan",
-        "journal_en": "Pedagogika / Azerbaijan",
-        "journal_ru": "Педагогика / Азербайджан",
-        "country": "Azərbaycan",
-        "country_az": "Azərbaycan",
-        "country_en": "Azerbaijan",
-        "country_ru": "Азербайджан",
-        "country_code": "AZ"
-      },
-      {
-        "title": "Sərgilərin beynəlxalq əlaqələri və Azərbaycan imicinə təsiri.",
-        "title_az": "Sərgilərin beynəlxalq əlaqələri və Azərbaycan imicinə təsiri.",
-        "title_en": "International Relations of Exhibitions and Their Impact on the Image of Azerbaijan.",
-        "title_ru": "Международные связи выставок и их влияние на имидж Азербайджана.",
-        "journal": "Pedaqogika / Azərbaycan",
-        "journal_az": "Pedaqogika / Azərbaycan",
-        "journal_en": "Pedagogika / Azerbaijan",
-        "journal_ru": "Педагогика / Азербайджан",
-        "country": "Azərbaycan",
-        "country_az": "Azərbaycan",
-        "country_en": "Azerbaijan",
-        "country_ru": "Азербайджан",
-        "country_code": "AZ"
-      },
-      {
-        "title": "New political realities in the context of the restoration of the sovereignty of the Republic of Azerbaijan.",
-        "title_az": "New political realities in the context of the restoration of the sovereignty of the Republic of Azerbaijan.",
-        "title_en": "New Political Realities in the Context of the Restoration of the Sovereignty of the Republic of Azerbaijan.",
-        "title_ru": "Новые политические реалии в контексте восстановления суверенитета Азербайджанской Республики.",
-        "journal": "Danish scientific journal / Danimarka",
-        "journal_az": "Danish scientific journal / Danimarka",
-        "journal_en": "Danish Scientific Journal / Denmark",
-        "journal_ru": "Danish Scientific Journal / Дания",
-        "country": "Danimarka",
-        "country_az": "Danimarka",
-        "country_en": "Denmark",
-        "country_ru": "Дания",
-        "country_code": "DK"
-      }
-    ],
-    "year": "2025–2026",
-    "scope": "Yerli / Xarici",
-    "scope_az": "Yerli / Xarici",
-    "scope_en": "Domestic / International",
-    "scope_ru": "Республиканский / Международный",
-    "scope_type": "both",
-    "orcid": null,
-    "orcid_id": null,
-    "scopus": false,
-    "copernicus": false,
-    "erih": false
-  },
-  {
-    "id": 4,
-    "no": "4",
-    "author_az": "Könül Mahmudova Əlican",
-    "author_en": "Konul Mahmudova Alican",
-    "author_ru": "Кенуль Махмудова Алиджан кызы",
-    "role_az": "Müəllim / Humanitar elmlər",
-    "role_en": "Teacher / Humanities",
-    "role_ru": "Преподаватель / Гуманитарные науки",
-    "department": "Humanitar elmlər",
-    "department_az": "Humanitar elmlər",
-    "department_en": "Humanities",
-    "department_ru": "Гуманитарные науки",
-    "dept_slug": "humanitar",
-    "works": [
-      {
-        "title": "Azərbaycanda nəqliyyat şəbəkəsinin regional inkişafda rolu.",
-        "title_az": "Azərbaycanda nəqliyyat şəbəkəsinin regional inkişafda rolu.",
-        "title_en": "The Role of the Transportation Network in Regional Development in Azerbaijan.",
-        "title_ru": "Роль транспортной сети в региональном развитии Азербайджана.",
-        "journal": "NEXUS / Türkiyə",
-        "journal_az": "NEXUS / Türkiyə",
-        "journal_en": "NEXUS / Türkiye",
-        "journal_ru": "NEXUS / Турция",
-        "country": "Türkiyə",
-        "country_az": "Türkiyə",
-        "country_en": "Türkiye",
-        "country_ru": "Турция",
-        "country_code": "TR"
-      },
-      {
-        "title": "GIS əsaslı ekoloji monitorinq: müasir texnologiyaların ətraf mühitin idarə olunmasında rolu.",
-        "title_az": "GIS əsaslı ekoloji monitorinq: müasir texnologiyaların ətraf mühitin idarə olunmasında rolu.",
-        "title_en": "GIS-Based Environmental Monitoring: The Role of Modern Technologies in Environmental Governance.",
-        "title_ru": "Экологический мониторинг на основе ГИС: роль современных технологий в управлении окружающей средой.",
-        "journal": "Taras Shevchenko National University of Kyiv – KNU Journal / Ukrayna",
-        "journal_az": "Taras Shevchenko National University of Kyiv – KNU Journal / Ukrayna",
-        "journal_en": "Taras Shevchenko National University of Kyiv – KNU Journal / Ukraine",
-        "journal_ru": "Киевский национальный университет имени Тараса Шевченко – KNU Journal / Украина",
-        "country": "Ukrayna",
-        "country_az": "Ukrayna",
-        "country_en": "Ukraine",
-        "country_ru": "Украина",
-        "country_code": "UA"
-      }
-    ],
-    "year": "2026",
-    "scope": "Xarici",
-    "scope_az": "Xarici",
-    "scope_en": "International",
-    "scope_ru": "Международный",
-    "scope_type": "xarici",
-    "orcid": null,
-    "orcid_id": null,
-    "scopus": false,
-    "copernicus": true,
-    "erih": false
-  },
-  {
-    "id": 5,
-    "no": "5",
-    "author_az": "Rəhimə Şəkərova Vahid",
-    "author_en": "Rahima Shakarova Vahid",
-    "author_ru": "Рахима Шакарова Вахид кызы",
-    "role_az": "Müəllim / Ümumtəhsil",
-    "role_en": "Teacher / General Education",
-    "role_ru": "Преподаватель / Общее образование",
-    "department": "Ümumtəhsil",
-    "department_az": "Ümumtəhsil",
-    "department_en": "General Education",
-    "department_ru": "Общее образование",
-    "dept_slug": "umumtehsil",
-    "works": [
-      {
-        "title": "Meliorasiya sistemlərinin Şirvan düzü torpaqlarının aqrokimyəvi xüsusiyyətlərinə təsirinin qiymətləndirilməsi.",
-        "title_az": "Meliorasiya sistemlərinin Şirvan düzü torpaqlarının aqrokimyəvi xüsusiyyətlərinə təsirinin qiymətləndirilməsi.",
-        "title_en": "Assessment of the Impact of Melioration Systems on the Agrochemical Properties of Shirvan Plain Soils.",
-        "title_ru": "Оценка влияния мелиоративных систем на агрохимические свойства почв Ширванской равнины.",
-        "journal": "AURORA / İsveç",
-        "journal_az": "AURORA / İsveç",
-        "journal_en": "AURORA / Sweden",
-        "journal_ru": "AURORA / Швеция",
-        "country": "İsveç",
-        "country_az": "İsveç",
-        "country_en": "Sweden",
-        "country_ru": "Швеция",
-        "country_code": "SE"
-      },
-      {
-        "title": "Dynamics of the Groundwater in the Shirvan Plain and Its Impact on the Meliorative Status of Soils.",
-        "title_az": "Dynamics of the Groundwater in the Shirvan Plain and Its Impact on the Meliorative Status of Soils.",
-        "title_en": "Dynamics of Groundwater in the Shirvan Plain and Its Impact on the Meliorative Status of Soils.",
-        "title_ru": "Динамика грунтовых вод в Ширванской равнине и ее влияние на мелиоративное состояние почв.",
-        "journal": "Sustainable Future, Integrated Development of Earth Sciences and Ecology / First International Scientific Conference – Baku State University Journal",
-        "journal_az": "Sustainable Future, Integrated Development of Earth Sciences and Ecology / First International Scientific Conference – Baku State University Journal",
-        "journal_en": "Sustainable Future, Integrated Development of Earth Sciences and Ecology / First International Scientific Conference – Baku State University Journal",
-        "journal_ru": "Sustainable Future, Integrated Development of Earth Sciences and Ecology / Первая международная научная конференция – Журнал БГУ",
-        "country": "Azərbaycan",
-        "country_az": "Azərbaycan",
-        "country_en": "Azerbaijan",
-        "country_ru": "Азербайджан",
-        "country_code": "AZ"
-      }
-    ],
-    "year": "2025–2026",
-    "scope": "Yerli / Xarici",
-    "scope_az": "Yerli / Xarici",
-    "scope_en": "Domestic / International",
-    "scope_ru": "Республиканский / Международный",
-    "scope_type": "both",
-    "orcid": null,
-    "orcid_id": null,
-    "scopus": false,
-    "copernicus": false,
-    "erih": false
-  },
-  {
-    "id": 6,
-    "no": "6",
-    "author_az": "Ramilə Paşayeva Rza",
-    "author_en": "Ramila Pashayeva Rza",
-    "author_ru": "Рамила Пашаева Рза кызы",
-    "role_az": "Müəllim / Ümumtəhsil",
-    "role_en": "Teacher / General Education",
-    "role_ru": "Преподаватель / Общее образование",
-    "department": "Ümumtəhsil",
-    "department_az": "Ümumtəhsil",
-    "department_en": "General Education",
-    "department_ru": "Общее образование",
-    "dept_slug": "umumtehsil",
-    "works": [
-      {
-        "title": "Müasir məktəblilərdə fizikanın tədrisində yeni metod və yanaşmalar.",
-        "title_az": "Müasir məktəblilərdə fizikanın tədrisində yeni metod və yanaşmalar.",
-        "title_en": "Innovative Methods and Approaches in Teaching Physics to Modern Students.",
-        "title_ru": "Новые методы и подходы в преподавании физики современным школьникам.",
-        "journal": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
-        "journal_az": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
-        "journal_en": "International Scientific-Practical Journal / Astana, Kazakhstan",
-        "journal_ru": "Международный научно-практический журнал / Астана, Казахстан",
-        "country": "Qazaxıstan",
-        "country_az": "Qazaxıstan",
-        "country_en": "Kazakhstan",
-        "country_ru": "Казахстан",
-        "country_code": "KZ"
-      },
-      {
-        "title": "Təhsilin keyfiyyətinin artırılmasında İKT-nin rolu.",
-        "title_az": "Təhsilin keyfiyyətinin artırılmasında İKT-nin rolu.",
-        "title_en": "The Role of ICT in Enhancing the Quality of Education.",
-        "title_ru": "Роль ИКТ в повышении качества образования.",
-        "journal": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
-        "journal_az": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
-        "journal_en": "International Scientific-Practical Journal / Astana, Kazakhstan",
-        "journal_ru": "Международный научно-практический журнал / Астана, Казахстан",
-        "country": "Qazaxıstan",
-        "country_az": "Qazaxıstan",
-        "country_en": "Kazakhstan",
-        "country_ru": "Казахстан",
-        "country_code": "KZ"
-      }
-    ],
-    "year": "2026",
-    "scope": "Xarici",
-    "scope_az": "Xarici",
-    "scope_en": "International",
-    "scope_ru": "Международный",
-    "scope_type": "xarici",
-    "orcid": null,
-    "orcid_id": null,
-    "scopus": false,
-    "copernicus": false,
-    "erih": false
-  },
-  {
-    "id": 7,
-    "no": "7",
-    "author_az": "İlahə Qaraxanova Xaliq",
-    "author_en": "Ilaha Garakhanova Khalig",
-    "author_ru": "Илаха Караханова Халиг кызы",
-    "role_az": "Müəllim / Ümumtəhsil",
-    "role_en": "Teacher / General Education",
-    "role_ru": "Преподаватель / Общее образование",
-    "department": "Ümumtəhsil",
-    "department_az": "Ümumtəhsil",
-    "department_en": "General Education",
-    "department_ru": "Общее образование",
-    "dept_slug": "umumtehsil",
-    "works": [
-      {
-        "title": "Hərbi fəaliyyətin bəzi istiqamətlərinin ekosistemlərə təsirinin qiymətləndirilməsi.",
-        "title_az": "Hərbi fəaliyyətin bəzi istiqamətlərinin ekosistemlərə təsirinin qiymətləndirilməsi.",
-        "title_en": "Assessment of the Environmental Impact of Certain Military Operations on Ecosystems.",
-        "title_ru": "Оценка воздействия некоторых направлений военной деятельности на экосистемы.",
-        "journal": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
-        "journal_az": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
-        "journal_en": "International Scientific-Practical Journal / Astana, Kazakhstan",
-        "journal_ru": "Международный научно-практический журнал / Астана, Казахстан",
-        "country": "Qazaxıstan",
-        "country_az": "Qazaxıstan",
-        "country_en": "Kazakhstan",
-        "country_ru": "Казахстан",
-        "country_code": "KZ"
-      }
-    ],
-    "year": "2026",
-    "scope": "Xarici",
-    "scope_az": "Xarici",
-    "scope_en": "International",
-    "scope_ru": "Международный",
-    "scope_type": "xarici",
-    "orcid": null,
-    "orcid_id": null,
-    "scopus": false,
-    "copernicus": false,
-    "erih": false
-  },
-  {
-    "id": 8,
-    "no": "8",
-    "author_az": "Aygün Qafarova Rəhim",
-    "author_en": "Aygun Gafarova Rahim",
-    "author_ru": "Айгюн Гафарова Рахим кызы",
-    "role_az": "Müəllim / Xarici dillər",
-    "role_en": "Teacher / Foreign Languages",
-    "role_ru": "Преподаватель / Иностранные языки",
-    "department": "Xarici dillər",
-    "department_az": "Xarici dillər",
-    "department_en": "Foreign Languages",
-    "department_ru": "Иностранные языки",
-    "dept_slug": "xarici-dil",
-    "works": [
-      {
-        "title": "Подготовка студентов к самостоятельной семейной жизни и воспитанию детей в педагогической теории и практике.",
-        "title_az": "Подготовка студентов к самостоятельной семейной жизни и воспитанию детей в педагогической теории и практике.",
-        "title_en": "Preparing Students for Independent Family Life and Child-Rearing in Pedagogical Theory and Practice.",
-        "title_ru": "Подготовка студентов к самостоятельной семейной жизни и воспитанию детей в педагогической теории и практике.",
-        "journal": "Modern Humanities Success / Успехи гуманитарных наук / Rusiya",
-        "journal_az": "Modern Humanities Success / Успехи гуманитарных наук / Rusiya",
-        "journal_en": "Modern Humanities Success / Russia",
-        "journal_ru": "Успехи гуманитарных наук / Modern Humanities Success / Россия",
-        "country": "Rusiya",
-        "country_az": "Rusiya",
-        "country_en": "Russia",
-        "country_ru": "Россия",
-        "country_code": "RU"
-      }
-    ],
-    "year": "2025",
-    "scope": "Xarici",
-    "scope_az": "Xarici",
-    "scope_en": "International",
-    "scope_ru": "Международный",
-    "scope_type": "xarici",
-    "orcid": "https://orcid.org/0009-0005-1845-6679",
-    "orcid_id": "0009-0005-1845-6679",
-    "scopus": false,
-    "copernicus": false,
-    "erih": false
-  },
-  {
-    "id": 9,
-    "no": "9",
-    "author_az": "Gülnar Hüsiyeva Xosrov",
-    "author_en": "Gulnar Husiyeva Khosrov",
-    "author_ru": "Гюльнар Гусиева Хосров кызы",
-    "role_az": "Müəllim / Xarici dillər",
-    "role_en": "Teacher / Foreign Languages",
-    "role_ru": "Преподаватель / Иностранные языки",
-    "department": "Xarici dillər",
-    "department_az": "Xarici dillər",
-    "department_en": "Foreign Languages",
-    "department_ru": "Иностранные языки",
-    "dept_slug": "xarici-dil",
-    "works": [
-      {
-        "title": "The impact of vocational and secondary specialized education on the labor market, digitalization, and human capital development perspectives.",
-        "title_az": "The impact of vocational and secondary specialized education on the labor market, digitalization, and human capital development perspectives.",
-        "title_en": "The Impact of Vocational and Secondary Specialized Education on the Labor Market, Digitalization, and Human Capital Development Perspectives.",
-        "title_ru": "Влияние профессионального и среднего специального образования на рынок труда, цифровизацию и перспективы развития человеческого капитала.",
-        "journal": "İQRO / Özbəkistan",
-        "journal_az": "İQRO / Özbəkistan",
-        "journal_en": "IQRO / Uzbekistan",
-        "journal_ru": "IQRO / Узбекистан",
-        "country": "Özbəkistan",
-        "country_az": "Özbəkistan",
-        "country_en": "Uzbekistan",
-        "country_ru": "Узбекистан",
-        "country_code": "UZ"
-      }
-    ],
-    "year": "2026",
-    "scope": "Xarici",
-    "scope_az": "Xarici",
-    "scope_en": "International",
-    "scope_ru": "Международный",
-    "scope_type": "xarici",
-    "orcid": null,
-    "orcid_id": null,
-    "scopus": false,
-    "copernicus": false,
-    "erih": false
-  },
-  {
-    "id": 10,
-    "no": "10",
-    "author_az": "Vüsalə Kərimova Nürəddin",
-    "author_en": "Vusala Karimova Nuraddin",
-    "author_ru": "Вусаля Керимова Нураддин кызы",
-    "role_az": "Müəllim / Humanitar elmlər",
-    "role_en": "Teacher / Humanities",
-    "role_ru": "Преподаватель / Гуманитарные науки",
-    "department": "Humanitar elmlər",
-    "department_az": "Humanitar elmlər",
-    "department_en": "Humanities",
-    "department_ru": "Гуманитарные науки",
-    "dept_slug": "humanitar",
-    "works": [
-      {
-        "title": "Tarihi kaynaklarla çalışma yöntemleri ve tarih öğretmeninin mesleki yeterlilikleri",
-        "title_az": "Tarihi kaynaklarla çalışma yöntemleri ve tarih öğretmeninin mesleki yeterlilikleri",
-        "title_en": "Methods of Working with Historical Sources and Professional Competencies of a History Teacher.",
-        "title_ru": "Методы работы с историческими источниками и профессиональные компетенции учителя истории.",
-        "journal": "Türkiye-Azerbaijan :From shared memory to a shared future / Türkiyə ,Qars",
-        "journal_az": "Türkiye-Azerbaijan :From shared memory to a shared future / Türkiyə ,Qars",
-        "journal_en": "Türkiye-Azerbaijan: From Shared Memory to a Shared Future / Türkiye, Kars",
-        "journal_ru": "Турция-Азербайджан: От общей памяти к общему будущему / Турция, Карс",
-        "country": "Türkiyə",
-        "country_az": "Türkiyə",
-        "country_en": "Türkiye",
-        "country_ru": "Турция",
-        "country_code": "TR"
-      }
-    ],
-    "year": "2026",
-    "scope": "Xarici",
-    "scope_az": "Xarici",
-    "scope_en": "International",
-    "scope_ru": "Международный",
-    "scope_type": "xarici",
-    "orcid": null,
-    "orcid_id": null,
-    "scopus": false,
-    "copernicus": false,
-    "erih": false
-  },
-  {
-    "id": 11,
-    "no": "11",
-    "author_az": "Xəyalə Quliyeva Natiq qızı",
-    "author_en": "Khayala Guliyeva Natig",
-    "author_ru": "Хаяла Гулиева Натиг кызы",
-    "role_az": "Müəllim / Dil və ədəbiyyat",
-    "role_en": "Teacher / Language & Literature",
-    "role_ru": "Преподаватель / Язык и литература",
-    "department": "Dil və ədəbiyyat",
-    "department_az": "Dil və ədəbiyyat",
-    "department_en": "Language & Literature",
-    "department_ru": "Язык и литература",
-    "dept_slug": "dil",
-    "works": [
-      {
-        "title": "Modern Teaching Methods: Methodological Principles and Approaches.",
-        "title_az": "Modern Teaching Methods: Methodological Principles and Approaches.",
-        "title_en": "Modern Teaching Methods: Methodological Principles and Approaches.",
-        "title_ru": "Современные методы обучения: методологические принципы и подходы.",
-        "journal": "Miedzynarodowe czasopisma naukowe/ Polşa",
-        "journal_az": "Miedzynarodowe czasopisma naukowe/ Polşa",
-        "journal_en": "Międzynarodowe Czasopisma Naukowe / Poland",
-        "journal_ru": "Międzynarodowe Czasopisma Naukowe / Польша",
-        "country": "Polşa",
-        "country_az": "Polşa",
-        "country_en": "Poland",
-        "country_ru": "Польша",
-        "country_code": "PL"
-      }
-    ],
-    "year": "2026",
-    "scope": "Xarici",
-    "scope_az": "Xarici",
-    "scope_en": "International",
-    "scope_ru": "Международный",
-    "scope_type": "xarici",
-    "orcid": null,
-    "orcid_id": null,
-    "scopus": false,
-    "copernicus": false,
-    "erih": false
-  }
-];
+    {
+      "id": 1,
+      "no": "1",
+      "author_az": "Aytən Namazova Mehman",
+      "author_en": "Ayten Namazova Mehman",
+      "author_ru": "Айтен Намазова Мехман кызы",
+      "role_az": "Müəllim / Dil və ədəbiyyat",
+      "role_en": "Teacher / Language & Literature",
+      "role_ru": "Преподаватель / Язык и литература",
+      "department": "Dil və ədəbiyyat",
+      "department_az": "Dil və ədəbiyyat",
+      "department_en": "Language & Literature",
+      "department_ru": "Язык и литература",
+      "dept_slug": "dil",
+      "works": [
+        {
+          "title": "Qazi Bürhanəddinin divanında arxaizmlərin mənşəyi və onların etimoloji xüsusiyyətləri.",
+          "title_az": "Qazi Bürhanəddinin divanında arxaizmlərin mənşəyi və onların etimoloji xüsusiyyətləri.",
+          "title_en": "Origin and Etymological Characteristics of Archaisms in the Divan of Gazi Burhaneddin.",
+          "title_ru": "Происхождение и этимологические особенности архаизмов в диване Гази Бурханеддина.",
+          "journal": "Bakı Dövlət Universiteti Beynəlxalq Elmi-Nəzəri Jurnal",
+          "journal_az": "Bakı Dövlət Universiteti Beynəlxalq Elmi-Nəzəri Jurnal",
+          "journal_en": "Baku State University International Scientific-Theoretical Journal",
+          "journal_ru": "Бакинский Государственный Университет Международный Научно-Теоретический Журнал",
+          "country": "Azərbaycan",
+          "country_az": "Azərbaycan",
+          "country_en": "Azerbaijan",
+          "country_ru": "Азербайджан",
+          "country_code": "AZ"
+        },
+        {
+          "title": "Azərbaycan ədəbi dilində nitq etikasının formaları və normativliyi.",
+          "title_az": "Azərbaycan ədəbi dilində nitq etikasının formaları və normativliyi.",
+          "title_en": "Forms and Normativity of Speech Ethics in the Azerbaijani Literary Language.",
+          "title_ru": "Формы и нормативность речевого этикета в азербайджанском литературном языке.",
+          "journal": "Tədqiqələr elmi jurnal",
+          "journal_az": "Tədqiqələr elmi jurnal",
+          "journal_en": "Tadgigalar (Researches) Scientific Journal",
+          "journal_ru": "Научный журнал «Тэдгигалар» (Исследования)",
+          "country": "Azərbaycan",
+          "country_az": "Azərbaycan",
+          "country_en": "Azerbaijan",
+          "country_ru": "Азербайджан",
+          "country_code": "AZ"
+        }
+      ],
+      "year": "2026",
+      "scope": "Yerli",
+      "scope_az": "Yerli",
+      "scope_en": "Domestic",
+      "scope_ru": "Республиканский",
+      "scope_type": "yerli",
+      "orcid": null,
+      "orcid_id": null,
+      "scopus": false,
+      "copernicus": false,
+      "erih": false
+    },
+    {
+      "id": 2,
+      "no": "2",
+      "author_az": "Səidə Quliyeva Novruz",
+      "author_en": "Saida Guliyeva Novruz",
+      "author_ru": "Саида Гулиева Новруз кызы",
+      "role_az": "Müəllim / Humanitar elmlər",
+      "role_en": "Teacher / Humanities",
+      "role_ru": "Преподаватель / Гуманитарные науки",
+      "department": "Humanitar elmlər",
+      "department_az": "Humanitar elmlər",
+      "department_en": "Humanities",
+      "department_ru": "Гуманитарные науки",
+      "dept_slug": "humanitar",
+      "works": [
+        {
+          "title": "Arxiv sənədlərinin elektronlaşdırılması problemləri",
+          "title_az": "Arxiv sənədlərinin elektronlaşdırılması problemləri",
+          "title_en": "Challenges in the Digitalization of Archival Documents",
+          "title_ru": "Проблемы электронизации архивных документов",
+          "journal": "Elmi İş beynəlxalq elmi jurnal",
+          "journal_az": "Elmi İş beynəlxalq elmi jurnal",
+          "journal_en": "Elmi Ish International Scientific Journal",
+          "journal_ru": "Международный научный журнал «Элми Иш»",
+          "country": "Azərbaycan",
+          "country_az": "Azərbaycan",
+          "country_en": "Azerbaijan",
+          "country_ru": "Азербайджан",
+          "country_code": "AZ"
+        },
+        {
+          "title": "Arxiv menecmenti",
+          "title_az": "Arxiv menecmenti",
+          "title_en": "Archive Management",
+          "title_ru": "Архивный менеджмент",
+          "journal": "Mədəniyyət: Elmi-metodiki publisistik jurnal",
+          "journal_az": "Mədəniyyət: Elmi-metodiki publisistik jurnal",
+          "journal_en": "Culture: Scientific-Methodical & Publicistic Journal",
+          "journal_ru": "Культура: научно-методический публицистический журнал",
+          "country": "Azərbaycan",
+          "country_az": "Azərbaycan",
+          "country_en": "Azerbaijan",
+          "country_ru": "Азербайджан",
+          "country_code": "AZ"
+        },
+        {
+          "title": "Arxiv işi sahəsində normativ hüquqi aktlar",
+          "title_az": "Arxiv işi sahəsində normativ hüquqi aktlar",
+          "title_en": "Regulatory Legal Acts in the Field of Archival Affairs",
+          "title_ru": "Нормативно-правовые акты в сфере архивного дела",
+          "journal": "Mədəniyyət: Problemlər və perspektivlər elmi-publisistik jurnal",
+          "journal_az": "Mədəniyyət: Problemlər və perspektivlər elmi-publisistik jurnal",
+          "journal_en": "Culture: Problems & Perspectives Scientific-Publicistic Journal",
+          "journal_ru": "Культура: Проблемы и перспективы, научно-публицистический журнал",
+          "country": "Azərbaycan",
+          "country_az": "Azərbaycan",
+          "country_en": "Azerbaijan",
+          "country_ru": "Азербайджан",
+          "country_code": "AZ"
+        },
+        {
+          "title": "Arxiv sənədlərindən istifadənin aktual problemləri / Tezis",
+          "title_az": "Arxiv sənədlərindən istifadənin aktual problemləri / Tezis",
+          "title_en": "Current Challenges in the Utilization of Archival Documents / Thesis",
+          "title_ru": "Актуальные проблемы использования архивных документов / Тезис",
+          "journal": "Mədəniyyət: Problemlər və perspektivlər",
+          "journal_az": "Mədəniyyət: Problemlər və perspektivlər",
+          "journal_en": "Culture: Problems and Perspectives",
+          "journal_ru": "Культура: Проблемы и перспективы",
+          "country": "Azərbaycan",
+          "country_az": "Azərbaycan",
+          "country_en": "Azerbaijan",
+          "country_ru": "Азербайджан",
+          "country_code": "AZ"
+        },
+        {
+          "title": "Arxiv sənədlərinin rəqəmsallaşdırılması problemləri / Tezis",
+          "title_az": "Arxiv sənədlərinin rəqəmsallaşdırılması problemləri / Tezis",
+          "title_en": "Challenges in the Digitization of Archival Documents / Thesis",
+          "title_ru": "Проблемы оцифровки архивных документов / Тезис",
+          "journal": "AMEA Məhəmməd Füzuli adına Əlyazmalar İnstitutu – Azərbaycan əlyazmaları dünya kitabxanalarında",
+          "journal_az": "AMEA Məhəmməd Füzuli adına Əlyazmalar İnstitutu – Azərbaycan əlyazmaları dünya kitabxanalarında",
+          "journal_en": "ANAS Institute of Manuscripts named after Muhammad Fuzuli – Azerbaijani Manuscripts in World Libraries",
+          "journal_ru": "Институт рукописей имени Мухаммеда Физули НАНА – Азербайджанские рукописи в библиотеках мира",
+          "country": "Azərbaycan",
+          "country_az": "Azərbaycan",
+          "country_en": "Azerbaijan",
+          "country_ru": "Азербайджан",
+          "country_code": "AZ"
+        },
+        {
+          "title": "Applications of Digital Humanities in History Education",
+          "title_az": "Applications of Digital Humanities in History Education",
+          "title_en": "Applications of Digital Humanities in History Education",
+          "title_ru": "Применение цифровых гуманитарных наук в преподавании истории",
+          "journal": "AURORA / İsveç",
+          "journal_az": "AURORA / İsveç",
+          "journal_en": "AURORA / Sweden",
+          "journal_ru": "AURORA / Швеция",
+          "country": "İsveç",
+          "country_az": "İsveç",
+          "country_en": "Sweden",
+          "country_ru": "Швеция",
+          "country_code": "SE"
+        },
+        {
+          "title": "Azərbaycan tarixinin tədrisində rəqəmsal texnologiyaların və süni intellekt alətlərinin tətbiqi.",
+          "title_az": "Azərbaycan tarixinin tədrisində rəqəmsal texnologiyaların və süni intellekt alətlərinin tətbiqi.",
+          "title_en": "Application of Digital Technologies and Artificial Intelligence Tools in Teaching Azerbaijani History.",
+          "title_ru": "Применение цифровых технологий и инструментов искусственного интеллекта в преподавании истории Азербайджана.",
+          "journal": "Baltic Journal of Law and Social Sciences, 3 / Latviya",
+          "journal_az": "Baltic Journal of Law and Social Sciences, 3 / Latviya",
+          "journal_en": "Baltic Journal of Law and Social Sciences, 3 / Latvia",
+          "journal_ru": "Baltic Journal of Law and Social Sciences, 3 / Латвия",
+          "country": "Latviya",
+          "country_az": "Latviya",
+          "country_en": "Latvia",
+          "country_ru": "Латвия",
+          "country_code": "LV"
+        }
+      ],
+      "year": "2020–2026",
+      "scope": "Yerli / Xarici",
+      "scope_az": "Yerli / Xarici",
+      "scope_en": "Domestic / International",
+      "scope_ru": "Республиканский / Международный",
+      "scope_type": "both",
+      "orcid": null,
+      "orcid_id": null,
+      "scopus": false,
+      "copernicus": true,
+      "erih": true
+    },
+    {
+      "id": 3,
+      "no": "3",
+      "author_az": "Bahar Məmmədova Arif",
+      "author_en": "Bahar Mammadova Arif",
+      "author_ru": "Бахар Мамедова Ариф кызы",
+      "role_az": "Müəllim / Humanitar elmlər",
+      "role_en": "Teacher / Humanities",
+      "role_ru": "Преподаватель / Гуманитарные науки",
+      "department": "Humanitar elmlər",
+      "department_az": "Humanitar elmlər",
+      "department_en": "Humanities",
+      "department_ru": "Гуманитарные науки",
+      "dept_slug": "humanitar",
+      "works": [
+        {
+          "title": "Heydər Əliyev Mərkəzi və onun Azərbaycanın tarixi-mədəni inkişafında yeri, rolu və əhəmiyyəti.",
+          "title_az": "Heydər Əliyev Mərkəzi və onun Azərbaycanın tarixi-mədəni inkişafında yeri, rolu və əhəmiyyəti.",
+          "title_en": "Heydar Aliyev Center: Its Place, Role, and Significance in Azerbaijan's Historical and Cultural Development.",
+          "title_ru": "Центр Гейдара Алиева: его место, роль и значение в историко-культурном развитии Азербайджана.",
+          "journal": "Pedaqogika / Azərbaycan",
+          "journal_az": "Pedaqogika / Azərbaycan",
+          "journal_en": "Pedagogika / Azerbaijan",
+          "journal_ru": "Педагогика / Азербайджан",
+          "country": "Azərbaycan",
+          "country_az": "Azərbaycan",
+          "country_en": "Azerbaijan",
+          "country_ru": "Азербайджан",
+          "country_code": "AZ"
+        },
+        {
+          "title": "Sərgilərin beynəlxalq əlaqələri və Azərbaycan imicinə təsiri.",
+          "title_az": "Sərgilərin beynəlxalq əlaqələri və Azərbaycan imicinə təsiri.",
+          "title_en": "International Relations of Exhibitions and Their Impact on the Image of Azerbaijan.",
+          "title_ru": "Международные связи выставок и их влияние на имидж Азербайджана.",
+          "journal": "Pedaqogika / Azərbaycan",
+          "journal_az": "Pedaqogika / Azərbaycan",
+          "journal_en": "Pedagogika / Azerbaijan",
+          "journal_ru": "Педагогика / Азербайджан",
+          "country": "Azərbaycan",
+          "country_az": "Azərbaycan",
+          "country_en": "Azerbaijan",
+          "country_ru": "Азербайджан",
+          "country_code": "AZ"
+        },
+        {
+          "title": "New political realities in the context of the restoration of the sovereignty of the Republic of Azerbaijan.",
+          "title_az": "New political realities in the context of the restoration of the sovereignty of the Republic of Azerbaijan.",
+          "title_en": "New Political Realities in the Context of the Restoration of the Sovereignty of the Republic of Azerbaijan.",
+          "title_ru": "Новые политические реалии в контексте восстановления суверенитета Азербайджанской Республики.",
+          "journal": "Danish scientific journal / Danimarka",
+          "journal_az": "Danish scientific journal / Danimarka",
+          "journal_en": "Danish Scientific Journal / Denmark",
+          "journal_ru": "Danish Scientific Journal / Дания",
+          "country": "Danimarka",
+          "country_az": "Danimarka",
+          "country_en": "Denmark",
+          "country_ru": "Дания",
+          "country_code": "DK"
+        }
+      ],
+      "year": "2025–2026",
+      "scope": "Yerli / Xarici",
+      "scope_az": "Yerli / Xarici",
+      "scope_en": "Domestic / International",
+      "scope_ru": "Республиканский / Международный",
+      "scope_type": "both",
+      "orcid": null,
+      "orcid_id": null,
+      "scopus": false,
+      "copernicus": false,
+      "erih": false
+    },
+    {
+      "id": 4,
+      "no": "4",
+      "author_az": "Könül Mahmudova Əlican",
+      "author_en": "Konul Mahmudova Alican",
+      "author_ru": "Кенуль Махмудова Алиджан кызы",
+      "role_az": "Müəllim / Humanitar elmlər",
+      "role_en": "Teacher / Humanities",
+      "role_ru": "Преподаватель / Гуманитарные науки",
+      "department": "Humanitar elmlər",
+      "department_az": "Humanitar elmlər",
+      "department_en": "Humanities",
+      "department_ru": "Гуманитарные науки",
+      "dept_slug": "humanitar",
+      "works": [
+        {
+          "title": "Azərbaycanda nəqliyyat şəbəkəsinin regional inkişafda rolu.",
+          "title_az": "Azərbaycanda nəqliyyat şəbəkəsinin regional inkişafda rolu.",
+          "title_en": "The Role of the Transportation Network in Regional Development in Azerbaijan.",
+          "title_ru": "Роль транспортной сети в региональном развитии Азербайджана.",
+          "journal": "NEXUS / Türkiyə",
+          "journal_az": "NEXUS / Türkiyə",
+          "journal_en": "NEXUS / Türkiye",
+          "journal_ru": "NEXUS / Турция",
+          "country": "Türkiyə",
+          "country_az": "Türkiyə",
+          "country_en": "Türkiye",
+          "country_ru": "Турция",
+          "country_code": "TR"
+        },
+        {
+          "title": "GIS əsaslı ekoloji monitorinq: müasir texnologiyaların ətraf mühitin idarə olunmasında rolu.",
+          "title_az": "GIS əsaslı ekoloji monitorinq: müasir texnologiyaların ətraf mühitin idarə olunmasında rolu.",
+          "title_en": "GIS-Based Environmental Monitoring: The Role of Modern Technologies in Environmental Governance.",
+          "title_ru": "Экологический мониторинг на основе ГИС: роль современных технологий в управлении окружающей средой.",
+          "journal": "Taras Shevchenko National University of Kyiv – KNU Journal / Ukrayna",
+          "journal_az": "Taras Shevchenko National University of Kyiv – KNU Journal / Ukrayna",
+          "journal_en": "Taras Shevchenko National University of Kyiv – KNU Journal / Ukraine",
+          "journal_ru": "Киевский национальный университет имени Тараса Шевченко – KNU Journal / Украина",
+          "country": "Ukrayna",
+          "country_az": "Ukrayna",
+          "country_en": "Ukraine",
+          "country_ru": "Украина",
+          "country_code": "UA"
+        }
+      ],
+      "year": "2026",
+      "scope": "Xarici",
+      "scope_az": "Xarici",
+      "scope_en": "International",
+      "scope_ru": "Международный",
+      "scope_type": "xarici",
+      "orcid": null,
+      "orcid_id": null,
+      "scopus": false,
+      "copernicus": true,
+      "erih": false
+    },
+    {
+      "id": 5,
+      "no": "5",
+      "author_az": "Rəhimə Şəkərova Vahid",
+      "author_en": "Rahima Shakarova Vahid",
+      "author_ru": "Рахима Шакарова Вахид кызы",
+      "role_az": "Müəllim / Ümumtəhsil",
+      "role_en": "Teacher / General Education",
+      "role_ru": "Преподаватель / Общее образование",
+      "department": "Ümumtəhsil",
+      "department_az": "Ümumtəhsil",
+      "department_en": "General Education",
+      "department_ru": "Общее образование",
+      "dept_slug": "umumtehsil",
+      "works": [
+        {
+          "title": "Meliorasiya sistemlərinin Şirvan düzü torpaqlarının aqrokimyəvi xüsusiyyətlərinə təsirinin qiymətləndirilməsi.",
+          "title_az": "Meliorasiya sistemlərinin Şirvan düzü torpaqlarının aqrokimyəvi xüsusiyyətlərinə təsirinin qiymətləndirilməsi.",
+          "title_en": "Assessment of the Impact of Melioration Systems on the Agrochemical Properties of Shirvan Plain Soils.",
+          "title_ru": "Оценка влияния мелиоративных систем на агрохимические свойства почв Ширванской равнины.",
+          "journal": "AURORA / İsveç",
+          "journal_az": "AURORA / İsveç",
+          "journal_en": "AURORA / Sweden",
+          "journal_ru": "AURORA / Швеция",
+          "country": "İsveç",
+          "country_az": "İsveç",
+          "country_en": "Sweden",
+          "country_ru": "Швеция",
+          "country_code": "SE"
+        },
+        {
+          "title": "Dynamics of the Groundwater in the Shirvan Plain and Its Impact on the Meliorative Status of Soils.",
+          "title_az": "Dynamics of the Groundwater in the Shirvan Plain and Its Impact on the Meliorative Status of Soils.",
+          "title_en": "Dynamics of Groundwater in the Shirvan Plain and Its Impact on the Meliorative Status of Soils.",
+          "title_ru": "Динамика грунтовых вод в Ширванской равнине и ее влияние на мелиоративное состояние почв.",
+          "journal": "Sustainable Future, Integrated Development of Earth Sciences and Ecology / First International Scientific Conference – Baku State University Journal",
+          "journal_az": "Sustainable Future, Integrated Development of Earth Sciences and Ecology / First International Scientific Conference – Baku State University Journal",
+          "journal_en": "Sustainable Future, Integrated Development of Earth Sciences and Ecology / First International Scientific Conference – Baku State University Journal",
+          "journal_ru": "Sustainable Future, Integrated Development of Earth Sciences and Ecology / Первая международная научная конференция – Журнал БГУ",
+          "country": "Azərbaycan",
+          "country_az": "Azərbaycan",
+          "country_en": "Azerbaijan",
+          "country_ru": "Азербайджан",
+          "country_code": "AZ"
+        }
+      ],
+      "year": "2025–2026",
+      "scope": "Yerli / Xarici",
+      "scope_az": "Yerli / Xarici",
+      "scope_en": "Domestic / International",
+      "scope_ru": "Республиканский / Международный",
+      "scope_type": "both",
+      "orcid": null,
+      "orcid_id": null,
+      "scopus": false,
+      "copernicus": false,
+      "erih": false
+    },
+    {
+      "id": 6,
+      "no": "6",
+      "author_az": "Ramilə Paşayeva Rza",
+      "author_en": "Ramila Pashayeva Rza",
+      "author_ru": "Рамила Пашаева Рза кызы",
+      "role_az": "Müəllim / Ümumtəhsil",
+      "role_en": "Teacher / General Education",
+      "role_ru": "Преподаватель / Общее образование",
+      "department": "Ümumtəhsil",
+      "department_az": "Ümumtəhsil",
+      "department_en": "General Education",
+      "department_ru": "Общее образование",
+      "dept_slug": "umumtehsil",
+      "works": [
+        {
+          "title": "Müasir məktəblilərdə fizikanın tədrisində yeni metod və yanaşmalar.",
+          "title_az": "Müasir məktəblilərdə fizikanın tədrisində yeni metod və yanaşmalar.",
+          "title_en": "Innovative Methods and Approaches in Teaching Physics to Modern Students.",
+          "title_ru": "Новые методы и подходы в преподавании физики современным школьникам.",
+          "journal": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
+          "journal_az": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
+          "journal_en": "International Scientific-Practical Journal / Astana, Kazakhstan",
+          "journal_ru": "Международный научно-практический журнал / Астана, Казахстан",
+          "country": "Qazaxıstan",
+          "country_az": "Qazaxıstan",
+          "country_en": "Kazakhstan",
+          "country_ru": "Казахстан",
+          "country_code": "KZ"
+        },
+        {
+          "title": "Təhsilin keyfiyyətinin artırılmasında İKT-nin rolu.",
+          "title_az": "Təhsilin keyfiyyətinin artırılmasında İKT-nin rolu.",
+          "title_en": "The Role of ICT in Enhancing the Quality of Education.",
+          "title_ru": "Роль ИКТ в повышении качества образования.",
+          "journal": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
+          "journal_az": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
+          "journal_en": "International Scientific-Practical Journal / Astana, Kazakhstan",
+          "journal_ru": "Международный научно-практический журнал / Астана, Казахстан",
+          "country": "Qazaxıstan",
+          "country_az": "Qazaxıstan",
+          "country_en": "Kazakhstan",
+          "country_ru": "Казахстан",
+          "country_code": "KZ"
+        }
+      ],
+      "year": "2026",
+      "scope": "Xarici",
+      "scope_az": "Xarici",
+      "scope_en": "International",
+      "scope_ru": "Международный",
+      "scope_type": "xarici",
+      "orcid": null,
+      "orcid_id": null,
+      "scopus": false,
+      "copernicus": false,
+      "erih": false
+    },
+    {
+      "id": 7,
+      "no": "7",
+      "author_az": "İlahə Qaraxanova Xaliq",
+      "author_en": "Ilaha Garakhanova Khalig",
+      "author_ru": "Илаха Караханова Халиг кызы",
+      "role_az": "Müəllim / Ümumtəhsil",
+      "role_en": "Teacher / General Education",
+      "role_ru": "Преподаватель / Общее образование",
+      "department": "Ümumtəhsil",
+      "department_az": "Ümumtəhsil",
+      "department_en": "General Education",
+      "department_ru": "Общее образование",
+      "dept_slug": "umumtehsil",
+      "works": [
+        {
+          "title": "Hərbi fəaliyyətin bəzi istiqamətlərinin ekosistemlərə təsirinin qiymətləndirilməsi.",
+          "title_az": "Hərbi fəaliyyətin bəzi istiqamətlərinin ekosistemlərə təsirinin qiymətləndirilməsi.",
+          "title_en": "Assessment of the Environmental Impact of Certain Military Operations on Ecosystems.",
+          "title_ru": "Оценка воздействия некоторых направлений военной деятельности на экосистемы.",
+          "journal": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
+          "journal_az": "Mejdunarodniy nauchno-prakticheskiy jurnal / Astana, Qazaxıstan",
+          "journal_en": "International Scientific-Practical Journal / Astana, Kazakhstan",
+          "journal_ru": "Международный научно-практический журнал / Астана, Казахстан",
+          "country": "Qazaxıstan",
+          "country_az": "Qazaxıstan",
+          "country_en": "Kazakhstan",
+          "country_ru": "Казахстан",
+          "country_code": "KZ"
+        }
+      ],
+      "year": "2026",
+      "scope": "Xarici",
+      "scope_az": "Xarici",
+      "scope_en": "International",
+      "scope_ru": "Международный",
+      "scope_type": "xarici",
+      "orcid": null,
+      "orcid_id": null,
+      "scopus": false,
+      "copernicus": false,
+      "erih": false
+    },
+    {
+      "id": 8,
+      "no": "8",
+      "author_az": "Aygün Qafarova Rəhim",
+      "author_en": "Aygun Gafarova Rahim",
+      "author_ru": "Айгюн Гафарова Рахим кызы",
+      "role_az": "Müəllim / Xarici dillər",
+      "role_en": "Teacher / Foreign Languages",
+      "role_ru": "Преподаватель / Иностранные языки",
+      "department": "Xarici dillər",
+      "department_az": "Xarici dillər",
+      "department_en": "Foreign Languages",
+      "department_ru": "Иностранные языки",
+      "dept_slug": "xarici-dil",
+      "works": [
+        {
+          "title": "Подготовка студентов к самостоятельной семейной жизни и воспитанию детей в педагогической теории и практике.",
+          "title_az": "Подготовка студентов к самостоятельной семейной жизни и воспитанию детей в педагогической теории и практике.",
+          "title_en": "Preparing Students for Independent Family Life and Child-Rearing in Pedagogical Theory and Practice.",
+          "title_ru": "Подготовка студентов к самостоятельной семейной жизни и воспитанию детей в педагогической теории и практике.",
+          "journal": "Modern Humanities Success / Успехи гуманитарных наук / Rusiya",
+          "journal_az": "Modern Humanities Success / Успехи гуманитарных наук / Rusiya",
+          "journal_en": "Modern Humanities Success / Russia",
+          "journal_ru": "Успехи гуманитарных наук / Modern Humanities Success / Россия",
+          "country": "Rusiya",
+          "country_az": "Rusiya",
+          "country_en": "Russia",
+          "country_ru": "Россия",
+          "country_code": "RU"
+        }
+      ],
+      "year": "2025",
+      "scope": "Xarici",
+      "scope_az": "Xarici",
+      "scope_en": "International",
+      "scope_ru": "Международный",
+      "scope_type": "xarici",
+      "orcid": "https://orcid.org/0009-0005-1845-6679",
+      "orcid_id": "0009-0005-1845-6679",
+      "scopus": false,
+      "copernicus": false,
+      "erih": false
+    },
+    {
+      "id": 9,
+      "no": "9",
+      "author_az": "Gülnar Hüsiyeva Xosrov",
+      "author_en": "Gulnar Husiyeva Khosrov",
+      "author_ru": "Гюльнар Гусиева Хосров кызы",
+      "role_az": "Müəllim / Xarici dillər",
+      "role_en": "Teacher / Foreign Languages",
+      "role_ru": "Преподаватель / Иностранные языки",
+      "department": "Xarici dillər",
+      "department_az": "Xarici dillər",
+      "department_en": "Foreign Languages",
+      "department_ru": "Иностранные языки",
+      "dept_slug": "xarici-dil",
+      "works": [
+        {
+          "title": "The impact of vocational and secondary specialized education on the labor market, digitalization, and human capital development perspectives.",
+          "title_az": "The impact of vocational and secondary specialized education on the labor market, digitalization, and human capital development perspectives.",
+          "title_en": "The Impact of Vocational and Secondary Specialized Education on the Labor Market, Digitalization, and Human Capital Development Perspectives.",
+          "title_ru": "Влияние профессионального и среднего специального образования на рынок труда, цифровизацию и перспективы развития человеческого капитала.",
+          "journal": "İQRO / Özbəkistan",
+          "journal_az": "İQRO / Özbəkistan",
+          "journal_en": "IQRO / Uzbekistan",
+          "journal_ru": "IQRO / Узбекистан",
+          "country": "Özbəkistan",
+          "country_az": "Özbəkistan",
+          "country_en": "Uzbekistan",
+          "country_ru": "Узбекистан",
+          "country_code": "UZ"
+        }
+      ],
+      "year": "2026",
+      "scope": "Xarici",
+      "scope_az": "Xarici",
+      "scope_en": "International",
+      "scope_ru": "Международный",
+      "scope_type": "xarici",
+      "orcid": null,
+      "orcid_id": null,
+      "scopus": false,
+      "copernicus": false,
+      "erih": false
+    },
+    {
+      "id": 10,
+      "no": "10",
+      "author_az": "Vüsalə Kərimova Nürəddin",
+      "author_en": "Vusala Karimova Nuraddin",
+      "author_ru": "Вусаля Керимова Нураддин кызы",
+      "role_az": "Müəllim / Humanitar elmlər",
+      "role_en": "Teacher / Humanities",
+      "role_ru": "Преподаватель / Гуманитарные науки",
+      "department": "Humanitar elmlər",
+      "department_az": "Humanitar elmlər",
+      "department_en": "Humanities",
+      "department_ru": "Гуманитарные науки",
+      "dept_slug": "humanitar",
+      "works": [
+        {
+          "title": "Tarihi kaynaklarla çalışma yöntemleri ve tarih öğretmeninin mesleki yeterlilikleri",
+          "title_az": "Tarihi kaynaklarla çalışma yöntemleri ve tarih öğretmeninin mesleki yeterlilikleri",
+          "title_en": "Methods of Working with Historical Sources and Professional Competencies of a History Teacher.",
+          "title_ru": "Методы работы с историческими источниками и профессиональные компетенции учителя истории.",
+          "journal": "Türkiye-Azerbaijan :From shared memory to a shared future / Türkiyə ,Qars",
+          "journal_az": "Türkiye-Azerbaijan :From shared memory to a shared future / Türkiyə ,Qars",
+          "journal_en": "Türkiye-Azerbaijan: From Shared Memory to a Shared Future / Türkiye, Kars",
+          "journal_ru": "Турция-Азербайджан: От общей памяти к общему будущему / Турция, Карс",
+          "country": "Türkiyə",
+          "country_az": "Türkiyə",
+          "country_en": "Türkiye",
+          "country_ru": "Турция",
+          "country_code": "TR"
+        }
+      ],
+      "year": "2026",
+      "scope": "Xarici",
+      "scope_az": "Xarici",
+      "scope_en": "International",
+      "scope_ru": "Международный",
+      "scope_type": "xarici",
+      "orcid": null,
+      "orcid_id": null,
+      "scopus": false,
+      "copernicus": false,
+      "erih": false
+    },
+    {
+      "id": 11,
+      "no": "11",
+      "author_az": "Xəyalə Quliyeva Natiq qızı",
+      "author_en": "Khayala Guliyeva Natig",
+      "author_ru": "Хаяла Гулиева Натиг кызы",
+      "role_az": "Müəllim / Dil və ədəbiyyat",
+      "role_en": "Teacher / Language & Literature",
+      "role_ru": "Преподаватель / Язык и литература",
+      "department": "Dil və ədəbiyyat",
+      "department_az": "Dil və ədəbiyyat",
+      "department_en": "Language & Literature",
+      "department_ru": "Язык и литература",
+      "dept_slug": "dil",
+      "works": [
+        {
+          "title": "Modern Teaching Methods: Methodological Principles and Approaches.",
+          "title_az": "Modern Teaching Methods: Methodological Principles and Approaches.",
+          "title_en": "Modern Teaching Methods: Methodological Principles and Approaches.",
+          "title_ru": "Современные методы обучения: методологические принципы и подходы.",
+          "journal": "Miedzynarodowe czasopisma naukowe/ Polşa",
+          "journal_az": "Miedzynarodowe czasopisma naukowe/ Polşa",
+          "journal_en": "Międzynarodowe Czasopisma Naukowe / Poland",
+          "journal_ru": "Międzynarodowe Czasopisma Naukowe / Польша",
+          "country": "Polşa",
+          "country_az": "Polşa",
+          "country_en": "Poland",
+          "country_ru": "Польша",
+          "country_code": "PL"
+        }
+      ],
+      "year": "2026",
+      "scope": "Xarici",
+      "scope_az": "Xarici",
+      "scope_en": "International",
+      "scope_ru": "Международный",
+      "scope_type": "xarici",
+      "orcid": null,
+      "orcid_id": null,
+      "scopus": false,
+      "copernicus": false,
+      "erih": false
+    }
+  ];
 
   let activeFilter = 'all';
   let activeDept = 'all';
@@ -14967,8 +15360,8 @@ let currentCategory = "all";
         author.copernicus ? `<span class="science-badge-copernicus">Index Copernicus</span>` : '',
         author.erih ? `<span class="science-badge-erih">ERIH PLUS</span>` : '',
         author.scope_type === 'both' ? `<span class="science-badge-scope local">${typeof gT === 'function' ? gT('science_scope_both') : 'Yerli / Xarici'}</span>` :
-        author.scope_type === 'xarici' ? `<span class="science-badge-scope foreign">${typeof gT === 'function' ? gT('science_scope_foreign') : 'Beynəlxalq'}</span>` :
-        `<span class="science-badge-scope local">${typeof gT === 'function' ? gT('science_scope_local') : 'Yerli'}</span>`
+          author.scope_type === 'xarici' ? `<span class="science-badge-scope foreign">${typeof gT === 'function' ? gT('science_scope_foreign') : 'Beynəlxalq'}</span>` :
+            `<span class="science-badge-scope local">${typeof gT === 'function' ? gT('science_scope_local') : 'Yerli'}</span>`
       ].filter(Boolean).join('');
 
       const countLabel = typeof gT === 'function' ? gT('science_articles_count_label') : 'Məqalə / Əsər';
@@ -15065,9 +15458,9 @@ let currentCategory = "all";
 
       const journalsList = item.works.length > 1
         ? `<ol class="science-table-list">${item.works.map(w => {
-            const flag = getCountryFlag(w.country, w.country_code);
-            return `<li>${escapeHTML(getLocalizedText(w, 'journal'))} (${flag} ${escapeHTML(getLocalizedText(w, 'country'))})</li>`;
-          }).join('')}</ol>`
+          const flag = getCountryFlag(w.country, w.country_code);
+          return `<li>${escapeHTML(getLocalizedText(w, 'journal'))} (${flag} ${escapeHTML(getLocalizedText(w, 'country'))})</li>`;
+        }).join('')}</ol>`
         : `${escapeHTML(getLocalizedText(item.works[0], 'journal'))} (${getCountryFlag(item.works[0].country, item.works[0].country_code)} ${escapeHTML(getLocalizedText(item.works[0], 'country'))})`;
 
       const orcidCell = item.orcid
@@ -16220,17 +16613,17 @@ let currentCategory = "all";
       if (q) {
         const matchNo = (room.no || "").toLowerCase().includes(q);
         const matchName = (room.name_az || "").toLowerCase().includes(q) ||
-                          (room.name_en || "").toLowerCase().includes(q) ||
-                          (room.name_ru || "").toLowerCase().includes(q);
+          (room.name_en || "").toLowerCase().includes(q) ||
+          (room.name_ru || "").toLowerCase().includes(q);
         const matchDesc = (room.desc_az || "").toLowerCase().includes(q) ||
-                          (room.desc_en || "").toLowerCase().includes(q) ||
-                          (room.desc_ru || "").toLowerCase().includes(q);
+          (room.desc_en || "").toLowerCase().includes(q) ||
+          (room.desc_ru || "").toLowerCase().includes(q);
         const matchWing = (room.wing_az || "").toLowerCase().includes(q) ||
-                          (room.wing_en || "").toLowerCase().includes(q) ||
-                          (room.wing_ru || "").toLowerCase().includes(q);
+          (room.wing_en || "").toLowerCase().includes(q) ||
+          (room.wing_ru || "").toLowerCase().includes(q);
         const matchFeatures = (room.features_az || []).some(f => f.toLowerCase().includes(q)) ||
-                              (room.features_en || []).some(f => f.toLowerCase().includes(q)) ||
-                              (room.features_ru || []).some(f => f.toLowerCase().includes(q));
+          (room.features_en || []).some(f => f.toLowerCase().includes(q)) ||
+          (room.features_ru || []).some(f => f.toLowerCase().includes(q));
         const matchClassrooms = (room.classrooms || []).some(c => c.toLowerCase().includes(q));
         if (!matchNo && !matchName && !matchDesc && !matchWing && !matchFeatures && !matchClassrooms) {
           return false;
@@ -17534,6 +17927,31 @@ function initGlobalSearchModule() {
       }
     });
 
+    // 6. Teacher Certificates & Honored Faculty (Fəxri Əməkdaşlarımız)
+    if (typeof teacherCertificatesData !== "undefined" && Array.isArray(teacherCertificatesData)) {
+      teacherCertificatesData.forEach(cert => {
+        const title = cert["title_" + l] || cert.title_az || "";
+        const teacher = cert.teacher || "";
+        const org = cert["issuer_" + l] || cert.issuer_az || "";
+        const cat = cert.category || "";
+        catalog.push({
+          type: "structure",
+          category: "structure",
+          categories: ["structure", "academics"],
+          icon: cert.icon || "🎖️",
+          badge: l === "en" ? "Honored Faculty" : l === "ru" ? "Почетный Сотрудник" : "Fəxri Əməkdaş",
+          title: teacher + " — " + title,
+          desc: org + " (" + (cert.year || "2024") + ") · " + (cert["badge_" + l] || cert.badge_az || ""),
+          tokens: [teacher, title, org, cat, cert.dept || "", "fexri emekdas", "fəxri əməkdaş", "fexri", "emekdaslarimiz", "muellim", "müəllim", "sertifikat", "beynelxalq", "beynəlxalq", "beynelxalq sertifikatlar", "pdf", "ixtisasartirma", "arti", "nazirlik", "pedaqoji"].join(" ").toLowerCase(),
+          action: () => {
+            const sec = document.getElementById("teacher-certificates");
+            sec?.scrollIntoView({ behavior: "smooth" });
+            if (window.openTeacherCertModal) window.openTeacherCertModal(cert.id);
+          }
+        });
+      });
+    }
+
     catalog.forEach(item => {
       item.tokensNorm = normalizeText(item.tokens);
     });
@@ -17792,6 +18210,398 @@ if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initGlobalSearchModule);
 } else {
   initGlobalSearchModule();
+}
+
+/* ═══════════════ TEACHER CERTIFICATES & HONORED FACULTY DATA & MODULE ═══════════════ */
+const teacherCertificatesData = [
+  {
+    id: "tcert-ziba-01",
+    teacher: "Ziba Səfərova",
+    dept: "FBK-06 Azərbaycan Dili və Ədəbiyyatı",
+    category: "beynelxalq",
+    badge_az: "IEQC Beynəlxalq Akkreditasiya",
+    badge_en: "IEQC International Accreditation",
+    badge_ru: "Международная Аккредитация IEQC",
+    badgeClass: "badge-blue",
+    icon: "🌍",
+    year: "2026",
+    title_az: "IEQC Beynəlxalq Müəllim və Təlimçi Akkreditasiyası — Filologiya Müəllimi (I)",
+    title_en: "IEQC International Teacher and Trainer Accreditation — Philology Teacher (I)",
+    title_ru: "Международная аккредитация преподавателя и тренера IEQC — Преподаватель филологии (I)",
+    issuer_az: "IEQC — International Education Quality Council (ISO 9001:2015 & ISO 21001:2018)",
+    issuer_en: "IEQC — International Education Quality Council (ISO 9001:2015 & ISO 21001:2018)",
+    issuer_ru: "IEQC — Международный Совет по Качеству Образования (ISO 9001:2015 и ISO 21001:2018)",
+    regNo: "26-ta40010",
+    hours: "Accreditation with Distinction",
+    desc_az: "Azərbaycan dili və ədəbiyyatı müəllimi Ziba Səfərovanın beynəlxalq IEQC imtahanından fərqlənmə dərəcəsi ilə keçərək beynəlxalq təhsil standartları (ISO 21001:2018) üzrə Akkreditasiya olunmuş Müəllim/Təlimçi (Accredited Teacher/Trainer) statusu alması haqqında rəsmi sertifikat.",
+    desc_en: "Official international accreditation confirming that Philology Teacher Ziba Safarova successfully passed the IEQC International Teacher and Trainer examination with distinction, awarded Accredited Teacher/Trainer status under ISO 21001:2018 standards.",
+    desc_ru: "Официальный международный сертификат об успешной сдаче экзамена с отличием преподавателем филологии Зибой Сафаровой и присвоении статуса аккредитованного преподавателя/тренера по международным стандартам ISO 21001:2018.",
+    imageUrl: "zibaser.jpeg",
+    docUrl: "zibaser.jpeg"
+  },
+  {
+    id: "tcert-ziba-02",
+    teacher: "Ziba Səfərova",
+    dept: "FBK-06 Azərbaycan Dili və Ədəbiyyatı",
+    category: "beynelxalq",
+    badge_az: "Mature Coaching Beynəlxalq Sertifikatı",
+    badge_en: "Mature Coaching International Certificate",
+    badge_ru: "Международный Сертификат Mature Coaching",
+    badgeClass: "badge-purple",
+    icon: "🌟",
+    year: "2024",
+    title_az: "Mature Coaching Pedaqoji Kouçinq və Mentorluq Sertifikatı",
+    title_en: "Mature Coaching Pedagogical Coaching & Mentoring Certificate",
+    title_ru: "Сертификат педагогического коучинга и наставничества Mature Coaching",
+    issuer_az: "Mature Coaching International",
+    issuer_en: "Mature Coaching International",
+    issuer_ru: "Mature Coaching International",
+    regNo: "MC-COACH-ZS",
+    hours: "Professional Coaching Program",
+    desc_az: "Azərbaycan dili və ədəbiyyatı müəllimi Ziba Səfərovanın Mature Coaching beynəlxalq proqramı üzrə pedaqoji kouçinq, müasir tədris metodikaları və mentorluq istiqamətində qazandığı beynəlxalq dərəcəli rəsmi sertifikat.",
+    desc_en: "Official international certificate awarded to Azerbaijani Language & Literature Teacher Ziba Safarova under the Mature Coaching International Program for pedagogical coaching, modern teaching methodologies, and educational mentoring.",
+    desc_ru: "Официальный международный сертификат преподавателя азербайджанского языка и литературы Зибы Сафаровой по международной программе Mature Coaching в области педагогического коучинга, современных методик преподавания и наставничества.",
+    imageUrl: "",
+    docUrl: ""
+  },
+  {
+    id: "tcert-saida-01",
+    teacher: "Səidə Quliyeva",
+    dept: "FBK-08 Tarix və İctimai Fənlər",
+    category: "beynelxalq",
+    badge_az: "IEQC Beynəlxalq Akkreditasiya",
+    badge_en: "IEQC International Accreditation",
+    badge_ru: "Международная Аккредитация IEQC",
+    badgeClass: "badge-green",
+    icon: "🏛️",
+    year: "2026",
+    title_az: "IEQC Beynəlxalq Müəllim və Təlimçi Akkreditasiyası — Tarix Müəllimi",
+    title_en: "IEQC International Teacher and Trainer Accreditation — History Teacher",
+    title_ru: "Международная аккредитация преподавателя и тренера IEQC — Преподаватель истории",
+    issuer_az: "IEQC — International Education Quality Council (ISO 9001:2015 & ISO 21001:2018)",
+    issuer_en: "IEQC — International Education Quality Council (ISO 9001:2015 & ISO 21001:2018)",
+    issuer_ru: "IEQC — Международный Совет по Качеству Образования (ISO 9001:2015 и ISO 21001:2018)",
+    regNo: "26-ta40011",
+    hours: "Accreditation with Distinction",
+    desc_az: "Tarix və ictimai fənlər müəllimi Səidə Quliyevanın beynəlxalq IEQC imtahanından fərqlənmə dərəcəsi ilə keçərək beynəlxalq təhsil standartları (ISO 21001:2018) üzrə Akkreditasiya olunmuş Müəllim/Təlimçi (Accredited Teacher/Trainer) statusu alması haqqında rəsmi sertifikat.",
+    desc_en: "Official international accreditation confirming that History Teacher Saida Guliyeva successfully passed the IEQC International Teacher and Trainer examination with distinction, awarded Accredited Teacher/Trainer status under ISO 21001:2018 standards.",
+    desc_ru: "Официальный международный сертификат об успешной сдаче экзамена с отличием преподавателем истории Саидой Гулиевой и присвоении статуса аккредитованного преподавателя/тренера по международным стандартам ISO 21001:2018.",
+    imageUrl: "seideser.jpeg",
+    docUrl: "seideser.jpeg"
+  },
+  {
+    id: "tcert-aytan-01",
+    teacher: "Aytən Namazova",
+    dept: "FBK-06 Azərbaycan Dili və Ədəbiyyatı",
+    category: "beynelxalq",
+    badge_az: "IEQC Beynəlxalq Akkreditasiya",
+    badge_en: "IEQC International Accreditation",
+    badge_ru: "Международная Аккредитация IEQC",
+    badgeClass: "badge-blue",
+    icon: "🌍",
+    year: "2026",
+    title_az: "IEQC Beynəlxalq Müəllim və Təlimçi Akkreditasiyası — Filologiya Müəllimi",
+    title_en: "IEQC International Teacher and Trainer Accreditation — Philology Teacher",
+    title_ru: "Международная аккредитация преподавателя и тренера IEQC — Преподаватель филологии",
+    issuer_az: "IEQC — International Education Quality Council (ISO 9001:2015 & ISO 21001:2018)",
+    issuer_en: "IEQC — International Education Quality Council (ISO 9001:2015 & ISO 21001:2018)",
+    issuer_ru: "IEQC — Международный Совет по Качеству Образования (ISO 9001:2015 и ISO 21001:2018)",
+    regNo: "26-ta50003",
+    hours: "Accreditation with Distinction",
+    desc_az: "Dil və ədəbiyyat müəllimi Aytən Namazovanın beynəlxalq IEQC imtahanından fərqlənmə dərəcəsi ilə keçərək beynəlxalq təhsil standartları (ISO 21001:2018) üzrə Akkreditasiya olunmuş Müəllim/Təlimçi (Accredited Teacher/Trainer) statusu alması haqqında rəsmi sertifikat.",
+    desc_en: "Official international accreditation confirming that Philology Teacher Aytan Namazova successfully passed the IEQC International Teacher and Trainer examination with distinction, awarded Accredited Teacher/Trainer status under ISO 21001:2018 standards.",
+    desc_ru: "Официальный международный сертификат об успешной сдаче экзамена с отличием преподавателем филологии Айтен Намазовой и присвоении статуса аккредитованного преподавателя/тренера по международным стандартам ISO 21001:2018.",
+    imageUrl: "aytanser.jpeg",
+    docUrl: "aytanser.jpeg"
+  }
+];
+
+function initTeacherCertificatesModule() {
+  const grid = document.getElementById("teacher-certs-grid");
+  if (!grid) return;
+
+  const searchInput = document.getElementById("teacher-cert-search-input");
+  const clearBtn = document.getElementById("teacher-cert-search-clear");
+  const chips = document.querySelectorAll(".t-cert-chip");
+  const countEl = document.getElementById("teacher-cert-meta-info");
+  const modal = document.getElementById("teacher-cert-modal");
+  const modalClose = document.getElementById("teacher-cert-modal-close");
+  const modalBody = document.getElementById("teacher-cert-modal-body");
+  const modalTitle = document.getElementById("teacher-cert-modal-title");
+
+  let currentCategory = "all";
+  let searchQuery = "";
+
+  function getLang() {
+    return (typeof currentLang !== "undefined" && currentLang) ? currentLang : "az";
+  }
+
+  function renderCertificates() {
+    const l = getLang();
+    const q = searchQuery.trim().toLowerCase();
+
+    const filtered = teacherCertificatesData.filter(cert => {
+      const matchCat = (currentCategory === "all" || cert.category === currentCategory);
+      if (!matchCat) return false;
+      if (!q) return true;
+
+      const title = (cert["title_" + l] || cert.title_az || "").toLowerCase();
+      const teacher = (cert.teacher || "").toLowerCase();
+      const dept = (cert.dept || "").toLowerCase();
+      const issuer = (cert["issuer_" + l] || cert.issuer_az || "").toLowerCase();
+      const reg = (cert.regNo || "").toLowerCase();
+      const year = (cert.year || "").toLowerCase();
+
+      return title.includes(q) || teacher.includes(q) || dept.includes(q) || issuer.includes(q) || reg.includes(q) || year.includes(q);
+    });
+
+    if (countEl) {
+      const label = l === "en" ? `${filtered.length} certificates displayed` : l === "ru" ? `Отображено ${filtered.length} сертификатов` : `${filtered.length} sertifikat göstərilir`;
+      countEl.textContent = label;
+    }
+
+    if (filtered.length === 0) {
+      const noRes = l === "en" ? "No certificates found matching your criteria." : l === "ru" ? "По вашему запросу сертификатов не найдено." : "Axtarışınıza uyğun heç bir sertifikat tapılmadı.";
+      grid.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 48px 20px; color: var(--text-dim);">
+          <div style="font-size: 2.5rem; margin-bottom: 12px;">🔍</div>
+          <p style="font-size: 1rem; font-weight: 600;">${noRes}</p>
+        </div>
+      `;
+      return;
+    }
+
+    grid.innerHTML = filtered.map(cert => {
+      const title = cert["title_" + l] || cert.title_az || "";
+      const badge = cert["badge_" + l] || cert.badge_az || "";
+      const issuer = cert["issuer_" + l] || cert.issuer_az || "";
+      const desc = cert["desc_" + l] || cert.desc_az || "";
+      const viewText = l === "en" ? "View Details" : l === "ru" ? "Подробнее" : "Ətraflı Baxış";
+      const docText = l === "en" ? "PDF" : l === "ru" ? "PDF" : "PDF Sənəd";
+
+      return `
+        <div class="t-cert-card" data-cert-id="${cert.id}">
+          <div class="t-cert-card-accent"></div>
+          <div class="t-cert-card-top">
+            <span class="t-cert-badge ${cert.badgeClass || "badge-gold"}">
+              <span class="badge-dot" style="width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block;"></span>
+              ${badge}
+            </span>
+            <span class="t-cert-year-tag">${cert.year}</span>
+          </div>
+
+          ${cert.imageUrl ? `
+            <div class="t-cert-media-preview" data-view-id="${cert.id}" style="cursor:pointer;" title="${viewText}">
+              <img src="${cert.imageUrl}" alt="${title}" loading="lazy" class="t-cert-img" />
+              <div class="t-cert-img-overlay">
+                <span class="t-cert-zoom-btn">🔍 ${l === "en" ? "Zoom Photo" : l === "ru" ? "Увеличить" : "Böyüt"}</span>
+              </div>
+            </div>
+          ` : ""}
+
+          <div class="t-cert-card-head">
+            <div class="t-cert-icon-box">${cert.icon || "🎖️"}</div>
+            <div class="t-cert-title-wrap">
+              <h3 class="t-cert-card-title">${title}</h3>
+              <span class="t-cert-teacher-tag">👨‍🏫 ${cert.teacher} · ${cert.dept}</span>
+            </div>
+          </div>
+          <p class="t-cert-desc">${desc}</p>
+          <div class="t-cert-info-strip">
+            <div class="t-cert-org-row">🏛️ ${issuer}</div>
+            <div class="t-cert-reg-row">№ ${cert.regNo} · ${cert.hours}</div>
+          </div>
+          <div class="t-cert-actions">
+            <button type="button" class="t-cert-btn-view" data-view-id="${cert.id}" style="width:100%; justify-content:center;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              ${viewText}
+            </button>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    // Wire up buttons
+    grid.querySelectorAll("[data-view-id]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-view-id");
+        openTeacherCertModal(id);
+      });
+    });
+  }
+
+  function openTeacherCertModal(certId) {
+    const cert = teacherCertificatesData.find(c => c.id === certId);
+    if (!cert || !modal || !modalBody) return;
+
+    const l = getLang();
+    const title = cert["title_" + l] || cert.title_az || "";
+    const badge = cert["badge_" + l] || cert.badge_az || "";
+    const issuer = cert["issuer_" + l] || cert.issuer_az || "";
+    const desc = cert["desc_" + l] || cert.desc_az || "";
+
+    if (modalTitle) {
+      modalTitle.textContent = l === "en" ? "Certificate Verification & Details" : l === "ru" ? "Верификация и Данные Сертификата" : "Sertifikatın Təsdiqi və Məlumatı";
+    }
+
+    const regLabel = l === "en" ? "Registration No:" : l === "ru" ? "Регистрационный номер:" : "Qeydiyyat Nömrəsi:";
+    const issuerLabel = l === "en" ? "Issuing Organization:" : l === "ru" ? "Выдавшая организация:" : "Verən Qurum:";
+    const teacherLabel = l === "en" ? "Educator / Faculty:" : l === "ru" ? "Преподаватель:" : "Pedaqoq / Müəllim:";
+    const durationLabel = l === "en" ? "Volume / Academic Load:" : l === "ru" ? "Объем курса:" : "Tədris Həcmi:";
+    const yearLabel = l === "en" ? "Issuing Year:" : l === "ru" ? "Год выдачи:" : "Təltif İli:";
+    const statusLabel = l === "en" ? "Registry Status:" : l === "ru" ? "Статус в реестре:" : "Reyestr Statusu:";
+    const verifiedText = l === "en" ? "Officially Verified by BDRNK Methodical Council" : l === "ru" ? "Официально подтверждено Методическим Советом BDRNK" : "BDRNK Metodik Şurası Tərəfindən Təsdiqlənmişdir";
+    const closeBtnText = l === "en" ? "Close" : l === "ru" ? "Закрыть" : "Pəncərəni Bağla";
+
+    modalBody.innerHTML = `
+      <div style="padding: 10px 0;">
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:20px; border-bottom:1px solid var(--border); padding-bottom:16px;">
+          <div style="width:60px; height:60px; border-radius:14px; background:linear-gradient(135deg, rgba(184,147,74,0.18), rgba(7,25,48,0.1)); display:flex; align-items:center; justify-content:center; font-size:2rem; flex-shrink:0; border:1px solid var(--gold);">
+            ${cert.icon || "🎖️"}
+          </div>
+          <div>
+            <span class="t-cert-badge ${cert.badgeClass || "badge-gold"}" style="margin-bottom:6px;">${badge}</span>
+            <h2 style="font-size:1.15rem; font-weight:800; color:var(--text); margin:4px 0 0; line-height:1.4;">${title}</h2>
+          </div>
+        </div>
+
+        ${cert.imageUrl ? `
+          <div style="margin-bottom:18px; border-radius:12px; overflow:hidden; border:1px solid var(--border); max-height:420px; display:flex; align-items:center; justify-content:center; background:#000;">
+            <img src="${cert.imageUrl}" alt="${title}" style="max-width:100%; max-height:420px; object-fit:contain;" />
+          </div>
+        ` : ""}
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:14px; margin-bottom:20px; background:var(--bg-alt); padding:16px; border-radius:12px; border:1px solid var(--border);">
+          <div>
+            <div style="font-size:0.75rem; color:var(--text-dim); text-transform:uppercase; font-weight:700; margin-bottom:3px;">${teacherLabel}</div>
+            <div style="font-size:0.95rem; font-weight:800; color:var(--text);">👨‍🏫 ${cert.teacher}</div>
+            <div style="font-size:0.8rem; color:var(--gold); font-weight:600;">${cert.dept}</div>
+          </div>
+          <div>
+            <div style="font-size:0.75rem; color:var(--text-dim); text-transform:uppercase; font-weight:700; margin-bottom:3px;">${issuerLabel}</div>
+            <div style="font-size:0.9rem; font-weight:700; color:var(--text);">🏛️ ${issuer}</div>
+          </div>
+          <div>
+            <div style="font-size:0.75rem; color:var(--text-dim); text-transform:uppercase; font-weight:700; margin-bottom:3px;">${regLabel}</div>
+            <div style="font-size:0.9rem; font-family:var(--font-mono, monospace); font-weight:700; color:var(--text);">№ ${cert.regNo}</div>
+          </div>
+          <div>
+            <div style="font-size:0.75rem; color:var(--text-dim); text-transform:uppercase; font-weight:700; margin-bottom:3px;">${durationLabel} & ${yearLabel}</div>
+            <div style="font-size:0.9rem; font-weight:700; color:var(--text);">⏱️ ${cert.hours} · 📅 ${cert.year}</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:20px;">
+          <h4 style="font-size:0.9rem; font-weight:700; color:var(--text); margin:0 0 6px;">İxtisaslaşma Təsviri və Kompetensiyalar:</h4>
+          <p style="font-size:0.88rem; color:var(--text-dim); line-height:1.6; margin:0;">${desc}</p>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px; background:rgba(46, 204, 113, 0.1); border:1px solid rgba(46, 204, 113, 0.3); border-radius:10px; padding:12px 16px; margin-bottom:24px;">
+          <span style="font-size:1.2rem;">🛡️</span>
+          <span style="font-size:0.84rem; font-weight:700; color:#2ecc71;">${statusLabel} ${verifiedText}</span>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; align-items:center; margin-top:20px;">
+          <button type="button" class="t-cert-modal-close-btn" style="padding:10px 22px; background:var(--bg-alt); border:1px solid var(--border); border-radius:8px; color:var(--text); font-weight:600; cursor:pointer;">
+            ${closeBtnText}
+          </button>
+        </div>
+      </div>
+    `;
+
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    document.documentElement.classList.add("scroll-locked");
+
+    const innerCloseBtn = modalBody.querySelector(".t-cert-modal-close-btn");
+    innerCloseBtn?.addEventListener("click", closeTeacherCertModal);
+  }
+
+  function closeTeacherCertModal() {
+    if (!modal) return;
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    document.documentElement.classList.remove("scroll-locked");
+  }
+
+  window.openTeacherCertModal = openTeacherCertModal;
+  window.closeTeacherCertModal = closeTeacherCertModal;
+
+  modalClose?.addEventListener("click", closeTeacherCertModal);
+  modal?.addEventListener("click", (e) => {
+    if (e.target === modal) closeTeacherCertModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal && modal.classList.contains("active")) {
+      closeTeacherCertModal();
+    }
+  });
+
+  // Filter chips click
+  chips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      chips.forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
+      currentCategory = chip.getAttribute("data-filter") || "all";
+      renderCertificates();
+    });
+  });
+
+  // Search input
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value;
+      if (clearBtn) {
+        clearBtn.classList.toggle("visible", searchQuery.length > 0);
+      }
+      renderCertificates();
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      if (searchInput) searchInput.value = "";
+      searchQuery = "";
+      clearBtn.classList.remove("visible");
+      renderCertificates();
+      searchInput?.focus();
+    });
+  }
+
+  // Dynamic chip counts
+  function updateChipCounts() {
+    chips.forEach(chip => {
+      const filter = chip.getAttribute("data-filter") || "all";
+      const countSpan = chip.querySelector(".t-cert-chip-count");
+      if (!countSpan) return;
+      if (filter === "all") {
+        countSpan.textContent = teacherCertificatesData.length;
+      } else {
+        const c = teacherCertificatesData.filter(item => item.category === filter).length;
+        countSpan.textContent = c;
+      }
+    });
+  }
+
+  // Language changed event
+  document.addEventListener("languageChanged", () => {
+    updateChipCounts();
+    renderCertificates();
+  });
+
+  // Initial render
+  updateChipCounts();
+  renderCertificates();
+}
+
+// Auto-init for resilience
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initTeacherCertificatesModule);
+} else {
+  initTeacherCertificatesModule();
 }
 
 
