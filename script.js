@@ -15774,6 +15774,49 @@ function initSceneTransition() {
       "scopus": false,
       "copernicus": false,
       "erih": false
+    },
+    {
+      "id": 12,
+      "no": "12",
+      "author_az": "Bikəxanım Yüzbaşıyeva Aydın qızı",
+      "author_en": "Bikakhanim Yuzbashyeva Aydin",
+      "author_ru": "Бикеханым Юзбашыева Айдын кызы",
+      "role_az": "Müəllim / Ümumtəhsil",
+      "role_en": "Teacher / General Education",
+      "role_ru": "Преподаватель / Общее образование",
+      "department": "Ümumtəhsil",
+      "department_az": "Ümumtəhsil",
+      "department_en": "General Education",
+      "department_ru": "Общее образование",
+      "dept_slug": "umumtehsil",
+      "works": [
+        {
+          "title": "Radionuclide And Heavy Metal Contamination in Ecosystems: Environmental Risk Assessment Almusa, Bikakhanim YUZBASHYEVA",
+          "title_az": "Radionuclide And Heavy Metal Contamination in Ecosystems: Environmental Risk Assessment Almusa, Bikakhanim YUZBASHYEVA",
+          "title_en": "Radionuclide And Heavy Metal Contamination in Ecosystems: Environmental Risk Assessment Almusa, Bikakhanim YUZBASHYEVA",
+          "title_ru": "Загрязнение экосистем радионуклидами и тяжелыми металлами: оценка экологических рисков (Альмуса, Бикеханым ЮЗБАШЫЕВА)",
+          "journal": "Environmental Pollutants, Radiation Exposure, and Human Health / Türkiyə",
+          "journal_az": "Environmental Pollutants, Radiation Exposure, and Human Health / Türkiyə",
+          "journal_en": "Environmental Pollutants, Radiation Exposure, and Human Health / Turkey",
+          "journal_ru": "Environmental Pollutants, Radiation Exposure, and Human Health / Турция",
+          "country": "Türkiyə",
+          "country_az": "Türkiyə",
+          "country_en": "Turkey",
+          "country_ru": "Турция",
+          "country_code": "TR"
+        }
+      ],
+      "year": "2026",
+      "scope": "Xarici",
+      "scope_az": "Xarici",
+      "scope_en": "International",
+      "scope_ru": "Международный",
+      "scope_type": "xarici",
+      "orcid": null,
+      "orcid_id": null,
+      "scopus": false,
+      "copernicus": false,
+      "erih": false
     }
   ];
 

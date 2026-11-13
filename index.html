@@ -23,7 +23,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261113_92" />
+    <link rel="stylesheet" href="style.css?v=20261113_94" />
     <script>
         (function () {
             try {
@@ -203,8 +203,44 @@
             </a>
 
             <nav class="header-nav" id="desktop-nav" aria-label="Əsas naviqasiya">
-                <!-- 1. Haqqımızda -->
-                <a href="#about" class="nav-link" data-i18n="nav_about">Haqqımızda</a>
+                <!-- 1. Haqqımızda Dropdown -->
+                <div class="nav-dropdown">
+                    <a href="#about" class="nav-link nav-dropdown-trigger" aria-haspopup="true">
+                        <span data-i18n="nav_about">Haqqımızda</span>
+                        <svg class="nav-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="nav-dropdown-menu" role="menu" aria-label="Haqqımızda bölmələri">
+                        <a href="#about" class="nav-dropdown-item" role="menuitem">
+                            <span class="nav-dd-icon" aria-hidden="true">🏛️</span>
+                            <span class="nav-dd-text">
+                                <span class="nav-dd-title" data-i18n="nav_about_main">Haqqımızda</span>
+                                <span class="nav-dd-sub" data-i18n="nav_about_sub">Kollecin yaranma tarixi və
+                                    missiyası</span>
+                            </span>
+                            <svg class="nav-dd-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="memorandum.html" target="_blank" class="nav-dropdown-item" role="menuitem">
+                            <span class="nav-dd-icon" aria-hidden="true">🤝</span>
+                            <span class="nav-dd-text">
+                                <span class="nav-dd-title" data-i18n="nav_memorandum">Memorandum</span>
+                                <span class="nav-dd-sub" data-i18n="nav_memorandum_sub">Beynəlxalq tərəfdaşlıq sazişləri və tədbirlər planı</span>
+                            </span>
+                            <svg class="nav-dd-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
 
                 <!-- 2. Kollecimiz Dropdown -->
                 <div class="nav-dropdown">
@@ -220,9 +256,21 @@
                         <a href="#about" class="nav-dropdown-item" role="menuitem">
                             <span class="nav-dd-icon" aria-hidden="true">🏛️</span>
                             <span class="nav-dd-text">
-                                <span class="nav-dd-title" data-i18n="nav_about">Haqqımızda</span>
+                                <span class="nav-dd-title" data-i18n="nav_about_main">Haqqımızda</span>
                                 <span class="nav-dd-sub" data-i18n="nav_about_sub">Kollecin yaranma tarixi və
                                     missiyası</span>
+                            </span>
+                            <svg class="nav-dd-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="memorandum.html" target="_blank" class="nav-dropdown-item" role="menuitem">
+                            <span class="nav-dd-icon" aria-hidden="true">🤝</span>
+                            <span class="nav-dd-text">
+                                <span class="nav-dd-title" data-i18n="nav_memorandum">Memorandum</span>
+                                <span class="nav-dd-sub" data-i18n="nav_memorandum_sub">Beynəlxalq tərəfdaşlıq sazişləri və tədbirlər planı</span>
                             </span>
                             <svg class="nav-dd-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -595,11 +643,29 @@
                 </button>
             </div>
 
-            <!-- 1. Haqqımızda -->
-            <a href="#about" class="mobile-nav-link">
-                <span class="mobile-nav-icon" aria-hidden="true">🏛️</span>
-                <span data-i18n="nav_about">Haqqımızda</span>
-            </a>
+            <!-- 1. Haqqımızda Group (Accordion) -->
+            <div class="mobile-nav-group">
+                <button type="button" class="mobile-nav-header" aria-expanded="false">
+                    <span class="mobile-nav-header-left">
+                        <span class="mobile-nav-icon" aria-hidden="true">🏛️</span>
+                        <span data-i18n="nav_about">Haqqımızda</span>
+                    </span>
+                    <svg class="mobile-group-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="mobile-nav-sub">
+                    <a href="#about" class="mobile-nav-sublink">
+                        <span class="mobile-sub-bullet" aria-hidden="true">▫️</span>
+                        <span data-i18n="nav_about_main">Haqqımızda</span>
+                    </a>
+                    <a href="memorandum.html" target="_blank" class="mobile-nav-sublink">
+                        <span class="mobile-sub-bullet" aria-hidden="true">🤝</span>
+                        <span data-i18n="nav_memorandum">Memorandum</span>
+                    </a>
+                </div>
+            </div>
 
             <!-- 2. Kollecimiz Group (Accordion) -->
             <div class="mobile-nav-group">
@@ -616,7 +682,11 @@
                 <div class="mobile-nav-sub">
                     <a href="#about" class="mobile-nav-sublink">
                         <span class="mobile-sub-bullet" aria-hidden="true">▫️</span>
-                        <span data-i18n="nav_about">Haqqımızda</span>
+                        <span data-i18n="nav_about_main">Haqqımızda</span>
+                    </a>
+                    <a href="memorandum.html" target="_blank" class="mobile-nav-sublink">
+                        <span class="mobile-sub-bullet" aria-hidden="true">🤝</span>
+                        <span data-i18n="nav_memorandum">Memorandum</span>
                     </a>
                     <a href="#structure" class="mobile-nav-sublink" data-struct-cat="leadership">
                         <span class="mobile-sub-bullet" aria-hidden="true">▫️</span>
@@ -2525,7 +2595,7 @@
                             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                         </svg>
                     </div>
-                    <div class="science-stat-number" id="science-stat-authors-num">11</div>
+                    <div class="science-stat-number" id="science-stat-authors-num">12</div>
                     <div class="science-stat-label" data-i18n="science_stat_authors">Tədqiqatçı Müəllim</div>
                 </div>
                 <div class="science-stat-card mouse-glow-card">
@@ -2536,7 +2606,7 @@
                             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                         </svg>
                     </div>
-                    <div class="science-stat-number" id="science-stat-articles-num">23+</div>
+                    <div class="science-stat-number" id="science-stat-articles-num">24+</div>
                     <div class="science-stat-label" data-i18n="science_stat_articles">Məqalə və Tezis</div>
                 </div>
                 <div class="science-stat-card mouse-glow-card">
@@ -4190,7 +4260,7 @@
     </div>
 
 
-    <script src="script.js?v=20261113_92"></script>
+    <script src="script.js?v=20261113_94"></script>
 
     <!-- ═══ SMART LIVE SEARCH MODAL (Ağıllı Canlı Axtarış) ═══ -->
     <div class="search-modal-overlay" id="global-search-modal" role="dialog" aria-modal="true" aria-hidden="true">
