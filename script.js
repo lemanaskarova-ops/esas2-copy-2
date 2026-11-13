@@ -6315,6 +6315,18 @@ const libraryData = [
     icon: "📈",
     url: "Menecment (az).docx",
   },
+  {
+    id: 78,
+    title_az: "Marketinqin əsasları (Mühazirələr toplusu — Rus bölməsi)",
+    title_en: "Fundamentals of Marketing (Lecture Notes — Russian Sector)",
+    title_ru: "Основы маркетинга (Курс лекций — Русский сектор)",
+    author_az: "Müəllim: Mansurova Sevda (Мансурова Севда)",
+    author_en: "Teacher: Mansurova Sevda",
+    author_ru: "Преподаватель: Мансурова Севда",
+    category: "menecment",
+    icon: "📣",
+    url: "Marketinq (rus).docx",
+  },
 ];
 
 const lecturesData = [
@@ -9369,6 +9381,22 @@ function initLibraryModule() {
       desc_az: "Rus bölməsi tələbələri üçün «Менеджмент» fənni üzrə hazırlanmış, idarəetmənin metodoloji əsasları, prinsipləri, təşkilati strukturlar, qərarların qəbulu, motivasiya və liderlik nəzəriyyələrini əhatə edən rəsmi mühazirə vəsaiti.",
       topics_az: ["Основы Менеджмента", "Принципы Управления", "Организационные Структуры", "Принятие Решений"],
       url: "Menecment (rus).docx"
+    },
+    {
+      id: "fbk-lec-marketinq-rus",
+      fbkId: "fbk-7",
+      fieldBadge: "RUS BÖLMƏSİ · МАРКЕТИНГ",
+      fieldName_az: "İqtisadiyyat və Marketinq (Rus bölməsi)",
+      subject_az: "Marketinqin Əsasları (Rus bölməsi)",
+      title_az: "Основы Маркетинга — Курс Лекций (Rus bölməsi)",
+      author_az: "Müəllim: Mansurova Sevda (Мансурова Севда)",
+      format: "docx",
+      icon: "📣",
+      volume: "57 Стр. · Курс Лекций · DOCX",
+      fileSize: "436 KB DOCX",
+      desc_az: "Rus bölməsi tələbələri üçün «Основы маркетинга» fənni üzrə hazırlanmış, bazar iqtisadiyyatında marketinqin rolu, marketinq kompleksi (4P), bazar seqmentasiyası və istehlakçı davranışının tədqiqini əhatə edən 57 səhifəlik rəsmi mühazirə vəsaiti.",
+      topics_az: ["Основы Маркетинга", "Комплекс Маркетинга", "Рыночная Экономика", "Поведение Потребителей"],
+      url: "Marketinq (rus).docx"
     },
 
     // --- Ekologiya və Təhlükəsizlik (2) ---
