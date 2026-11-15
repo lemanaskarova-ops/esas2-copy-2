@@ -5,6 +5,16 @@
    Toast Feedback, and Search Highlighting.
    ========================================================================== */
 
+/* Hide the duplicate old mobile accordion drawer & toggle button completely */
+.mobile-menu-toggle,
+#mobile-toggle,
+.mobile-nav-overlay,
+#mobile-nav {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 /* ---------- 1. Sticky 3-Tier Header & Workspace Tabs Bar ---------- */
 .site-header {
   position: sticky !important;
@@ -14,6 +24,38 @@
   z-index: 1000;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+}
+
+/* Mobile & Tablet UX: Category pill bar is always visible, touch-scrollable, and clean */
+@media (max-width: 1024px) {
+  .site-header {
+    border-bottom: none !important;
+  }
+  .workspace-nav-bar {
+    display: block !important;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 12px rgba(10, 34, 64, 0.05);
+  }
+  html.dark .workspace-nav-bar,
+  html.dark-mode .workspace-nav-bar {
+    background: rgba(8, 17, 32, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+  .workspace-nav-inner {
+    padding: 8px 12px !important;
+    gap: 6px !important;
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .workspace-tab-btn {
+    padding: 6px 14px !important;
+    font-size: 0.8rem !important;
+    border-radius: 9999px !important;
+    white-space: nowrap !important;
+  }
 }
 
 .header-inner {
@@ -91,6 +133,51 @@ html.dark .workspace-tab-btn:hover,
 html.dark-mode .workspace-tab-btn:hover {
   background: rgba(255, 255, 255, 0.07);
   color: #dfc07f;
+}
+
+/* Mobile Drawer Optimization: Categories Clean and Distinct */
+.mobile-nav-inner {
+  padding: 16px 18px 48px !important;
+  gap: 8px !important;
+}
+
+.mobile-nav-group {
+  border-radius: 14px;
+  background: rgba(10, 34, 64, 0.03);
+  border: 1px solid rgba(10, 34, 64, 0.06);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+html.dark .mobile-nav-group,
+html.dark-mode .mobile-nav-group {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+.mobile-nav-header {
+  padding: 13px 16px !important;
+  font-size: 0.95rem !important;
+  border-radius: 0 !important;
+  border-left: 3px solid var(--gold) !important;
+}
+
+.mobile-nav-sublink {
+  padding: 11px 16px !important;
+  font-size: 0.88rem !important;
+}
+
+.mobile-nav-link {
+  padding: 13px 16px !important;
+  border-radius: 14px !important;
+  background: rgba(10, 34, 64, 0.03);
+  border: 1px solid rgba(10, 34, 64, 0.06);
+}
+
+html.dark .mobile-nav-link,
+html.dark-mode .mobile-nav-link {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.07);
 }
 
 /* ---------- 2. Category Workspace Router Panels & Active Pill ---------- */
