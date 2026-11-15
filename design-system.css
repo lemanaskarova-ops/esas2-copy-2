@@ -663,3 +663,117 @@ html.dark-mode .major-dept-group-count {
     min-width: 0;
   }
 }
+
+/* ---------- 10. Memorandum Diplomatic Pill & Callout Card ---------- */
+.workspace-memo-pill {
+  background: linear-gradient(135deg, rgba(184, 147, 74, 0.14), rgba(10, 34, 64, 0.06)) !important;
+  border-color: rgba(184, 147, 74, 0.45) !important;
+  color: #8a641d !important;
+  box-shadow: 0 2px 10px rgba(184, 147, 74, 0.14);
+}
+
+.workspace-memo-pill:hover {
+  background: linear-gradient(135deg, #0a2240, #153a66) !important;
+  color: #fef08a !important;
+  border-color: rgba(212, 175, 55, 0.75) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(10, 34, 64, 0.2);
+}
+
+html.dark .workspace-memo-pill,
+html.dark-mode .workspace-memo-pill {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(14, 28, 49, 0.85)) !important;
+  color: #fde68a !important;
+  border-color: rgba(212, 175, 55, 0.48) !important;
+}
+
+.about-memo-aesthetic-btn {
+  padding: 16px 20px;
+  border-radius: 18px;
+  border: 1.5px solid rgba(184, 147, 74, 0.48);
+  box-shadow: 0 12px 30px -14px rgba(10, 34, 64, 0.18), 0 0 0 1px rgba(184, 147, 74, 0.08);
+}
+
+.about-memo-aesthetic-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #0a2240, #c8a45d, #0a2240);
+}
+
+html.dark .about-memo-aesthetic-btn,
+html.dark-mode .about-memo-aesthetic-btn {
+  background: linear-gradient(135deg, rgba(16, 33, 58, 0.96) 0%, rgba(9, 21, 39, 0.94) 100%);
+  border-color: rgba(212, 175, 55, 0.45);
+}
+
+html.dark .memo-btn-title,
+html.dark-mode .memo-btn-title {
+  color: #f8fafc;
+}
+
+html.dark .memo-btn-desc,
+html.dark-mode .memo-btn-desc {
+  color: #94a3b8;
+}
+
+.memo-btn-top-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.memo-btn-pill-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: rgba(184, 147, 74, 0.14);
+  border: 1px solid rgba(184, 147, 74, 0.35);
+  color: #9e7728;
+  margin-bottom: 0;
+}
+
+html.dark .memo-btn-pill-label,
+html.dark-mode .memo-btn-pill-label {
+  color: #fde68a;
+  background: rgba(212, 175, 55, 0.16);
+}
+
+.memo-btn-flags {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .about-memo-aesthetic-btn {
+    padding: 15px 14px 15px 16px;
+    gap: 12px;
+    border-radius: 16px;
+  }
+
+  .memo-btn-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+  }
+
+  .memo-btn-title {
+    font-size: 0.93rem;
+  }
+
+  .memo-btn-desc {
+    font-size: 0.77rem;
+  }
+
+  .memo-btn-arrow-box {
+    width: 32px;
+    height: 32px;
+  }
+}

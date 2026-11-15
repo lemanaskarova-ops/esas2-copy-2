@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="az">
+<html lang="az" data-theme="light">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Beynəlxalq Əməkdaşlıq Memorandumları — Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik Hüquqi Şəxsi</title>
     <meta name="description" content="AzTU-nun nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik Hüquqi Şəxsi — Beynəlxalq əməkdaşlıq memorandumları, birgə tədbirlər planı və təhsil əlaqələri arxivi." />
     <link rel="icon" type="image/jpeg" href="logo.jpg" />
@@ -34,79 +34,1030 @@
     <link rel="stylesheet" href="tailwind-utilities.css?v=20261115_01" />
     <link rel="stylesheet" href="design-system.css?v=20261115_01" />
     <style>
-        .doc-section-card h2,
-        .doc-section-card h3,
-        .doc-section-card h4,
-        .doc-partner-card strong {
-            color: var(--text);
+        /* ══════════════════════════════════════════════════════════════════════════
+           BDRNK MEMORANDUM PORTAL — DIPLOMATIC DESKTOP & MOBILE EXPERIENCE
+           ══════════════════════════════════════════════════════════════════════════ */
+        :root {
+            --memo-bg: #f4f7fb;
+            --memo-surface: #ffffff;
+            --memo-surface-soft: #f8fafd;
+            --memo-border: rgba(10, 34, 64, 0.1);
+            --memo-border-strong: rgba(184, 147, 74, 0.4);
+            --memo-text: #0a192f;
+            --memo-text-secondary: #1e3a5f;
+            --memo-text-muted: #475569;
+            --memo-navy: #0a2240;
+            --memo-navy-deep: #061428;
+            --memo-gold: #b8934a;
+            --memo-gold-bright: #d4af37;
+            --memo-gold-soft: rgba(184, 147, 74, 0.12);
+            --memo-emerald: #059669;
+            --memo-emerald-soft: rgba(5, 150, 105, 0.1);
+            --memo-amber: #b45309;
+            --memo-amber-soft: rgba(217, 119, 6, 0.11);
+            --memo-shadow: 0 14px 36px -12px rgba(10, 34, 64, 0.12), 0 2px 6px rgba(10, 34, 64, 0.04);
         }
-        .doc-tab-btn.active {
-            background: var(--accent);
+
+        [data-theme="dark"],
+        html.dark,
+        html.dark-mode,
+        body.dark-mode {
+            --memo-bg: #07101d;
+            --memo-surface: #0e1c31;
+            --memo-surface-soft: #12233d;
+            --memo-border: rgba(255, 255, 255, 0.1);
+            --memo-border-strong: rgba(212, 175, 55, 0.45);
+            --memo-text: #f8fafc;
+            --memo-text-secondary: #e2e8f0;
+            --memo-text-muted: #94a3b8;
+            --memo-gold: #dfc07f;
+            --memo-gold-bright: #f0d084;
+            --memo-gold-soft: rgba(212, 175, 55, 0.16);
+            --memo-emerald: #34d399;
+            --memo-emerald-soft: rgba(52, 211, 153, 0.14);
+            --memo-amber: #fbbf24;
+            --memo-amber-soft: rgba(251, 191, 36, 0.15);
+            --memo-shadow: 0 20px 44px -14px rgba(0, 0, 0, 0.55);
+        }
+
+        html, body {
+            overflow-x: clip;
+            max-width: 100%;
+        }
+
+        body.memo-portal-body {
+            background-color: var(--memo-bg);
+            color: var(--memo-text);
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── STICKY TOP ACTION BAR ─── */
+        .doc-topbar {
+            position: sticky;
+            top: 0;
+            z-index: 60;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--memo-border);
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
+        }
+
+        html.dark .doc-topbar,
+        [data-theme="dark"] .doc-topbar {
+            background: rgba(7, 16, 29, 0.88);
+        }
+
+        .doc-topbar-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .doc-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            min-width: 0;
+        }
+
+        .doc-brand-logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1.5px solid var(--memo-border-strong);
+            box-shadow: 0 4px 12px rgba(10, 34, 64, 0.12);
+            flex-shrink: 0;
+        }
+
+        .doc-brand-titles {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            gap: 2px;
+        }
+
+        .doc-brand-sub {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--memo-gold);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .doc-brand-main {
+            font-size: 0.96rem;
+            font-weight: 800;
+            color: var(--memo-text);
+            letter-spacing: -0.01em;
+            line-height: 1.25;
+        }
+
+        .doc-top-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .theme-toggle-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--memo-border);
+            background: var(--memo-surface-soft);
+            color: var(--memo-text);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .theme-toggle-btn:hover {
+            border-color: var(--memo-border-strong);
+            transform: scale(1.05);
+        }
+
+        .top-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 9px 16px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid var(--memo-border);
+            background: var(--memo-surface);
+            color: var(--memo-text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .top-btn:hover {
+            border-color: var(--memo-border-strong);
+            color: var(--memo-gold);
+            transform: translateY(-1px);
+        }
+
+        .top-btn-primary {
+            background: linear-gradient(135deg, #0a2240 0%, #153b6b 100%);
             color: #ffffff;
-            border-color: var(--accent);
-            box-shadow: 0 4px 14px var(--accent-glow);
+            border-color: rgba(212, 175, 55, 0.45);
+            box-shadow: 0 6px 18px rgba(10, 34, 64, 0.22);
         }
-        .official-table th {
-            background: var(--bg-alt);
-            color: var(--text-dim);
+
+        .top-btn-primary:hover {
+            background: linear-gradient(135deg, #102e54 0%, #1c4a84 100%);
+            color: #fef08a;
+            border-color: rgba(212, 175, 55, 0.75);
+        }
+
+        /* ─── DIPLOMATIC HERO SECTION ─── */
+        .doc-hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse 75% 55% at 50% 0%, rgba(212, 175, 55, 0.22), transparent 65%),
+                radial-gradient(circle at 12% 80%, rgba(56, 189, 248, 0.14), transparent 50%),
+                linear-gradient(155deg, #051122 0%, #0a2240 52%, #0f2f57 100%);
+            padding: 56px 24px 68px;
+            color: #ffffff;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.28);
+        }
+
+        .doc-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 42px 42px;
+            mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, #000 35%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, #000 35%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .doc-hero-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 1280px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .doc-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 16px;
+            border-radius: 999px;
+            background: rgba(212, 175, 55, 0.16);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            color: #fde68a;
             font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            box-shadow: 0 0 24px rgba(212, 175, 55, 0.2);
+        }
+
+        .doc-title {
+            font-family: 'Playfair Display', 'Merriweather', Georgia, serif;
+            font-size: clamp(1.85rem, 3.8vw, 3rem);
+            font-weight: 800;
+            line-height: 1.18;
+            color: #ffffff;
+            letter-spacing: -0.015em;
+            max-width: 880px;
+            margin: 0 auto 14px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .doc-subtitle {
+            font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+            color: rgba(226, 232, 240, 0.88);
+            max-width: 780px;
+            margin: 0 auto 28px;
+            line-height: 1.68;
+        }
+
+        /* Diplomatic KPI Summary Strip */
+        .doc-kpi-strip {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+            max-width: 980px;
+            margin: 0 auto 28px;
+        }
+
+        .doc-kpi-pill {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 18px;
+            padding: 14px 16px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            text-align: center;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .doc-kpi-pill:hover {
+            transform: translateY(-2px);
+            border-color: rgba(212, 175, 55, 0.65);
+        }
+
+        .doc-kpi-val {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #fef08a;
+            line-height: 1.15;
+        }
+
+        .doc-kpi-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin-top: 4px;
+        }
+
+        .doc-kpi-sub {
+            font-size: 0.7rem;
+            color: rgba(203, 213, 225, 0.78);
+            margin-top: 2px;
+        }
+
+        /* Partner Institutions Strip */
+        .doc-partners-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            text-align: left;
+        }
+
+        .doc-partner-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.96);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            box-shadow: 0 18px 40px -16px rgba(3, 10, 22, 0.5);
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .doc-partner-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #0a2240, #c8a45d, #0a2240);
+        }
+
+        .doc-partner-card:hover {
+            transform: translateY(-4px);
+            border-color: #d4af37;
+            box-shadow: 0 22px 46px -14px rgba(3, 10, 22, 0.65), 0 0 20px rgba(212, 175, 55, 0.22);
+        }
+
+        html.dark .doc-partner-card,
+        [data-theme="dark"] .doc-partner-card {
+            background: rgba(14, 28, 49, 0.92);
+            border-color: rgba(212, 175, 55, 0.35);
+        }
+
+        .doc-partner-flag {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(10, 34, 64, 0.06), rgba(184, 147, 74, 0.14));
+            border: 1px solid rgba(184, 147, 74, 0.32);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .doc-partner-info {
+            min-width: 0;
+            flex: 1;
+        }
+
+        .doc-partner-info h4 {
+            font-size: 0.94rem;
+            font-weight: 800;
+            color: var(--memo-text);
+            line-height: 1.32;
+            margin-bottom: 4px;
+        }
+
+        .doc-partner-info p {
+            font-size: 0.8rem;
+            color: var(--memo-text-muted);
+            line-height: 1.35;
+        }
+
+        .doc-partner-role {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 8px;
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: var(--memo-gold-soft);
+            border: 1px solid var(--memo-border-strong);
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--memo-gold);
+        }
+
+        /* ─── ELEVATED COMMAND BAR (TABS + SEARCH) ─── */
+        .doc-controls-wrap {
+            max-width: 1280px;
+            margin: -28px auto 24px;
+            padding: 0 24px;
+            position: relative;
+            z-index: 25;
+        }
+
+        .doc-controls-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--memo-border);
+            border-radius: 22px;
+            padding: 12px 16px;
+            box-shadow: var(--memo-shadow);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        html.dark .doc-controls-section,
+        [data-theme="dark"] .doc-controls-section {
+            background: rgba(14, 28, 49, 0.94);
+            border-color: rgba(212, 175, 55, 0.28);
+        }
+
+        .doc-tabs-nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .doc-tab-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.83rem;
+            font-weight: 600;
+            border: 1px solid var(--memo-border);
+            background: var(--memo-surface-soft);
+            color: var(--memo-text-muted);
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+        }
+
+        .doc-tab-btn:hover {
+            border-color: var(--memo-border-strong);
+            color: var(--memo-text);
+        }
+
+        .doc-tab-btn.active {
+            background: linear-gradient(135deg, #0a2240 0%, #163b69 100%);
+            color: #ffffff;
+            border-color: rgba(212, 175, 55, 0.55);
+            box-shadow: 0 6px 16px rgba(10, 34, 64, 0.22);
+        }
+
+        html.dark .doc-tab-btn.active,
+        [data-theme="dark"] .doc-tab-btn.active {
+            background: linear-gradient(135deg, #c8a45d 0%, #b8934a 100%);
+            color: #07101d;
+            border-color: transparent;
+            font-weight: 700;
+        }
+
+        .doc-search-box {
+            position: relative;
+            flex: 1 1 260px;
+            max-width: 380px;
+            min-width: min(240px, 100%);
+        }
+
+        .doc-search-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--memo-gold);
+            pointer-events: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .doc-search-input {
+            width: 100%;
+            padding: 10px 38px 10px 40px;
+            border-radius: 999px;
+            border: 1px solid var(--memo-border);
+            background: var(--memo-surface-soft);
+            color: var(--memo-text);
+            font-size: 0.88rem;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .doc-search-input:focus {
+            border-color: var(--memo-gold);
+            box-shadow: 0 0 0 3px var(--memo-gold-soft);
+        }
+
+        .doc-search-clear {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: none;
+            background: var(--memo-gold-soft);
+            color: var(--memo-text);
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        /* ─── MAIN DOCUMENT CONTAINER ─── */
+        .doc-main-container {
+            max-width: 1280px;
+            margin: 0 auto 60px;
+            padding: 0 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .doc-section-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 26px;
+            padding: 32px;
+            background: var(--memo-surface);
+            border: 1px solid var(--memo-border);
+            box-shadow: var(--memo-shadow);
+        }
+
+        .doc-section-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0a2240 0%, #c8a45d 50%, #0a2240 100%);
+        }
+
+        .doc-section-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--memo-border);
+        }
+
+        .doc-section-header-text {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            max-width: 880px;
+        }
+
+        .doc-source-tag {
+            display: inline-flex;
+            align-items: center;
+            align-self: flex-start;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: var(--memo-gold-soft);
+            border: 1px solid var(--memo-border-strong);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.06em;
-            padding: 0.85rem 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
+            color: var(--memo-gold);
         }
-        .official-table td {
-            padding: 0.9rem 1rem;
-            border-bottom: 1px solid var(--border);
-            vertical-align: top;
-            font-size: 0.88rem;
-            line-height: 1.58;
-            color: var(--text-secondary);
-        }
-        .official-table tbody tr:hover td {
-            background: var(--accent-glow);
-        }
-        .bullet-list {
-            list-style: disc;
-            padding-left: 1.25rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.35rem;
-        }
-        .td-num {
-            font-family: var(--font-mono);
+
+        .doc-section-header-text h2 {
+            font-family: 'Playfair Display', 'Merriweather', Georgia, serif;
+            font-size: clamp(1.2rem, 2.2vw, 1.55rem);
             font-weight: 700;
-            color: var(--accent);
+            color: var(--memo-text);
+            line-height: 1.32;
+            margin-top: 2px;
+        }
+
+        .doc-section-header-text p {
+            font-size: 0.92rem;
+            color: var(--memo-text-muted);
+            line-height: 1.55;
+        }
+
+        .doc-num-badge {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            padding: 6px 12px;
+            border-radius: 10px;
+            background: var(--memo-surface-soft);
+            border: 1px solid var(--memo-border);
+            color: var(--memo-text-muted);
             white-space: nowrap;
         }
+
+        .doc-subtable-heading {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Playfair Display', 'Merriweather', Georgia, serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--memo-text);
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3.5px solid var(--memo-gold);
+        }
+
+        /* ─── DUAL-FORMAT OFFICIAL TABLES (DESKTOP) ─── */
+        .table-responsive {
+            overflow-x: auto;
+            border-radius: 18px;
+            border: 1px solid var(--memo-border);
+            background: var(--memo-surface);
+        }
+
+        .official-table {
+            width: 100%;
+            min-width: 780px;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .official-table thead th {
+            background: linear-gradient(180deg, rgba(10, 34, 64, 0.04) 0%, rgba(10, 34, 64, 0.08) 100%);
+            color: var(--memo-text-secondary);
+            font-size: 0.74rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 14px 16px;
+            border-bottom: 1.5px solid var(--memo-border-strong);
+            white-space: nowrap;
+        }
+
+        html.dark .official-table thead th,
+        [data-theme="dark"] .official-table thead th {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .official-table td {
+            padding: 15px 16px;
+            border-bottom: 1px solid var(--memo-border);
+            vertical-align: top;
+            font-size: 0.89rem;
+            line-height: 1.62;
+            color: var(--memo-text-secondary);
+        }
+
+        .official-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .official-table tbody tr {
+            transition: background-color 0.2s ease;
+        }
+
+        .official-table tbody tr:hover td {
+            background: rgba(184, 147, 74, 0.06);
+        }
+
+        .td-num {
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 700;
+            color: var(--memo-gold);
+            white-space: nowrap;
+            width: 48px;
+            text-align: center;
+        }
+
         .td-primary-bold {
             font-weight: 700;
-            color: var(--text);
+            color: var(--memo-text);
         }
-        .td-badge, .td-badge-time, .td-badge-outcome, .td-badge-note {
-            display: inline-block;
+
+        .bullet-list {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 16px;
+            line-height: 1.5;
+        }
+
+        .bullet-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--memo-gold);
+        }
+
+        .td-badge {
+            display: inline-flex;
+            align-items: center;
             font-size: 0.74rem;
-            font-weight: 600;
-            padding: 0.22rem 0.6rem;
+            font-weight: 700;
+            padding: 4px 11px;
             border-radius: 999px;
-            background: var(--bg-alt);
-            border: 1px solid var(--border);
-            color: var(--accent);
+            line-height: 1.35;
         }
+
+        .td-badge-time {
+            background: var(--memo-gold-soft);
+            border: 1px solid var(--memo-border-strong);
+            color: var(--memo-gold);
+        }
+
+        .td-badge-outcome {
+            background: var(--memo-emerald-soft);
+            border: 1px solid rgba(5, 150, 105, 0.28);
+            color: var(--memo-emerald);
+        }
+
+        .td-badge-note {
+            background: var(--memo-amber-soft);
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            color: var(--memo-amber);
+        }
+
         .no-search-results {
             display: none;
             text-align: center;
-            padding: 3rem 1.5rem;
-            border-radius: 20px;
-            background: var(--surface);
-            border: 1px dashed var(--border-hover);
-            color: var(--text-dim);
+            padding: 48px 24px;
+            border-radius: 22px;
+            background: var(--memo-surface);
+            border: 1.5px dashed var(--memo-border-strong);
+            color: var(--memo-text-muted);
         }
+
+        .no-search-results h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--memo-text);
+            margin-bottom: 6px;
+        }
+
+        /* ─── OFFICIAL FOOTER ─── */
+        .doc-footer {
+            border-top: 1px solid var(--memo-border);
+            background: var(--memo-surface);
+            padding: 44px 24px calc(44px + env(safe-area-inset-bottom));
+            text-align: center;
+        }
+
+        .doc-footer-inner {
+            max-width: 780px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .doc-seal-mark {
+            width: 56px;
+            height: 56px;
+            border-radius: 18px;
+            background: var(--memo-gold-soft);
+            border: 1.5px solid var(--memo-border-strong);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.65rem;
+            margin-bottom: 4px;
+        }
+
+        .doc-footer-title {
+            font-size: 0.94rem;
+            font-weight: 800;
+            color: var(--memo-text);
+            line-height: 1.45;
+        }
+
+        .doc-footer-text {
+            font-size: 0.8rem;
+            color: var(--memo-text-muted);
+        }
+
+        /* ══════════════════════════════════════════════════════════════════════════
+           IPHONE & ANDROID MOBILE CARD MODE (<= 768px)
+           Converts multi-column official tables into scannable diplomatic cards!
+           ══════════════════════════════════════════════════════════════════════════ */
+        @media (max-width: 960px) {
+            .doc-kpi-strip {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .doc-partners-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .doc-topbar-inner {
+                padding: 10px 14px;
+                gap: 10px;
+            }
+
+            .doc-brand-logo {
+                width: 38px;
+                height: 38px;
+            }
+
+            .doc-brand-sub {
+                display: none;
+            }
+
+            .doc-brand-main {
+                font-size: 0.84rem;
+            }
+
+            .top-btn {
+                padding: 8px 12px;
+                font-size: 0.76rem;
+            }
+
+            .top-btn-print-label {
+                display: none;
+            }
+
+            .doc-hero {
+                padding: 36px 14px 52px;
+            }
+
+            .doc-badge-pill {
+                font-size: 0.68rem;
+                padding: 6px 12px;
+            }
+
+            .doc-controls-wrap {
+                margin: -24px auto 18px;
+                padding: 0 14px;
+            }
+
+            .doc-controls-section {
+                padding: 12px;
+                border-radius: 18px;
+                gap: 10px;
+            }
+
+            .doc-tabs-nav {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                width: 100%;
+                padding-bottom: 2px;
+            }
+
+            .doc-tabs-nav::-webkit-scrollbar {
+                display: none;
+            }
+
+            .doc-tab-btn {
+                padding: 7px 14px;
+                font-size: 0.78rem;
+            }
+
+            .doc-search-box {
+                max-width: 100%;
+                flex: 1 1 100%;
+            }
+
+            .doc-search-input {
+                font-size: 16px !important; /* Prevent iOS Safari zoom on input focus */
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .doc-main-container {
+                padding: 0 14px;
+                gap: 20px;
+            }
+
+            .doc-section-card {
+                padding: 20px 16px;
+                border-radius: 20px;
+            }
+
+            .doc-section-header {
+                padding-bottom: 14px;
+                margin-bottom: 16px;
+                gap: 10px;
+            }
+
+            .table-responsive {
+                border: none;
+                background: transparent;
+                overflow: visible;
+                border-radius: 0;
+            }
+
+            .official-table {
+                min-width: 0;
+                width: 100%;
+                display: block;
+            }
+
+            .official-table thead {
+                display: none;
+            }
+
+            .official-table tbody {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .official-table tbody tr.searchable-row {
+                display: block;
+                padding: 16px;
+                border-radius: 16px;
+                background: var(--memo-surface-soft);
+                border: 1px solid var(--memo-border);
+                box-shadow: 0 4px 14px rgba(10, 34, 64, 0.05);
+            }
+
+            .official-table tbody td {
+                display: block;
+                padding: 8px 0;
+                border-bottom: 1px dashed var(--memo-border);
+                font-size: 0.88rem;
+                text-align: left;
+            }
+
+            .official-table tbody td:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            .official-table tbody td.td-num {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                width: auto;
+                padding: 4px 11px;
+                margin-bottom: 6px;
+                border: 1px solid var(--memo-border-strong);
+                border-radius: 999px;
+                background: var(--memo-gold-soft);
+                font-size: 0.74rem;
+            }
+
+            .official-table tbody td.td-num::before {
+                content: "Bənd №";
+                font-family: 'IBM Plex Mono', monospace;
+                font-size: 0.68rem;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                color: var(--memo-gold);
+            }
+
+            .official-table tbody td:not(.td-num)[data-label]::before {
+                content: attr(data-label);
+                display: block;
+                font-family: 'IBM Plex Mono', monospace;
+                font-size: 0.68rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.06em;
+                color: var(--memo-gold);
+                margin-bottom: 4px;
+            }
+
+            .doc-subtable-heading {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .doc-kpi-pill {
+                padding: 11px 10px;
+                border-radius: 14px;
+            }
+            .doc-kpi-val {
+                font-size: 1.25rem;
+            }
+            .doc-partner-card {
+                padding: 16px;
+                border-radius: 16px;
+            }
+        }
+
         @media print {
-            .doc-topbar, .doc-controls-section, .no-search-results { display: none !important; }
-            body { background: #ffffff !important; color: #0f172a !important; }
+            .doc-topbar, .doc-controls-wrap, .no-search-results { display: none !important; }
+            body.memo-portal-body { background: #ffffff !important; color: #0f172a !important; }
+            .doc-hero { background: #ffffff !important; color: #0a192f !important; border-bottom: 2px solid #0a2240; padding: 24px 0; }
+            .doc-title, .doc-subtitle, .doc-kpi-val, .doc-kpi-label { color: #0a192f !important; }
+            .doc-section-card { box-shadow: none !important; break-inside: avoid; }
         }
     </style>
     <script>
@@ -121,33 +1072,32 @@
         })();
     </script>
 </head>
-<body class="bg-white text-[#0a192f] dark:bg-[#081120] dark:text-slate-100 antialiased">
-
+<body class="memo-portal-body antialiased">
 
     <!-- ═══════════════ TOP ACTION BAR ═══════════════ -->
-    <header class="doc-topbar sticky top-0 z-50 bg-white/80 dark:bg-[#081120]/80 backdrop-blur-2xl border-b border-slate-900/[0.08] dark:border-white/[0.08]">
-        <div class="doc-topbar-inner sticky top-0 z-50 bg-white/80 dark:bg-[#081120]/80 backdrop-blur-2xl border-b border-slate-900/[0.08] dark:border-white/[0.08] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-4">
-            <a href="index.html" class="doc-brand flex items-center gap-3">
-                <img src="logo.jpg" alt="BDRNK Loqo" class="doc-brand-logo flex items-center gap-3 w-10 h-10 rounded-xl object-cover border border-slate-900/10 dark:border-white/15" onerror="this.style.display='none'" />
-                <div class="doc-brand-titles flex items-center gap-3">
-                    <span class="doc-brand-sub flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 block">AzTU nəzdində BDRNK Publik Hüquqi Şəxsi</span>
-                    <span class="doc-brand-main flex items-center gap-3 text-sm font-extrabold tracking-tight text-slate-900 dark:text-white block">Beynəlxalq Əməkdaşlıq Memorandumları</span>
+    <header class="doc-topbar">
+        <div class="doc-topbar-inner">
+            <a href="index.html" class="doc-brand">
+                <img src="logo.jpg" alt="BDRNK Loqo" class="doc-brand-logo" onerror="this.style.display='none'" />
+                <div class="doc-brand-titles">
+                    <span class="doc-brand-sub">AzTU nəzdində BDRNK Publik Hüquqi Şəxsi</span>
+                    <span class="doc-brand-main">Beynəlxalq Əməkdaşlıq Memorandumları</span>
                 </div>
             </a>
 
-            <div class="doc-top-actions flex items-center gap-2.5 flex-wrap">
-                <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl bg-slate-100 dark:bg-white/[0.06] border border-slate-900/[0.08] dark:border-white/[0.08] inline-flex items-center justify-center cursor-pointer hover:scale-105 transition" id="theme-toggle" aria-label="Rejimi dəyişdir" title="Gündüz / Gecə rejimi">
+            <div class="doc-top-actions">
+                <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Rejimi dəyişdir" title="Gündüz / Gecə rejimi">
                     <span id="theme-icon">🌙</span>
                 </button>
-                <button type="button" class="top-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/[0.05] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/[0.1] transition cursor-pointer" onclick="window.print()" title="Sənədi Çap et və ya PDF kimi saxla">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <button type="button" class="top-btn" onclick="window.print()" title="Sənədi Çap et və ya PDF kimi saxla">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                         <polyline points="6 9 6 2 18 2 18 9"></polyline>
                         <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
                         <rect x="6" y="14" width="12" height="8"></rect>
                     </svg>
-                    <span>Çap Et / PDF</span>
+                    <span class="top-btn-print-label">Çap Et / PDF</span>
                 </button>
-                <a href="index.html#about" class="top-btn top-btn-primary inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/[0.05] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/[0.1] transition cursor-pointer !bg-slate-950 !text-white dark:!bg-white dark:!text-slate-950 !border-transparent shadow-sm">
+                <a href="index.html#about" class="top-btn top-btn-primary">
                     <span>← Əsas Səhifə</span>
                 </a>
             </div>
@@ -155,49 +1105,73 @@
     </header>
 
     <!-- ═══════════════ HERO HEADER ═══════════════ -->
-    <section class="doc-hero relative overflow-hidden py-14 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-slate-50 to-slate-100/70 dark:from-[#081120] dark:via-[#0c182c] dark:to-[#081120] border-b border-slate-900/[0.07] dark:border-white/[0.07]">
-        <div class="doc-hero-inner relative overflow-hidden py-14 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-slate-50 to-slate-100/70 dark:from-[#081120] dark:via-[#0c182c] dark:to-[#081120] border-b border-slate-900/[0.07] dark:border-white/[0.07] max-w-7xl mx-auto space-y-6">
-            <div class="doc-badge-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/25">
+    <section class="doc-hero">
+        <div class="doc-hero-inner">
+            <div class="doc-badge-pill">
                 <span>✦</span>
                 <span>Rəsmi Akademik Əməkdaşlıq Sənədləri</span>
                 <span>✦</span>
             </div>
-            <h1 class="doc-title font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">Əməkdaşlıq Memorandumları və Tədbirlər Planı</h1>
-            <p class="doc-subtitle text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
+            <h1 class="doc-title">Əməkdaşlıq Memorandumları və Tədbirlər Planı</h1>
+            <p class="doc-subtitle">
                 Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin beynəlxalq
                 tərəfdaşlıq əlaqələri, Qazaxıstan və Özbəkistanın qabaqcıl nəqliyyat təhsili müəssisələri ilə birgə fəaliyyət
                 proqramları və strateji tədbirlər planı.
             </p>
 
+            <!-- Diplomatic KPI Summary Strip -->
+            <div class="doc-kpi-strip" aria-label="Memorandum Göstəriciləri">
+                <div class="doc-kpi-pill">
+                    <div class="doc-kpi-val">3 Ölkə</div>
+                    <div class="doc-kpi-label">🇦🇿 · 🇰🇿 · 🇺🇿</div>
+                    <div class="doc-kpi-sub">Regional Tərəfdaşlıq</div>
+                </div>
+                <div class="doc-kpi-pill">
+                    <div class="doc-kpi-val">3 Sənəd</div>
+                    <div class="doc-kpi-label">Rəsmi Arxiv</div>
+                    <div class="doc-kpi-sub">Saziş və Planlar</div>
+                </div>
+                <div class="doc-kpi-pill">
+                    <div class="doc-kpi-val">21 Bənd</div>
+                    <div class="doc-kpi-label">Tədbir & İstiqamət</div>
+                    <div class="doc-kpi-sub">Tədris · İT · Mobillik</div>
+                </div>
+                <div class="doc-kpi-pill">
+                    <div class="doc-kpi-val">2026–2028</div>
+                    <div class="doc-kpi-label">Strateji Dövr</div>
+                    <div class="doc-kpi-sub">Aktiv Yol Xəritəsi</div>
+                </div>
+            </div>
+
             <!-- Partner Institutions Strip -->
-            <div class="doc-partners-grid grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+            <div class="doc-partners-grid">
                 <!-- Partner 1: Azerbaijan -->
-                <div class="doc-partner-card p-5 rounded-3xl bg-white/85 dark:bg-[#112038]/85 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-apple flex items-start gap-3.5 hover:-translate-y-0.5 transition-all">
-                    <div class="doc-partner-flag text-3xl shrink-0">🇦🇿</div>
+                <div class="doc-partner-card">
+                    <div class="doc-partner-flag">🇦🇿</div>
                     <div class="doc-partner-info">
                         <h4>Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik Hüquqi Şəxsi</h4>
                         <p>Azərbaycan Respublikası · Bakı şəhəri</p>
-                        <span class="doc-partner-role text-xs text-slate-500 dark:text-slate-400 mt-1 block">Təşkilatçı və Əlaqələndirici Tərəf</span>
+                        <span class="doc-partner-role">Təşkilatçı və Əlaqələndirici Tərəf</span>
                     </div>
                 </div>
 
                 <!-- Partner 2: Kazakhstan -->
-                <div class="doc-partner-card p-5 rounded-3xl bg-white/85 dark:bg-[#112038]/85 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-apple flex items-start gap-3.5 hover:-translate-y-0.5 transition-all">
-                    <div class="doc-partner-flag text-3xl shrink-0">🇰🇿</div>
+                <div class="doc-partner-card">
+                    <div class="doc-partner-flag">🇰🇿</div>
                     <div class="doc-partner-info">
                         <h4>ALT Aktau adına M. Tınışpayev Nəqliyyat Kolleci</h4>
                         <p>Qazaxıstan Respublikası · Aktau şəhəri</p>
-                        <span class="doc-partner-role text-xs text-slate-500 dark:text-slate-400 mt-1 block">Tərəfdaş Təhsil Müəssisəsi</span>
+                        <span class="doc-partner-role">Tərəfdaş Təhsil Müəssisəsi</span>
                     </div>
                 </div>
 
                 <!-- Partner 3: Uzbekistan -->
-                <div class="doc-partner-card p-5 rounded-3xl bg-white/85 dark:bg-[#112038]/85 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-apple flex items-start gap-3.5 hover:-translate-y-0.5 transition-all">
-                    <div class="doc-partner-flag text-3xl shrink-0">🇺🇿</div>
+                <div class="doc-partner-card">
+                    <div class="doc-partner-flag">🇺🇿</div>
                     <div class="doc-partner-info">
                         <h4>Daşkənd Nəqliyyat Texnikumu</h4>
                         <p>Özbəkistan Respublikası · Daşkənd şəhəri</p>
-                        <span class="doc-partner-role text-xs text-slate-500 dark:text-slate-400 mt-1 block">İnstitusional Əməkdaş Tərəf</span>
+                        <span class="doc-partner-role">İnstitusional Əməkdaş Tərəf</span>
                     </div>
                 </div>
             </div>
@@ -205,30 +1179,38 @@
     </section>
 
     <!-- ═══════════════ CONTROLS & TABS ═══════════════ -->
-    <div class="doc-controls-section p-4 rounded-2xl bg-white/85 dark:bg-[#112038]/85 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-sm flex flex-wrap items-center justify-between gap-4">
-        <nav class="doc-tabs-nav flex flex-wrap gap-2" role="tablist" aria-label="Sənəd Bölmələri">
-            <button type="button" class="doc-tab-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 text-slate-700 dark:text-slate-300 cursor-pointer transition" data-tab="all">
-                <span>📑 Bütün Sənədlər</span>
-            </button>
-            <button type="button" class="doc-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 text-slate-700 dark:text-slate-300 cursor-pointer transition" data-tab="doc1">
-                <span>📋 Məlumat Cədvəli</span>
-            </button>
-            <button type="button" class="doc-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 text-slate-700 dark:text-slate-300 cursor-pointer transition" data-tab="doc2">
-                <span>🤝 Üçtərəfli Tədbirlər Planı</span>
-            </button>
-            <button type="button" class="doc-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 text-slate-700 dark:text-slate-300 cursor-pointer transition" data-tab="doc3">
-                <span>🇺🇿 Daşkənd Memorandumu</span>
-            </button>
-        </nav>
+    <div class="doc-controls-wrap">
+        <div class="doc-controls-section">
+            <nav class="doc-tabs-nav" role="tablist" aria-label="Sənəd Bölmələri">
+                <button type="button" class="doc-tab-btn active" data-tab="all">
+                    <span>📑 Bütün Sənədlər</span>
+                </button>
+                <button type="button" class="doc-tab-btn" data-tab="doc1">
+                    <span>📋 Məlumat Cədvəli</span>
+                </button>
+                <button type="button" class="doc-tab-btn" data-tab="doc2">
+                    <span>🤝 Üçtərəfli Tədbirlər Planı</span>
+                </button>
+                <button type="button" class="doc-tab-btn" data-tab="doc3">
+                    <span>🇺🇿 Daşkənd Memorandumu</span>
+                </button>
+            </nav>
 
-        <div class="doc-search-box relative flex items-center w-full sm:w-80">
-            <span class="doc-search-icon w-4 h-4 text-slate-400 absolute left-3.5 pointer-events-none">🔍</span>
-            <input type="text" id="doc-search" class="doc-search-input w-full pl-10 pr-4 py-2 rounded-xl border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 text-sm focus:outline-none focus:ring-2 focus:ring-[#0a2240]/30 dark:focus:ring-[#c8a45d]/40" placeholder="Cədvəllərdə və mətndə axtarış..." aria-label="Axtarış" />
+            <div class="doc-search-box">
+                <span class="doc-search-icon" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </span>
+                <input type="text" id="doc-search" class="doc-search-input" placeholder="Cədvəllərdə və mətndə axtarış..." aria-label="Axtarış" />
+                <button type="button" id="doc-search-clear" class="doc-search-clear" aria-label="Axtarışı təmizlə">&times;</button>
+            </div>
         </div>
     </div>
 
     <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
-    <main class="doc-main-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+    <main class="doc-main-container">
 
         <!-- No search results placeholder -->
         <div id="no-results" class="no-search-results">
@@ -239,17 +1221,18 @@
         <!-- ══════════════════════════════════════════════════════════════
              SƏNƏD 1: Memorandum 1.pdf (BİRE BİR MƏTN)
              ══════════════════════════════════════════════════════════════ -->
-        <section class="doc-section-card filterable-section p-6 sm:p-8 rounded-3xl bg-white/90 dark:bg-[#112038]/90 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-apple space-y-6" id="section-doc1" data-section="doc1">
-            <header class="doc-section-header flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-slate-900/[0.08] dark:border-white/[0.08]">
-                <div class="doc-section-header-text flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-slate-900/[0.08] dark:border-white/[0.08]">
-                    <span class="doc-source-tag inline-block text-xs font-mono font-semibold text-[#0a2240] dark:text-[#c8a45d] mb-1">Məlumat Cədvəli</span>
+        <section class="doc-section-card filterable-section" id="section-doc1" data-section="doc1">
+            <header class="doc-section-header">
+                <div class="doc-section-header-text">
+                    <span class="doc-source-tag">Məlumat Cədvəli</span>
                     <h2>AZƏRBAYCAN TEXNİKİ UNİVERSİTETİNİN NƏZDİNDƏ<br />BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ</h2>
                     <p><strong>ƏMƏKDAŞLIQ MEMORANDUMLARI ÜZRƏ MƏLUMAT CƏDVƏLİ</strong> · Kollecin beynəlxalq əməkdaşlıq əlaqələri</p>
                 </div>
+                <span class="doc-num-badge">SƏNƏD 01 · 2 SAZİŞ</span>
             </header>
 
-            <div class="table-responsive overflow-x-auto rounded-2xl border border-slate-900/[0.08] dark:border-white/[0.08]">
-                <table class="official-table w-full border-collapse" id="table-memorandum-1">
+            <div class="table-responsive">
+                <table class="official-table" id="table-memorandum-1">
                     <thead>
                         <tr>
                             <th class="td-num">№</th>
@@ -263,19 +1246,19 @@
                     </thead>
                     <tbody>
                         <tr class="searchable-row">
-                            <td class="td-num">1</td>
-                            <td class="td-primary-bold">
+                            <td class="td-num" data-label="№">1</td>
+                            <td class="td-primary-bold" data-label="Memorandum və tərəflər">
                                 “ALT Aktau adına M. Tınışpayev Nəqliyyat Kolleci” ilə Bakı Dövlət Rabitə və Nəqliyyat Kolleci arasında tərəfdaşlıq memorandumu
                             </td>
-                            <td>
+                            <td data-label="Ölkə / şəhər">
                                 Qazaxıstan, Aktau<br />
                                 ------<br />
                                 Azərbaycan, Bakı
                             </td>
-                            <td>
+                            <td data-label="Məqsəd">
                                 Peşə və orta ixtisas təhsili sahəsində əməkdaşlıq, təhsilin keyfiyyətinin yüksəldilməsi, rəqabətqabiliyyətli mütəxəssislərin hazırlanması və təcrübə mübadiləsi.
                             </td>
-                            <td>
+                            <td data-label="Əsas əməkdaşlıq istiqamətləri">
                                 <ul class="bullet-list">
                                     <li>Texniki və peşə təhsilinin modernləşdirilməsi üzrə əməkdaşlıq;</li>
                                     <li>Açıq dərslər və ustad dərsləri;</li>
@@ -286,26 +1269,26 @@
                                     <li>WorldSkills çempionatına hazırlıq üzrə müəllim təcrübəsinin bölüşülməsi.</li>
                                 </ul>
                             </td>
-                            <td>—</td>
-                            <td>
+                            <td data-label="Tarix / müddət">—</td>
+                            <td data-label="Status / qeyd">
                                 <span class="td-badge td-badge-note">Mənbə sənəd rus dilindədir.</span><br />
                                 <small>Memorandum əməkdaşlıq niyyətlərini ifadə edir; birgə fəaliyyətin konkret qrafiki ayrıca razılaşdırılır.</small>
                             </td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-num">2</td>
-                            <td class="td-primary-bold">
+                            <td class="td-num" data-label="№">2</td>
+                            <td class="td-primary-bold" data-label="Memorandum və tərəflər">
                                 Daşkənd Nəqliyyat Texnikumu ilə Bakı Dövlət Rabitə və Nəqliyyat Kolleci arasında əməkdaşlıq memorandumu
                             </td>
-                            <td>
+                            <td data-label="Ölkə / şəhər">
                                 Özbəkistan, Daşkənd<br />
                                 ------<br />
                                 Azərbaycan, Bakı
                             </td>
-                            <td>
+                            <td data-label="Məqsəd">
                                 Peşə və orta ixtisas təhsili, nəqliyyat, logistika, rabitə və texnologiyalar sahələrində uzunmüddətli institusional əməkdaşlığın inkişafı.
                             </td>
-                            <td>
+                            <td data-label="Əsas əməkdaşlıq istiqamətləri">
                                 <ul class="bullet-list">
                                     <li>Tədris proqramlarının, peşə səriştələrinin və metodiki materialların müqayisəli öyrənilməsi;</li>
                                     <li>Nəqliyyat, logistika, avtomatika, telemexanika, rabitə, İT, kibertəhlükəsizlik, elektrotexnika və rəqəmsal bacarıqlar üzrə təcrübə mübadiləsi;</li>
@@ -313,10 +1296,10 @@
                                     <li>Birgə layihələr, tədbirlər və tədris təşəbbüsləri.</li>
                                 </ul>
                             </td>
-                            <td>
+                            <td data-label="Tarix / müddət">
                                 <span class="td-badge td-badge-time">20-25 noyabr 2026</span>
                             </td>
-                            <td>
+                            <td data-label="Status / qeyd">
                                 <span class="td-badge td-badge-note">Layihə sənədidir.</span><br />
                                 <small>İmzalanmazdan əvvəl tərəflərin səlahiyyətləri, rekvizitləri və tələb olunan razılıqlar təsdiqlənməlidir.</small>
                             </td>
@@ -330,17 +1313,18 @@
              SƏNƏD 2: Memorandum.pdf — HİSSƏ 1 (BİRE BİR MƏTN)
              2026–2027-Cİ TƏDRİS İLİ ÜZRƏ MEMORANDUM ÇƏRÇİVƏSİNDƏ ƏMƏKDAŞLIQ TƏDBİRLƏRİ PLANI
              ══════════════════════════════════════════════════════════════ -->
-        <section class="doc-section-card filterable-section p-6 sm:p-8 rounded-3xl bg-white/90 dark:bg-[#112038]/90 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-apple space-y-6" id="section-doc2" data-section="doc2">
-            <header class="doc-section-header flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-slate-900/[0.08] dark:border-white/[0.08]">
-                <div class="doc-section-header-text flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-slate-900/[0.08] dark:border-white/[0.08]">
-                    <span class="doc-source-tag inline-block text-xs font-mono font-semibold text-[#0a2240] dark:text-[#c8a45d] mb-1">Tədbirlər Planı (Hissə 1)</span>
+        <section class="doc-section-card filterable-section" id="section-doc2" data-section="doc2">
+            <header class="doc-section-header">
+                <div class="doc-section-header-text">
+                    <span class="doc-source-tag">Tədbirlər Planı (Hissə 1)</span>
                     <h2>2026–2027-Cİ TƏDRİS İLİ ÜZRƏ<br />MEMORANDUM ÇƏRÇİVƏSİNDƏ ƏMƏKDAŞLIQ TƏDBİRLƏRİ PLANI</h2>
                     <p><strong>Bakı Dövlət Rabitə və Nəqliyyat Kolleci – ALT Aktau M. Tınışpayev adına Nəqliyyat Kolleci – Daşkənd Nəqliyyat Texnikumu</strong></p>
                 </div>
+                <span class="doc-num-badge">SƏNƏD 02 · 12 BƏND</span>
             </header>
 
-            <div class="table-responsive overflow-x-auto rounded-2xl border border-slate-900/[0.08] dark:border-white/[0.08]">
-                <table class="official-table w-full border-collapse" id="table-memorandum-plan-1">
+            <div class="table-responsive">
+                <table class="official-table" id="table-memorandum-plan-1">
                     <thead>
                         <tr>
                             <th class="td-num">№</th>
@@ -352,88 +1336,88 @@
                     </thead>
                     <tbody>
                         <tr class="searchable-row">
-                            <td class="td-num">1</td>
-                            <td class="td-primary-bold">Təcrübə mübadiləsi</td>
-                            <td>Hər iki kollecin müəllim və tələbələri arasında təcrübə mübadiləsinin təşkili</td>
-                            <td><span class="td-badge td-badge-outcome">Peşəkar bilik və bacarıqların artırılması</span></td>
-                            <td><span class="td-badge td-badge-time">İl ərzində</span></td>
+                            <td class="td-num" data-label="№">1</td>
+                            <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Təcrübə mübadiləsi</td>
+                            <td data-label="Görüləcək işlər və tədbirlər">Hər iki kollecin müəllim və tələbələri arasında təcrübə mübadiləsinin təşkili</td>
+                            <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Peşəkar bilik və bacarıqların artırılması</span></td>
+                            <td data-label="İcra müddəti"><span class="td-badge td-badge-time">İl ərzində</span></td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-num">2</td>
-                            <td class="td-primary-bold">Birgə dərslər</td>
-                            <td>Xüsusi fənlər üzrə açıq dərslərin və ustad dərslərinin keçirilməsi</td>
-                            <td><span class="td-badge td-badge-outcome">Müasir tədris metodlarının tətbiqi</span></td>
-                            <td><span class="td-badge td-badge-time">Semestr ərzində</span></td>
+                            <td class="td-num" data-label="№">2</td>
+                            <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Birgə dərslər</td>
+                            <td data-label="Görüləcək işlər və tədbirlər">Xüsusi fənlər üzrə açıq dərslərin və ustad dərslərinin keçirilməsi</td>
+                            <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Müasir tədris metodlarının tətbiqi</span></td>
+                            <td data-label="İcra müddəti"><span class="td-badge td-badge-time">Semestr ərzində</span></td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-num">3</td>
-                            <td class="td-primary-bold">Tələbələrin akademik mobilliyi</td>
-                            <td>Tədris, təcrübə və dərsdənkənar fəaliyyətlər üzrə qarşılıqlı iştirakın təşkili</td>
-                            <td><span class="td-badge td-badge-outcome">Tələbələrin praktiki bacarıqlarının inkişafı</span></td>
-                            <td><span class="td-badge td-badge-time">Razılaşdırılmış qrafik üzrə</span></td>
+                            <td class="td-num" data-label="№">3</td>
+                            <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Tələbələrin akademik mobilliyi</td>
+                            <td data-label="Görüləcək işlər və tədbirlər">Tədris, təcrübə və dərsdənkənar fəaliyyətlər üzrə qarşılıqlı iştirakın təşkili</td>
+                            <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Tələbələrin praktiki bacarıqlarının inkişafı</span></td>
+                            <td data-label="İcra müddəti"><span class="td-badge td-badge-time">Razılaşdırılmış qrafik üzrə</span></td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-num">4</td>
-                            <td class="td-primary-bold">Elmi əməkdaşlıq</td>
-                            <td>Birgə tədqiqatların, elmi görüşlərin və seminarların təşkili</td>
-                            <td><span class="td-badge td-badge-outcome">Elmi əlaqələrin genişləndirilməsi</span></td>
-                            <td><span class="td-badge td-badge-time">İl ərzində</span></td>
+                            <td class="td-num" data-label="№">4</td>
+                            <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Elmi əməkdaşlıq</td>
+                            <td data-label="Görüləcək işlər və tədbirlər">Birgə tədqiqatların, elmi görüşlərin və seminarların təşkili</td>
+                            <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Elmi əlaqələrin genişləndirilməsi</span></td>
+                            <td data-label="İcra müddəti"><span class="td-badge td-badge-time">İl ərzində</span></td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-num">5</td>
-                            <td class="td-primary-bold">Tədris materiallarının mübadiləsi</td>
-                            <td>Tədris resurslarının, elmi işlərin, metodik vəsaitlərin və nəşrlərin paylaşılması</td>
-                            <td><span class="td-badge td-badge-outcome">Tədris keyfiyyətinin yüksəldilməsi</span></td>
-                            <td><span class="td-badge td-badge-time">Davamlı</span></td>
+                            <td class="td-num" data-label="№">5</td>
+                            <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Tədris materiallarının mübadiləsi</td>
+                            <td data-label="Görüləcək işlər və tədbirlər">Tədris resurslarının, elmi işlərin, metodik vəsaitlərin və nəşrlərin paylaşılması</td>
+                            <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Tədris keyfiyyətinin yüksəldilməsi</span></td>
+                            <td data-label="İcra müddəti"><span class="td-badge td-badge-time">Davamlı</span></td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-num">6</td>
-                            <td class="td-primary-bold">Rəqəmsal təhsil və süni intellekt</td>
-                            <td>Rəqəmsal təhsil resurslarının və süni intellekt imkanlarının tədrisdə tətbiqi üzrə təcrübə mübadiləsi</td>
-                            <td><span class="td-badge td-badge-outcome">İnnovativ tədris yanaşmalarının inkişafı</span></td>
-                            <td><span class="td-badge td-badge-time">İl ərzində</span></td>
+                            <td class="td-num" data-label="№">6</td>
+                            <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Rəqəmsal təhsil və süni intellekt</td>
+                            <td data-label="Görüləcək işlər və tədbirlər">Rəqəmsal təhsil resurslarının və süni intellekt imkanlarının tədrisdə tətbiqi üzrə təcrübə mübadiləsi</td>
+                            <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">İnnovativ tədris yanaşmalarının inkişafı</span></td>
+                            <td data-label="İcra müddəti"><span class="td-badge td-badge-time">İl ərzində</span></td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-num">7</td>
-                            <td class="td-primary-bold">Birgə layihələr</td>
-                            <td>Texniki və peşə təhsilinin modernləşdirilməsinə yönəlmiş birgə layihələrin hazırlanması</td>
-                            <td><span class="td-badge td-badge-outcome">Yeni təhsil təşəbbüslərinin reallaşdırılması</span></td>
-                            <td><span class="td-badge td-badge-time">Razılaşdırılmış qrafik üzrə</span></td>
+                            <td class="td-num" data-label="№">7</td>
+                            <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Birgə layihələr</td>
+                            <td data-label="Görüləcək işlər və tədbirlər">Texniki və peşə təhsilinin modernləşdirilməsinə yönəlmiş birgə layihələrin hazırlanması</td>
+                            <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Yeni təhsil təşəbbüslərinin reallaşdırılması</span></td>
+                            <td data-label="İcra müddəti"><span class="td-badge td-badge-time">Razılaşdırılmış qrafik üzrə</span></td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-num">8</td>
-                            <td class="td-primary-bold">WorldSkills hazırlığı</td>
-                            <td>Müəllimlər arasında peşə bacarıqları üzrə yarışlara hazırlıq təcrübəsinin bölüşülməsi</td>
-                            <td><span class="td-badge td-badge-outcome">Tələbələrin peşə müsabiqələrinə hazırlığının gücləndirilməsi</span></td>
-                            <td><span class="td-badge td-badge-time">Müsabiqə qrafikinə uyğun</span></td>
+                            <td class="td-num" data-label="№">8</td>
+                            <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">WorldSkills hazırlığı</td>
+                            <td data-label="Görüləcək işlər və tədbirlər">Müəllimlər arasında peşə bacarıqları üzrə yarışlara hazırlıq təcrübəsinin bölüşülməsi</td>
+                            <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Tələbələrin peşə müsabiqələrinə hazırlığının gücləndirilməsi</span></td>
+                            <td data-label="İcra müddəti"><span class="td-badge td-badge-time">Müsabiqə qrafikinə uyğun</span></td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-num">9</td>
-                            <td class="td-primary-bold">Peşə bacarıqlarının inkişafı</td>
-                            <td>Tələbələr üçün praktiki məşğələlərin və peşəyönümlü təlimlərin təşkili</td>
-                            <td><span class="td-badge td-badge-outcome">Əmək bazarının tələblərinə uyğun mütəxəssis hazırlığı</span></td>
-                            <td><span class="td-badge td-badge-time">İl ərzində</span></td>
+                            <td class="td-num" data-label="№">9</td>
+                            <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Peşə bacarıqlarının inkişafı</td>
+                            <td data-label="Görüləcək işlər və tədbirlər">Tələbələr üçün praktiki məşğələlərin və peşəyönümlü təlimlərin təşkili</td>
+                            <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Əmək bazarının tələblərinə uyğun mütəxəssis hazırlığı</span></td>
+                            <td data-label="İcra müddəti"><span class="td-badge td-badge-time">İl ərzində</span></td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-num">10</td>
-                            <td class="td-primary-bold">Qarşılıqlı səfərlər</td>
-                            <td>Müəllim və rəhbər heyətinin işgüzar səfərlərinin və görüşlərinin təşkili</td>
-                            <td><span class="td-badge td-badge-outcome">Tərəfdaşlıq əlaqələrinin möhkəmləndirilməsi</span></td>
-                            <td><span class="td-badge td-badge-time">Razılaşdırılmış qrafik üzrə</span></td>
+                            <td class="td-num" data-label="№">10</td>
+                            <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Qarşılıqlı səfərlər</td>
+                            <td data-label="Görüləcək işlər və tədbirlər">Müəllim və rəhbər heyətinin işgüzar səfərlərinin və görüşlərinin təşkili</td>
+                            <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Tərəfdaşlıq əlaqələrinin möhkəmləndirilməsi</span></td>
+                            <td data-label="İcra müddəti"><span class="td-badge td-badge-time">Razılaşdırılmış qrafik üzrə</span></td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-num">11</td>
-                            <td class="td-primary-bold">Elmi nəşrlər və konfranslar</td>
-                            <td>Müəllimlərin elmi konfranslarda, seminarlarda və nəşr layihələrində iştirakının təşviqi</td>
-                            <td><span class="td-badge td-badge-outcome">Elmi fəaliyyətin və beynəlxalq əməkdaşlığın genişləndirilməsi</span></td>
-                            <td><span class="td-badge td-badge-time">İl ərzində</span></td>
+                            <td class="td-num" data-label="№">11</td>
+                            <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Elmi nəşrlər və konfranslar</td>
+                            <td data-label="Görüləcək işlər və tədbirlər">Müəllimlərin elmi konfranslarda, seminarlarda və nəşr layihələrində iştirakının təşviqi</td>
+                            <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Elmi fəaliyyətin və beynəlxalq əməkdaşlığın genişləndirilməsi</span></td>
+                            <td data-label="İcra müddəti"><span class="td-badge td-badge-time">İl ərzində</span></td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-num">12</td>
-                            <td class="td-primary-bold">Monitorinq və qiymətləndirmə</td>
-                            <td>Görülmüş işlərin nəticələrinin təhlili və növbəti dövr üçün tədbirlər planının hazırlanması</td>
-                            <td><span class="td-badge td-badge-outcome">Əməkdaşlığın səmərəliliyinin artırılması</span></td>
-                            <td><span class="td-badge td-badge-time">Hər semestrin sonunda</span></td>
+                            <td class="td-num" data-label="№">12</td>
+                            <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Monitorinq və qiymətləndirmə</td>
+                            <td data-label="Görüləcək işlər və tədbirlər">Görülmüş işlərin nəticələrinin təhlili və növbəti dövr üçün tədbirlər planının hazırlanması</td>
+                            <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Əməkdaşlığın səmərəliliyinin artırılması</span></td>
+                            <td data-label="İcra müddəti"><span class="td-badge td-badge-time">Hər semestrin sonunda</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -441,11 +1425,11 @@
 
             <!-- İCRA VƏ NƏZARƏT CƏDVƏLİ -->
             <div style="margin-top: 32px;">
-                <h3 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 14px;">
+                <h3 class="doc-subtable-heading">
                     İCRA VƏ NƏZARƏT
                 </h3>
-                <div class="table-responsive overflow-x-auto rounded-2xl border border-slate-900/[0.08] dark:border-white/[0.08]">
-                    <table class="official-table w-full border-collapse" id="table-memorandum-control">
+                <div class="table-responsive">
+                    <table class="official-table" id="table-memorandum-control">
                         <thead>
                             <tr>
                                 <th class="td-num">№</th>
@@ -455,29 +1439,29 @@
                         </thead>
                         <tbody>
                             <tr class="searchable-row">
-                                <td class="td-num">1</td>
-                                <td class="td-primary-bold">Bakı Dövlət Rabitə və Nəqliyyat Kolleci</td>
-                                <td>Tədbirlərin təşkili və əlaqələndirilməsi</td>
+                                <td class="td-num" data-label="№">1</td>
+                                <td class="td-primary-bold" data-label="Məsul tərəf">Bakı Dövlət Rabitə və Nəqliyyat Kolleci</td>
+                                <td data-label="Vəzifə">Tədbirlərin təşkili və əlaqələndirilməsi</td>
                             </tr>
                             <tr class="searchable-row">
-                                <td class="td-num">2</td>
-                                <td class="td-primary-bold">ALT Aktau Nəqliyyat Kolleci</td>
-                                <td>Qarşılıqlı iştirakın və təcrübə mübadiləsinin təmin edilməsi</td>
+                                <td class="td-num" data-label="№">2</td>
+                                <td class="td-primary-bold" data-label="Məsul tərəf">ALT Aktau Nəqliyyat Kolleci</td>
+                                <td data-label="Vəzifə">Qarşılıqlı iştirakın və təcrübə mübadiləsinin təmin edilməsi</td>
                             </tr>
                             <tr class="searchable-row">
-                                <td class="td-num">3</td>
-                                <td class="td-primary-bold">Hər iki kollecin rəhbərliyi</td>
-                                <td>Tədbirlərin qrafikinin razılaşdırılması və təsdiqi</td>
+                                <td class="td-num" data-label="№">3</td>
+                                <td class="td-primary-bold" data-label="Məsul tərəf">Hər iki kollecin rəhbərliyi</td>
+                                <td data-label="Vəzifə">Tədbirlərin qrafikinin razılaşdırılması və təsdiqi</td>
                             </tr>
                             <tr class="searchable-row">
-                                <td class="td-num">4</td>
-                                <td class="td-primary-bold">Müvafiq struktur bölmələr və müəllimlər</td>
-                                <td>Tədbirlərin icrası və nəticələrin təqdim edilməsi</td>
+                                <td class="td-num" data-label="№">4</td>
+                                <td class="td-primary-bold" data-label="Məsul tərəf">Müvafiq struktur bölmələr və müəllimlər</td>
+                                <td data-label="Vəzifə">Tədbirlərin icrası və nəticələrin təqdim edilməsi</td>
                             </tr>
                             <tr class="searchable-row">
-                                <td class="td-num">5</td>
-                                <td class="td-primary-bold">Daşkənd Nəqliyyat Texnikumu</td>
-                                <td>Birgə tədris təşəbbüsləri, nəqliyyat və logistika üzrə təcrübə mübadiləsi, akademik mobillik və layihələrin əlaqələndirilməsi</td>
+                                <td class="td-num" data-label="№">5</td>
+                                <td class="td-primary-bold" data-label="Məsul tərəf">Daşkənd Nəqliyyat Texnikumu</td>
+                                <td data-label="Vəzifə">Birgə tədris təşəbbüsləri, nəqliyyat və logistika üzrə təcrübə mübadiləsi, akademik mobillik və layihələrin əlaqələndirilməsi</td>
                             </tr>
                         </tbody>
                     </table>
@@ -489,24 +1473,25 @@
              SƏNƏD 3: Memorandum.pdf — HİSSƏ 2 (BİRE BİR MƏTN)
              Özbəkistan – Azərbaycan: Daşkənd Nəqliyyat Texnikumu ilə əməkdaşlıq haqqında memorandum
              ══════════════════════════════════════════════════════════════ -->
-        <section class="doc-section-card filterable-section p-6 sm:p-8 rounded-3xl bg-white/90 dark:bg-[#112038]/90 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-apple space-y-6" id="section-doc3" data-section="doc3">
-            <header class="doc-section-header flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-slate-900/[0.08] dark:border-white/[0.08]">
-                <div class="doc-section-header-text flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-slate-900/[0.08] dark:border-white/[0.08]">
-                    <span class="doc-source-tag inline-block text-xs font-mono font-semibold text-[#0a2240] dark:text-[#c8a45d] mb-1">İkitərəfli Memorandum (Hissə 2)</span>
+        <section class="doc-section-card filterable-section" id="section-doc3" data-section="doc3">
+            <header class="doc-section-header">
+                <div class="doc-section-header-text">
+                    <span class="doc-source-tag">İkitərəfli Memorandum (Hissə 2)</span>
                     <h2>2026–2027-Cİ TƏDRİS İLİ ÜZRƏ<br />MEMORANDUM ÇƏRÇİVƏSİNDƏ ƏMƏKDAŞLIQ TƏDBİRLƏRİ PLANI</h2>
                     <p><strong>Özbəkistan – Azərbaycan: Daşkənd Nəqliyyat Texnikumu ilə əməkdaşlıq haqqında memorandum</strong></p>
-                    <p style="margin-top: 4px; font-size: 0.88rem;">
+                    <p style="font-size: 0.88rem;">
                         <strong>Tərəflər:</strong> Daşkənd Nəqliyyat Texnikumu və Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci.
                     </p>
                 </div>
+                <span class="doc-num-badge">SƏNƏD 03 · 🇺🇿 🇦🇿</span>
             </header>
 
             <!-- Cədvəl 1: Əsas Müddəalar -->
-            <h3 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 14px;">
+            <h3 class="doc-subtable-heading">
                 MEMORANDUM ÜZRƏ ƏSAS MÜDDƏALAR
             </h3>
-            <div class="table-responsive overflow-x-auto rounded-2xl border border-slate-900/[0.08] dark:border-white/[0.08]">
-                <table class="official-table w-full border-collapse" id="table-memorandum-provisions">
+            <div class="table-responsive">
+                <table class="official-table" id="table-memorandum-provisions">
                     <thead>
                         <tr>
                             <th style="width: 250px;">İstiqamət</th>
@@ -515,48 +1500,48 @@
                     </thead>
                     <tbody>
                         <tr class="searchable-row">
-                            <td class="td-primary-bold">Əməkdaşlığın məqsədi</td>
-                            <td>Peşə və orta ixtisas təhsili, nəqliyyat, logistika, rabitə və texnologiyalar sahələrində uzunmüddətli institusional əməkdaşlığın inkişafı.</td>
+                            <td class="td-primary-bold" data-label="İstiqamət">Əməkdaşlığın məqsədi</td>
+                            <td data-label="Memorandum üzrə əsas müddəalar">Peşə və orta ixtisas təhsili, nəqliyyat, logistika, rabitə və texnologiyalar sahələrində uzunmüddətli institusional əməkdaşlığın inkişafı.</td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-primary-bold">Tədris proqramları və metodika</td>
-                            <td>Tədris proqramlarının, peşə səriştələrinin və metodiki materialların müqayisəli öyrənilməsi.</td>
+                            <td class="td-primary-bold" data-label="İstiqamət">Tədris proqramları və metodika</td>
+                            <td data-label="Memorandum üzrə əsas müddəalar">Tədris proqramlarının, peşə səriştələrinin və metodiki materialların müqayisəli öyrənilməsi.</td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-primary-bold">Texniki istiqamətlər</td>
-                            <td>Dəmir yolu və digər nəqliyyat növləri, logistika, nəqliyyat infrastrukturu, avtomatika, telemexanika, rabitə, informasiya texnologiyaları, kibertəhlükəsizlik, elektrotexnika və rəqəmsal bacarıqlar üzrə təcrübə mübadiləsi.</td>
+                            <td class="td-primary-bold" data-label="İstiqamət">Texniki istiqamətlər</td>
+                            <td data-label="Memorandum üzrə əsas müddəalar">Dəmir yolu və digər nəqliyyat növləri, logistika, nəqliyyat infrastrukturu, avtomatika, telemexanika, rabitə, informasiya texnologiyaları, kibertəhlükəsizlik, elektrotexnika və rəqəmsal bacarıqlar üzrə təcrübə mübadiləsi.</td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-primary-bold">Müəllim və tələbə mobilliyi</td>
-                            <td>Müəllimlərin və mütəxəssislərin qısamüddətli təcrübə proqramları, təhsilalanların qarşılıqlı səfərləri və akademik mobilliyi.</td>
+                            <td class="td-primary-bold" data-label="İstiqamət">Müəllim və tələbə mobilliyi</td>
+                            <td data-label="Memorandum üzrə əsas müddəalar">Müəllimlərin və mütəxəssislərin qısamüddətli təcrübə proqramları, təhsilalanların qarşılıqlı səfərləri və akademik mobilliyi.</td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-primary-bold">Birgə tədbirlər</td>
-                            <td>Onlayn dərslər, seminarlar, konfranslar, müsabiqələr, sərgilər və praktiki layihələrin təşkili.</td>
+                            <td class="td-primary-bold" data-label="İstiqamət">Birgə tədbirlər</td>
+                            <td data-label="Memorandum üzrə əsas müddəalar">Onlayn dərslər, seminarlar, konfranslar, müsabiqələr, sərgilər və praktiki layihələrin təşkili.</td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-primary-bold">İstehsalat təcrübəsi</td>
-                            <td>İşəgötürənlərlə əməkdaşlıq və istehsalat təcrübəsinin təşkili üzrə təcrübənin öyrənilməsi.</td>
+                            <td class="td-primary-bold" data-label="İstiqamət">İstehsalat təcrübəsi</td>
+                            <td data-label="Memorandum üzrə əsas müddəalar">İşəgötürənlərlə əməkdaşlıq və istehsalat təcrübəsinin təşkili üzrə təcrübənin öyrənilməsi.</td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-primary-bold">Dil və mədəni əlaqələr</td>
-                            <td>Azərbaycan və özbək dillərinin, mədəni irsin və gənclər arasında dostluq əlaqələrinin inkişafı.</td>
+                            <td class="td-primary-bold" data-label="İstiqamət">Dil və mədəni əlaqələr</td>
+                            <td data-label="Memorandum üzrə əsas müddəalar">Azərbaycan və özbək dillərinin, mədəni irsin və gənclər arasında dostluq əlaqələrinin inkişafı.</td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-primary-bold">Birgə təhsil proqramları</td>
-                            <td>Qanunvericiliyə və tələb olunan icazələrə uyğun olaraq birgə, o cümlədən ikili diplom proqramlarının hazırlanması imkanlarının araşdırılması.</td>
+                            <td class="td-primary-bold" data-label="İstiqamət">Birgə təhsil proqramları</td>
+                            <td data-label="Memorandum üzrə əsas müddəalar">Qanunvericiliyə və tələb olunan icazələrə uyğun olaraq birgə, o cümlədən ikili diplom proqramlarının hazırlanması imkanlarının araşdırılması.</td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-primary-bold">İcra mexanizmi</td>
-                            <td>Hər tərəfin məsul əlaqələndirici və işçi qrup müəyyən etməsi; 2026–2028-ci illər üçün yol xəritəsi layihəsinin hazırlanması və ehtiyac olduqda yenilənməsi.</td>
+                            <td class="td-primary-bold" data-label="İstiqamət">İcra mexanizmi</td>
+                            <td data-label="Memorandum üzrə əsas müddəalar">Hər tərəfin məsul əlaqələndirici və işçi qrup müəyyən etməsi; 2026–2028-ci illər üçün yol xəritəsi layihəsinin hazırlanması və ehtiyac olduqda yenilənməsi.</td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-primary-bold">Maliyyə şərtləri</td>
-                            <td>Memorandum özlüyündə tərəflər üçün maliyyə öhdəliyi yaratmır. Hər bir layihənin xərcləri və maliyyələşmə şərtləri ayrıca yazılı razılaşma ilə müəyyən edilir.</td>
+                            <td class="td-primary-bold" data-label="İstiqamət">Maliyyə şərtləri</td>
+                            <td data-label="Memorandum üzrə əsas müddəalar">Memorandum özlüyündə tərəflər üçün maliyyə öhdəliyi yaratmır. Hər bir layihənin xərcləri və maliyyələşmə şərtləri ayrıca yazılı razılaşma ilə müəyyən edilir.</td>
                         </tr>
                         <tr class="searchable-row">
-                            <td class="td-primary-bold">Hüquqi və təşkilati şərtlər</td>
-                            <td>Səfərlər, təcrübə proqramları və digər fəaliyyətlər tərəflərin yazılı razılığı, müvafiq qanunvericilik və təhlükəsizlik tələbləri əsasında təşkil olunur.</td>
+                            <td class="td-primary-bold" data-label="İstiqamət">Hüquqi və təşkilati şərtlər</td>
+                            <td data-label="Memorandum üzrə əsas müddəalar">Səfərlər, təcrübə proqramları və digər fəaliyyətlər tərəflərin yazılı razılığı, müvafiq qanunvericilik və təhlükəsizlik tələbləri əsasında təşkil olunur.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -564,11 +1549,11 @@
 
             <!-- Cədvəl 2: MEMORANDUM ÜZRƏ ƏMƏKDAŞLIQ TƏDBİRLƏRİ CƏDVƏLİ -->
             <div style="margin-top: 36px;">
-                <h3 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 14px;">
+                <h3 class="doc-subtable-heading">
                     MEMORANDUM ÜZRƏ ƏMƏKDAŞLIQ TƏDBİRLƏRİ CƏDVƏLİ
                 </h3>
-                <div class="table-responsive overflow-x-auto rounded-2xl border border-slate-900/[0.08] dark:border-white/[0.08]">
-                    <table class="official-table w-full border-collapse" id="table-memorandum-events-uzbek">
+                <div class="table-responsive">
+                    <table class="official-table" id="table-memorandum-events-uzbek">
                         <thead>
                             <tr>
                                 <th class="td-num">№</th>
@@ -580,67 +1565,67 @@
                         </thead>
                         <tbody>
                             <tr class="searchable-row">
-                                <td class="td-num">1</td>
-                                <td class="td-primary-bold">Tədris proqramları və metodika</td>
-                                <td>Tədris proqramlarını, peşə səriştələrini və metodiki materialları müqayisəli öyrənmək.</td>
-                                <td><span class="td-badge td-badge-outcome">Tədris yanaşmalarının təkmilləşdirilməsi</span></td>
-                                <td><span class="td-badge td-badge-time">Tərəflərin razılığı ilə</span></td>
+                                <td class="td-num" data-label="№">1</td>
+                                <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Tədris proqramları və metodika</td>
+                                <td data-label="Görüləcək işlər və tədbirlər">Tədris proqramlarını, peşə səriştələrini və metodiki materialları müqayisəli öyrənmək.</td>
+                                <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Tədris yanaşmalarının təkmilləşdirilməsi</span></td>
+                                <td data-label="İcra müddəti"><span class="td-badge td-badge-time">Tərəflərin razılığı ilə</span></td>
                             </tr>
                             <tr class="searchable-row">
-                                <td class="td-num">2</td>
-                                <td class="td-primary-bold">Nəqliyyat və texniki sahələr</td>
-                                <td>Dəmir yolu və digər nəqliyyat növləri, logistika, infrastruktur, avtomatika, telemexanika, rabitə, İT, kibertəhlükəsizlik və elektrotexnika üzrə təcrübə mübadiləsi aparmaq.</td>
-                                <td><span class="td-badge td-badge-outcome">Texniki bilik və bacarıqların inkişafı</span></td>
-                                <td><span class="td-badge td-badge-time">İl ərzində, razılaşdırılmış qrafiklə</span></td>
+                                <td class="td-num" data-label="№">2</td>
+                                <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Nəqliyyat və texniki sahələr</td>
+                                <td data-label="Görüləcək işlər və tədbirlər">Dəmir yolu və digər nəqliyyat növləri, logistika, infrastruktur, avtomatika, telemexanika, rabitə, İT, kibertəhlükəsizlik və elektrotexnika üzrə təcrübə mübadiləsi aparmaq.</td>
+                                <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Texniki bilik və bacarıqların inkişafı</span></td>
+                                <td data-label="İcra müddəti"><span class="td-badge td-badge-time">İl ərzində, razılaşdırılmış qrafiklə</span></td>
                             </tr>
                             <tr class="searchable-row">
-                                <td class="td-num">3</td>
-                                <td class="td-primary-bold">Müəllim və tələbə mobilliyi</td>
-                                <td>Müəllim və mütəxəssislərin qısamüddətli təcrübə proqramlarını, təhsilalanların qarşılıqlı səfərlərini və akademik mobilliyini təşkil etmək.</td>
-                                <td><span class="td-badge td-badge-outcome">Peşəkar və akademik təcrübənin genişlənməsi</span></td>
-                                <td><span class="td-badge td-badge-time">Ayrıca razılaşdırılmalıdır</span></td>
+                                <td class="td-num" data-label="№">3</td>
+                                <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Müəllim və tələbə mobilliyi</td>
+                                <td data-label="Görüləcək işlər və tədbirlər">Müəllim və mütəxəssislərin qısamüddətli təcrübə proqramlarını, təhsilalanların qarşılıqlı səfərlərini və akademik mobilliyini təşkil etmək.</td>
+                                <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Peşəkar və akademik təcrübənin genişlənməsi</span></td>
+                                <td data-label="İcra müddəti"><span class="td-badge td-badge-time">Ayrıca razılaşdırılmalıdır</span></td>
                             </tr>
                             <tr class="searchable-row">
-                                <td class="td-num">4</td>
-                                <td class="td-primary-bold">Birgə tədris və tədbirlər</td>
-                                <td>Onlayn dərslər, seminarlar, konfranslar, müsabiqələr, sərgilər və praktiki layihələr keçirmək.</td>
-                                <td><span class="td-badge td-badge-outcome">Birgə tədris və layihə fəaliyyətinin güclənməsi</span></td>
-                                <td><span class="td-badge td-badge-time">Tərəflərin razılığı ilə</span></td>
+                                <td class="td-num" data-label="№">4</td>
+                                <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Birgə tədris və tədbirlər</td>
+                                <td data-label="Görüləcək işlər və tədbirlər">Onlayn dərslər, seminarlar, konfranslar, müsabiqələr, sərgilər və praktiki layihələr keçirmək.</td>
+                                <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Birgə tədris və layihə fəaliyyətinin güclənməsi</span></td>
+                                <td data-label="İcra müddəti"><span class="td-badge td-badge-time">Tərəflərin razılığı ilə</span></td>
                             </tr>
                             <tr class="searchable-row">
-                                <td class="td-num">5</td>
-                                <td class="td-primary-bold">İstehsalat təcrübəsi və işəgötürənlərlə əməkdaşlıq</td>
-                                <td>İşəgötürənlərlə əməkdaşlıq və istehsalat təcrübəsinin təşkili üzrə təcrübəni öyrənmək.</td>
-                                <td><span class="td-badge td-badge-outcome">Əmək bazarının tələblərinə uyğun hazırlığın dəstəklənməsi</span></td>
-                                <td><span class="td-badge td-badge-time">İl ərzində, razılaşdırılmış qrafiklə</span></td>
+                                <td class="td-num" data-label="№">5</td>
+                                <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">İstehsalat təcrübəsi və işəgötürənlərlə əməkdaşlıq</td>
+                                <td data-label="Görüləcək işlər və tədbirlər">İşəgötürənlərlə əməkdaşlıq və istehsalat təcrübəsinin təşkili üzrə təcrübəni öyrənmək.</td>
+                                <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Əmək bazarının tələblərinə uyğun hazırlığın dəstəklənməsi</span></td>
+                                <td data-label="İcra müddəti"><span class="td-badge td-badge-time">İl ərzində, razılaşdırılmış qrafiklə</span></td>
                             </tr>
                             <tr class="searchable-row">
-                                <td class="td-num">6</td>
-                                <td class="td-primary-bold">Dil və mədəni əlaqələr</td>
-                                <td>Azərbaycan və özbək dillərinin, mədəni irsin və gənclər arasında dostluq əlaqələrinin inkişafına yönəlmiş tədbirlər təşkil etmək.</td>
-                                <td><span class="td-badge td-badge-outcome">Mədəni əlaqələrin möhkəmlənməsi</span></td>
-                                <td><span class="td-badge td-badge-time">Tərəflərin razılığı ilə</span></td>
+                                <td class="td-num" data-label="№">6</td>
+                                <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Dil və mədəni əlaqələr</td>
+                                <td data-label="Görüləcək işlər və tədbirlər">Azərbaycan və özbək dillərinin, mədəni irsin və gənclər arasında dostluq əlaqələrinin inkişafına yönəlmiş tədbirlər təşkil etmək.</td>
+                                <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Mədəni əlaqələrin möhkəmlənməsi</span></td>
+                                <td data-label="İcra müddəti"><span class="td-badge td-badge-time">Tərəflərin razılığı ilə</span></td>
                             </tr>
                             <tr class="searchable-row">
-                                <td class="td-num">7</td>
-                                <td class="td-primary-bold">Birgə təhsil proqramları</td>
-                                <td>Qanunvericiliyə və tələb olunan icazələrə uyğun olaraq birgə, o cümlədən ikili diplom proqramlarının hazırlanması imkanlarını araşdırmaq.</td>
-                                <td><span class="td-badge td-badge-outcome">Gələcək birgə proqramlar üçün imkanların qiymətləndirilməsi</span></td>
-                                <td><span class="td-badge td-badge-time">İcazə və ayrıca yazılı razılaşmalardan sonra</span></td>
+                                <td class="td-num" data-label="№">7</td>
+                                <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Birgə təhsil proqramları</td>
+                                <td data-label="Görüləcək işlər və tədbirlər">Qanunvericiliyə və tələb olunan icazələrə uyğun olaraq birgə, o cümlədən ikili diplom proqramlarının hazırlanması imkanlarını araşdırmaq.</td>
+                                <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Gələcək birgə proqramlar üçün imkanların qiymətləndirilməsi</span></td>
+                                <td data-label="İcra müddəti"><span class="td-badge td-badge-time">İcazə və ayrıca yazılı razılaşmalardan sonra</span></td>
                             </tr>
                             <tr class="searchable-row">
-                                <td class="td-num">8</td>
-                                <td class="td-primary-bold">İcra və monitorinq</td>
-                                <td>Məsul əlaqələndiricilər və işçi qruplar müəyyən etmək; 2026–2028-ci illər üçün yol xəritəsi layihəsini hazırlamaq və ehtiyac olduqda yeniləmək.</td>
-                                <td><span class="td-badge td-badge-outcome">İcra prosesinin əlaqələndirilməsi və nəticələrin izlənməsi</span></td>
-                                <td><span class="td-badge td-badge-time">2026–2028; qrafik ayrıca razılaşdırılır</span></td>
+                                <td class="td-num" data-label="№">8</td>
+                                <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">İcra və monitorinq</td>
+                                <td data-label="Görüləcək işlər və tədbirlər">Məsul əlaqələndiricilər və işçi qruplar müəyyən etmək; 2026–2028-ci illər üçün yol xəritəsi layihəsini hazırlamaq və ehtiyac olduqda yeniləmək.</td>
+                                <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">İcra prosesinin əlaqələndirilməsi və nəticələrin izlənməsi</span></td>
+                                <td data-label="İcra müddəti"><span class="td-badge td-badge-time">2026–2028; qrafik ayrıca razılaşdırılır</span></td>
                             </tr>
                             <tr class="searchable-row">
-                                <td class="td-num">9</td>
-                                <td class="td-primary-bold">Maliyyə və təhlükəsizlik şərtləri</td>
-                                <td>Hər bir layihənin xərclərini ayrıca yazılı razılaşma ilə müəyyən etmək; səfərləri və proqramları qanunvericilik, yazılı razılıq və təhlükəsizlik tələblərinə uyğun təşkil etmək.</td>
-                                <td><span class="td-badge td-badge-outcome">Hüquqi və təşkilati tələblərə riayət olunması</span></td>
-                                <td><span class="td-badge td-badge-time">Hər tədbirdən əvvəl</span></td>
+                                <td class="td-num" data-label="№">9</td>
+                                <td class="td-primary-bold" data-label="Əməkdaşlıq istiqaməti">Maliyyə və təhlükəsizlik şərtləri</td>
+                                <td data-label="Görüləcək işlər və tədbirlər">Hər bir layihənin xərclərini ayrıca yazılı razılaşma ilə müəyyən etmək; səfərləri və proqramları qanunvericilik, yazılı razılıq və təhlükəsizlik tələblərinə uyğun təşkil etmək.</td>
+                                <td data-label="Gözlənilən nəticə"><span class="td-badge td-badge-outcome">Hüquqi və təşkilati tələblərə riayət olunması</span></td>
+                                <td data-label="İcra müddəti"><span class="td-badge td-badge-time">Hər tədbirdən əvvəl</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -651,20 +1636,19 @@
     </main>
 
     <!-- ═══════════════ OFFICIAL FOOTER ═══════════════ -->
-    <footer class="doc-footer border-t border-slate-900/[0.08] dark:border-white/[0.08] bg-white dark:bg-[#071930] py-10 px-4 sm:px-6 lg:px-8 text-center">
-        <div class="doc-footer-inner border-t border-slate-900/[0.08] dark:border-white/[0.08] bg-white dark:bg-[#071930] py-10 px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto space-y-2">
-            <div class="doc-seal-mark w-12 h-12 rounded-2xl bg-blue-600/10 text-[#0a2240] dark:text-[#c8a45d] flex items-center justify-center text-2xl shrink-0">🏛️</div>
-            <div class="doc-footer-title border-t border-slate-900/[0.08] dark:border-white/[0.08] bg-white dark:bg-[#071930] py-10 px-4 sm:px-6 lg:px-8 text-center font-bold text-slate-900 dark:text-white">
+    <footer class="doc-footer">
+        <div class="doc-footer-inner">
+            <div class="doc-seal-mark" aria-hidden="true">🏛️</div>
+            <div class="doc-footer-title">
                 AZƏRBAYCAN TEXNİKİ UNİVERSİTETİNİN NƏZDİNDƏ BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ PUBLİK HÜQUQİ ŞƏXSİ
             </div>
-            <p class="doc-footer-text border-t border-slate-900/[0.08] dark:border-white/[0.08] bg-white dark:bg-[#071930] py-10 px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500 dark:text-slate-400">
+            <p class="doc-footer-text">
                 Beynəlxalq Əməkdaşlıq və Akademik Tərəfdaşlıq Departamenti · Rəsmi Sənədlər Arxivi 2026
             </p>
         </div>
     </footer>
 
     <!-- ═══════════════ INTERACTIVE LOGIC SCRIPT ═══════════════ -->
-    
     <script>
         (function() {
             const themeToggle = document.getElementById('theme-toggle');
@@ -676,6 +1660,9 @@
                 html.setAttribute('data-theme', isDark ? 'dark' : 'light');
                 html.classList.toggle('dark', isDark);
                 html.classList.toggle('dark-mode', isDark);
+                if (document.body) {
+                    document.body.classList.toggle('dark-mode', isDark);
+                }
                 themeIcon.textContent = isDark ? '☀️' : '🌙';
                 try {
                     localStorage.setItem('bdrnk-theme', isDark ? 'dark' : 'light');
@@ -703,31 +1690,32 @@
 
             const tabButtons = document.querySelectorAll('.doc-tab-btn');
             const sections = document.querySelectorAll('.filterable-section');
+            const searchInput = document.getElementById('doc-search');
+            const searchClear = document.getElementById('doc-search-clear');
+            const noResults = document.getElementById('no-results');
 
             tabButtons.forEach(btn => {
                 btn.addEventListener('click', function() {
                     tabButtons.forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
-                    const target = this.getAttribute('data-tab');
-
-                    sections.forEach(sec => {
-                        if (target === 'all' || sec.getAttribute('data-section') === target) {
-                            sec.style.display = 'block';
-                        } else {
-                            sec.style.display = 'none';
-                        }
-                    });
-
+                    if (typeof this.scrollIntoView === 'function') {
+                        try {
+                            this.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                        } catch (e) {}
+                    }
                     filterRows();
                 });
             });
 
-            const searchInput = document.getElementById('doc-search');
-            const noResults = document.getElementById('no-results');
-
             function filterRows() {
-                const q = searchInput.value.trim().toLowerCase();
-                const activeTab = document.querySelector('.doc-tab-btn.active').getAttribute('data-tab');
+                const rawQ = searchInput.value || '';
+                const q = rawQ.trim().toLowerCase();
+                if (searchClear) {
+                    searchClear.style.display = rawQ ? 'inline-flex' : 'none';
+                }
+
+                const activeBtn = document.querySelector('.doc-tab-btn.active');
+                const activeTab = activeBtn ? activeBtn.getAttribute('data-tab') : 'all';
                 let totalVisible = 0;
 
                 sections.forEach(sec => {
@@ -770,6 +1758,13 @@
             }
 
             searchInput.addEventListener('input', filterRows);
+            if (searchClear) {
+                searchClear.addEventListener('click', function() {
+                    searchInput.value = '';
+                    filterRows();
+                    searchInput.focus();
+                });
+            }
         })();
     </script>
 </body>
