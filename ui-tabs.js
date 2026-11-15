@@ -16,7 +16,6 @@
     "science",
     "honor-students",
     "teacher-certificates",
-    "certificates",
     "campus",
     "campus-floor-1",
     "campus-floor-2",
@@ -61,9 +60,9 @@
     "honor-students": "honor-students",
     "teacher-certificates": "teacher-certificates",
 
-    certificates: "certificates",
-    "sports-trophies": "certificates",
-    "trophy-stage": "certificates",
+    certificates: "honor-students",
+    "sports-trophies": "honor-students",
+    "trophy-stage": "honor-students",
 
     "campus-navigator": "campus",
     "campus-all-floors": "campus",
