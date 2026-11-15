@@ -489,3 +489,31 @@ html.dark-mode .major-dept-group-count {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- 8. Teacher Certs & Icon-Prefixed Search Bar Fix ---------- */
+.teacher-cert-controls {
+  align-items: stretch;
+}
+
+.teacher-cert-search-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.teacher-cert-search-wrap {
+  flex: 1 1 320px;
+  max-width: 560px;
+  min-width: min(260px, 100%);
+}
+
+.teacher-cert-search-input,
+.lib-lec-search-input,
+.lib-books-search-wrap .library-search,
+.science-search-input {
+  padding-left: 42px !important;
+  padding-right: 36px !important;
+}

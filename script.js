@@ -4289,7 +4289,7 @@ const newsData = [
   {
     "id": 30,
     "official_id": "2068",
-    "title_az": "BDRN Kollecində Heydər Əliyevin 102-ci ildönümünə həsr olunmuş Şer və Mahnı Müsabiqəsi keçirilib",
+    "title_az": "BDRNK-da Heydər Əliyevin 102-ci ildönümünə həsr olunmuş Şer və Mahnı Müsabiqəsi keçirilib",
     "title_en": "Poetry and Song Contest Dedicated to the 102nd Anniversary of Heydar Aliyev",
     "title_ru": "Конкурс стихов и песни, посвященный 102-й годовщине Гейдара Алиева",
     "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 30 may 2025-ci il tarixində ümummilli lider Heydər Əliyevin anadan olmasının 102-ci ildönümünə həsr...",
@@ -11778,6 +11778,17 @@ function initGalleryModule() {
     ],
     study: [
       {
+        type: "video",
+        src: "informders.mp4",
+        tall: true,
+        label: "İnformatika · Canlı Dərs Mühiti",
+        label_az: "İnformatika · Canlı Dərs Mühiti",
+        label_en: "Informatics · Live Study Environment",
+        label_ru: "Информатика · Живая учебная среда",
+        badge: "DƏRS MÜHİTİ",
+        i18n: "gallery_cat_study",
+      },
+      {
         type: "instagram",
         id: "DVtecLDiJMR",
         postType: "reel",
@@ -11903,8 +11914,8 @@ function initGalleryModule() {
         const gridHTML = items.map((item, i) => {
           const delay = `${i * 0.07}s`;
 
-          let label = item.label || "";
-          if (item.i18n) {
+          let label = item[`label_${currentLang}`] || item.label || "";
+          if (item.i18n && !item[`label_${currentLang}`]) {
             label = gT(item.i18n) + (item.suffix || "");
           }
 
