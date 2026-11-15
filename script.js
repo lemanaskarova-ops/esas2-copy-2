@@ -4287,6 +4287,28 @@ const newsData = [
     "date_ru": "03 Июня 2025"
   },
   {
+    "id": 30,
+    "official_id": "2068",
+    "title_az": "BDRNK-da Heydər Əliyevin 102-ci ildönümünə həsr olunmuş Şer və Mahnı Müsabiqəsi keçirilib",
+    "title_en": "Poetry and Song Contest Dedicated to the 102nd Anniversary of Heydar Aliyev",
+    "title_ru": "Конкурс стихов и песни, посвященный 102-й годовщине Гейдара Алиева",
+    "desc_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 30 may 2025-ci il tarixində ümummilli lider Heydər Əliyevin anadan olmasının 102-ci ildönümünə həsr...",
+    "desc_en": "On 30 May 2025, an official education activity titled \"Poetry and Song Contest Dedicated to the 102nd Anniversary of Heydar Aliyev\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    "desc_ru": "30 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Конкурс стихов и песни, посвященный 102-й годовщине Гейдара Алиева».",
+    "full_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 30 may 2025-ci il tarixində ümummilli lider Heydər Əliyevin anadan olmasının 102-ci ildönümünə həsr olunmuş Şer və Mahnı Müsabiqəsi keçirilib. Tədbirin əsas məqsədi tələbələr arasında bədii yaradıcılıq fəaliyyətini stimullaşdırmaq, onların ədəbi və musiqi istedadlarını üzə çıxarmaqla yanaşı, gənclərdə Heydər Əliyev irsinə olan marağı artırmaq və vətənpərvərlik ruhunu möhkəmləndirmək olub.\n\nMüsabiqədə kollec tələbələri müxtəlif mövzularda şeirlər səsləndirib, klassik və müasir musiqilərdən ibarət mahnılar ifa ediblər. Çıxışlar zamanı Ulu Öndərin həyat yolu, dövlətçilik sahəsindəki misilsiz xidmətləri və Azərbaycan gəncliyinə göstərdiyi diqqət və qayğı xüsusi vurğulanıb.\n\nTədbirin sonunda münsiflər heyətinin qərarı ilə fərqlənən iştirakçılara fəxri fərmanlar, diplomlar və qiymətli hədiyyələr təqdim olunub. Bu cür tədbirlər tələbələrin mədəni-estetik inkişafına təkan verir və onların sosial aktivliyini artırmaqla yanaşı, milli-mənəvi dəyərlərə bağlı bir nəsil yetişməsinə dəstək olur.",
+    "full_en": "On 30 May 2025, an official education activity titled \"Poetry and Song Contest Dedicated to the 102nd Anniversary of Heydar Aliyev\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
+    "full_ru": "30 Мая 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Конкурс стихов и песни, посвященный 102-й годовщине Гейдара Алиева».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
+    "date": "30 May 2025",
+    "image": "news_proper_2068.jpeg",
+    "url": "https://www.rabitankolleci.edu.az/news/2068",
+    "tag_az": "Təhsil",
+    "tag_en": "Education",
+    "tag_ru": "Образование",
+    "date_az": "30 May 2025",
+    "date_en": "30 May 2025",
+    "date_ru": "30 Мая 2025"
+  },
+  {
     "id": 31,
     "official_id": "2053",
     "title_az": "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 30.05.2025-ci il tarixdə “İnsan Hüquqları Aylığı” çərçivəsində tədbir keçirilmişdir",
