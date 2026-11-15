@@ -140,7 +140,7 @@
       } catch (e) { }
     }
     document
-      .querySelectorAll(".tab-workspace-panel.is-active .reveal")
+      .querySelectorAll(".tab-workspace-panel.is-active .reveal, .tab-workspace-panel.is-active .roadmap-item")
       .forEach((node) => {
         node.classList.add("visible");
       });
