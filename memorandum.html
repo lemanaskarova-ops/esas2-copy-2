@@ -1,776 +1,145 @@
-<!DOCTYPE html>
-<html lang="az" data-theme="light">
-
+<!doctype html>
+<html lang="az">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beynəlxalq Əməkdaşlıq Memorandumları — Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik Hüquqi Şəxsi</title>
-    <meta name="description"
-        content="Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik Hüquqi Şəxsinin Qazaxıstan və Özbəkistanın təhsil müəssisələri ilə rəsmi əməkdaşlıq memorandumları və tədbirlər planı." />
+    <meta name="description" content="AzTU-nun nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik Hüquqi Şəxsi — Beynəlxalq əməkdaşlıq memorandumları, birgə tədbirlər planı və təhsil əlaqələri arxivi." />
     <link rel="icon" type="image/jpeg" href="logo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        display: ['Playfair Display', 'Merriweather', 'Georgia', 'serif'],
+                        mono: ['IBM Plex Mono', 'ui-monospace', 'monospace'],
+                    },
+                    boxShadow: {
+                        apple: '0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px -8px rgba(15, 23, 42, 0.08)',
+                        vercel: '0 0 0 1px rgba(15, 23, 42, 0.08), 0 16px 40px -12px rgba(15, 23, 42, 0.12)',
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="style.css?v=20261115_01" />
+    <link rel="stylesheet" href="tailwind-utilities.css?v=20261115_01" />
+    <link rel="stylesheet" href="design-system.css?v=20261115_01" />
     <style>
-        /* ══════════════════════════════════════════════════════════════
-           BDRNK OFFICIAL MEMORANDUM DOCUMENT VIEWER 2026
-           Ultra-Refined Academic & Institutional Prestige Design
-           ══════════════════════════════════════════════════════════════ */
-        :root {
-            --bg: #f8fafc;
-            --bg-page: #f1f5f9;
-            --surface: #ffffff;
-            --surface-elevated: #ffffff;
-            --surface-card: #ffffff;
-            --surface-soft: #f8fafc;
-            --border: #e2e8f0;
-            --border-hover: #cbd5e1;
-            --border-gold: rgba(184, 147, 74, 0.4);
-            --text-primary: #0a192f;
-            --text-secondary: #1e3a5f;
-            --text-muted: #475569;
-            --accent-navy: #0a2240;
-            --accent-navy-h: #163a66;
-            --accent-gold: #b8934a;
-            --accent-gold-light: #d4af37;
-            --accent-gold-glow: rgba(184, 147, 74, 0.15);
-            --accent-blue: #0284c7;
-            --accent-emerald: #059669;
-            --accent-amber: #d97706;
-            --shadow-sm: 0 1px 3px rgba(10, 34, 64, 0.05);
-            --shadow-md: 0 4px 16px rgba(10, 34, 64, 0.07);
-            --shadow-lg: 0 10px 30px rgba(10, 34, 64, 0.1);
-            --shadow-gold: 0 4px 20px rgba(184, 147, 74, 0.2);
-            --radius-sm: 8px;
-            --radius-md: 14px;
-            --radius-lg: 20px;
-            --radius-pill: 9999px;
-            --font-main: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            --font-serif: "Merriweather", Georgia, serif;
-            --font-mono: "IBM Plex Mono", monospace;
+        .doc-section-card h2,
+        .doc-section-card h3,
+        .doc-section-card h4,
+        .doc-partner-card strong {
+            color: var(--text);
         }
-
-        [data-theme="dark"] {
-            --bg: #07101d;
-            --bg-page: #0a1424;
-            --surface: #0f1c30;
-            --surface-elevated: #14243d;
-            --surface-card: #112138;
-            --surface-soft: #0c182b;
-            --border: rgba(255, 255, 255, 0.1);
-            --border-hover: rgba(184, 147, 74, 0.45);
-            --border-gold: rgba(212, 175, 55, 0.45);
-            --text-primary: #f8fafc;
-            --text-secondary: #e2e8f0;
-            --text-muted: #94a3b8;
-            --accent-navy: #1b3558;
-            --accent-navy-h: #23436f;
-            --accent-gold: #d4af37;
-            --accent-gold-light: #f1c40f;
-            --accent-gold-glow: rgba(212, 175, 55, 0.2);
-            --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.4);
-            --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.5);
-            --shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.6);
+        .doc-tab-btn.active {
+            background: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+            box-shadow: 0 4px 14px var(--accent-glow);
         }
-
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: var(--font-main);
-            background-color: var(--bg);
-            color: var(--text-primary);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* ─── TOP ACTION BAR ─── */
-        .doc-topbar {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: var(--surface);
+        .official-table th {
+            background: var(--bg-alt);
+            color: var(--text-dim);
+            font-size: 0.74rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0.85rem 1rem;
+            text-align: left;
             border-bottom: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
         }
-
-        .doc-topbar-inner {
-            max-width: 1320px;
-            margin: 0 auto;
-            padding: 12px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
+        .official-table td {
+            padding: 0.9rem 1rem;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+            font-size: 0.88rem;
+            line-height: 1.58;
+            color: var(--text-secondary);
         }
-
-        .doc-brand {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-decoration: none;
-            color: inherit;
+        .official-table tbody tr:hover td {
+            background: var(--accent-glow);
         }
-
-        .doc-brand-logo {
-            width: 44px;
-            height: 44px;
-            border-radius: var(--radius-sm);
-            object-fit: cover;
-            border: 1px solid var(--border-gold);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-        }
-
-        .doc-brand-titles {
+        .bullet-list {
+            list-style: disc;
+            padding-left: 1.25rem;
             display: flex;
             flex-direction: column;
+            gap: 0.35rem;
         }
-
-        .doc-brand-sub {
-            font-size: 0.72rem;
+        .td-num {
+            font-family: var(--font-mono);
             font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: var(--accent-gold);
-        }
-
-        .doc-brand-main {
-            font-size: 0.95rem;
-            font-weight: 800;
-            color: var(--text-primary);
-            letter-spacing: -0.01em;
-        }
-
-        .doc-top-actions {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .top-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            border-radius: var(--radius-pill);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            border: 1px solid var(--border);
-            background: var(--surface-soft);
-            color: var(--text-secondary);
-        }
-
-        .top-btn:hover {
-            border-color: var(--accent-gold);
-            color: var(--accent-gold);
-            transform: translateY(-1px);
-        }
-
-        .top-btn-primary {
-            background: linear-gradient(135deg, var(--accent-navy) 0%, #163a66 100%);
-            color: #ffffff !important;
-            border-color: rgba(184, 147, 74, 0.4);
-            box-shadow: 0 2px 8px rgba(10, 34, 64, 0.15);
-        }
-
-        .top-btn-primary:hover {
-            background: linear-gradient(135deg, #163a66 0%, #1e4d85 100%);
-            box-shadow: var(--shadow-gold);
-            color: #ffffff !important;
-        }
-
-        .theme-toggle-btn {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid var(--border);
-            background: var(--surface-soft);
-            color: var(--text-primary);
-            cursor: pointer;
-            font-size: 1.05rem;
-            transition: all 0.2s ease;
-        }
-
-        .theme-toggle-btn:hover {
-            border-color: var(--accent-gold);
-            transform: rotate(20deg);
-        }
-
-        /* ─── HERO HEADER ─── */
-        .doc-hero {
-            background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
-            border-bottom: 1px solid var(--border);
-            padding: 50px 24px 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .doc-hero::before {
-            content: "";
-            position: absolute;
-            top: -120px;
-            right: 5%;
-            width: 450px;
-            height: 450px;
-            background: radial-gradient(circle, var(--accent-gold-glow) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .doc-hero-inner {
-            max-width: 1320px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-
-        .doc-badge-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 16px;
-            border-radius: var(--radius-pill);
-            background: rgba(184, 147, 74, 0.12);
-            border: 1px solid var(--border-gold);
-            color: var(--accent-gold);
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .doc-title {
-            font-family: var(--font-serif);
-            font-size: clamp(1.8rem, 3.5vw, 2.7rem);
-            font-weight: 700;
-            color: var(--text-primary);
-            line-height: 1.25;
-            margin-bottom: 14px;
-            letter-spacing: -0.01em;
-        }
-
-        .doc-subtitle {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            max-width: 860px;
-            margin: 0 auto 30px;
-            line-height: 1.6;
-        }
-
-        /* ─── PARTNER INSTITUTIONS STRIP ─── */
-        .doc-partners-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-            gap: 16px;
-            max-width: 1140px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .doc-partner-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 18px 20px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.25s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .doc-partner-card:hover {
-            border-color: var(--border-gold);
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-        }
-
-        .doc-partner-flag {
-            font-size: 2.2rem;
-            line-height: 1;
-            flex-shrink: 0;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-        }
-
-        .doc-partner-info h4 {
-            font-size: 0.92rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 3px;
-            line-height: 1.35;
-        }
-
-        .doc-partner-info p {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            line-height: 1.3;
-        }
-
-        .doc-partner-role {
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            margin-top: 4px;
-            display: block;
-        }
-
-        /* ─── SEARCH & CONTROLS BAR ─── */
-        .doc-controls-section {
-            max-width: 1320px;
-            margin: 30px auto 20px;
-            padding: 0 24px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-        }
-
-        .doc-tabs-nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            background: var(--surface-card);
-            padding: 6px;
-            border-radius: var(--radius-pill);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .doc-tab-btn {
-            background: transparent;
-            border: none;
-            padding: 8px 18px;
-            border-radius: var(--radius-pill);
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .doc-tab-btn:hover {
-            color: var(--text-primary);
-            background: rgba(184, 147, 74, 0.08);
-        }
-
-        .doc-tab-btn.active {
-            background: var(--accent-navy);
-            color: #ffffff;
-            box-shadow: 0 2px 8px rgba(10, 34, 64, 0.2);
-        }
-
-        [data-theme="dark"] .doc-tab-btn.active {
-            background: var(--accent-gold);
-            color: #07101d;
-            font-weight: 700;
-        }
-
-        .doc-search-box {
-            position: relative;
-            min-width: 280px;
-        }
-
-        .doc-search-input {
-            width: 100%;
-            padding: 10px 16px 10px 38px;
-            border-radius: var(--radius-pill);
-            border: 1px solid var(--border);
-            background: var(--surface);
-            color: var(--text-primary);
-            font-size: 0.86rem;
-            font-family: inherit;
-            outline: none;
-            transition: all 0.2s ease;
-        }
-
-        .doc-search-input:focus {
-            border-color: var(--accent-gold);
-            box-shadow: 0 0 0 3px var(--accent-gold-glow);
-        }
-
-        .doc-search-icon {
-            position: absolute;
-            left: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-            pointer-events: none;
-            font-size: 0.95rem;
-        }
-
-        /* ─── MAIN CONTENT CONTAINER ─── */
-        .doc-main-container {
-            max-width: 1320px;
-            margin: 0 auto 60px;
-            padding: 0 24px;
-        }
-
-        /* ─── SECTION STYLING ─── */
-        .doc-section-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 36px 32px;
-            margin-bottom: 36px;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .doc-section-card:hover {
-            border-color: var(--border-hover);
-            box-shadow: var(--shadow-md);
-        }
-
-        .doc-section-header {
-            margin-bottom: 24px;
-            padding-bottom: 18px;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 16px;
-        }
-
-        .doc-section-header-text h2 {
-            font-family: var(--font-serif);
-            font-size: 1.45rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            line-height: 1.35;
-            margin-bottom: 6px;
-        }
-
-        .doc-section-header-text p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
-
-        .doc-source-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 4px 12px;
-            border-radius: var(--radius-pill);
-            background: rgba(2, 132, 199, 0.1);
-            border: 1px solid rgba(2, 132, 199, 0.25);
-            color: var(--accent-blue);
-            font-size: 0.74rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        /* ─── OFFICIAL TABLES ─── */
-        .table-responsive {
-            width: 100%;
-            overflow-x: auto;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border);
-            background: var(--surface);
-            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
-            margin-bottom: 24px;
-        }
-
-        .official-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.88rem;
-            text-align: left;
-            min-width: 840px;
-        }
-
-        .official-table th {
-            background: var(--surface-soft);
-            color: var(--text-secondary);
-            font-weight: 700;
-            padding: 14px 16px;
-            border-bottom: 2px solid var(--border);
-            font-size: 0.82rem;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
+            color: var(--accent);
             white-space: nowrap;
         }
-
-        .official-table td {
-            padding: 14px 16px;
-            border-bottom: 1px solid var(--border);
-            color: var(--text-primary);
-            vertical-align: top;
-            line-height: 1.55;
-        }
-
-        .official-table tbody tr:hover {
-            background-color: rgba(184, 147, 74, 0.04);
-        }
-
-        .official-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        .td-num {
-            font-weight: 700;
-            color: var(--accent-gold);
-            width: 44px;
-            text-align: center;
-            font-family: var(--font-mono);
-        }
-
         .td-primary-bold {
             font-weight: 700;
-            color: var(--text-secondary);
+            color: var(--text);
         }
-
-        .td-badge {
+        .td-badge, .td-badge-time, .td-badge-outcome, .td-badge-note {
             display: inline-block;
-            padding: 3px 10px;
-            border-radius: var(--radius-pill);
             font-size: 0.74rem;
             font-weight: 600;
-            white-space: nowrap;
+            padding: 0.22rem 0.6rem;
+            border-radius: 999px;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            color: var(--accent);
         }
-
-        .td-badge-time {
-            background: rgba(184, 147, 74, 0.12);
-            color: var(--accent-gold);
-            border: 1px solid var(--border-gold);
-        }
-
-        .td-badge-outcome {
-            background: rgba(5, 150, 105, 0.1);
-            color: var(--accent-emerald);
-            border: 1px solid rgba(5, 150, 105, 0.25);
-        }
-
-        .td-badge-note {
-            background: rgba(217, 119, 6, 0.1);
-            color: var(--accent-amber);
-            border: 1px solid rgba(217, 119, 6, 0.25);
-        }
-
-        .bullet-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .bullet-list li {
-            position: relative;
-            padding-left: 18px;
-            margin-bottom: 6px;
-            line-height: 1.45;
-        }
-
-        .bullet-list li::before {
-            content: "•";
-            position: absolute;
-            left: 4px;
-            color: var(--accent-gold);
-            font-weight: 900;
-            font-size: 1.1rem;
-            line-height: 1.2;
-        }
-
-        /* ─── SPECIAL HIGHLIGHT BOXES ─── */
-        .info-callout {
-            border-left: 4px solid var(--accent-gold);
-            background: var(--surface-soft);
-            padding: 16px 20px;
-            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-            margin: 20px 0;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .info-callout strong {
-            color: var(--text-primary);
-        }
-
-        /* ─── FOOTER & OFFICIAL SEAL ─── */
-        .doc-footer {
-            border-top: 1px solid var(--border);
-            padding: 40px 24px 60px;
-            background: var(--surface);
-            text-align: center;
-        }
-
-        .doc-footer-inner {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .doc-seal-mark {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: var(--surface-soft);
-            border: 2px solid var(--border-gold);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            margin-bottom: 16px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .doc-footer-title {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 6px;
-        }
-
-        .doc-footer-text {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
-
-        /* ─── NO MATCH SEARCH NOTICE ─── */
         .no-search-results {
             display: none;
             text-align: center;
-            padding: 60px 20px;
-            color: var(--text-muted);
+            padding: 3rem 1.5rem;
+            border-radius: 20px;
+            background: var(--surface);
+            border: 1px dashed var(--border-hover);
+            color: var(--text-dim);
         }
-
-        .no-search-results h3 {
-            font-size: 1.2rem;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-        }
-
-        /* ─── PRINT MEDIA STYLES ─── */
         @media print {
-            body {
-                background: #ffffff !important;
-                color: #000000 !important;
-                font-size: 10pt;
-            }
-
-            .doc-topbar,
-            .doc-controls-section,
-            .doc-tab-btn,
-            .top-btn,
-            .theme-toggle-btn {
-                display: none !important;
-            }
-
-            .doc-hero {
-                padding: 20px 0;
-                background: transparent !important;
-                border-bottom: 2px solid #000000;
-            }
-
-            .doc-hero::before {
-                display: none !important;
-            }
-
-            .doc-section-card {
-                box-shadow: none !important;
-                border: 1px solid #cccccc !important;
-                padding: 15px !important;
-                margin-bottom: 25px !important;
-                page-break-inside: avoid;
-            }
-
-            .official-table {
-                min-width: 100% !important;
-                font-size: 9pt;
-            }
-
-            .official-table th {
-                background: #f0f0f0 !important;
-                color: #000000 !important;
-                border-bottom: 1px solid #000000 !important;
-            }
-
-            .official-table td {
-                border-bottom: 1px solid #e0e0e0 !important;
-                color: #000000 !important;
-            }
-
-            .doc-section-card[style*="display: none"] {
-                display: block !important;
-            }
-        }
-
-        /* Responsive Breakpoints */
-        @media (max-width: 768px) {
-            .doc-section-card {
-                padding: 22px 16px;
-            }
-
-            .doc-topbar-inner {
-                padding: 10px 16px;
-            }
-
-            .doc-controls-section {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .doc-tabs-nav {
-                width: 100%;
-                justify-content: flex-start;
-                overflow-x: auto;
-                border-radius: var(--radius-md);
-            }
-
-            .doc-search-box {
-                width: 100%;
-            }
+            .doc-topbar, .doc-controls-section, .no-search-results { display: none !important; }
+            body { background: #ffffff !important; color: #0f172a !important; }
         }
     </style>
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('bdrnk-theme') || localStorage.getItem('bdrnk_theme');
+                if (saved === 'dark') {
+                    document.documentElement.classList.add('dark-mode', 'dark');
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
+<body class="bg-white text-[#0a192f] dark:bg-[#081120] dark:text-slate-100 antialiased">
 
-<body>
 
     <!-- ═══════════════ TOP ACTION BAR ═══════════════ -->
-    <header class="doc-topbar">
-        <div class="doc-topbar-inner">
-            <a href="index.html" class="doc-brand">
-                <img src="logo.jpg" alt="BDRNK Loqo" class="doc-brand-logo" onerror="this.style.display='none'" />
-                <div class="doc-brand-titles">
-                    <span class="doc-brand-sub">AzTU nəzdində BDRNK Publik Hüquqi Şəxsi</span>
-                    <span class="doc-brand-main">Beynəlxalq Əməkdaşlıq Memorandumları</span>
+    <header class="doc-topbar sticky top-0 z-50 bg-white/80 dark:bg-[#081120]/80 backdrop-blur-2xl border-b border-slate-900/[0.08] dark:border-white/[0.08]">
+        <div class="doc-topbar-inner sticky top-0 z-50 bg-white/80 dark:bg-[#081120]/80 backdrop-blur-2xl border-b border-slate-900/[0.08] dark:border-white/[0.08] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-4">
+            <a href="index.html" class="doc-brand flex items-center gap-3">
+                <img src="logo.jpg" alt="BDRNK Loqo" class="doc-brand-logo flex items-center gap-3 w-10 h-10 rounded-xl object-cover border border-slate-900/10 dark:border-white/15" onerror="this.style.display='none'" />
+                <div class="doc-brand-titles flex items-center gap-3">
+                    <span class="doc-brand-sub flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 block">AzTU nəzdində BDRNK Publik Hüquqi Şəxsi</span>
+                    <span class="doc-brand-main flex items-center gap-3 text-sm font-extrabold tracking-tight text-slate-900 dark:text-white block">Beynəlxalq Əməkdaşlıq Memorandumları</span>
                 </div>
             </a>
 
-            <div class="doc-top-actions">
-                <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Rejimi dəyişdir" title="Gündüz / Gecə rejimi">
+            <div class="doc-top-actions flex items-center gap-2.5 flex-wrap">
+                <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl bg-slate-100 dark:bg-white/[0.06] border border-slate-900/[0.08] dark:border-white/[0.08] inline-flex items-center justify-center cursor-pointer hover:scale-105 transition" id="theme-toggle" aria-label="Rejimi dəyişdir" title="Gündüz / Gecə rejimi">
                     <span id="theme-icon">🌙</span>
                 </button>
-                <button type="button" class="top-btn" onclick="window.print()" title="Sənədi Çap et və ya PDF kimi saxla">
+                <button type="button" class="top-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/[0.05] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/[0.1] transition cursor-pointer" onclick="window.print()" title="Sənədi Çap et və ya PDF kimi saxla">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="6 9 6 2 18 2 18 9"></polyline>
                         <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
@@ -778,7 +147,7 @@
                     </svg>
                     <span>Çap Et / PDF</span>
                 </button>
-                <a href="index.html#about" class="top-btn top-btn-primary">
+                <a href="index.html#about" class="top-btn top-btn-primary inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/[0.05] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/[0.1] transition cursor-pointer !bg-slate-950 !text-white dark:!bg-white dark:!text-slate-950 !border-transparent shadow-sm">
                     <span>← Əsas Səhifə</span>
                 </a>
             </div>
@@ -786,49 +155,49 @@
     </header>
 
     <!-- ═══════════════ HERO HEADER ═══════════════ -->
-    <section class="doc-hero">
-        <div class="doc-hero-inner">
-            <div class="doc-badge-pill">
+    <section class="doc-hero relative overflow-hidden py-14 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-slate-50 to-slate-100/70 dark:from-[#081120] dark:via-[#0c182c] dark:to-[#081120] border-b border-slate-900/[0.07] dark:border-white/[0.07]">
+        <div class="doc-hero-inner relative overflow-hidden py-14 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-slate-50 to-slate-100/70 dark:from-[#081120] dark:via-[#0c182c] dark:to-[#081120] border-b border-slate-900/[0.07] dark:border-white/[0.07] max-w-7xl mx-auto space-y-6">
+            <div class="doc-badge-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/25">
                 <span>✦</span>
                 <span>Rəsmi Akademik Əməkdaşlıq Sənədləri</span>
                 <span>✦</span>
             </div>
-            <h1 class="doc-title">Əməkdaşlıq Memorandumları və Tədbirlər Planı</h1>
-            <p class="doc-subtitle">
+            <h1 class="doc-title font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">Əməkdaşlıq Memorandumları və Tədbirlər Planı</h1>
+            <p class="doc-subtitle text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
                 Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin beynəlxalq
                 tərəfdaşlıq əlaqələri, Qazaxıstan və Özbəkistanın qabaqcıl nəqliyyat təhsili müəssisələri ilə birgə fəaliyyət
                 proqramları və strateji tədbirlər planı.
             </p>
 
             <!-- Partner Institutions Strip -->
-            <div class="doc-partners-grid">
+            <div class="doc-partners-grid grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
                 <!-- Partner 1: Azerbaijan -->
-                <div class="doc-partner-card">
-                    <div class="doc-partner-flag">🇦🇿</div>
+                <div class="doc-partner-card p-5 rounded-3xl bg-white/85 dark:bg-[#112038]/85 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-apple flex items-start gap-3.5 hover:-translate-y-0.5 transition-all">
+                    <div class="doc-partner-flag text-3xl shrink-0">🇦🇿</div>
                     <div class="doc-partner-info">
                         <h4>Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik Hüquqi Şəxsi</h4>
                         <p>Azərbaycan Respublikası · Bakı şəhəri</p>
-                        <span class="doc-partner-role">Təşkilatçı və Əlaqələndirici Tərəf</span>
+                        <span class="doc-partner-role text-xs text-slate-500 dark:text-slate-400 mt-1 block">Təşkilatçı və Əlaqələndirici Tərəf</span>
                     </div>
                 </div>
 
                 <!-- Partner 2: Kazakhstan -->
-                <div class="doc-partner-card">
-                    <div class="doc-partner-flag">🇰🇿</div>
+                <div class="doc-partner-card p-5 rounded-3xl bg-white/85 dark:bg-[#112038]/85 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-apple flex items-start gap-3.5 hover:-translate-y-0.5 transition-all">
+                    <div class="doc-partner-flag text-3xl shrink-0">🇰🇿</div>
                     <div class="doc-partner-info">
                         <h4>ALT Aktau adına M. Tınışpayev Nəqliyyat Kolleci</h4>
                         <p>Qazaxıstan Respublikası · Aktau şəhəri</p>
-                        <span class="doc-partner-role">Tərəfdaş Təhsil Müəssisəsi</span>
+                        <span class="doc-partner-role text-xs text-slate-500 dark:text-slate-400 mt-1 block">Tərəfdaş Təhsil Müəssisəsi</span>
                     </div>
                 </div>
 
                 <!-- Partner 3: Uzbekistan -->
-                <div class="doc-partner-card">
-                    <div class="doc-partner-flag">🇺🇿</div>
+                <div class="doc-partner-card p-5 rounded-3xl bg-white/85 dark:bg-[#112038]/85 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-apple flex items-start gap-3.5 hover:-translate-y-0.5 transition-all">
+                    <div class="doc-partner-flag text-3xl shrink-0">🇺🇿</div>
                     <div class="doc-partner-info">
                         <h4>Daşkənd Nəqliyyat Texnikumu</h4>
                         <p>Özbəkistan Respublikası · Daşkənd şəhəri</p>
-                        <span class="doc-partner-role">İnstitusional Əməkdaş Tərəf</span>
+                        <span class="doc-partner-role text-xs text-slate-500 dark:text-slate-400 mt-1 block">İnstitusional Əməkdaş Tərəf</span>
                     </div>
                 </div>
             </div>
@@ -836,30 +205,30 @@
     </section>
 
     <!-- ═══════════════ CONTROLS & TABS ═══════════════ -->
-    <div class="doc-controls-section">
-        <nav class="doc-tabs-nav" role="tablist" aria-label="Sənəd Bölmələri">
-            <button type="button" class="doc-tab-btn active" data-tab="all">
+    <div class="doc-controls-section p-4 rounded-2xl bg-white/85 dark:bg-[#112038]/85 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-sm flex flex-wrap items-center justify-between gap-4">
+        <nav class="doc-tabs-nav flex flex-wrap gap-2" role="tablist" aria-label="Sənəd Bölmələri">
+            <button type="button" class="doc-tab-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 text-slate-700 dark:text-slate-300 cursor-pointer transition" data-tab="all">
                 <span>📑 Bütün Sənədlər</span>
             </button>
-            <button type="button" class="doc-tab-btn" data-tab="doc1">
+            <button type="button" class="doc-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 text-slate-700 dark:text-slate-300 cursor-pointer transition" data-tab="doc1">
                 <span>📋 Məlumat Cədvəli</span>
             </button>
-            <button type="button" class="doc-tab-btn" data-tab="doc2">
+            <button type="button" class="doc-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 text-slate-700 dark:text-slate-300 cursor-pointer transition" data-tab="doc2">
                 <span>🤝 Üçtərəfli Tədbirlər Planı</span>
             </button>
-            <button type="button" class="doc-tab-btn" data-tab="doc3">
+            <button type="button" class="doc-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 text-slate-700 dark:text-slate-300 cursor-pointer transition" data-tab="doc3">
                 <span>🇺🇿 Daşkənd Memorandumu</span>
             </button>
         </nav>
 
-        <div class="doc-search-box">
-            <span class="doc-search-icon">🔍</span>
-            <input type="text" id="doc-search" class="doc-search-input" placeholder="Cədvəllərdə və mətndə axtarış..." aria-label="Axtarış" />
+        <div class="doc-search-box relative flex items-center w-full sm:w-80">
+            <span class="doc-search-icon w-4 h-4 text-slate-400 absolute left-3.5 pointer-events-none">🔍</span>
+            <input type="text" id="doc-search" class="doc-search-input w-full pl-10 pr-4 py-2 rounded-xl border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 text-sm focus:outline-none focus:ring-2 focus:ring-[#0a2240]/30 dark:focus:ring-[#c8a45d]/40" placeholder="Cədvəllərdə və mətndə axtarış..." aria-label="Axtarış" />
         </div>
     </div>
 
     <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
-    <main class="doc-main-container">
+    <main class="doc-main-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
 
         <!-- No search results placeholder -->
         <div id="no-results" class="no-search-results">
@@ -870,17 +239,17 @@
         <!-- ══════════════════════════════════════════════════════════════
              SƏNƏD 1: Memorandum 1.pdf (BİRE BİR MƏTN)
              ══════════════════════════════════════════════════════════════ -->
-        <section class="doc-section-card filterable-section" id="section-doc1" data-section="doc1">
-            <header class="doc-section-header">
-                <div class="doc-section-header-text">
-                    <span class="doc-source-tag">Məlumat Cədvəli</span>
+        <section class="doc-section-card filterable-section p-6 sm:p-8 rounded-3xl bg-white/90 dark:bg-[#112038]/90 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-apple space-y-6" id="section-doc1" data-section="doc1">
+            <header class="doc-section-header flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-slate-900/[0.08] dark:border-white/[0.08]">
+                <div class="doc-section-header-text flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-slate-900/[0.08] dark:border-white/[0.08]">
+                    <span class="doc-source-tag inline-block text-xs font-mono font-semibold text-[#0a2240] dark:text-[#c8a45d] mb-1">Məlumat Cədvəli</span>
                     <h2>AZƏRBAYCAN TEXNİKİ UNİVERSİTETİNİN NƏZDİNDƏ<br />BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ</h2>
                     <p><strong>ƏMƏKDAŞLIQ MEMORANDUMLARI ÜZRƏ MƏLUMAT CƏDVƏLİ</strong> · Kollecin beynəlxalq əməkdaşlıq əlaqələri</p>
                 </div>
             </header>
 
-            <div class="table-responsive">
-                <table class="official-table" id="table-memorandum-1">
+            <div class="table-responsive overflow-x-auto rounded-2xl border border-slate-900/[0.08] dark:border-white/[0.08]">
+                <table class="official-table w-full border-collapse" id="table-memorandum-1">
                     <thead>
                         <tr>
                             <th class="td-num">№</th>
@@ -961,17 +330,17 @@
              SƏNƏD 2: Memorandum.pdf — HİSSƏ 1 (BİRE BİR MƏTN)
              2026–2027-Cİ TƏDRİS İLİ ÜZRƏ MEMORANDUM ÇƏRÇİVƏSİNDƏ ƏMƏKDAŞLIQ TƏDBİRLƏRİ PLANI
              ══════════════════════════════════════════════════════════════ -->
-        <section class="doc-section-card filterable-section" id="section-doc2" data-section="doc2">
-            <header class="doc-section-header">
-                <div class="doc-section-header-text">
-                    <span class="doc-source-tag">Tədbirlər Planı (Hissə 1)</span>
+        <section class="doc-section-card filterable-section p-6 sm:p-8 rounded-3xl bg-white/90 dark:bg-[#112038]/90 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-apple space-y-6" id="section-doc2" data-section="doc2">
+            <header class="doc-section-header flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-slate-900/[0.08] dark:border-white/[0.08]">
+                <div class="doc-section-header-text flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-slate-900/[0.08] dark:border-white/[0.08]">
+                    <span class="doc-source-tag inline-block text-xs font-mono font-semibold text-[#0a2240] dark:text-[#c8a45d] mb-1">Tədbirlər Planı (Hissə 1)</span>
                     <h2>2026–2027-Cİ TƏDRİS İLİ ÜZRƏ<br />MEMORANDUM ÇƏRÇİVƏSİNDƏ ƏMƏKDAŞLIQ TƏDBİRLƏRİ PLANI</h2>
                     <p><strong>Bakı Dövlət Rabitə və Nəqliyyat Kolleci – ALT Aktau M. Tınışpayev adına Nəqliyyat Kolleci – Daşkənd Nəqliyyat Texnikumu</strong></p>
                 </div>
             </header>
 
-            <div class="table-responsive">
-                <table class="official-table" id="table-memorandum-plan-1">
+            <div class="table-responsive overflow-x-auto rounded-2xl border border-slate-900/[0.08] dark:border-white/[0.08]">
+                <table class="official-table w-full border-collapse" id="table-memorandum-plan-1">
                     <thead>
                         <tr>
                             <th class="td-num">№</th>
@@ -1075,8 +444,8 @@
                 <h3 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 14px;">
                     İCRA VƏ NƏZARƏT
                 </h3>
-                <div class="table-responsive">
-                    <table class="official-table" id="table-memorandum-control">
+                <div class="table-responsive overflow-x-auto rounded-2xl border border-slate-900/[0.08] dark:border-white/[0.08]">
+                    <table class="official-table w-full border-collapse" id="table-memorandum-control">
                         <thead>
                             <tr>
                                 <th class="td-num">№</th>
@@ -1120,10 +489,10 @@
              SƏNƏD 3: Memorandum.pdf — HİSSƏ 2 (BİRE BİR MƏTN)
              Özbəkistan – Azərbaycan: Daşkənd Nəqliyyat Texnikumu ilə əməkdaşlıq haqqında memorandum
              ══════════════════════════════════════════════════════════════ -->
-        <section class="doc-section-card filterable-section" id="section-doc3" data-section="doc3">
-            <header class="doc-section-header">
-                <div class="doc-section-header-text">
-                    <span class="doc-source-tag">İkitərəfli Memorandum (Hissə 2)</span>
+        <section class="doc-section-card filterable-section p-6 sm:p-8 rounded-3xl bg-white/90 dark:bg-[#112038]/90 backdrop-blur-xl border border-slate-900/[0.08] dark:border-white/[0.08] shadow-apple space-y-6" id="section-doc3" data-section="doc3">
+            <header class="doc-section-header flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-slate-900/[0.08] dark:border-white/[0.08]">
+                <div class="doc-section-header-text flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-slate-900/[0.08] dark:border-white/[0.08]">
+                    <span class="doc-source-tag inline-block text-xs font-mono font-semibold text-[#0a2240] dark:text-[#c8a45d] mb-1">İkitərəfli Memorandum (Hissə 2)</span>
                     <h2>2026–2027-Cİ TƏDRİS İLİ ÜZRƏ<br />MEMORANDUM ÇƏRÇİVƏSİNDƏ ƏMƏKDAŞLIQ TƏDBİRLƏRİ PLANI</h2>
                     <p><strong>Özbəkistan – Azərbaycan: Daşkənd Nəqliyyat Texnikumu ilə əməkdaşlıq haqqında memorandum</strong></p>
                     <p style="margin-top: 4px; font-size: 0.88rem;">
@@ -1136,8 +505,8 @@
             <h3 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 14px;">
                 MEMORANDUM ÜZRƏ ƏSAS MÜDDƏALAR
             </h3>
-            <div class="table-responsive">
-                <table class="official-table" id="table-memorandum-provisions">
+            <div class="table-responsive overflow-x-auto rounded-2xl border border-slate-900/[0.08] dark:border-white/[0.08]">
+                <table class="official-table w-full border-collapse" id="table-memorandum-provisions">
                     <thead>
                         <tr>
                             <th style="width: 250px;">İstiqamət</th>
@@ -1198,8 +567,8 @@
                 <h3 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 14px;">
                     MEMORANDUM ÜZRƏ ƏMƏKDAŞLIQ TƏDBİRLƏRİ CƏDVƏLİ
                 </h3>
-                <div class="table-responsive">
-                    <table class="official-table" id="table-memorandum-events-uzbek">
+                <div class="table-responsive overflow-x-auto rounded-2xl border border-slate-900/[0.08] dark:border-white/[0.08]">
+                    <table class="official-table w-full border-collapse" id="table-memorandum-events-uzbek">
                         <thead>
                             <tr>
                                 <th class="td-num">№</th>
@@ -1282,48 +651,49 @@
     </main>
 
     <!-- ═══════════════ OFFICIAL FOOTER ═══════════════ -->
-    <footer class="doc-footer">
-        <div class="doc-footer-inner">
-            <div class="doc-seal-mark">🏛️</div>
-            <div class="doc-footer-title">
+    <footer class="doc-footer border-t border-slate-900/[0.08] dark:border-white/[0.08] bg-white dark:bg-[#071930] py-10 px-4 sm:px-6 lg:px-8 text-center">
+        <div class="doc-footer-inner border-t border-slate-900/[0.08] dark:border-white/[0.08] bg-white dark:bg-[#071930] py-10 px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto space-y-2">
+            <div class="doc-seal-mark w-12 h-12 rounded-2xl bg-blue-600/10 text-[#0a2240] dark:text-[#c8a45d] flex items-center justify-center text-2xl shrink-0">🏛️</div>
+            <div class="doc-footer-title border-t border-slate-900/[0.08] dark:border-white/[0.08] bg-white dark:bg-[#071930] py-10 px-4 sm:px-6 lg:px-8 text-center font-bold text-slate-900 dark:text-white">
                 AZƏRBAYCAN TEXNİKİ UNİVERSİTETİNİN NƏZDİNDƏ BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ PUBLİK HÜQUQİ ŞƏXSİ
             </div>
-            <p class="doc-footer-text">
+            <p class="doc-footer-text border-t border-slate-900/[0.08] dark:border-white/[0.08] bg-white dark:bg-[#071930] py-10 px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500 dark:text-slate-400">
                 Beynəlxalq Əməkdaşlıq və Akademik Tərəfdaşlıq Departamenti · Rəsmi Sənədlər Arxivi 2026
             </p>
         </div>
     </footer>
 
     <!-- ═══════════════ INTERACTIVE LOGIC SCRIPT ═══════════════ -->
+    
     <script>
         (function() {
-            // Theme toggling logic
             const themeToggle = document.getElementById('theme-toggle');
             const themeIcon = document.getElementById('theme-icon');
             const html = document.documentElement;
 
             function applyTheme(theme) {
-                html.setAttribute('data-theme', theme);
-                if (theme === 'dark') {
-                    themeIcon.textContent = '☀️';
-                } else {
-                    themeIcon.textContent = '🌙';
-                }
+                const isDark = theme === 'dark';
+                html.setAttribute('data-theme', isDark ? 'dark' : 'light');
+                html.classList.toggle('dark', isDark);
+                html.classList.toggle('dark-mode', isDark);
+                themeIcon.textContent = isDark ? '☀️' : '🌙';
                 try {
-                    localStorage.setItem('bdrnk_theme', theme);
+                    localStorage.setItem('bdrnk-theme', isDark ? 'dark' : 'light');
+                    localStorage.setItem('bdrnk_theme', isDark ? 'dark' : 'light');
                 } catch(e) {}
             }
 
-            // Read stored or system theme
             let savedTheme = null;
             try {
-                savedTheme = localStorage.getItem('bdrnk_theme') || localStorage.getItem('theme');
+                savedTheme = localStorage.getItem('bdrnk-theme') || localStorage.getItem('bdrnk_theme') || localStorage.getItem('theme');
             } catch(e) {}
 
             if (savedTheme) {
                 applyTheme(savedTheme);
             } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 applyTheme('dark');
+            } else {
+                applyTheme('light');
             }
 
             themeToggle.addEventListener('click', function() {
@@ -1331,7 +701,6 @@
                 applyTheme(current === 'dark' ? 'light' : 'dark');
             });
 
-            // Tab filtering logic
             const tabButtons = document.querySelectorAll('.doc-tab-btn');
             const sections = document.querySelectorAll('.filterable-section');
 
@@ -1349,12 +718,10 @@
                         }
                     });
 
-                    // Clear search highlighting if any
                     filterRows();
                 });
             });
 
-            // Live Search filtering logic
             const searchInput = document.getElementById('doc-search');
             const noResults = document.getElementById('no-results');
 
@@ -1407,4 +774,3 @@
     </script>
 </body>
 </html>
-
