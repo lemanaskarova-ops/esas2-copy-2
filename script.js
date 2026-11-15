@@ -3539,6 +3539,28 @@ const newsData = [
     "date_ru": "16 Октября 2026"
   },
   {
+    "id": 111,
+    "official_id": "111",
+    "title_az": "7 Oktyabr – Ümumdünya Layiqli Əmək Gününə həsr olunmuş maarifləndirici tədbir keçirilib",
+    "title_en": "Educational Event Dedicated to October 7 – World Day for Decent Work Held at the College",
+    "title_ru": "В колледже состоялось просветительское мероприятие, посвященное 7 Октября — Всемирному дню достойного труда",
+    "desc_az": "7 Oktyabr – Ümumdünya Layiqli Əmək Günü münasibətilə Bakı Dövlət Rabitə və Nəqliyyat Kollecində maarifləndirici tədbir keçirilib...",
+    "desc_en": "An educational event dedicated to October 7 – World Day for Decent Work was held at Baku State Communications and Transport College...",
+    "desc_ru": "В Бакинском государственном колледже связи и транспорта состоялось просветительское мероприятие, посвященное 7 Октября — Всемирному дню достойного труда...",
+    "full_az": "7 Oktyabr – Ümumdünya Layiqli Əmək Günü\n\n7 Oktyabr – Ümumdünya Layiqli Əmək Günü münasibətilə Bakı Dövlət Rabitə və Nəqliyyat Kollecində maarifləndirici tədbir keçirilib.\n\nTədbirdə kollecin direktoru Səbuhi Qurbanov, tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov, kollecin tarix müəllimi Səidə Quliyeva və kollecin hüquqşünası Vəfa Hacıyeva çıxış ediblər.\n\nÇıxışlar zamanı layiqli əməyin mahiyyəti, əmək hüquqlarının qorunması, ədalətli əmək münasibətləri, bərabər imkanlar, təhlükəsiz və sağlam əmək şəraitinin əhəmiyyəti diqqətə çatdırılıb.\n\nEyni zamanda, tələbələrə gələcək əmək fəaliyyətində öz hüquq və vəzifələrini bilməyin vacibliyi barədə ətraflı məlumat verilib.\n\nMaarifləndirici tədbir tələbələrin suallarının cavablandırılması və fikir mübadiləsi ilə davam edib.",
+    "full_en": "October 7 – World Day for Decent Work\n\nAn educational event was held at Baku State Communications and Transport College on the occasion of October 7 – World Day for Decent Work.\n\nThe event featured speeches by College Director Sabuhi Gurbanov, Deputy Director for Educational Affairs Shahmurad Mammadov, History teacher Saida Guliyeva, and College Lawyer Vafa Hajiyeva.\n\nDuring the speeches, the essence of decent work, protection of labor rights, fair labor relations, equal opportunities, and the importance of safe and healthy working conditions were highlighted.\n\nAt the same time, students were provided with detailed information on the importance of knowing their rights and responsibilities in their future professional activities.\n\nThe educational event continued with answering students' questions and an interactive exchange of views.",
+    "full_ru": "7 Октября — Всемирный день достойного труда\n\nВ Бакинском государственном колледже связи и транспорта состоялось просветительское мероприятие по случаю 7 Октября — Всемирного дня достойного труда.\n\nНа мероприятии выступили директор колледжа Сабухи Гурбанов, заместитель директора по воспитательной работе Шахмурад Мамедов, преподаватель истории Саида Гулиева и юрист колледжа Вафа Гаджиева.\n\nВ ходе выступлений было подчеркнуто значение достойного труда, защиты трудовых прав, справедливых трудовых отношений, равных возможностей, а также безопасных и здоровых условий труда.\n\nСтудентам также была предоставлена подробная информация о важности знания своих прав и обязанностей в будущей трудовой деятельности.\n\nПросветительское мероприятие продолжилось ответами на вопросы студентов и обменом мнениями.",
+    "date": "07 Oktyabr 2026",
+    "image": "muellimler.mp4",
+    "url": "",
+    "tag_az": "Maarifləndirmə / Tədbir",
+    "tag_en": "Awareness / Event",
+    "tag_ru": "Просвещение / Мероприятие",
+    "date_az": "07 Oktyabr 2026",
+    "date_en": "07 October 2026",
+    "date_ru": "07 Октября 2026"
+  },
+  {
     "id": 105,
     "official_id": "122128591593146162",
     "title_az": "15 İyun – Milli Qurtuluş Günü münasibətilə Kollecdə təntənəli tədbir keçirilib",
@@ -4109,28 +4131,6 @@ const newsData = [
     "date_az": "05 Noyabr 2025",
     "date_en": "05 November 2025",
     "date_ru": "05 Ноября 2025"
-  },
-  {
-    "id": 23,
-    "official_id": "2365",
-    "title_az": "20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində maarifləndirici tədbir",
-    "title_en": "Awareness Event Held for the October 20 – November 20 'Child Rights Month'",
-    "title_ru": "Просветительское мероприятие в рамках «Месячника прав ребенка» (20 октября – 20 ноября)",
-    "desc_az": "03.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində maarifləndirici tədbir keçirilmişdir....",
-    "desc_en": "On 03 November 2025, an official event activity titled \"Awareness Event Held for the October 20 – November 20 'Child Rights Month'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
-    "desc_ru": "03 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие в рамках «Месячника прав ребенка» (20 октября – 20 ноября)».",
-    "full_az": "03.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində maarifləndirici tədbir keçirilmişdir. Tədbirdə kollecin hüquqşünası Vəfa Hacıyeva tələbələrə uşaq hüquqlarının yaranma tarixi, milli və beynəlxalq qanunvericilik, dövlət tərəfindən uşaq hüquqlarının müdafiəsi sahəsində görülən işlər barədə ətraflı məlumat vermişdir.\n\n“Uşaq hüquqları aylığı”nın təşkil olunmasının əsas məqsədi BMT-nin Uşaq Hüquqları Konvensiyasının qəbul olunmasının ildönümü, 20 noyabr-Ümumdünya Uşaqlar Günü ərəfəsində uşaqlara diqqətin daha da artırılması və uşaq hüquqlarının qorunması işinin yaxşılaşdırılmasından ibarətdir.",
-    "full_en": "On 03 November 2025, an official event activity titled \"Awareness Event Held for the October 20 – November 20 'Child Rights Month'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
-    "full_ru": "03 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие в рамках «Месячника прав ребенка» (20 октября – 20 ноября)».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
-    "date": "03 Noyabr 2025",
-    "image": "news_proper_2365.jpeg",
-    "url": "https://www.rabitankolleci.edu.az/news/2365",
-    "tag_az": "Tədbir",
-    "tag_en": "Event",
-    "tag_ru": "Мероприятие",
-    "date_az": "03 Noyabr 2025",
-    "date_en": "03 November 2025",
-    "date_ru": "03 Ноября 2025"
   },
   {
     "id": 15,
@@ -11090,7 +11090,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const nrDate = document.getElementById("nr-date");
     const nrTitle = document.getElementById("nr-title");
     const nrImg = document.getElementById("nr-img");
+    const nrImgZoomBtn = document.getElementById("nr-img-zoom-btn");
     const nrContent = document.getElementById("nr-content");
+    const isVideoMedia = (src) => /\.mp4(\?.*)?$/i.test(String(src || ""));
     const nrRelatedList = document.getElementById("nr-related-list");
     const nrPrevBtn = document.getElementById("nr-prev-btn");
     const nrNextBtn = document.getElementById("nr-next-btn");
@@ -11120,12 +11122,38 @@ document.addEventListener("DOMContentLoaded", () => {
       if (nrDate) nrDate.textContent = localizedDate;
       if (nrTitle) nrTitle.textContent = title;
       if (nrImg) {
-        nrImg.src = item.image;
-        nrImg.alt = title;
-        nrImg.onerror = function () {
-          this.onerror = null;
-          this.src = "news1.webp";
-        };
+        let nrVideo = document.getElementById("nr-video");
+        if (isVideoMedia(item.image)) {
+          if (!nrVideo && nrImg.parentElement) {
+            nrVideo = document.createElement("video");
+            nrVideo.id = "nr-video";
+            nrVideo.className = "nr-hero-img";
+            nrVideo.controls = true;
+            nrVideo.playsInline = true;
+            nrVideo.preload = "metadata";
+            nrImg.parentElement.insertBefore(nrVideo, nrImg);
+          }
+          nrImg.style.display = "none";
+          if (nrImgZoomBtn) nrImgZoomBtn.style.display = "none";
+          if (nrVideo) {
+            nrVideo.src = item.image;
+            nrVideo.style.display = "block";
+          }
+        } else {
+          if (nrVideo) {
+            nrVideo.pause();
+            nrVideo.style.display = "none";
+            nrVideo.removeAttribute("src");
+          }
+          nrImg.style.display = "";
+          if (nrImgZoomBtn) nrImgZoomBtn.style.display = "";
+          nrImg.src = item.image;
+          nrImg.alt = title;
+          nrImg.onerror = function () {
+            this.onerror = null;
+            this.src = "news1.webp";
+          };
+        }
       }
 
       const fullText =
@@ -11189,9 +11217,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const nTitle = n[`title_${currentLang}`] || n.title_az;
             const nTag = n[`tag_${currentLang}`] || n.tag_az;
             const nDate = getNewsDate(n);
+            const relMedia = isVideoMedia(n.image)
+              ? `<video src="${n.image}#t=0.5" muted playsinline preload="metadata" style="width:68px;height:52px;object-fit:cover;border-radius:8px;flex-shrink:0;"></video>`
+              : `<img src="${n.image}" alt="" loading="lazy" onerror="this.onerror=null;this.src='news1.webp';" />`;
             return `
               <button type="button" class="nr-related-card" data-news-idx="${idx}">
-                <img src="${n.image}" alt="" loading="lazy" onerror="this.onerror=null;this.src='news1.webp';" />
+                ${relMedia}
                 <div class="nr-related-info">
                   <span class="nr-related-tag">${nTag} · ${nDate}</span>
                   <h5>${nTitle}</h5>
@@ -11217,6 +11248,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function closeNewsReader() {
       if (!nrModal) return;
+      const nrVideo = document.getElementById("nr-video");
+      if (nrVideo) nrVideo.pause();
       nrModal.classList.remove("active");
       nrModal.setAttribute("aria-hidden", "true");
       document.documentElement.classList.remove("scroll-locked");
@@ -11262,9 +11295,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const card = document.createElement("div");
         card.className = "news-card";
         card.style.cursor = "pointer";
+        const cardMediaHtml = isVideoMedia(item.image)
+          ? `<video class="news-card-img" src="${item.image}#t=0.5" muted playsinline preload="metadata" loop onmouseenter="this.play().catch(()=>{})" onmouseleave="this.pause()"></video>`
+          : `<img class="news-card-img" src="${item.image}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='news1.webp';" />`;
         card.innerHTML = `
           <div class="news-card-media">
-            <img class="news-card-img" src="${item.image}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='news1.webp';" />
+            ${cardMediaHtml}
             <span class="news-card-tag">${tag}</span>
           </div>
           <div class="news-card-overlay">
