@@ -379,3 +379,71 @@ html.dark-mode .search-result-item mark {
     transform: translateY(0);
   }
 }
+
+/* ---------- 6. Majors Department Group Headers ---------- */
+.majors-catalog-table tbody tr.major-dept-group-row td {
+  background: linear-gradient(90deg, rgba(10, 34, 64, 0.08), rgba(200, 164, 93, 0.1));
+  color: #0a2240;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 12px 18px;
+  border-top: 2px solid rgba(200, 164, 93, 0.45);
+  border-bottom: 1px solid rgba(200, 164, 93, 0.35);
+}
+
+html.dark .majors-catalog-table tbody tr.major-dept-group-row td,
+html.dark-mode .majors-catalog-table tbody tr.major-dept-group-row td {
+  background: linear-gradient(90deg, rgba(200, 164, 93, 0.16), rgba(15, 23, 42, 0.65));
+  color: #f3e2b3;
+  border-top-color: rgba(200, 164, 93, 0.4);
+  border-bottom-color: rgba(200, 164, 93, 0.25);
+}
+
+.major-dept-group-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.major-dept-group-title {
+  letter-spacing: 0.01em;
+}
+
+.major-dept-group-count {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  background: rgba(10, 34, 64, 0.12);
+  color: #0a2240;
+}
+
+html.dark .major-dept-group-count,
+html.dark-mode .major-dept-group-count {
+  background: rgba(200, 164, 93, 0.22);
+  color: #fde68a;
+}
+
+@media (max-width: 768px) {
+  .majors-catalog-table tbody tr.major-dept-group-row {
+    margin: 14px 0 8px;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .majors-catalog-table tbody tr.major-dept-group-row td {
+    display: block;
+    padding: 11px 14px;
+  }
+
+  .majors-catalog-table tbody tr.major-dept-group-row td::before {
+    display: none;
+  }
+}

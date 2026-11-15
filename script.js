@@ -3168,8 +3168,12 @@ const staffData = {
   ],
   majors: {
     eyani: [
+      // 1. Poçt rabitəsi və mühasibat uçotu şöbəsi
       {
         code: "040406",
+        dept_az: "Poçt rabitəsi və mühasibat uçotu şöbəsi",
+        dept_en: "Department of Postal Communication and Accounting",
+        dept_ru: "Отделение почтовой связи и бухгалтерского учета",
         name_az: "Mühasibat uçotu",
         name_en: "Accounting",
         name_ru: "Бухгалтерский учет",
@@ -3179,6 +3183,9 @@ const staffData = {
       },
       {
         code: "040554",
+        dept_az: "Poçt rabitəsi və mühasibat uçotu şöbəsi",
+        dept_en: "Department of Postal Communication and Accounting",
+        dept_ru: "Отделение почтовой связи и бухгалтерского учета",
         name_az: "Poçt rabitəsi",
         name_en: "Postal Communication",
         name_ru: "Почтовая связь",
@@ -3188,6 +3195,9 @@ const staffData = {
       },
       {
         code: "040556",
+        dept_az: "Poçt rabitəsi və mühasibat uçotu şöbəsi",
+        dept_en: "Department of Postal Communication and Accounting",
+        dept_ru: "Отделение почтовой связи и бухгалтерского учета",
         name_az: "Radio, televiziya vasitə və qurğuları",
         name_en: "Radio, TV Tools and Equipment",
         name_ru: "Радио, ТВ средства и оборудование",
@@ -3197,6 +3207,9 @@ const staffData = {
       },
       {
         code: "040405",
+        dept_az: "Poçt rabitəsi və mühasibat uçotu şöbəsi",
+        dept_en: "Department of Postal Communication and Accounting",
+        dept_ru: "Отделение почтовой связи и бухгалтерского учета",
         name_az: "Marketinq (sahələr üzrə)",
         name_en: "Marketing (by sectors)",
         name_ru: "Маркетинг (по отраслям)",
@@ -3204,8 +3217,24 @@ const staffData = {
         field_en: "Business",
         field_ru: "Бизнес",
       },
+      // 2. Telekommunikasiya şöbəsi
+      {
+        code: "040518",
+        dept_az: "Telekommunikasiya şöbəsi",
+        dept_en: "Telecommunications Department",
+        dept_ru: "Отделение телекоммуникаций",
+        name_az: "Ətraf mühitin mühafizəsi və bərpası",
+        name_en: "Environmental Protection and Restoration",
+        name_ru: "Охрана и восстановление окружающей среды",
+        field_az: "Ekologiya",
+        field_en: "Ecology",
+        field_ru: "Экология",
+      },
       {
         code: "040544",
+        dept_az: "Telekommunikasiya şöbəsi",
+        dept_en: "Telecommunications Department",
+        dept_ru: "Отделение телекоммуникаций",
         name_az: "Mobil şəbəkə sistemləri və operatorluğu",
         name_en: "Mobile Network Systems and Operation",
         name_ru: "Системы мобильной связи и операторство",
@@ -3215,6 +3244,9 @@ const staffData = {
       },
       {
         code: "040565",
+        dept_az: "Telekommunikasiya şöbəsi",
+        dept_en: "Telecommunications Department",
+        dept_ru: "Отделение телекоммуникаций",
         name_az: "Telekommunikasiya şəbəkələri və xətləri",
         name_en: "Telecommunication Networks and Lines",
         name_ru: "Телекоммуникационные сети и линии",
@@ -3224,6 +3256,9 @@ const staffData = {
       },
       {
         code: "040508",
+        dept_az: "Telekommunikasiya şöbəsi",
+        dept_en: "Telecommunications Department",
+        dept_ru: "Отделение телекоммуникаций",
         name_az: "Çoxkanallı telekommunikasiya sistemlərinin istismarı",
         name_en: "Operation of Multi-channel Telecom Systems",
         name_ru: "Эксплуатация многоканальных телеком систем",
@@ -3231,8 +3266,12 @@ const staffData = {
         field_en: "Telecommunication",
         field_ru: "Телекоммуникации",
       },
+      // 3. Nəqliyyat şöbəsi
       {
         code: "040572",
+        dept_az: "Nəqliyyat şöbəsi",
+        dept_en: "Transport Department",
+        dept_ru: "Транспортное отделение",
         name_az: "Vaqon və refrijerator sistemləri",
         name_en: "Wagon and Refrigerator Systems",
         name_ru: "Вагонные и рефрижераторные системы",
@@ -3242,6 +3281,9 @@ const staffData = {
       },
       {
         code: "040552",
+        dept_az: "Nəqliyyat şöbəsi",
+        dept_en: "Transport Department",
+        dept_ru: "Транспортное отделение",
         name_az: "Nəqliyyatın logistikası",
         name_en: "Transport Logistics",
         name_ru: "Транспортная логистика",
@@ -3251,6 +3293,9 @@ const staffData = {
       },
       {
         code: "040550",
+        dept_az: "Nəqliyyat şöbəsi",
+        dept_en: "Transport Department",
+        dept_ru: "Транспортное отделение",
         name_az: "Nəqliyyat vasitələrinin texniki istismarı",
         name_en: "Technical Operation of Vehicles",
         name_ru: "Техническая эксплуатация транспорта",
@@ -3258,17 +3303,12 @@ const staffData = {
         field_en: "Transport",
         field_ru: "Транспорт",
       },
-      {
-        code: "040518",
-        name_az: "Ətraf mühitin mühafizəsi və bərpası",
-        name_en: "Environmental Protection and Restoration",
-        name_ru: "Охрана и восстановление окружающей среды",
-        field_az: "Ekologiya",
-        field_en: "Ecology",
-        field_ru: "Экология",
-      },
+      // 4. Kompüter texnologiyaları şöbəsi
       {
         code: "040529",
+        dept_az: "Kompüter texnologiyaları şöbəsi",
+        dept_en: "Department of Computer Technologies",
+        dept_ru: "Отделение компьютерных технологий",
         name_az: "Kompüter sistemləri və kompleksləri",
         name_en: "Computer Systems and Complexes",
         name_ru: "Компьютерные системы и комплексы",
@@ -3277,7 +3317,10 @@ const staffData = {
         field_ru: "ИКТ",
       },
       {
-        code: "040533",
+        code: "040553",
+        dept_az: "Kompüter texnologiyaları şöbəsi",
+        dept_en: "Department of Computer Technologies",
+        dept_ru: "Отделение компьютерных технологий",
         name_az: "Kompüter şəbəkə avadanlıqlarının təmiri və servisi",
         name_en: "Repair and Service of Computer Network Equipment",
         name_ru: "Ремонт и сервис компьютерного сетевого оборудования",
@@ -3287,6 +3330,9 @@ const staffData = {
       },
       {
         code: "040532",
+        dept_az: "Kompüter texnologiyaları şöbəsi",
+        dept_en: "Department of Computer Technologies",
+        dept_ru: "Отделение компьютерных технологий",
         name_az: "Kompüter şəbəkələri və şəbəkə inzibatçılığı",
         name_en: "Computer Networks and Network Administration",
         name_ru: "Компьютерные сети и сетевое администрирование",
@@ -7761,6 +7807,7 @@ function initStructureModule() {
       "040518": "🌱", // Ətraf mühitin mühafizəsi və bərpası
       "040529": "💻", // Kompüter sistemləri və kompleksləri
       "040533": "🛠️", // Kompüter şəbəkə avadanlıqlarının təmiri və servisi
+      "040553": "🛠️", // Kompüter şəbəkə avadanlıqlarının təmiri və servisi
       "040532": "🛡️", // Kompüter şəbəkələri və şəbəkə inzibatçılığı
     };
 
@@ -7768,8 +7815,30 @@ function initStructureModule() {
     const qiyabiMajors = staffData.majors.qiyabi || [];
 
     function renderTableRows(list, mode) {
+      let lastDept = null;
+      let rowNum = 0;
+
       return list
-        .map((m, idx) => {
+        .map((m) => {
+          const deptTitle = m[`dept_${currentLang}`] || m.dept_az || "";
+          let deptHeaderHtml = "";
+          if (deptTitle && deptTitle !== lastDept) {
+            lastDept = deptTitle;
+            rowNum = 0;
+            const deptCount = list.filter((item) => (item[`dept_${currentLang}`] || item.dept_az || "") === deptTitle).length;
+            deptHeaderHtml = `
+              <tr class="major-dept-group-row">
+                <td colspan="5">
+                  <div class="major-dept-group-inner">
+                    <span class="major-dept-group-icon" aria-hidden="true">🏛️</span>
+                    <span class="major-dept-group-title">${deptTitle}</span>
+                    <span class="major-dept-group-count">${deptCount}</span>
+                  </div>
+                </td>
+              </tr>`;
+          }
+
+          rowNum += 1;
           const name = m[`name_${currentLang}`] || m.name_az;
           const field = m[`field_${currentLang}`] || m.field_az;
           const icon = majorIcons[m.code] || "📘";
@@ -7780,9 +7849,9 @@ function initStructureModule() {
           const subDegree =
             currentLang === "en" ? "Sub-bachelor" : currentLang === "ru" ? "Суббакалавр" : "Subbakalavr";
 
-          return `
+          return `${deptHeaderHtml}
             <tr class="major-row" data-code="${m.code}">
-              <td class="td-num">${idx + 1}</td>
+              <td class="td-num">${rowNum}</td>
               <td class="td-code" data-label="${gT("th_code") || "Kod"}">
                 <span class="major-code-pill">${m.code}</span>
               </td>
