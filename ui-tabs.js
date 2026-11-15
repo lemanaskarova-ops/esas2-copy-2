@@ -181,9 +181,10 @@
     }
 
     // Toggle category panels & pause playing videos inside hidden panels
+    const actualPanelName = nextTab === "library-lectures" ? "library" : nextTab;
     document.querySelectorAll("[data-tab-panel]").forEach((panel) => {
       const panelName = panel.getAttribute("data-tab-panel");
-      const shouldShow = nextTab === "all" || panelName === nextTab;
+      const shouldShow = nextTab === "all" || panelName === actualPanelName;
       panel.classList.toggle("is-active", shouldShow);
       panel.setAttribute("aria-hidden", shouldShow ? "false" : "true");
       if (!shouldShow) {
@@ -196,6 +197,15 @@
         });
       }
     });
+
+    // If opening library vs library-lectures, automatically toggle inner switcher
+    if (nextTab === "library") {
+      const booksBtn = document.querySelector('#lib-master-switcher [data-view="books"]');
+      if (booksBtn && typeof booksBtn.click === "function") booksBtn.click();
+    } else if (nextTab === "library-lectures") {
+      const lecBtn = document.querySelector('#lib-master-switcher [data-view="lectures"]');
+      if (lecBtn && typeof lecBtn.click === "function") lecBtn.click();
+    }
 
     // Update Workspace Tab Pills (roving tabindex for WAI-ARIA tablist)
     document.querySelectorAll("[data-workspace-tab]").forEach((btn) => {
