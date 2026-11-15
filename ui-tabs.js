@@ -7,26 +7,35 @@
   "use strict";
 
   const VALID_TABS = [
-    "home",
+    "about",
     "structure",
     "majors",
-    "academics",
+    "lectures",
     "library",
+    "library-lectures",
+    "science",
+    "honor-students",
+    "teacher-certificates",
+    "certificates",
     "campus",
-    "achievements",
-    "media",
+    "campus-floor-1",
+    "campus-floor-2",
+    "campus-floor-3",
+    "campus-floor-4",
+    "campus-floor-5",
+    "news",
+    "qarabag",
+    "gallery",
     "contact",
     "all",
   ];
 
-  // Map every section ID or sub-anchor in index.html to its category tab
+  // Map every section ID or sub-anchor in index.html to its exact category tab
   const TARGET_TO_TAB = {
-    hero: "home",
-    "executive-hub": "home",
-    about: "home",
-    graduates: "home",
-    qarabag: "home",
-    memorial: "home",
+    hero: "about",
+    "executive-hub": "about",
+    about: "about",
+    graduates: "about",
 
     structure: "structure",
     "struct-tree-view": "structure",
@@ -36,33 +45,40 @@
     "majors-section": "majors",
     "tree-majors-block": "majors",
 
-    lectures: "academics",
-    "lecture-studio": "academics",
-    science: "academics",
-    "teacher-certificates": "academics",
-    roadmap: "academics",
+    lectures: "lectures",
+    "lecture-studio": "lectures",
 
     library: "library",
-    "library-lectures": "library",
-    "library-lectures-section": "library",
     "library-books-pane": "library",
     "lib-master-switcher": "library",
 
+    "library-lectures": "library-lectures",
+    "library-lectures-section": "library-lectures",
+
+    science: "science",
+    roadmap: "science",
+
+    "honor-students": "honor-students",
+    "teacher-certificates": "teacher-certificates",
+
+    certificates: "certificates",
+    "sports-trophies": "certificates",
+    "trophy-stage": "certificates",
+
     "campus-navigator": "campus",
-    "campus-floor-1": "campus",
-    "campus-floor-2": "campus",
-    "campus-floor-3": "campus",
-    "campus-floor-4": "campus",
-    "campus-floor-5": "campus",
     "campus-all-floors": "campus",
+    campus: "campus",
 
-    "honor-students": "achievements",
-    certificates: "achievements",
-    "sports-trophies": "achievements",
-    "trophy-stage": "achievements",
+    "campus-floor-1": "campus-floor-1",
+    "campus-floor-2": "campus-floor-2",
+    "campus-floor-3": "campus-floor-3",
+    "campus-floor-4": "campus-floor-4",
+    "campus-floor-5": "campus-floor-5",
 
-    news: "media",
-    gallery: "media",
+    news: "news",
+    qarabag: "qarabag",
+    memorial: "qarabag",
+    gallery: "gallery",
 
     contact: "contact",
     "contact-form": "contact",
@@ -70,7 +86,7 @@
     "faq-accordion": "contact",
   };
 
-  let activeTab = "home";
+  let activeTab = "about";
 
   // ── 1. Tailwind `.dark` <-> `script.js` `.dark-mode` Sync ─────────────────
   function syncTailwindDarkClass() {
@@ -141,7 +157,14 @@
   }
 
   function setActiveTab(tabId, options = {}) {
-    const nextTab = VALID_TABS.includes(tabId) ? tabId : "home";
+    let resolvedTab = tabId;
+    let autoFloor = null;
+    if (tabId && tabId.startsWith("campus-floor-")) {
+      autoFloor = tabId.replace("campus-floor-", "");
+      resolvedTab = "campus";
+    }
+
+    const nextTab = VALID_TABS.includes(resolvedTab) ? resolvedTab : "about";
     const {
       scrollToTop = false,
       updateUrl = true,
@@ -150,6 +173,12 @@
     } = options;
     const prevTab = activeTab;
     activeTab = nextTab;
+
+    if (autoFloor && typeof window.switchCampusFloor === "function") {
+      try {
+        window.switchCampusFloor(autoFloor);
+      } catch (e) {}
+    }
 
     // Toggle category panels & pause playing videos inside hidden panels
     document.querySelectorAll("[data-tab-panel]").forEach((panel) => {
@@ -171,7 +200,7 @@
     // Update Workspace Tab Pills (roving tabindex for WAI-ARIA tablist)
     document.querySelectorAll("[data-workspace-tab]").forEach((btn) => {
       const btnTab = btn.getAttribute("data-workspace-tab");
-      const isMatch = btnTab === nextTab;
+      const isMatch = btnTab === tabId || btnTab === nextTab;
       btn.classList.toggle("is-active", isMatch);
       btn.setAttribute("aria-selected", isMatch ? "true" : "false");
       if (btn.classList.contains("workspace-tab-btn")) {
