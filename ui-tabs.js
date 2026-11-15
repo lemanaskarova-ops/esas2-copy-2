@@ -17,11 +17,6 @@
     "honor-students",
     "teacher-certificates",
     "campus",
-    "campus-floor-1",
-    "campus-floor-2",
-    "campus-floor-3",
-    "campus-floor-4",
-    "campus-floor-5",
     "news",
     "qarabag",
     "gallery",
@@ -68,11 +63,11 @@
     "campus-all-floors": "campus",
     campus: "campus",
 
-    "campus-floor-1": "campus-floor-1",
-    "campus-floor-2": "campus-floor-2",
-    "campus-floor-3": "campus-floor-3",
-    "campus-floor-4": "campus-floor-4",
-    "campus-floor-5": "campus-floor-5",
+    "campus-floor-1": "campus",
+    "campus-floor-2": "campus",
+    "campus-floor-3": "campus",
+    "campus-floor-4": "campus",
+    "campus-floor-5": "campus",
 
     news: "news",
     qarabag: "qarabag",
@@ -176,6 +171,10 @@
     if (autoFloor && typeof window.switchCampusFloor === "function") {
       try {
         window.switchCampusFloor(autoFloor);
+      } catch (e) {}
+    } else if (nextTab === "campus" && !autoFloor && typeof window.switchCampusFloor === "function") {
+      try {
+        window.switchCampusFloor("all");
       } catch (e) {}
     }
 
