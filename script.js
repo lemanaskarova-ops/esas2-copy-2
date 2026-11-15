@@ -7718,7 +7718,7 @@ function initStructureModule() {
     const tier3Role = tier3[`role_${currentLang}`] || tier3.role_az || "";
 
     // 4-cü Səviyyə: Şöbə Müdirləri & Birləşmə Komissiyaları (2 Balanslaşdırılmış Qanad)
-    const academicOrder = ["7", "23", "24", "9", "14", "11"];
+    const academicOrder = ["14", "7", "23", "24", "9", "11"];
     const wingAcademicStaff = academicOrder
       .map((id) => staffData.departments.find((p) => p.id === id))
       .filter(Boolean);
