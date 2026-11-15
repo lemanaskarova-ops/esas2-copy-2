@@ -221,7 +221,8 @@ html.dark-mode .workspace-tab-btn.is-active {
   display: none !important;
 }
 
-/* ---------- 3. Home Hero Position (Above-the-fold) & Vibrant Contrast ---------- */
+/* ---------- 3. About Hero Position (Above-the-fold) & Vibrant Contrast ---------- */
+#panel-about .hero,
 #panel-home .hero {
   min-height: clamp(500px, 70vh, 690px);
   padding: 28px 24px 44px;
@@ -231,11 +232,13 @@ html.dark-mode .workspace-tab-btn.is-active {
     linear-gradient(155deg, #051224 0%, #0a2240 50%, #0f2f57 100%);
 }
 
+#panel-about .hero-campus-bg,
 #panel-home .hero-campus-bg {
   opacity: 0.55;
   filter: saturate(1.25) contrast(1.08) brightness(0.9);
 }
 
+#panel-about .hero-content,
 #panel-home .hero-content {
   padding: 34px 40px 32px;
   background: linear-gradient(155deg,
@@ -249,6 +252,7 @@ html.dark-mode .workspace-tab-btn.is-active {
     inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
+#panel-about .hero-badge,
 #panel-home .hero-badge {
   background: rgba(207, 169, 94, 0.18);
   color: #fde68a;
@@ -256,52 +260,62 @@ html.dark-mode .workspace-tab-btn.is-active {
   box-shadow: 0 0 20px rgba(207, 169, 94, 0.22);
 }
 
+#panel-about .hero-stats .stat-item,
 #panel-home .hero-stats .stat-item {
   background: rgba(10, 34, 64, 0.72);
   border: 1px solid rgba(212, 175, 55, 0.38);
   box-shadow: 0 10px 26px rgba(3, 10, 22, 0.35);
 }
 
+#panel-about .hero-stats .stat-item.main-stat,
 #panel-home .hero-stats .stat-item.main-stat {
   background: linear-gradient(145deg, rgba(184, 147, 74, 0.26), rgba(10, 34, 64, 0.82));
   border-color: rgba(234, 179, 8, 0.65);
 }
 
+#panel-about .hero-stats .stat-number,
 #panel-home .hero-stats .stat-number {
   color: #ffffff;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
+#panel-about .hero-stats .main-stat .stat-number,
 #panel-home .hero-stats .main-stat .stat-number {
   color: #fef08a;
 }
 
+#panel-about .hero-stats .stat-label,
 #panel-home .hero-stats .stat-label {
   color: #dbeafe;
 }
 
+#panel-about .hero-grad-card,
 #panel-home .hero-grad-card {
   background: rgba(10, 34, 64, 0.78);
   border: 1px solid rgba(212, 175, 55, 0.45);
   color: #ffffff;
 }
 
+#panel-about .hero-grad-card strong,
 #panel-home .hero-grad-card strong {
   color: #ffffff;
 }
 
+#panel-about .hero-grad-card small,
 #panel-home .hero-grad-card small {
   color: #fde68a;
 }
 
 @media (max-width: 640px) {
+  #panel-about .hero,
   #panel-home .hero {
     min-height: auto;
     padding: 18px 14px 36px;
   }
 
+  #panel-about .hero-content,
   #panel-home .hero-content {
-    padding: 26px 18px 24px;
+    padding: 24px 16px 22px;
   }
 }
 
@@ -484,9 +498,20 @@ html.dark-mode .major-dept-group-count {
   font-size: 0.8rem;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 640px) {
   .lib-lec-stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .lib-lec-stat-card {
+    padding: 12px;
+    min-height: 74px;
+    gap: 8px;
+  }
+
+  .lib-stat-label {
+    font-size: 0.72rem;
   }
 }
 
@@ -516,4 +541,239 @@ html.dark-mode .major-dept-group-count {
 .science-search-input {
   padding-left: 42px !important;
   padding-right: 36px !important;
+}
+
+/* ---------- 9. Campus, Qarabag Video & iPhone/Android Mobile Responsiveness ---------- */
+.campus-controls-bar {
+  align-items: stretch;
+}
+
+.campus-search-box {
+  width: 100%;
+}
+
+.qarabag-video-wrap {
+  max-width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  .site-header {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .header-inner {
+    height: 62px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    gap: 8px !important;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .workspace-nav-bar {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  /* Prevent iOS Safari auto-zoom when focusing inputs, selects, or textareas */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .news-grid,
+  .teacher-cert-grid,
+  .campus-rooms-grid,
+  .lib-lec-grid,
+  .science-authors-grid,
+  .lectures-grid,
+  .cert-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 14px;
+  }
+
+  .cert-stats-row,
+  .teacher-cert-stats-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-cta > a,
+  .hero-cta > button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .grad-stats {
+    gap: 8px !important;
+  }
+
+  .grad-stats > * {
+    padding: 10px 8px !important;
+    min-width: 0;
+  }
+
+  .t-cert-featured-body {
+    gap: 16px;
+  }
+
+  .t-cert-featured-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+  }
+
+  .t-cert-featured-title {
+    font-size: 1.12rem;
+  }
+
+  .t-cert-featured-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .t-cert-featured-actions a,
+  .t-cert-featured-actions button {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .teacher-cert-search-wrap {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+}
+
+/* ---------- 10. Memorandum Diplomatic Pill & Callout Card ---------- */
+.workspace-memo-pill {
+  background: linear-gradient(135deg, rgba(184, 147, 74, 0.14), rgba(10, 34, 64, 0.06)) !important;
+  border-color: rgba(184, 147, 74, 0.45) !important;
+  color: #8a641d !important;
+  box-shadow: 0 2px 10px rgba(184, 147, 74, 0.14);
+}
+
+.workspace-memo-pill:hover {
+  background: linear-gradient(135deg, #0a2240, #153a66) !important;
+  color: #fef08a !important;
+  border-color: rgba(212, 175, 55, 0.75) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(10, 34, 64, 0.2);
+}
+
+html.dark .workspace-memo-pill,
+html.dark-mode .workspace-memo-pill {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(14, 28, 49, 0.85)) !important;
+  color: #fde68a !important;
+  border-color: rgba(212, 175, 55, 0.48) !important;
+}
+
+.about-memo-aesthetic-btn {
+  padding: 16px 20px;
+  border-radius: 18px;
+  border: 1.5px solid rgba(184, 147, 74, 0.48);
+  box-shadow: 0 12px 30px -14px rgba(10, 34, 64, 0.18), 0 0 0 1px rgba(184, 147, 74, 0.08);
+}
+
+.about-memo-aesthetic-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #0a2240, #c8a45d, #0a2240);
+}
+
+html.dark .about-memo-aesthetic-btn,
+html.dark-mode .about-memo-aesthetic-btn {
+  background: linear-gradient(135deg, rgba(16, 33, 58, 0.96) 0%, rgba(9, 21, 39, 0.94) 100%);
+  border-color: rgba(212, 175, 55, 0.45);
+}
+
+html.dark .memo-btn-title,
+html.dark-mode .memo-btn-title {
+  color: #f8fafc;
+}
+
+html.dark .memo-btn-desc,
+html.dark-mode .memo-btn-desc {
+  color: #94a3b8;
+}
+
+.memo-btn-top-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.memo-btn-pill-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: rgba(184, 147, 74, 0.14);
+  border: 1px solid rgba(184, 147, 74, 0.35);
+  color: #9e7728;
+  margin-bottom: 0;
+}
+
+html.dark .memo-btn-pill-label,
+html.dark-mode .memo-btn-pill-label {
+  color: #fde68a;
+  background: rgba(212, 175, 55, 0.16);
+}
+
+.memo-btn-flags {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .about-memo-aesthetic-btn {
+    padding: 15px 14px 15px 16px;
+    gap: 12px;
+    border-radius: 16px;
+  }
+
+  .memo-btn-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+  }
+
+  .memo-btn-title {
+    font-size: 0.93rem;
+  }
+
+  .memo-btn-desc {
+    font-size: 0.77rem;
+  }
+
+  .memo-btn-arrow-box {
+    width: 32px;
+    height: 32px;
+  }
 }

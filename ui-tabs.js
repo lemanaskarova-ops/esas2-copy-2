@@ -150,6 +150,8 @@
     } catch (e) {}
   }
 
+  const originalScrollIntoView = Element.prototype.scrollIntoView;
+
   function setActiveTab(tabId, options = {}) {
     let resolvedTab = tabId;
     let autoFloor = null;
@@ -213,11 +215,6 @@
       btn.setAttribute("aria-selected", isMatch ? "true" : "false");
       if (btn.classList.contains("workspace-tab-btn")) {
         btn.setAttribute("tabindex", isMatch ? "0" : "-1");
-        if (isMatch && typeof btn.scrollIntoView === "function") {
-          try {
-            btn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-          } catch (e) {}
-        }
       }
     });
 
@@ -225,7 +222,7 @@
     if (updateUrl && window.history && typeof window.history.replaceState === "function") {
       try {
         const url = new URL(window.location.href);
-        if (nextTab === "home") {
+        if (nextTab === "about") {
           url.searchParams.delete("tab");
         } else {
           url.searchParams.set("tab", nextTab);
@@ -242,9 +239,9 @@
 
     // Center active tab pill horizontally on mobile scroll bar
     const activeBtn = document.querySelector(`[data-workspace-tab="${nextTab}"].workspace-tab-btn`);
-    if (activeBtn && typeof activeBtn.scrollIntoView === "function") {
+    if (activeBtn && typeof originalScrollIntoView === "function") {
       try {
-        activeBtn.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        originalScrollIntoView.call(activeBtn, { behavior: "smooth", block: "nearest", inline: "center" });
       } catch (e) {}
     }
 
@@ -282,9 +279,7 @@
       }
 
       if (scrollToTop) {
-        const bar = document.getElementById("workspace-tabs-bar");
-        const topTarget = nextTab === "home" ? 0 : Math.max(0, (bar?.offsetTop || 120) - 82);
-        window.scrollTo({ top: topTarget, behavior: "smooth" });
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
     });
   }
@@ -292,40 +287,11 @@
   window.switchWorkspaceTab = setActiveTab;
 
   // ── 3. Seamless Compatibility with script.js scrollIntoView & Helpers ────
-  const originalScrollIntoView = Element.prototype.scrollIntoView;
   Element.prototype.scrollIntoView = function patchedScrollIntoView(arg) {
     const ownerTab = findTabForElement(this);
-    // Intercept library vs library-lectures to toggle books / lectures pane
-    if (targetId === "library") {
-      const booksBtn = document.querySelector('#lib-master-switcher [data-view="books"]');
-      if (booksBtn && typeof booksBtn.click === "function") booksBtn.click();
-    } else if (targetId === "library-lectures") {
-      const lecBtn = document.querySelector('#lib-master-switcher [data-view="lectures"]');
-      if (lecBtn && typeof lecBtn.click === "function") lecBtn.click();
-    }
-
     if (ownerTab && activeTab !== "all" && activeTab !== ownerTab) {
       setActiveTab(ownerTab, { scrollToTop: false, updateUrl: true });
-      // Mount #tree-majors-block inside dedicated #majors-tab-mount without duplicates
-    function syncMajorsMount() {
-      const mount = document.getElementById("majors-tab-mount");
-      if (!mount) return;
-      let block = document.querySelector("#struct-tree-canvas #tree-majors-block") || document.getElementById("tree-majors-block");
-      if (!block && typeof window.switchStructureView === "function") {
-        try {
-          window.switchStructureView("tree");
-        } catch (e) {}
-        block = document.querySelector("#struct-tree-canvas #tree-majors-block") || document.getElementById("tree-majors-block");
-      }
-      if (block) {
-        if (block.parentElement !== mount || mount.children.length > 1) {
-          mount.replaceChildren(block);
-        }
-      }
-    }
-    syncMajorsMount();
-
-    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
         originalScrollIntoView.call(this, arg);
       });
       return;
@@ -467,15 +433,15 @@
     if (typeof window.openLibraryLecturesView === "function") {
       const origLib = window.openLibraryLecturesView;
       window.openLibraryLecturesView = function wrappedOpenLibLectures(fbkFilter) {
-        if (activeTab !== "all" && activeTab !== "library") {
-          setActiveTab("library", { scrollToTop: false, updateUrl: true });
+        if (activeTab !== "all" && activeTab !== "library" && activeTab !== "library-lectures") {
+          setActiveTab("library-lectures", { scrollToTop: false, updateUrl: true });
         }
         return origLib.apply(this, arguments);
       };
     }
 
     // Trigger tab activation on initial URL query (?tab=...) or #hash
-    let initialTab = "home";
+    let initialTab = "about";
     let initialAnchor = null;
     try {
       const params = new URLSearchParams(window.location.search);
@@ -510,7 +476,7 @@
   });
 
   window.addEventListener("popstate", (e) => {
-    let popTab = "home";
+    let popTab = "about";
     let popAnchor = null;
     try {
       if (e.state && e.state.tab && VALID_TABS.includes(e.state.tab)) {
