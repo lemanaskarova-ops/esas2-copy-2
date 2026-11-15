@@ -1,0 +1,381 @@
+/* ==========================================================================
+   BDRNK DESIGN SYSTEM v3.1 — Surgical Layer Over Official style.css
+   Preserves 100% of original modals, sections, cards, and components in style.css
+   while enabling Category Workspace Tabs, Sticky Frosted Header, Hero Contrast,
+   Toast Feedback, and Search Highlighting.
+   ========================================================================== */
+
+/* Hide the duplicate old mobile accordion drawer & toggle button completely */
+.mobile-menu-toggle,
+#mobile-toggle,
+.mobile-nav-overlay,
+#mobile-nav {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* ---------- 1. Sticky 3-Tier Header & Workspace Tabs Bar ---------- */
+.site-header {
+  position: sticky !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Mobile & Tablet UX: Category pill bar is always visible, touch-scrollable, and clean */
+@media (max-width: 1024px) {
+  .site-header {
+    border-bottom: none !important;
+  }
+  .workspace-nav-bar {
+    display: block !important;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 12px rgba(10, 34, 64, 0.05);
+  }
+  html.dark .workspace-nav-bar,
+  html.dark-mode .workspace-nav-bar {
+    background: rgba(8, 17, 32, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+  .workspace-nav-inner {
+    padding: 8px 12px !important;
+    gap: 6px !important;
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .workspace-tab-btn {
+    padding: 6px 14px !important;
+    font-size: 0.8rem !important;
+    border-radius: 9999px !important;
+    white-space: nowrap !important;
+  }
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.workspace-nav-bar {
+  position: relative;
+  overflow: visible;
+}
+
+.workspace-nav-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.375rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(10, 34, 64, 0.25) transparent;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.workspace-nav-inner:active {
+  cursor: grabbing;
+}
+
+.workspace-nav-inner::-webkit-scrollbar {
+  height: 5px;
+}
+
+.workspace-nav-inner::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.workspace-nav-inner::-webkit-scrollbar-thumb {
+  background: rgba(10, 34, 64, 0.25);
+  border-radius: 999px;
+}
+
+html.dark .workspace-nav-inner::-webkit-scrollbar-thumb,
+html.dark-mode .workspace-nav-inner::-webkit-scrollbar-thumb {
+  background: rgba(200, 164, 93, 0.4);
+}
+
+.workspace-tab-btn {
+  color: var(--text-secondary, #1e3a5f);
+}
+
+.workspace-tab-btn:hover {
+  background: rgba(10, 34, 64, 0.06);
+  color: var(--accent, #0a2240);
+}
+
+html.dark .workspace-tab-btn,
+html.dark-mode .workspace-tab-btn {
+  color: #cbd5e1;
+}
+
+html.dark .workspace-tab-btn:hover,
+html.dark-mode .workspace-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #dfc07f;
+}
+
+/* Mobile Drawer Optimization: Categories Clean and Distinct */
+.mobile-nav-inner {
+  padding: 16px 18px 48px !important;
+  gap: 8px !important;
+}
+
+.mobile-nav-group {
+  border-radius: 14px;
+  background: rgba(10, 34, 64, 0.03);
+  border: 1px solid rgba(10, 34, 64, 0.06);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+html.dark .mobile-nav-group,
+html.dark-mode .mobile-nav-group {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+.mobile-nav-header {
+  padding: 13px 16px !important;
+  font-size: 0.95rem !important;
+  border-radius: 0 !important;
+  border-left: 3px solid var(--gold) !important;
+}
+
+.mobile-nav-sublink {
+  padding: 11px 16px !important;
+  font-size: 0.88rem !important;
+}
+
+.mobile-nav-link {
+  padding: 13px 16px !important;
+  border-radius: 14px !important;
+  background: rgba(10, 34, 64, 0.03);
+  border: 1px solid rgba(10, 34, 64, 0.06);
+}
+
+html.dark .mobile-nav-link,
+html.dark-mode .mobile-nav-link {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+/* ---------- 2. Category Workspace Router Panels & Active Pill ---------- */
+.tab-workspace-panel {
+  display: none;
+  animation: tabPanelReveal 0.34s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.tab-workspace-panel.is-active {
+  display: block;
+}
+
+.workspace-tab-btn.is-active {
+  background: var(--accent, #0a2240);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 2px 10px rgba(10, 34, 64, 0.22);
+}
+
+html.dark .workspace-tab-btn.is-active,
+html.dark-mode .workspace-tab-btn.is-active {
+  background: var(--gold, #c8a45d);
+  color: #081120;
+  box-shadow: 0 2px 12px rgba(200, 164, 93, 0.28);
+}
+
+@keyframes tabPanelReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keep Structure hierarchy-only; Majors live in dedicated #panel-majors tab */
+#toggle-majors-btn,
+#struct-tree-canvas #tree-majors-block {
+  display: none !important;
+}
+
+/* ---------- 3. Home Hero Position (Above-the-fold) & Vibrant Contrast ---------- */
+#panel-home .hero {
+  min-height: clamp(500px, 70vh, 690px);
+  padding: 28px 24px 44px;
+  align-items: center;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 15%, rgba(207, 169, 94, 0.22), transparent 60%),
+    linear-gradient(155deg, #051224 0%, #0a2240 50%, #0f2f57 100%);
+}
+
+#panel-home .hero-campus-bg {
+  opacity: 0.55;
+  filter: saturate(1.25) contrast(1.08) brightness(0.9);
+}
+
+#panel-home .hero-content {
+  padding: 34px 40px 32px;
+  background: linear-gradient(155deg,
+    rgba(6, 20, 40, 0.78) 0%,
+    rgba(10, 32, 62, 0.68) 55%,
+    rgba(7, 23, 46, 0.84) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.52);
+  box-shadow:
+    0 24px 64px rgba(3, 10, 22, 0.55),
+    0 0 42px rgba(212, 175, 55, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+#panel-home .hero-badge {
+  background: rgba(207, 169, 94, 0.18);
+  color: #fde68a;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 20px rgba(207, 169, 94, 0.22);
+}
+
+#panel-home .hero-stats .stat-item {
+  background: rgba(10, 34, 64, 0.72);
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  box-shadow: 0 10px 26px rgba(3, 10, 22, 0.35);
+}
+
+#panel-home .hero-stats .stat-item.main-stat {
+  background: linear-gradient(145deg, rgba(184, 147, 74, 0.26), rgba(10, 34, 64, 0.82));
+  border-color: rgba(234, 179, 8, 0.65);
+}
+
+#panel-home .hero-stats .stat-number {
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+#panel-home .hero-stats .main-stat .stat-number {
+  color: #fef08a;
+}
+
+#panel-home .hero-stats .stat-label {
+  color: #dbeafe;
+}
+
+#panel-home .hero-grad-card {
+  background: rgba(10, 34, 64, 0.78);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  color: #ffffff;
+}
+
+#panel-home .hero-grad-card strong {
+  color: #ffffff;
+}
+
+#panel-home .hero-grad-card small {
+  color: #fde68a;
+}
+
+@media (max-width: 640px) {
+  #panel-home .hero {
+    min-height: auto;
+    padding: 18px 14px 36px;
+  }
+
+  #panel-home .hero-content {
+    padding: 26px 18px 24px;
+  }
+}
+
+/* ---------- 4. Contact Form Feedback Banner (.form-success & .error) ---------- */
+.form-success {
+  display: none;
+  margin-top: 0.9rem;
+  padding: 0.85rem 1.05rem;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.45;
+  background: rgba(16, 185, 129, 0.12);
+  color: #065f46;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 8px 24px -10px rgba(16, 185, 129, 0.25);
+}
+
+html.dark .form-success,
+html.dark-mode .form-success,
+body.dark .form-success {
+  background: rgba(16, 185, 129, 0.16);
+  color: #6ee7b7;
+  border-color: rgba(52, 211, 153, 0.35);
+}
+
+.form-success.show {
+  display: block;
+  animation: fadeSlideUp 0.25s ease both;
+}
+
+.form-success.error {
+  background: rgba(239, 68, 68, 0.12);
+  color: #991b1b;
+  border-color: rgba(239, 68, 68, 0.35);
+  box-shadow: 0 8px 24px -10px rgba(239, 68, 68, 0.25);
+}
+
+html.dark .form-success.error,
+html.dark-mode .form-success.error,
+body.dark .form-success.error {
+  background: rgba(239, 68, 68, 0.18);
+  color: #fca5a5;
+  border-color: rgba(248, 113, 113, 0.38);
+}
+
+/* ---------- 5. Global Search Active Keyboard Selection & Highlighting ---------- */
+.search-result-item.selected {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+  box-shadow: 0 0 0 2px rgba(10, 34, 64, 0.18);
+}
+
+.search-result-item mark {
+  background: rgba(245, 158, 11, 0.28);
+  color: inherit;
+  padding: 0.02rem 0.22rem;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+html.dark .search-result-item mark,
+html.dark-mode .search-result-item mark {
+  background: rgba(251, 191, 36, 0.26);
+  color: #fde68a;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

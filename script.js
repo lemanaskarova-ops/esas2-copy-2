@@ -90,11 +90,11 @@ const i18n = {
     nav_register: "Qeydiyyat",
     hero_badge: "Rəsmi Təhsil Portalı",
     hero_title:
-      "AZƏRBAYCAN RESPUBLİKASI ELM VƏ TƏHSİL NAZİRLİYİ<br>ELM VƏ ALİ TƏHSİL ÜZRƏ DÖVLƏT AGENTLİYİ<br>AZƏRBAYCAN TEXNİKİ UNİVERSİTETİNİN NƏZDİNDƏ<br>BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ<br>PUBLİK HÜQUQİ ŞƏXSİ",
+      '<span class="hero-inst-name">Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik Hüquqi Şəxsi</span><span class="hero-main-slogan">"Dövlət Standartı ilə Rəqəmsal Gələcəyə Doğru"</span>',
     hero_desc:
       "Gələcəyin rabitə və nəqliyyat mütəxəssislərini yetişdirən müasir təhsil mərkəzi.",
     hero_cta_portal: "Tələbə Portalı",
-    hero_cta_about: "Haqqımızda",
+    hero_cta_about: "Kollecimizlə Tanışlıq",
     stat_students: "Tələbə",
     stat_teachers: "Müəllim",
     stat_staff: "Digər işçilər",
@@ -165,10 +165,10 @@ const i18n = {
     struct_director_badge: "Kollec Rəhbərliyi",
     struct_deputies_badge: "Direktor Müavinləri",
     struct_departments_badge: "Şöbə Müdirləri və Xidmətlər",
-    struct_tier1_label: "I SƏVİYYƏ · DİREKTORLUQ",
-    struct_tier2_label: "II SƏVİYYƏ · DİREKTOR MÜAVİNLƏRİ",
-    struct_tier3_label: "III SƏVİYYƏ · YAP ƏPT SƏDRİ VƏ ŞÖBƏ MÜDİRİ",
-    struct_tier4_label: "IV SƏVİYYƏ · ŞÖBƏ MÜDİRLƏRİ VƏ XİDMƏTLƏR",
+    struct_tier1_label: "DİREKTORLUQ",
+    struct_tier2_label: "DİREKTOR MÜAVİNLƏRİ",
+    struct_tier3_label: "YAP ƏPT SƏDRİ VƏ ŞÖBƏ MÜDİRİ",
+    struct_tier4_label: "ŞÖBƏ MÜDİRLƏRİ VƏ XİDMƏTLƏR",
     struct_tier3_badge: "YAP Ərazi Partiya Təşkilatı Sədri · Şöbə Müdiri",
     struct_wing_academic: "Tədris, İKT və Sahə Şöbələri",
     struct_wing_admin: "İnzibati, Tələbə və Dəstək Xidmətləri",
@@ -918,6 +918,40 @@ const i18n = {
     honor_kicker: "İKT, Kibertəhlükəsizlik & Robototexnika",
     honor_tab_empty: "Bu kateqoriya üzrə məlumat hazırlanır.",
     honor_modal_pill: "🏆 Fəxri Tələbə",
+    nav_search_short: "Axtar",
+    wtab_home: "Ana Səhifə",
+    wtab_structure: "Struktur & İxtisaslar",
+    wtab_academics: "Tədris & Elm",
+    wtab_library: "Elektron Kitabxana",
+    wtab_campus: "Kampus (5 Mərtəbə)",
+    wtab_achievements: "Nailiyyətlər & Şərəf",
+    wtab_media: "Xəbərlər & Qalereya",
+    wtab_contact: "Əlaqə & FAQ",
+    wtab_all: "Tam Baxış",
+    wtab_memo: "Memorandumlar ↗",
+    bento_badge: "PORTAL BÖLMƏLƏRİ",
+    bento_title: "Sürətli Kateqoriya Keçidləri",
+    bento_sub: "BDRNK ekosisteminin bütün bölmələrinə ayrıca səliqəli tablarda bir kliklə keçid edin.",
+    bento_1_t: "Struktur & İxtisaslar",
+    bento_1_d: "Rəhbərlik, 10 FBK şöbəsi və qəbul ixtisas cədvəlləri",
+    bento_2_t: "Elektron Kitabxana",
+    bento_2_d: "Dərsliklər, DOCX/PDF mühazirə fondu və rəqəmsal oxu zalı",
+    bento_3_t: "Tədris, Video & Elm",
+    bento_3_d: "19 videodərs, 12 tədqiqatçı alim, IEQC sertifikatları və karyera",
+    bento_4_t: "İnteraktiv Kampus",
+    bento_4_d: "Auditoriyalar, kitabxana, imtahan və laboratoriyaların naviqasiyası",
+    bento_5_t: "Nailiyyətlər & Şərəf",
+    bento_5_d: "Fəxri tələbə portfeli, diplomlar və Respublika İdman Kuboku",
+    bento_6_t: "Xəbərlər & Qalereya",
+    bento_6_d: "110+ rəsmi xəbər, redaksiya oxu zalı və 4-panel media qalereyası",
+    bento_7_t: "Beynəlxalq Memorandumlar",
+    bento_7_d: "Qazaxıstan ALT və Özbəkistan Daşkənd Nəqliyyat Texnikumu sazişləri",
+    bento_8_t: "Əlaqə & FAQ",
+    bento_8_d: "Xəritə, birbaşa müraciət formu, rəsmi portallar və tez-tez verilən suallar",
+    cf_err_name: "Zəhmət olmasa ad və soyadınızı tam daxil edin (minimum 2 hərf).",
+    cf_err_email: "Zəhmət olmasa düzgün elektron poçt ünvanı daxil edin.",
+    cf_err_msg: "Zəhmət olmasa müraciət mətnini qeyd edin (minimum 5 simvol).",
+    cf_err_rate: "Zəhmət olmasa yeni müraciət göndərməzdən əvvəl bir neçə saniyə gözləyin.",
   },
   en: {
     hero_qarabag_cta: "Karabakh Victory",
@@ -1000,11 +1034,11 @@ const i18n = {
     nav_register: "Registration",
     hero_badge: "Official Educational Portal",
     hero_title:
-      "MINISTRY OF SCIENCE AND EDUCATION OF THE REPUBLIC OF AZERBAIJAN<br>STATE AGENCY FOR SCIENCE AND HIGHER EDUCATION<br>UNDER AZERBAIJAN TECHNICAL UNIVERSITY<br>BAKU STATE COMMUNICATIONS AND TRANSPORT COLLEGE<br>PUBLIC LEGAL ENTITY",
+      '<span class="hero-inst-name">Baku State Communications and Transport College Public Legal Entity</span><span class="hero-main-slogan">"Towards the Digital Future with State Standards"</span>',
     hero_desc:
       "A modern educational center training future experts in communications and transport.",
     hero_cta_portal: "Student Portal",
-    hero_cta_about: "About Us",
+    hero_cta_about: "Explore Our College",
     stat_students: "Students",
     stat_teachers: "Teachers",
     stat_staff: "Other staff",
@@ -1075,10 +1109,10 @@ const i18n = {
     struct_director_badge: "College Directorate",
     struct_deputies_badge: "Vice Directors",
     struct_departments_badge: "Department Heads & Services",
-    struct_tier1_label: "LEVEL I · DIRECTORATE",
-    struct_tier2_label: "LEVEL II · VICE DIRECTORS",
-    struct_tier3_label: "LEVEL III · CHAIR OF YAP ORGANIZATION & DEPT HEAD",
-    struct_tier4_label: "LEVEL IV · DEPARTMENT HEADS & SERVICES",
+    struct_tier1_label: "DIRECTORATE",
+    struct_tier2_label: "VICE DIRECTORS",
+    struct_tier3_label: "CHAIR OF YAP ORGANIZATION & DEPT HEAD",
+    struct_tier4_label: "DEPARTMENT HEADS & SERVICES",
     struct_tier3_badge: "Chair of YAP Organization · Department Head",
     struct_wing_academic: "Academic, ICT & Field Departments",
     struct_wing_admin: "Administrative, Student & Support Services",
@@ -1821,6 +1855,40 @@ const i18n = {
     honor_kicker: "IT, Cybersecurity & Robotics",
     honor_tab_empty: "Information for this category is being prepared.",
     honor_modal_pill: "🏆 Honor Student",
+    nav_search_short: "Search",
+    wtab_home: "Home",
+    wtab_structure: "Structure & Majors",
+    wtab_academics: "Academics & Science",
+    wtab_library: "E-Library",
+    wtab_campus: "Campus (5 Floors)",
+    wtab_achievements: "Honors & Awards",
+    wtab_media: "News & Gallery",
+    wtab_contact: "Contact & FAQ",
+    wtab_all: "All Sections",
+    wtab_memo: "Memorandums ↗",
+    bento_badge: "PORTAL SECTIONS",
+    bento_title: "Quick Category Access",
+    bento_sub: "Switch cleanly between all BDRNK ecosystem modules in dedicated workspace tabs.",
+    bento_1_t: "Structure & Majors",
+    bento_1_d: "Leadership, 10 Subject Commissions and admission specialty tables",
+    bento_2_t: "Electronic Library",
+    bento_2_d: "Textbooks, DOCX/PDF lecture archive and digital reading room",
+    bento_3_t: "Academics, Video & Science",
+    bento_3_d: "19 video lectures, 12 researchers, IEQC certificates and career roadmap",
+    bento_4_t: "Interactive Campus",
+    bento_4_d: "Navigation across lecture halls, library, exam center and labs",
+    bento_5_t: "Achievements & Honor Roll",
+    bento_5_d: "Honor student portfolio, certificates and Republic Sports Cup",
+    bento_6_t: "News & Media Gallery",
+    bento_6_d: "110+ official stories, editorial reader and 4-panel cinema gallery",
+    bento_7_t: "International Memorandums",
+    bento_7_d: "Kazakhstan ALT and Uzbekistan Tashkent Transport Technikum agreements",
+    bento_8_t: "Contact & FAQ",
+    bento_8_d: "Map, direct inquiry form, official portals and frequently asked questions",
+    cf_err_name: "Please enter your full name (at least 2 characters).",
+    cf_err_email: "Please enter a valid email address.",
+    cf_err_msg: "Please write your message (at least 5 characters).",
+    cf_err_rate: "Please wait a few seconds before sending another inquiry.",
   },
   ru: {
     hero_qarabag_cta: "Карабахская Победа",
@@ -1898,11 +1966,11 @@ const i18n = {
     nav_register: "Регистрация",
     hero_badge: "Официальный Портал",
     hero_title:
-      "МИНИСТЕРСТВО НАУКИ И ОБРАЗОВАНИЯ АЗЕРБАЙДЖАНСКОЙ РЕСПУБЛИКИ<br>ГОСУДАРСТВЕННОЕ АГЕНТСТВО ПО НАУКЕ И ВЫСШЕМУ ОБРАЗОВАНИЮ<br>ПРИ АЗЕРБАЙДЖАНСКОМ ТЕХНИЧЕСКОМ УНИВЕРСИТЕТЕ<br>БАКИНСКИЙ ГОСУДАРСТВЕННЫЙ КОЛЛЕДЖ СВЯЗИ И ТРАНСПОРТА<br>ПУБЛИЧНОЕ ЮРИДИЧЕСКОЕ ЛИЦО",
+      '<span class="hero-inst-name">Бакинский Государственный Колледж Связи и Транспорта Публичное Юридическое Лицо</span><span class="hero-main-slogan">«К цифровому будущему по государственному стандарту»</span>',
     hero_desc:
       "Современный центр, готовящий специалистов будущего в области связи и транспорта.",
     hero_cta_portal: "Портал Студента",
-    hero_cta_about: "О нас",
+    hero_cta_about: "Знакомство с колледжем",
     stat_students: "Студентов",
     stat_teachers: "Учителей",
     stat_staff: "Другие сотрудники",
@@ -1973,10 +2041,10 @@ const i18n = {
     struct_director_badge: "Руководство Колледжа",
     struct_deputies_badge: "Заместители Директора",
     struct_departments_badge: "Заведующие Отделами и Службы",
-    struct_tier1_label: "I УРОВЕНЬ · ДИРЕКТОРАТ",
-    struct_tier2_label: "II УРОВЕНЬ · ЗАМЕСТИТЕЛИ ДИРЕКТОРА",
-    struct_tier3_label: "III УРОВЕНЬ · ПРЕДСЕДАТЕЛЬ ОРГАНИЗАЦИИ YAP И ЗАВ. ОТДЕЛОМ",
-    struct_tier4_label: "IV УРОВЕНЬ · ЗАВЕДУЮЩИЕ ОТДЕЛАМИ И СЛУЖБЫ",
+    struct_tier1_label: "ДИРЕКТОРАТ",
+    struct_tier2_label: "ЗАМЕСТИТЕЛИ ДИРЕКТОРА",
+    struct_tier3_label: "ПРЕДСЕДАТЕЛЬ ОРГАНИЗАЦИИ YAP И ЗАВ. ОТДЕЛОМ",
+    struct_tier4_label: "ЗАВЕДУЮЩИЕ ОТДЕЛАМИ И СЛУЖБЫ",
     struct_tier3_badge: "Председатель организации YAP · Зав. отделом",
     struct_wing_academic: "Учебные, ИКТ и отраслевые отделения",
     struct_wing_admin: "Административные, студенческие и сервисные службы",
@@ -2723,6 +2791,40 @@ const i18n = {
     honor_kicker: "ИКТ, Кибербезопасность и Робототехника",
     honor_tab_empty: "Информация по этой категории подготавливается.",
     honor_modal_pill: "🏆 Почетный Студент",
+    nav_search_short: "Поиск",
+    wtab_home: "Главная",
+    wtab_structure: "Структура и Спец.",
+    wtab_academics: "Обучение и Наука",
+    wtab_library: "Эл. Библиотека",
+    wtab_campus: "Кампус (5 Этажей)",
+    wtab_achievements: "Достижения и Почет",
+    wtab_media: "Новости и Галерея",
+    wtab_contact: "Контакты и FAQ",
+    wtab_all: "Все Разделы",
+    wtab_memo: "Меморандумы ↗",
+    bento_badge: "РАЗДЕЛЫ ПОРТАЛА",
+    bento_title: "Быстрый Переход по Категориям",
+    bento_sub: "Переключайтесь между всеми модулями экосистемы БГКСТ в отдельных вкладках.",
+    bento_1_t: "Структура и Специальности",
+    bento_1_d: "Руководство, 10 предметных комиссий и таблицы приема",
+    bento_2_t: "Электронная Библиотека",
+    bento_2_d: "Учебники, архив лекций DOCX/PDF и цифровой читальный зал",
+    bento_3_t: "Обучение, Видео и Наука",
+    bento_3_d: "19 видеолекций, 12 исследователей, сертификаты IEQC и карта пути",
+    bento_4_t: "Интерактивный Кампус",
+    bento_4_d: "Навигация по аудиториям, библиотеке, экзаменам и лабораториям",
+    bento_5_t: "Достижения и Доска Почета",
+    bento_5_d: "Портфолио почетного студента, дипломы и Кубок Республики",
+    bento_6_t: "Новости и Галерея",
+    bento_6_d: "110+ официальных новостей, читальный зал и 4-панельная галерея",
+    bento_7_t: "Международные Меморандумы",
+    bento_7_d: "Соглашения с АЛТ (Казахстан) и Ташкентским техникумом (Узбекистан)",
+    bento_8_t: "Контакты и FAQ",
+    bento_8_d: "Карта, форма обращения, официальные порталы и частые вопросы",
+    cf_err_name: "Пожалуйста, введите имя и фамилию (минимум 2 символа).",
+    cf_err_email: "Пожалуйста, введите корректный адрес электронной почты.",
+    cf_err_msg: "Пожалуйста, введите текст обращения (минимум 5 символов).",
+    cf_err_rate: "Пожалуйста, подождите несколько секунд перед повторной отправкой.",
   },
 };
 
@@ -2733,12 +2835,35 @@ function gT(key) {
 }
 
 function updateDOMTexts() {
-  // Basic innerHTML translations
+  // Icon-safe innerHTML/text translation
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    if (i18n[currentLang] && i18n[currentLang][key]) {
-      el.innerHTML = i18n[currentLang][key];
+    const val = i18n[currentLang] && i18n[currentLang][key];
+    if (!val) return;
+
+    // If element wraps an icon/svg alongside a separate text span or child span with same/nested structure
+    const hasIconChild = el.querySelector(":scope > svg, :scope > .badge-icon, :scope > .mobile-nav-icon");
+    if (hasIconChild && !val.includes("<span") && !val.includes("<br")) {
+      const innerTextSpan = Array.from(el.children).find(
+        (c) => c.tagName === "SPAN" && !c.classList.contains("badge-icon") && !c.classList.contains("mobile-nav-icon")
+      );
+      if (innerTextSpan) {
+        if (!innerTextSpan.hasAttribute("data-i18n")) {
+          innerTextSpan.textContent = val;
+        }
+        return;
+      }
+      // Remove only loose text nodes and append translated text node after icon
+      Array.from(el.childNodes).forEach((node) => {
+        if (node.nodeType === Node.TEXT_NODE) {
+          node.remove();
+        }
+      });
+      el.appendChild(document.createTextNode(" " + val));
+      return;
     }
+
+    el.innerHTML = val;
   });
 
   // Placeholder translations
@@ -3017,6 +3142,16 @@ const staffData = {
       role_en: "Methodist",
       role_ru: "Методист",
       img: "selalex1.jpeg",
+    },
+    {
+      id: "30",
+      name_az: "Günel Ağakişiseyva Azəddin qızı",
+      name_en: "Gunel Agakishiseyva Azaddin",
+      name_ru: "Гюнель Агакишисейва Азеддин гызы",
+      role_az: "Tədris hissə müdiri",
+      role_en: "Head of Academic Department",
+      role_ru: "Заведующая учебной частью",
+      img: "gunelx.jpeg",
     },
   ],
   commissions: [
@@ -7587,7 +7722,7 @@ function initStructureModule() {
     const wingAcademicStaff = academicOrder
       .map((id) => staffData.departments.find((p) => p.id === id))
       .filter(Boolean);
-    const adminOrder = ["13", "19", "20", "17", "18", "16", "27", "28", "29", "22", "25", "26"];
+    const adminOrder = ["30", "13", "19", "20", "17", "18", "16", "27", "28", "29", "22", "25", "26"];
     const wingAdminStaff = adminOrder
       .map((id) => staffData.departments.find((p) => p.id === id))
       .filter(Boolean);
@@ -7677,7 +7812,7 @@ function initStructureModule() {
     treeCanvas.innerHTML = `
       <!-- ═══ 1-Cİ SƏVİYYƏ: DİREKTOR ═══ -->
       <div class="tree-tier-block tier-1">
-        <div class="tree-tier-tag"><span>${gT("struct_tier1_label") || "I SƏVİYYƏ · DİREKTORLUQ"}</span></div>
+        <div class="tree-tier-tag"><span>${gT("struct_tier1_label") || "DİREKTORLUQ"}</span></div>
         <div class="tree-card-director" data-person-id="${director.id}" title="${directorName}">
           <div class="tree-director-avatar">
             <img src="${director.img}" alt="${directorName}" onerror="this.onerror=null;this.src='logo.jpg';">
@@ -7699,7 +7834,7 @@ function initStructureModule() {
 
       <!-- ═══ 2-Cİ SƏVİYYƏ: ŞAHMURAD MƏMMƏDOV VƏ İSMAYIL SƏFİYEV ═══ -->
       <div class="tree-tier-block tier-2">
-        <div class="tree-tier-tag"><span>${gT("struct_tier2_label") || "II SƏVİYYƏ · DİREKTOR MÜAVİNLƏRİ"}</span></div>
+        <div class="tree-tier-tag"><span>${gT("struct_tier2_label") || "DİREKTOR MÜAVİNLƏRİ"}</span></div>
         <div class="tree-level-deputies">
           <div class="tree-card-deputy" data-person-id="${deputy1.id}" title="${deputy1Name}">
             <div class="tree-deputy-avatar">
@@ -7730,7 +7865,7 @@ function initStructureModule() {
 
       <!-- ═══ 3-CÜ SƏVİYYƏ: SƏİDƏ QULİYEVA ═══ -->
       <div class="tree-tier-block tier-3">
-        <div class="tree-tier-tag"><span>${gT("struct_tier3_label") || "III SƏVİYYƏ · YAP ƏPT SƏDRİ VƏ ŞÖBƏ MÜDİRİ"}</span></div>
+        <div class="tree-tier-tag"><span>${gT("struct_tier3_label") || "YAP ƏPT SƏDRİ VƏ ŞÖBƏ MÜDİRİ"}</span></div>
         <div class="tree-level-tier3">
           <div class="tree-card-tier3" data-person-id="${tier3.id}" title="${tier3Name}">
             <div class="tree-tier3-avatar">
@@ -7753,7 +7888,7 @@ function initStructureModule() {
 
       <!-- ═══ 4-CÜ SƏVİYYƏ: ŞÖBƏ MÜDİRLƏRİ VƏ BİRLƏŞMƏ KOMİSSİYALARI ═══ -->
       <div class="tree-tier-block tier-4">
-        <div class="tree-tier-tag"><span>${gT("struct_tier4_label") || "IV SƏVİYYƏ · ŞÖBƏ MÜDİRLƏRİ VƏ BİRLƏŞMƏ KOMİSSİYALARI"}</span></div>
+        <div class="tree-tier-tag"><span>${gT("struct_tier4_label") || "ŞÖBƏ MÜDİRLƏRİ VƏ BİRLƏŞMƏ KOMİSSİYALARI"}</span></div>
         <div class="tree-wings-grid">
           <!-- Qanad 1: Tədris, İKT və Sahə Şöbələri -->
           <div class="tree-wing-panel">
@@ -7857,14 +7992,16 @@ function initStructureModule() {
       });
     });
 
-    // Majors switcher tabs in tree canvas
-    treeCanvas.querySelectorAll(".majors-tab-btn").forEach((btn) => {
+    // Majors switcher tabs (scoped to #tree-majors-block so it works in any tab mount)
+    const majorsBlockEl = document.getElementById("tree-majors-block") || treeCanvas;
+    majorsBlockEl.querySelectorAll(".majors-tab-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
+        const root = document.getElementById("tree-majors-block") || treeCanvas;
         const view = btn.dataset.majorView;
-        treeCanvas.querySelectorAll(".majors-tab-btn").forEach((b) => b.classList.remove("active"));
+        root.querySelectorAll(".majors-tab-btn").forEach((b) => b.classList.remove("active"));
         btn.classList.add("active");
-        treeCanvas.querySelectorAll(".majors-pane").forEach((p) => p.classList.remove("active"));
-        const target = treeCanvas.querySelector(`#majors-pane-${view}`);
+        root.querySelectorAll(".majors-pane").forEach((p) => p.classList.remove("active"));
+        const target = root.querySelector(`#majors-pane-${view}`);
         if (target) target.classList.add("active");
       });
     });
@@ -8714,22 +8851,9 @@ function initStructureModule() {
     } else if (normalizedView === "majors") {
       treePane?.classList.add("active");
       renderTree();
-      setTimeout(() => {
-        const majorsBlock = document.getElementById("tree-majors-block");
-        if (majorsBlock) {
-          const headerOffset = 90;
-          const elementPosition = majorsBlock.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-          });
-          majorsBlock.classList.remove("struct-highlight");
-          void majorsBlock.offsetWidth;
-          majorsBlock.classList.add("struct-highlight");
-          setTimeout(() => majorsBlock.classList.remove("struct-highlight"), 3500);
-        }
-      }, 70);
+      if (typeof window.switchWorkspaceTab === "function") {
+        window.switchWorkspaceTab("majors", { scrollToTop: true, updateUrl: true, pushHistory: true });
+      }
     }
   }
 
@@ -9147,7 +9271,7 @@ function initLibraryModule() {
   // =========================================================================
   // ACADEMIC LECTURES ARCHIVE (All 21 Lectures — Pure Subject Classification)
   // =========================================================================
-  const fbkLecturesArchive = [
+  const fbkLecturesArchive = window.__bdrnkFbkLectures = [
     // --- Elektronika və Metrologiya (3) ---
     {
       id: "fbk-lec-1",
@@ -10046,7 +10170,7 @@ function initLibraryModule() {
   }
 
   renderLibraryLectures();
-  setMasterView("lectures");
+  setMasterView("books");
 }
 
 /**
@@ -10679,6 +10803,19 @@ function initForm() {
     }
   }
 
+  let lastFormSubmitAt = 0;
+  let formNoticeTimer = null;
+
+  function showFormNotice(text, isError) {
+    if (formNoticeTimer) clearTimeout(formNoticeTimer);
+    msg.textContent = text;
+    msg.classList.toggle("error", Boolean(isError));
+    msg.classList.add("show");
+    formNoticeTimer = setTimeout(() => {
+      msg.classList.remove("show", "error");
+    }, 6000);
+  }
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -10693,6 +10830,47 @@ function initForm() {
     const phoneVal = phoneEl ? phoneEl.value.trim() : "";
     const emailVal = emailEl ? emailEl.value.trim() : "";
     const messageVal = msgTextarea ? msgTextarea.value.trim() : "";
+
+    if (Date.now() - lastFormSubmitAt < 8000) {
+      showFormNotice(
+        gT("cf_err_rate") ||
+          "Zəhmət olmasa yeni müraciət göndərməzdən əvvəl bir neçə saniyə gözləyin.",
+        true
+      );
+      return;
+    }
+
+    if (nameVal.length < 2) {
+      showFormNotice(
+        gT("cf_err_name") ||
+          "Zəhmət olmasa ad və soyadınızı tam daxil edin (minimum 2 hərf).",
+        true
+      );
+      nameEl?.focus();
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(emailVal)) {
+      showFormNotice(
+        gT("cf_err_email") ||
+          "Zəhmət olmasa düzgün elektron poçt ünvanı daxil edin.",
+        true
+      );
+      emailEl?.focus();
+      return;
+    }
+
+    if (messageVal.length < 5) {
+      showFormNotice(
+        gT("cf_err_msg") ||
+          "Zəhmət olmasa müraciət mətnini qeyd edin (minimum 5 simvol).",
+        true
+      );
+      msgTextarea?.focus();
+      return;
+    }
+
+    msg.classList.remove("show", "error");
 
     const dynamicSubject = `BDRNK Rəsmi Elektron Müraciət — ${nameVal || "Vətəndaş"} (${roleVal})`;
     if (subjectEl) {
@@ -10712,18 +10890,17 @@ function initForm() {
     }
 
     const showSuccessAndReset = () => {
+      lastFormSubmitAt = Date.now();
       if (submitBtn) {
         submitBtn.disabled = false;
         submitBtn.textContent = gT("cf_send") || origBtnText;
       }
-      msg.textContent =
+      showFormNotice(
         (gT("cf_success") ||
-          "Müraciətiniz göndərildi! 1–3 iş günü ərzində cavablandırılacaqdır.") + " ✓";
-      msg.classList.add("show");
+          "Müraciətiniz göndərildi! 1–3 iş günü ərzində cavablandırılacaqdır.") + " ✓",
+        false
+      );
       resetContactFormState();
-      setTimeout(() => {
-        msg.classList.remove("show");
-      }, 6000);
     };
 
     const submitViaHiddenIframe = () => {
@@ -10775,14 +10952,14 @@ function initForm() {
             submitBtn.disabled = false;
             submitBtn.textContent = gT("cf_send") || origBtnText;
           }
-          msg.textContent =
+          showFormNotice(
             currentLang === "en"
               ? "Sending failed. Please try again later or call us."
               : currentLang === "ru"
                 ? "Не удалось отправить. Попробуйте позже или позвоните нам."
-                : "Göndərmək alınmadı. Bir az sonra yenidən cəhd edin və ya bizə zəng edin.";
-          msg.classList.add("show");
-          setTimeout(() => msg.classList.remove("show"), 6000);
+                : "Göndərmək alınmadı. Bir az sonra yenidən cəhd edin və ya bizə zəng edin.",
+            true
+          );
         }
       })
       .catch(() => {
@@ -12996,7 +13173,7 @@ function initSceneTransition() {
 
 /* ═══════════════ HONORARY STUDENTS / FƏXRİ TƏLƏBƏLƏR MODULE ═══════════════ */
 (function initHonorStudentsModule() {
-  const honorStudentsData = [
+  const honorStudentsData = window.__bdrnkHonorStudents = [
     {
       "id": "senan-mirzezade",
       "fullName": "Mirzəzadə Sənan Azər oğlu",
@@ -14046,7 +14223,7 @@ function initSceneTransition() {
  * ══════════════════════════════════════════════════════════════════
  */
 (function initCertificatesModule() {
-  const certificatesData = [
+  const certificatesData = window.__bdrnkCertificates = [
     {
       id: 1,
       title_az: "Basketbol üzrə Yasamal Rayon Turniri",
@@ -15121,7 +15298,7 @@ function initSceneTransition() {
   }
   window.escapeHTML = escapeHTML;
 
-  const scienceAuthorsData = [
+  const scienceAuthorsData = window.__bdrnkScienceAuthors = [
     {
       "id": 1,
       "no": "1",
@@ -18524,6 +18701,66 @@ function initGlobalSearchModule() {
       });
     }
 
+    // 7. Workspace Category Tabs (8 Bölmə + Tam Baxış) & Beynəlxalq Memorandumlar
+    const workspaceTabEntries = [
+      { tab: "home", categories: ["structure", "majors"], icon: "🏠", key: "wtab_home", desc: "Əsas səhifə, statistika, məzun günü və sürətli bento keçidlər", tokens: "ana sehife baslangic hero statistika portal" },
+      { tab: "structure", categories: ["structure", "majors"], icon: "🏛️", key: "wtab_structure", desc: "Rəhbərlik, 10 FBK kafedrası, fəxri əməkdaşlar və qəbul ixtisasları", tokens: "struktur rehberlik fbk kafedra ixtisaslar qebul" },
+      { tab: "academics", categories: ["science", "lectures"], icon: "🎓", key: "wtab_academics", desc: "Videodərslər, Tədqiqat & Elm müəllifləri, IEQC sertifikatları və karyera", tokens: "tedris elm tedqiqat video ders meqale nesrler" },
+      { tab: "library", categories: ["library"], icon: "📚", key: "wtab_library", desc: "Elektron kitabxana, 80+ dərslik və 40+ FBK mühazirə fondu", tokens: "elektron kitabxana derslik muhazire pdf docx oxu zali" },
+      { tab: "campus", categories: ["campus"], icon: "🗺️", key: "wtab_campus", desc: "5 mərtəbəli interaktiv kampus planı, auditoriyalar və laboratoriyalar", tokens: "kampus mertebe otaqlar auditoriya laboratoriya bina" },
+      { tab: "achievements", categories: ["achieve"], icon: "🏆", key: "wtab_achievements", desc: "Fəxri tələbə portfeli, beynəlxalq diplomlar və İdman Kuboku", tokens: "nailiyyet seref fexri telebe idman kubok diplom" },
+      { tab: "media", categories: ["news"], icon: "📰", key: "wtab_media", desc: "110+ rəsmi xəbər, redaksiya oxu zalı və 4-panel media qalereyası", tokens: "xeberler qalereya media foto video arxiv" },
+      { tab: "contact", categories: ["contact", "faq"], icon: "📞", key: "wtab_contact", desc: "Xəritə, birbaşa onlayn müraciət formu və tez-tez verilən suallar", tokens: "elaqe unvan xidmetler form faq suallar" },
+      { tab: "all", categories: ["structure", "campus", "library", "science", "achieve", "lectures", "news", "faq", "contact"], icon: "⊞", key: "wtab_all", desc: "Bütün bölmələri eyni səhifədə tam şəkildə görüntüləyin", tokens: "tam baxis hamisi butun bolmeler" },
+    ];
+
+    workspaceTabEntries.forEach((wt) => {
+      const label = gT(wt.key) || wt.tab;
+      catalog.push({
+        type: wt.categories[0],
+        category: wt.categories[0],
+        categories: wt.categories,
+        icon: wt.icon,
+        badge: l === "en" ? "Workspace Tab" : l === "ru" ? "Раздел Портала" : "Kateqoriya Tabı",
+        title: label,
+        desc: wt.desc,
+        tokens: [label, wt.tab, wt.desc, wt.tokens, "tab bolme kateqoriya"].join(" ").toLowerCase(),
+        action: () => {
+          if (typeof window.switchWorkspaceTab === "function") {
+            window.switchWorkspaceTab(wt.tab, { scrollToTop: true, updateUrl: true, pushHistory: true });
+          }
+        },
+      });
+    });
+
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "science"],
+      icon: "🤝",
+      badge: l === "en" ? "International" : l === "ru" ? "Международный" : "Beynəlxalq",
+      title: gT("bento_7_t") || "Beynəlxalq Memorandumlar",
+      desc: gT("bento_7_d") || "Qazaxıstan ALT Universiteti və Özbəkistan Daşkənd Nəqliyyat Texnikumu sazişləri",
+      tokens: "memorandum muqavile sazis qazaxistan alt universiteti ozbekistan daskend neqliyyat texnikumu beynelxalq emekdasliq pdf",
+      action: () => {
+        window.open("memorandum.html", "_blank", "noopener");
+      },
+    });
+
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "science"],
+      icon: "🇰🇿",
+      badge: l === "en" ? "Agreement" : l === "ru" ? "Соглашение" : "Saziş",
+      title: l === "en" ? "ALT University & Tashkent Transport Cooperation" : l === "ru" ? "Меморандумы с ALT (Казахстан) и Ташкентом" : "Qazaxıstan ALT və Daşkənd Nəqliyyat Texnikumu Memorandumları",
+      desc: "BDRNK ilə M. Tınışpayev adına ALT Universiteti və Daşkənd Nəqliyyat Texnikumu arasında əməkdaşlıq",
+      tokens: "kazakhstan alt tinispayev almata tashkent transport memorandum partnership agreement saziş",
+      action: () => {
+        window.open("memorandum.html", "_blank", "noopener");
+      },
+    });
+
     catalog.forEach(item => {
       item.tokensNorm = normalizeText(item.tokens);
     });
@@ -18743,11 +18980,17 @@ function initGlobalSearchModule() {
     });
   }
 
+  let searchDebounceTimer = null;
   searchInput.addEventListener("input", (e) => {
-    executeSearch(e.target.value);
+    const val = e.target.value;
+    if (searchDebounceTimer) clearTimeout(searchDebounceTimer);
+    searchDebounceTimer = setTimeout(() => {
+      executeSearch(val);
+    }, 100);
   });
 
   clearBtn?.addEventListener("click", () => {
+    if (searchDebounceTimer) clearTimeout(searchDebounceTimer);
     searchInput.value = "";
     executeSearch("");
     searchInput.focus();
