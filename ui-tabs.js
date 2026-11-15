@@ -137,7 +137,7 @@
     if (typeof window.syncSafeReveals === "function") {
       try {
         window.syncSafeReveals();
-      } catch (e) {}
+      } catch (e) { }
     }
     document
       .querySelectorAll(".tab-workspace-panel.is-active .reveal")
@@ -147,7 +147,7 @@
     animateStuckStatCounters();
     try {
       window.dispatchEvent(new Event("scroll"));
-    } catch (e) {}
+    } catch (e) { }
   }
 
   const originalScrollIntoView = Element.prototype.scrollIntoView;
@@ -173,11 +173,11 @@
     if (autoFloor && typeof window.switchCampusFloor === "function") {
       try {
         window.switchCampusFloor(autoFloor);
-      } catch (e) {}
+      } catch (e) { }
     } else if (nextTab === "campus" && !autoFloor && typeof window.switchCampusFloor === "function") {
       try {
         window.switchCampusFloor("all");
-      } catch (e) {}
+      } catch (e) { }
     }
 
     // Toggle category panels & pause playing videos inside hidden panels
@@ -192,7 +192,7 @@
           if (!video.paused && typeof video.pause === "function") {
             try {
               video.pause();
-            } catch (e) {}
+            } catch (e) { }
           }
         });
       }
@@ -234,7 +234,7 @@
         } else {
           window.history.replaceState({ tab: nextTab, anchor: focusAnchor }, "", nextUrl);
         }
-      } catch (e) {}
+      } catch (e) { }
     }
 
     // Center active tab pill horizontally on mobile scroll bar
@@ -242,7 +242,7 @@
     if (activeBtn && typeof originalScrollIntoView === "function") {
       try {
         originalScrollIntoView.call(activeBtn, { behavior: "smooth", block: "nearest", inline: "center" });
-      } catch (e) {}
+      } catch (e) { }
     }
 
     // Mount #tree-majors-block inside dedicated #majors-tab-mount without duplicates
@@ -253,7 +253,7 @@
       if (!block && typeof window.switchStructureView === "function") {
         try {
           window.switchStructureView("tree");
-        } catch (e) {}
+        } catch (e) { }
         block = document.querySelector("#struct-tree-canvas #tree-majors-block") || document.getElementById("tree-majors-block");
       }
       if (block) {
@@ -457,7 +457,7 @@
           initialAnchor = hashId;
         }
       }
-    } catch (e) {}
+    } catch (e) { }
 
     setActiveTab(initialTab, {
       scrollToTop: false,
@@ -496,7 +496,7 @@
           }
         }
       }
-    } catch (err) {}
+    } catch (err) { }
     setActiveTab(popTab, { scrollToTop: false, updateUrl: false, pushHistory: false, focusAnchor: popAnchor });
   });
 

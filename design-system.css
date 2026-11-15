@@ -777,3 +777,72 @@ html.dark-mode .memo-btn-pill-label {
     height: 32px;
   }
 }
+
+/* ---------- 11. Graduates Showcase Vibrant Royal Navy & Gold Contrast ---------- */
+.grad-showcase {
+  background:
+    radial-gradient(ellipse 75% 60% at 22% 28%, rgba(207, 169, 94, 0.24), transparent 58%),
+    radial-gradient(ellipse 60% 50% at 82% 75%, rgba(56, 189, 248, 0.14), transparent 55%),
+    linear-gradient(155deg, #051224 0%, #0a2240 52%, #071930 100%) !important;
+  color: #f8fafc;
+}
+
+.grad-showcase .grad-inner {
+  background: linear-gradient(155deg,
+    rgba(8, 26, 51, 0.92) 0%,
+    rgba(12, 35, 68, 0.88) 55%,
+    rgba(7, 23, 46, 0.94) 100%) !important;
+  border: 1px solid rgba(207, 169, 94, 0.42) !important;
+  box-shadow:
+    0 24px 60px rgba(3, 10, 22, 0.55),
+    0 0 36px rgba(207, 169, 94, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.grad-showcase .grad-eyebrow {
+  color: #fde68a;
+}
+
+.grad-showcase .grad-title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+.grad-showcase .grad-title em {
+  background: linear-gradient(90deg, #fef08a 0%, #e5be6b 55%, #cfa95e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grad-showcase .grad-desc {
+  color: #e2e8f0 !important;
+}
+
+.grad-showcase .grad-stat {
+  background: rgba(12, 35, 68, 0.88) !important;
+  border: 1px solid rgba(207, 169, 94, 0.42) !important;
+  border-left: 3px solid #cfa95e !important;
+  box-shadow: 0 10px 24px rgba(3, 10, 22, 0.35);
+}
+
+.grad-showcase .grad-stat strong {
+  color: #fef08a !important;
+}
+
+.grad-showcase .grad-stat span {
+  color: #dbeafe !important;
+}
+
+.grad-showcase .grad-cta {
+  background: rgba(207, 169, 94, 0.14);
+  border: 1.5px solid #cfa95e;
+  color: #ffffff !important;
+  box-shadow: 0 8px 22px rgba(207, 169, 94, 0.22);
+}
+
+.grad-showcase .grad-cta:hover {
+  background: linear-gradient(135deg, #d4af37, #cfa95e);
+  color: #061326 !important;
+  box-shadow: 0 12px 28px rgba(207, 169, 94, 0.38);
+}
