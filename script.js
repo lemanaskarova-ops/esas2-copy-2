@@ -7722,7 +7722,7 @@ function initStructureModule() {
     const wingAcademicStaff = academicOrder
       .map((id) => staffData.departments.find((p) => p.id === id))
       .filter(Boolean);
-    const adminOrder = ["30", "13", "19", "20", "17", "18", "16", "27", "28", "29", "22", "25", "26"];
+    const adminOrder = ["30", "13", "19", "20", "17", "18", "16", "27", "28", "29", "22", "26", "25"];
     const wingAdminStaff = adminOrder
       .map((id) => staffData.departments.find((p) => p.id === id))
       .filter(Boolean);
