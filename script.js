@@ -4111,28 +4111,6 @@ const newsData = [
     "date_ru": "05 Ноября 2025"
   },
   {
-    "id": 23,
-    "official_id": "2365",
-    "title_az": "20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində maarifləndirici tədbir",
-    "title_en": "Awareness Event Held for the October 20 – November 20 'Child Rights Month'",
-    "title_ru": "Просветительское мероприятие в рамках «Месячника прав ребенка» (20 октября – 20 ноября)",
-    "desc_az": "03.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində maarifləndirici tədbir keçirilmişdir....",
-    "desc_en": "On 03 November 2025, an official event activity titled \"Awareness Event Held for the October 20 – November 20 'Child Rights Month'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.",
-    "desc_ru": "03 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие в рамках «Месячника прав ребенка» (20 октября – 20 ноября)».",
-    "full_az": "03.11.2025-ci il tarixində AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində 20 oktyabr-20 noyabr «Uşaq Hüquqları Aylığı» çərçivəsində maarifləndirici tədbir keçirilmişdir. Tədbirdə kollecin hüquqşünası Vəfa Hacıyeva tələbələrə uşaq hüquqlarının yaranma tarixi, milli və beynəlxalq qanunvericilik, dövlət tərəfindən uşaq hüquqlarının müdafiəsi sahəsində görülən işlər barədə ətraflı məlumat vermişdir.\n\n“Uşaq hüquqları aylığı”nın təşkil olunmasının əsas məqsədi BMT-nin Uşaq Hüquqları Konvensiyasının qəbul olunmasının ildönümü, 20 noyabr-Ümumdünya Uşaqlar Günü ərəfəsində uşaqlara diqqətin daha da artırılması və uşaq hüquqlarının qorunması işinin yaxşılaşdırılmasından ibarətdir.",
-    "full_en": "On 03 November 2025, an official event activity titled \"Awareness Event Held for the October 20 – November 20 'Child Rights Month'\" was held at Baku State Communications and Transport College under Azerbaijan Technical University.\n\nThe event brought together college leadership, faculty members, invited specialists, and students. Speakers highlighted the educational, social, and civic importance of the topic, sharing detailed insights and practical recommendations with participants.\n\nActive discussions and student presentations took place during the session, reinforcing professional competencies, patriotic values, and community engagement across the campus.",
-    "full_ru": "03 Ноября 2025 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Просветительское мероприятие в рамках «Месячника прав ребенка» (20 октября – 20 ноября)».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
-    "date": "03 Noyabr 2025",
-    "image": "news_proper_2365.jpeg",
-    "url": "https://www.rabitankolleci.edu.az/news/2365",
-    "tag_az": "Tədbir",
-    "tag_en": "Event",
-    "tag_ru": "Мероприятие",
-    "date_az": "03 Noyabr 2025",
-    "date_en": "03 November 2025",
-    "date_ru": "03 Ноября 2025"
-  },
-  {
     "id": 15,
     "official_id": "2581",
     "title_az": "2 noyabr 2025-ci il tarixində Türkiyədə Beynəlxalq Marafon",
