@@ -258,6 +258,15 @@
   const originalScrollIntoView = Element.prototype.scrollIntoView;
   Element.prototype.scrollIntoView = function patchedScrollIntoView(arg) {
     const ownerTab = findTabForElement(this);
+    // Intercept library vs library-lectures to toggle books / lectures pane
+    if (targetId === "library") {
+      const booksBtn = document.querySelector('#lib-master-switcher [data-view="books"]');
+      if (booksBtn && typeof booksBtn.click === "function") booksBtn.click();
+    } else if (targetId === "library-lectures") {
+      const lecBtn = document.querySelector('#lib-master-switcher [data-view="lectures"]');
+      if (lecBtn && typeof lecBtn.click === "function") lecBtn.click();
+    }
+
     if (ownerTab && activeTab !== "all" && activeTab !== ownerTab) {
       setActiveTab(ownerTab, { scrollToTop: false, updateUrl: true });
       // Mount #tree-majors-block inside dedicated #majors-tab-mount without duplicates
@@ -348,6 +357,15 @@
       setActiveTab("campus", { scrollToTop: false, updateUrl: true, focusAnchor: "campus-navigator" });
       window.switchCampusFloor("all");
       return;
+    }
+
+    // Intercept library vs library-lectures to toggle books / lectures pane
+    if (targetId === "library") {
+      const booksBtn = document.querySelector('#lib-master-switcher [data-view="books"]');
+      if (booksBtn && typeof booksBtn.click === "function") booksBtn.click();
+    } else if (targetId === "library-lectures") {
+      const lecBtn = document.querySelector('#lib-master-switcher [data-view="lectures"]');
+      if (lecBtn && typeof lecBtn.click === "function") lecBtn.click();
     }
 
     if (ownerTab && activeTab !== "all" && activeTab !== ownerTab) {

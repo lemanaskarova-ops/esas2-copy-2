@@ -10170,7 +10170,7 @@ function initLibraryModule() {
   }
 
   renderLibraryLectures();
-  setMasterView("lectures");
+  setMasterView("books");
 }
 
 /**
