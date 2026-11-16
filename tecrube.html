@@ -1,0 +1,2512 @@
+<!doctype html>
+<html lang="az" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Təcrübədə Olan Tələbələrimiz — Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik Hüquqi Şəxsi</title>
+    <meta name="description" content="AzTU-nun nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik Hüquqi Şəxsi — Tələbələrimizin “Azərbaycan Dəmir Yolları” QSC (ADY) depolarında və mexaniki sınaq sexlərində istehsalat təcrübəsi portalı." />
+    <link rel="icon" type="image/jpeg" href="logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        display: ['Playfair Display', 'Merriweather', 'Georgia', 'serif'],
+                        mono: ['IBM Plex Mono', 'ui-monospace', 'monospace'],
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        /* ══════════════════════════════════════════════════════════════════════════
+           BDRNK INDUSTRIAL INTERNSHIP PORTAL — APPLE / VERCEL / STRIPE PRECISION
+           ══════════════════════════════════════════════════════════════════════════ */
+        :root {
+            --it-bg: #f4f7fb;
+            --it-surface: #ffffff;
+            --it-surface-soft: #f8fafd;
+            --it-border: rgba(10, 34, 64, 0.1);
+            --it-border-strong: rgba(184, 147, 74, 0.42);
+            --it-text: #0a192f;
+            --it-text-secondary: #1e3a5f;
+            --it-text-muted: #475569;
+            --it-navy: #0a2240;
+            --it-navy-deep: #051122;
+            --it-gold: #a67c2e;
+            --it-gold-bright: #cfa95e;
+            --it-gold-soft: rgba(184, 147, 74, 0.13);
+            --it-emerald: #059669;
+            --it-emerald-soft: rgba(5, 150, 105, 0.11);
+            --it-blue: #0284c7;
+            --it-blue-soft: rgba(2, 132, 199, 0.1);
+            --it-shadow: 0 14px 36px -12px rgba(10, 34, 64, 0.12), 0 2px 6px rgba(10, 34, 64, 0.04);
+            --it-shadow-hover: 0 24px 52px -14px rgba(10, 34, 64, 0.2), 0 0 0 1px rgba(184, 147, 74, 0.35);
+        }
+
+        [data-theme="dark"],
+        html.dark,
+        html.dark-mode,
+        body.dark-mode {
+            --it-bg: #07101d;
+            --it-surface: #0e1c31;
+            --it-surface-soft: #12233d;
+            --it-border: rgba(255, 255, 255, 0.1);
+            --it-border-strong: rgba(212, 175, 55, 0.48);
+            --it-text: #f8fafc;
+            --it-text-secondary: #e2e8f0;
+            --it-text-muted: #94a3b8;
+            --it-gold: #e5be6b;
+            --it-gold-bright: #f3d792;
+            --it-gold-soft: rgba(212, 175, 55, 0.16);
+            --it-emerald: #34d399;
+            --it-emerald-soft: rgba(52, 211, 153, 0.15);
+            --it-blue: #38bdf8;
+            --it-blue-soft: rgba(56, 189, 248, 0.15);
+            --it-shadow: 0 20px 44px -14px rgba(0, 0, 0, 0.55);
+            --it-shadow-hover: 0 28px 60px -14px rgba(0, 0, 0, 0.7), 0 0 24px rgba(212, 175, 55, 0.16);
+        }
+
+        html, body {
+            overflow-x: clip;
+            max-width: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body.intern-portal-body {
+            background-color: var(--it-bg);
+            color: var(--it-text);
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── STICKY TOPBAR ─── */
+        .intern-topbar {
+            position: sticky;
+            top: 0;
+            z-index: 60;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--it-border);
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
+        }
+
+        html.dark .intern-topbar,
+        [data-theme="dark"] .intern-topbar {
+            background: rgba(7, 16, 29, 0.88);
+        }
+
+        .intern-topbar-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .intern-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            min-width: 0;
+        }
+
+        .intern-brand-logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1.5px solid var(--it-border-strong);
+            box-shadow: 0 4px 12px rgba(10, 34, 64, 0.12);
+            flex-shrink: 0;
+        }
+
+        .intern-brand-titles {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            gap: 2px;
+        }
+
+        .intern-brand-sub {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--it-gold);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .intern-brand-main {
+            font-size: 0.96rem;
+            font-weight: 800;
+            color: var(--it-text);
+            letter-spacing: -0.01em;
+            line-height: 1.25;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .intern-top-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .intern-lang-group {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px;
+            border-radius: 12px;
+            background: var(--it-surface-soft);
+            border: 1px solid var(--it-border);
+            gap: 2px;
+        }
+
+        .intern-lang-btn {
+            padding: 5px 10px;
+            border-radius: 9px;
+            border: none;
+            background: transparent;
+            color: var(--it-text-muted);
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .intern-lang-btn.active {
+            background: linear-gradient(135deg, #0a2240, #163b69);
+            color: #ffffff;
+            box-shadow: 0 3px 10px rgba(10, 34, 64, 0.24);
+        }
+
+        html.dark .intern-lang-btn.active,
+        [data-theme="dark"] .intern-lang-btn.active {
+            background: linear-gradient(135deg, #cfa95e, #b8934a);
+            color: #051122;
+        }
+
+        .theme-toggle-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 11px;
+            border: 1px solid var(--it-border);
+            background: var(--it-surface-soft);
+            color: var(--it-text);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .theme-toggle-btn:hover {
+            border-color: var(--it-border-strong);
+            transform: scale(1.05);
+        }
+
+        .top-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid var(--it-border);
+            background: var(--it-surface);
+            color: var(--it-text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .top-btn:hover {
+            border-color: var(--it-border-strong);
+            color: var(--it-gold);
+            transform: translateY(-1px);
+        }
+
+        .top-btn-primary {
+            background: linear-gradient(135deg, #0a2240 0%, #153b6b 100%);
+            color: #ffffff;
+            border-color: rgba(212, 175, 55, 0.45);
+            box-shadow: 0 6px 18px rgba(10, 34, 64, 0.22);
+        }
+
+        .top-btn-primary:hover {
+            background: linear-gradient(135deg, #102e54 0%, #1c4a84 100%);
+            color: #fef08a;
+            border-color: rgba(212, 175, 55, 0.78);
+        }
+
+        /* ─── CINEMATIC ROYAL NAVY, GOLD & EMERALD HERO ─── */
+        .intern-hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse 75% 55% at 50% 0%, rgba(212, 175, 55, 0.24), transparent 65%),
+                radial-gradient(circle at 12% 85%, rgba(16, 185, 129, 0.16), transparent 52%),
+                radial-gradient(circle at 88% 72%, rgba(56, 189, 248, 0.15), transparent 50%),
+                linear-gradient(155deg, #040e1d 0%, #0a2240 52%, #0c2b4f 100%);
+            padding: 58px 24px 76px;
+            color: #ffffff;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .intern-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, #000 35%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, #000 35%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .intern-hero-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 1320px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intern-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 18px;
+            border-radius: 999px;
+            background: rgba(16, 185, 129, 0.14);
+            border: 1px solid rgba(52, 211, 153, 0.45);
+            color: #fde68a;
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            box-shadow: 0 0 28px rgba(16, 185, 129, 0.16);
+        }
+
+        .intern-hero-title {
+            font-family: 'Playfair Display', 'Merriweather', Georgia, serif;
+            font-size: clamp(1.9rem, 4vw, 3.1rem);
+            font-weight: 800;
+            line-height: 1.16;
+            color: #ffffff;
+            letter-spacing: -0.015em;
+            max-width: 900px;
+            margin: 0 auto 14px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .intern-hero-sub {
+            font-size: clamp(0.95rem, 1.45vw, 1.1rem);
+            color: rgba(226, 232, 240, 0.9);
+            max-width: 820px;
+            margin: 0 auto 30px;
+            line-height: 1.68;
+        }
+
+        .intern-kpi-strip {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+            max-width: 1020px;
+            margin: 0 auto 28px;
+        }
+
+        .intern-kpi-pill {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(212, 175, 55, 0.34);
+            border-radius: 18px;
+            padding: 15px 16px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            text-align: center;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .intern-kpi-pill:hover {
+            transform: translateY(-2px);
+            border-color: rgba(52, 211, 153, 0.65);
+        }
+
+        .intern-kpi-val {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #fef08a;
+            line-height: 1.15;
+        }
+
+        .intern-kpi-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-top: 4px;
+        }
+
+        .intern-kpi-sub {
+            font-size: 0.7rem;
+            color: rgba(203, 213, 225, 0.8);
+            margin-top: 2px;
+        }
+
+        /* 3 Training Pillar Cards */
+        .intern-pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            text-align: left;
+        }
+
+        .intern-pillar-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.96);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            box-shadow: 0 18px 40px -16px rgba(3, 10, 22, 0.5);
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            cursor: pointer;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .intern-pillar-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3.5px;
+            background: linear-gradient(90deg, #0a2240, #059669, #cfa95e);
+        }
+
+        .intern-pillar-card:hover {
+            transform: translateY(-4px);
+            border-color: #d4af37;
+            box-shadow: 0 22px 48px -14px rgba(3, 10, 22, 0.65), 0 0 22px rgba(212, 175, 55, 0.22);
+        }
+
+        html.dark .intern-pillar-card,
+        [data-theme="dark"] .intern-pillar-card {
+            background: rgba(14, 28, 49, 0.94);
+            border-color: rgba(212, 175, 55, 0.35);
+        }
+
+        .intern-pillar-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(10, 34, 64, 0.08), rgba(5, 150, 105, 0.14));
+            border: 1px solid rgba(5, 150, 105, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.55rem;
+            flex-shrink: 0;
+        }
+
+        .intern-pillar-body {
+            min-width: 0;
+            flex: 1;
+        }
+
+        .intern-pillar-body h4 {
+            font-size: 0.96rem;
+            font-weight: 800;
+            color: var(--it-text);
+            line-height: 1.3;
+            margin-bottom: 4px;
+        }
+
+        .intern-pillar-body p {
+            font-size: 0.8rem;
+            color: var(--it-text-muted);
+            line-height: 1.4;
+        }
+
+        .intern-pillar-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 8px;
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: var(--it-emerald-soft);
+            border: 1px solid rgba(5, 150, 105, 0.32);
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--it-emerald);
+        }
+
+        /* ─── MAIN WORKSPACE WRAPPER ─── */
+        .intern-main {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px 72px;
+        }
+
+        /* ─── STICKY ELEVATED COMMAND BAR ─── */
+        .intern-command-wrap {
+            margin: -30px auto 30px;
+            position: sticky;
+            top: 74px;
+            z-index: 40;
+        }
+
+        .intern-command-bar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+            border: 1px solid var(--it-border);
+            border-radius: 22px;
+            padding: 12px 16px;
+            box-shadow: var(--it-shadow);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        html.dark .intern-command-bar,
+        [data-theme="dark"] .intern-command-bar {
+            background: rgba(14, 28, 49, 0.94);
+            border-color: rgba(212, 175, 55, 0.32);
+        }
+
+        .intern-tabs-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .intern-filter-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 8px 15px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border: 1px solid var(--it-border);
+            background: var(--it-surface-soft);
+            color: var(--it-text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .intern-filter-btn:hover {
+            border-color: var(--it-border-strong);
+            color: var(--it-text);
+        }
+
+        .intern-filter-btn.active {
+            background: linear-gradient(135deg, #0a2240 0%, #153e75 100%);
+            color: #ffffff;
+            border-color: #cfa95e;
+            box-shadow: 0 8px 20px -4px rgba(10, 34, 64, 0.32);
+        }
+
+        html.dark .intern-filter-btn.active,
+        [data-theme="dark"] .intern-filter-btn.active {
+            background: linear-gradient(135deg, #cfa95e 0%, #b38838 100%);
+            color: #051122;
+            border-color: #fde68a;
+            font-weight: 800;
+        }
+
+        .intern-filter-count {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1px 7px;
+            border-radius: 999px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 700;
+            background: rgba(10, 34, 64, 0.08);
+            color: var(--it-text-secondary);
+        }
+
+        .intern-filter-btn.active .intern-filter-count {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fde68a;
+        }
+
+        html.dark .intern-filter-btn.active .intern-filter-count,
+        [data-theme="dark"] .intern-filter-btn.active .intern-filter-count {
+            background: rgba(5, 17, 34, 0.2);
+            color: #051122;
+        }
+
+        .intern-controls-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1 1 280px;
+            justify-content: flex-end;
+        }
+
+        .intern-search-box {
+            position: relative;
+            flex: 1 1 220px;
+            max-width: 340px;
+        }
+
+        .intern-search-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--it-gold);
+            pointer-events: none;
+            display: inline-flex;
+        }
+
+        .intern-search-input {
+            width: 100%;
+            padding: 9px 36px 9px 38px;
+            border-radius: 999px;
+            border: 1px solid var(--it-border);
+            background: var(--it-surface-soft);
+            color: var(--it-text);
+            font-size: 0.85rem;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .intern-search-input:focus {
+            border-color: var(--it-gold);
+            box-shadow: 0 0 0 3px var(--it-gold-soft);
+        }
+
+        .intern-search-clear {
+            position: absolute;
+            right: 9px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: none;
+            background: var(--it-gold-soft);
+            color: var(--it-text);
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .intern-view-toggle {
+            display: inline-flex;
+            padding: 3px;
+            border-radius: 999px;
+            background: var(--it-surface-soft);
+            border: 1px solid var(--it-border);
+            gap: 2px;
+        }
+
+        .intern-view-btn {
+            padding: 6px 12px;
+            border-radius: 999px;
+            border: none;
+            background: transparent;
+            color: var(--it-text-muted);
+            font-size: 0.76rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .intern-view-btn.active {
+            background: var(--it-surface);
+            color: var(--it-navy);
+            box-shadow: 0 2px 8px rgba(10, 34, 64, 0.1);
+        }
+
+        html.dark .intern-view-btn.active,
+        [data-theme="dark"] .intern-view-btn.active {
+            background: #1d3557;
+            color: #fde68a;
+        }
+
+        /* ─── FEATURED BENTO SPOTLIGHT ─── */
+        .intern-bento-section {
+            margin-bottom: 38px;
+        }
+
+        .intern-section-heading-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .intern-section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--it-gold);
+            margin-bottom: 4px;
+        }
+
+        .intern-section-title {
+            font-family: 'Playfair Display', 'Merriweather', Georgia, serif;
+            font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+            font-weight: 800;
+            color: var(--it-text);
+            line-height: 1.22;
+        }
+
+        .intern-status-pill {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.76rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: var(--it-surface);
+            border: 1px solid var(--it-border);
+            color: var(--it-text-muted);
+        }
+
+        .intern-bento-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            grid-template-rows: 225px 225px;
+            gap: 16px;
+        }
+
+        .bento-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 24px;
+            border: 1px solid var(--it-border-strong);
+            box-shadow: var(--it-shadow);
+            cursor: pointer;
+            background: #061326;
+            group: bento;
+        }
+
+        .bento-card-main {
+            grid-row: 1 / span 2;
+        }
+
+        .bento-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .bento-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .bento-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(4, 13, 26, 0.08) 0%, rgba(4, 13, 26, 0.45) 55%, rgba(4, 13, 26, 0.92) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 22px;
+            color: #ffffff;
+        }
+
+        .bento-pill {
+            display: inline-flex;
+            align-items: center;
+            align-self: flex-start;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: rgba(207, 169, 94, 0.25);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(253, 230, 138, 0.5);
+            color: #fef08a;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 8px;
+        }
+
+        .bento-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 5px;
+        }
+
+        .bento-desc {
+            font-size: 0.82rem;
+            color: rgba(226, 232, 240, 0.9);
+            line-height: 1.45;
+            max-width: 520px;
+        }
+
+        /* ─── GALLERY GRID & DETAILED CARDS ─── */
+        .intern-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .intern-gallery-grid.view-list {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 18px;
+        }
+
+        .intern-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border-radius: 22px;
+            overflow: hidden;
+            background: var(--it-surface);
+            border: 1px solid var(--it-border);
+            box-shadow: var(--it-shadow);
+            transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+        }
+
+        .intern-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--it-shadow-hover);
+            border-color: var(--it-border-strong);
+        }
+
+        .intern-gallery-grid.view-list .intern-card {
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        .intern-card-media {
+            position: relative;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background: #071426;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .intern-gallery-grid.view-list .intern-card-media {
+            width: 340px;
+            aspect-ratio: 16 / 11;
+        }
+
+        .intern-card-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 22%;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .intern-card:hover .intern-card-media img {
+            transform: scale(1.06);
+        }
+
+        .intern-card-num {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 3;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(5, 17, 34, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(253, 230, 138, 0.48);
+            color: #fef08a;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+
+        .intern-card-cat {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            z-index: 3;
+            padding: 4px 11px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.92);
+            color: #0a2240;
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+        }
+
+        html.dark .intern-card-cat,
+        [data-theme="dark"] .intern-card-cat {
+            background: rgba(7, 20, 38, 0.88);
+            color: #fde68a;
+            border: 1px solid rgba(212, 175, 55, 0.38);
+        }
+
+        .intern-card-zoom-hint {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            z-index: 3;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 11px;
+            border-radius: 999px;
+            background: rgba(5, 17, 34, 0.78);
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(4px);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .intern-card:hover .intern-card-zoom-hint {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .intern-card-body {
+            padding: 18px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 10px;
+        }
+
+        .intern-card-loc {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--it-emerald);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .intern-card-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: var(--it-text);
+            line-height: 1.32;
+        }
+
+        .intern-card-desc {
+            font-size: 0.85rem;
+            color: var(--it-text-muted);
+            line-height: 1.56;
+            flex: 1;
+        }
+
+        .intern-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            padding-top: 8px;
+            border-top: 1px dashed var(--it-border);
+        }
+
+        .intern-skill-tag {
+            font-size: 0.71rem;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 8px;
+            background: var(--it-surface-soft);
+            border: 1px solid var(--it-border);
+            color: var(--it-text-secondary);
+        }
+
+        .intern-empty-state {
+            display: none;
+            text-align: center;
+            padding: 56px 24px;
+            border-radius: 24px;
+            background: var(--it-surface);
+            border: 1px dashed var(--it-border-strong);
+            color: var(--it-text-muted);
+            margin-top: 18px;
+        }
+
+        /* ─── 4-STEP INTERNSHIP ROADMAP STRIP ─── */
+        .intern-roadmap-section {
+            margin-top: 48px;
+            padding: 32px;
+            border-radius: 26px;
+            background: var(--it-surface);
+            border: 1px solid var(--it-border);
+            box-shadow: var(--it-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intern-roadmap-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0a2240, #059669, #cfa95e);
+        }
+
+        .intern-roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 22px;
+        }
+
+        .roadmap-step-card {
+            padding: 20px;
+            border-radius: 18px;
+            background: var(--it-surface-soft);
+            border: 1px solid var(--it-border);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .roadmap-step-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--it-border-strong);
+        }
+
+        .roadmap-step-num {
+            display: inline-flex;
+            align-self: flex-start;
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: var(--it-gold-soft);
+            border: 1px solid var(--it-border-strong);
+            color: var(--it-gold);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+
+        .roadmap-step-card h4 {
+            font-size: 0.96rem;
+            font-weight: 800;
+            color: var(--it-text);
+            line-height: 1.3;
+        }
+
+        .roadmap-step-card p {
+            font-size: 0.82rem;
+            color: var(--it-text-muted);
+            line-height: 1.5;
+        }
+
+        /* ─── FULL-SCREEN LIGHTBOX MODAL ─── */
+        .intern-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 200;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+        }
+
+        .intern-lightbox.open {
+            display: flex;
+        }
+
+        .intern-lightbox-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(3, 10, 22, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .intern-lightbox-dialog {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1060px;
+            max-height: 92vh;
+            border-radius: 24px;
+            background: var(--it-surface);
+            border: 1px solid var(--it-border-strong);
+            box-shadow: 0 32px 72px rgba(0, 0, 0, 0.65);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1.35fr 0.95fr;
+        }
+
+        .lb-media-pane {
+            position: relative;
+            background: #040d1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 360px;
+            max-height: 88vh;
+            overflow: hidden;
+        }
+
+        .lb-media-pane img {
+            max-width: 100%;
+            max-height: 82vh;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .lb-media-pane img.zoomed {
+            transform: scale(1.65);
+            cursor: zoom-out;
+        }
+
+        .lb-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            background: rgba(5, 17, 34, 0.72);
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lb-nav-btn:hover {
+            background: #cfa95e;
+            color: #051122;
+            border-color: #fef08a;
+        }
+
+        .lb-prev { left: 12px; }
+        .lb-next { right: 12px; }
+
+        .lb-info-pane {
+            padding: 24px 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            overflow-y: auto;
+        }
+
+        .lb-top-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .lb-counter {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.76rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: var(--it-gold-soft);
+            border: 1px solid var(--it-border-strong);
+            color: var(--it-gold);
+        }
+
+        .lb-close-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1px solid var(--it-border);
+            background: var(--it-surface-soft);
+            color: var(--it-text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lb-close-btn:hover {
+            background: #ef4444;
+            color: #ffffff;
+            border-color: #ef4444;
+        }
+
+        .lb-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.32rem;
+            font-weight: 700;
+            color: var(--it-text);
+            line-height: 1.28;
+        }
+
+        .lb-desc {
+            font-size: 0.92rem;
+            color: var(--it-text-muted);
+            line-height: 1.62;
+        }
+
+        .lb-actions {
+            margin-top: auto;
+            padding-top: 14px;
+            border-top: 1px solid var(--it-border);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* ─── FOOTER ─── */
+        .intern-footer {
+            background: linear-gradient(155deg, #051122 0%, #0a2240 100%);
+            color: #e2e8f0;
+            padding: 42px 24px calc(36px + env(safe-area-inset-bottom));
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            text-align: center;
+        }
+
+        .intern-footer-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* ─── RESPONSIVE MOBILE & TABLET RULES (iPhone / Android) ─── */
+        @media (max-width: 1024px) {
+            .intern-bento-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 260px 210px;
+            }
+            .bento-card-main {
+                grid-column: 1 / -1;
+                grid-row: 1;
+            }
+            .intern-gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .intern-roadmap-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .intern-topbar-inner {
+                padding: 10px 14px;
+                gap: 8px;
+            }
+            .intern-brand-sub { display: none; }
+            .intern-brand-main { font-size: 0.85rem; }
+            .top-btn-print-label,
+            .top-btn-memo-label { display: none; }
+            .top-btn { padding: 7px 11px; font-size: 0.76rem; }
+
+            .intern-hero {
+                padding: 36px 16px 52px;
+            }
+            .intern-kpi-strip {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+            .intern-pillars-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .intern-main {
+                padding: 0 14px 54px;
+            }
+
+            .intern-command-wrap {
+                position: static;
+                margin: -22px auto 22px;
+            }
+
+            .intern-command-bar {
+                padding: 12px;
+                border-radius: 18px;
+            }
+
+            .intern-tabs-row {
+                width: 100%;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 4px;
+            }
+
+            .intern-controls-right {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .intern-search-input {
+                font-size: 16px !important;
+            }
+
+            .intern-bento-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: 240px 200px 200px;
+            }
+
+            .intern-gallery-grid,
+            .intern-gallery-grid.view-list {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .intern-gallery-grid.view-list .intern-card {
+                flex-direction: column;
+            }
+
+            .intern-gallery-grid.view-list .intern-card-media {
+                width: 100%;
+            }
+
+            .intern-roadmap-section {
+                padding: 20px 16px;
+                border-radius: 20px;
+            }
+
+            .intern-roadmap-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intern-lightbox-dialog {
+                grid-template-columns: 1fr;
+                max-height: 94vh;
+            }
+
+            .lb-media-pane {
+                min-height: 240px;
+                max-height: 48vh;
+            }
+        }
+
+        @media print {
+            .intern-topbar, .intern-command-wrap, .intern-lightbox { display: none !important; }
+            body.intern-portal-body { background: #ffffff !important; color: #0f172a !important; }
+            .intern-hero { background: #ffffff !important; color: #0a192f !important; border-bottom: 2px solid #0a2240; padding: 24px 0; }
+            .intern-hero-title, .intern-hero-sub, .intern-kpi-val, .intern-kpi-label { color: #0a192f !important; }
+            .intern-card { break-inside: avoid; box-shadow: none !important; }
+        }
+    </style>
+    <script>
+        (function () {
+            try {
+                var savedTheme = localStorage.getItem('bdrnk-theme') || localStorage.getItem('bdrnk_theme');
+                if (savedTheme === 'dark') {
+                    document.documentElement.classList.add('dark-mode', 'dark');
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+</head>
+<body class="intern-portal-body antialiased">
+
+    <!-- ═══════════════ TOP ACTION BAR ═══════════════ -->
+    <header class="intern-topbar">
+        <div class="intern-topbar-inner">
+            <a href="index.html" class="intern-brand">
+                <img src="logo.jpg" alt="BDRNK Loqo" class="intern-brand-logo" onerror="this.style.display='none'" />
+                <div class="intern-brand-titles">
+                    <span class="intern-brand-sub" data-txt="brand_sub">AzTU nəzdində BDRNK Publik Hüquqi Şəxsi</span>
+                    <span class="intern-brand-main" data-txt="brand_main">İstehsalat və Sahə Təcrübəsi Portalı</span>
+                </div>
+            </a>
+
+            <div class="intern-top-actions">
+                <div class="intern-lang-group" role="group" aria-label="Dil seçimi">
+                    <button type="button" class="intern-lang-btn active" data-lang="az">AZ</button>
+                    <button type="button" class="intern-lang-btn" data-lang="ru">RU</button>
+                    <button type="button" class="intern-lang-btn" data-lang="en">EN</button>
+                </div>
+
+                <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Rejimi dəyişdir" title="Gündüz / Gecə rejimi">
+                    <span id="theme-icon">🌙</span>
+                </button>
+
+                <a href="memorandum.html" target="_blank" rel="noopener" class="top-btn" title="Memorandumlar Portalı">
+                    <span aria-hidden="true">🤝</span>
+                    <span class="top-btn-memo-label" data-txt="btn_memo">Memorandum</span>
+                </a>
+
+                <button type="button" class="top-btn" onclick="window.print()" title="Çap Et / PDF">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                        <rect x="6" y="14" width="12" height="8"></rect>
+                    </svg>
+                    <span class="top-btn-print-label" data-txt="btn_print">Çap / PDF</span>
+                </button>
+
+                <a href="index.html#about" class="top-btn top-btn-primary">
+                    <span data-txt="btn_home">← Əsas Səhifə</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════════════ HERO HEADER ═══════════════ -->
+    <section class="intern-hero">
+        <div class="intern-hero-inner">
+            <div class="intern-eyebrow">
+                <span>✦</span>
+                <span data-txt="hero_eyebrow">REAL SƏNAYE MÜHİTİ · NƏZƏRİYYƏDƏN PRAKTİKAYA</span>
+                <span>✦</span>
+            </div>
+
+            <h1 class="intern-hero-title" data-txt="hero_title">İstehsalat Təcrübəsində Olan Tələbələrimiz</h1>
+            <p class="intern-hero-sub" data-txt="hero_sub">
+                Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin tələbələri
+                “Azərbaycan Dəmir Yolları” QSC-nin istehsalat depolarında, vaqon təmiri sahələrində və müasir
+                avtoəyləc sınaq laboratoriyalarında peşəkar mühəndislərin rəhbərliyi altında real istehsalat təcrübəsi keçirlər.
+            </p>
+
+            <!-- 4-KPI Summary Strip -->
+            <div class="intern-kpi-strip" aria-label="Təcrübə Göstəriciləri">
+                <div class="intern-kpi-pill">
+                    <div class="intern-kpi-val">15</div>
+                    <div class="intern-kpi-label" data-txt="kpi_1_lbl">Foto Xronika</div>
+                    <div class="intern-kpi-sub" data-txt="kpi_1_sub">Canlı İstehsalat Kadrları</div>
+                </div>
+                <div class="intern-kpi-pill">
+                    <div class="intern-kpi-val">“ADY” QSC</div>
+                    <div class="intern-kpi-label" data-txt="kpi_2_lbl">Strateji Bazamız</div>
+                    <div class="intern-kpi-sub" data-txt="kpi_2_sub">Azərbaycan Dəmir Yolları</div>
+                </div>
+                <div class="intern-kpi-pill">
+                    <div class="intern-kpi-val">3 Sahə</div>
+                    <div class="intern-kpi-label" data-txt="kpi_3_lbl">Təcrübə Modulu</div>
+                    <div class="intern-kpi-sub" data-txt="kpi_3_sub">Depo · Sex · Təhlükəsizlik</div>
+                </div>
+                <div class="intern-kpi-pill">
+                    <div class="intern-kpi-val">100%</div>
+                    <div class="intern-kpi-label" data-txt="kpi_4_lbl">Praktik Hazırlıq</div>
+                    <div class="intern-kpi-sub" data-txt="kpi_4_sub">Real Stend və Avadanlıqda İş</div>
+                </div>
+            </div>
+
+            <!-- 3 Training Pillars -->
+            <div class="intern-pillars-grid">
+                <div class="intern-pillar-card" data-jump-cat="depot" role="button" tabindex="0">
+                    <div class="intern-pillar-icon" aria-hidden="true">🚆</div>
+                    <div class="intern-pillar-body">
+                        <h4 data-txt="pillar_1_t">Vaqon və Təkər Cütləri Deposu</h4>
+                        <p data-txt="pillar_1_d">Yük və sistern vaqonlarının hərəkət hissələri, buks düyünləri və təkər cütlərinin texniki müayinəsi.</p>
+                        <span class="intern-pillar-tag" data-txt="pillar_1_tag">4 Sahə Kadrı →</span>
+                    </div>
+                </div>
+
+                <div class="intern-pillar-card" data-jump-cat="workshop" role="button" tabindex="0">
+                    <div class="intern-pillar-icon" aria-hidden="true">⚙️</div>
+                    <div class="intern-pillar-body">
+                        <h4 data-txt="pillar_2_t">Avtoəyləc, Pnevmatika və Dəzgah Sexi</h4>
+                        <p data-txt="pillar_2_d">Pnevmatik sınaq stendlərinin idarə olunması, klapanların sökülüb-yığılması və diaqnostika.</p>
+                        <span class="intern-pillar-tag" data-txt="pillar_2_tag">8 Praktiki İş →</span>
+                    </div>
+                </div>
+
+                <div class="intern-pillar-card" data-jump-cat="safety" role="button" tabindex="0">
+                    <div class="intern-pillar-icon" aria-hidden="true">🦺</div>
+                    <div class="intern-pillar-body">
+                        <h4 data-txt="pillar_3_t">Əməyin Mühafizəsi və Texniki Təhlükəsizlik</h4>
+                        <p data-txt="pillar_3_d">Sənaye standartlarına uyğun təlimat, fərdi mühafizə vasitələri və yanğın təhlükəsizliyi hazırlığı.</p>
+                        <span class="intern-pillar-tag" data-txt="pillar_3_tag">3 Brifinq & Heyət →</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ MAIN PORTAL BODY ═══════════════ -->
+    <main class="intern-main">
+
+        <!-- Sticky Command Bar -->
+        <div class="intern-command-wrap">
+            <div class="intern-command-bar">
+                <div class="intern-tabs-row" role="tablist" aria-label="Təcrübə sahələri">
+                    <button type="button" class="intern-filter-btn active" data-cat="all" role="tab" aria-selected="true">
+                        <span>⊞</span>
+                        <span data-txt="cat_all">Hamısı</span>
+                        <span class="intern-filter-count">15</span>
+                    </button>
+                    <button type="button" class="intern-filter-btn" data-cat="workshop" role="tab" aria-selected="false">
+                        <span>🔧</span>
+                        <span data-txt="cat_workshop">Mexaniki & Avtoəyləc Sexi</span>
+                        <span class="intern-filter-count">8</span>
+                    </button>
+                    <button type="button" class="intern-filter-btn" data-cat="depot" role="tab" aria-selected="false">
+                        <span>🚆</span>
+                        <span data-txt="cat_depot">Vaqon Deposu & Təkər Cütləri</span>
+                        <span class="intern-filter-count">4</span>
+                    </button>
+                    <button type="button" class="intern-filter-btn" data-cat="safety" role="tab" aria-selected="false">
+                        <span>🦺</span>
+                        <span data-txt="cat_safety">Əməyin Mühafizəsi & Heyət</span>
+                        <span class="intern-filter-count">3</span>
+                    </button>
+                </div>
+
+                <div class="intern-controls-right">
+                    <div class="intern-search-box">
+                        <span class="intern-search-icon" aria-hidden="true">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </span>
+                        <input type="text" id="intern-search" class="intern-search-input" placeholder="Sahə, avadanlıq və ya bacarıq axtar..." aria-label="Təcrübə kadrlarında axtarış" />
+                        <button type="button" id="intern-search-clear" class="intern-search-clear" aria-label="Axtarışı təmizlə">✕</button>
+                    </div>
+
+                    <div class="intern-view-toggle" role="group" aria-label="Görünüş rejimi">
+                        <button type="button" class="intern-view-btn active" data-view="grid" data-txt="view_grid">⊞ Şəbəkə</button>
+                        <button type="button" class="intern-view-btn" data-view="list" data-txt="view_list">☰ Ətraflı</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Bento Spotlight -->
+        <section class="intern-bento-section" aria-label="Seçilmiş Təcrübə Kadrları">
+            <div class="intern-section-heading-row">
+                <div>
+                    <div class="intern-section-kicker" data-txt="bento_kicker">✦ SEÇİLMİŞ SƏNAYE KADRILARI · ADY QSC</div>
+                    <h2 class="intern-section-title" data-txt="bento_title">İstehsalat Meydançasından Önə Çıxan Anlar</h2>
+                </div>
+                <span class="intern-status-pill" id="intern-results-status">15 / 15 kadr göstərilir</span>
+            </div>
+
+            <div class="intern-bento-grid">
+                <article class="bento-card bento-card-main" data-open-id="is14" tabindex="0">
+                    <img src="is14.jpeg" alt="ADY QSC istehsalat təcrübəsi tələbə heyəti" loading="eager" />
+                    <div class="bento-overlay">
+                        <span class="bento-pill" data-txt="bento_1_pill">🦺 TƏCRÜBƏ HEYƏTİ · ADY QSC</span>
+                        <h3 class="bento-title" data-txt="bento_1_t">“Azərbaycan Dəmir Yolları” QSC-də İstehsalat Təcrübəsi Heyəti</h3>
+                        <p class="bento-desc" data-txt="bento_1_d">Xüsusi mühafizə gödəkçələri ilə təmin olunmuş BDRNK təcrübəçi tələbələri əməyin mühafizəsi və sahə hazırlığı mərhələsində.</p>
+                    </div>
+                </article>
+
+                <article class="bento-card" data-open-id="is11" tabindex="0">
+                    <img src="is11.jpeg" alt="Sistern vaqonlarının təmiri deposu" loading="lazy" />
+                    <div class="bento-overlay">
+                        <span class="bento-pill" data-txt="bento_2_pill">🚆 VAQON DEPOSU</span>
+                        <h3 class="bento-title" data-txt="bento_2_t">Sistern və Yük Vaqonları Deposunda Brifinq</h3>
+                        <p class="bento-desc" data-txt="bento_2_d">Təmir deposunda usta və tələbələrlə texniki təhlükəsizlik və iş bölgüsü müşavirəsi.</p>
+                    </div>
+                </article>
+
+                <article class="bento-card" data-open-id="is4" tabindex="0">
+                    <img src="is4.jpeg" alt="Pnevmatik sınaq stendində praktiki iş" loading="lazy" />
+                    <div class="bento-overlay">
+                        <span class="bento-pill" data-txt="bento_3_pill">⚙️ AVTOƏYLƏC SEXHİ</span>
+                        <h3 class="bento-title" data-txt="bento_3_t">Pnevmatik Sınaq Stendində Praktiki İş</h3>
+                        <p class="bento-desc" data-txt="bento_3_d">Tələbələr sınaq stendində klapanların təzyiq altında işləmə rejimini birbaşa yoxlayırlar.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Dynamic Gallery Grid -->
+        <section aria-label="Bütün İstehsalat Təcrübəsi Foto Xronikası">
+            <div class="intern-section-heading-row">
+                <div>
+                    <div class="intern-section-kicker" data-txt="grid_kicker">📸 TAM FOTO ARXİV · IS1–IS15</div>
+                    <h2 class="intern-section-title" data-txt="grid_title">Bütün İstehsalat Təcrübəsi Kadrları</h2>
+                </div>
+            </div>
+
+            <div class="intern-gallery-grid" id="intern-gallery-grid">
+                <!-- Populated dynamically via script below -->
+            </div>
+
+            <div class="intern-empty-state" id="intern-empty-state">
+                <div style="font-size: 2.2rem; margin-bottom: 8px;">🔍</div>
+                <strong style="display: block; font-size: 1.05rem; margin-bottom: 4px;" data-txt="empty_t">Axtarışa uyğun kadr tapılmadı</strong>
+                <span data-txt="empty_d">Zəhmət olmasa fərqli açar söz daxil edin və ya kateqoriya filtrini sıfırlayın.</span>
+            </div>
+        </section>
+
+        <!-- 4-Step Internship Roadmap -->
+        <section class="intern-roadmap-section" aria-label="İstehsalat Təcrübəsinin Mərhələləri">
+            <div class="intern-section-kicker" data-txt="road_kicker">✦ STRUKTURLU TƏCRÜBƏ PROQRAMI</div>
+            <h2 class="intern-section-title" data-txt="road_title">Kollec Tələbəsinin İstehsalatda İnkişaf Mərhələləri</h2>
+
+            <div class="intern-roadmap-grid">
+                <div class="roadmap-step-card">
+                    <span class="roadmap-step-num" data-txt="road_1_n">MƏRHƏLƏ 01</span>
+                    <h4 data-txt="road_1_t">Təhlükəsizlik və Giriş Təlimatı</h4>
+                    <p data-txt="road_1_d">Dəmiryol müəssisəsində əməyin mühafizəsi qaydaları, fərdi mühafizə vasitələri və yanğın təhlükəsizliyi standartlarının mənimsənilməsi.</p>
+                </div>
+                <div class="roadmap-step-card">
+                    <span class="roadmap-step-num" data-txt="road_2_n">MƏRHƏLƏ 02</span>
+                    <h4 data-txt="road_2_t">Depo və Avadanlıqlarla Tanışlıq</h4>
+                    <p data-txt="road_2_d">Vaqonların təkər cütləri, buks düyünləri, sistern konstruksiyası və mexaniki təmir dəzgahlarının iş prinsipinin öyrənilməsi.</p>
+                </div>
+                <div class="roadmap-step-card">
+                    <span class="roadmap-step-num" data-txt="road_3_n">MƏRHƏLƏ 03</span>
+                    <h4 data-txt="road_3_t">Stend Sınaqları və Praktiki İcra</h4>
+                    <p data-txt="road_3_d">Təlimatçı-mühəndislərin rəhbərliyi ilə avtoəyləc klapanlarının sökülüb-yığılması, təmizlənməsi və pnevmatik stenddə sınağı.</p>
+                </div>
+                <div class="roadmap-step-card">
+                    <span class="roadmap-step-num" data-txt="road_4_n">MƏRHƏLƏ 04</span>
+                    <h4 data-txt="road_4_t">Peşəkar Rəy və Karyera Körpüsü</h4>
+                    <p data-txt="road_4_d">İstehsalat vərdişlərinin qiymətləndirilməsi və gələcəkdə dəmiryol-nəqliyyat sahəsində işə qəbul üçün praktiki bazanın formalaşması.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════════ OFFICIAL FOOTER ═══════════════ -->
+    <footer class="intern-footer">
+        <div class="intern-footer-inner">
+            <div style="font-size: 1.9rem;" aria-hidden="true">🚆</div>
+            <div style="font-weight: 800; font-size: 0.95rem; letter-spacing: 0.04em; color: #fef08a;" data-txt="footer_inst">
+                AZƏRBAYCAN TEXNİKİ UNİVERSİTETİNİN NƏZDİNDƏ BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ PUBLİK HÜQUQİ ŞƏXSİ
+            </div>
+            <p style="font-size: 0.84rem; color: rgba(226, 232, 240, 0.78);" data-txt="footer_sub">
+                İstehsalat Təcrübəsi və Karyera İnkubasiyası Bölməsi · Tərəfdaş Sənaye Bazası: “Azərbaycan Dəmir Yolları” QSC (2026)
+            </p>
+        </div>
+    </footer>
+
+    <!-- ═══════════════ LIGHTBOX MODAL ═══════════════ -->
+    <div class="intern-lightbox" id="intern-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="intern-lightbox-backdrop" id="lb-backdrop"></div>
+        <div class="intern-lightbox-dialog">
+            <div class="lb-media-pane">
+                <button type="button" class="lb-nav-btn lb-prev" id="lb-prev" aria-label="Əvvəlki kadr">‹</button>
+                <img src="" alt="" id="lb-img" />
+                <button type="button" class="lb-nav-btn lb-next" id="lb-next" aria-label="Növbəti kadr">›</button>
+            </div>
+            <div class="lb-info-pane">
+                <div class="lb-top-row">
+                    <span class="lb-counter" id="lb-counter">1 / 15</span>
+                    <button type="button" class="lb-close-btn" id="lb-close" aria-label="Bağla">✕</button>
+                </div>
+                <div class="intern-card-loc" id="lb-loc"></div>
+                <h3 class="lb-title" id="lb-title"></h3>
+                <p class="lb-desc" id="lb-desc"></p>
+                <div class="intern-card-tags" id="lb-tags"></div>
+                <div class="lb-actions">
+                    <button type="button" class="top-btn" id="lb-zoom-btn">🔍 <span data-txt="lb_zoom">Yaxınlaşdır</span></button>
+                    <a href="" download="" class="top-btn top-btn-primary" id="lb-dl-btn">⬇ <span data-txt="lb_dl">Şəkli Yüklə</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const uiStrings = {
+                az: {
+                    brand_sub: "AzTU nəzdində BDRNK Publik Hüquqi Şəxsi",
+                    brand_main: "İstehsalat və Sahə Təcrübəsi Portalı",
+                    btn_memo: "Memorandum",
+                    btn_print: "Çap / PDF",
+                    btn_home: "← Əsas Səhifə",
+                    hero_eyebrow: "REAL SƏNAYE MÜHİTİ · NƏZƏRİYYƏDƏN PRAKTİKAYA",
+                    hero_title: "İstehsalat Təcrübəsində Olan Tələbələrimiz",
+                    hero_sub: "Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin tələbələri “Azərbaycan Dəmir Yolları” QSC-nin istehsalat depolarında, vaqon təmiri sahələrində və müasir avtoəyləc sınaq laboratoriyalarında peşəkar mühəndislərin rəhbərliyi altında real istehsalat təcrübəsi keçirlər.",
+                    kpi_1_lbl: "Foto Xronika",
+                    kpi_1_sub: "Canlı İstehsalat Kadrları",
+                    kpi_2_lbl: "Strateji Bazamız",
+                    kpi_2_sub: "Azərbaycan Dəmir Yolları",
+                    kpi_3_lbl: "Təcrübə Modulu",
+                    kpi_3_sub: "Depo · Sex · Təhlükəsizlik",
+                    kpi_4_lbl: "Praktik Hazırlıq",
+                    kpi_4_sub: "Real Stend və Avadanlıqda İş",
+                    pillar_1_t: "Vaqon və Təkər Cütləri Deposu",
+                    pillar_1_d: "Yük və sistern vaqonlarının hərəkət hissələri, buks düyünləri və təkər cütlərinin texniki müayinəsi.",
+                    pillar_1_tag: "4 Sahə Kadrı →",
+                    pillar_2_t: "Avtoəyləc, Pnevmatika və Dəzgah Sexi",
+                    pillar_2_d: "Pnevmatik sınaq stendlərinin idarə olunması, klapanların sökülüb-yığılması və diaqnostika.",
+                    pillar_2_tag: "8 Praktiki İş →",
+                    pillar_3_t: "Əməyin Mühafizəsi və Texniki Təhlükəsizlik",
+                    pillar_3_d: "Sənaye standartlarına uyğun təlimat, fərdi mühafizə vasitələri və yanğın təhlükəsizliyi hazırlığı.",
+                    pillar_3_tag: "3 Brifinq & Heyət →",
+                    cat_all: "Hamısı",
+                    cat_workshop: "Mexaniki & Avtoəyləc Sexi",
+                    cat_depot: "Vaqon Deposu & Təkər Cütləri",
+                    cat_safety: "Əməyin Mühafizəsi & Heyət",
+                    view_grid: "⊞ Şəbəkə",
+                    view_list: "☰ Ətraflı",
+                    bento_kicker: "✦ SEÇİLMİŞ SƏNAYE KADRILARI · ADY QSC",
+                    bento_title: "İstehsalat Meydançasından Önə Çıxan Anlar",
+                    bento_1_pill: "🦺 TƏCRÜBƏ HEYƏTİ · ADY QSC",
+                    bento_1_t: "“Azərbaycan Dəmir Yolları” QSC-də İstehsalat Təcrübəsi Heyəti",
+                    bento_1_d: "Xüsusi mühafizə gödəkçələri ilə təmin olunmuş BDRNK təcrübəçi tələbələri əməyin mühafizəsi və sahə hazırlığı mərhələsində.",
+                    bento_2_pill: "🚆 VAQON DEPOSU",
+                    bento_2_t: "Sistern və Yük Vaqonları Deposunda Brifinq",
+                    bento_2_d: "Təmir deposunda usta və tələbələrlə texniki təhlükəsizlik və iş bölgüsü müşavirəsi.",
+                    bento_3_pill: "⚙️ AVTOƏYLƏC SEXHİ",
+                    bento_3_t: "Pnevmatik Sınaq Stendində Praktiki İş",
+                    bento_3_d: "Tələbələr sınaq stendində klapanların təzyiq altında işləmə rejimini birbaşa yoxlayırlar.",
+                    grid_kicker: "📸 TAM FOTO ARXİV · IS1–IS15",
+                    grid_title: "Bütün İstehsalat Təcrübəsi Kadrları",
+                    empty_t: "Axtarışa uyğun kadr tapılmadı",
+                    empty_d: "Zəhmət olmasa fərqli açar söz daxil edin və ya kateqoriya filtrini sıfırlayın.",
+                    road_kicker: "✦ STRUKTURLU TƏCRÜBƏ PROQRAMI",
+                    road_title: "Kollec Tələbəsinin İstehsalatda İnkişaf Mərhələləri",
+                    road_1_n: "MƏRHƏLƏ 01",
+                    road_1_t: "Təhlükəsizlik və Giriş Təlimatı",
+                    road_1_d: "Dəmiryol müəssisəsində əməyin mühafizəsi qaydaları, fərdi mühafizə vasitələri və yanğın təhlükəsizliyi standartlarının mənimsənilməsi.",
+                    road_2_n: "MƏRHƏLƏ 02",
+                    road_2_t: "Depo və Avadanlıqlarla Tanışlıq",
+                    road_2_d: "Vaqonların təkər cütləri, buks düyünləri, sistern konstruksiyası və mexaniki təmir dəzgahlarının iş prinsipinin öyrənilməsi.",
+                    road_3_n: "MƏRHƏLƏ 03",
+                    road_3_t: "Stend Sınaqları və Praktiki İcra",
+                    road_3_d: "Təlimatçı-mühəndislərin rəhbərliyi ilə avtoəyləc klapanlarının sökülüb-yığılması, təmizlənməsi və pnevmatik stenddə sınağı.",
+                    road_4_n: "MƏRHƏLƏ 04",
+                    road_4_t: "Peşəkar Rəy və Karyera Körpüsü",
+                    road_4_d: "İstehsalat vərdişlərinin qiymətləndirilməsi və gələcəkdə dəmiryol-nəqliyyat sahəsində işə qəbul üçün praktiki bazanın formalaşması.",
+                    footer_inst: "AZƏRBAYCAN TEXNİKİ UNİVERSİTETİNİN NƏZDİNDƏ BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ PUBLİK HÜQUQİ ŞƏXSİ",
+                    footer_sub: "İstehsalat Təcrübəsi və Karyera İnkubasiyası Bölməsi · Tərəfdaş Sənaye Bazası: “Azərbaycan Dəmir Yolları” QSC (2026)",
+                    lb_zoom: "Yaxınlaşdır",
+                    lb_zoom_out: "Normal ölçü",
+                    lb_dl: "Şəkli Yüklə",
+                    search_ph: "Sahə, avadanlıq və ya bacarıq axtar...",
+                    zoom_hint: "🔍 Böyüt",
+                    count_word: "kadr göstərilir"
+                },
+                en: {
+                    brand_sub: "BDRNK PUBLIC LEGAL ENTITY UNDER AzTU",
+                    brand_main: "Industrial & Field Internship Portal",
+                    btn_memo: "Memorandum",
+                    btn_print: "Print / PDF",
+                    btn_home: "← Main Portal",
+                    hero_eyebrow: "REAL INDUSTRIAL ENVIRONMENT · THEORY TO PRACTICE",
+                    hero_title: "Our Students in Industrial Practice",
+                    hero_sub: "Students of Baku State College of Communications and Transport under AzTU gain hands-on engineering training at the production depots, rolling-stock repair bays, and modern pneumatic brake test workshops of Azerbaijan Railways (ADY CJSC).",
+                    kpi_1_lbl: "Photo Chronicle",
+                    kpi_1_sub: "Live Workshop Documentation",
+                    kpi_2_lbl: "Strategic Partner",
+                    kpi_2_sub: "Azerbaijan Railways CJSC",
+                    kpi_3_lbl: "Practice Modules",
+                    kpi_3_sub: "Depot · Workshop · Safety",
+                    kpi_4_lbl: "Practical Readiness",
+                    kpi_4_sub: "Real Test-Bench Operations",
+                    pillar_1_t: "Wagon & Wheelset Depot",
+                    pillar_1_d: "Technical inspection of freight & tank wagon running gear, axle boxes, and wheelsets.",
+                    pillar_1_tag: "4 Field Shots →",
+                    pillar_2_t: "Auto-Brake, Pneumatics & Machine Workshop",
+                    pillar_2_d: "Operating pneumatic testing stands, valve assembly/disassembly, and mechanical diagnostics.",
+                    pillar_2_tag: "8 Hands-on Works →",
+                    pillar_3_t: "Occupational Health & Industrial Safety",
+                    pillar_3_d: "Safety briefings, personal protective equipment (PPE), and depot fire-safety drills.",
+                    pillar_3_tag: "3 Briefings & Crew →",
+                    cat_all: "All",
+                    cat_workshop: "Mechanical & Auto-Brake",
+                    cat_depot: "Wagon Depot & Wheelsets",
+                    cat_safety: "Safety & Trainees",
+                    view_grid: "⊞ Grid",
+                    view_list: "☰ Detailed",
+                    bento_kicker: "✦ FEATURED FIELD MOMENTS · ADY CJSC",
+                    bento_title: "Highlights from the Industrial Floor",
+                    bento_1_pill: "🦺 TRAINEE CREW · ADY CJSC",
+                    bento_1_t: "BDRNK Trainee Cohort at Azerbaijan Railways CJSC",
+                    bento_1_d: "College trainees equipped with high-visibility safety vests completing occupational safety and site readiness protocols.",
+                    bento_2_pill: "🚆 WAGON DEPOT",
+                    bento_2_t: "Briefing in the Tank & Freight Wagon Repair Depot",
+                    bento_2_d: "Engineering safety inspection and task assignment briefing among rolling-stock repair bays.",
+                    bento_3_pill: "⚙️ BRAKE WORKSHOP",
+                    bento_3_t: "Hands-on Pneumatic Test Bench Calibration",
+                    bento_3_d: "Students directly verify automatic brake valve pressure performance on industrial testing consoles.",
+                    grid_kicker: "📸 COMPLETE PHOTO ARCHIVE · IS1–IS15",
+                    grid_title: "All Industrial Internship Chronicles",
+                    empty_t: "No matching frames found",
+                    empty_d: "Try adjusting your search query or resetting the category filter.",
+                    road_kicker: "✦ STRUCTURED TRAINING PATHWAY",
+                    road_title: "Student Engineering Progression During Internship",
+                    road_1_n: "STAGE 01",
+                    road_1_t: "Safety & Compliance Orientation",
+                    road_1_d: "Mastering railway industrial safety protocols, PPE compliance, and fire-prevention standards.",
+                    road_2_n: "STAGE 02",
+                    road_2_t: "Depot Systems Familiarization",
+                    road_2_d: "Examining wheelsets, axle bearings, tank-wagon structures, and mechanical repair machinery.",
+                    road_3_n: "STAGE 03",
+                    road_3_t: "Test-Stand Diagnostics & Assembly",
+                    road_3_d: "Disassembling, calibrating, and pressure-testing automatic brake components under mentor engineers.",
+                    road_4_n: "STAGE 04",
+                    road_4_t: "Evaluation & Career Readiness",
+                    road_4_d: "Competency assessment building a direct bridge toward employment in the transport & railway sector.",
+                    footer_inst: "BAKU STATE COLLEGE OF COMMUNICATIONS AND TRANSPORT UNDER AZERBAIJAN TECHNICAL UNIVERSITY",
+                    footer_sub: "Industrial Practice & Career Incubation Division · Host Partner: Azerbaijan Railways CJSC (2026)",
+                    lb_zoom: "Zoom In",
+                    lb_zoom_out: "Reset Zoom",
+                    lb_dl: "Download Photo",
+                    search_ph: "Search workshop, equipment, or skills...",
+                    zoom_hint: "🔍 View",
+                    count_word: "frames shown"
+                },
+                ru: {
+                    brand_sub: "БГКСТ ПУБЛИЧНОЕ ЮРИДИЧЕСКОЕ ЛИЦО ПРИ АзТУ",
+                    brand_main: "Портал производственной практики студентов",
+                    btn_memo: "Меморандум",
+                    btn_print: "Печать / PDF",
+                    btn_home: "← Главная",
+                    hero_eyebrow: "РЕАЛЬНАЯ ИНДУСТРИАЛЬНАЯ СРЕДА · ОТ ТЕОРИИ К ПРАКТИКЕ",
+                    hero_title: "Наши студенты на производственной практике",
+                    hero_sub: "Студенты Бакинского государственного колледжа связи и транспорта при АзТУ проходят реальную производственную практику в депо ЗАО «Азербайджанские железные дороги» (ADY), ремонтных цехах и современных лабораториях испытания автотормозов.",
+                    kpi_1_lbl: "Фотохроника",
+                    kpi_1_sub: "Кадры с производства",
+                    kpi_2_lbl: "База практики",
+                    kpi_2_sub: "Азербайджанские ЖД",
+                    kpi_3_lbl: "Модуля практики",
+                    kpi_3_sub: "Депо · Цех · Безопасность",
+                    kpi_4_lbl: "Практический опыт",
+                    kpi_4_sub: "Работа на реальных стендах",
+                    pillar_1_t: "Вагонное депо и колесные пары",
+                    pillar_1_d: "Технический осмотр ходовых частей грузовых и цистерн-вагонов, букс и колесных пар.",
+                    pillar_1_tag: "4 кадра из депо →",
+                    pillar_2_t: "Автотормозной, пневматический и станочный цех",
+                    pillar_2_d: "Управление испытательными стендами, сборка/разборка клапанов и диагностика.",
+                    pillar_2_tag: "8 практик в цеху →",
+                    pillar_3_t: "Охрана труда и техника безопасности",
+                    pillar_3_d: "Вводный инструктаж, применение СИЗ и противопожарная подготовка на объекте.",
+                    pillar_3_tag: "3 брифинга и состав →",
+                    cat_all: "Все",
+                    cat_workshop: "Механический и тормозной цех",
+                    cat_depot: "Вагонное депо и колесные пары",
+                    cat_safety: "Охрана труда и студенты",
+                    view_grid: "⊞ Сетка",
+                    view_list: "☰ Подробно",
+                    bento_kicker: "✦ КЛЮЧЕВЫЕ КАДРЫ ПРАКТИКИ · ЗАО «ADY»",
+                    bento_title: "Яркие моменты на производственной площадке",
+                    bento_1_pill: "🦺 СОСТАВ ПРАКТИКАНТОВ · ADY",
+                    bento_1_t: "Команда практикантов БГКСТ в ЗАО «Азербайджанские железные дороги»",
+                    bento_1_d: "Студенты в сигнальных жилетах на этапе инструктажа по охране труда и готовности к работе в депо.",
+                    bento_2_pill: "🚆 ВАГОННОЕ ДЕПО",
+                    bento_2_t: "Инструктаж в депо ремонта цистерн и грузовых вагонов",
+                    bento_2_d: "Совещание по технике безопасности и распределению задач среди ремонтных путей.",
+                    bento_3_pill: "⚙️ ТОРМОЗНОЙ ЦЕХ",
+                    bento_3_t: "Практика на пневматическом испытательном стенде",
+                    bento_3_d: "Студенты самостоятельно проверяют параметры работы клапанов под давлением на стенде.",
+                    grid_kicker: "📸 ПОЛНЫЙ ФОТОАРХИВ · IS1–IS15",
+                    grid_title: "Все кадры производственной практики",
+                    empty_t: "Кадры по запросу не найдены",
+                    empty_d: "Попробуйте изменить поисковый запрос или сбросить фильтр категории.",
+                    road_kicker: "✦ СТРУКТУРИРОВАННАЯ ПРОГРАММА ПРАКТИКИ",
+                    road_title: "Этапы профессионального роста студента на производстве",
+                    road_1_n: "ЭТАП 01",
+                    road_1_t: "Охрана труда и вводный инструктаж",
+                    road_1_d: "Освоение правил промышленной безопасности, применения СИЗ и противопожарного режима.",
+                    road_2_n: "ЭТАП 02",
+                    road_2_t: "Знакомство с депо и оборудованием",
+                    road_2_d: "Изучение колесных пар, буксовых узлов, конструкции цистерн и ремонтных станков.",
+                    road_3_n: "ЭТАП 03",
+                    road_3_t: "Стендовые испытания и сборка",
+                    road_3_d: "Разборка, наладка и пневматическая проверка узлов автотормозов под контролем инженеров.",
+                    road_4_n: "ЭТАП 04",
+                    road_4_t: "Оценка навыков и старт карьеры",
+                    road_4_d: "Итоговая аттестация практических компетенций и подготовка к трудоустройству на транспорте.",
+                    footer_inst: "БАКИНСКИЙ ГОСУДАРСТВЕННЫЙ КОЛЛЕДЖ СВЯЗИ И ТРАНСПОРТА ПРИ АЗЕРБАЙДЖАНСКОМ ТЕХНИЧЕСКОМ УНИВЕРСИТЕТЕ",
+                    footer_sub: "Отдел производственной практики и карьеры · База практики: ЗАО «Азербайджанские железные дороги» (2026)",
+                    lb_zoom: "Увеличить",
+                    lb_zoom_out: "Обычный размер",
+                    lb_dl: "Скачать фото",
+                    search_ph: "Поиск по участку, оборудованию или навыку...",
+                    zoom_hint: "🔍 Увеличить",
+                    count_word: "кадров показано"
+                }
+            };
+
+            const categoryMeta = {
+                workshop: {
+                    az: "Avtoəyləc & Sex",
+                    en: "Brake Workshop",
+                    ru: "Тормозной цех"
+                },
+                depot: {
+                    az: "Vaqon Deposu",
+                    en: "Wagon Depot",
+                    ru: "Вагонное депо"
+                },
+                safety: {
+                    az: "Əməyin Mühafizəsi",
+                    en: "Safety & Crew",
+                    ru: "Охрана труда"
+                }
+            };
+
+            const internshipPhotos = [
+                {
+                    id: "is1",
+                    num: "01",
+                    src: "is1.jpeg",
+                    cat: "depot",
+                    loc_az: "📍 Təkər Cütləri Təmiri Sahəsi",
+                    loc_en: "📍 Wheelset Inspection Bay",
+                    loc_ru: "📍 Участок колесных пар",
+                    title_az: "Vaqon təkər cütlərinin texniki müayinəsi və ölçmə praktikası",
+                    title_en: "Technical inspection of wagon wheelsets with mentor engineer",
+                    title_ru: "Технический осмотр вагонных колесных пар с мастером",
+                    desc_az: "Təcrübəçi tələbələrimiz depo ustası ilə birlikdə dəmiryol vaqonlarının təkər cütlərində səth aşınması və geometrik ölçülərin yoxlanılmasını öyrənirlər.",
+                    desc_en: "College trainees examine tread wear profiles and geometric tolerances of railway wheelsets alongside senior depot engineers.",
+                    desc_ru: "Студенты совместно с мастером депо изучают методику контроля геометрии и износа поверхности катания колесных пар.",
+                    tags_az: ["Təkər cütləri", "Ölçü nəzarəti", "Texniki baxış"],
+                    tags_en: ["Wheelsets", "Precision Check", "Field Inspection"],
+                    tags_ru: ["Колесные пары", "Замеры", "Техосмотр"]
+                },
+                {
+                    id: "is2",
+                    num: "02",
+                    src: "is2.jpeg",
+                    cat: "depot",
+                    loc_az: "📍 Hərəkət Hissəsi & Buks Sahəsi",
+                    loc_en: "📍 Axle-Box & Running Gear Zone",
+                    loc_ru: "📍 Участок буксовых узлов",
+                    title_az: "Təkər cütləri və buks düyünlərinin mexaniki təmiri izahatı",
+                    title_en: "Hands-on briefing on axle-box assemblies and bearing housings",
+                    title_ru: "Производственный инструктаж по ремонту буксовых узлов",
+                    desc_az: "Mühəndis heyəti təcrübəçilərə vaqon oxlarının buks qovşaqları, podşipniklərin texniki vəziyyəti və təmir texnologiyası barədə əyani izahat verir.",
+                    desc_en: "Workshop specialists demonstrate maintenance procedures for railway axle bearings, housings, and wheelset assemblies.",
+                    desc_ru: "Инженеры-наставники наглядно объясняют устройство буксовых узлов, подшипников и технологию их обслуживания.",
+                    tags_az: ["Buks qovşağı", "Podşipnik", "Mexaniki təmir"],
+                    tags_en: ["Axle Box", "Bearings", "Rolling Stock"],
+                    tags_ru: ["Буксовый узел", "Подшипники", "Механика"]
+                },
+                {
+                    id: "is3",
+                    num: "03",
+                    src: "is3.jpeg",
+                    cat: "workshop",
+                    loc_az: "📍 Avtoəyləc Sınaq Laboratoriyası",
+                    loc_en: "📍 Auto-Brake Test Lab",
+                    loc_ru: "📍 Испытательный участок автотормозов",
+                    title_az: "Avtoəyləc və pnevmatik sınaq stendinin idarəetmə paneli ilə tanışlıq",
+                    title_en: "Orientation on pneumatic auto-brake testing control console",
+                    title_ru: "Знакомство с пультом управления стендом испытания автотормозов",
+                    desc_az: "Tələbələr dəmiryol avtoəyləc sistemlərinin diaqnostikası üçün nəzərdə tutulan rəqəmsal-pnevmatik sınaq stendinin iş rejimlərini müşahidə edirlər.",
+                    desc_en: "Students observe how diagnostic technicians operate the digital-pneumatic test bench used to certify braking equipment.",
+                    desc_ru: "Студенты изучают органы управления и режимы работы пневматического испытательного стенда тормозного оборудования.",
+                    tags_az: ["Sınaq stendi", "İdarəetmə paneli", "Pnevmatika"],
+                    tags_en: ["Test Console", "Diagnostics", "Pneumatics"],
+                    tags_ru: ["Стенд", "Пульт управления", "Пневматика"]
+                },
+                {
+                    id: "is4",
+                    num: "04",
+                    src: "is4.jpeg",
+                    cat: "workshop",
+                    loc_az: "📍 Avtoəyləc Sınaq Sexi",
+                    loc_en: "📍 Pneumatic Brake Workshop",
+                    loc_ru: "📍 Цех пневматических испытаний",
+                    title_az: "Pnevmatik sınaq stendində praktiki yoxlama və tənzimləmə",
+                    title_en: "Direct student execution of valve pressure tests on the stand",
+                    title_ru: "Практическая настройка и проверка работы стенда студентами",
+                    desc_az: "Mühafizə eynəyi və əlcəklərlə təchiz olunan BDRNK tələbələri təcrübə rəhbərinin nəzarəti altında avtoəyləc sınaq stendində işəbaşlama əməliyyatını icra edirlər.",
+                    desc_en: "Wearing safety glasses and protective gloves, trainees execute operational checks on the brake testing stand under supervision.",
+                    desc_ru: "Студенты в защитных очках и перчатках под контролем инструктора отрабатывают пуск и проверку параметров стенда.",
+                    tags_az: ["Real praktika", "Mühafizə vasitələri", "Avtoəyləc"],
+                    tags_en: ["Hands-on Operation", "Safety PPE", "Auto-Brake"],
+                    tags_ru: ["Практика", "СИЗ", "Автотормоза"]
+                },
+                {
+                    id: "is5",
+                    num: "05",
+                    src: "is5.jpeg",
+                    cat: "depot",
+                    loc_az: "📍 Dəmiryol Xətti · Sistern Sahəsi",
+                    loc_en: "📍 Rail Track · Tank Wagon Line",
+                    loc_ru: "📍 Пути отстоя и осмотра цистерн",
+                    title_az: "Sistern vaqonunun konstruksiyası və qaynaq-təhlükəsizlik elementlərinin baxışı",
+                    title_en: "External structural inspection of railway tank wagon assembly",
+                    title_ru: "Осмотр конструкции и элементов безопасности вагона-цистерны",
+                    desc_az: "Açıq dəmiryol xəttində mütəxəssislər tələbələrə 75139725 nömrəli sistern vaqonunun dayaq düyünləri və təhlükəsizlik tələblərini izah edirlər.",
+                    desc_en: "Trackside inspection explaining ladder supports, frame mounts, and safety markings on freight tank wagon #75139725.",
+                    desc_ru: "На железнодорожном пути специалисты объясняют конструкцию рамы, креплений и маркировку цистерны № 75139725.",
+                    tags_az: ["Sistern vaqon", "Çöl baxışı", "Konstruksiya"],
+                    tags_en: ["Tank Wagon", "Trackside Inspection", "Structure"],
+                    tags_ru: ["Цистерна", "Полевой осмотр", "Конструкция"]
+                },
+                {
+                    id: "is6",
+                    num: "06",
+                    src: "is6.jpeg",
+                    cat: "workshop",
+                    loc_az: "📍 Çilingər-Mexaniki Yığım Sexi",
+                    loc_en: "📍 Mechanical Assembly Bench",
+                    loc_ru: "📍 Слесарно-сборочный участок",
+                    title_az: "Avtoəyləc klapanlarının sökülməsi, təmizlənməsi və yığılması",
+                    title_en: "Individual valve disassembly and precision wrench calibration",
+                    title_ru: "Индивидуальная разборка и обслуживание тормозных клапанов",
+                    desc_az: "Təcrübəçi tələbəmiz iş dəzgahında əl alətləri ilə dəmiryol avtoəyləc qovşağının mexaniki hissələrini sökərək təmirə hazırlayır.",
+                    desc_en: "A student trainee uses mechanical wrenches to disassemble and inspect heavy-duty railway brake valve assemblies.",
+                    desc_ru: "Студент за слесарным столом с помощью инструмента выполняет разборку и ревизию узла тормозного механизма.",
+                    tags_az: ["Klapan təmiri", "Çilingər işi", "Dəqiqlik"],
+                    tags_en: ["Valve Service", "Manual Tooling", "Precision"],
+                    tags_ru: ["Ремонт клапанов", "Слесарное дело", "Ревизия"]
+                },
+                {
+                    id: "is7",
+                    num: "07",
+                    src: "is7.jpeg",
+                    cat: "workshop",
+                    loc_az: "📍 Mexaniki Quraşdırma Masası",
+                    loc_en: "📍 Pneumatic Fitting Station",
+                    loc_ru: "📍 Участок сборки пневмоузлов",
+                    title_az: "Komanda şəklində avtoəyləc mexanizminin yığılması və yoxlanması",
+                    title_en: "Collaborative trainee teardown and assembly at fitting workbench",
+                    title_ru: "Совместная сборка и отладка тормозного узла практикантами",
+                    desc_az: "Tələbələrimiz pnevmatik şlanqlar, məngənə və xüsusi tutacaqlarla təchiz olunmuş masada əyləc mexanizminin montajını yerinə yetirirlər.",
+                    desc_en: "Trainees collaborate at the pneumatic workbench to clamp, clean, and reassemble brake distributors.",
+                    desc_ru: "Практиканты совместно выполняют монтаж и проверку воздухораспределительного механизма на сборочном столе.",
+                    tags_az: ["Komanda işi", "Montaj", "Pnevmatik şlanq"],
+                    tags_en: ["Teamwork", "Assembly", "Workbench"],
+                    tags_ru: ["Командная работа", "Сборка", "Верстак"]
+                },
+                {
+                    id: "is8",
+                    num: "08",
+                    src: "is8.jpeg",
+                    cat: "workshop",
+                    loc_az: "📍 Sınaq Stendi №2",
+                    loc_en: "📍 Calibration Stand #2",
+                    loc_ru: "📍 Испытательный стенд №2",
+                    title_az: "Sınaq stendində paylayıcı cihazın bərkidilməsi və hermetik sınaq",
+                    title_en: "Mounting distributor valve onto automated pressure testing rig",
+                    title_ru: "Установка и герметичная проверка воздухораспределителя на стенде",
+                    desc_az: "Avtoəyləc paylayıcı cihazının sınaq stendinə quraşdırılması və sıxılmış hava altında hermetikliyinin ölçülməsi prosesi.",
+                    desc_en: "Students mount and fasten the heavy cast-iron brake distributor onto the testing stand for compressed-air leak verification.",
+                    desc_ru: "Процесс крепления воздухораспределителя на стенд и подготовки к проверке герметичности сжатым воздухом.",
+                    tags_az: ["Paylayıcı", "Hermetiklik", "Hava sınağı"],
+                    tags_en: ["Air Distributor", "Pressure Rig", "Quality Test"],
+                    tags_ru: ["Воздухораспределитель", "Герметичность", "Тест"]
+                },
+                {
+                    id: "is9",
+                    num: "09",
+                    src: "is9.jpeg",
+                    cat: "workshop",
+                    loc_az: "📍 Ehtiyat Hissələri & Sınaq Zalı",
+                    loc_en: "📍 Main Overhaul Hall",
+                    loc_ru: "📍 Главный зал ремонта оборудования",
+                    title_az: "Təmir sexində ehtiyat klapanlar və sınaq avadanlıqları ilə tanışlıq",
+                    title_en: "Group walkthrough of overhauled components and inspection pallets",
+                    title_ru: "Ознакомление группы с комплектом тормозной арматуры в цеху",
+                    desc_az: "Təcrübə qrupu sexə daxil olmuş avtoəyləc detalları, təzyiq reduktorları və təmir dövrəsini keçmiş komponentlərlə tanış olur.",
+                    desc_en: "The student cohort reviews batches of incoming and refurbished railway braking valves arranged inside the overhaul facility.",
+                    desc_ru: "Учебная группа осматривает поступившие на ревизию и отремонтированные детали автотормозных систем.",
+                    tags_az: ["Komponent arxivi", "Təmir sexi", "İstehsalat zənciri"],
+                    tags_en: ["Components", "Overhaul Hall", "Workflow"],
+                    tags_ru: ["Узлы", "Ремонтный цех", "Ревизия"]
+                },
+                {
+                    id: "is10",
+                    num: "10",
+                    src: "is10.jpeg",
+                    cat: "safety",
+                    loc_az: "📍 Təlim və Təhlükəsizlik Zalı",
+                    loc_en: "📍 Safety Briefing Hall",
+                    loc_ru: "📍 Класс техники безопасности",
+                    title_az: "İstehsalat sahəsində əməyin mühafizəsi üzrə giriş təlimatı",
+                    title_en: "Mandatory industrial safety and compliance lecture",
+                    title_ru: "Вводный инструктаж по охране труда и безопасности в депо",
+                    desc_az: "Sahə işlərinə başlamazdan əvvəl dəbilqə və siqnal gödəkçələri ilə təmin olunan iştirakçılara əməyin mühafizəsi qaydaları öyrədilir.",
+                    desc_en: "Prior to depot entry, participants equipped with safety helmets and high-vis gear complete mandatory HSE training.",
+                    desc_ru: "Перед выходом на производственные пути слушатели в касках и сигнальных жилетах проходят инструктаж по охране труда.",
+                    tags_az: ["Əməyin mühafizəsi", "Dəbilqə", "Giriş təlimatı"],
+                    tags_en: ["HSE Training", "Safety Gear", "Compliance"],
+                    tags_ru: ["Охрана труда", "Каски", "Инструктаж"]
+                },
+                {
+                    id: "is11",
+                    num: "11",
+                    src: "is11.jpeg",
+                    cat: "depot",
+                    loc_az: "📍 “ADY” QSC Vaqon Təmiri Deposu",
+                    loc_en: "📍 ADY Rolling Stock Repair Hangar",
+                    loc_ru: "📍 Вагоноремонтный ангар ЗАО «ADY»",
+                    title_az: "Sistern və yük vaqonları deposunda mütəxəssis brifinqi",
+                    title_en: "Hangar-floor briefing among freight cistern wagons at ADY depot",
+                    title_ru: "Специализированный брифинг в ангаре ремонта вагонов-цистерн",
+                    desc_az: "“Azərbaycan Dəmir Yolları” QSC yazılı geyimli mütəxəssislər və təcrübəçilər qapalı təmir deposunda əsaslı təmir prosesini müzakirə edirlər.",
+                    desc_en: "ADY engineers and trainees gather between heavy freight tank wagons inside the main depot hangar for technical briefing.",
+                    desc_ru: "Инженеры ADY и практиканты в большом ремонтном ангаре обсуждают технологический цикл обслуживания цистерн.",
+                    tags_az: ["ADY QSC", "Vaqon anqarı", "Əsaslı təmir"],
+                    tags_en: ["ADY CJSC", "Repair Hangar", "Briefing"],
+                    tags_ru: ["ADY", "Ангар депо", "Капремонт"]
+                },
+                {
+                    id: "is12",
+                    num: "12",
+                    src: "is12.jpeg",
+                    cat: "workshop",
+                    loc_az: "📍 Dəzgahlar & Pnevmatik Xətt",
+                    loc_en: "📍 Diagnostic Machinery Line",
+                    loc_ru: "📍 Линия диагностического оборудования",
+                    title_az: "İstehsalat dəzgahlarının və sınaq avadanlığının əyani nümayişi",
+                    title_en: "Technical demonstration of mechanical testing line to trainees",
+                    title_ru: "Наглядная демонстрация работы испытательной линии группе студентов",
+                    desc_az: "Sex mühəndisi tələbə qrupuna sınaq avadanlığının avtomatlaşdırılmış bloklarını və təhlükəsiz məsafə qaydalarını nümayiş etdirir.",
+                    desc_en: "A workshop specialist walks the student group through the industrial test machinery layout and safety zones.",
+                    desc_ru: "Инструктор цеха демонстрирует студентам устройство стендовой линии и правила безопасного нахождения в рабочей зоне.",
+                    tags_az: ["Dəzgah xətti", "Təhlükəsizlik zonası", "Demonstrasiya"],
+                    tags_en: ["Machinery Line", "Safety Perimeter", "Demo"],
+                    tags_ru: ["Линия станков", "Зона безопасности", "Показ"]
+                },
+                {
+                    id: "is13",
+                    num: "13",
+                    src: "is13.jpeg",
+                    cat: "workshop",
+                    loc_az: "📍 ADY Praktiki Sınaq Stendi",
+                    loc_en: "📍 ADY Master Supervision Bay",
+                    loc_ru: "📍 Участок наставничества ADY",
+                    title_az: "ADY mühəndisinin nəzarəti altında praktiki montaj və yoxlama",
+                    title_en: "Supervised valve connection and pneumatic hose check with ADY mentor",
+                    title_ru: "Практическая стыковка пневмомагистралей под контролем наставника ADY",
+                    desc_az: "ADY-nin təcrübəli mütəxəssisi tələbələrimizin hava şlanqlarını və bağlayıcı detalları düzgün quraşdırmasına birbaşa rəhbərlik edir.",
+                    desc_en: "An ADY senior supervisor closely guides students as they connect pneumatic test hoses and check fittings.",
+                    desc_ru: "Опытный специалист ADY контролирует правильность подключения студентами пневмошлангов и крепежных элементов.",
+                    tags_az: ["Mentor dəstəyi", "Hava magistralı", "Praktiki dərs"],
+                    tags_en: ["Mentor Guidance", "Air Hoses", "Applied Training"],
+                    tags_ru: ["Наставничество", "Пневмошланги", "Обучение"]
+                },
+                {
+                    id: "is14",
+                    num: "14",
+                    src: "is14.jpeg",
+                    cat: "safety",
+                    loc_az: "📍 ADY İstehsalat Ərazisi",
+                    loc_en: "📍 ADY Production Courtyard",
+                    loc_ru: "📍 Производственная площадка ADY",
+                    title_az: "“Azərbaycan Dəmir Yolları” QSC-də təcrübə keçən BDRNK tələbə heyəti",
+                    title_en: "Full BDRNK student internship team in ADY safety vests",
+                    title_ru: "Коллектив студентов-практикантов БГКСТ на территории ЗАО «ADY»",
+                    desc_az: "Fərdi mühafizə və ADY nişanlı siqnal gödəkçələri geyinmiş kollec tələbələrimiz sahə təcrübəsi və yanğın təhlükəsizliyi məşğələsində.",
+                    desc_en: "BDRNK trainees in branded ADY high-visibility vests gather alongside fire-safety equipment during field practice.",
+                    desc_ru: "Студенты колледжа в фирменных сигнальных жилетах ADY на практическом занятии по пожарной и промышленной безопасности.",
+                    tags_az: ["Tələbə heyəti", "ADY nişanı", "Sahə hazırlığı"],
+                    tags_en: ["Student Cohort", "ADY Branded PPE", "Field Ready"],
+                    tags_ru: ["Команда студентов", "Спецодежда ADY", "Готовность"]
+                },
+                {
+                    id: "is15",
+                    num: "15",
+                    src: "is15.jpeg",
+                    cat: "safety",
+                    loc_az: "📍 Açıq Təhlükəsizlik Poliqonu",
+                    loc_en: "📍 Outdoor Fire Safety Ground",
+                    loc_ru: "📍 Открытая площадка пожарной безопасности",
+                    title_az: "Depo ərazisində yanğın təhlükəsizliyi və fövqəladə hazırlıq",
+                    title_en: "Fire-extinguisher readiness and emergency response training at ADY",
+                    title_ru: "Подготовка по пожарной безопасности и работе со средствами тушения",
+                    desc_az: "Təcrübə proqramı çərçivəsində tələbələrimiz ilkin yanğınsöndürmə vasitələri və dəmiryol obyektlərində təhlükəsizlik tədbirləri ilə tanış olurlar.",
+                    desc_en: "Students practice emergency preparedness and inspect fire-suppression equipment stationed along the depot drill area.",
+                    desc_ru: "В рамках практики студенты знакомятся со средствами первичного пожаротушения и правилами действий при ЧС в депо.",
+                    tags_az: ["Yanğın təhlükəsizliyi", "Sənaye intizamı", "Hazırlıq"],
+                    tags_en: ["Fire Safety", "Emergency Prep", "Depot Discipline"],
+                    tags_ru: ["Пожарная безопасность", "Огнетушители", "Дисциплина"]
+                }
+            ];
+
+            let currentLang = "az";
+            let currentCat = "all";
+            let currentView = "grid";
+            let currentSearch = "";
+            let filteredPhotos = [...internshipPhotos];
+            let activeLightboxIndex = 0;
+
+            try {
+                const storedLang = localStorage.getItem("bdrnk-lang") || localStorage.getItem("bdrnk_lang") || localStorage.getItem("lang");
+                if (storedLang && uiStrings[storedLang]) {
+                    currentLang = storedLang;
+                }
+            } catch (e) {}
+
+            // Theme Handling
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeIcon = document.getElementById("theme-icon");
+            const htmlEl = document.documentElement;
+
+            function applyTheme(theme) {
+                const isDark = theme === "dark";
+                htmlEl.setAttribute("data-theme", isDark ? "dark" : "light");
+                htmlEl.classList.toggle("dark", isDark);
+                htmlEl.classList.toggle("dark-mode", isDark);
+                if (document.body) document.body.classList.toggle("dark-mode", isDark);
+                if (themeIcon) themeIcon.textContent = isDark ? "☀️" : "🌙";
+                try {
+                    localStorage.setItem("bdrnk-theme", isDark ? "dark" : "light");
+                    localStorage.setItem("bdrnk_theme", isDark ? "dark" : "light");
+                } catch (e) {}
+            }
+
+            let savedTheme = null;
+            try {
+                savedTheme = localStorage.getItem("bdrnk-theme") || localStorage.getItem("bdrnk_theme") || localStorage.getItem("theme");
+            } catch (e) {}
+            if (savedTheme) {
+                applyTheme(savedTheme);
+            } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                applyTheme("dark");
+            } else {
+                applyTheme("light");
+            }
+
+            if (themeToggle) {
+                themeToggle.addEventListener("click", () => {
+                    applyTheme(htmlEl.getAttribute("data-theme") === "dark" ? "light" : "dark");
+                });
+            }
+
+            // Localization Handling
+            function applyStrings() {
+                const dict = uiStrings[currentLang] || uiStrings.az;
+                document.querySelectorAll("[data-txt]").forEach((el) => {
+                    const key = el.getAttribute("data-txt");
+                    if (dict[key]) el.textContent = dict[key];
+                });
+                const searchInput = document.getElementById("intern-search");
+                if (searchInput && dict.search_ph) searchInput.placeholder = dict.search_ph;
+                document.querySelectorAll(".intern-lang-btn").forEach((btn) => {
+                    btn.classList.toggle("active", btn.getAttribute("data-lang") === currentLang);
+                });
+                htmlEl.setAttribute("lang", currentLang);
+            }
+
+            document.querySelectorAll(".intern-lang-btn").forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const lang = btn.getAttribute("data-lang");
+                    if (uiStrings[lang]) {
+                        currentLang = lang;
+                        try {
+                            localStorage.setItem("bdrnk-lang", lang);
+                            localStorage.setItem("bdrnk_lang", lang);
+                        } catch (e) {}
+                        applyStrings();
+                        renderGallery();
+                        const lb = document.getElementById("intern-lightbox");
+                        if (lb && lb.classList.contains("open")) {
+                            updateLightboxContent();
+                        }
+                    }
+                });
+            });
+
+            // Gallery Rendering & Filtering
+            const gridEl = document.getElementById("intern-gallery-grid");
+            const emptyEl = document.getElementById("intern-empty-state");
+            const statusEl = document.getElementById("intern-results-status");
+            const searchInput = document.getElementById("intern-search");
+            const searchClear = document.getElementById("intern-search-clear");
+
+            function renderGallery() {
+                const dict = uiStrings[currentLang] || uiStrings.az;
+                const q = currentSearch.trim().toLowerCase();
+                if (searchClear) searchClear.style.display = currentSearch ? "inline-flex" : "none";
+
+                filteredPhotos = internshipPhotos.filter((item) => {
+                    const matchesCat = currentCat === "all" || item.cat === currentCat;
+                    if (!matchesCat) return false;
+                    if (!q) return true;
+                    const blob = [
+                        item["title_" + currentLang],
+                        item["desc_" + currentLang],
+                        item["loc_" + currentLang],
+                        ...(item["tags_" + currentLang] || []),
+                        item.id
+                    ].join(" ").toLowerCase();
+                    return blob.includes(q);
+                });
+
+                if (statusEl) {
+                    statusEl.textContent = `${filteredPhotos.length} / ${internshipPhotos.length} ${dict.count_word}`;
+                }
+
+                if (!gridEl) return;
+                gridEl.classList.toggle("view-list", currentView === "list");
+
+                if (filteredPhotos.length === 0) {
+                    gridEl.innerHTML = "";
+                    if (emptyEl) emptyEl.style.display = "block";
+                    return;
+                }
+
+                if (emptyEl) emptyEl.style.display = "none";
+
+                gridEl.innerHTML = filteredPhotos.map((item, idx) => {
+                    const catLabel = (categoryMeta[item.cat] && categoryMeta[item.cat][currentLang]) || item.cat;
+                    const loc = item["loc_" + currentLang] || item.loc_az;
+                    const title = item["title_" + currentLang] || item.title_az;
+                    const desc = item["desc_" + currentLang] || item.desc_az;
+                    const tags = (item["tags_" + currentLang] || item.tags_az || [])
+                        .map((t) => `<span class="intern-skill-tag">${t}</span>`)
+                        .join("");
+
+                    return `
+                        <article class="intern-card">
+                            <div class="intern-card-media" data-lb-idx="${idx}" role="button" tabindex="0" aria-label="${title}">
+                                <span class="intern-card-num">#${item.num}</span>
+                                <span class="intern-card-cat">${catLabel}</span>
+                                <img src="${item.src}" alt="${title}" loading="lazy" />
+                                <span class="intern-card-zoom-hint">${dict.zoom_hint}</span>
+                            </div>
+                            <div class="intern-card-body">
+                                <div class="intern-card-loc">${loc}</div>
+                                <h3 class="intern-card-title">${title}</h3>
+                                <p class="intern-card-desc">${desc}</p>
+                                <div class="intern-card-tags">${tags}</div>
+                            </div>
+                        </article>`;
+                }).join("");
+
+                gridEl.querySelectorAll("[data-lb-idx]").forEach((el) => {
+                    el.addEventListener("click", () => {
+                        openLightbox(parseInt(el.getAttribute("data-lb-idx"), 10));
+                    });
+                    el.addEventListener("keydown", (e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault();
+                            openLightbox(parseInt(el.getAttribute("data-lb-idx"), 10));
+                        }
+                    });
+                });
+            }
+
+            // Category buttons & hero pillar shortcuts
+            const filterBtns = document.querySelectorAll(".intern-filter-btn");
+            function setCategory(cat) {
+                currentCat = cat;
+                filterBtns.forEach((b) => {
+                    const active = b.getAttribute("data-cat") === cat;
+                    b.classList.toggle("active", active);
+                    b.setAttribute("aria-selected", active ? "true" : "false");
+                });
+                renderGallery();
+            }
+
+            filterBtns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    setCategory(btn.getAttribute("data-cat"));
+                });
+            });
+
+            document.querySelectorAll("[data-jump-cat]").forEach((card) => {
+                const handler = () => {
+                    setCategory(card.getAttribute("data-jump-cat"));
+                    if (gridEl) gridEl.scrollIntoView({ behavior: "smooth", block: "start" });
+                };
+                card.addEventListener("click", handler);
+                card.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        handler();
+                    }
+                });
+            });
+
+            // View mode toggle
+            document.querySelectorAll(".intern-view-btn").forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    currentView = btn.getAttribute("data-view");
+                    document.querySelectorAll(".intern-view-btn").forEach((b) => {
+                        b.classList.toggle("active", b === btn);
+                    });
+                    renderGallery();
+                });
+            });
+
+            // Search input
+            if (searchInput) {
+                searchInput.addEventListener("input", () => {
+                    currentSearch = searchInput.value;
+                    renderGallery();
+                });
+            }
+            if (searchClear) {
+                searchClear.addEventListener("click", () => {
+                    if (searchInput) {
+                        searchInput.value = "";
+                        currentSearch = "";
+                        renderGallery();
+                        searchInput.focus();
+                    }
+                });
+            }
+
+            // Bento clicks open Lightbox
+            document.querySelectorAll("[data-open-id]").forEach((card) => {
+                const id = card.getAttribute("data-open-id");
+                const openById = () => {
+                    let idx = filteredPhotos.findIndex((p) => p.id === id);
+                    if (idx === -1) {
+                        setCategory("all");
+                        if (searchInput) searchInput.value = "";
+                        currentSearch = "";
+                        renderGallery();
+                        idx = filteredPhotos.findIndex((p) => p.id === id);
+                    }
+                    if (idx !== -1) openLightbox(idx);
+                };
+                card.addEventListener("click", openById);
+                card.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        openById();
+                    }
+                });
+            });
+
+            // Lightbox Logic
+            const lightbox = document.getElementById("intern-lightbox");
+            const lbBackdrop = document.getElementById("lb-backdrop");
+            const lbImg = document.getElementById("lb-img");
+            const lbCounter = document.getElementById("lb-counter");
+            const lbLoc = document.getElementById("lb-loc");
+            const lbTitle = document.getElementById("lb-title");
+            const lbDesc = document.getElementById("lb-desc");
+            const lbTags = document.getElementById("lb-tags");
+            const lbPrev = document.getElementById("lb-prev");
+            const lbNext = document.getElementById("lb-next");
+            const lbClose = document.getElementById("lb-close");
+            const lbZoomBtn = document.getElementById("lb-zoom-btn");
+            const lbDlBtn = document.getElementById("lb-dl-btn");
+
+            function updateLightboxContent() {
+                const item = filteredPhotos[activeLightboxIndex];
+                if (!item) return;
+                const dict = uiStrings[currentLang] || uiStrings.az;
+                const title = item["title_" + currentLang] || item.title_az;
+                if (lbImg) {
+                    lbImg.src = item.src;
+                    lbImg.alt = title;
+                    lbImg.classList.remove("zoomed");
+                }
+                if (lbCounter) lbCounter.textContent = `${activeLightboxIndex + 1} / ${filteredPhotos.length}`;
+                if (lbLoc) lbLoc.textContent = item["loc_" + currentLang] || item.loc_az;
+                if (lbTitle) lbTitle.textContent = title;
+                if (lbDesc) lbDesc.textContent = item["desc_" + currentLang] || item.desc_az;
+                if (lbTags) {
+                    lbTags.innerHTML = (item["tags_" + currentLang] || item.tags_az || [])
+                        .map((t) => `<span class="intern-skill-tag">${t}</span>`)
+                        .join("");
+                }
+                if (lbDlBtn) {
+                    lbDlBtn.href = item.src;
+                    lbDlBtn.setAttribute("download", `BDRNK_Tecrube_${item.id}.jpeg`);
+                }
+                if (lbZoomBtn) {
+                    const span = lbZoomBtn.querySelector("span");
+                    if (span) span.textContent = dict.lb_zoom;
+                }
+            }
+
+            function openLightbox(idx) {
+                if (!filteredPhotos[idx]) return;
+                activeLightboxIndex = idx;
+                updateLightboxContent();
+                if (lightbox) {
+                    lightbox.classList.add("open");
+                    lightbox.setAttribute("aria-hidden", "false");
+                    document.body.style.overflow = "hidden";
+                }
+            }
+
+            function closeLightbox() {
+                if (lightbox) {
+                    lightbox.classList.remove("open");
+                    lightbox.setAttribute("aria-hidden", "true");
+                    document.body.style.overflow = "";
+                }
+            }
+
+            if (lbClose) lbClose.addEventListener("click", closeLightbox);
+            if (lbBackdrop) lbBackdrop.addEventListener("click", closeLightbox);
+            if (lbPrev) {
+                lbPrev.addEventListener("click", () => {
+                    if (filteredPhotos.length === 0) return;
+                    activeLightboxIndex = (activeLightboxIndex - 1 + filteredPhotos.length) % filteredPhotos.length;
+                    updateLightboxContent();
+                });
+            }
+            if (lbNext) {
+                lbNext.addEventListener("click", () => {
+                    if (filteredPhotos.length === 0) return;
+                    activeLightboxIndex = (activeLightboxIndex + 1) % filteredPhotos.length;
+                    updateLightboxContent();
+                });
+            }
+            if (lbZoomBtn && lbImg) {
+                const toggleZoom = () => {
+                    const dict = uiStrings[currentLang] || uiStrings.az;
+                    const zoomed = lbImg.classList.toggle("zoomed");
+                    const span = lbZoomBtn.querySelector("span");
+                    if (span) span.textContent = zoomed ? dict.lb_zoom_out : dict.lb_zoom;
+                };
+                lbZoomBtn.addEventListener("click", toggleZoom);
+                lbImg.addEventListener("click", toggleZoom);
+            }
+
+            document.addEventListener("keydown", (e) => {
+                if (!lightbox || !lightbox.classList.contains("open")) return;
+                if (e.key === "Escape") closeLightbox();
+                else if (e.key === "ArrowLeft" && lbPrev) lbPrev.click();
+                else if (e.key === "ArrowRight" && lbNext) lbNext.click();
+            });
+
+            // Initialize
+            applyStrings();
+            renderGallery();
+        })();
+    </script>
+</body>
+</html>

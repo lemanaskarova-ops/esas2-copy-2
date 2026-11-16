@@ -1058,3 +1058,71 @@ html:not(.dark) .campus-floor-banner {
   transform: none !important;
 }
 
+/* ---------- 13. Industrial Internship Pill & Companion Callout Card ---------- */
+.workspace-intern-pill {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.14), rgba(10, 34, 64, 0.06)) !important;
+  border-color: rgba(16, 185, 129, 0.45) !important;
+  color: #065f46 !important;
+  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.14);
+}
+
+.workspace-intern-pill:hover {
+  background: linear-gradient(135deg, #064e3b, #0a2240) !important;
+  color: #a7f3d0 !important;
+  border-color: rgba(52, 211, 153, 0.75) !important;
+}
+
+html.dark .workspace-intern-pill,
+html.dark-mode .workspace-intern-pill {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(14, 28, 49, 0.85)) !important;
+  color: #6ee7b7 !important;
+  border-color: rgba(52, 211, 153, 0.48) !important;
+}
+
+.about-memo-action-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.about-intern-aesthetic-btn {
+  border-color: rgba(16, 185, 129, 0.45) !important;
+  box-shadow: 0 12px 30px -14px rgba(6, 78, 59, 0.16), 0 0 0 1px rgba(16, 185, 129, 0.08);
+}
+
+.about-intern-aesthetic-btn::after {
+  background: linear-gradient(180deg, #059669, #cfa95e, #0a2240) !important;
+}
+
+.about-intern-aesthetic-btn .memo-btn-icon-box {
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.14), rgba(10, 34, 64, 0.08));
+  color: #059669;
+  border-color: rgba(5, 150, 105, 0.3);
+}
+
+html.dark .about-intern-aesthetic-btn .memo-btn-icon-box,
+html.dark-mode .about-intern-aesthetic-btn .memo-btn-icon-box {
+  color: #6ee7b7;
+  border-color: rgba(52, 211, 153, 0.4);
+}
+
+.about-intern-aesthetic-btn .memo-btn-pill-label {
+  background: rgba(5, 150, 105, 0.12);
+  border-color: rgba(5, 150, 105, 0.35);
+  color: #047857;
+}
+
+html.dark .about-intern-aesthetic-btn .memo-btn-pill-label,
+html.dark-mode .about-intern-aesthetic-btn .memo-btn-pill-label {
+  background: rgba(52, 211, 153, 0.16);
+  color: #6ee7b7;
+}
+
+@media (max-width: 768px) {
+  .about-memo-action-wrap {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+
