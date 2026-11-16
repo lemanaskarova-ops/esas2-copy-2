@@ -11316,7 +11316,7 @@ document.addEventListener("DOMContentLoaded", () => {
           : "";
 
         const extraGalleryHtml = Array.isArray(item.extra_images) && item.extra_images.length
-          ? `<div style="font-weight:700;font-size:0.92rem;color:#0a2240;">📸 ${currentLang === "en" ? "Photo Gallery from the Meeting" : currentLang === "ru" ? "Фотогалерея встречи" : "Görüşdən Fotoqalereya"} (${item.extra_images.length})</div>
+          ? `<div class="nr-gallery-title" style="font-weight:700;font-size:0.92rem;color:var(--text,#0a2240);">📸 ${currentLang === "en" ? "Photo Gallery from the Meeting" : currentLang === "ru" ? "Фотогалерея встречи" : "Görüşdən Fotoqalereya"} (${item.extra_images.length})</div>
              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;">
                ${item.extra_images.map((imgSrc, idx) => `<a href="${imgSrc}" target="_blank" rel="noopener noreferrer" style="display:block;border-radius:12px;overflow:hidden;border:1px solid rgba(184,147,74,0.35);box-shadow:0 6px 16px rgba(10,34,64,0.08);"><img src="${imgSrc}" alt="${title} - ${idx + 1}" style="width:100%;height:190px;object-fit:cover;display:block;transition:transform 0.3s ease;" loading="lazy" /></a>`).join("")}
              </div>`

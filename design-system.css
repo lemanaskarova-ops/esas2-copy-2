@@ -1529,7 +1529,26 @@ body.dark-mode,
     color: #ffffff !important;
   }
 
-  /* ── 9. Science & Research Cards ── */
+  /* ── 9. Science & Research Cards & Table ── */
+  .science-main-title {
+    color: #ffffff !important;
+  }
+  .science-main-desc {
+    color: #cbd5e1 !important;
+  }
+  .science-article-title {
+    color: #ffffff !important;
+  }
+  .science-author-name {
+    color: #fef08a !important;
+  }
+  .science-author-dept,
+  .science-author-role {
+    color: #cbd5e1 !important;
+  }
+  .science-results-info {
+    color: #cbd5e1 !important;
+  }
   .science-stat-card,
   .science-ceremony-banner,
   .science-card {
@@ -1545,6 +1564,243 @@ body.dark-mode,
   }
   .science-ceremony-title {
     color: #ffffff !important;
+  }
+  .science-official-table td {
+    color: #f1f5f9 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+  .science-official-table th {
+    color: #fde68a !important;
+    background: rgba(9, 22, 41, 0.98) !important;
+    border-color: rgba(207, 169, 94, 0.3) !important;
+  }
+  .science-td-author {
+    color: #ffffff !important;
+  }
+  .science-td-role {
+    color: #cbd5e1 !important;
+  }
+  .science-td-journals {
+    color: #93c5fd !important;
+  }
+  .science-td-year {
+    color: #cbd5e1 !important;
+  }
+  .science-chip:not(.active),
+  .science-dept-chip:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* ── 10. Honor Students & Certificates (Şərəf Lövhəsi) ── */
+  .grad-honors-title,
+  .cert-main-title {
+    color: #ffffff !important;
+  }
+  .grad-honors-desc,
+  .cert-main-desc {
+    color: #cbd5e1 !important;
+  }
+  .grad-honors-sub-badge {
+    color: #7dd3fc !important;
+    background: rgba(2, 132, 199, 0.22) !important;
+    border-color: rgba(2, 132, 199, 0.45) !important;
+  }
+  .honor-student-name,
+  .cert-card-title {
+    color: #ffffff !important;
+  }
+  .honor-stat-val,
+  .cert-stat-val {
+    color: #fef08a !important;
+  }
+  .honor-stat-lbl,
+  .cert-stat-lbl,
+  .cert-card-org {
+    color: #cbd5e1 !important;
+  }
+  .honor-highlight-row {
+    color: #cbd5e1 !important;
+  }
+  .honor-highlight-row strong {
+    color: #ffffff !important;
+  }
+  .honor-quote-text {
+    color: #e2e8f0 !important;
+  }
+  .honor-timeline-title {
+    color: #ffffff !important;
+  }
+  .honor-timeline-desc {
+    color: #cbd5e1 !important;
+  }
+  .honor-cert-name {
+    color: #ffffff !important;
+  }
+  .honor-tab-btn:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .honor-card,
+  .honor-student-card,
+  .cert-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.95), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.35) !important;
+  }
+  .cert-card-date {
+    color: #94a3b8 !important;
+  }
+
+  /* ── 11. Haqqımızda (About Section Details) ── */
+  .about-lead-heading {
+    color: #ffffff !important;
+  }
+  .about-lead-text {
+    color: #cbd5e1 !important;
+  }
+  .about-director-quote p {
+    color: #e2e8f0 !important;
+  }
+  .quote-author-info strong {
+    color: #ffffff !important;
+  }
+  .quote-author-info span {
+    color: #94a3b8 !important;
+  }
+  .quote-struct-link {
+    color: #93c5fd !important;
+  }
+  .about-why-card h4 {
+    color: #ffffff !important;
+  }
+  .about-why-card p {
+    color: #cbd5e1 !important;
+  }
+  .why-arrow {
+    color: #fde68a !important;
+  }
+  .about-mvv-tab:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.75) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .about-mvv-tab.active {
+    color: #040d1a !important;
+    background: linear-gradient(135deg, #cfa95e, #b38838) !important;
+    font-weight: 800 !important;
+  }
+  .mvv-panel-main p,
+  .mvv-pillars-list li span {
+    color: #cbd5e1 !important;
+  }
+
+  /* ── 12. Electronic Library Books Showcase ── */
+  .lib-books-head-title {
+    color: #ffffff !important;
+  }
+  .lib-books-head-desc {
+    color: #cbd5e1 !important;
+  }
+  #library .book-title {
+    color: #ffffff !important;
+  }
+  #library .book-author {
+    color: #cbd5e1 !important;
+  }
+  #library .filter-badge:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  #library #library-search.library-search,
+  .lib-lec-search-input,
+  #struct-search-input,
+  #campus-search-input {
+    color: #f8fafc !important;
+    background: rgba(9, 21, 39, 0.92) !important;
+    border-color: rgba(255, 255, 255, 0.16) !important;
+  }
+  .lib-switch-btn:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.7) !important;
+  }
+  .lib-lec-chip:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .lib-format-btn:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .lib-lec-empty,
+  .lib-lec-empty p {
+    color: #cbd5e1 !important;
+  }
+
+  /* ── 13. Campus Floor Buttons & Stats ── */
+  .campus-floor-btn:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .floor-title-text {
+    color: #ffffff !important;
+  }
+  .floor-meta-count {
+    color: #94a3b8 !important;
+  }
+  .campus-chip:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .campus-stat-val {
+    color: #fef08a !important;
+  }
+  .campus-stat-label,
+  .campus-filter-status {
+    color: #cbd5e1 !important;
+  }
+  .room-num-pill {
+    background: rgba(56, 189, 248, 0.2) !important;
+    color: #7dd3fc !important;
+    border-color: rgba(56, 189, 248, 0.4) !important;
+  }
+
+  /* ── 14. Structure Toolbar & Buttons ── */
+  .struct-toggle-btn:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* ── 15. General Global Texts & Buttons ── */
+  .section-desc {
+    color: #cbd5e1 !important;
+  }
+  .section-title {
+    color: #ffffff !important;
+  }
+  .btn-outline {
+    color: #dfc07f !important;
+    border-color: rgba(207, 169, 94, 0.5) !important;
+    background: rgba(14, 28, 49, 0.6) !important;
+  }
+  .btn-outline:hover {
+    color: #071930 !important;
+    background: #cfa95e !important;
+    border-color: #cfa95e !important;
+  }
+  .btn-all-news {
+    color: #dfc07f !important;
+    border-color: rgba(207, 169, 94, 0.5) !important;
+  }
+  .nr-combined-media div {
+    color: #f8fafc !important;
   }
 }
 
