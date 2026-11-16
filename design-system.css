@@ -289,8 +289,38 @@ html.dark-mode .workspace-tab-btn.is-active {
   color: #dbeafe;
 }
 
-/* #about Section Backdrop matching tecrube.html (#f4f7fb in Light, #07101d + grid in Dark) */
-html:not(.dark) #about {
+/* Modern Architectural Section Backdrop matching tecrube.html (#f4f7fb in Light, #07101d in Dark + 40px Grid) */
+#about,
+#structure,
+#majors-section,
+#lectures,
+#library,
+#science,
+#roadmap,
+#panel-honor-students,
+#certificates,
+#teacher-certificates,
+#campus-navigator,
+#news,
+#gallery,
+#contact {
+  position: relative;
+}
+
+html:not(.dark) #about,
+html:not(.dark) #structure,
+html:not(.dark) #majors-section,
+html:not(.dark) #lectures,
+html:not(.dark) #library,
+html:not(.dark) #science,
+html:not(.dark) #roadmap,
+html:not(.dark) #panel-honor-students,
+html:not(.dark) #certificates,
+html:not(.dark) #teacher-certificates,
+html:not(.dark) #campus-navigator,
+html:not(.dark) #news,
+html:not(.dark) #gallery,
+html:not(.dark) #contact {
   background:
     radial-gradient(ellipse 80% 45% at 50% 0%, rgba(16, 185, 129, 0.06), transparent 65%),
     radial-gradient(circle at 90% 25%, rgba(212, 175, 55, 0.09), transparent 48%),
@@ -298,20 +328,112 @@ html:not(.dark) #about {
 }
 
 html.dark #about,
-html.dark-mode #about {
+html.dark-mode #about,
+html.dark #structure,
+html.dark-mode #structure,
+html.dark #majors-section,
+html.dark-mode #majors-section,
+html.dark #lectures,
+html.dark-mode #lectures,
+html.dark #library,
+html.dark-mode #library,
+html.dark #science,
+html.dark-mode #science,
+html.dark #roadmap,
+html.dark-mode #roadmap,
+html.dark #panel-honor-students,
+html.dark-mode #panel-honor-students,
+html.dark #certificates,
+html.dark-mode #certificates,
+html.dark #teacher-certificates,
+html.dark-mode #teacher-certificates,
+html.dark #campus-navigator,
+html.dark-mode #campus-navigator,
+html.dark #news,
+html.dark-mode #news,
+html.dark #gallery,
+html.dark-mode #gallery,
+html.dark #contact,
+html.dark-mode #contact {
   background:
     radial-gradient(ellipse 75% 50% at 50% 0%, rgba(212, 175, 55, 0.12), transparent 62%),
     radial-gradient(circle at 10% 80%, rgba(16, 185, 129, 0.1), transparent 50%),
     #07101d !important;
 }
 
-#about > .section-inner {
+#about > .section-inner,
+#structure > .section-inner,
+#majors-section > .section-inner,
+#lectures > .section-inner,
+#library > .section-inner,
+#science > .section-inner,
+#roadmap > .section-inner,
+#honor-students > .honor-section-inner,
+#certificates > .section-inner,
+#teacher-certificates > .section-inner,
+#campus-navigator > .section-inner,
+#news > .section-inner,
+#gallery > .section-inner,
+#contact > .section-inner {
   position: relative;
   z-index: 2;
 }
 
+html:not(.dark) #about::before,
+html:not(.dark) #structure::before,
+html:not(.dark) #majors-section::before,
+html:not(.dark) #lectures::before,
+html:not(.dark) #library::before,
+html:not(.dark) #science::before,
+html:not(.dark) #roadmap::before,
+html:not(.dark) #panel-honor-students::before,
+html:not(.dark) #certificates::before,
+html:not(.dark) #teacher-certificates::before,
+html:not(.dark) #campus-navigator::before,
+html:not(.dark) #news::before,
+html:not(.dark) #gallery::before,
+html:not(.dark) #contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(10, 34, 64, 0.026) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 34, 64, 0.026) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, #000 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, #000 35%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 html.dark #about::before,
-html.dark-mode #about::before {
+html.dark-mode #about::before,
+html.dark #structure::before,
+html.dark-mode #structure::before,
+html.dark #majors-section::before,
+html.dark-mode #majors-section::before,
+html.dark #lectures::before,
+html.dark-mode #lectures::before,
+html.dark #library::before,
+html.dark-mode #library::before,
+html.dark #science::before,
+html.dark-mode #science::before,
+html.dark #roadmap::before,
+html.dark-mode #roadmap::before,
+html.dark #panel-honor-students::before,
+html.dark-mode #panel-honor-students::before,
+html.dark #certificates::before,
+html.dark-mode #certificates::before,
+html.dark #teacher-certificates::before,
+html.dark-mode #teacher-certificates::before,
+html.dark #campus-navigator::before,
+html.dark-mode #campus-navigator::before,
+html.dark #news::before,
+html.dark-mode #news::before,
+html.dark #gallery::before,
+html.dark-mode #gallery::before,
+html.dark #contact::before,
+html.dark-mode #contact::before {
   content: "";
   position: absolute;
   inset: 0;
