@@ -2969,14 +2969,14 @@ const staffData = {
   ],
   departments: [
     {
-      id: "7",
-      name_az: "Babək Əhmədli Yasin oğlu",
-      name_en: "Babak Ahmadli Yasin",
-      name_ru: "Бабек Ахмедли Ясин оглы",
-      role_az: '"Telekommunikasiya şöbəsi"-Şöbə müdiri',
-      role_en: 'Head of "Telecommunications" Dept',
-      role_ru: 'Заведующая отделом "Телекоммуникации"',
-      img: "babek4x.jpeg",
+      id: "14",
+      name_az: "Rəsmiyyə Həsənova Kamil qızı",
+      name_en: "Rasmiyya Hasanova Kamil",
+      name_ru: "Расмия Гасанова Камиль гызы",
+      role_az: '"İnformasiya, kommunikasiya texnologiyaları şöbəsi"-Şöbə müdiri',
+      role_en: 'Head of "Information and Communication Technologies" Dept',
+      role_ru: 'Заведующая отделом "Информационных и коммуникационных технологий"',
+      img: "resmiyyex.jpeg",
     },
     {
       id: "9",
@@ -2987,6 +2987,36 @@ const staffData = {
       role_en: 'Head of "Computer Technologies" Dept',
       role_ru: 'Заведующая отделом "Компьютерные технологии"',
       img: "sekinex.jpeg",
+    },
+    {
+      id: "23",
+      name_az: "Yeganə Əliyeva Savalan qızı",
+      name_en: "Yegana Aliyeva Savalan",
+      name_ru: "Егана Алиева Савалан гызы",
+      role_az: '"Nəqliyyat şöbəsi"-Şöbə müdiri',
+      role_en: 'Head of "Transport" Dept',
+      role_ru: 'Заведующая отделом "Транспорт"',
+      img: "yegane.jpeg",
+    },
+    {
+      id: "7",
+      name_az: "Babək Əhmədli Yasin oğlu",
+      name_en: "Babak Ahmadli Yasin",
+      name_ru: "Бабек Ахмедли Ясин оглы",
+      role_az: '"Telekommunikasiya şöbəsi"-Şöbə müdiri',
+      role_en: 'Head of "Telecommunications" Dept',
+      role_ru: 'Заведующая отделом "Телекоммуникации"',
+      img: "babek4x.jpeg",
+    },
+    {
+      id: "24",
+      name_az: "Natiq Əliyev Vidadi oğlu",
+      name_en: "Natig Aliyev Vidadi",
+      name_ru: "Натиг Алиев Видади оглы",
+      role_az: '"Poçt rabitəsi və mühasibat uçotu şöbəsi"-Şöbə müdiri',
+      role_en: 'Head of "Postal Communication and Accounting" Dept',
+      role_ru: 'Заведующий отделом "Почтовая связь и бухгалтерский учет"',
+      img: "natiqx3.jpeg",
     },
     {
       id: "11",
@@ -3007,36 +3037,6 @@ const staffData = {
       role_en: 'Chair of YAP Territorial Party Organization<br>Head of "Registration, Evaluation and Monitoring" Dept',
       role_ru: 'Председатель территориальной партийной организации YAP<br>Заведующая отделом "Регистрации, оценки и мониторинга"',
       img: "seidex2.jpeg",
-    },
-    {
-      id: "23",
-      name_az: "Yeganə Əliyeva Savalan qızı",
-      name_en: "Yegana Aliyeva Savalan",
-      name_ru: "Егана Алиева Савалан гызы",
-      role_az: '"Nəqliyyat şöbəsi"-Şöbə müdiri',
-      role_en: 'Head of "Transport" Dept',
-      role_ru: 'Заведующая отделом "Транспорт"',
-      img: "yegane.jpeg",
-    },
-    {
-      id: "24",
-      name_az: "Natiq Əliyev Vidadi oğlu",
-      name_en: "Natig Aliyev Vidadi",
-      name_ru: "Натиг Алиев Видади оглы",
-      role_az: '"Poçt rabitəsi və mühasibat uçotu şöbəsi"-Şöbə müdiri',
-      role_en: 'Head of "Postal Communication and Accounting" Dept',
-      role_ru: 'Заведующий отделом "Почтовая связь и бухгалтерский учет"',
-      img: "natiqx3.jpeg",
-    },
-    {
-      id: "14",
-      name_az: "Rəsmiyyə Həsənova Kamil qızı",
-      name_en: "Rasmiyya Hasanova Kamil",
-      name_ru: "Расмия Гасанова Камиль гызы",
-      role_az: '"İnformasiya, kommunikasiya texnologiyaları şöbəsi"-Şöbə müdiri',
-      role_en: 'Head of "Information and Communication Technologies" Dept',
-      role_ru: 'Заведующая отделом "Информационных и коммуникационных технологий"',
-      img: "resmiyyex.jpeg",
     },
     {
       id: "16",
@@ -7887,7 +7887,7 @@ function initStructureModule() {
     const tier3Role = tier3[`role_${currentLang}`] || tier3.role_az || "";
 
     // 4-cü Səviyyə: Şöbə Müdirləri & Birləşmə Komissiyaları (2 Balanslaşdırılmış Qanad)
-    const academicOrder = ["14", "7", "23", "24", "9", "11"];
+    const academicOrder = ["14", "9", "23", "7", "24", "11"];
     const wingAcademicStaff = academicOrder
       .map((id) => staffData.departments.find((p) => p.id === id))
       .filter(Boolean);
