@@ -2319,6 +2319,72 @@ body.dark-mode .labor-conf-gallery-hint {
   }
 }
 
+/* ── About MVV Tabs 4-column layout & Dedicated Conference Panel ── */
+.about-mvv-tabs {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+@media (max-width: 992px) {
+  .about-mvv-tabs {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-mvv-tabs {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+#mvv-panel-conference {
+  display: none;
+  grid-template-columns: 1fr !important;
+  padding: 24px 28px;
+}
+
+#mvv-panel-conference.active {
+  display: block !important;
+  animation: aboutFadeIn 0.35s ease;
+}
+
+#mvv-panel-conference .labor-conference-card {
+  margin-top: 0;
+}
+
+.labor-conf-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: rgba(10, 34, 64, 0.06);
+  color: #0a2240;
+  border: 1px solid rgba(10, 34, 64, 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.labor-conf-back-btn:hover {
+  background: #0a2240;
+  color: #ffffff;
+  transform: translateX(-2px);
+}
+
+body.dark-mode .labor-conf-back-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .labor-conf-back-btn:hover {
+  background: #cfa95e;
+  color: #071930;
+  border-color: #cfa95e;
+}
+
+
 
 
 

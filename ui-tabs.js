@@ -249,6 +249,10 @@
     function syncMajorsMount() {
       const mount = document.getElementById("majors-tab-mount");
       if (!mount) return;
+      if (typeof window.renderMajorsCatalog === "function") {
+        window.renderMajorsCatalog(mount);
+        return;
+      }
       let block = document.getElementById("tree-majors-block");
       if (!block && typeof window.switchStructureView === "function") {
         try {
