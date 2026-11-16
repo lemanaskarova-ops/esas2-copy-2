@@ -8092,8 +8092,119 @@ function initStructureModule() {
           </div>
         </div>
       </div>
+    `;
 
-      <!-- ═══ TƏDRİS OLUNAN İXTİSASLAR VİTRİNİ (ACADEMIC CATALOG) ═══ -->
+    // Click on any tree member triggers person detail
+    treeCanvas.querySelectorAll("[data-person-id]").forEach((el) => {
+      el.addEventListener("click", () => {
+        const id = el.dataset.personId;
+        const allStaff = [...staffData.leadership, ...staffData.departments, ...staffData.commissions];
+        const person = allStaff.find((p) => p.id === id);
+        if (person) {
+          openPersonDetail(person);
+        }
+      });
+    });
+
+    // Render standalone majors catalog tab
+    if (typeof window.syncMajorsMount === "function") {
+      try {
+        window.syncMajorsMount();
+      } catch (e) { }
+    }
+  }
+
+  // Standalone Academic Majors Catalog (19 İxtisas)
+  function renderMajorsCatalog(mountEl) {
+    const target = mountEl || document.getElementById("majors-tab-mount");
+    if (!target) return;
+
+    const eyaniMajors = staffData.majors.eyani || [];
+    const qiyabiMajors = staffData.majors.qiyabi || [];
+
+    const majorIcons = {
+      "040406": "📊",
+      "040554": "📮",
+      "040556": "📻",
+      "040405": "📈",
+      "040544": "📱",
+      "040565": "🌐",
+      "040508": "📡",
+      "040572": "🚃",
+      "040552": "🚚",
+      "040550": "🚗",
+      "040518": "🌱",
+      "040529": "💻",
+      "040533": "🛠️",
+      "040553": "🛠️",
+      "040532": "🛡️",
+    };
+
+    function renderTableRows(list, mode) {
+      let lastDept = null;
+      let rowNum = 0;
+
+      return list
+        .map((m) => {
+          const deptTitle = m[`dept_${currentLang}`] || m.dept_az || "";
+          let deptHeaderHtml = "";
+          if (deptTitle && deptTitle !== lastDept) {
+            lastDept = deptTitle;
+            rowNum = 0;
+            const deptCount = list.filter((item) => (item[`dept_${currentLang}`] || item.dept_az || "") === deptTitle).length;
+            deptHeaderHtml = `
+              <tr class="major-dept-group-row">
+                <td colspan="5">
+                  <div class="major-dept-group-inner">
+                    <span class="major-dept-group-icon" aria-hidden="true">🏛️</span>
+                    <span class="major-dept-group-title">${deptTitle}</span>
+                    <span class="major-dept-group-count">${deptCount}</span>
+                  </div>
+                </td>
+              </tr>`;
+          }
+
+          rowNum += 1;
+          const name = m[`name_${currentLang}`] || m.name_az;
+          const field = m[`field_${currentLang}`] || m.field_az;
+          const icon = majorIcons[m.code] || "📘";
+          const modeLabel =
+            mode === "eyani"
+              ? (currentLang === "en" ? "Full-time" : currentLang === "ru" ? "Очно" : "Əyani")
+              : (currentLang === "en" ? "Part-time" : currentLang === "ru" ? "Заочно" : "Qiyabi");
+          const subDegree =
+            currentLang === "en" ? "Sub-bachelor" : currentLang === "ru" ? "Суббакалавр" : "Subbakalavr";
+
+          return `${deptHeaderHtml}
+            <tr class="major-row" data-code="${m.code}">
+              <td class="td-num">${rowNum}</td>
+              <td class="td-code" data-label="${gT("th_code") || "Kod"}">
+                <span class="major-code-pill">${m.code}</span>
+              </td>
+              <td class="td-name" data-label="${gT("th_major") || "İxtisas"}">
+                <div class="major-name-wrap">
+                  <span class="major-row-icon">${icon}</span>
+                  <div class="major-title-group">
+                    <span class="major-row-title">${name}</span>
+                    <span class="major-row-sub">${m.code} · ${field}</span>
+                  </div>
+                </div>
+              </td>
+              <td class="td-field" data-label="${gT("th_field") || "Sahə"}">
+                <span class="major-field-chip">${field}</span>
+              </td>
+              <td class="td-degree" data-label="${gT("th_degree") || "Dərəcə"}">
+                <div class="major-degree-badge">
+                  <span class="degree-sub">${subDegree}</span>
+                  <span class="degree-mode mode-${mode}">${modeLabel}</span>
+                </div>
+              </td>
+            </tr>`;
+        })
+        .join("");
+    }
+
+    target.innerHTML = `
       <div class="tree-majors-section" id="tree-majors-block">
         <div class="majors-catalog-header">
           <div class="majors-header-badge">
@@ -8153,38 +8264,22 @@ function initStructureModule() {
       </div>
     `;
 
-    // Click on any tree member triggers person detail
-    treeCanvas.querySelectorAll("[data-person-id]").forEach((el) => {
-      el.addEventListener("click", () => {
-        const id = el.dataset.personId;
-        const allStaff = [...staffData.leadership, ...staffData.departments, ...staffData.commissions];
-        const person = allStaff.find((p) => p.id === id);
-        if (person) {
-          openPersonDetail(person);
-        }
-      });
-    });
-
-    // Majors switcher tabs (scoped to #tree-majors-block so it works in any tab mount)
-    const majorsBlockEl = document.getElementById("tree-majors-block") || treeCanvas;
-    majorsBlockEl.querySelectorAll(".majors-tab-btn").forEach((btn) => {
+    target.querySelectorAll(".majors-tab-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const root = document.getElementById("tree-majors-block") || treeCanvas;
         const view = btn.dataset.majorView;
-        root.querySelectorAll(".majors-tab-btn").forEach((b) => b.classList.remove("active"));
+        target.querySelectorAll(".majors-tab-btn").forEach((b) => b.classList.remove("active"));
         btn.classList.add("active");
-        root.querySelectorAll(".majors-pane").forEach((p) => p.classList.remove("active"));
-        const target = root.querySelector(`#majors-pane-${view}`);
-        if (target) target.classList.add("active");
+        target.querySelectorAll(".majors-pane").forEach((p) => p.classList.remove("active"));
+        const pane = target.querySelector(`#majors-pane-${view}`);
+        if (pane) pane.classList.add("active");
       });
     });
-
-    if (typeof window.syncMajorsMount === "function") {
-      try {
-        window.syncMajorsMount();
-      } catch (e) { }
-    }
   }
+
+  window.renderMajorsCatalog = renderMajorsCatalog;
+  window.syncMajorsMount = function() {
+    renderMajorsCatalog(document.getElementById("majors-tab-mount"));
+  };
 
   // ─── 2. RENDER COMMISSIONS (9 FBK) GRID ────────────────────────────
   function renderCommissionsGrid() {
@@ -9059,7 +9154,7 @@ function initStructureModule() {
     }
 
     if (currentView === "tree") {
-      const items = treeCanvas.querySelectorAll(".tree-card-director, .tree-card-deputy, .tree-card-tier3, .tree-dept-card, .major-row");
+      const items = treeCanvas.querySelectorAll(".tree-card-director, .tree-card-deputy, .tree-card-tier3, .tree-dept-card");
       items.forEach((item) => {
         const text = (item.textContent || "").toLowerCase();
         if (!q || text.includes(q)) {
@@ -9068,27 +9163,10 @@ function initStructureModule() {
           else item.classList.remove("struct-highlight");
         } else {
           item.classList.remove("struct-highlight");
-          if (item.classList.contains("tree-dept-card") || item.classList.contains("major-row")) {
+          if (item.classList.contains("tree-dept-card")) {
             item.style.display = "none";
           }
         }
-      });
-      // Handle department headers visibility
-      treeCanvas.querySelectorAll(".major-dept-group-row").forEach((groupRow) => {
-        if (!q) {
-          groupRow.style.display = "";
-          return;
-        }
-        let sibling = groupRow.nextElementSibling;
-        let hasVisible = false;
-        while (sibling && !sibling.classList.contains("major-dept-group-row")) {
-          if (sibling.classList.contains("major-row") && sibling.style.display !== "none") {
-            hasVisible = true;
-            break;
-          }
-          sibling = sibling.nextElementSibling;
-        }
-        groupRow.style.display = hasVisible ? "" : "none";
       });
     } else {
       // In cards view
