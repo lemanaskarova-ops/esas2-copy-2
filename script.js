@@ -3444,6 +3444,29 @@ const staffData = {
 
 const newsData = [
   {
+    "id": 115,
+    "official_id": "tashkent_online_2026",
+    "title_az": "Əməkdaşlıq sərhədləri aşan, təcrübə mübadiləsi isə gələcəyi formalaşdıran körpüdür – Daşkənd Nəqliyyat Texnikumu ilə onlayn görüş",
+    "title_en": "Cooperation Transcends Borders, Experience Exchange Shapes the Future – Online Meeting with Tashkent Transport Technical School",
+    "title_ru": "Сотрудничество преодолевает границы, а обмен опытом формирует будущее — Онлайн-встреча с Ташкентским транспортным техникумом",
+    "desc_az": "16 noyabr 2026-cı il tarixində Daşkənd Nəqliyyat Texnikumu ilə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci arasında keçirilən onlayn görüş iki təhsil müəssisəsi arasında beynəlxalq əməkdaşlığın inkişafı istiqamətində mühüm addımdır...",
+    "desc_en": "On November 16, 2026, an online meeting held between Tashkent Transport Technical School and Baku State Communications and Transport College under Azerbaijan Technical University marked an important step in expanding international cooperation...",
+    "desc_ru": "16 ноября 2026 года состоялась онлайн-встреча между Ташкентским транспортным техникумом и Бакинским государственным колледжем связи и транспорта при АзТУ, ставшая важным шагом в развитии международного сотрудничества...",
+    "full_az": "Əməkdaşlıq sərhədləri aşan, təcrübə mübadiləsi isə gələcəyi formalaşdıran körpüdür.\n\n16 noyabr 2026-cı il tarixində Daşkənd Nəqliyyat Texnikumu ilə Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci arasında keçirilən onlayn görüş iki təhsil müəssisəsi arasında beynəlxalq əməkdaşlığın inkişafı, elmi-pedaqoji təcrübə mübadiləsi və nəqliyyat, rabitə, logistika sahələrində müasir təhsil imkanlarının genişləndirilməsi istiqamətində mühüm addımdır.\n\nBu əməkdaşlıq müəllim və tələbələr üçün yeni imkanların yaradılmasına, innovativ tədris metodlarının tətbiqinə, rəqəmsal texnologiyaların və süni intellektin təhsil prosesində istifadəsinə, eləcə də rəqabətqabiliyyətli mütəxəssislərin hazırlanmasına töhfə verəcək.\n\nBu görüş ortaq məqsədlərə doğru atılan addım, gələcək uğurlu əməkdaşlığın möhkəm təməlidir!",
+    "full_en": "Cooperation is a bridge that transcends borders, and the exchange of experience is a bridge that shapes the future.\n\nOn November 16, 2026, the online meeting held between Tashkent Transport Technical School and Baku State Communications and Transport College under Azerbaijan Technical University marked an important step toward developing international cooperation between the two educational institutions, exchanging scientific and pedagogical experience, and expanding modern educational opportunities in transport, communications, and logistics.\n\nThis cooperation will contribute to creating new opportunities for teachers and students, implementing innovative teaching methods, utilizing digital technologies and artificial intelligence in the educational process, and training competitive specialists.\n\nThis meeting is a step toward shared goals and a solid foundation for future successful cooperation!",
+    "full_ru": "Сотрудничество — это мост, преодолевающий границы, а обмен опытом — мост, формирующий будущее.\n\nОнлайн-встреча, состоявшаяся 16 ноября 2026 года между Ташкентским транспортным техникумом и Бакинским государственным колледжем связи и транспорта при Азербайджанском техническом университете, является важным шагом в направлении развития международного сотрудничества между двумя учебными заведениями, научно-педагогического обмена опытом и расширения современных образовательных возможностей в сферах транспорта, связи и логистики.\n\nЭто сотрудничество будет способствовать созданию новых возможностей для преподавателей и студентов, внедрению инновационных методов обучения, использованию цифровых технологий и искусственного интеллекта в образовательном процессе, а также подготовке конкурентоспособных специалистов.\n\nЭта встреча — шаг к общим целям и прочный фундамент для будущего успешного сотрудничества!",
+    "date": "16 Noyabr 2026",
+    "date_az": "16 Noyabr 2026",
+    "date_en": "16 November 2026",
+    "date_ru": "16 Ноября 2026",
+    "image": "xeberx2.jpeg",
+    "extra_images": ["xeber2.jpeg", "xeberx2.jpeg", "xeberx3.jpeg"],
+    "url": "memorandum.html",
+    "tag_az": "Beynəlxalq Əməkdaşlıq",
+    "tag_en": "International Cooperation",
+    "tag_ru": "Международное сотрудничество"
+  },
+  {
     "id": 114,
     "official_id": "2565187697322020",
     "title_az": "Zəfər Günü – qürurumuz, şərəfimiz, milli birliyimiz və gələcəyə ötürülən qəhrəmanlıq salnaməmiz!",
@@ -11286,9 +11309,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 : (currentLang === "en" ? "View Official Source →" : currentLang === "ru" ? "Официальный источник →" : "Rəsmi Mənbəyə Bax →"))
           : "";
 
-        const mediaWrapHtml = (item.fb_reel_embed || item.extra_image || item.url)
+        const extraGalleryHtml = Array.isArray(item.extra_images) && item.extra_images.length
+          ? `<div style="font-weight:700;font-size:0.92rem;color:#0a2240;">📸 ${currentLang === "en" ? "Photo Gallery from the Meeting" : currentLang === "ru" ? "Фотогалерея встречи" : "Görüşdən Fotoqalereya"} (${item.extra_images.length})</div>
+             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;">
+               ${item.extra_images.map((imgSrc, idx) => `<a href="${imgSrc}" target="_blank" rel="noopener noreferrer" style="display:block;border-radius:12px;overflow:hidden;border:1px solid rgba(184,147,74,0.35);box-shadow:0 6px 16px rgba(10,34,64,0.08);"><img src="${imgSrc}" alt="${title} - ${idx + 1}" style="width:100%;height:190px;object-fit:cover;display:block;transition:transform 0.3s ease;" loading="lazy" /></a>`).join("")}
+             </div>`
+          : "";
+
+        const mediaWrapHtml = (item.fb_reel_embed || item.extra_image || extraGalleryHtml || item.url)
           ? `
             <div class="nr-combined-media" style="margin:22px 0;padding:18px;border-radius:16px;border:1px solid rgba(184,147,74,0.35);background:rgba(10,34,64,0.04);display:flex;flex-direction:column;gap:14px;">
+              ${extraGalleryHtml}
               ${item.fb_reel_embed ? `<div style="font-weight:700;font-size:0.92rem;">🎬 ${currentLang === "en" ? "Official Facebook Reel" : currentLang === "ru" ? "Официальный Facebook Reel" : "Rəsmi Facebook Reel Videosu"}</div>
               <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;">
                 <iframe src="${item.fb_reel_embed}" style="width:100%;max-width:340px;height:480px;border:none;border-radius:12px;overflow:hidden;background:#040d1a;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
