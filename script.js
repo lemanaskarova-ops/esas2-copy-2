@@ -8077,29 +8077,15 @@ function initStructureModule() {
       <!-- ═══ 4-CÜ SƏVİYYƏ: ŞÖBƏ MÜDİRLƏRİ VƏ BİRLƏŞMƏ KOMİSSİYALARI ═══ -->
       <div class="tree-tier-block tier-4">
         <div class="tree-wings-grid">
-          <!-- Qanad 1: Tədris, İKT və Sahə Şöbələri -->
+          <!-- Qanad 1: Tədris Heyəti -->
           <div class="tree-wing-panel">
-            <div class="tree-wing-header">
-              <span class="tree-wing-icon">🎓</span>
-              <div class="tree-wing-titles">
-                <h4 class="tree-wing-title">${gT("struct_wing_academic") || "Tədris, İKT və Sahə Şöbələri"}</h4>
-                <span class="tree-wing-count">${wingAcademicStaff.length} rəhbər</span>
-              </div>
-            </div>
             <div class="tree-wing-cards">
               ${renderDeptCards(wingAcademicStaff)}
             </div>
           </div>
 
-          <!-- Qanad 2: İnzibati və Dəstək Xidmətləri -->
+          <!-- Qanad 2: İnzibati Heyət -->
           <div class="tree-wing-panel">
-            <div class="tree-wing-header">
-              <span class="tree-wing-icon">🏛️</span>
-              <div class="tree-wing-titles">
-                <h4 class="tree-wing-title">${gT("struct_wing_admin") || "İnzibati, Tələbə və Dəstək Xidmətləri"}</h4>
-                <span class="tree-wing-count">${wingAdminStaff.length} rəhbər</span>
-              </div>
-            </div>
             <div class="tree-wing-cards">
               ${renderDeptCards(wingAdminStaff)}
             </div>
