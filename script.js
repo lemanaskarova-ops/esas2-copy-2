@@ -6999,16 +6999,6 @@ const lecturesData = [
     url: "https://www.youtube.com/watch?v=lUVFbqEovEs",
   },
   {
-    id: 35,
-    title_az: "Azərbaycan multikulturalizmi — Quliyeva Səidə",
-    title_en: "Azerbaijani Multiculturalism — Saida Guliyeva",
-    title_ru: "Азербайджанский мультикультурализм — Саида Гулиева",
-    duration: "27:52",
-    thumb: "https://img.youtube.com/vi/KxIaTe-Rgzw/hqdefault.jpg",
-    category: "tarix",
-    url: "https://www.youtube.com/watch?v=KxIaTe-Rgzw",
-  },
-  {
     id: 36,
     title_az: "Azərbaycan Xalq Cümhuriyyətinin xarici siyasəti — Quliyeva Səidə",
     title_en: "Foreign Policy of Azerbaijan Democratic Republic — Saida Guliyeva",
