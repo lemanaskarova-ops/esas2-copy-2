@@ -8197,6 +8197,12 @@ function initStructureModule() {
         if (target) target.classList.add("active");
       });
     });
+
+    if (typeof window.syncMajorsMount === "function") {
+      try {
+        window.syncMajorsMount();
+      } catch (e) { }
+    }
   }
 
   // ─── 2. RENDER COMMISSIONS (9 FBK) GRID ────────────────────────────

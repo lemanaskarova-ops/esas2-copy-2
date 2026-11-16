@@ -215,10 +215,14 @@ html.dark-mode .workspace-tab-btn.is-active {
   }
 }
 
-/* Keep Structure hierarchy-only; Majors live in dedicated #panel-majors tab */
-#toggle-majors-btn,
-#struct-tree-canvas #tree-majors-block {
-  display: none !important;
+/* Structure & Majors Visibility Guarantee */
+#toggle-majors-btn {
+  display: inline-flex !important;
+}
+#struct-tree-canvas #tree-majors-block,
+#majors-tab-mount #tree-majors-block,
+#majors-tab-mount #tree-majors-block-mount {
+  display: block !important;
 }
 
 /* ---------- 3. About Hero Position (Above-the-fold) & Vibrant Contrast ---------- */
@@ -297,7 +301,7 @@ html.dark-mode .workspace-tab-btn.is-active {
 #library,
 #science,
 #roadmap,
-#panel-honor-students,
+#honor-students,
 #certificates,
 #teacher-certificates,
 #campus-navigator,
@@ -314,7 +318,7 @@ html:not(.dark) #lectures,
 html:not(.dark) #library,
 html:not(.dark) #science,
 html:not(.dark) #roadmap,
-html:not(.dark) #panel-honor-students,
+html:not(.dark) #honor-students,
 html:not(.dark) #certificates,
 html:not(.dark) #teacher-certificates,
 html:not(.dark) #campus-navigator,
@@ -341,8 +345,8 @@ html.dark #science,
 html.dark-mode #science,
 html.dark #roadmap,
 html.dark-mode #roadmap,
-html.dark #panel-honor-students,
-html.dark-mode #panel-honor-students,
+html.dark #honor-students,
+html.dark-mode #honor-students,
 html.dark #certificates,
 html.dark-mode #certificates,
 html.dark #teacher-certificates,
@@ -374,7 +378,15 @@ html.dark-mode #contact {
 #campus-navigator > .section-inner,
 #news > .section-inner,
 #gallery > .section-inner,
-#contact > .section-inner {
+#contact > .section-inner,
+#struct-tree-canvas,
+#majors-tab-mount,
+#honor-students-grid,
+#cert-grid,
+#teacher-certs-grid,
+#campus-rooms-grid,
+#news-grid,
+#gal-cards {
   position: relative;
   z-index: 2;
 }
@@ -386,7 +398,7 @@ html:not(.dark) #lectures::before,
 html:not(.dark) #library::before,
 html:not(.dark) #science::before,
 html:not(.dark) #roadmap::before,
-html:not(.dark) #panel-honor-students::before,
+html:not(.dark) #honor-students::before,
 html:not(.dark) #certificates::before,
 html:not(.dark) #teacher-certificates::before,
 html:not(.dark) #campus-navigator::before,
@@ -420,8 +432,8 @@ html.dark #science::before,
 html.dark-mode #science::before,
 html.dark #roadmap::before,
 html.dark-mode #roadmap::before,
-html.dark #panel-honor-students::before,
-html.dark-mode #panel-honor-students::before,
+html.dark #honor-students::before,
+html.dark-mode #honor-students::before,
 html.dark #certificates::before,
 html.dark-mode #certificates::before,
 html.dark #teacher-certificates::before,
@@ -1282,5 +1294,259 @@ html.dark-mode .about-intern-aesthetic-btn .memo-btn-pill-label {
     gap: 12px;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   14. COMPREHENSIVE HIGH-CONTRAST DARK / NIGHT MODE OVERRIDES
+   Ensures 100% legibility across all sections, tables, cards & modals
+   ══════════════════════════════════════════════════════════════════════════ */
+html.dark,
+html.dark-mode,
+body.dark-mode,
+[data-theme="dark"] {
+  /* ── 1. Majors Academic Catalog ── */
+  .majors-catalog-table tbody tr.major-dept-group-row td {
+    background: linear-gradient(90deg, rgba(207, 169, 94, 0.28) 0%, rgba(10, 34, 64, 0.6) 100%) !important;
+    border-top: 1px solid rgba(207, 169, 94, 0.45) !important;
+    border-bottom: 1px solid rgba(207, 169, 94, 0.45) !important;
+  }
+  .major-dept-group-title {
+    color: #fef08a !important;
+    font-weight: 800 !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4) !important;
+  }
+  .major-dept-group-count {
+    color: #f1f5f9 !important;
+    background: rgba(4, 13, 26, 0.75) !important;
+    border: 1px solid rgba(207, 169, 94, 0.45) !important;
+  }
+  .majors-catalog-table td {
+    color: #f1f5f9 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+  .majors-catalog-table th {
+    color: #fde68a !important;
+    background: rgba(9, 22, 41, 0.98) !important;
+    border-color: rgba(207, 169, 94, 0.3) !important;
+  }
+  .major-row-code {
+    color: #93c5fd !important;
+    font-weight: 700 !important;
+  }
+  .major-row-title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+  }
+  .major-row-field {
+    color: #cbd5e1 !important;
+  }
+  .majors-tab-btn:not(.active) {
+    background: rgba(14, 28, 49, 0.8) !important;
+    color: #cbd5e1 !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* ── 2. Lectures Hub & Dept Cards ── */
+  .lecture-dept-card:not(.active) {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.95), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.35) !important;
+  }
+  .lecture-dept-card:not(.active) .lecture-dept-name {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+  }
+  .lecture-dept-card:not(.active) .lecture-dept-meta {
+    color: #cbd5e1 !important;
+    font-weight: 500 !important;
+  }
+  .lecture-dept-card.active .lecture-dept-meta {
+    color: #040d1a !important;
+    font-weight: 700 !important;
+  }
+
+  /* ── 3. Electronic Library & Lectures Archive ── */
+  .lib-chip-count {
+    color: #f8fafc !important;
+    background: rgba(255, 255, 255, 0.16) !important;
+  }
+  .lib-switch-badge {
+    color: #040d1a !important;
+    background: #cfa95e !important;
+    font-weight: 800 !important;
+  }
+  .lib-lec-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.94), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.3) !important;
+  }
+  .lib-lec-title {
+    color: #ffffff !important;
+  }
+  .lib-lec-desc {
+    color: #cbd5e1 !important;
+  }
+  .lib-lec-dept {
+    color: #fef08a !important;
+  }
+  .lib-lec-meta-item {
+    color: #cbd5e1 !important;
+  }
+  .lib-book-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.94), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.3) !important;
+  }
+  .lib-book-title {
+    color: #ffffff !important;
+  }
+  .lib-book-author {
+    color: #cbd5e1 !important;
+  }
+
+  /* ── 4. Campus Navigator & Rooms ── */
+  .room-cat-tag.cat-classroom {
+    background: rgba(56, 189, 248, 0.22) !important;
+    color: #7dd3fc !important;
+    border-color: rgba(56, 189, 248, 0.4) !important;
+  }
+  .room-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.94), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.28) !important;
+  }
+  .room-title {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+  }
+  .room-desc {
+    color: #cbd5e1 !important;
+  }
+  .room-floor-tag {
+    color: #cbd5e1 !important;
+  }
+  .cfb-title {
+    color: #ffffff !important;
+  }
+  .cfb-desc {
+    color: #cbd5e1 !important;
+  }
+  .cfb-wing-chip {
+    color: #e2e8f0 !important;
+    background: rgba(10, 34, 64, 0.72) !important;
+    border-color: rgba(207, 169, 94, 0.35) !important;
+  }
+
+  /* ── 5. About Section Companion Callouts ── */
+  .about-memo-aesthetic-btn:hover .memo-btn-title,
+  .about-intern-aesthetic-btn:hover .memo-btn-title {
+    color: #ffffff !important;
+  }
+  .about-memo-aesthetic-btn:hover .memo-btn-desc,
+  .about-intern-aesthetic-btn:hover .memo-btn-desc {
+    color: #cbd5e1 !important;
+  }
+  .about-mvv-tab:hover {
+    color: #fde68a !important;
+  }
+  .about-why-card p {
+    color: #cbd5e1 !important;
+  }
+  .about-lead-text {
+    color: #e2e8f0 !important;
+  }
+
+  /* ── 6. Structure Tree Hierarchy Cards ── */
+  .tree-card-director,
+  .tree-card-deputy,
+  .tree-card-tier3,
+  .tree-dept-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.96), rgba(8, 20, 38, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.38) !important;
+  }
+  .tree-card-name,
+  .tree-dept-name {
+    color: #ffffff !important;
+  }
+  .tree-card-role,
+  .tree-dept-role {
+    color: #cbd5e1 !important;
+  }
+  .tree-card-tag,
+  .tree-wing-title {
+    color: #fde68a !important;
+  }
+  .tree-wing-count {
+    color: #cbd5e1 !important;
+    background: rgba(4, 13, 26, 0.6) !important;
+  }
+
+  /* ── 7. News & Information Grid ── */
+  .news-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.94), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .news-card-title,
+  .news-title {
+    color: #ffffff !important;
+  }
+  .news-card-desc,
+  .news-desc {
+    color: #cbd5e1 !important;
+  }
+  .news-date {
+    color: #94a3b8 !important;
+  }
+
+  /* ── 8. Modals (Person Details, News Reader, Certificates) ── */
+  .modal-container,
+  .cert-modal-box,
+  .news-reader-container,
+  .teacher-cert-modal-box {
+    background: #071527 !important;
+    color: #f1f5f9 !important;
+    border: 1.5px solid rgba(207, 169, 94, 0.45) !important;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.75) !important;
+  }
+  .modal-title,
+  .person-modal-name,
+  .nr-title {
+    color: #ffffff !important;
+  }
+  .modal-bio,
+  .person-modal-bio,
+  .person-modal-role,
+  .nr-lead,
+  .nr-prose,
+  .nr-prose p {
+    color: #cbd5e1 !important;
+  }
+  .modal-close,
+  .news-reader-close,
+  .cert-modal-close {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #f8fafc !important;
+  }
+  .modal-close:hover,
+  .news-reader-close:hover,
+  .cert-modal-close:hover {
+    background: rgba(207, 169, 94, 0.3) !important;
+    color: #ffffff !important;
+  }
+
+  /* ── 9. Science & Research Cards ── */
+  .science-stat-card,
+  .science-ceremony-banner,
+  .science-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.94), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.3) !important;
+  }
+  .science-stat-number {
+    color: #fef08a !important;
+  }
+  .science-stat-label,
+  .science-ceremony-text {
+    color: #cbd5e1 !important;
+  }
+  .science-ceremony-title {
+    color: #ffffff !important;
+  }
+}
+
 
 
