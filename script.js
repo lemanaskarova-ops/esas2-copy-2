@@ -11800,6 +11800,17 @@ function initGalleryModule() {
         i18n: "gallery_cat_study",
       },
       {
+        type: "video",
+        src: "dersler2.mp4",
+        tall: true,
+        label: "Dərs Mühiti · Praktiki Məşğələ",
+        label_az: "Dərs Mühiti · Praktiki Məşğələ",
+        label_en: "Study Environment · Practical Session",
+        label_ru: "Учебная среда · Практическое занятие",
+        badge: "DƏRS MÜHİTİ",
+        i18n: "gallery_cat_study",
+      },
+      {
         type: "instagram",
         id: "DVtecLDiJMR",
         postType: "reel",
