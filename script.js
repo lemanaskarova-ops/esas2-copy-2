@@ -431,6 +431,7 @@ const i18n = {
     about_tab_mission: "Missiyamız",
     about_tab_vision: "Vizyonumuz",
     about_tab_values: "Strateji Dəyərlərimiz",
+    about_tab_conference: "Konfrans Tərəfdaşlığı",
     mvv_mission_badge: "AKADEMİK MİSSİYA",
     mvv_mission_title: "Müasir Rəqəmsal və Texniki Kompetensiyalı Kadr Hazırlığı",
     mvv_m1_t: "Praktik Yönümlü Tədris",
@@ -1374,6 +1375,7 @@ const i18n = {
     about_tab_mission: "Our Mission",
     about_tab_vision: "Our Vision",
     about_tab_values: "Strategic Values",
+    about_tab_conference: "Partnership Conference",
     mvv_mission_badge: "ACADEMIC MISSION",
     mvv_mission_title: "Training Specialists with Modern Digital and Technical Competencies",
     mvv_m1_t: "Practice-Oriented Education",
@@ -2315,6 +2317,7 @@ const i18n = {
     about_tab_mission: "Наша Миссия",
     about_tab_vision: "Наше Видение",
     about_tab_values: "Стратегические Ценности",
+    about_tab_conference: "Конференция Партнерства",
     mvv_mission_badge: "АКАДЕМИЧЕСКАЯ МИССИЯ",
     mvv_mission_title: "Подготовка кадров с современными цифровыми и техническими компетенциями",
     mvv_m1_t: "Практико-ориентированное обучение",
@@ -13366,6 +13369,19 @@ function initSceneTransition() {
       mvvPanels.forEach((panel) => {
         panel.classList.toggle("active", panel.id === `mvv-panel-${targetKey}`);
       });
+    });
+  });
+
+  // Cross-trigger for MVV tabs (e.g. from labor market pillar to conference tab)
+  document.querySelectorAll("[data-open-mvv]").forEach((trigger) => {
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetKey = trigger.getAttribute("data-open-mvv");
+      const targetTab = aboutSection.querySelector(`.about-mvv-tab[data-mvv-tab="${targetKey}"]`);
+      if (targetTab) {
+        targetTab.click();
+        targetTab.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
     });
   });
 
