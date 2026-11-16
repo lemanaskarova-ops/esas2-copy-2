@@ -221,62 +221,101 @@ html.dark-mode .workspace-tab-btn.is-active {
   display: none !important;
 }
 
-/* ---------- 3. About Hero Position (Above-the-fold) & Vibrant Contrast ---------- */
+/* ---------- 3. About Hero & #about Section Backdrop (Tecrube Architectural Theme) ---------- */
 #panel-about .hero,
-#panel-home .hero {
+#panel-home .hero,
+#hero {
   min-height: clamp(500px, 70vh, 690px);
-  padding: 28px 24px 44px;
+  padding: 28px 24px 58px;
   align-items: center;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 15%, rgba(207, 169, 94, 0.22), transparent 60%),
-    linear-gradient(155deg, #051224 0%, #0a2240 50%, #0f2f57 100%);
+    radial-gradient(ellipse 75% 55% at 50% 0%, rgba(212, 175, 55, 0.24), transparent 65%),
+    radial-gradient(circle at 12% 85%, rgba(16, 185, 129, 0.16), transparent 52%),
+    radial-gradient(circle at 88% 72%, rgba(56, 189, 248, 0.15), transparent 50%),
+    linear-gradient(155deg, #040e1d 0%, #0a2240 52%, #0c2b4f 100%) !important;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, #000 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, #000 35%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+#panel-about .hero::after,
+#panel-home .hero::after,
+#hero::after {
+  display: none !important;
+  content: none !important;
 }
 
 #panel-about .hero-campus-bg,
-#panel-home .hero-campus-bg {
-  opacity: 0.55;
-  filter: saturate(1.25) contrast(1.08) brightness(0.9);
+#panel-home .hero-campus-bg,
+#hero .hero-campus-bg,
+#hero .hero-sunbeams,
+#hero .hero-spotlight,
+#hero .hero-grain,
+#hero .glass-shape,
+#hero #flux-canvas,
+#hero #particles-canvas,
+#hero .hero-glow {
+  display: none !important;
+  opacity: 0 !important;
 }
 
 #panel-about .hero-content,
 #panel-home .hero-content {
-  padding: 34px 40px 32px;
+  padding: 36px 40px 34px;
   background: linear-gradient(155deg,
-    rgba(6, 20, 40, 0.78) 0%,
-    rgba(10, 32, 62, 0.68) 55%,
-    rgba(7, 23, 46, 0.84) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.52);
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(10, 34, 64, 0.52) 55%,
+    rgba(5, 17, 34, 0.68) 100%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  border-radius: 26px;
   box-shadow:
     0 24px 64px rgba(3, 10, 22, 0.55),
-    0 0 42px rgba(212, 175, 55, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    0 0 42px rgba(16, 185, 129, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 #panel-about .hero-badge,
 #panel-home .hero-badge {
-  background: rgba(207, 169, 94, 0.18);
+  background: rgba(16, 185, 129, 0.14);
   color: #fde68a;
-  border: 1px solid rgba(212, 175, 55, 0.5);
-  box-shadow: 0 0 20px rgba(207, 169, 94, 0.22);
+  border: 1px solid rgba(52, 211, 153, 0.45);
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.16);
 }
 
 #panel-about .hero-stats .stat-item,
 #panel-home .hero-stats .stat-item {
-  background: rgba(10, 34, 64, 0.72);
-  border: 1px solid rgba(212, 175, 55, 0.38);
-  box-shadow: 0 10px 26px rgba(3, 10, 22, 0.35);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.34);
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(3, 10, 22, 0.28);
 }
 
 #panel-about .hero-stats .stat-item.main-stat,
 #panel-home .hero-stats .stat-item.main-stat {
-  background: linear-gradient(145deg, rgba(184, 147, 74, 0.26), rgba(10, 34, 64, 0.82));
-  border-color: rgba(234, 179, 8, 0.65);
+  background: linear-gradient(145deg, rgba(212, 175, 55, 0.18), rgba(16, 185, 129, 0.14));
+  border-color: rgba(212, 175, 55, 0.58);
 }
 
 #panel-about .hero-stats .stat-number,
 #panel-home .hero-stats .stat-number {
-  color: #ffffff;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  color: #fef08a;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 #panel-about .hero-stats .main-stat .stat-number,
@@ -286,7 +325,43 @@ html.dark-mode .workspace-tab-btn.is-active {
 
 #panel-about .hero-stats .stat-label,
 #panel-home .hero-stats .stat-label {
-  color: #dbeafe;
+  color: #e2e8f0;
+}
+
+/* #about Section Backdrop matching tecrube.html (#f4f7fb in Light, #07101d + grid in Dark) */
+html:not(.dark) #about {
+  background:
+    radial-gradient(ellipse 80% 45% at 50% 0%, rgba(16, 185, 129, 0.06), transparent 65%),
+    radial-gradient(circle at 90% 25%, rgba(212, 175, 55, 0.09), transparent 48%),
+    #f4f7fb !important;
+}
+
+html.dark #about,
+html.dark-mode #about {
+  background:
+    radial-gradient(ellipse 75% 50% at 50% 0%, rgba(212, 175, 55, 0.12), transparent 62%),
+    radial-gradient(circle at 10% 80%, rgba(16, 185, 129, 0.1), transparent 50%),
+    #07101d !important;
+}
+
+#about > .section-inner {
+  position: relative;
+  z-index: 2;
+}
+
+html.dark #about::before,
+html.dark-mode #about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, #000 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, #000 35%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 #panel-about .hero-grad-card,
