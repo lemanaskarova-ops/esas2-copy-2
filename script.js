@@ -3583,6 +3583,28 @@ const newsData = [
     "date_ru": "07 Октября 2026"
   },
   {
+    "id": 113,
+    "official_id": "DeOJGyjMEJ_",
+    "title_az": "5 Oktyabr – Müəllimlər Günü münasibətilə Kollec müəllimləri fəxri fərmanla təltif olunublar",
+    "title_en": "College Teachers Awarded Honorary Certificates on October 5 – Teachers' Day",
+    "title_ru": "Преподаватели колледжа награждены почетными грамотами по случаю 5 Октября — Дня учителя",
+    "desc_az": "5 Oktyabr – Müəllimlər Günü münasibətilə Bakı Dövlət Rabitə və Nəqliyyat Kollecində təhsil sahəsində səmərəli fəaliyyəti və tələbələrin inkişafına verdiyi dəyərli töhfələri ilə seçilən müəllimlər fəxri fərmanla təltif olunublar...",
+    "desc_en": "On the occasion of October 5 – Teachers' Day, distinguished faculty members of Baku State Communications and Transport College were awarded honorary certificates for their effective pedagogical activity and valuable contributions to student development...",
+    "desc_ru": "По случаю 5 Октября — Дня учителя преподаватели Бакинского государственного колледжа связи и транспорта, отличившиеся плодотворной педагогической деятельностью и весомым вкладом в развитие студентов, были награждены почетными грамотами...",
+    "full_az": "5 Oktyabr – Müəllimlər Günü münasibətilə Bakı Dövlət Rabitə və Nəqliyyat Kollecində təhsil sahəsində göstərdikləri səmərəli fəaliyyət, tələbələrin inkişafına verdikləri dəyərli töhfələr və peşəkar fəaliyyətləri ilə seçilən müəllimlərimiz fəxri fərmanla təltif olunublar.\n\nMüəllimlərimizin əməyinə verilən bu yüksək dəyər kollektivimiz üçün qürurverici məqamdır.\n\nTəltif olunan bütün müəllimlərimizi ürəkdən təbrik edir, onlara möhkəm cansağlığı, pedaqoji fəaliyyətlərində davamlı uğurlar və yeni nailiyyətlər arzulayırıq.\n\nBakı Dövlət Rabitə və Nəqliyyat Kollecinin rəhbəri Səbuhi Qurbanov və Həmkarlar İttifaqı Komitəsinin sədri Aygün Musayeva tərəfindən təqdim olunmuş fəxri fərmanlar müəllimlərimizin əməyinə göstərilən diqqət və ehtiramın ifadəsidir.",
+    "full_en": "On the occasion of October 5 – Teachers' Day, distinguished teachers of Baku State Communications and Transport College were awarded honorary certificates for their effective work in the field of education, valuable contributions to student development, and high professional dedication.\n\nThis high appreciation of our teachers' efforts is a proud milestone for our entire academic community.\n\nWe sincerely congratulate all honored teachers and wish them robust health, continued success in their pedagogical activities, and new achievements.\n\nThe honorary certificates presented by Director of Baku State Communications and Transport College Sabuhi Gurbanov and Chairwoman of the Trade Union Committee Aygun Musayeva stand as an expression of attention and deep respect for the dedicated work of our faculty.",
+    "full_ru": "По случаю 5 Октября — Дня учителя преподаватели Бакинского государственного колледжа связи и транспорта, отличившиеся эффективной деятельностью в сфере образования, ценным вкладом в развитие студентов и высоким профессионализмом, были награждены почетными грамотами.\n\nЭта высокая оценка труда наших преподавателей является поводом для гордости для всего нашего коллектива.\n\nМы искренне поздравляем всех награжденных педагогов, желаем им крепкого здоровья, неизменных успехов в педагогической деятельности и новых достижений.\n\nПочетные грамоты, врученные директором Бакинского государственного колледжа связи и транспорта Сабухи Гурбановым и председателем профсоюзного комитета Айгюн Мусаевой, являются выражением внимания и глубокого уважения к труду наших учителей.",
+    "date": "05 Oktyabr 2026",
+    "image": "muellimler_gunu_2026.jpg",
+    "url": "https://www.instagram.com/reel/DeOJGyjMEJ_/",
+    "tag_az": "Təltif / Müəllimlər Günü",
+    "tag_en": "Award / Teachers' Day",
+    "tag_ru": "Награда / День учителя",
+    "date_az": "05 Oktyabr 2026",
+    "date_en": "05 October 2026",
+    "date_ru": "05 Октября 2026"
+  },
+  {
     "id": 105,
     "official_id": "122128591593146162",
     "title_az": "15 İyun – Milli Qurtuluş Günü münasibətilə Kollecdə təntənəli tədbir keçirilib",
