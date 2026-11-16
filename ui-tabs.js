@@ -245,23 +245,36 @@
       } catch (e) { }
     }
 
-    // Mount #tree-majors-block inside dedicated #majors-tab-mount without duplicates
+    // Mount #tree-majors-block inside dedicated #majors-tab-mount with full interactivity
     function syncMajorsMount() {
       const mount = document.getElementById("majors-tab-mount");
       if (!mount) return;
-      let block = document.querySelector("#struct-tree-canvas #tree-majors-block") || document.getElementById("tree-majors-block");
+      let block = document.getElementById("tree-majors-block");
       if (!block && typeof window.switchStructureView === "function") {
         try {
           window.switchStructureView("tree");
         } catch (e) { }
-        block = document.querySelector("#struct-tree-canvas #tree-majors-block") || document.getElementById("tree-majors-block");
+        block = document.getElementById("tree-majors-block");
       }
       if (block) {
-        if (block.parentElement !== mount || mount.children.length > 1) {
-          mount.replaceChildren(block);
+        if (!mount.querySelector(".majors-catalog-table") || mount.children.length === 0) {
+          const clone = block.cloneNode(true);
+          clone.id = "tree-majors-block-mount";
+          mount.replaceChildren(clone);
+          clone.querySelectorAll(".majors-tab-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              const view = btn.dataset.majorView;
+              clone.querySelectorAll(".majors-tab-btn").forEach((b) => b.classList.remove("active"));
+              btn.classList.add("active");
+              clone.querySelectorAll(".majors-pane").forEach((p) => p.classList.remove("active"));
+              const target = clone.querySelector(`#majors-pane-${view}`);
+              if (target) target.classList.add("active");
+            });
+          });
         }
       }
     }
+    window.syncMajorsMount = syncMajorsMount;
     syncMajorsMount();
 
     requestAnimationFrame(() => {

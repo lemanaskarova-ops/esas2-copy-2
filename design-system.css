@@ -215,10 +215,14 @@ html.dark-mode .workspace-tab-btn.is-active {
   }
 }
 
-/* Keep Structure hierarchy-only; Majors live in dedicated #panel-majors tab */
-#toggle-majors-btn,
-#struct-tree-canvas #tree-majors-block {
-  display: none !important;
+/* Structure & Majors Visibility Guarantee */
+#toggle-majors-btn {
+  display: inline-flex !important;
+}
+#struct-tree-canvas #tree-majors-block,
+#majors-tab-mount #tree-majors-block,
+#majors-tab-mount #tree-majors-block-mount {
+  display: block !important;
 }
 
 /* ---------- 3. About Hero Position (Above-the-fold) & Vibrant Contrast ---------- */
@@ -297,7 +301,7 @@ html.dark-mode .workspace-tab-btn.is-active {
 #library,
 #science,
 #roadmap,
-#panel-honor-students,
+#honor-students,
 #certificates,
 #teacher-certificates,
 #campus-navigator,
@@ -314,7 +318,7 @@ html:not(.dark) #lectures,
 html:not(.dark) #library,
 html:not(.dark) #science,
 html:not(.dark) #roadmap,
-html:not(.dark) #panel-honor-students,
+html:not(.dark) #honor-students,
 html:not(.dark) #certificates,
 html:not(.dark) #teacher-certificates,
 html:not(.dark) #campus-navigator,
@@ -341,8 +345,8 @@ html.dark #science,
 html.dark-mode #science,
 html.dark #roadmap,
 html.dark-mode #roadmap,
-html.dark #panel-honor-students,
-html.dark-mode #panel-honor-students,
+html.dark #honor-students,
+html.dark-mode #honor-students,
 html.dark #certificates,
 html.dark-mode #certificates,
 html.dark #teacher-certificates,
@@ -374,7 +378,15 @@ html.dark-mode #contact {
 #campus-navigator > .section-inner,
 #news > .section-inner,
 #gallery > .section-inner,
-#contact > .section-inner {
+#contact > .section-inner,
+#struct-tree-canvas,
+#majors-tab-mount,
+#honor-students-grid,
+#cert-grid,
+#teacher-certs-grid,
+#campus-rooms-grid,
+#news-grid,
+#gal-cards {
   position: relative;
   z-index: 2;
 }
@@ -386,7 +398,7 @@ html:not(.dark) #lectures::before,
 html:not(.dark) #library::before,
 html:not(.dark) #science::before,
 html:not(.dark) #roadmap::before,
-html:not(.dark) #panel-honor-students::before,
+html:not(.dark) #honor-students::before,
 html:not(.dark) #certificates::before,
 html:not(.dark) #teacher-certificates::before,
 html:not(.dark) #campus-navigator::before,
@@ -420,8 +432,8 @@ html.dark #science::before,
 html.dark-mode #science::before,
 html.dark #roadmap::before,
 html.dark-mode #roadmap::before,
-html.dark #panel-honor-students::before,
-html.dark-mode #panel-honor-students::before,
+html.dark #honor-students::before,
+html.dark-mode #honor-students::before,
 html.dark #certificates::before,
 html.dark-mode #certificates::before,
 html.dark #teacher-certificates::before,
@@ -1282,5 +1294,1031 @@ html.dark-mode .about-intern-aesthetic-btn .memo-btn-pill-label {
     gap: 12px;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   14. COMPREHENSIVE HIGH-CONTRAST DARK / NIGHT MODE OVERRIDES
+   Ensures 100% legibility across all sections, tables, cards & modals
+   ══════════════════════════════════════════════════════════════════════════ */
+html.dark,
+html.dark-mode,
+body.dark-mode,
+[data-theme="dark"] {
+  /* ── 1. Majors Academic Catalog ── */
+  .majors-catalog-table tbody tr.major-dept-group-row td {
+    background: linear-gradient(90deg, rgba(207, 169, 94, 0.28) 0%, rgba(10, 34, 64, 0.6) 100%) !important;
+    border-top: 1px solid rgba(207, 169, 94, 0.45) !important;
+    border-bottom: 1px solid rgba(207, 169, 94, 0.45) !important;
+  }
+  .major-dept-group-title {
+    color: #fef08a !important;
+    font-weight: 800 !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4) !important;
+  }
+  .major-dept-group-count {
+    color: #f1f5f9 !important;
+    background: rgba(4, 13, 26, 0.75) !important;
+    border: 1px solid rgba(207, 169, 94, 0.45) !important;
+  }
+  .majors-catalog-table td {
+    color: #f1f5f9 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+  .majors-catalog-table th {
+    color: #fde68a !important;
+    background: rgba(9, 22, 41, 0.98) !important;
+    border-color: rgba(207, 169, 94, 0.3) !important;
+  }
+  .major-row-code {
+    color: #93c5fd !important;
+    font-weight: 700 !important;
+  }
+  .major-row-title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+  }
+  .major-row-field {
+    color: #cbd5e1 !important;
+  }
+  .majors-tab-btn:not(.active) {
+    background: rgba(14, 28, 49, 0.8) !important;
+    color: #cbd5e1 !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* ── 2. Lectures Hub & Dept Cards ── */
+  .lecture-dept-card:not(.active) {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.95), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.35) !important;
+  }
+  .lecture-dept-card:not(.active) .lecture-dept-name {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+  }
+  .lecture-dept-card:not(.active) .lecture-dept-meta {
+    color: #cbd5e1 !important;
+    font-weight: 500 !important;
+  }
+  .lecture-dept-card.active .lecture-dept-meta {
+    color: #040d1a !important;
+    font-weight: 700 !important;
+  }
+
+  /* ── 3. Electronic Library & Lectures Archive ── */
+  .lib-chip-count {
+    color: #f8fafc !important;
+    background: rgba(255, 255, 255, 0.16) !important;
+  }
+  .lib-switch-badge {
+    color: #040d1a !important;
+    background: #cfa95e !important;
+    font-weight: 800 !important;
+  }
+  .lib-lec-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.94), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.3) !important;
+  }
+  .lib-lec-title {
+    color: #ffffff !important;
+  }
+  .lib-lec-desc {
+    color: #cbd5e1 !important;
+  }
+  .lib-lec-dept {
+    color: #fef08a !important;
+  }
+  .lib-lec-meta-item {
+    color: #cbd5e1 !important;
+  }
+  .lib-book-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.94), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.3) !important;
+  }
+  .lib-book-title {
+    color: #ffffff !important;
+  }
+  .lib-book-author {
+    color: #cbd5e1 !important;
+  }
+
+  /* ── 4. Campus Navigator & Rooms ── */
+  .room-cat-tag.cat-classroom {
+    background: rgba(56, 189, 248, 0.22) !important;
+    color: #7dd3fc !important;
+    border-color: rgba(56, 189, 248, 0.4) !important;
+  }
+  .room-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.94), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.28) !important;
+  }
+  .room-title {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+  }
+  .room-desc {
+    color: #cbd5e1 !important;
+  }
+  .room-floor-tag {
+    color: #cbd5e1 !important;
+  }
+  .cfb-title {
+    color: #ffffff !important;
+  }
+  .cfb-desc {
+    color: #cbd5e1 !important;
+  }
+  .cfb-wing-chip {
+    color: #e2e8f0 !important;
+    background: rgba(10, 34, 64, 0.72) !important;
+    border-color: rgba(207, 169, 94, 0.35) !important;
+  }
+
+  /* ── 5. About Section Companion Callouts ── */
+  .about-memo-aesthetic-btn:hover .memo-btn-title,
+  .about-intern-aesthetic-btn:hover .memo-btn-title {
+    color: #ffffff !important;
+  }
+  .about-memo-aesthetic-btn:hover .memo-btn-desc,
+  .about-intern-aesthetic-btn:hover .memo-btn-desc {
+    color: #cbd5e1 !important;
+  }
+  .about-mvv-tab:hover {
+    color: #fde68a !important;
+  }
+  .about-why-card p {
+    color: #cbd5e1 !important;
+  }
+  .about-lead-text {
+    color: #e2e8f0 !important;
+  }
+
+  /* ── 6. Structure Tree Hierarchy Cards ── */
+  .tree-card-director,
+  .tree-card-deputy,
+  .tree-card-tier3,
+  .tree-dept-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.96), rgba(8, 20, 38, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.38) !important;
+  }
+  .tree-card-name,
+  .tree-dept-name {
+    color: #ffffff !important;
+  }
+  .tree-card-role,
+  .tree-dept-role {
+    color: #cbd5e1 !important;
+  }
+  .tree-card-tag,
+  .tree-wing-title {
+    color: #fde68a !important;
+  }
+  .tree-wing-count {
+    color: #cbd5e1 !important;
+    background: rgba(4, 13, 26, 0.6) !important;
+  }
+
+  /* ── 7. News & Information Grid ── */
+  .news-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.94), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .news-card-title,
+  .news-title {
+    color: #ffffff !important;
+  }
+  .news-card-desc,
+  .news-desc {
+    color: #cbd5e1 !important;
+  }
+  .news-date {
+    color: #94a3b8 !important;
+  }
+
+  /* ── 8. Modals (Person Details, News Reader, Certificates) ── */
+  .modal-container,
+  .cert-modal-box,
+  .news-reader-container,
+  .teacher-cert-modal-box {
+    background: #071527 !important;
+    color: #f1f5f9 !important;
+    border: 1.5px solid rgba(207, 169, 94, 0.45) !important;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.75) !important;
+  }
+  .modal-title,
+  .person-modal-name,
+  .nr-title {
+    color: #ffffff !important;
+  }
+  .modal-bio,
+  .person-modal-bio,
+  .person-modal-role,
+  .nr-lead,
+  .nr-prose,
+  .nr-prose p {
+    color: #cbd5e1 !important;
+  }
+  .modal-close,
+  .news-reader-close,
+  .cert-modal-close {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #f8fafc !important;
+  }
+  .modal-close:hover,
+  .news-reader-close:hover,
+  .cert-modal-close:hover {
+    background: rgba(207, 169, 94, 0.3) !important;
+    color: #ffffff !important;
+  }
+
+  /* ── 9. Science & Research Cards & Table ── */
+  .science-main-title {
+    color: #ffffff !important;
+  }
+  .science-main-desc {
+    color: #cbd5e1 !important;
+  }
+  .science-article-title {
+    color: #ffffff !important;
+  }
+  .science-author-name {
+    color: #fef08a !important;
+  }
+  .science-author-dept,
+  .science-author-role {
+    color: #cbd5e1 !important;
+  }
+  .science-results-info {
+    color: #cbd5e1 !important;
+  }
+  .science-stat-card,
+  .science-ceremony-banner,
+  .science-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.94), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.3) !important;
+  }
+  .science-stat-number {
+    color: #fef08a !important;
+  }
+  .science-stat-label,
+  .science-ceremony-text {
+    color: #cbd5e1 !important;
+  }
+  .science-ceremony-title {
+    color: #ffffff !important;
+  }
+  .science-official-table td {
+    color: #f1f5f9 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+  .science-official-table th {
+    color: #fde68a !important;
+    background: rgba(9, 22, 41, 0.98) !important;
+    border-color: rgba(207, 169, 94, 0.3) !important;
+  }
+  .science-td-author {
+    color: #ffffff !important;
+  }
+  .science-td-role {
+    color: #cbd5e1 !important;
+  }
+  .science-td-journals {
+    color: #93c5fd !important;
+  }
+  .science-td-year {
+    color: #cbd5e1 !important;
+  }
+  .science-chip:not(.active),
+  .science-dept-chip:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* ── 10. Honor Students & Certificates (Şərəf Lövhəsi) ── */
+  .grad-honors-title,
+  .cert-main-title {
+    color: #ffffff !important;
+  }
+  .grad-honors-desc,
+  .cert-main-desc {
+    color: #cbd5e1 !important;
+  }
+  .grad-honors-sub-badge {
+    color: #7dd3fc !important;
+    background: rgba(2, 132, 199, 0.22) !important;
+    border-color: rgba(2, 132, 199, 0.45) !important;
+  }
+  .honor-student-name,
+  .cert-card-title {
+    color: #ffffff !important;
+  }
+  .honor-stat-val,
+  .cert-stat-val {
+    color: #fef08a !important;
+  }
+  .honor-stat-lbl,
+  .cert-stat-lbl,
+  .cert-card-org {
+    color: #cbd5e1 !important;
+  }
+  .honor-highlight-row {
+    color: #cbd5e1 !important;
+  }
+  .honor-highlight-row strong {
+    color: #ffffff !important;
+  }
+  .honor-quote-text {
+    color: #e2e8f0 !important;
+  }
+  .honor-timeline-title {
+    color: #ffffff !important;
+  }
+  .honor-timeline-desc {
+    color: #cbd5e1 !important;
+  }
+  .honor-cert-name {
+    color: #ffffff !important;
+  }
+  .honor-tab-btn:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .honor-card,
+  .honor-student-card,
+  .cert-card {
+    background: linear-gradient(145deg, rgba(14, 30, 54, 0.95), rgba(7, 18, 36, 0.98)) !important;
+    border-color: rgba(207, 169, 94, 0.35) !important;
+  }
+  .cert-card-date {
+    color: #94a3b8 !important;
+  }
+
+  /* ── 11. Haqqımızda (About Section Details) ── */
+  .about-lead-heading {
+    color: #ffffff !important;
+  }
+  .about-lead-text {
+    color: #cbd5e1 !important;
+  }
+  .about-director-quote p {
+    color: #e2e8f0 !important;
+  }
+  .quote-author-info strong {
+    color: #ffffff !important;
+  }
+  .quote-author-info span {
+    color: #94a3b8 !important;
+  }
+  .quote-struct-link {
+    color: #93c5fd !important;
+  }
+  .about-why-card h4 {
+    color: #ffffff !important;
+  }
+  .about-why-card p {
+    color: #cbd5e1 !important;
+  }
+  .why-arrow {
+    color: #fde68a !important;
+  }
+  .about-mvv-tab:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.75) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .about-mvv-tab.active {
+    color: #040d1a !important;
+    background: linear-gradient(135deg, #cfa95e, #b38838) !important;
+    font-weight: 800 !important;
+  }
+  .mvv-panel-main p,
+  .mvv-pillars-list li span {
+    color: #cbd5e1 !important;
+  }
+
+  /* ── 12. Electronic Library Books Showcase ── */
+  .lib-books-head-title {
+    color: #ffffff !important;
+  }
+  .lib-books-head-desc {
+    color: #cbd5e1 !important;
+  }
+  #library .book-title {
+    color: #ffffff !important;
+  }
+  #library .book-author {
+    color: #cbd5e1 !important;
+  }
+  #library .filter-badge:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  #library #library-search.library-search,
+  .lib-lec-search-input,
+  #struct-search-input,
+  #campus-search-input {
+    color: #f8fafc !important;
+    background: rgba(9, 21, 39, 0.92) !important;
+    border-color: rgba(255, 255, 255, 0.16) !important;
+  }
+  .lib-switch-btn:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.7) !important;
+  }
+  .lib-lec-chip:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .lib-format-btn:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .lib-lec-empty,
+  .lib-lec-empty p {
+    color: #cbd5e1 !important;
+  }
+
+  /* ── 13. Campus Floor Buttons & Stats ── */
+  .campus-floor-btn:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .floor-title-text {
+    color: #ffffff !important;
+  }
+  .floor-meta-count {
+    color: #94a3b8 !important;
+  }
+  .campus-chip:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .campus-stat-val {
+    color: #fef08a !important;
+  }
+  .campus-stat-label,
+  .campus-filter-status {
+    color: #cbd5e1 !important;
+  }
+  .room-num-pill {
+    background: rgba(56, 189, 248, 0.2) !important;
+    color: #7dd3fc !important;
+    border-color: rgba(56, 189, 248, 0.4) !important;
+  }
+
+  /* ── 14. Structure Toolbar & Buttons ── */
+  .struct-toggle-btn:not(.active) {
+    color: #cbd5e1 !important;
+    background: rgba(14, 28, 49, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* ── 15. General Global Texts & Buttons ── */
+  .section-desc {
+    color: #cbd5e1 !important;
+  }
+  .section-title {
+    color: #ffffff !important;
+  }
+  .btn-outline {
+    color: #dfc07f !important;
+    border-color: rgba(207, 169, 94, 0.5) !important;
+    background: rgba(14, 28, 49, 0.6) !important;
+  }
+  .btn-outline:hover {
+    color: #071930 !important;
+    background: #cfa95e !important;
+    border-color: #cfa95e !important;
+  }
+  .btn-all-news {
+    color: #dfc07f !important;
+    border-color: rgba(207, 169, 94, 0.5) !important;
+  }
+  .nr-combined-media div {
+    color: #f8fafc !important;
+  }
+}
+
+/* ═════════════════════════════════════════════════════════════════════════════════════
+   HAQQIMIZDA · ƏMƏK BAZARINA UYĞUNLUQ & TƏRƏFDAŞLIQ KONFRANSI SHOWCASE
+   ═════════════════════════════════════════════════════════════════════════════════════ */
+
+/* Pillar 3 Highlight */
+.labor-pillar-highlight {
+  position: relative;
+  background: linear-gradient(135deg, rgba(197, 155, 39, 0.08), rgba(10, 34, 64, 0.03)) !important;
+  border: 1px solid rgba(197, 155, 39, 0.28) !important;
+  transition: all 0.3s ease;
+}
+.labor-pillar-highlight:hover {
+  border-color: rgba(197, 155, 39, 0.5) !important;
+  box-shadow: 0 4px 16px rgba(197, 155, 39, 0.12);
+}
+.labor-pillar-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+}
+.labor-pillar-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: rgba(197, 155, 39, 0.14);
+  color: #92690d;
+  border: 1px solid rgba(197, 155, 39, 0.3);
+}
+.labor-pillar-jump {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #b3882f;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.labor-pillar-jump:hover {
+  color: #8c671b;
+  transform: translateY(1px);
+}
+
+/* Conference Showcase Card */
+.labor-conference-card {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-top: 28px;
+  padding: 32px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(197, 155, 39, 0.32);
+  box-shadow: 0 16px 40px -12px rgba(10, 34, 64, 0.08), 0 0 0 1px rgba(197, 155, 39, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  transition: all 0.3s ease;
+}
+
+/* Top Ribbon & Badges */
+.labor-conf-top {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.labor-conf-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.labor-conf-badge-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(10, 34, 64, 0.05);
+  color: #0a2240;
+  border: 1px solid rgba(10, 34, 64, 0.12);
+}
+.labor-conf-badge-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: rgba(197, 155, 39, 0.12);
+  color: #8a6513;
+  border: 1px solid rgba(197, 155, 39, 0.28);
+}
+.labor-conf-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #071930;
+  margin: 0;
+  font-family: inherit;
+}
+
+/* Hero Section: Main Photo + Key Highlight Cards */
+.labor-conf-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+.labor-conf-hero-media {
+  position: relative;
+  display: flex;
+}
+.labor-conf-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 270px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(197, 155, 39, 0.3);
+  box-shadow: 0 10px 24px -6px rgba(10, 34, 64, 0.15);
+  cursor: pointer;
+}
+.labor-conf-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+.labor-conf-img-wrap:hover img {
+  transform: scale(1.03);
+}
+.labor-conf-img-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(7, 25, 48, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.labor-conf-img-zoom-cue {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: rgba(7, 25, 48, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+}
+.labor-conf-img-wrap:hover .labor-conf-img-zoom-cue {
+  opacity: 1;
+  background: rgba(197, 155, 39, 0.95);
+  color: #071930;
+}
+
+/* Key Highlights Cards (Right Column) */
+.labor-conf-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+.labor-conf-pill {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: all 0.25s ease;
+}
+.labor-conf-pill:hover {
+  background: #ffffff;
+  border-color: rgba(197, 155, 39, 0.4);
+  box-shadow: 0 4px 14px rgba(10, 34, 64, 0.05);
+}
+.labor-conf-pill-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.labor-conf-pill-content h5 {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #071930;
+  margin: 0 0 3px 0;
+}
+.labor-conf-pill-content p {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #475569;
+  margin: 0;
+}
+
+/* Prose Article Text */
+.labor-conf-article {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 0.93rem;
+  line-height: 1.75;
+  color: #334155;
+}
+.labor-conf-lead {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #1e293b;
+}
+.labor-conf-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 4px 0;
+}
+.labor-conf-col-card {
+  padding: 20px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.labor-conf-col-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #071930;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+.labor-conf-col-card p {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0;
+}
+
+/* Key Message Quote Block */
+.labor-conf-key-quote {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(197, 155, 39, 0.1), rgba(197, 155, 39, 0.03));
+  border-left: 5px solid #c59b27;
+  border-top: 1px solid rgba(197, 155, 39, 0.25);
+  border-right: 1px solid rgba(197, 155, 39, 0.2);
+  border-bottom: 1px solid rgba(197, 155, 39, 0.2);
+}
+.labor-conf-quote-mark {
+  font-size: 2.75rem;
+  line-height: 0.8;
+  font-family: Georgia, serif;
+  font-weight: 900;
+  color: #c59b27;
+  flex-shrink: 0;
+}
+.labor-conf-quote-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.labor-conf-quote-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8c671b;
+}
+.labor-conf-quote-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.65;
+  color: #071930;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Extracted Conference Photo Gallery Grid */
+.labor-conf-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(226, 232, 240, 0.9);
+}
+.labor-conf-gallery-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.labor-conf-gallery-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #071930;
+}
+.labor-conf-gallery-hint {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+}
+.labor-conf-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+.labor-gallery-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgba(197, 155, 39, 0.25);
+  box-shadow: 0 4px 12px rgba(10, 34, 64, 0.06);
+  cursor: pointer;
+  background: #071930;
+}
+.labor-gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.3s ease;
+  display: block;
+}
+.labor-gallery-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+.labor-gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 4px 6px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(to top, rgba(7, 25, 48, 0.9) 0%, rgba(7, 25, 48, 0.4) 70%, transparent 100%);
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.labor-gallery-card:hover {
+  border-color: #c59b27;
+  box-shadow: 0 6px 18px rgba(197, 155, 39, 0.3);
+}
+
+/* ── Dark Mode Harmonization for Labor Conference ── */
+body.dark-mode .labor-pillar-highlight {
+  background: linear-gradient(135deg, rgba(197, 155, 39, 0.15), rgba(12, 28, 51, 0.5)) !important;
+  border-color: rgba(207, 169, 94, 0.35) !important;
+}
+body.dark-mode .labor-pillar-chip {
+  background: rgba(207, 169, 94, 0.2);
+  color: #f3d98b;
+  border-color: rgba(207, 169, 94, 0.4);
+}
+body.dark-mode .labor-pillar-jump {
+  color: #dfc07f;
+}
+body.dark-mode .labor-pillar-jump:hover {
+  color: #fef3c7;
+}
+body.dark-mode .labor-conference-card {
+  background: linear-gradient(145deg, rgba(12, 28, 51, 0.98), rgba(7, 19, 36, 0.98));
+  border-color: rgba(207, 169, 94, 0.32);
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(207, 169, 94, 0.15);
+}
+body.dark-mode .labor-conf-badge-brand {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+body.dark-mode .labor-conf-badge-meta {
+  background: rgba(207, 169, 94, 0.16);
+  color: #f3d98b;
+  border-color: rgba(207, 169, 94, 0.32);
+}
+body.dark-mode .labor-conf-title {
+  color: #ffffff;
+}
+body.dark-mode .labor-conf-pill {
+  background: rgba(14, 32, 58, 0.7);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+body.dark-mode .labor-conf-pill:hover {
+  background: rgba(18, 40, 72, 0.85);
+  border-color: rgba(207, 169, 94, 0.4);
+}
+body.dark-mode .labor-conf-pill-content h5 {
+  color: #ffffff;
+}
+body.dark-mode .labor-conf-pill-content p {
+  color: #cbd5e1;
+}
+body.dark-mode .labor-conf-article {
+  color: #cbd5e1;
+}
+body.dark-mode .labor-conf-lead {
+  color: #f1f5f9;
+}
+body.dark-mode .labor-conf-col-card {
+  background: rgba(14, 32, 58, 0.7);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+body.dark-mode .labor-conf-col-title {
+  color: #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+body.dark-mode .labor-conf-col-card p {
+  color: #cbd5e1;
+}
+body.dark-mode .labor-conf-key-quote {
+  background: linear-gradient(135deg, rgba(207, 169, 94, 0.14), rgba(7, 19, 36, 0.6));
+  border-left-color: #cfa95e;
+  border-top-color: rgba(207, 169, 94, 0.3);
+  border-right-color: rgba(207, 169, 94, 0.2);
+  border-bottom-color: rgba(207, 169, 94, 0.2);
+}
+body.dark-mode .labor-conf-quote-mark {
+  color: #cfa95e;
+}
+body.dark-mode .labor-conf-quote-tag {
+  color: #dfc07f;
+}
+body.dark-mode .labor-conf-quote-text {
+  color: #fef3c7;
+}
+body.dark-mode .labor-conf-gallery {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+body.dark-mode .labor-conf-gallery-title {
+  color: #ffffff;
+}
+body.dark-mode .labor-conf-gallery-hint {
+  color: #94a3b8;
+}
+
+/* ── Responsive Adaptations ── */
+@media (max-width: 1024px) {
+  .labor-conf-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .labor-conf-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .labor-conf-columns {
+    grid-template-columns: 1fr;
+  }
+  .labor-conf-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .labor-conference-card {
+    padding: 20px 18px;
+    margin-top: 20px;
+    border-radius: 18px;
+    gap: 20px;
+  }
+  .labor-conf-title {
+    font-size: 1.25rem;
+  }
+  .labor-conf-img-wrap {
+    min-height: 220px;
+  }
+}
+
+
 
 
