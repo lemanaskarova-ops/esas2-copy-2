@@ -3160,9 +3160,9 @@ const staffData = {
     },
     {
       id: "30",
-      name_az: "Günel Ağakişiseyva Azəddin qızı",
-      name_en: "Gunel Agakishiseyva Azaddin",
-      name_ru: "Гюнель Агакишисейва Азеддин гызы",
+      name_az: "Günel Ağakişiyeva Azəddin qızı",
+      name_en: "Gunel Agakishiyeva Azaddin",
+      name_ru: "Гюнель Агакишиева Азеддин гызы",
       role_az: "Tədris hissə müdiri",
       role_en: "Head of Academic Department",
       role_ru: "Заведующая учебной частью",
