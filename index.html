@@ -1407,20 +1407,19 @@
                 İnstitusional Struktur
             </h2>
             <p class="section-desc" data-i18n="structure_desc">
-                Rəhbərlik heyəti, şöbə müdirləri və fənn komissiyası sədrləri — bir
-                baxışda.
+                Kollecdə tədris olunan dövlət standartlı ixtisas proqramları və tədris planları — bir baxışda.
             </p>
 
             <!-- ── Structure Control Toolbar (Search & View Switcher Tabs) ── -->
             <div class="struct-control-bar">
                 <div class="struct-view-toggle" role="tablist" aria-label="Struktur bölmələri">
-                    <button type="button" class="struct-toggle-btn active" id="toggle-tree-btn" data-view="tree"
-                        role="tab" aria-selected="true" aria-controls="struct-tree-view">
+                    <button type="button" class="struct-toggle-btn" id="toggle-tree-btn" data-view="tree"
+                        role="tab" aria-selected="false" aria-controls="struct-tree-view" style="display: none;">
                         <span aria-hidden="true">🏛️</span>
                         <span data-i18n="struct_tab_hierarchy">İdarəetmə və Şöbələr</span>
                     </button>
-                    <button type="button" class="struct-toggle-btn" id="toggle-majors-btn" data-view="majors" role="tab"
-                        aria-selected="false" aria-controls="struct-tree-canvas">
+                    <button type="button" class="struct-toggle-btn active" id="toggle-majors-btn" data-view="majors" role="tab"
+                        aria-selected="true" aria-controls="struct-tree-canvas">
                         <span aria-hidden="true">🎓</span>
                         <span data-i18n="cat_majors">İxtisaslar</span>
                         <span class="struct-badge-count" data-i18n="majors_badge_count">19 İxtisas</span>
@@ -1434,7 +1433,7 @@
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
                     <input type="text" id="struct-search-input"
-                        placeholder="İerarxiya və ya şöbə üzrə axtarış..."
+                        placeholder="İxtisas və ya tədris sahəsi üzrə axtarış..."
                         data-i18n-placeholder="struct_search_placeholder" autocomplete="off" />
                     <button type="button" id="struct-search-clear" class="struct-search-clear"
                         aria-label="Təmizlə">✕</button>
