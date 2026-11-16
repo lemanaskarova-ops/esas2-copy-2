@@ -11789,6 +11789,17 @@ function initGalleryModule() {
         i18n: "gallery_cat_study",
       },
       {
+        type: "video",
+        src: "dersler1.mp4",
+        tall: true,
+        label: "Dərs Mühiti · Tədris Prosesi",
+        label_az: "Dərs Mühiti · Tədris Prosesi",
+        label_en: "Study Environment · Teaching Process",
+        label_ru: "Учебная среда · Учебный процесс",
+        badge: "DƏRS MÜHİTİ",
+        i18n: "gallery_cat_study",
+      },
+      {
         type: "instagram",
         id: "DVtecLDiJMR",
         postType: "reel",
