@@ -8030,7 +8030,6 @@ function initStructureModule() {
               <img src="${deputy1.img}" alt="${deputy1Name}" onerror="this.onerror=null;this.src='logo.jpg';">
             </div>
             <div class="tree-deputy-info">
-              <span class="tree-deputy-badge">${gT("struct_deputies_badge") || "MÜAVİN"}</span>
               <h4 class="tree-deputy-name">${deputy1Name}</h4>
               <span class="tree-deputy-role">${deputy1Role}</span>
             </div>
@@ -8041,7 +8040,6 @@ function initStructureModule() {
               <img src="${deputy2.img}" alt="${deputy2Name}" onerror="this.onerror=null;this.src='logo.jpg';">
             </div>
             <div class="tree-deputy-info">
-              <span class="tree-deputy-badge">${gT("struct_deputies_badge") || "MÜAVİN"}</span>
               <h4 class="tree-deputy-name">${deputy2Name}</h4>
               <span class="tree-deputy-role">${deputy2Role}</span>
             </div>
@@ -9004,7 +9002,7 @@ function initStructureModule() {
           </div>
         </div>
         <div class="person-detail-body">
-          ${person.id !== "1" ? `
+          ${!["1", "2", "3"].includes(person.id) ? `
           <span class="person-detail-badge">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             ${badgeText}
