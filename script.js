@@ -8012,10 +8012,6 @@ function initStructureModule() {
             <img src="${director.img}" alt="${directorName}" onerror="this.onerror=null;this.src='logo.jpg';">
           </div>
           <div class="tree-director-info">
-            <span class="tree-director-badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <span>${gT("struct_director_badge") || "KOLLEC DİREKTORLUĞU"}</span>
-            </span>
             <h3 class="tree-director-name">${directorName}</h3>
             <span class="tree-director-role">${directorRole}</span>
           </div>
@@ -9007,10 +9003,12 @@ function initStructureModule() {
           </div>
         </div>
         <div class="person-detail-body">
+          ${person.id !== "1" ? `
           <span class="person-detail-badge">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             ${badgeText}
           </span>
+          ` : ""}
           <h3 class="person-detail-name">${name}</h3>
           <div class="person-detail-role">${role}</div>
 
