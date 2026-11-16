@@ -3126,7 +3126,7 @@ const staffData = {
       name_az: "Şöhlə Dadaşova Yavər qızı",
       name_en: "Shohla Dadashova Yavar",
       name_ru: "Шохла Дадашова Явер гызы",
-      role_az: "Mülki müdafiə üzrə mühəndis",
+      role_az: "Mülki-müdafiə üzrə mühəndis",
       role_en: "Civil Defense Engineer",
       role_ru: "Инженер по гражданской обороне",
       img: "sohlex.jpeg",
