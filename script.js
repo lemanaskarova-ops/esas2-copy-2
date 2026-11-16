@@ -512,12 +512,12 @@ const i18n = {
     cac_write_btn: "Məktub Yaz",
     cac_addr_tag: "KAMPUS ÜNVANI",
     cac_addr_title: "Rəsmi Ünvanımız",
-    cac_addr_detail: "Yasamal rayonu, A.M. Şərifzadə küçəsi",
+    cac_addr_detail: "Yasamal rayonu, 131 A.M. Şərifzadə küçəsi",
     cac_route_btn: "Xəritədə Yol Tarifi",
     cac_status_open: "Açıqdır · İş Saatı",
     cac_status_closed: "Bağlıdır · Qeyri-iş Saatı",
     cac_hours_title: "İş Rejimi və Qəbul",
-    cac_hours_days: "Bazar ertəsi – Cümə: 08:30 – 17:00",
+    cac_hours_days: "Bazar ertəsi – Cümə: 08:30 – 17:30",
     cac_hours_weekend: "Şənbə – Bazar: Qeyri-iş günləri",
     cac_online_apply: "Onlayn Müraciət Et",
     map_header_label: "BDRNK Əsas Tədris Korpusu",
@@ -1456,12 +1456,12 @@ const i18n = {
     cac_write_btn: "Send Email",
     cac_addr_tag: "CAMPUS ADDRESS",
     cac_addr_title: "Official Location",
-    cac_addr_detail: "Yasamal district, A.M. Sharifzade St.",
+    cac_addr_detail: "Yasamal district, 131 A.M. Sharifzade St.",
     cac_route_btn: "Get Directions",
     cac_status_open: "Open Now · Working Hours",
     cac_status_closed: "Closed · Off Hours",
     cac_hours_title: "Working Hours & Reception",
-    cac_hours_days: "Monday – Friday: 08:30 – 17:00",
+    cac_hours_days: "Monday – Friday: 08:30 – 17:30",
     cac_hours_weekend: "Saturday – Sunday: Closed",
     cac_online_apply: "Submit Online Inquiry",
     map_header_label: "BDRNK Main Academic Campus",
@@ -2398,12 +2398,12 @@ const i18n = {
     cac_write_btn: "Написать",
     cac_addr_tag: "АДРЕС КАМПУСА",
     cac_addr_title: "Официальный адрес",
-    cac_addr_detail: "Ясамальский район, ул. А.М. Шарифзаде",
+    cac_addr_detail: "Ясамальский район, 131 ул. А.М. Шарифзаде",
     cac_route_btn: "Маршрут на карте",
     cac_status_open: "Открыто · Рабочее время",
     cac_status_closed: "Закрыто · Нерабочее время",
     cac_hours_title: "Режим работы и прием",
-    cac_hours_days: "Понедельник – Пятница: 08:30 – 17:00",
+    cac_hours_days: "Понедельник – Пятница: 08:30 – 17:30",
     cac_hours_weekend: "Суббота – Воскресенье: Выходные дни",
     cac_online_apply: "Онлайн-обращение",
     map_header_label: "Главный учебный корпус БГКСТ",
@@ -7343,6 +7343,18 @@ function initThemeEngine() {
 const faqData = [
   {
     "q": {
+      "az": "Kollecin rəsmi ünvanı və iş rejimi necədir?",
+      "ru": "Каков официальный адрес и режим работы колледжа?",
+      "en": "What is the official address and working hours of the college?"
+    },
+    "a": {
+      "az": "Kollecimiz həftənin 5 günü (Bazar ertəsi – Cümə) saat 08:30-dan 17:30-a qədər fəaliyyət göstərir. Şənbə və bazar günləri qeyri-iş günləridir. Rəsmi kampus ünvanımız: Bakı şəhəri, Yasamal rayonu, 131 A.M. Şərifzadə küçəsidir.",
+      "ru": "Колледж работает 5 дней в неделю (Понедельник – Пятница) с 08:30 до 17:30. Суббота и воскресенье — выходные дни. Наш официальный адрес: г. Баку, Ясамальский район, 131 ул. А.М. Шарифзаде.",
+      "en": "The college operates 5 days a week (Monday – Friday) from 08:30 to 17:30. Saturday and Sunday are non-working days. Our official campus address: 131 A.M. Sharifzade Street, Yasamal district, Baku."
+    }
+  },
+  {
+    "q": {
       "az": "Qəbul prosesi necə aparılır?",
       "ru": "Как проходит процесс поступления?",
       "en": "How is the admission process conducted?"
@@ -10917,7 +10929,7 @@ function initForm() {
   const livePill = document.getElementById("contact-live-status");
   const liveText = document.getElementById("contact-live-text");
 
-  // 1. Live Working Hours Status (Baku Time: Mon–Fri 08:30–17:00)
+  // 1. Live Working Hours Status (Baku Time: Mon–Fri 08:30–17:30)
   function updateLiveWorkStatus() {
     if (!livePill || !liveText) return;
     try {
@@ -10934,7 +10946,7 @@ function initForm() {
       const minute = parseInt(bakuParts.find((p) => p.type === "minute")?.value || "0", 10);
       const totalMinutes = hour * 60 + minute;
       const isWorkday = !["Sat", "Sun"].includes(weekday);
-      const isOpen = isWorkday && totalMinutes >= (8 * 60 + 30) && totalMinutes < (17 * 60);
+      const isOpen = isWorkday && totalMinutes >= (8 * 60 + 30) && totalMinutes < (17 * 60 + 30);
 
       livePill.classList.toggle("closed", !isOpen);
       const key = isOpen ? "cac_status_open" : "cac_status_closed";
@@ -19372,8 +19384,8 @@ function initGlobalSearchModule() {
       icon: "📍",
       badge: "Kampus",
       title: "Rəsmi Ünvan və Kampus Xəritəsi",
-      desc: "Bakı şəhəri, Yasamal rayonu, Şəfayət Mehdiyev küçəsi 136 · Google Maps ilə yol xəritəsi",
-      tokens: "unvan mehdiyev 136 yasamal baki kampus xerite xeritede yol tarifi yerlesme",
+      desc: "Bakı şəhəri, Yasamal rayonu, 131 A.M. Şərifzadə küçəsi · Google Maps ilə yol xəritəsi",
+      tokens: "unvan serifzade 131 yasamal baki kampus xerite xeritede yol tarifi yerlesme",
       action: () => {
         const sec = document.getElementById("contact");
         sec?.scrollIntoView({ behavior: "smooth" });
