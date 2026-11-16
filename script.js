@@ -3539,6 +3539,28 @@ const newsData = [
     "date_ru": "16 Октября 2026"
   },
   {
+    "id": 112,
+    "official_id": "DecsTtqDLET",
+    "title_az": "“QANAD” layihəsinin iştirakçıları ilə görüş keçirildi!",
+    "title_en": "Meeting Held with Participants of the 'QANAD' Project!",
+    "title_ru": "Состоялась встреча с участниками проекта «QANAD»!",
+    "desc_az": "12 oktyabr tarixində “QANAD” (Qabiliyyətlərin Aşkarlanması və Növbəti Addımda Dəstək) layihəsi çərçivəsində Bakı internat məktəblərinin məzunları – peşə və orta ixtisas təhsili müəssisələrinə qəbul olmuş tələbələrlə görüş təşkil edilib...",
+    "desc_en": "On 12 October, as part of the 'QANAD' (Talent Identification and Next-Step Support) project, a meeting was organized with graduates of Baku boarding schools admitted to vocational and secondary specialized education institutions...",
+    "desc_ru": "12 октября в рамках проекта «QANAD» («Выявление способностей и поддержка на следующем этапе») состоялась встреча с выпускниками бакинских школ-интернатов, поступившими в учреждения профессионального и среднего специального образования...",
+    "full_az": "“QANAD” layihəsinin iştirakçıları ilə görüş keçirildi!\n\n12 oktyabr tarixində “QANAD” (Qabiliyyətlərin Aşkarlanması və Növbəti Addımda Dəstək) layihəsi çərçivəsində Bakı internat məktəblərinin məzunları – peşə və orta ixtisas təhsili müəssisələrinə qəbul olmuş tələbələrlə görüş təşkil edilib.\n\nTədbirdə PTDA-nın direktoru İlqar Bayramlı və EATDA-nın direktoru Ülkər Səttarova, təhsil müəssisələrinin rəhbərləri və tələbələr iştirak ediblər. Natiqlər gəncləri təbrik edərək, peşə və orta ixtisas təhsilinin gələcək karyerada mühüm rolunu vurğulayıblar.\n\n🎯 Layihənin nəticələri:\n• 12 internat məktəbinə səfər olunub\n• 500-dən çox şagirdlə görüş keçirilib\n• 70-dən çox şagird peşə və orta ixtisas təhsili müəssisələrinə qəbul olunub!\n\nGörüşün sonunda tələbələrə xüsusi hədiyyələr təqdim olunub və gələcək təhsil həyatlarında uğurlar arzulanıb.",
+    "full_en": "Meeting Held with Participants of the 'QANAD' Project!\n\nOn 12 October, within the framework of the 'QANAD' (Talent Identification and Next-Step Support) project, a meeting was organized with graduates of Baku boarding schools who have been admitted to vocational and secondary specialized education institutions.\n\nThe event was attended by Ilgar Bayramli, Director of the State Agency on Vocational Education (PTDA), and Ulkar Sattarova, Director of the State Agency for Science and Higher Education (EATDA), along with heads of educational institutions and students. The speakers congratulated the youth and emphasized the important role of vocational and secondary specialized education in their future careers.\n\n🎯 Project Results:\n• 12 boarding schools visited\n• Meetings held with over 500 pupils\n• Over 70 pupils admitted to vocational and secondary specialized education institutions!\n\nAt the conclusion of the meeting, special gifts were presented to the students and they were wished continued success in their future educational journeys.",
+    "full_ru": "Состоялась встреча с участниками проекта «QANAD»!\n\n12 октября в рамках проекта «QANAD» («Выявление способностей и поддержка на следующем этапе») была организована встреча с выпускниками бакинских школ-интернатов, поступившими в учреждения профессионального и среднего специального образования.\n\nВ мероприятии приняли участие директор Государственного агентства по профессиональному образованию (PTDA) Ильгар Байрамлы, директор Государственного агентства по науке и высшему образованию (EATDA) Улькер Саттарова, руководители учебных заведений и студенты. Выступавшие поздравили молодежь и подчеркнули важную роль профессионального и среднего специального образования в будущей карьере.\n\n🎯 Результаты проекта:\n• Посещено 12 школ-интернатов\n• Проведены встречи с более чем 500 школьниками\n• Более 70 учащихся поступили в учреждения профессионального и среднего специального образования!\n\nВ завершение встречи студентам были вручены памятные подарки и высказаны пожелания успехов в дальнейшей учебе.",
+    "date": "12 Oktyabr 2026",
+    "image": "qanad_layihesi.jpg",
+    "url": "https://www.instagram.com/p/DecsTtqDLET/",
+    "tag_az": "Layihə / Görüş",
+    "tag_en": "Project / Meeting",
+    "tag_ru": "Проект / Встреча",
+    "date_az": "12 Oktyabr 2026",
+    "date_en": "12 October 2026",
+    "date_ru": "12 Октября 2026"
+  },
+  {
     "id": 111,
     "official_id": "111",
     "title_az": "7 Oktyabr – Ümumdünya Layiqli Əmək Gününə həsr olunmuş maarifləndirici tədbir keçirilib",
