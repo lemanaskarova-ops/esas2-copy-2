@@ -3039,6 +3039,16 @@ const staffData = {
       img: "seidex2.jpeg",
     },
     {
+      id: "30",
+      name_az: "Günel Ağakişiyeva Azəddin qızı",
+      name_en: "Gunel Agakishiyeva Azaddin",
+      name_ru: "Гюнель Агакишиева Азеддин гызы",
+      role_az: "Tədris hissə müdiri",
+      role_en: "Head of Academic Department",
+      role_ru: "Заведующая учебной частью",
+      img: "gunelx.jpeg",
+    },
+    {
       id: "16",
       name_az: "Vəfa Hacıyeva Nizami qızı",
       name_en: "Vafa Hajiyeva Nizami",
@@ -3047,6 +3057,36 @@ const staffData = {
       role_en: "Legal Counsel",
       role_ru: "Юрист",
       img: "vefax.jpeg",
+    },
+    {
+      id: "20",
+      name_az: "Ləman Ağalıyeva Həsən qızı",
+      name_en: "Laman Agahaliyeva Hasan",
+      name_ru: "Ляман Агазаде Гасан гызы",
+      role_az: "Kadrlar üzrə mütəxəssis",
+      role_en: "HR Specialist",
+      role_ru: "Специалист по кадрам",
+      img: "lemanx1.jpeg",
+    },
+    {
+      id: "13",
+      name_az: "Xəlil Süleymanov Süleyman oğlu",
+      name_en: "Khalil Suleymanov Suleyman",
+      name_ru: "Халил Сулейманов Сулейман оглы",
+      role_az: "İstehsalat təcrübə rəhbəri",
+      role_en: "Production Internship Supervisor",
+      role_ru: "Руководитель производственной практики",
+      img: "xelil2x.jpeg",
+    },
+    {
+      id: "19",
+      name_az: "Azər Rəhimov Tofiq oğlu",
+      name_en: "Azer Rahimov Tofig",
+      name_ru: "Азер Рагимов Тофиг оглы",
+      role_az: "Baş mühasib",
+      role_en: "Chief Accountant",
+      role_ru: "Главный бухгалтер",
+      img: "azerx2.jpeg",
     },
     {
       id: "17",
@@ -3109,46 +3149,6 @@ const staffData = {
       img: "aynurx4.jpeg",
     },
     {
-      id: "20",
-      name_az: "Ləman Ağalıyeva Həsən qızı",
-      name_en: "Laman Agahaliyeva Hasan",
-      name_ru: "Ляман Агазаде Гасан гызы",
-      role_az: "Kadrlar üzrə mütəxəssis",
-      role_en: "HR Specialist",
-      role_ru: "Специалист по кадрам",
-      img: "lemanx1.jpeg",
-    },
-    {
-      id: "19",
-      name_az: "Azər Rəhimov Tofiq oğlu",
-      name_en: "Azer Rahimov Tofig",
-      name_ru: "Азер Рагимов Тофиг оглы",
-      role_az: "Baş mühasib",
-      role_en: "Chief Accountant",
-      role_ru: "Главный бухгалтер",
-      img: "azerx2.jpeg",
-    },
-    {
-      id: "13",
-      name_az: "Xəlil Süleymanov Süleyman oğlu",
-      name_en: "Khalil Suleymanov Suleyman",
-      name_ru: "Халил Сулейманов Сулейман оглы",
-      role_az: "İstehsalat təcrübə rəhbəri",
-      role_en: "Production Internship Supervisor",
-      role_ru: "Руководитель производственной практики",
-      img: "xelil2x.jpeg",
-    },
-    {
-      id: "25",
-      name_az: "Sevda Bağızadə Əmrulla qızı",
-      name_en: "Sevda Bagizada Amrulla",
-      name_ru: "Севда Багизаде Амрулла гызы",
-      role_az: "Metodist",
-      role_en: "Methodist",
-      role_ru: "Методист",
-      img: "metodistx.jpeg",
-    },
-    {
       id: "26",
       name_az: "Şəlalə Zeynalova Qara qızı",
       name_en: "Shalala Zeynalova Gara",
@@ -3159,14 +3159,14 @@ const staffData = {
       img: "selalex1.jpeg",
     },
     {
-      id: "30",
-      name_az: "Günel Ağakişiyeva Azəddin qızı",
-      name_en: "Gunel Agakishiyeva Azaddin",
-      name_ru: "Гюнель Агакишиева Азеддин гызы",
-      role_az: "Tədris hissə müdiri",
-      role_en: "Head of Academic Department",
-      role_ru: "Заведующая учебной частью",
-      img: "gunelx.jpeg",
+      id: "25",
+      name_az: "Sevda Bağızadə Əmrulla qızı",
+      name_en: "Sevda Bagizada Amrulla",
+      name_ru: "Севда Багизаде Амрулла гызы",
+      role_az: "Metodist",
+      role_en: "Methodist",
+      role_ru: "Методист",
+      img: "metodistx.jpeg",
     },
   ],
   commissions: [
@@ -7891,7 +7891,7 @@ function initStructureModule() {
     const wingAcademicStaff = academicOrder
       .map((id) => staffData.departments.find((p) => p.id === id))
       .filter(Boolean);
-    const adminOrder = ["30", "13", "19", "20", "17", "18", "16", "27", "28", "29", "22", "26", "25"];
+    const adminOrder = ["30", "16", "20", "13", "19", "17", "18", "27", "28", "29", "22", "26", "25"];
     const wingAdminStaff = adminOrder
       .map((id) => staffData.departments.find((p) => p.id === id))
       .filter(Boolean);
