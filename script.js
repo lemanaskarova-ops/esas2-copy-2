@@ -165,7 +165,7 @@ const i18n = {
     struct_director_badge: "Kollec Rəhbərliyi",
     struct_deputies_badge: "Direktor Müavinləri",
     struct_departments_badge: "Şöbə Müdirləri və Xidmətlər",
-    struct_tier1_label: "DİREKTORLUQ",
+    struct_tier1_label: "İdarə Heyəti",
     struct_tier2_label: "DİREKTOR MÜAVİNLƏRİ",
     struct_tier3_label: "YAP ƏPT SƏDRİ VƏ ŞÖBƏ MÜDİRİ",
     struct_tier4_label: "ŞÖBƏ MÜDİRLƏRİ VƏ XİDMƏTLƏR",
@@ -1115,7 +1115,7 @@ const i18n = {
     struct_director_badge: "College Directorate",
     struct_deputies_badge: "Vice Directors",
     struct_departments_badge: "Department Heads & Services",
-    struct_tier1_label: "DIRECTORATE",
+    struct_tier1_label: "Management Board",
     struct_tier2_label: "VICE DIRECTORS",
     struct_tier3_label: "CHAIR OF YAP ORGANIZATION & DEPT HEAD",
     struct_tier4_label: "DEPARTMENT HEADS & SERVICES",
@@ -2053,7 +2053,7 @@ const i18n = {
     struct_director_badge: "Руководство Колледжа",
     struct_deputies_badge: "Заместители Директора",
     struct_departments_badge: "Заведующие Отделами и Службы",
-    struct_tier1_label: "ДИРЕКТОРАТ",
+    struct_tier1_label: "Правление",
     struct_tier2_label: "ЗАМЕСТИТЕЛИ ДИРЕКТОРА",
     struct_tier3_label: "ПРЕДСЕДАТЕЛЬ ОРГАНИЗАЦИИ YAP И ЗАВ. ОТДЕЛОМ",
     struct_tier4_label: "ЗАВЕДУЮЩИЕ ОТДЕЛАМИ И СЛУЖБЫ",
@@ -8007,6 +8007,7 @@ function initStructureModule() {
     treeCanvas.innerHTML = `
       <!-- ═══ 1-Cİ SƏVİYYƏ: DİREKTOR ═══ -->
       <div class="tree-tier-block tier-1">
+        <div class="tree-tier-tag"><span>${gT("struct_tier1_label") || "İdarə Heyəti"}</span></div>
         <div class="tree-card-director" data-person-id="${director.id}" title="${directorName}">
           <div class="tree-director-avatar">
             <img src="${director.img}" alt="${directorName}" onerror="this.onerror=null;this.src='logo.jpg';">
