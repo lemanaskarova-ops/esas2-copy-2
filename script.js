@@ -3429,6 +3429,28 @@ const staffData = {
 
 const newsData = [
   {
+    "id": 114,
+    "official_id": "2565187697322020",
+    "title_az": "Zəfər Günü – qürurumuz, şərəfimiz, milli birliyimiz və gələcəyə ötürülən qəhrəmanlıq salnaməmiz!",
+    "title_en": "Victory Day – Our Pride, Our Honor, National Unity, and Heroic Chronicle Passed to Future Generations!",
+    "title_ru": "День Победы — наша гордость, честь, национальное единство и героическая летопись, передаваемая будущим поколениям!",
+    "desc_az": "8 Noyabr – Zəfər Gününə həsr olunmuş təntənəli tədbir Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində yüksək təşkilatçılıq, böyük ruh yüksəkliyi və bayram əhval-ruhiyyəsi ilə keçirilmişdir...",
+    "desc_en": "A solemn ceremony dedicated to November 8 – Victory Day was held at Baku State Communications and Transport College under Azerbaijan Technical University with high organization, great enthusiasm, and a festive spirit...",
+    "desc_ru": "В Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете с большим воодушевлением и на высоком организационном уровне состоялось торжественное мероприятие, посвященное 8 Ноября — Дню Победы...",
+    "full_az": "🇦🇿 ZƏFƏR GÜNÜ – QÜRURUMUZ, ŞƏRƏFİMİZ, MİLLİ BİRLİYİMİZ VƏ GƏLƏCƏYƏ ÖTÜRÜLƏN QƏHRƏMANLIQ SALNAMƏMİZ!\n\n8 Noyabr – Zəfər Gününə həsr olunmuş təntənəli tədbir Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecində yüksək təşkilatçılıq, böyük ruh yüksəkliyi və bayram əhval-ruhiyyəsi ilə keçirilmişdir.\n\nTədbir Azərbaycan Respublikasının Dövlət Himninin səsləndirilməsi, Ulu Öndər Heydər Əliyevin və Vətənimizin azadlığı, suverenliyi və ərazi bütövlüyü uğrunda canlarından keçmiş şəhidlərimizin əziz xatirəsinin bir dəqiqəlik sükutla yad edilməsi ilə başlamışdır.\n\nTədbirin rəsmi hissəsində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov, Qeydiyyat, qiymətləndirmə və monitorinq şöbəsinin müdiri, tarix müəllimi Səidə Quliyeva və kollecin hüquqşünası Vəfa Hacıyeva çıxış edərək Zəfər Gününün tarixi əhəmiyyətindən, Azərbaycan xalqının milli birliyindən, Müzəffər Ordumuzun qəhrəmanlığından və gənc nəslin vətənpərvərlik ruhunda tərbiyəsinin vacibliyindən bəhs etmişlər.\n\nTədbirin bədii hissəsində kollecin istedadlı tələbələri vətənpərvərlik mövzusunda musiqi nömrələri, rəqslər və şeirlərlə çıxış edərək iştirakçılara unudulmaz anlar yaşatmışlar.\n\nTədbirin əlamətdar məqamlarından biri də Vətən müharibəsi iştirakçılarının, eləcə də Bakı Dövlət Rabitə və Nəqliyyat Kollecinin Gənclərin çağırışaqədərki hazırlığı üzrə rəhbəri polkovnik Mehdixan Abbasovun və müəllimi polkovnik-leytenant Xəyyam Eminovun fəxri fərmanlarla təltif olunması olmuşdur.\n\nTəltifetmə mərasimi kollecin direktoru Səbuhi Qurbanovun və Həmkarlar İttifaqı Komitəsinin sədri Aygün Musayevanın təşkilatçılığı ilə həyata keçirilmişdir. Bu təltiflər Vətən qarşısında xidmətlərə, göstərilən qəhrəmanlığa, gənc nəslin hərbi-vətənpərvərlik ruhunda yetişdirilməsinə və təhsil sahəsindəki əməyə verilən yüksək dəyərin ifadəsi olmuşdur.\n\nBundan əlavə, noyabrın 4-də 8 Noyabr – Zəfər Gününə həsr olunmuş voleybol yarışında müxtəlif yerləri tutmuş qız və oğlan komandalarının kapitanlarına da fəxri fərmanlar təqdim edilmişdir. Gənclərimizin idman sahəsində qazandıqları uğurlar, nümayiş etdirdikləri komanda ruhu və əzmkarlıq tədbirin sevincini daha da artırmışdır.\n\nTədbir çərçivəsində kollektivimizin Ağdam, Xankəndi və Şuşa şəhərlərinə həyata keçirdiyi səfərlə bağlı təəssüratlar da iştirakçılarla bölüşülmüşdür. Doğma torpaqlarımızın bugünkü inkişafını, genişmiqyaslı quruculuq işlərini və Qarabağın yenidən dirçəlişini əks etdirən səfər haqqında fikirlər tədbirə xüsusi mənəvi məna qatmışdır.\n\nTədbir yüksək əhval-ruhiyyə, qürur, sevinc və vətənpərvərlik ruhunda davam edərək xatirə fotosunun çəkilməsi ilə başa çatmışdır.\n\nBu tədbir yalnız bayram mərasimi deyil, həm də milli yaddaşımızın qorunması, qəhrəmanlıq tariximizin təbliği, dövlətçilik ənənələrimizin möhkəmləndirilməsi və Vətən sevgisinin gələcək nəsillərə ötürülməsi baxımından mühüm əhəmiyyət daşıyır.\n\nBakı Dövlət Rabitə və Nəqliyyat Kollecinin rəhbərliyinin təşkilatçılığı və kollektivin birgə səyləri ilə keçirilən bu cür tədbirlər gənclər arasında vətənpərvərlik ruhunun yüksəldilməsinə, milli birlik və həmrəyliyin möhkəmləndirilməsinə xidmət edir.\n\nBu əlamətdar gün bir daha sübut etdi ki, Zəfərimiz xalqımızın birliyinin, dövlətimizin qüdrətinin, Ordumuzun gücünün və Vətən sevgisinin təntənəsidir!\n\nBirliyimiz gücümüz, həmrəyliyimiz qələbəmizin təməlidir!\n\nŞəhidlərimizin əziz xatirəsi daim qəlbimizdə yaşayacaq!\n\nZəfərimiz əbədi, dövlətimiz qüdrətli, bayrağımız daim uca olsun!\n\n🇦🇿 QARABAĞ AZƏRBAYCANDIR!",
+    "full_en": "🇦🇿 VICTORY DAY – OUR PRIDE, OUR HONOR, NATIONAL UNITY, AND HEROIC CHRONICLE PASSED TO FUTURE GENERATIONS!\n\nA solemn commemorative event dedicated to November 8 – Victory Day was held at Baku State Communications and Transport College under Azerbaijan Technical University in an atmosphere of high organization, enthusiasm, and festive pride.\n\nThe ceremony began with the performance of the National Anthem of the Republic of Azerbaijan and a minute of silence honoring National Leader Heydar Aliyev and our martyrs who sacrificed their lives for the liberation, sovereignty, and territorial integrity of our Motherland.\n\nDuring the official part of the event, Deputy Director for Educational Affairs Shahmurad Mammadov, Head of the Registration, Assessment and Monitoring Department and History teacher Saida Guliyeva, and College Lawyer Vafa Hajiyeva spoke about the historic significance of Victory Day, the national unity of the Azerbaijani people, the heroism of our Victorious Army, and the importance of raising youth in a spirit of patriotism.\n\nIn the artistic segment, talented students of the college performed patriotic songs, traditional dances, and poetry recitations, creating unforgettable moments for participants.\n\nOne of the highlights of the event was the awarding of honorary certificates to Patriotic War veterans, as well as Colonel Mehdikhan Abbasov, Head of Pre-Conscription Youth Military Training at Baku State Communications and Transport College, and Lieutenant Colonel Khayyam Eminov, military instructor. The award ceremony was organized by College Director Sabuhi Gurbanov and Trade Union Committee Chairwoman Aygun Musayeva as a tribute to service to the Motherland, military-patriotic education of youth, and dedication to teaching.\n\nAdditionally, captains of the girls' and boys' volleyball teams who won top places in the November 4 tournament dedicated to November 8 – Victory Day were also awarded honorary certificates.\n\nAs part of the gathering, impressions of our faculty and staff delegation's historic visit to Agdam, Khankendi, and Shusha were shared, reflecting on the rapid reconstruction and revival of liberated Karabakh. The celebration concluded with a commemorative group photograph.\n\nOur unity is our strength, our solidarity is the foundation of our Victory!\n\n🇦🇿 KARABAKH IS AZERBAIJAN!",
+    "full_ru": "🇦🇿 ДЕНЬ ПОБЕДЫ — НАША ГОРДОСТЬ, ЧЕСТЬ, НАЦИОНАЛЬНОЕ ЕДИНСТВО И ГЕРОИЧЕСКАЯ ЛЕТОПИСЬ, ПЕРЕДАВАЕМАЯ БУДУЩИМ ПОКОЛЕНИЯМ!\n\nВ Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете на высоком организационном уровне, с огромным воодушевлением и праздничным настроем состоялось торжественное мероприятие, посвященное 8 Ноября — Дню Победы.\n\nМероприятие началось с исполнения Государственного гимна Азербайджанской Республики и минуты молчания в память об Общенациональном Лидере Гейдаре Алиеве и наших шехидах, отдавших жизни за свободу, суверенитет и территориальную целостность Родины.\n\nВ официальной части выступили заместитель директора колледжа по воспитательной работе Шахмурад Мамедов, заведующая отделом регистрации, оценки и мониторинга, преподаватель истории Саида Гулиева и юрист колледжа Вафа Гаджиева. Выступавшие отметили историческое значение Дня Победы, национальную сплоченность азербайджанского народа, героизм нашей Победоносной армии и важность патриотического воспитания молодежи.\n\nВ художественной части талантливые студенты выступили с патриотическими музыкальными номерами, танцами и стихами. Одним из знаменательных моментов стало награждение почетными грамотами участников Отечественной войны, а также руководителя допризывной подготовки молодежи полковника Мехдихана Аббасова и преподавателя подполковника Хайяма Эминова. Церемония награждения была организована директором колледжа Сабухи Гурбановым и председателем профсоюзного комитета Айгюн Мусаевой.\n\nКроме того, почетные грамоты были вручены капитанам женской и мужской команд по волейболу, занявших призовые места в турнире 4 ноября ко Дню Победы. Участники мероприятия также поделились впечатлениями от поездки коллектива в Агдам, Ханкенди и Шушу и завершили торжество памятным фото.\n\nНаше единство — наша сила, наша солидарность — фундамент нашей Победы!\n\n🇦🇿 КАРАБАХ — ЭТО АЗЕРБАЙДЖАН!",
+    "date": "08 Noyabr 2026",
+    "image": "zefer_gunu_2026.jpg",
+    "url": "https://www.facebook.com/share/v/1E2Whrxjq9/",
+    "tag_az": "Zəfər Günü / Tədbir",
+    "tag_en": "Victory Day / Event",
+    "tag_ru": "День Победы / Событие",
+    "date_az": "08 Noyabr 2026",
+    "date_en": "08 November 2026",
+    "date_ru": "08 Ноября 2026"
+  },
+  {
     "id": 101,
     "official_id": "2199906070964272",
     "title_az": "İdeyadan ixtiraya, bilikdən innovasiyaya — Bakı Avropa Liseyinin STEAM Mərkəzi Kollecdə",
@@ -3539,6 +3561,28 @@ const newsData = [
     "date_ru": "16 Октября 2026"
   },
   {
+    "id": 112,
+    "official_id": "DecsTtqDLET",
+    "title_az": "“QANAD” layihəsinin iştirakçıları ilə görüş keçirildi!",
+    "title_en": "Meeting Held with Participants of the 'QANAD' Project!",
+    "title_ru": "Состоялась встреча с участниками проекта «QANAD»!",
+    "desc_az": "12 oktyabr tarixində “QANAD” (Qabiliyyətlərin Aşkarlanması və Növbəti Addımda Dəstək) layihəsi çərçivəsində Bakı internat məktəblərinin məzunları – peşə və orta ixtisas təhsili müəssisələrinə qəbul olmuş tələbələrlə görüş təşkil edilib...",
+    "desc_en": "On 12 October, as part of the 'QANAD' (Talent Identification and Next-Step Support) project, a meeting was organized with graduates of Baku boarding schools admitted to vocational and secondary specialized education institutions...",
+    "desc_ru": "12 октября в рамках проекта «QANAD» («Выявление способностей и поддержка на следующем этапе») состоялась встреча с выпускниками бакинских школ-интернатов, поступившими в учреждения профессионального и среднего специального образования...",
+    "full_az": "“QANAD” layihəsinin iştirakçıları ilə görüş keçirildi!\n\n12 oktyabr tarixində “QANAD” (Qabiliyyətlərin Aşkarlanması və Növbəti Addımda Dəstək) layihəsi çərçivəsində Bakı internat məktəblərinin məzunları – peşə və orta ixtisas təhsili müəssisələrinə qəbul olmuş tələbələrlə görüş təşkil edilib.\n\nTədbirdə PTDA-nın direktoru İlqar Bayramlı və EATDA-nın direktoru Ülkər Səttarova, təhsil müəssisələrinin rəhbərləri və tələbələr iştirak ediblər. Natiqlər gəncləri təbrik edərək, peşə və orta ixtisas təhsilinin gələcək karyerada mühüm rolunu vurğulayıblar.\n\n🎯 Layihənin nəticələri:\n• 12 internat məktəbinə səfər olunub\n• 500-dən çox şagirdlə görüş keçirilib\n• 70-dən çox şagird peşə və orta ixtisas təhsili müəssisələrinə qəbul olunub!\n\nGörüşün sonunda tələbələrə xüsusi hədiyyələr təqdim olunub və gələcək təhsil həyatlarında uğurlar arzulanıb.",
+    "full_en": "Meeting Held with Participants of the 'QANAD' Project!\n\nOn 12 October, within the framework of the 'QANAD' (Talent Identification and Next-Step Support) project, a meeting was organized with graduates of Baku boarding schools who have been admitted to vocational and secondary specialized education institutions.\n\nThe event was attended by Ilgar Bayramli, Director of the State Agency on Vocational Education (PTDA), and Ulkar Sattarova, Director of the State Agency for Science and Higher Education (EATDA), along with heads of educational institutions and students. The speakers congratulated the youth and emphasized the important role of vocational and secondary specialized education in their future careers.\n\n🎯 Project Results:\n• 12 boarding schools visited\n• Meetings held with over 500 pupils\n• Over 70 pupils admitted to vocational and secondary specialized education institutions!\n\nAt the conclusion of the meeting, special gifts were presented to the students and they were wished continued success in their future educational journeys.",
+    "full_ru": "Состоялась встреча с участниками проекта «QANAD»!\n\n12 октября в рамках проекта «QANAD» («Выявление способностей и поддержка на следующем этапе») была организована встреча с выпускниками бакинских школ-интернатов, поступившими в учреждения профессионального и среднего специального образования.\n\nВ мероприятии приняли участие директор Государственного агентства по профессиональному образованию (PTDA) Ильгар Байрамлы, директор Государственного агентства по науке и высшему образованию (EATDA) Улькер Саттарова, руководители учебных заведений и студенты. Выступавшие поздравили молодежь и подчеркнули важную роль профессионального и среднего специального образования в будущей карьере.\n\n🎯 Результаты проекта:\n• Посещено 12 школ-интернатов\n• Проведены встречи с более чем 500 школьниками\n• Более 70 учащихся поступили в учреждения профессионального и среднего специального образования!\n\nВ завершение встречи студентам были вручены памятные подарки и высказаны пожелания успехов в дальнейшей учебе.",
+    "date": "12 Oktyabr 2026",
+    "image": "qanad_layihesi.jpg",
+    "url": "https://www.instagram.com/p/DecsTtqDLET/",
+    "tag_az": "Layihə / Görüş",
+    "tag_en": "Project / Meeting",
+    "tag_ru": "Проект / Встреча",
+    "date_az": "12 Oktyabr 2026",
+    "date_en": "12 October 2026",
+    "date_ru": "12 Октября 2026"
+  },
+  {
     "id": 111,
     "official_id": "111",
     "title_az": "7 Oktyabr – Ümumdünya Layiqli Əmək Gününə həsr olunmuş maarifləndirici tədbir keçirilib",
@@ -3559,6 +3603,28 @@ const newsData = [
     "date_az": "07 Oktyabr 2026",
     "date_en": "07 October 2026",
     "date_ru": "07 Октября 2026"
+  },
+  {
+    "id": 113,
+    "official_id": "DeOJGyjMEJ_",
+    "title_az": "5 Oktyabr – Müəllimlər Günü münasibətilə Kollec müəllimləri fəxri fərmanla təltif olunublar",
+    "title_en": "College Teachers Awarded Honorary Certificates on October 5 – Teachers' Day",
+    "title_ru": "Преподаватели колледжа награждены почетными грамотами по случаю 5 Октября — Дня учителя",
+    "desc_az": "5 Oktyabr – Müəllimlər Günü münasibətilə Bakı Dövlət Rabitə və Nəqliyyat Kollecində təhsil sahəsində səmərəli fəaliyyəti və tələbələrin inkişafına verdiyi dəyərli töhfələri ilə seçilən müəllimlər fəxri fərmanla təltif olunublar...",
+    "desc_en": "On the occasion of October 5 – Teachers' Day, distinguished faculty members of Baku State Communications and Transport College were awarded honorary certificates for their effective pedagogical activity and valuable contributions to student development...",
+    "desc_ru": "По случаю 5 Октября — Дня учителя преподаватели Бакинского государственного колледжа связи и транспорта, отличившиеся плодотворной педагогической деятельностью и весомым вкладом в развитие студентов, были награждены почетными грамотами...",
+    "full_az": "5 Oktyabr – Müəllimlər Günü münasibətilə Bakı Dövlət Rabitə və Nəqliyyat Kollecində təhsil sahəsində göstərdikləri səmərəli fəaliyyət, tələbələrin inkişafına verdikləri dəyərli töhfələr və peşəkar fəaliyyətləri ilə seçilən müəllimlərimiz fəxri fərmanla təltif olunublar.\n\nMüəllimlərimizin əməyinə verilən bu yüksək dəyər kollektivimiz üçün qürurverici məqamdır.\n\nTəltif olunan bütün müəllimlərimizi ürəkdən təbrik edir, onlara möhkəm cansağlığı, pedaqoji fəaliyyətlərində davamlı uğurlar və yeni nailiyyətlər arzulayırıq.\n\nBakı Dövlət Rabitə və Nəqliyyat Kollecinin rəhbəri Səbuhi Qurbanov və Həmkarlar İttifaqı Komitəsinin sədri Aygün Musayeva tərəfindən təqdim olunmuş fəxri fərmanlar müəllimlərimizin əməyinə göstərilən diqqət və ehtiramın ifadəsidir.",
+    "full_en": "On the occasion of October 5 – Teachers' Day, distinguished teachers of Baku State Communications and Transport College were awarded honorary certificates for their effective work in the field of education, valuable contributions to student development, and high professional dedication.\n\nThis high appreciation of our teachers' efforts is a proud milestone for our entire academic community.\n\nWe sincerely congratulate all honored teachers and wish them robust health, continued success in their pedagogical activities, and new achievements.\n\nThe honorary certificates presented by Director of Baku State Communications and Transport College Sabuhi Gurbanov and Chairwoman of the Trade Union Committee Aygun Musayeva stand as an expression of attention and deep respect for the dedicated work of our faculty.",
+    "full_ru": "По случаю 5 Октября — Дня учителя преподаватели Бакинского государственного колледжа связи и транспорта, отличившиеся эффективной деятельностью в сфере образования, ценным вкладом в развитие студентов и высоким профессионализмом, были награждены почетными грамотами.\n\nЭта высокая оценка труда наших преподавателей является поводом для гордости для всего нашего коллектива.\n\nМы искренне поздравляем всех награжденных педагогов, желаем им крепкого здоровья, неизменных успехов в педагогической деятельности и новых достижений.\n\nПочетные грамоты, врученные директором Бакинского государственного колледжа связи и транспорта Сабухи Гурбановым и председателем профсоюзного комитета Айгюн Мусаевой, являются выражением внимания и глубокого уважения к труду наших учителей.",
+    "date": "05 Oktyabr 2026",
+    "image": "muellimler_gunu_2026.jpg",
+    "url": "https://www.instagram.com/reel/DeOJGyjMEJ_/",
+    "tag_az": "Təltif / Müəllimlər Günü",
+    "tag_en": "Award / Teachers' Day",
+    "tag_ru": "Награда / День учителя",
+    "date_az": "05 Oktyabr 2026",
+    "date_en": "05 October 2026",
+    "date_ru": "05 Октября 2026"
   },
   {
     "id": 105,
@@ -11789,6 +11855,28 @@ function initGalleryModule() {
         i18n: "gallery_cat_study",
       },
       {
+        type: "video",
+        src: "dersler1.mp4",
+        tall: true,
+        label: "Dərs Mühiti · Tədris Prosesi",
+        label_az: "Dərs Mühiti · Tədris Prosesi",
+        label_en: "Study Environment · Teaching Process",
+        label_ru: "Учебная среда · Учебный процесс",
+        badge: "DƏRS MÜHİTİ",
+        i18n: "gallery_cat_study",
+      },
+      {
+        type: "video",
+        src: "dersler2.mp4",
+        tall: true,
+        label: "Dərs Mühiti · Praktiki Məşğələ",
+        label_az: "Dərs Mühiti · Praktiki Məşğələ",
+        label_en: "Study Environment · Practical Session",
+        label_ru: "Учебная среда · Практическое занятие",
+        badge: "DƏRS MÜHİTİ",
+        i18n: "gallery_cat_study",
+      },
+      {
         type: "instagram",
         id: "DVtecLDiJMR",
         postType: "reel",
@@ -13901,10 +13989,319 @@ function initSceneTransition() {
           "caption_ru": "Дипломы, Золотые Медали и Награды"
         }
       ]
+    },
+    {
+      "id": "elvin-memmedov",
+      "fullName": "Məmmədov Elvin",
+      "fullName_az": "Məmmədov Elvin",
+      "fullName_en": "Elvin Mammadov",
+      "fullName_ru": "Мамедов Эльвин",
+      "photo": "elvinx2.jpeg",
+      "fallbackPhoto": "elvinx1.jpeg",
+      "kickerIcon": "🥋",
+      "kicker": "Cüdo & Hərbi-Vətənpərvərlik İdmanı",
+      "kicker_az": "Cüdo & Hərbi-Vətənpərvərlik İdmanı",
+      "kicker_en": "Judo & Patriotic Athletics",
+      "kicker_ru": "Дзюдо и Патриотический Спорт",
+      "highlightsHeading": "ƏSAS İDMAN NAİLİYYƏTLƏRİ VƏ DƏYƏRLƏRİ",
+      "highlightsHeading_az": "ƏSAS İDMAN NAİLİYYƏTLƏRİ VƏ DƏYƏRLƏRİ",
+      "highlightsHeading_en": "KEY SPORTS ACHIEVEMENTS & VALUES",
+      "highlightsHeading_ru": "ОСНОВНЫЕ СПОРТИВНЫЕ ДОСТИЖЕНИЯ И ЦЕННОСТИ",
+      "avatarYearTag": "🥋 BAKI 2026 · 73 kq",
+      "titleBadge": "Cüdo Birinciliyi Mükafatçısı (II Yer)",
+      "titleBadge_az": "Cüdo Birinciliyi Mükafatçısı (II Yer)",
+      "titleBadge_en": "Judo Championship Medalist (2nd Place)",
+      "titleBadge_ru": "Призер первенства по дзюдо (II место)",
+      "role": "Cüdo İdmançısı · “Ağdama Qayıdış” Açıq Birinciliyinin Gümüş Mükafatçısı (73 kq)",
+      "role_az": "Cüdo İdmançısı · “Ağdama Qayıdış” Açıq Birinciliyinin Gümüş Mükafatçısı (73 kq)",
+      "role_en": "Judoka · Silver Medalist at the “Return to Agdam” Open Championship (73 kg)",
+      "role_ru": "Дзюдоист · Серебряный призер открытого первенства «Возвращение в Агдам» (73 кг)",
+      "categories": [
+        "all"
+      ],
+      "statusText": "Qara Kəmər · 73 kq Gümüş Medalçı",
+      "statusText_az": "Qara Kəmər · 73 kq Gümüş Medalçı",
+      "statusText_en": "Black Belt · 73 kg Silver Medalist",
+      "statusText_ru": "Черный пояс · Серебро 73 кг",
+      "quote": "Cüdo tərkibində sadəcə idman deyil, həyat tərzidir. Hörmət, intizam, əzm və uğur prinsipləri ilə tatamidə qazanılan hər bir nailiyyət Zəfər ruhumuza, möhkəm iradəmizə və Vətən sevgimizə söykənir.",
+      "quote_az": "Cüdo tərkibində sadəcə idman deyil, həyat tərzidir. Hörmət, intizam, əzm və uğur prinsipləri ilə tatamidə qazanılan hər bir nailiyyət Zəfər ruhumuza, möhkəm iradəmizə və Vətən sevgimizə söykənir.",
+      "quote_en": "Judo is not merely a sport—it is a way of life. Guided by respect, discipline, determination, and success, every achievement on the tatami rests upon our spirit of Victory, resilience, and love for the Motherland.",
+      "quote_ru": "Дзюдо — это не просто спорт, а образ жизни. Опираясь на уважение, дисциплину, упорство и стремление к успеху, каждое достижение на татами питается духом Победы, стойкостью и любовью к Родине.",
+      "flags": [
+        {
+          "emoji": "🇦🇿",
+          "name": "Azərbaycan",
+          "name_az": "Azərbaycan",
+          "name_en": "Azerbaijan",
+          "name_ru": "Азербайджан",
+          "note": "Zəfər Günü Birinciliyi · Bakı 2026",
+          "note_az": "Zəfər Günü Birinciliyi · Bakı 2026",
+          "note_en": "Victory Day Open Championship · Baku 2026",
+          "note_ru": "Открытое первенство ко Дню Победы · Баку 2026"
+        },
+        {
+          "emoji": "🥋",
+          "name": "Azərbaycan Cüdo Federasiyası",
+          "name_az": "Azərbaycan Cüdo Federasiyası",
+          "name_en": "Azerbaijan Judo Federation",
+          "name_ru": "Федерация дзюдо Азербайджана",
+          "note": "73 kq Çəki Dərəcəsi · Qara Kəmər",
+          "note_az": "73 kq Çəki Dərəcəsi · Qara Kəmər",
+          "note_en": "73 kg Weight Class · Black Belt",
+          "note_ru": "Весовая категория 73 кг · Черный пояс"
+        }
+      ],
+      "stats": [
+        {
+          "icon": "🥈",
+          "val": "II YER",
+          "val_az": "II YER",
+          "val_en": "2nd PLACE",
+          "val_ru": "II МЕСТО",
+          "label": "“Ağdama Qayıdış” 2026",
+          "label_az": "“Ağdama Qayıdış” 2026",
+          "label_en": "“Return to Agdam” 2026",
+          "label_ru": "«Возвращение в Агдам» 2026",
+          "sub": "Zəfər Gününə həsr olunmuş Gümüş Medal",
+          "sub_az": "Zəfər Gününə həsr olunmuş Gümüş Medal",
+          "sub_en": "Victory Day Dedicated Silver Medal",
+          "sub_ru": "Серебряная медаль ко Дню Победы"
+        },
+        {
+          "icon": "🥋",
+          "val": "73 KQ",
+          "val_az": "73 KQ",
+          "val_en": "73 KG",
+          "val_ru": "73 КГ",
+          "label": "Qara Kəmər & Tatami",
+          "label_az": "Qara Kəmər & Tatami",
+          "label_en": "Black Belt & Tatami",
+          "label_ru": "Черный пояс и татами",
+          "sub": "Rəsmi çəki dərəcəsi üzrə fəxri nəticə",
+          "sub_az": "Rəsmi çəki dərəcəsi üzrə fəxri nəticə",
+          "sub_en": "Official division distinction",
+          "sub_ru": "Призовой результат в весовой категории"
+        },
+        {
+          "icon": "📜",
+          "val": "AZE GİN",
+          "val_az": "AZE GİN",
+          "val_en": "AZE MYS",
+          "val_ru": "АЗЕ ММС",
+          "label": "Rəsmi Diplom · Bakı 2026",
+          "label_az": "Rəsmi Diplom · Bakı 2026",
+          "label_en": "Official Diploma · Baku 2026",
+          "label_ru": "Официальный диплом · Баку 2026",
+          "sub": "Gənclər və İdman Nazirliyi & ACF",
+          "sub_az": "Gənclər və İdman Nazirliyi & ACF",
+          "sub_en": "Ministry of Youth & Sports · Judo Fed.",
+          "sub_ru": "Минмолодежи и спорта · Федерация дзюдо"
+        },
+        {
+          "icon": "🔥",
+          "val": "HÖRMƏT & ƏZM",
+          "val_az": "HÖRMƏT & ƏZM",
+          "val_en": "RESPECT & GRIT",
+          "val_ru": "ЧЕСТЬ И ВОЛЯ",
+          "label": "Cüdo Həyat Tərzidir",
+          "label_az": "Cüdo Həyat Tərzidir",
+          "label_en": "Judo Is a Way of Life",
+          "label_ru": "Дзюдо — образ жизни",
+          "sub": "Güc intizamdan gəlir · Daim inkişafa doğru",
+          "sub_az": "Güc intizamdan gəlir · Daim inkişafa doğru",
+          "sub_en": "Strength through discipline",
+          "sub_ru": "Сила через дисциплину и развитие"
+        }
+      ],
+      "highlights": [
+        {
+          "year": "2026",
+          "flag": "🇦🇿",
+          "country": "Bakı",
+          "country_az": "Bakı",
+          "country_en": "Baku",
+          "country_ru": "Баку",
+          "title": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi",
+          "title_az": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi",
+          "title_en": "Victory Day “Return to Agdam” Open Judo Championship",
+          "title_ru": "Открытое первенство по дзюдо «Возвращение в Агдам» ко Дню Победы",
+          "text": "Gənclər və İdman Nazirliyi və Azərbaycan Cüdo Federasiyasının dəstəyi ilə keçirilən açıq birincilikdə 73 kq çəki dərəcəsində II yeri tutaraq Gümüş medal və rəsmi Diplomla təltif edilmişdir.",
+          "text_az": "Gənclər və İdman Nazirliyi və Azərbaycan Cüdo Federasiyasının dəstəyi ilə keçirilən açıq birincilikdə 73 kq çəki dərəcəsində II yeri tutaraq Gümüş medal və rəsmi Diplomla təltif edilmişdir.",
+          "text_en": "Secured 2nd place in the 73 kg weight class at the open championship held under the Ministry of Youth and Sports and the Azerbaijan Judo Federation, earning a Silver medal and official Diploma.",
+          "text_ru": "Занял II место в весовой категории 73 кг на открытом первенстве при поддержке Министерства молодежи и спорта и Федерации дзюдо Азербайджана, завоевав серебряную медаль и официальный диплом."
+        },
+        {
+          "year": "2026",
+          "flag": "🥋",
+          "country": "Azərbaycan",
+          "country_az": "Azərbaycan",
+          "country_en": "Azerbaijan",
+          "country_ru": "Азербайджан",
+          "title": "Qara Kəmər Ustalıq Səviyyəsi & Cüdo Dəyərləri",
+          "title_az": "Qara Kəmər Ustalıq Səviyyəsi & Cüdo Dəyərləri",
+          "title_en": "Black Belt Mastery & Core Judo Values",
+          "title_ru": "Мастерство черного пояса и ценности дзюдо",
+          "text": "“Hörmət, İntizam, Əzm, Uğur” və “Daha güclü bir gələcək üçün!” prinsipləri əsasında təhsili və peşəkar idman hazırlığını paralel şəkildə uğurla davam etdirir.",
+          "text_az": "“Hörmət, İntizam, Əzm, Uğur” və “Daha güclü bir gələcək üçün!” prinsipləri əsasında təhsili və peşəkar idman hazırlığını paralel şəkildə uğurla davam etdirir.",
+          "text_en": "Successfully balances academic excellence and athletic mastery guided by the principles of Respect, Discipline, Determination, and Success.",
+          "text_ru": "Успешно совмещает учебу в колледже и профессиональную спортивную подготовку, руководствуясь принципами «Уважение, Дисциплина, Упорство, Успех»."
+        }
+      ],
+      "tags": [
+        "#MəmmədovElvin",
+        "#Cüdo",
+        "#QaraKəmər",
+        "#73kq",
+        "#II_Yer_GümüşMedal",
+        "#AğdamaQayıdış",
+        "#ZəfərGünü2026",
+        "#DaimİnkişafaDoğru",
+        "#BDRNK_FəxriTələbə"
+      ],
+      "tags_az": [
+        "#MəmmədovElvin",
+        "#Cüdo",
+        "#QaraKəmər",
+        "#73kq",
+        "#II_Yer_GümüşMedal",
+        "#AğdamaQayıdış",
+        "#ZəfərGünü2026",
+        "#DaimİnkişafaDoğru",
+        "#BDRNK_FəxriTələbə"
+      ],
+      "tags_en": [
+        "#ElvinMammadov",
+        "#Judo",
+        "#BlackBelt",
+        "#73kg",
+        "#2ndPlace_Silver",
+        "#ReturnToAgdam",
+        "#VictoryDay2026",
+        "#StrengthThroughDiscipline",
+        "#BDRNK_HonorStudent"
+      ],
+      "tags_ru": [
+        "#ЭльвинМамедов",
+        "#Дзюдо",
+        "#ЧерныйПояс",
+        "#73кг",
+        "#IIМесто_Серебро",
+        "#ВозвращениеВАгдам",
+        "#ДеньПобеды2026",
+        "#СилаВДисциплине",
+        "#ПочетныйСтудентБГКСТ"
+      ],
+      "timeline": [
+        {
+          "year": "2026",
+          "badge": "🥈 Bakı 2026 · Gümüş Medal & Diplom",
+          "badge_az": "🥈 Bakı 2026 · Gümüş Medal & Diplom",
+          "badge_en": "🥈 Baku 2026 · Silver Medal & Diploma",
+          "badge_ru": "🥈 Баку 2026 · Серебряная медаль и диплом",
+          "title": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Açıq Birinciliyi — II Yer",
+          "title_az": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Açıq Birinciliyi — II Yer",
+          "title_en": "Victory Day “Return to Agdam” Open Judo Championship — 2nd Place",
+          "title_ru": "Открытое первенство «Возвращение в Агдам» ко Дню Победы — II место",
+          "desc": "Gənclər və İdman Nazirliyi, Azərbaycan Cüdo Federasiyası və “Ağdama Qayıdış” İdman Klubunun birgə təşkilatçılığı ilə Bakı şəhərində keçirilən açıq birincilikdə 73 kq çəki dərəcəsində II yeri tutaraq Gümüş medal və rəsmi Diplomla təltif edilmişdir.",
+          "desc_az": "Gənclər və İdman Nazirliyi, Azərbaycan Cüdo Federasiyası və “Ağdama Qayıdış” İdman Klubunun birgə təşkilatçılığı ilə Bakı şəhərində keçirilən açıq birincilikdə 73 kq çəki dərəcəsində II yeri tutaraq Gümüş medal və rəsmi Diplomla təltif edilmişdir.",
+          "desc_en": "Awarded 2nd place (Silver Medal) and an official Diploma in the 73 kg weight class at the Victory Day open championship organized by “Return to Agdam” Sports Club in Baku under the Ministry of Youth and Sports and the Azerbaijan Judo Federation.",
+          "desc_ru": "Удостоен II места (серебряная медаль) и официального диплома в весовой категории 73 кг на открытом первенстве клуба «Возвращение в Агдам» в Баку при поддержке Министерства молодежи и спорта и Федерации дзюдо Азербайджана."
+        },
+        {
+          "year": "2026",
+          "badge": "🥋 Tatami Hazırlığı · Qara Kəmər",
+          "badge_az": "🥋 Tatami Hazırlığı · Qara Kəmər",
+          "badge_en": "🥋 Tatami Mastery · Black Belt",
+          "badge_ru": "🥋 Подготовка на татами · Черный пояс",
+          "title": "Daim İnkişafa Doğru — İntizamlı İdman və Təhsil Yolu",
+          "title_az": "Daim İnkişafa Doğru — İntizamlı İdman və Təhsil Yolu",
+          "title_en": "Always Toward Progress — Disciplined Athletics & Academics",
+          "title_ru": "Всегда к развитию — путь спортивной дисциплины и знаний",
+          "desc": "Bakı Dövlət Rabitə və Nəqliyyat Kollecindəki təhsilini cüdo tatamisindəki peşəkar məşqlərlə birləşdirərək kollecimizin bayrağını və gəncliyimizin əzmkarlığını layiqincə təmsil edir.",
+          "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecindəki təhsilini cüdo tatamisindəki peşəkar məşqlərlə birləşdirərək kollecimizin bayrağını və gəncliyimizin əzmkarlığını layiqincə təmsil edir.",
+          "desc_en": "Combines studies at Baku State College of Communications and Transport with rigorous judo training, proudly upholding the values of discipline, friendship, and excellence.",
+          "desc_ru": "Совмещает обучение в Бакинском государственном колледже связи и транспорта с профессиональными тренировками на татами, достойно представляя энергию и волю нашей молодежи."
+        }
+      ],
+      "fullBio": [
+        "Məmmədov Elvin Bakı Dövlət Rabitə və Nəqliyyat Kollecinin təhsil mühitində nizam-intizamı, fəallığı və tatamidə göstərdiyi yüksək mübarizə əzmi ilə seçilən fəxri tələbə-idmançılarımızdandır.",
+        "2026-cı ildə Bakı şəhərində 8 Noyabr – Zəfər Gününə həsr olunmuş “Ağdama Qayıdış” İdman Klubunun açıq birinciliyində 73 kq çəki dərəcəsində inamlı çıxış edərək fəxri II yeri qazanmışdır. Bu nailiyyətinə görə Azərbaycan Respublikası Gənclər və İdman Nazirliyinin, Azərbaycan Cüdo Federasiyasının rəsmi nişanlarını daşıyan Gümüş medal və “Ağdama Qayıdış” İdman Klubunun direktoru S. Ağayevin imzaladığı rəsmi Diplomla təltif olunmuşdur.",
+        "Tatamidə qara kəmər ustalıq dərəcəsinə malik olan Elvin üçün cüdo yalnız idman növü deyil, həm də həyat tərzidir. O, “Hörmət · İntizam · Əzm · Uğur”, “Daim inkişafa doğru” və “Daha güclü bir gələcək üçün!” prinsiplərini rəhbər tutaraq həm akademik təhsilində, həm də idman karyerasında kollecimizə qürur gətirir.",
+        "Zəfər ruhu daşıyan bu cür nüfuzlu turnirlərdə qazanılan uğurlar Məmmədov Elvinin gənc nəslə güclü iradə, Vətən sevgisi və sağlam həyat tərzinin bariz nümunəsi olduğunu bir daha təsdiqləyir."
+      ],
+      "fullBio_az": [
+        "Məmmədov Elvin Bakı Dövlət Rabitə və Nəqliyyat Kollecinin təhsil mühitində nizam-intizamı, fəallığı və tatamidə göstərdiyi yüksək mübarizə əzmi ilə seçilən fəxri tələbə-idmançılarımızdandır.",
+        "2026-cı ildə Bakı şəhərində 8 Noyabr – Zəfər Gününə həsr olunmuş “Ağdama Qayıdış” İdman Klubunun açıq birinciliyində 73 kq çəki dərəcəsində inamlı çıxış edərək fəxri II yeri qazanmışdır. Bu nailiyyətinə görə Azərbaycan Respublikası Gənclər və İdman Nazirliyinin, Azərbaycan Cüdo Federasiyasının rəsmi nişanlarını daşıyan Gümüş medal və “Ağdama Qayıdış” İdman Klubunun direktoru S. Ağayevin imzaladığı rəsmi Diplomla təltif olunmuşdur.",
+        "Tatamidə qara kəmər ustalıq dərəcəsinə malik olan Elvin üçün cüdo yalnız idman növü deyil, həm də həyat tərzidir. O, “Hörmət · İntizam · Əzm · Uğur”, “Daim inkişafa doğru” və “Daha güclü bir gələcək üçün!” prinsiplərini rəhbər tutaraq həm akademik təhsilində, həm də idman karyerasında kollecimizə qürur gətirir.",
+        "Zəfər ruhu daşıyan bu cür nüfuzlu turnirlərdə qazanılan uğurlar Məmmədov Elvinin gənc nəslə güclü iradə, Vətən sevgisi və sağlam həyat tərzinin bariz nümunəsi olduğunu bir daha təsdiqləyir."
+      ],
+      "fullBio_en": [
+        "Elvin Mammadov is an honorary student-athlete at Baku State College of Communications and Transport, distinguished by his academic discipline, active engagement, and fighting spirit on the judo tatami.",
+        "In 2026 in Baku, he competed confidently in the 73 kg division at the Victory Day “Return to Agdam” Open Judo Championship, securing 2nd place. For this accomplishment, he was awarded a Silver Medal bearing the emblem of Azerbaijan together with an official Diploma bearing the emblems of the Ministry of Youth and Sports and the Azerbaijan Judo Federation, signed by Director S. Aghayev of the “Return to Agdam” Sports Club.",
+        "Holding a black belt on the tatami, Elvin embodies the motto that judo is not merely a sport but a way of life. Guided by the principles of Respect, Discipline, Determination, and Success, and carrying the spirit of Strength Through Discipline, he serves as a proud role model for fellow students.",
+        "His achievement in a tournament dedicated to Victory Day reflects his resilient willpower, patriotism, and commitment to a healthy, purposeful future."
+      ],
+      "fullBio_ru": [
+        "Мамедов Эльвин — один из почетных студентов-спортсменов Бакинского государственного колледжа связи и транспорта, отличающийся дисциплиной в учебе и высоким боевым духом на татами.",
+        "В 2026 году в Баку на открытом первенстве спортивного клуба «Возвращение в Агдам», посвященном Дню Победы, он уверенно выступил в весовой категории 73 кг и завоевал почетное II место. За этот результат он был награжден серебряной медалью и официальным дипломом с символикой Министерства молодежи и спорта и Федерации дзюдо Азербайджана за подписью директора клуба С. Агаева.",
+        "Обладая черным поясом по дзюдо, Эльвин доказывает, что дзюдо — это не просто спорт, а образ жизни. Следуя принципам «Уважение, Дисциплина, Упорство, Успех», он достойно сочетает обучение в колледже с профессиональными спортивными достижениями.",
+        "Успех на турнире, посвященном Дню Победы, служит ярким примером силы воли, патриотизма и стремления к развитию для всей студенческой молодежи."
+      ],
+      "certificates": [
+        {
+          "icon": "🥈",
+          "title": "Rəsmi Diplom & Gümüş Medal — II Yer (73 kq)",
+          "title_az": "Rəsmi Diplom & Gümüş Medal — II Yer (73 kq)",
+          "title_en": "Official Diploma & Silver Medal — 2nd Place (73 kg)",
+          "title_ru": "Официальный диплом и серебряная медаль — II место (73 кг)",
+          "sub": "Zəfər Gününə həsr olunmuş “Ağdama Qayıdış” Açıq Cüdo Birinciliyi · Bakı 2026",
+          "sub_az": "Zəfər Gününə həsr olunmuş “Ağdama Qayıdış” Açıq Cüdo Birinciliyi · Bakı 2026",
+          "sub_en": "Victory Day “Return to Agdam” Open Judo Championship · Baku 2026",
+          "sub_ru": "Открытое первенство «Возвращение в Агдам» ко Дню Победы · Баку 2026"
+        },
+        {
+          "icon": "🥋",
+          "title": "Cüdo üzrə Qara Kəmər Ustalıq Dərəcəsi",
+          "title_az": "Cüdo üzrə Qara Kəmər Ustalıq Dərəcəsi",
+          "title_en": "Judo Black Belt Distinction",
+          "title_ru": "Мастерская степень по дзюдо (Черный пояс)",
+          "sub": "Azərbaycan Cüdo İdman Məktəbi · Hörmət, İntizam, Əzm, Uğur",
+          "sub_az": "Azərbaycan Cüdo İdman Məktəbi · Hörmət, İntizam, Əzm, Uğur",
+          "sub_en": "Strength Through Discipline · Respect, Friendship, Excellence",
+          "sub_ru": "Школа дзюдо Азербайджана · Уважение, Дисциплина, Упорство, Успех"
+        }
+      ],
+      "gallery": [
+        {
+          "type": "image",
+          "src": "elvinx2.jpeg",
+          "caption": "Məmmədov Elvin — Ağ kimonoda tatami portreti",
+          "caption_az": "Məmmədov Elvin — Ağ kimonoda tatami portreti",
+          "caption_en": "Elvin Mammadov — Portrait in white judogi on the tatami",
+          "caption_ru": "Мамедов Эльвин — Портрет в белом кимоно на татами"
+        },
+        {
+          "type": "image",
+          "src": "elvinx1.jpeg",
+          "caption": "Məmmədov Elvin — Göy kimonoda rəsmi idman zalı portreti",
+          "caption_az": "Məmmədov Elvin — Göy kimonoda rəsmi idman zalı portreti",
+          "caption_en": "Elvin Mammadov — Portrait in blue judogi at the dojo",
+          "caption_ru": "Мамедов Эльвин — Портрет в синем кимоно в зале дзюдо"
+        },
+        {
+          "type": "image",
+          "src": "elvinx.jpeg",
+          "caption": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi Rəsmi Diplomu və Gümüş Medalı (73 kq · Bakı 2026)",
+          "caption_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi Rəsmi Diplomu və Gümüş Medalı (73 kq · Bakı 2026)",
+          "caption_en": "Official Diploma & Silver Medal — “Return to Agdam” Open Judo Championship (73 kg · Baku 2026)",
+          "caption_ru": "Официальный диплом и серебряная медаль открытого первенства «Возвращение в Агдам» (73 кг · Баку 2026)"
+        }
+      ]
     }
   ];
 
   function renderHonorCard(student) {
+    const mediaCount = Array.isArray(student.gallery) ? student.gallery.length : 0;
     const fullName = student["fullName_" + currentLang] || student.fullName;
     const role = student["role_" + currentLang] || student.role;
     const titleBadge = student["titleBadge_" + currentLang] || student.titleBadge;
@@ -13913,9 +14310,11 @@ function initSceneTransition() {
     const countriesLabel = gT("honor_countries_heading") || (currentLang === "en" ? "REPRESENTED COUNTRIES" : currentLang === "ru" ? "ПРЕДСТАВЛЕННЫЕ СТРАНЫ" : "TƏMSİL OLUNAN ÖLKƏLƏR");
     const dossierBtn = gT("honor_btn_bio") || (currentLang === "en" ? "Detailed Dossier" : currentLang === "ru" ? "Подробное Досье" : "Ətraflı Dosye");
     const timelineBtn = gT("honor_btn_timeline") || (currentLang === "en" ? "Achievement Timeline" : currentLang === "ru" ? "Хронология Достижений" : "Nailiyyət Xronologiyası");
-    const archiveBtn = gT("honor_btn_gallery") || (currentLang === "en" ? "Photo & Video Archive (12 Media)" : currentLang === "ru" ? "Фото и Видео Архив (12 Медиа)" : "Foto & Video Arxivi (12 Media)");
-    const kickerLabel = gT("honor_kicker") || (currentLang === "en" ? "IT, Cybersecurity & Robotics" : currentLang === "ru" ? "ИКТ, Кибербезопасность и Робототехника" : "İKT, Kibertəhlükəsizlik & Robototexnika");
-    const highlightsHeading = gT("honor_highlights_heading") || (currentLang === "en" ? "KEY INTERNATIONAL REPRESENTATIONS & TARGETS" : currentLang === "ru" ? "ОСНОВНЫЕ МЕЖДУНАРОДНЫЕ ПРЕДСТАВИТЕЛЬСТВА И ЦЕЛИ" : "ƏSAS BEYNƏLXALQ TƏMSİLÇİLİKLƏR VƏ HƏDƏFLƏR");
+    const rawArchiveBtn = gT("honor_btn_gallery") || (currentLang === "en" ? "Photo & Video Archive (12 Media)" : currentLang === "ru" ? "Фото и Видео Архив (12 Медиа)" : "Foto & Video Arxivi (12 Media)");
+    const archiveBtn = rawArchiveBtn.replace(/\(\s*\d+\s+/g, "(" + mediaCount + " ");
+    const kickerLabel = student["kicker_" + currentLang] || student.kicker || gT("honor_kicker") || (currentLang === "en" ? "IT, Cybersecurity & Robotics" : currentLang === "ru" ? "ИКТ, Кибербезопасность и Робототехника" : "İKT, Kibertəhlükəsizlik & Robototexnika");
+    const kickerIcon = student.kickerIcon || "🤖";
+    const highlightsHeading = student["highlightsHeading_" + currentLang] || student.highlightsHeading || gT("honor_highlights_heading") || (currentLang === "en" ? "KEY INTERNATIONAL REPRESENTATIONS & TARGETS" : currentLang === "ru" ? "ОСНОВНЫЕ МЕЖДУНАРОДНЫЕ ПРЕДСТАВИТЕЛЬСТВА И ЦЕЛИ" : "ƏSAS BEYNƏLXALQ TƏMSİLÇİLİKLƏR VƏ HƏDƏFLƏR");
     const quoteText = student["quote_" + currentLang] || student.quote;
 
     const flagsHtml = student.flags
@@ -13961,9 +14360,8 @@ function initSceneTransition() {
       .join("");
 
     // Mini thumbnails (clean image selection)
-    const previewImages = student.gallery
-      .filter((g) => g.type === "image")
-      .slice(1, 5);
+    const allImages = student.gallery.filter((g) => g.type === "image");
+    const previewImages = allImages.length <= 4 ? allImages.slice(0, 4) : allImages.slice(1, 5);
     const thumbsHtml = previewImages
       .map((g) => {
         const cap = g["caption_" + currentLang] || g.caption;
@@ -13988,7 +14386,7 @@ function initSceneTransition() {
       '<span>' + statusText + '</span>' +
       '</span>' +
       '<span class="honor-kicker-tag">' +
-      '<span aria-hidden="true">🤖</span> ' +
+      '<span aria-hidden="true">' + kickerIcon + '</span> ' +
       '<span>' + kickerLabel + '</span>' +
       '</span>' +
       '</div>' +
@@ -14011,7 +14409,7 @@ function initSceneTransition() {
       'onerror="this.onerror=null;this.src=\'' + student.fallbackPhoto + '\';" ' +
       '/>' +
       '<div class="honor-avatar-overlay">' +
-      '<span class="honor-avatar-award-tag">🏆 2024–2026</span>' +
+      '<span class="honor-avatar-award-tag">' + (student.avatarYearTag || "🏆 2024–2026") + '</span>' +
       '</div>' +
       '</div>' +
 
@@ -14029,7 +14427,7 @@ function initSceneTransition() {
       '<div class="honor-teaser-top">' +
       '<span class="honor-teaser-title">📸 ' + (currentLang === "en" ? "Media Archive Preview" : currentLang === "ru" ? "Медиа Превью" : "Media Arxivindən") + '</span>' +
       '<button type="button" class="honor-teaser-link" data-open-modal="' + student.id + '" data-tab="gallery">' +
-      (currentLang === "en" ? "All (12) →" : currentLang === "ru" ? "Все (12) →" : "Hamısı (12) →") +
+      (currentLang === "en" ? "All (" + mediaCount + ") →" : currentLang === "ru" ? "Все (" + mediaCount + ") →" : "Hamısı (" + mediaCount + ") →") +
       '</button>' +
       '</div>' +
       '<div class="honor-gallery-preview-strip">' +
@@ -14113,10 +14511,13 @@ function initSceneTransition() {
     attachCardListeners();
   }
 
+  let currentModalStudentId = null;
+
   function openHonorModal(studentId, initialTab) {
     if (!initialTab) initialTab = "bio";
     const student = honorStudentsData.find((s) => s.id === studentId);
     if (!student) return;
+    currentModalStudentId = student.id;
 
     const modal = document.getElementById("honor-student-modal");
     const modalBody = document.getElementById("honor-modal-body");
@@ -14289,11 +14690,21 @@ function initSceneTransition() {
   function init() {
     let activeHonorFilter = "all";
 
+    // Update dynamic category counts on filter buttons
+    const filterBtns = document.querySelectorAll(".honor-tab-btn[data-honor-filter]");
+    filterBtns.forEach((btn) => {
+      const cat = btn.getAttribute("data-honor-filter");
+      const cnt = cat === "all"
+        ? honorStudentsData.length
+        : honorStudentsData.filter((s) => s.categories.indexOf(cat) !== -1).length;
+      const badge = btn.querySelector(".honor-tab-count");
+      if (badge) badge.textContent = String(cnt);
+    });
+
     // 1. Initial Render
     renderHonorList("all");
 
     // 2. Tab filtering listeners
-    const filterBtns = document.querySelectorAll(".honor-tab-btn[data-honor-filter]");
     filterBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
         const filter = btn.getAttribute("data-honor-filter");
@@ -14314,7 +14725,7 @@ function initSceneTransition() {
       if (modal && modal.classList.contains("open")) {
         const activeTabBtn = modal.querySelector(".honor-modal-tab.active");
         const activeTab = activeTabBtn ? activeTabBtn.getAttribute("data-modal-target").replace("pane-", "") : "bio";
-        openHonorModal("senan-mirzezade", activeTab);
+        openHonorModal(currentModalStudentId || "senan-mirzezade", activeTab);
       }
     });
 
@@ -14357,6 +14768,39 @@ function initSceneTransition() {
  */
 (function initCertificatesModule() {
   const certificatesData = window.__bdrnkCertificates = [
+    {
+      id: 14,
+      title_az: "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II Yer",
+      title_en: "“Return to Agdam” Open Judo Championship — 2nd Place",
+      title_ru: "Открытое первенство по дзюдо «Возвращение в Агдам» — II место",
+      subtitle_az: "8 Noyabr – Zəfər Gününə həsr olunmuş açıq birincilik (73 kq çəki dərəcəsi)",
+      subtitle_en: "Open championship dedicated to November 8 – Victory Day (73 kg weight class)",
+      subtitle_ru: "Открытое первенство, посвященное 8 Ноября — Дню Победы (весовая категория 73 кг)",
+      recipient_az: "Məmmədov Elvin (BDRNK tələbəsi)",
+      recipient_en: "Elvin Mammadov (BDRNK student)",
+      recipient_ru: "Мамедов Эльвин (студент БГКСТ)",
+      place_az: "II YER (Gümüş)",
+      place_en: "2nd PLACE (Silver)",
+      place_ru: "II МЕСТО (Серебро)",
+      placeType: "silver",
+      sport_az: "Cüdo (73 kq)",
+      sport_en: "Judo (73 kg)",
+      sport_ru: "Дзюдо (73 кг)",
+      sportIcon: "🥋",
+      category: "turnir",
+      year: "2026",
+      date_az: "2026-cı il",
+      date_en: "Year 2026",
+      date_ru: "2026 год",
+      org_az: "Gənclər və İdman Nazirliyi · Azərbaycan Cüdo Federasiyası · “Ağdama Qayıdış” İK",
+      org_en: "Ministry of Youth & Sports · Azerbaijan Judo Federation · “Return to Agdam” Sports Club",
+      org_ru: "Министерство молодежи и спорта · Федерация дзюдо Азербайджана · СК «Возвращение в Агдам»",
+      signer_az: "Ağayev S. (“Ağdama Qayıdış” İdman Klubunun direktoru)",
+      signer_en: "S. Aghayev (Director of “Return to Agdam” Sports Club)",
+      signer_ru: "С. Агаев (Директор спортивного клуба «Возвращение в Агдам»)",
+      img: "elvinx.jpeg",
+      thumb: "elvinx.jpeg"
+    },
     {
       id: 1,
       title_az: "Basketbol üzrə Yasamal Rayon Turniri",
