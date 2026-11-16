@@ -8002,6 +8002,111 @@ function initStructureModule() {
     }
 
     treeCanvas.innerHTML = `
+      <!-- ═══ 1-Cİ SƏVİYYƏ: DİREKTOR ═══ -->
+      <div class="tree-tier-block tier-1">
+        <div class="tree-card-director" data-person-id="${director.id}" title="${directorName}">
+          <div class="tree-director-avatar">
+            <img src="${director.img}" alt="${directorName}" onerror="this.onerror=null;this.src='logo.jpg';">
+          </div>
+          <div class="tree-director-info">
+            <span class="tree-director-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span>${gT("struct_director_badge") || "KOLLEC DİREKTORLUĞU"}</span>
+            </span>
+            <h3 class="tree-director-name">${directorName}</h3>
+            <span class="tree-director-role">${directorRole}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bağlantı Xətti 1 -> 2 -->
+      <div class="tree-stem-vertical"></div>
+
+      <!-- ═══ 2-Cİ SƏVİYYƏ: ŞAHMURAD MƏMMƏDOV VƏ İSMAYIL SƏFİYEV ═══ -->
+      <div class="tree-tier-block tier-2">
+        <div class="tree-level-deputies">
+          <div class="tree-card-deputy" data-person-id="${deputy1.id}" title="${deputy1Name}">
+            <div class="tree-deputy-avatar">
+              <img src="${deputy1.img}" alt="${deputy1Name}" onerror="this.onerror=null;this.src='logo.jpg';">
+            </div>
+            <div class="tree-deputy-info">
+              <span class="tree-deputy-badge">${gT("struct_deputies_badge") || "MÜAVİN"}</span>
+              <h4 class="tree-deputy-name">${deputy1Name}</h4>
+              <span class="tree-deputy-role">${deputy1Role}</span>
+            </div>
+          </div>
+
+          <div class="tree-card-deputy" data-person-id="${deputy2.id}" title="${deputy2Name}">
+            <div class="tree-deputy-avatar">
+              <img src="${deputy2.img}" alt="${deputy2Name}" onerror="this.onerror=null;this.src='logo.jpg';">
+            </div>
+            <div class="tree-deputy-info">
+              <span class="tree-deputy-badge">${gT("struct_deputies_badge") || "MÜAVİN"}</span>
+              <h4 class="tree-deputy-name">${deputy2Name}</h4>
+              <span class="tree-deputy-role">${deputy2Role}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bağlantı Xətti 2 -> 3 -->
+      <div class="tree-stem-vertical"></div>
+
+      <!-- ═══ 3-CÜ SƏVİYYƏ: SƏİDƏ QULİYEVA ═══ -->
+      <div class="tree-tier-block tier-3">
+        <div class="tree-level-tier3">
+          <div class="tree-card-tier3" data-person-id="${tier3.id}" title="${tier3Name}">
+            <div class="tree-tier3-avatar">
+              <img src="${tier3.img}" alt="${tier3Name}" onerror="this.onerror=null;this.src='logo.jpg';">
+            </div>
+            <div class="tree-tier3-info">
+              <span class="tree-tier3-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>${gT("struct_tier3_badge") || "YAP Ərazi Partiya Təşkilatı Sədri · Şöbə Müdiri"}</span>
+              </span>
+              <h4 class="tree-tier3-name">${tier3Name}</h4>
+              <span class="tree-tier3-role">${tier3Role}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bağlantı Xətti 3 -> 4 -->
+      <div class="tree-stem-vertical"></div>
+
+      <!-- ═══ 4-CÜ SƏVİYYƏ: ŞÖBƏ MÜDİRLƏRİ VƏ BİRLƏŞMƏ KOMİSSİYALARI ═══ -->
+      <div class="tree-tier-block tier-4">
+        <div class="tree-wings-grid">
+          <!-- Qanad 1: Tədris, İKT və Sahə Şöbələri -->
+          <div class="tree-wing-panel">
+            <div class="tree-wing-header">
+              <span class="tree-wing-icon">🎓</span>
+              <div class="tree-wing-titles">
+                <h4 class="tree-wing-title">${gT("struct_wing_academic") || "Tədris, İKT və Sahə Şöbələri"}</h4>
+                <span class="tree-wing-count">${wingAcademicStaff.length} rəhbər</span>
+              </div>
+            </div>
+            <div class="tree-wing-cards">
+              ${renderDeptCards(wingAcademicStaff)}
+            </div>
+          </div>
+
+          <!-- Qanad 2: İnzibati və Dəstək Xidmətləri -->
+          <div class="tree-wing-panel">
+            <div class="tree-wing-header">
+              <span class="tree-wing-icon">🏛️</span>
+              <div class="tree-wing-titles">
+                <h4 class="tree-wing-title">${gT("struct_wing_admin") || "İnzibati, Tələbə və Dəstək Xidmətləri"}</h4>
+                <span class="tree-wing-count">${wingAdminStaff.length} rəhbər</span>
+              </div>
+            </div>
+            <div class="tree-wing-cards">
+              ${renderDeptCards(wingAdminStaff)}
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- ═══ TƏDRİS OLUNAN İXTİSASLAR VİTRİNİ (ACADEMIC CATALOG) ═══ -->
       <div class="tree-majors-section" id="tree-majors-block">
         <div class="majors-catalog-header">
@@ -8968,7 +9073,7 @@ function initStructureModule() {
     }
 
     if (currentView === "tree") {
-      const items = treeCanvas.querySelectorAll(".major-row");
+      const items = treeCanvas.querySelectorAll(".tree-card-director, .tree-card-deputy, .tree-card-tier3, .tree-dept-card, .major-row");
       items.forEach((item) => {
         const text = (item.textContent || "").toLowerCase();
         if (!q || text.includes(q)) {
@@ -8977,7 +9082,9 @@ function initStructureModule() {
           else item.classList.remove("struct-highlight");
         } else {
           item.classList.remove("struct-highlight");
-          item.style.display = "none";
+          if (item.classList.contains("tree-dept-card") || item.classList.contains("major-row")) {
+            item.style.display = "none";
+          }
         }
       });
       // Handle department headers visibility
