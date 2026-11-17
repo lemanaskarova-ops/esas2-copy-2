@@ -1115,16 +1115,70 @@
                             <!-- Hero Media & Executive Points Grid -->
                             <div class="labor-conf-hero-grid">
                                 <div class="labor-conf-hero-media">
-                                    <div class="labor-conf-img-wrap">
-                                        <img src="emek1.jpeg" alt="“Təhsil – Təlim – Məşğulluq – Sənaye: Tərəfdaşlıq Konfransı”" class="zoomable-img" data-zoomable="true" data-caption="“Təhsil – Təlim – Məşğulluq – Sənaye: Tərəfdaşlıq Konfransı” — Dövlət Məşğulluq Agentliyi və BDRNK" data-cat-title="Əmək Bazarına Uyğunluq" loading="lazy">
+                                    <!-- Main Active Preview Image with Lightbox Zoom -->
+                                    <div class="labor-conf-img-wrap" id="labor-conf-main-wrap">
+                                        <img id="labor-conf-active-img" src="emek1.jpeg" alt="“Təhsil – Təlim – Məşğulluq – Sənaye: Tərəfdaşlıq Konfransı”" class="zoomable-img" data-zoomable="true" data-caption="“Təhsil – Təlim – Məşğulluq – Sənaye: Tərəfdaşlıq Konfransı” — Dövlət Məşğulluq Agentliyi və BDRNK (Rəsmi Heyət Görüşü)" data-cat-title="Əmək Bazarına Uyğunluq" loading="lazy">
                                         <div class="labor-conf-img-badge">
                                             <span class="labor-badge-icon">🏛️</span>
-                                            <span>Rəsmi Konfrans Görüşü</span>
+                                            <span id="labor-conf-active-badge-text">Rəsmi Konfrans Görüşü</span>
                                         </div>
                                         <span class="labor-conf-img-zoom-cue">
                                             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
                                             Böyütmək üçün klikləyin
                                         </span>
+                                    </div>
+
+                                    <!-- Multi-Version Thumbnail Switcher -->
+                                    <div class="labor-conf-thumbs" role="tablist" aria-label="Stend və Foto Versiyaları">
+                                        <button type="button" class="labor-conf-thumb-btn active" onclick="window.switchLaborConfMedia('emek1.jpeg', '“Təhsil – Təlim – Məşğulluq – Sənaye: Tərəfdaşlıq Konfransı” — Rəsmi Görüş Heyəti', 'Rəsmi Konfrans Görüşü', 'Əmək Bazarına Uyğunluq', this);" title="Versiya 1: Rəsmi Görüş Heyəti">
+                                            <img src="emek1.jpeg" alt="Versiya 1" class="labor-conf-thumb-preview">
+                                            <div class="labor-conf-thumb-info">
+                                                <span class="labor-conf-thumb-title">1. Heyət Görüşü</span>
+                                                <span class="labor-conf-thumb-sub">Rəsmi Konfrans Masası</span>
+                                            </div>
+                                        </button>
+                                        <button type="button" class="labor-conf-thumb-btn" onclick="window.switchLaborConfMedia('tecrube_terefdas2.jpeg', 'BDRNK Rəsmi İnstitusional Stendi: Tələbələrimiz İstehsalat Təcrübəsində', 'Kollec Stendi və Tələbələr', 'İstehsalat Təcrübəsi', this);" title="Versiya 2: Kollec Stendi və Tələbələrimiz">
+                                            <img src="tecrube_terefdas2.jpeg" alt="Versiya 2" class="labor-conf-thumb-preview">
+                                            <div class="labor-conf-thumb-info">
+                                                <span class="labor-conf-thumb-title">2. Tələbələr və Stend</span>
+                                                <span class="labor-conf-thumb-sub">Kollec Stendi Qarşısında</span>
+                                            </div>
+                                        </button>
+                                        <button type="button" class="labor-conf-thumb-btn" onclick="window.switchLaborConfMedia('konfrans_stend_resmi.jpg', 'BDRNK — Rəsmi İnstitusional Təqdimat Stendi (Orijinal Rəqəmsal Layihə)', 'Rəqəmsal İnstitusional Stend', 'Rəsmi Sənəd', this);" title="Versiya 3: Rəsmi İnstitusional Qrafik Stend">
+                                            <img src="konfrans_stend_resmi.jpg" alt="Versiya 3" class="labor-conf-thumb-preview">
+                                            <div class="labor-conf-thumb-info">
+                                                <span class="labor-conf-thumb-title">3. Rəqəmsal Stend</span>
+                                                <span class="labor-conf-thumb-sub">Tam Vektor Layihə</span>
+                                            </div>
+                                        </button>
+                                    </div>
+
+                                    <!-- Official PDF Viewer Call-to-Action -->
+                                    <div class="labor-conf-pdf-cta-wrap">
+                                        <button type="button" class="labor-conf-pdf-cta-btn" onclick="window.openDocumentReader('01.pdf', '“Təhsil – Təlim – Məşğulluq – Sənaye: Tərəfdaşlıq Konfransı” — Rəsmi İnstitusional Stend', 'Dövlət Məşğulluq Agentliyi və BDRNK', 'Rəsmi Təqdimat Sənədi');">
+                                            <div class="labor-conf-pdf-cta-left">
+                                                <div class="labor-conf-pdf-icon-box">
+                                                    <svg class="w-6 h-6 text-[#c59b27]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                                        <polyline points="10 9 9 9 8 9"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="labor-conf-pdf-text">
+                                                    <div class="labor-conf-pdf-heading">
+                                                        <span>Rəsmi PDF Versiyanı Oxu Zalında Aç</span>
+                                                        <span class="labor-conf-pdf-chip">01.pdf</span>
+                                                    </div>
+                                                    <p class="labor-conf-pdf-desc">Tariximiz, ixtisaslar və istehsalat təcrübəsi rəsmi konfrans stendinin orijinal rəqəmsal nəşri</p>
+                                                </div>
+                                            </div>
+                                            <div class="labor-conf-pdf-arrow-box">
+                                                <span>Oxu Zalında Aç</span>
+                                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                            </div>
+                                        </button>
                                     </div>
                                 </div>
 
@@ -1218,9 +1272,15 @@
                                         Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci tələbələrinin ixtisas üzrə təcrübə keçmə qaydası
                                     </h4>
                                 </div>
-                                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#c59b27]/10 border border-[#c59b27]/30 text-xs font-bold text-[#c59b27]">
-                                    <span>✍️ İstehsalat təcrübə rəhbəri:</span>
-                                    <strong>X. S. Süleymanov</strong>
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#c59b27]/10 border border-[#c59b27]/30 text-xs font-bold text-[#c59b27]">
+                                        <span>✍️ İstehsalat təcrübə rəhbəri:</span>
+                                        <strong>X. S. Süleymanov</strong>
+                                    </div>
+                                    <button type="button" onclick="window.openDocumentReader('01.pdf', 'BDRNK — Tələbələrimiz İstehsalat Təcrübəsində Rəsmi Stendi', 'BDRNK İstehsalat Təcrübəsi', 'Rəsmi Sənəd');" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900 text-white hover:bg-[#c59b27] hover:text-[#0a2240] border border-[#c59b27]/40 text-xs font-bold transition-all shadow-sm cursor-pointer">
+                                        <svg class="w-4 h-4 text-[#c59b27]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                                        <span>📄 Rəsmi PDF Stendə Bax (01.pdf)</span>
+                                    </button>
                                 </div>
                             </div>
 
