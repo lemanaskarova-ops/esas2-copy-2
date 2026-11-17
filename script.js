@@ -3099,7 +3099,7 @@ const staffData = {
       role_az: "Metodist",
       role_en: "Methodist",
       role_ru: "Методист",
-      img: "selalex1.jpeg",
+      img: "logo.jpg",
     },
     {
       id: "25",
@@ -8702,7 +8702,7 @@ function initStructureModule() {
     else if (person.id === "23") photoClass = "yegane-photo";
     else if (person.id === "24") photoClass = "natiq-photo";
     else if (person.id === "25") photoClass = "sevda-photo";
-    else if (person.id === "26") photoClass = "selale-photo";
+    else if (person.id === "26" && person.img !== "logo.jpg") photoClass = "selale-photo";
 
     const bioText = person[`bio_${currentLang}`] || person.bio_az;
     const highlights = person.highlights || [];
