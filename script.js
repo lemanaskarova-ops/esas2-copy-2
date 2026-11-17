@@ -3447,6 +3447,27 @@ const staffData = {
 
 const newsData = [
   {
+      "id": 117,
+      "official_id": "open_lesson_transport_shipping_2026",
+      "title_az": "“Nəqliyyatda daşınmalar” mövzusu üzrə açıq dərs və tədris videomaterialları",
+      "title_en": "Open Lesson and Educational Video Materials on “Transport Shipping”",
+      "title_ru": "Открытый урок и учебные видеоматериалы по теме «Перевозки на транспорте»",
+      "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimləri Xumar Cəmilova, Gülər Mustafayeva və Coşqun Yəhyayevin “Nəqliyyatda daşınmalar” mövzusunda apardıqları dərslərə dair təqdim olunan videomateriallar.",
+      "desc_en": "Educational video materials from open lessons on “Transport Shipping” conducted by teachers Khumar Jamilova, Gular Mustafayeva, and Joshgun Yahyayev at Baku State Communications and Transport College.",
+      "desc_ru": "Учебные видеоматериалы открытых уроков по теме «Перевозки на транспорте», проведенных преподавателями Хумар Джамиловой, Гюляр Мустафаевой и Джошгуном Яхьяевым в Бакинском государственном колледже связи и транспорта.",
+      "full_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimləri Xumar Cəmilova, Gülər Mustafayeva və Coşqun Yəhyayevin “Nəqliyyatda daşınmalar” mövzusunda apardıqları dərslərə dair videomateriallar təqdim olunmuşdur.\n\nVideolarda mövzunun tədrisi, dərsin təşkili, istifadə olunan təlim metodları və tələbələrin dərs prosesində fəal iştirakı nümayiş etdirilir.\n\nBu videomaterialların paylaşılmasında əsas məqsəd qabaqcıl pedaqoji təcrübənin öyrənilməsi, müəllimlər arasında təcrübə mübadiləsinin genişləndirilməsi və nəqliyyat sahəsi üzrə tədrisin keyfiyyətinin daha da artırılmasına töhfə verməkdir.",
+      "full_en": "Video materials on the lessons conducted on “Transport Shipping” by teachers Khumar Jamilova, Gular Mustafayeva, and Joshgun Yahyayev at Baku State Communications and Transport College have been presented.\n\nThe videos demonstrate the teaching methodology, organization of the lesson, interactive instructional methods, and active participation of students in the learning process.\n\nThe primary goal of sharing these video materials is to explore innovative pedagogical practices, foster professional experience exchange among educators, and enhance the quality of education in the transport sector.",
+      "full_ru": "Представлены видеоматериалы открытых уроков по теме «Перевозки на транспорте», проведенных преподавателями Бакинского государственного колледжа связи и транспорта Хумар Джамиловой, Гюляр Мустафаевой и Джошгуном Яхьяевым.\n\nВ видеоматериалах наглядно продемонстрированы методика преподавания темы, организация учебного процесса, современные интерактивные методы обучения и активное участие студентов.\n\nОсновная цель публикации данных видеоматериалов — изучение передового педагогического опыта, расширение профессионального обмена среди преподавателей и повышение качества образования в транспортной сфере.",
+      "date": "17 Noyabr 2026",
+      "date_az": "17 Noyabr 2026",
+      "date_en": "17 November 2026",
+      "date_ru": "17 Ноября 2026",
+      "image": "WhatsApp Video 2026-11-16 at 12.42.38.mp4",
+      "tag_az": "Açıq Dərs",
+      "tag_en": "Open Lesson",
+      "tag_ru": "Открытый Урок"
+  },
+  {
       "id": 116,
       "official_id": "reyhan_aciq_ders_2026",
       "title_az": "Şəmsiyeva Reyhan müəllimin “Naqilsiz rabitə texnologiyası” fənnindən açıq dərsi keçirildi",
@@ -11859,6 +11880,17 @@ function initGalleryModule() {
       }
     ],
     study: [
+      {
+        type: "video",
+        src: "WhatsApp Video 2026-11-16 at 12.42.38.mp4",
+        tall: true,
+        label: "Nəqliyyatda daşınmalar · Açıq Dərs (Xumar Cəmilova, Gülər Mustafayeva, Coşqun Yəhyayev)",
+        label_az: "Nəqliyyatda daşınmalar · Açıq Dərs (Xumar Cəmilova, Gülər Mustafayeva, Coşqun Yəhyayev)",
+        label_en: "Transport Shipping · Open Lesson (Khumar Jamilova, Gular Mustafayeva, Joshgun Yahyayev)",
+        label_ru: "Перевозки на транспорте · Открытый урок (Хумар Джамилова, Гюляр Мустафаева, Джошгун Яхьяев)",
+        badge: "AÇIQ DƏRS",
+        i18n: "gallery_cat_study",
+      },
       {
         type: "video",
         src: "reyhan.mp4",
