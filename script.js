@@ -11714,6 +11714,17 @@ function initGalleryModule() {
     events: [
       {
         type: "video",
+        src: "WhatsApp Video 2026-11-16 at 14.08.23.mp4",
+        tall: true,
+        label: "Kollec Tədbiri · Rəsmi Xronika",
+        label_az: "Kollec Tədbiri · Rəsmi Xronika",
+        label_en: "College Event · Official Chronicle",
+        label_ru: "Мероприятие колледжа · Официальная хроника",
+        badge: "TƏDBİR",
+        i18n: "gallery_event_reel",
+      },
+      {
+        type: "video",
         src: "8noyabr.mp4",
         label: "8 Noyabr Zəfər Günü Təntənəli Tədbiri",
         label_az: "8 Noyabr Zəfər Günü Təntənəli Tədbiri",
