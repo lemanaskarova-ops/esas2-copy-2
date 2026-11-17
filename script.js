@@ -885,8 +885,8 @@ const i18n = {
     search_hint_text: "Sürətli naviqasiya üçün axtardığınız mövzunu yazın və ya kateqoriyalardan birini seçin:",
     search_chip_cs: "💻 Kompüter sistemləri",
     search_chip_senan: "⭐ Sənan Mirzəzadə (Fəxri tələbə)",
-    search_chip_edebiyyat: "📖 Ədəbiyyat (edebiyyatfb.docx)",
-    search_chip_tarix: "🏛️ Azərbaycan Tarixi (aztarixifb.docx)",
+    search_chip_edebiyyat: "📖 Ədəbiyyat (edebiyyatfb.pdf)",
+    search_chip_tarix: "🏛️ Azərbaycan Tarixi (aztarixifb.pdf)",
     search_chip_science: "🔬 Aytən Namazova (Elmi məqalələr)",
     search_chip_admission: "❓ Qəbul qaydaları və ballar",
     search_chip_telecom: "📡 Telekommunikasiya",
@@ -941,7 +941,7 @@ const i18n = {
     bento_1_t: "Struktur & İxtisaslar",
     bento_1_d: "Rəhbərlik, 10 FBK şöbəsi və qəbul ixtisas cədvəlləri",
     bento_2_t: "Elektron Kitabxana",
-    bento_2_d: "Dərsliklər, DOCX/PDF mühazirə fondu və rəqəmsal oxu zalı",
+    bento_2_d: "Dərsliklər, PDF mühazirə fondu və rəqəmsal oxu zalı",
     bento_3_t: "Tədris, Video & Elm",
     bento_3_d: "19 videodərs, 12 tədqiqatçı alim, IEQC sertifikatları və karyera",
     bento_4_t: "İnteraktiv Kampus",
@@ -1828,8 +1828,8 @@ const i18n = {
     search_hint_text: "Type your query for instant navigation or select one of the categories above:",
     search_chip_cs: "💻 Computer Systems",
     search_chip_senan: "⭐ Sanan Mirzazada (Honor student)",
-    search_chip_edebiyyat: "📖 Literature (edebiyyatfb.docx)",
-    search_chip_tarix: "🏛️ History of Azerbaijan (aztarixifb.docx)",
+    search_chip_edebiyyat: "📖 Literature (edebiyyatfb.pdf)",
+    search_chip_tarix: "🏛️ History of Azerbaijan (aztarixifb.pdf)",
     search_chip_science: "🔬 Ayten Namazova (Publications)",
     search_chip_admission: "❓ Admission rules & scores",
     search_chip_telecom: "📡 Telecommunications",
@@ -1884,7 +1884,7 @@ const i18n = {
     bento_1_t: "Structure & Majors",
     bento_1_d: "Leadership, 10 Subject Commissions and admission specialty tables",
     bento_2_t: "Electronic Library",
-    bento_2_d: "Textbooks, DOCX/PDF lecture archive and digital reading room",
+    bento_2_d: "Textbooks, PDF lecture archive and digital reading room",
     bento_3_t: "Academics, Video & Science",
     bento_3_d: "19 video lectures, 12 researchers, IEQC certificates and career roadmap",
     bento_4_t: "Interactive Campus",
@@ -2770,8 +2770,8 @@ const i18n = {
     search_hint_text: "Введите запрос для быстрой навигации или выберите одну из категорий выше:",
     search_chip_cs: "💻 Компьютерные системы",
     search_chip_senan: "⭐ Санан Мирзазаде (Почетный студент)",
-    search_chip_edebiyyat: "📖 Литература (edebiyyatfb.docx)",
-    search_chip_tarix: "🏛️ История Азербайджана (aztarixifb.docx)",
+    search_chip_edebiyyat: "📖 Литература (edebiyyatfb.pdf)",
+    search_chip_tarix: "🏛️ История Азербайджана (aztarixifb.pdf)",
     search_chip_science: "🔬 Айтен Намазова (Статьи)",
     search_chip_admission: "❓ Правила приема и баллы",
     search_chip_telecom: "📡 Телекоммуникации",
@@ -2826,7 +2826,7 @@ const i18n = {
     bento_1_t: "Структура и Специальности",
     bento_1_d: "Руководство, 10 предметных комиссий и таблицы приема",
     bento_2_t: "Электронная Библиотека",
-    bento_2_d: "Учебники, архив лекций DOCX/PDF и цифровой читальный зал",
+    bento_2_d: "Учебники, архив лекций PDF и цифровой читальный зал",
     bento_3_t: "Обучение, Видео и Наука",
     bento_3_d: "19 видеолекций, 12 исследователей, сертификаты IEQC и карта пути",
     bento_4_t: "Интерактивный Кампус",
@@ -6016,7 +6016,7 @@ const libraryData = [
     author_ru: "Автор: Натаван Гусейнова",
     category: "azer_dili",
     icon: "📢",
-    url: "KOMMUNİKASİYA DF 2.docx",
+    url: "KOMMUNİKASİYA DF 2.pdf",
   },
   {
     id: 6,
@@ -6040,7 +6040,7 @@ const libraryData = [
     author_ru: "Авторы: Ф.В. Велиева, М.А. Меликова",
     category: "informatika",
     icon: "🔒",
-    url: "ISTT_dərslik — əsas.docx",
+    url: "ISTT_dərslik — əsas.pdf",
   },
   {
     id: 8,
@@ -6052,7 +6052,7 @@ const libraryData = [
     author_ru: "Автор: Фарида Мамедова",
     category: "informatika",
     icon: "🎨",
-    url: "Kompyuter qrafikası.docx",
+    url: "Kompyuter qrafikası.pdf",
   },
   {
     id: 9,
@@ -6076,7 +6076,7 @@ const libraryData = [
     author_ru: "Автор: Фарида Мамедова",
     category: "informatika",
     icon: "🌐",
-    url: "Kompyuter şəbəkəsinin proqram  təminatı.docx",
+    url: "Kompyuter şəbəkəsinin proqram  təminatı.pdf",
   },
   {
     id: 11,
@@ -6088,7 +6088,7 @@ const libraryData = [
     author_ru: "Автор: Гульнара Алиева",
     category: "informatika",
     icon: "📡",
-    url: "Kompüter şəbəkələri  derslik.docx",
+    url: "Kompüter şəbəkələri  derslik.pdf",
   },
   {
     id: 12,
@@ -6100,7 +6100,7 @@ const libraryData = [
     author_ru: "Автор: Лейла Махмудбейли",
     category: "informatika",
     icon: "💻",
-    url: "DƏRSLİK  İT 3.docx",
+    url: "DƏRSLİK  İT 3.pdf",
   },
   {
     id: 13,
@@ -6148,7 +6148,7 @@ const libraryData = [
     author_ru: "Автор: Аида Сираджова",
     category: "sxematexnika",
     icon: "🔌",
-    url: "DƏRSLİK  SXEMATEXNİKA-1 (2) (2).docx",
+    url: "DƏRSLİK  SXEMATEXNİKA-1 (2) (2).pdf",
   },
   {
     id: 17,
@@ -6184,7 +6184,7 @@ const libraryData = [
     author_ru: "Автор: Самире Имамелиева",
     category: "rus_dili",
     icon: "🇷🇺",
-    url: "1Русский язык 1 курс (лекции) (1).docx",
+    url: "1Русский язык 1 курс (лекции) (1).pdf",
   },
   {
     id: 20,
@@ -6196,7 +6196,7 @@ const libraryData = [
     author_ru: "Авторы: Айгюн Годжаева, Самире Имамелиева",
     category: "rus_dili",
     icon: "🇷🇺",
-    url: "2Русский язык 2 курс лекции книга  (1).docx",
+    url: "2Русский язык 2 курс лекции книга  (1).pdf",
   },
   {
     id: 21,
@@ -6232,7 +6232,7 @@ const libraryData = [
     author_ru: "Авторы: Антига Эминалиева, Кенуль Махмудова",
     category: "ekologiya",
     icon: "🌱",
-    url: "EKOLOJİ MONİTORİNQ.DƏRSLİK.Yeni (1).docx",
+    url: "EKOLOJİ MONİTORİNQ.DƏRSLİK.Yeni (1).pdf",
   },
   {
     id: 24,
@@ -6316,7 +6316,7 @@ const libraryData = [
     author_ru: "Автор: Шукуфа Алыева",
     category: "edne",
     icon: "⚡",
-    url: "Ş.M. Alıyeva EDNƏ dərslik 2023 (1).docx",
+    url: "Ş.M. Alıyeva EDNƏ dərslik 2023 (1).pdf",
   },
   {
     id: 31,
@@ -6328,7 +6328,7 @@ const libraryData = [
     author_ru: "Автор: Илаха Аббаслы",
     category: "menecment",
     icon: "📊",
-    url: "Abbaslı İlahə Akif qızı (1) (1) (1).docx",
+    url: "Abbaslı İlahə Akif qızı (1) (1) (1).pdf",
   },
   {
     id: 32,
@@ -6352,7 +6352,7 @@ const libraryData = [
     author_ru: "Авторы: Гасанлы Ламан, Алиева Натаван",
     category: "sebeke_avadanliqlari",
     icon: "🔌",
-    url: "BÖLMƏ Kitab Natavan mm Ləman m (1).docx",
+    url: "BÖLMƏ Kitab Natavan mm Ləman m (1).pdf",
   },
   {
     id: 34,
@@ -6424,7 +6424,7 @@ const libraryData = [
     author_ru: "Авторы: Бабек Ахмедли, Гюляр Мустафаева",
     category: "transport",
     icon: "🚗",
-    url: "Nəqliyyat vasitələrinin diaqnostikası 1 (2) (1).docx",
+    url: "Nəqliyyat vasitələrinin diaqnostikası 1 (2) (1).pdf",
   },
   {
     id: 40,
@@ -6448,7 +6448,7 @@ const libraryData = [
     author_ru: "Автор: Рамиля Пашаева Рза гызы",
     category: "fizika",
     icon: "⚛️",
-    url: "fizika dərs vəsaiti yeni A5.docx",
+    url: "fizika dərs vəsaiti yeni A5.pdf",
   },
   {
     id: 42,
@@ -6472,7 +6472,7 @@ const libraryData = [
     author_ru: "ФБК Азербайджанского языка и литературы",
     category: "humanitar",
     icon: "📖",
-    url: "edebiyyatfb.docx",
+    url: "edebiyyatfb.pdf",
   },
   {
     id: 44,
@@ -6484,7 +6484,7 @@ const libraryData = [
     author_ru: "ФБК Гуманитарных и общественных наук (Саида Гулиева)",
     category: "humanitar",
     icon: "🏛️",
-    url: "aztarixifb.docx",
+    url: "aztarixifb.pdf",
   },
   {
     id: 45,
@@ -6508,7 +6508,7 @@ const libraryData = [
     author_ru: "ФБК Гуманитарных и общественных наук (Саида Гулиева)",
     category: "humanitar",
     icon: "🌍",
-    url: "umtarixfb.docx",
+    url: "umtarixfb.pdf",
   },
   {
     id: 47,
@@ -6520,7 +6520,7 @@ const libraryData = [
     author_ru: "Преподаватель: Вюсала Мамедова (ФБК-06)",
     category: "humanitar",
     icon: "📖",
-    url: "azdilifb.docx",
+    url: "azdilifb.pdf",
   },
   {
     id: 48,
@@ -6532,7 +6532,7 @@ const libraryData = [
     author_ru: "ФБК Гуманитарных и общественных наук",
     category: "humanitar",
     icon: "⚖️",
-    url: "yeni mühazirələr.docx",
+    url: "yeni mühazirələr.pdf",
   },
   {
     id: 49,
@@ -6688,7 +6688,7 @@ const libraryData = [
     author_ru: "Преподаватель: Натаван Гусейнова (ФБК-06)",
     category: "humanitar",
     icon: "💬",
-    url: "KOMMUNİKASİYA DF 2 (1).docx",
+    url: "KOMMUNİKASİYA DF 2 (1).pdf",
   },
   {
     id: 62,
@@ -6712,7 +6712,7 @@ const libraryData = [
     author_ru: "Антига Эминалиева, Кенуль Махмудова",
     category: "cografiya",
     icon: "🗺️",
-    url: "II-yarımil.Coğrafiyadan mövzular.2024.docx",
+    url: "II-yarımil.Coğrafiyadan mövzular.2024.pdf",
   },
   {
     id: 64,
@@ -6724,7 +6724,7 @@ const libraryData = [
     author_ru: "Технологии связи и сетей",
     category: "rabite",
     icon: "📡",
-    url: "naqilsiz muhazirə.docx",
+    url: "naqilsiz muhazirə.pdf",
   },
   {
     id: 65,
@@ -6736,7 +6736,7 @@ const libraryData = [
     author_ru: "ФБК Систем мобильной связи",
     category: "rabite",
     icon: "📲",
-    url: "Mobil_rabite_kommutasiya_merkezleri_yenilenmis_tedris_vesaiti.docx",
+    url: "Mobil_rabite_kommutasiya_merkezleri_yenilenmis_tedris_vesaiti.pdf",
   },
   {
     id: 66,
@@ -6748,7 +6748,7 @@ const libraryData = [
     author_ru: "Теория электрической связи",
     category: "rabite",
     icon: "📶",
-    url: "Siqnallar ve sistemler 2023.docx",
+    url: "Siqnallar ve sistemler 2023.pdf",
   },
   {
     id: 67,
@@ -6760,7 +6760,7 @@ const libraryData = [
     author_ru: "Преподаватель: Гюльсум Нуриева",
     category: "menecment",
     icon: "💰",
-    url: "Vergi sistemi  Vergitutma.docx",
+    url: "Vergi sistemi  Vergitutma.pdf",
   },
   {
     id: 68,
@@ -6772,7 +6772,7 @@ const libraryData = [
     author_ru: "Преподаватель: Мансурова Севда",
     category: "rus_dili",
     icon: "📊",
-    url: "Vergi (rus).docx",
+    url: "Vergi (rus).pdf",
   },
   {
     id: 69,
@@ -6784,7 +6784,7 @@ const libraryData = [
     author_ru: "ФБК Экономики и управления",
     category: "menecment",
     icon: "📈",
-    url: "Statistika.docx",
+    url: "Statistika.pdf",
   },
   {
     id: 70,
@@ -6796,7 +6796,7 @@ const libraryData = [
     author_ru: "Преподаватель: Мансурова С.М.",
     category: "rus_dili",
     icon: "💼",
-    url: "Sahib.esas.ve biznese giris(rus).docx",
+    url: "Sahib.esas.ve biznese giris(rus).pdf",
   },
   {
     id: 71,
@@ -6808,7 +6808,7 @@ const libraryData = [
     author_ru: "ФБК Экономики и управления",
     category: "menecment",
     icon: "💼",
-    url: "Sahib.esas. ve bizn.giris (az).docx",
+    url: "Sahib.esas. ve bizn.giris (az).pdf",
   },
   {
     id: 72,
@@ -6820,7 +6820,7 @@ const libraryData = [
     author_ru: "ФБК Экономики и статистики",
     category: "rabite",
     icon: "📊",
-    url: "Rabite statistikasi(az).docx",
+    url: "Rabite statistikasi(az).pdf",
   },
   {
     id: 73,
@@ -6832,7 +6832,7 @@ const libraryData = [
     author_ru: "ФБК Экономики и статистики (Русский сектор)",
     category: "rabite",
     icon: "📊",
-    url: "Rabite statistikasi (rus).docx",
+    url: "Rabite statistikasi (rus).pdf",
   },
   {
     id: 74,
@@ -6856,7 +6856,7 @@ const libraryData = [
     author_ru: "ФБК Транспорта и логистики",
     category: "transport",
     icon: "🛡️",
-    url: "Neqliyyatda siqorta.docx",
+    url: "Neqliyyatda siqorta.pdf",
   },
   {
     id: 76,
@@ -6868,7 +6868,7 @@ const libraryData = [
     author_ru: "ФБК Экономики и управления (Русский сектор)",
     category: "menecment",
     icon: "📈",
-    url: "Menecment (rus).docx",
+    url: "Menecment (rus).pdf",
   },
   {
     id: 77,
@@ -6880,7 +6880,7 @@ const libraryData = [
     author_ru: "ФБК Экономики и управления",
     category: "menecment",
     icon: "📈",
-    url: "Menecment (az).docx",
+    url: "Menecment (az).pdf",
   },
   {
     id: 78,
@@ -6892,7 +6892,7 @@ const libraryData = [
     author_ru: "Преподаватель: Мансурова Севда",
     category: "menecment",
     icon: "📣",
-    url: "Marketinq (rus).docx",
+    url: "Marketinq (rus).pdf",
   },
   {
     id: 79,
@@ -6904,7 +6904,7 @@ const libraryData = [
     author_ru: "ФБК Экономики и управления",
     category: "menecment",
     icon: "📣",
-    url: "Marketinq (az).docx",
+    url: "Marketinq (az).pdf",
   },
   {
     id: 80,
@@ -6916,7 +6916,7 @@ const libraryData = [
     author_ru: "Преподаватель: Азиза Кулиева (ФБК Экономики и финансов)",
     category: "menecment",
     icon: "💰",
-    url: "maliyye ucotu.docx",
+    url: "maliyye ucotu.pdf",
   },
   {
     id: 81,
@@ -6928,7 +6928,7 @@ const libraryData = [
     author_ru: "Преподаватель: Нуриева Гюльсум (ФБК Экономики и финансов)",
     category: "menecment",
     icon: "💳",
-    url: "Maliyye kredit.docx",
+    url: "Maliyye kredit.pdf",
   },
   {
     id: 82,
@@ -6940,7 +6940,7 @@ const libraryData = [
     author_ru: "Преподаватель: Мансурова Севда",
     category: "rabite",
     icon: "📮",
-    url: "BPR(rus).docx",
+    url: "BPR(rus).pdf",
   },
   {
     id: 83,
@@ -8350,25 +8350,25 @@ function initStructureModule() {
           return `<a href="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" target="_blank" download="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" class="fbk-chip fbk-chip-has-doc" title="Konstruksiya materiallarının texnologiyası (Alidə Mahmudova, 28 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🔩</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
         }
         if (fbk.id === "fbk-6" && (d === "Azərbaycan Dili" || d.includes("Azərbaycan Dili"))) {
-          return `<a href="azdilifb.docx" download="azdilifb.docx" class="fbk-chip fbk-chip-has-doc" title="Azərbaycan dili fənnindən mühazirələr toplusu (azdilifb.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
+          return `<a href="azdilifb.pdf" download="azdilifb.pdf" class="fbk-chip fbk-chip-has-doc" title="Azərbaycan dili fənnindən mühazirələr toplusu (azdilifb.pdf) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
         }
         if (fbk.id === "fbk-6" && (d === "Ədəbiyyat" || d.includes("Ədəbiyyat"))) {
-          return `<a href="edebiyyatfb.docx" download="edebiyyatfb.docx" class="fbk-chip fbk-chip-has-doc" title="Ədəbiyyat fənnindən mühazirələr toplusu (edebiyyatfb.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
+          return `<a href="edebiyyatfb.pdf" download="edebiyyatfb.pdf" class="fbk-chip fbk-chip-has-doc" title="Ədəbiyyat fənnindən mühazirələr toplusu (edebiyyatfb.pdf) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
         }
         if (fbk.id === "fbk-6" && (d.includes("Kommunikasiya") || d.includes("İşgüzar") || d.includes("Yazışmalar"))) {
-          return `<a href="KOMMUNİKASİYA DF 2 (1).docx" download="KOMMUNİKASİYA DF 2 (1).docx" class="fbk-chip fbk-chip-has-doc" title="İşgüzar və akademik kommunikasiya (Natəvan Hüseynova, 25 000+ söz, DOCX) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">💬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
+          return `<a href="KOMMUNİKASİYA DF 2 (1).pdf" download="KOMMUNİKASİYA DF 2 (1).pdf" class="fbk-chip fbk-chip-has-doc" title="İşgüzar və akademik kommunikasiya (Natəvan Hüseynova, 25 000+ söz, DOCX) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">💬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
         }
         if (fbk.id === "fbk-7" && (d === "Azərbaycan Tarixi" || d.includes("Azərbaycan Tarixi"))) {
-          return `<a href="aztarixi2fb.pdf" target="_blank" download="aztarixi2fb.pdf" class="fbk-chip fbk-chip-has-doc" title="Azərbaycan tarixi rəsmi dərslik və mühazirə vəsaiti (495 səhifə, PDF & DOCX) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🏛️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF + DOCX</span></a>`;
+          return `<a href="aztarixi2fb.pdf" target="_blank" download="aztarixi2fb.pdf" class="fbk-chip fbk-chip-has-doc" title="Azərbaycan tarixi rəsmi dərslik və mühazirə vəsaiti (495 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🏛️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
         }
         if (fbk.id === "fbk-7" && (d === "Ümumi Tarix" || d.includes("Ümumi Tarix"))) {
-          return `<a href="umtarixfb.docx" download="umtarixfb.docx" class="fbk-chip fbk-chip-has-doc" title="Ümumi tarix fənnindən mühazirələr toplusu (umtarixfb.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌍</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
+          return `<a href="umtarixfb.pdf" download="umtarixfb.pdf" class="fbk-chip fbk-chip-has-doc" title="Ümumi tarix fənnindən mühazirələr toplusu (umtarixfb.pdf) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌍</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
         }
         if (fbk.id === "fbk-7" && (d === "Hüququn Əsasları" || d.includes("Hüququn Əsasları") || d.includes("Hüquq"))) {
-          return `<a href="yeni mühazirələr.docx" download="yeni mühazirələr.docx" class="fbk-chip fbk-chip-has-doc" title="Hüququn əsasları fənnindən mühazirələr toplusu (yeni mühazirələr.docx) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">⚖️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 DOCX</span></a>`;
+          return `<a href="yeni mühazirələr.pdf" download="yeni mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" title="Hüququn əsasları fənnindən mühazirələr toplusu (yeni mühazirələr.pdf) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">⚖️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
         }
         if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
-          return `<a href="1Русский язык 1 курс (лекции) (1).docx" download="1Русский язык 1 курс (лекции) (1).docx" class="fbk-chip fbk-chip-has-doc" title="Rus dili I və II kurs mühazirələr toplusu (DOCX) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">🇷🇺</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 2 DOCX</span></a>`;
+          return `<a href="1Русский язык 1 курс (лекции) (1).pdf" download="1Русский язык 1 курс (лекции) (1).pdf" class="fbk-chip fbk-chip-has-doc" title="Rus dili I və II kurs mühazirələr toplusu (DOCX) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">🇷🇺</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 2 PDF</span></a>`;
         }
         if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
           return `<a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" title="Ətraf mühitin qorunması və bərpası (ƏMM) fənnindən mühazirələr toplusu (98 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌱</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
@@ -8449,25 +8449,25 @@ function initStructureModule() {
               return `<a href="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" target="_blank" download="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf (28 Səhifə PDF)"><span>🔩 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
             }
             if (fbk.id === "fbk-6" && (d === "Azərbaycan Dili" || d.includes("Azərbaycan Dili"))) {
-              return `<a href="azdilifb.docx" download="azdilifb.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: azdilifb.docx (36 Saat)"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
+              return `<a href="azdilifb.pdf" download="azdilifb.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: azdilifb.pdf (36 Saat)"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
             }
             if (fbk.id === "fbk-6" && (d === "Ədəbiyyat" || d.includes("Ədəbiyyat"))) {
-              return `<a href="edebiyyatfb.docx" download="edebiyyatfb.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: edebiyyatfb.docx"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
+              return `<a href="edebiyyatfb.pdf" download="edebiyyatfb.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: edebiyyatfb.pdf"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
             }
             if (fbk.id === "fbk-6" && (d.includes("Kommunikasiya") || d.includes("İşgüzar") || d.includes("Yazışmalar"))) {
-              return `<a href="KOMMUNİKASİYA DF 2 (1).docx" download="KOMMUNİKASİYA DF 2 (1).docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: KOMMUNİKASİYA DF 2 (1).docx (Natəvan Hüseynova, 25 000+ söz)"><span>💬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
+              return `<a href="KOMMUNİKASİYA DF 2 (1).pdf" download="KOMMUNİKASİYA DF 2 (1).pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: KOMMUNİKASİYA DF 2 (1).pdf (Natəvan Hüseynova, 25 000+ söz)"><span>💬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
             }
             if (fbk.id === "fbk-7" && (d === "Azərbaycan Tarixi" || d.includes("Azərbaycan Tarixi"))) {
-              return `<a href="aztarixi2fb.pdf" target="_blank" download="aztarixi2fb.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: aztarixi2fb.pdf (495 Səhifə)"><span>🏛️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF & DOCX</span></a>`;
+              return `<a href="aztarixi2fb.pdf" target="_blank" download="aztarixi2fb.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: aztarixi2fb.pdf (495 Səhifə)"><span>🏛️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
             }
             if (fbk.id === "fbk-7" && (d === "Ümumi Tarix" || d.includes("Ümumi Tarix"))) {
-              return `<a href="umtarixfb.docx" download="umtarixfb.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: umtarixfb.docx (36 Saat)"><span>🌍 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
+              return `<a href="umtarixfb.pdf" download="umtarixfb.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: umtarixfb.pdf (36 Saat)"><span>🌍 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
             }
             if (fbk.id === "fbk-7" && (d === "Hüququn Əsasları" || d.includes("Hüququn Əsasları") || d.includes("Hüquq"))) {
-              return `<a href="yeni mühazirələr.docx" download="yeni mühazirələr.docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: yeni mühazirələr.docx (8 Mövzu, 16 000+ söz)"><span>⚖️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 DOCX</span></a>`;
+              return `<a href="yeni mühazirələr.pdf" download="yeni mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: yeni mühazirələr.pdf (8 Mövzu, 16 000+ söz)"><span>⚖️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
             }
             if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
-              return `<a href="1Русский язык 1 курс (лекции) (1).docx" download="1Русский язык 1 курс (лекции) (1).docx" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: Rus Dili I və II Kurs Mühazirələr (DOCX)"><span>🇷🇺 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 2 DOCX</span></a>`;
+              return `<a href="1Русский язык 1 курс (лекции) (1).pdf" download="1Русский язык 1 курс (лекции) (1).pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: Rus Dili I və II Kurs Mühazirələr (DOCX)"><span>🇷🇺 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 2 PDF</span></a>`;
             }
             if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
               return `<a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: ƏMM mühazirələr.pdf (98 Səhifə PDF)"><span>🌱 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
@@ -8696,13 +8696,13 @@ function initStructureModule() {
                           <span>Rəsmi Dərs Vəsaiti</span> • <span>DOCX</span> • <span>36 Saat</span>
                         </div>
                         <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Azərbaycan Dili Fənnindən Mühazirələr Toplusu</h4>
-                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Müəllimə: Məmmədova Vüsalə (FBK-06). I kurs I semestr 36 saatlıq tədris proqramı, dilin funksiyaları, nitq mədəniyyəti və qrammatika təlimi (azdilifb.docx).</p>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Müəllimə: Məmmədova Vüsalə (FBK-06). I kurs I semestr 36 saatlıq tədris proqramı, dilin funksiyaları, nitq mədəniyyəti və qrammatika təlimi (azdilifb.pdf).</p>
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="azdilifb.docx" download="azdilifb.docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                      <a href="azdilifb.pdf" download="azdilifb.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>azdilifb.docx Faylını Yüklə</span>
+                        <span>azdilifb.pdf Faylını Aç / Yüklə</span>
                       </a>
                     </div>
                   </div>
@@ -8716,13 +8716,13 @@ function initStructureModule() {
                           <span>Rəsmi Dərs Vəsaiti</span> • <span>DOCX</span> • <span>15 000+ söz</span>
                         </div>
                         <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Ədəbiyyat Fənnindən Mühazirələr Toplusu</h4>
-                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Dədə Qorqud eposundan başlayaraq klassik və müasir Azərbaycan ədəbiyyatını, nəzəriyyə və təhlilləri əhatə edən tam akademik tədris və mühazirə vəsaiti (edebiyyatfb.docx).</p>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Dədə Qorqud eposundan başlayaraq klassik və müasir Azərbaycan ədəbiyyatını, nəzəriyyə və təhlilləri əhatə edən tam akademik tədris və mühazirə vəsaiti (edebiyyatfb.pdf).</p>
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="edebiyyatfb.docx" download="edebiyyatfb.docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                      <a href="edebiyyatfb.pdf" download="edebiyyatfb.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>edebiyyatfb.docx Faylını Yüklə</span>
+                        <span>edebiyyatfb.pdf Faylını Aç / Yüklə</span>
                       </a>
                     </div>
                   </div>
@@ -8740,9 +8740,9 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="KOMMUNİKASİYA DF 2 (1).docx" download="KOMMUNİKASİYA DF 2 (1).docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                      <a href="KOMMUNİKASİYA DF 2 (1).pdf" download="KOMMUNİKASİYA DF 2 (1).pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Kommunikasiya Mühazirəsini Yüklə (DOCX)</span>
+                        <span>Kommunikasiya Mühazirəsini Aç / Yüklə (PDF)</span>
                       </a>
                     </div>
                   </div>
@@ -8756,7 +8756,7 @@ function initStructureModule() {
                       <div style="font-size:2.2rem; line-height:1;">🏛️</div>
                       <div style="flex:1;">
                         <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
-                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF & DOCX</span> • <span>495 Səhifə</span> • <span>72 Saat</span>
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>495 Səhifə</span> • <span>72 Saat</span>
                         </div>
                         <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Azərbaycan Tarixi Fənnindən Fundamental Mühazirələr Toplusu</h4>
                         <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Müəllif: Səidə Quliyeva (FBK-07). İbtidai icma quruluşundan başlayaraq Manna, Atropatena, Albaniya, Sasanilər, orta əsrlər, müasir dövr və Zəfər tariximizə qədər bütün tarixi dövrləri əhatə edən 495 səhifəlik fundamental tədris və mühazirə vəsaiti.</p>
@@ -8767,9 +8767,9 @@ function initStructureModule() {
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         <span>aztarixi2fb.pdf Yüklə (495 Səhifə PDF)</span>
                       </a>
-                      <a href="aztarixifb.docx" download="aztarixifb.docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08); color:var(--text); border:1px solid rgba(255,255,255,0.2); padding:9px 16px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; transition:all 0.2s ease;">
+                      <a href="aztarixifb.pdf" download="aztarixifb.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08); color:var(--text); border:1px solid rgba(255,255,255,0.2); padding:9px 16px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; transition:all 0.2s ease;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>aztarixifb.docx (DOCX)</span>
+                        <span>aztarixifb.pdf (PDF)</span>
                       </a>
                     </div>
                   </div>
@@ -8783,13 +8783,13 @@ function initStructureModule() {
                           <span>Rəsmi Dərs Vəsaiti</span> • <span>DOCX</span> • <span>36 Saat</span> • <span>20 000+ söz</span>
                         </div>
                         <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Ümumi Tarix Fənnindən Mühazirələr Toplusu</h4>
-                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Qədim Misir, Mesopotamiya, Qədim Yunanıstan və Roma, Türk dövlətləri, İslam Xilafəti, Bizans, Səlcuq və Osmanlı imperiyalarını əhatə edən 36 saatlıq rəsmi mühazirə vəsaiti (umtarixfb.docx).</p>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Qədim Misir, Mesopotamiya, Qədim Yunanıstan və Roma, Türk dövlətləri, İslam Xilafəti, Bizans, Səlcuq və Osmanlı imperiyalarını əhatə edən 36 saatlıq rəsmi mühazirə vəsaiti (umtarixfb.pdf).</p>
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="umtarixfb.docx" download="umtarixfb.docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                      <a href="umtarixfb.pdf" download="umtarixfb.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>umtarixfb.docx Faylını Yüklə</span>
+                        <span>umtarixfb.pdf Faylını Aç / Yüklə</span>
                       </a>
                     </div>
                   </div>
@@ -8803,13 +8803,13 @@ function initStructureModule() {
                           <span>Rəsmi Dərs Vəsaiti</span> • <span>DOCX</span> • <span>8 Mövzu</span> • <span>16 000+ söz</span>
                         </div>
                         <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Hüququn Əsasları Fənnindən Fundamental Mühazirələr Toplusu</h4>
-                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Dövlət və hüququn nəzəriyyəsi, Azərbaycan Respublikasının Konstitusiyası, insan hüquq və azadlıqları, dövlət quruluşu, seçki sistemi, dövlət hakimiyyət orqanları, əmək və cinayət hüququnu əhatə edən 8 mövzuluq rəsmi mühazirə vəsaiti (yeni mühazirələr.docx).</p>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Dövlət və hüququn nəzəriyyəsi, Azərbaycan Respublikasının Konstitusiyası, insan hüquq və azadlıqları, dövlət quruluşu, seçki sistemi, dövlət hakimiyyət orqanları, əmək və cinayət hüququnu əhatə edən 8 mövzuluq rəsmi mühazirə vəsaiti (yeni mühazirələr.pdf).</p>
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="yeni mühazirələr.docx" download="yeni mühazirələr.docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                      <a href="yeni mühazirələr.pdf" download="yeni mühazirələr.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>yeni mühazirələr.docx Faylını Yüklə</span>
+                        <span>yeni mühazirələr.pdf Faylını Aç / Yüklə</span>
                       </a>
                     </div>
                   </div>
@@ -8830,9 +8830,9 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="1Русский язык 1 курс (лекции) (1).docx" download="1Русский язык 1 курс (лекции) (1).docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                      <a href="1Русский язык 1 курс (лекции) (1).pdf" download="1Русский язык 1 курс (лекции) (1).pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Rus Dili I Kurs Mühazirə Yüklə (DOCX)</span>
+                        <span>Rus Dili I Kurs Mühazirəni Aç / Yüklə (PDF)</span>
                       </a>
                     </div>
                   </div>
@@ -8849,9 +8849,9 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="2Русский язык 2 курс лекции книга  (1).docx" download="2Русский язык 2 курс лекции книга  (1).docx" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
+                      <a href="2Русский язык 2 курс лекции книга  (1).pdf" download="2Русский язык 2 курс лекции книга  (1).pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Rus Dili II Kurs Mühazirə Kitabı Yüklə (DOCX)</span>
+                        <span>Rus Dili II Kurs Mühazirə Kitabını Aç / Yüklə (PDF)</span>
                       </a>
                     </div>
                   </div>
@@ -9619,13 +9619,13 @@ function initLibraryModule() {
       subject_az: "Naqilsiz Rabitə Texnologiyaları",
       title_az: "Naqilsiz Rabitə Texnologiyaları — Mühazirələr Konspekti",
       author_az: "Rabitə və Şəbəkə Texnologiyaları Kafedrası",
-      format: "docx",
+      format: "pdf",
       icon: "📡",
-      volume: "Geniş Konspekt · DOCX",
-      fileSize: "5.3 MB DOCX",
+      volume: "Geniş Konspekt · PDF",
+      fileSize: "5.3 MB PDF",
       desc_az: "Müasir telekommunikasiya infrastrukturu, NGN (Next Generation Networks), Wi-Fi, QGND, MGND, şanvari mobil rabitə (3G, 4G, 5G, GSM, UMTS, CDMA), tezlik modulyasiyası və radiointerfeyslər üzrə fundamental mühazirə toplusu.",
       topics_az: ["NGN Şəbəkələri", "Wi-Fi və Genişzolaqlı Daxilolma", "3GPP və Mobil Rabitə", "Radiointerfeyslər"],
-      url: "naqilsiz muhazirə.docx"
+      url: "naqilsiz muhazirə.pdf"
     },
     {
       id: "fbk-lec-mobil-kommutasiya",
@@ -9635,13 +9635,13 @@ function initLibraryModule() {
       subject_az: "Mobil Rabitə Kommutasiya Mərkəzləri",
       title_az: "Mobil Rabitə Kommutasiya Mərkəzləri — Yenilənmiş Dərs Vəsaiti",
       author_az: "Mobil Rabitə Sistemləri Fənn Birləşməsi",
-      format: "docx",
+      format: "pdf",
       icon: "📲",
-      volume: "Yenilənmiş Vəsait · DOCX",
-      fileSize: "DOCX Vəsait",
+      volume: "Yenilənmiş Vəsait · PDF",
+      fileSize: "PDF Vəsait",
       desc_az: "Şanvari mobil rabitə şəbəkələrinin kommutasiya sistemləri, kommutasiya mərkəzlərinin strukturu (MSC), HLR, VLR reyestrləri, siqnallaşma protokolları və mobil şəbəkə arxitekturası üzrə rəsmi yenilənmiş tədris vəsaiti.",
       topics_az: ["Kommutasiya Mərkəzi (MSC)", "HLR və VLR Reyestrləri", "Mobil Şəbəkə Strukturu", "Siqnallaşma Sistemləri"],
-      url: "Mobil_rabite_kommutasiya_merkezleri_yenilenmis_tedris_vesaiti.docx"
+      url: "Mobil_rabite_kommutasiya_merkezleri_yenilenmis_tedris_vesaiti.pdf"
     },
     {
       id: "fbk-lec-siqnallar",
@@ -9651,13 +9651,13 @@ function initLibraryModule() {
       subject_az: "Siqnallar və Sistemlər",
       title_az: "Siqnallar və Sistemlər (2023) — Fundamental Mühazirələr Toplusu",
       author_az: "Elektrik Rabitəsi Nəzəriyyəsi Kafedrası",
-      format: "docx",
+      format: "pdf",
       icon: "📶",
-      volume: "Mühazirələr Toplusu (2023) · DOCX",
-      fileSize: "2.7 MB DOCX",
+      volume: "Mühazirələr Toplusu (2023) · PDF",
+      fileSize: "2.7 MB PDF",
       desc_az: "Elektrik rabitəsi nəzəriyyəsi, fasiləsiz, diskret və rəqəm siqnalları, siqnalların kodlaşdırılması, modulyasiya və demodulyasiya, informasiya ötürmə kanalları, maneəyədavamlılıq və rabitə sistemlərinin riyazi modelləri üzrə fundamental mühazirə vəsaiti.",
       topics_az: ["Elektrik Rabitəsi Nəzəriyyəsi", "Diskret və Rəqəm Siqnalları", "Modulyasiya və Kodlaşdırma", "Rabitə Kanalları"],
-      url: "Siqnallar ve sistemler 2023.docx"
+      url: "Siqnallar ve sistemler 2023.pdf"
     },
     {
       id: "fbk-lec-poct-bank",
@@ -9683,13 +9683,13 @@ function initLibraryModule() {
       subject_az: "Beynəlxalq Poçt Rabitəsi (Rus bölməsi)",
       title_az: "Международная Почтовая Связь (БПР) — Курс Лекций (Rus bölməsi)",
       author_az: "Müəllim: Mansurova Sevda (Мансурова Севда)",
-      format: "docx",
+      format: "pdf",
       icon: "📮",
-      volume: "52 Стр. · Курс Лекций · DOCX",
-      fileSize: "130 KB DOCX",
+      volume: "52 Стр. · Курс Лекций · PDF",
+      fileSize: "130 KB PDF",
       desc_az: "Rus bölməsi tələbələri üçün «Международная почтовая связь» fənni üzrə hazırlanmış, beynəlxalq poçt göndərişlərinin növləri və kateqoriyaları, poçt mübadiləsi, gömrük nəzarəti və beynəlxalq poçt konvensiyalarını əhatə edən 52 səhifəlik rəsmi mühazirə vəsaiti.",
       topics_az: ["Международная Почта", "Виды Отправлений", "Таможенный Контроль", "Почтовые Конвенции"],
-      url: "BPR(rus).docx"
+      url: "BPR(rus).pdf"
     },
 
     // --- Nəqliyyat və Materialşünaslıq (7) ---
@@ -9813,13 +9813,13 @@ function initLibraryModule() {
       subject_az: "Nəqliyyatda Sığorta İşi",
       title_az: "Nəqliyyatda Sığorta — Fundamental Mühazirələr Toplusu",
       author_az: "Nəqliyyat və Logistika Kafedrası",
-      format: "docx",
+      format: "pdf",
       icon: "🛡️",
-      volume: "Mühazirələr Toplusu · DOCX",
-      fileSize: "80 KB DOCX",
+      volume: "Mühazirələr Toplusu · PDF",
+      fileSize: "80 KB PDF",
       desc_az: "Sığortanın iqtisadi mahiyyəti, sərnişin və yüklərin sığortalanması, yerüstü nəqliyyat vasitələrinin sığortası, nəqliyyat vasitəsi sahiblərinin mülki məsuliyyətinin icbari sığortası (NVSMMİS) üzrə fundamental mühazirə toplusu.",
       topics_az: ["Sığorta İşi", "Nəqliyyat Sığortası", "Sərnişin və Yük Daşımaları", "NVSMMİS İcbari Sığorta"],
-      url: "Neqliyyatda siqorta.docx"
+      url: "Neqliyyatda siqorta.pdf"
     },
 
     // --- Azərbaycan Dili və Ədəbiyyat (3) ---
@@ -9831,13 +9831,13 @@ function initLibraryModule() {
       subject_az: "Azərbaycan Dili",
       title_az: "Azərbaycan Dili Fənnindən Mühazirələr Toplusu (36 Saat)",
       author_az: "Müəllimə: Məmmədova Vüsalə",
-      format: "docx",
+      format: "pdf",
       icon: "📖",
       volume: "36 Saat · Tədris Proqramı",
-      fileSize: "DOCX Konspekt",
+      fileSize: "PDF Konspekt",
       desc_az: "I kurs I semestr 36 saatlıq tədris proqramı, dilin funksiyaları, nitq mədəniyyəti, leksikologiya, frazeologiya və orfoqrafiya-qrammatika təlimini əhatə edən rəsmi mühazirə vəsaiti.",
       topics_az: ["Dilin Funksiyaları", "Nitq Mədəniyyəti", "Leksikologiya və Frazeologiya", "Qrammatika Təlimi"],
-      url: "azdilifb.docx"
+      url: "azdilifb.pdf"
     },
     {
       id: "fbk-lec-12",
@@ -9847,13 +9847,13 @@ function initLibraryModule() {
       subject_az: "Ədəbiyyat",
       title_az: "Ədəbiyyat Fənnindən Mühazirələr Toplusu",
       author_az: "Tərtibçi: Ziba Səfərova",
-      format: "docx",
+      format: "pdf",
       icon: "📑",
       volume: "15 000+ Söz · Tam Kurs",
-      fileSize: "DOCX Konspekt",
+      fileSize: "PDF Konspekt",
       desc_az: "Dədə Qorqud eposundan başlayaraq klassik və müasir Azərbaycan ədəbiyyatını, ədəbi cərəyanları, nəzəriyyə və əsər təhlillərini əhatə edən tam akademik tədris və mühazirə vəsaiti.",
       topics_az: ["Dədə Qorqud Eposu", "Klassik Şeir və Nəsr", "Maarifçi Realizm", "Müasir Ədəbiyyat"],
-      url: "edebiyyatfb.docx"
+      url: "edebiyyatfb.pdf"
     },
     {
       id: "fbk-lec-13",
@@ -9863,13 +9863,13 @@ function initLibraryModule() {
       subject_az: "İşgüzar və Akademik Kommunikasiya",
       title_az: "Azərbaycan Dilində İşgüzar və Akademik Kommunikasiya — Mühazirələr Toplusu",
       author_az: "Müəllimə: Natəvan Hüseynova",
-      format: "docx",
+      format: "pdf",
       icon: "💬",
       volume: "25 000+ Söz · 257 KB",
       fileSize: "257 KB",
       desc_az: "Ünsiyyətin formaları və növləri (formal, qeyri-formal, şaquli, üfüqi), şifahi və yazılı akademik nitq mədəniyyəti, elmi mətnlərin növləri (tezis, məqalə, annotasiya, avtoreferat), işgüzar danışıqlar və auditoriya qarşısında çıxış qaydalarını əhatə edən 25 000-dən artıq sözlük əhatəli rəsmi mühazirə vəsaiti.",
       topics_az: ["Ünsiyyət Modelləri", "Akademik Nitq", "Elmi Mətn Növləri", "İşgüzar Danışıqlar"],
-      url: "KOMMUNİKASİYA DF 2 (1).docx"
+      url: "KOMMUNİKASİYA DF 2 (1).pdf"
     },
 
     // --- Tarix və Hüquq (4) ---
@@ -9888,7 +9888,7 @@ function initLibraryModule() {
       desc_az: "İbtidai icma quruluşundan başlayaraq Manna, Atropatena, Albaniya, Sasanilər, orta əsrlər, müasir dövr və Zəfər tariximizə qədər bütün tarixi dövrləri əhatə edən 495 səhifəlik fundamental tədris və mühazirə vəsaiti.",
       topics_az: ["Manna və Albaniya", "Orta Əsrlər Dövrü", "AXC və Müstəqillik", "Vətən Müharibəsi Zəfəri"],
       url: "aztarixi2fb.pdf",
-      extraDocUrl: "aztarixifb.docx"
+      extraDocUrl: "aztarixifb.pdf"
     },
     {
       id: "fbk-lec-15",
@@ -9896,15 +9896,15 @@ function initLibraryModule() {
       fieldBadge: "TARİX VƏ HÜQUQ",
       fieldName_az: "Tarix və Hüquq Elmləri",
       subject_az: "Azərbaycan Tarixi (Mühazirə Konspekti)",
-      title_az: "Azərbaycan Tarixi Fənnindən Mühazirələr Toplusu (72 Saat · DOCX Konspekt)",
+      title_az: "Azərbaycan Tarixi Fənnindən Mühazirələr Toplusu (72 Saat · Mühazirə Konspekti)",
       author_az: "Müəllif: Səidə Quliyeva",
-      format: "docx",
+      format: "pdf",
       icon: "📜",
-      volume: "72 Saat · Word Nəşri",
-      fileSize: "DOCX Konspekt",
-      desc_az: "72 saatlıq rəsmi tədris proqramına uyğun hazırlanmış, mühazirə konspekti və tezislər şəklində redaktə edilə bilən Word (DOCX) nəşri.",
+      volume: "72 Saat · PDF Nəşri",
+      fileSize: "PDF Konspekt",
+      desc_az: "72 saatlıq rəsmi tədris proqramına uyğun hazırlanmış, mühazirə konspekti və tezislər şəklində rəsmi PDF nəşri.",
       topics_az: ["72 Saatlıq Proqram", "Dövlətçilik Tarixi", "Milli Qurtuluş", "Xronologiya və Tezislər"],
-      url: "aztarixifb.docx"
+      url: "aztarixifb.pdf"
     },
     {
       id: "fbk-lec-16",
@@ -9914,13 +9914,13 @@ function initLibraryModule() {
       subject_az: "Ümumi Tarix",
       title_az: "Ümumi Tarix Fənnindən Mühazirələr Toplusu (36 Saat)",
       author_az: "Tərtibçi: Səidə Quliyeva",
-      format: "docx",
+      format: "pdf",
       icon: "🌍",
       volume: "36 Saat · 20 000+ Söz",
-      fileSize: "DOCX Konspekt",
+      fileSize: "PDF Konspekt",
       desc_az: "Qədim Misir, Mesopotamiya, Qədim Yunanıstan və Roma, Türk dövlətləri, İslam Xilafəti, Bizans, Səlcuq və Osmanlı imperiyalarını əhatə edən 36 saatlıq rəsmi mühazirə vəsaiti.",
       topics_az: ["Qədim Sivilizasiyalar", "Türk Dövlətləri", "İslam Xilafəti", "Yeni Dövr Tarixi"],
-      url: "umtarixfb.docx"
+      url: "umtarixfb.pdf"
     },
     {
       id: "fbk-lec-17",
@@ -9930,13 +9930,13 @@ function initLibraryModule() {
       subject_az: "Hüququn Əsasları",
       title_az: "Hüququn Əsasları Fənnindən Fundamental Mühazirələr Toplusu (8 Mövzu)",
       author_az: "Humanitar və İctimai Elmlər İstiqaməti",
-      format: "docx",
+      format: "pdf",
       icon: "⚖️",
       volume: "8 Mövzu · 16 000+ Söz",
-      fileSize: "DOCX Konspekt",
+      fileSize: "PDF Konspekt",
       desc_az: "Dövlət və hüququn nəzəriyyəsi, Azərbaycan Respublikasının Konstitusiyası, insan hüquq və azadlıqları, dövlət quruluşu, seçki sistemi, dövlət hakimiyyət orqanları, əmək və cinayət hüququnu əhatə edən 8 mövzuluq rəsmi mühazirə vəsaiti.",
       topics_az: ["Hüquq Nəzəriyyəsi", "AR Konstitusiyası", "Seçki və İdarəetmə", "Əmək və Cinayət Hüququ"],
-      url: "yeni mühazirələr.docx"
+      url: "yeni mühazirələr.pdf"
     },
 
     // --- Coğrafiya və Təbiət Elmləri (2) ---
@@ -9964,13 +9964,13 @@ function initLibraryModule() {
       subject_az: "Coğrafiya",
       title_az: "Coğrafiya Fənnindən Mühazirələr Toplusu (II Semestr — 18 Mövzu)",
       author_az: "Müəllimlər: Eminəliyeva Əntiqə, Mahmudova Könül",
-      format: "docx",
+      format: "pdf",
       icon: "🗺️",
       volume: "II Semestr · 18 Mövzu (36 Saat)",
-      fileSize: "DOCX Konspekt",
+      fileSize: "PDF Konspekt",
       desc_az: "Təsərrüfat sahələrinin xəritələrə əsasən təhlili, mineral ehtiyatlar, demoqrafiya, Azərbaycanın iqtisadi rayonları (14 iqtisadi rayon), nəqliyyat və beynəlxalq inteqrasiyanı əhatə edən 18 mövzuluq rəsmi mühazirə konspekti.",
       topics_az: ["Təsərrüfat Sahələri", "Azərbaycanın 14 İqtisadi Rayonu", "Demoqrafiya və Əmək", "Ekoloji Problemlər"],
-      url: "II-yarımil.Coğrafiyadan mövzular.2024.docx"
+      url: "II-yarımil.Coğrafiyadan mövzular.2024.pdf"
     },
 
     // --- İqtisadiyyat, Vergi, Statistika və Biznes (6) ---
@@ -9982,13 +9982,13 @@ function initLibraryModule() {
       subject_az: "Vergi Sistemi və Vergitutma",
       title_az: "Vergi Sistemi və Vergitutma — Fundamental Mühazirələr Toplusu",
       author_az: "Müəllim: Nuriyeva Gülsüm Səməd qızı",
-      format: "docx",
+      format: "pdf",
       icon: "💰",
-      volume: "Mühazirələr Konspekti · DOCX",
-      fileSize: "180 KB DOCX",
+      volume: "Mühazirələr Konspekti · PDF",
+      fileSize: "180 KB PDF",
       desc_az: "Vergilərin iqtisadi mahiyyəti və funksiyaları, vergitutmanın iqtisadi və hüquqi prinsipləri, vergi yükü, AR Vergi Məcəlləsinin müddəaları və vergi növləri üzrə rəsmi mühazirə vəsaiti.",
       topics_az: ["Vergilərin Mahiyyəti", "Fiskal Mexanizmlər", "Vergitutma Prinsipləri", "AR Vergi Məcəlləsi"],
-      url: "Vergi sistemi  Vergitutma.docx"
+      url: "Vergi sistemi  Vergitutma.pdf"
     },
     {
       id: "fbk-lec-vergi-rus",
@@ -9998,13 +9998,13 @@ function initLibraryModule() {
       subject_az: "Vergi və Vergitutma (Rus bölməsi)",
       title_az: "Налог и Налогообложение — Курс Лекций (Rus bölməsi)",
       author_az: "Müəllim: Mansurova Sevda (Мансурова Севда)",
-      format: "docx",
+      format: "pdf",
       icon: "📊",
-      volume: "Курс Лекций · DOCX",
-      fileSize: "238 KB DOCX",
+      volume: "Курс Лекций · PDF",
+      fileSize: "238 KB PDF",
       desc_az: "Rus bölməsi tələbələri üçün «Налог и налогообложение» fənni üzrə hazırlanmış, vergilərin iqtisadi mahiyyəti, fiskal siyasət, büdcənin formalaşması və vergitutma mexanizmlərini əhatə edən rəsmi mühazirə vəsaiti.",
       topics_az: ["Сущность Налогов", "Налоговая Система", "Фискальные Функции", "Налогообложение в АР"],
-      url: "Vergi (rus).docx"
+      url: "Vergi (rus).pdf"
     },
     {
       id: "fbk-lec-statistika",
@@ -10014,13 +10014,13 @@ function initLibraryModule() {
       subject_az: "Statistika",
       title_az: "Statistika Elminin Predmeti və Metodu — Mühazirələr Toplusu",
       author_az: "İqtisadiyyat və Statistika Kafedrası",
-      format: "docx",
+      format: "pdf",
       icon: "📈",
-      volume: "Mühazirələr Toplusu · DOCX",
-      fileSize: "82 KB DOCX",
+      volume: "Mühazirələr Toplusu · PDF",
+      fileSize: "82 KB PDF",
       desc_az: "Statistika elminin predmeti və metodu, sosial-iqtisadi hadisələrin kəmiyyət təhlili, statistik məcmu və əlamətlər, müşahidə və qruplaşdırma üsulları, statistik cədvəllərin qurulması üzrə rəsmi mühazirə toplusu.",
       topics_az: ["Statistikanın Predmeti", "Statistik Məcmu və Əlamət", "Qruplaşdırma Üsulları", "Statistik Cədvəllər"],
-      url: "Statistika.docx"
+      url: "Statistika.pdf"
     },
     {
       id: "fbk-lec-rabite-stat",
@@ -10030,13 +10030,13 @@ function initLibraryModule() {
       subject_az: "Rabitə Statistikası",
       title_az: "Rabitə Statistikası — Mühazirələr Toplusu (Azərbaycan bölməsi)",
       author_az: "İqtisadiyyat və Statistika Kafedrası",
-      format: "docx",
+      format: "pdf",
       icon: "📊",
-      volume: "Mühazirələr Toplusu · DOCX",
-      fileSize: "97 KB DOCX",
+      volume: "Mühazirələr Toplusu · PDF",
+      fileSize: "97 KB PDF",
       desc_az: "Rabitə və telekommunikasiya sahəsində statistika elminin predmeti və metodu, rabitə şəbəkələrinin və xidmətlərinin statistik analizi, qruplaşdırma və cədvəllərin qurulması üzrə rəsmi mühazirə vəsaiti.",
       topics_az: ["Rabitə Statistikası", "Müşahidə və Qruplaşdırma", "Xidmətlərin Analizi", "Statistik Cədvəllər"],
-      url: "Rabite statistikasi(az).docx"
+      url: "Rabite statistikasi(az).pdf"
     },
     {
       id: "fbk-lec-rabite-stat-rus",
@@ -10046,13 +10046,13 @@ function initLibraryModule() {
       subject_az: "Rabitə Statistikası (Rus bölməsi)",
       title_az: "Статистика Связи — Курс Лекций (Rus bölməsi)",
       author_az: "İqtisadiyyat və Statistika Kafedrası (Rus bölməsi)",
-      format: "docx",
+      format: "pdf",
       icon: "📊",
-      volume: "Курс Лекций · 16 Стр. · DOCX",
-      fileSize: "81 KB DOCX",
+      volume: "Курс Лекций · 16 Стр. · PDF",
+      fileSize: "81 KB PDF",
       desc_az: "Rus bölməsi tələbələri üçün «Статистика связи» fənni üzrə hazırlanmış, rabitə sahəsində statistika elminin predmeti və metodları, statistik müşahidənin formaları, hesabatlıq və göstəricilər sistemini əhatə edən rəsmi mühazirə vəsaiti.",
       topics_az: ["Статистика Связи", "Предмет и Метод", "Формы Наблюдения", "Статистическая Отчетность"],
-      url: "Rabite statistikasi (rus).docx"
+      url: "Rabite statistikasi (rus).pdf"
     },
     {
       id: "fbk-lec-biznes-az",
@@ -10062,13 +10062,13 @@ function initLibraryModule() {
       subject_az: "Sahibkarlığın Əsasları və Biznesə Giriş",
       title_az: "Sahibkarlığın Əsasları və Biznesə Giriş — Mühazirələr Toplusu",
       author_az: "İqtisadiyyat və İdarəetmə Kafedrası",
-      format: "docx",
+      format: "pdf",
       icon: "💼",
-      volume: "Mühazirələr Toplusu · DOCX",
-      fileSize: "126 KB DOCX",
+      volume: "Mühazirələr Toplusu · PDF",
+      fileSize: "126 KB PDF",
       desc_az: "Sahibkarlıq fəaliyyətinin mahiyyəti və növləri, innovasiya sahibkarlığı, sahibkarlığın hüquqi subyektləri, təşəbbüskarlıq və biznes mühitinin formalaşması üzrə rəsmi mühazirə vəsaiti.",
       topics_az: ["Sahibkarlığın Mahiyyəti", "İnnovasiya Sahibkarlığı", "Biznes Subyektləri", "Bazar Münasibətləri"],
-      url: "Sahib.esas. ve bizn.giris (az).docx"
+      url: "Sahib.esas. ve bizn.giris (az).pdf"
     },
     {
       id: "fbk-lec-biznes-rus",
@@ -10078,13 +10078,13 @@ function initLibraryModule() {
       subject_az: "Sahibkarlıq və Biznesin Əsasları (Rus bölməsi)",
       title_az: "Предпринимательская Деятельность и Основы Бизнеса — Курс Лекций (Rus bölməsi)",
       author_az: "Müəllim: Mansurova S.M. (Мансурова С.М.)",
-      format: "docx",
+      format: "pdf",
       icon: "💼",
-      volume: "Курс Лекций (2023) · DOCX",
-      fileSize: "185 KB DOCX",
+      volume: "Курс Лекций (2023) · PDF",
+      fileSize: "185 KB PDF",
       desc_az: "Rus bölməsi tələbələri üçün «Предпринимательская деятельность и основы бизнеса» fənni üzrə hazırlanmış, biznesin təşkili, sahibkarlıq riski, innovasiyalar və bazar iqtisadiyyatında fəaliyyət növlərini əhatə edən rəsmi mühazirə vəsaiti.",
       topics_az: ["Основы Бизнеса", "Предпринимательская Деятельность", "Факторы Производства", "Виды Предпринимательства"],
-      url: "Sahib.esas.ve biznese giris(rus).docx"
+      url: "Sahib.esas.ve biznese giris(rus).pdf"
     },
     {
       id: "fbk-lec-menecment-az",
@@ -10094,13 +10094,13 @@ function initLibraryModule() {
       subject_az: "Menecmentin Metodoloji Əsasları",
       title_az: "Menecmentin Metodoloji Əsasları — Fundamental Mühazirələr Toplusu",
       author_az: "İqtisadiyyat və İdarəetmə Kafedrası",
-      format: "docx",
+      format: "pdf",
       icon: "📈",
       volume: "280 Səhifə · Fundamental Vəsait",
-      fileSize: "1.2 MB DOCX",
+      fileSize: "1.2 MB PDF",
       desc_az: "Menecmentin mahiyyəti və prinsipləri, idarəetmə funksiyaları, planlaşdırma, motivasiya nəzəriyyələri, strateji idarəetmə, rəhbərin əməyinin rasionallaşdırılması və bazar iqtisadiyyatında idarəetmə metodları üzrə 280 səhifəlik fundamental mühazirə vəsaiti.",
       topics_az: ["Menecmentin Mahiyyəti", "İdarəetmə Funksiyaları", "Motivasiya Nəzəriyyələri", "Strateji İdarəetmə"],
-      url: "Menecment (az).docx"
+      url: "Menecment (az).pdf"
     },
     {
       id: "fbk-lec-menecment-rus",
@@ -10110,13 +10110,13 @@ function initLibraryModule() {
       subject_az: "Menecment (Rus bölməsi)",
       title_az: "Менеджмент — Курс Лекций (Rus bölməsi)",
       author_az: "İqtisadiyyat və İdarəetmə Kafedrası (Rus bölməsi)",
-      format: "docx",
+      format: "pdf",
       icon: "📈",
-      volume: "Курс Лекций · DOCX",
-      fileSize: "173 KB DOCX",
+      volume: "Курс Лекций · PDF",
+      fileSize: "173 KB PDF",
       desc_az: "Rus bölməsi tələbələri üçün «Менеджмент» fənni üzrə hazırlanmış, idarəetmənin metodoloji əsasları, prinsipləri, təşkilati strukturlar, qərarların qəbulu, motivasiya və liderlik nəzəriyyələrini əhatə edən rəsmi mühazirə vəsaiti.",
       topics_az: ["Основы Менеджмента", "Принципы Управления", "Организационные Структуры", "Принятие Решений"],
-      url: "Menecment (rus).docx"
+      url: "Menecment (rus).pdf"
     },
     {
       id: "fbk-lec-marketinq-az",
@@ -10126,13 +10126,13 @@ function initLibraryModule() {
       subject_az: "Marketinq Haqqında Anlayış, Məqsəd və Vəzifələri",
       title_az: "Marketinqin Əsasları — Fundamental Mühazirələr Toplusu",
       author_az: "İqtisadiyyat və İdarəetmə Kafedrası",
-      format: "docx",
+      format: "pdf",
       icon: "📣",
       volume: "34 Səhifə · Fundamental Vəsait",
-      fileSize: "356 KB DOCX",
+      fileSize: "356 KB PDF",
       desc_az: "Marketinqin anlayışı, məqsəd və vəzifələri, tələb və tələbat anlayışları, bazar subyektləri, mübadilə və sövdələşmə şərtləri, strateji və taktiki marketinq hədəfləri üzrə rəsmi mühazirə vəsaiti.",
       topics_az: ["Marketinq Anlayışı", "Tələb və Tələbat", "Bazar Subyektləri", "Mübadilə və Sövdələşmə"],
-      url: "Marketinq (az).docx"
+      url: "Marketinq (az).pdf"
     },
     {
       id: "fbk-lec-marketinq-rus",
@@ -10142,13 +10142,13 @@ function initLibraryModule() {
       subject_az: "Marketinqin Əsasları (Rus bölməsi)",
       title_az: "Основы Маркетинга — Курс Лекций (Rus bölməsi)",
       author_az: "Müəllim: Mansurova Sevda (Мансурова Севда)",
-      format: "docx",
+      format: "pdf",
       icon: "📣",
-      volume: "57 Стр. · Курс Лекций · DOCX",
-      fileSize: "436 KB DOCX",
+      volume: "57 Стр. · Курс Лекций · PDF",
+      fileSize: "436 KB PDF",
       desc_az: "Rus bölməsi tələbələri üçün «Основы маркетинга» fənni üzrə hazırlanmış, bazar iqtisadiyyatında marketinqin rolu, marketinq kompleksi (4P), bazar seqmentasiyası və istehlakçı davranışının tədqiqini əhatə edən 57 səhifəlik rəsmi mühazirə vəsaiti.",
       topics_az: ["Основы Маркетинга", "Комплекс Маркетинга", "Рыночная Экономика", "Поведение Потребителей"],
-      url: "Marketinq (rus).docx"
+      url: "Marketinq (rus).pdf"
     },
     {
       id: "fbk-lec-maliyye-ucot",
@@ -10158,13 +10158,13 @@ function initLibraryModule() {
       subject_az: "Mühasibat Uçotunun Mahiyyəti və Təyinatı",
       title_az: "Maliyyə və Mühasibat Uçotu — Fundamental Mühazirələr Toplusu",
       author_az: "Müəllim: Əzizə Quliyeva",
-      format: "docx",
+      format: "pdf",
       icon: "💰",
       volume: "62 Səhifə · Fundamental Vəsait",
-      fileSize: "119 KB DOCX",
+      fileSize: "119 KB PDF",
       desc_az: "Mühasibat uçotunun mahiyyəti və təyinatı, təsərrüfat əməliyyatlarının ilkin qeydiyyatı, ikili yazılış sistemi, aktivlər, kapital və öhdəliklər, maliyyə hesabatlarının tərtibi və təqdimatı üzrə 62 səhifəlik fundamental mühazirə toplusu.",
       topics_az: ["Mühasibat Uçotu", "İkili Yazılış", "Aktivlər və Öhdəliklər", "Maliyyə Hesabatları"],
-      url: "maliyye ucotu.docx"
+      url: "maliyye ucotu.pdf"
     },
     {
       id: "fbk-lec-maliyye-kredit",
@@ -10174,13 +10174,13 @@ function initLibraryModule() {
       subject_az: "Maliyyə və Kredit",
       title_az: "Maliyyə və Kredit — Fundamental Mühazirələr Toplusu",
       author_az: "Müəllim: Nuriyeva Gülsüm",
-      format: "docx",
+      format: "pdf",
       icon: "💳",
       volume: "150 Səhifə · Fundamental Vəsait",
-      fileSize: "197 KB DOCX",
+      fileSize: "197 KB PDF",
       desc_az: "Pulun mahiyyəti və funksiyaları, pul tədavülü və emissiyası, kredit sistemi və kreditin formaları, bank sistemi, inflyasiya və maliyyə bazarlarının təşkili üzrə 150 səhifəlik fundamental mühazirə vəsaiti.",
       topics_az: ["Pulun Mahiyyəti", "Kredit Sistemi", "Bank Əməliyyatları", "Maliyyə Münasibətləri"],
-      url: "Maliyye kredit.docx"
+      url: "Maliyye kredit.pdf"
     },
 
     // --- Ekologiya və Təhlükəsizlik (2) ---
@@ -18564,20 +18564,20 @@ function initGlobalSearchModule() {
       });
     }
 
-    // 4. AZƏRBAYCAN DİLİ DƏRS VƏSAİTİ (azdilifb.docx)
+    // 4. AZƏRBAYCAN DİLİ DƏRS VƏSAİTİ (azdilifb.pdf)
     catalog.push({
       type: "structure",
       category: "structure",
       categories: ["structure", "library"],
       icon: "📖",
-      badge: "DOCX • Mühazirə",
-      title: "azdilifb.docx — Azərbaycan Dili Fənnindən Mühazirələr Toplusu",
+      badge: "PDF • Mühazirə",
+      title: "azdilifb.pdf — Azərbaycan Dili Fənnindən Mühazirələr Toplusu",
       desc: "Müəllimə: Məmmədova Vüsalə (FBK-06) · I kurs, 36 saatlıq rəsmi mühazirə vəsaiti, dil və nitq mədəniyyəti",
-      tokens: "azdilifb azdili docx azerbaycan dili fenn birlesmesi fbk 06 memmedova vusale muhazire ders vesaiti qrammatika nitq medeniyyeti",
+      tokens: "azdilifb azdili pdf azerbaycan dili fenn birlesmesi fbk 06 memmedova vusale muhazire ders vesaiti qrammatika nitq medeniyyeti",
       action: () => {
         const link = document.createElement("a");
-        link.href = "azdilifb.docx";
-        link.download = "azdilifb.docx";
+        link.href = "azdilifb.pdf";
+        link.download = "azdilifb.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -18589,20 +18589,20 @@ function initGlobalSearchModule() {
       }
     });
 
-    // 4b. EDEBIYYAT DƏRS VƏSAİTİ (edebiyyatfb.docx)
+    // 4b. EDEBIYYAT DƏRS VƏSAİTİ (edebiyyatfb.pdf)
     catalog.push({
       type: "structure",
       category: "structure",
       categories: ["structure", "library"],
       icon: "📑",
-      badge: "DOCX • Mühazirə",
-      title: "edebiyyatfb.docx — Ədəbiyyat Fənnindən Mühazirələr Toplusu",
+      badge: "PDF • Mühazirə",
+      title: "edebiyyatfb.pdf — Ədəbiyyat Fənnindən Mühazirələr Toplusu",
       desc: "Azərbaycan dili və ədəbiyyat FBK (Ziba Səfərova) · Dədə Qorqud eposu, klassik və müasir ədəbiyyat mühazirəsi (15 000+ söz)",
-      tokens: "edebiyyatfb docx edebiyyat fenn birlesmesi fbk 06 azerbaycan dili ziba seferova muhazire ders vesaiti dede qorqud eposu",
+      tokens: "edebiyyatfb pdf edebiyyat fenn birlesmesi fbk 06 azerbaycan dili ziba seferova muhazire ders vesaiti dede qorqud eposu",
       action: () => {
         const link = document.createElement("a");
-        link.href = "edebiyyatfb.docx";
-        link.download = "edebiyyatfb.docx";
+        link.href = "edebiyyatfb.pdf";
+        link.download = "edebiyyatfb.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -18614,20 +18614,20 @@ function initGlobalSearchModule() {
       }
     });
 
-    // 4b. AZƏRBAYCAN TARİXİ DƏRS VƏSAİTİ (aztarixifb.docx)
+    // 4b. AZƏRBAYCAN TARİXİ DƏRS VƏSAİTİ (aztarixifb.pdf)
     catalog.push({
       type: "structure",
       category: "structure",
       categories: ["structure", "library"],
       icon: "🏛️",
-      badge: "DOCX • Mühazirə",
-      title: "aztarixifb.docx — Azərbaycan Tarixi Fənnindən Mühazirələr Toplusu",
+      badge: "PDF • Mühazirə",
+      title: "aztarixifb.pdf — Azərbaycan Tarixi Fənnindən Mühazirələr Toplusu",
       desc: "Humanitar və İctimai Elmlər FBK (Səidə Quliyeva) · İbtidai icmadan müasir dövrə və Zəfər tarixinə qədər 72 saatlıq rəsmi mühazirələr toplusu (60 000+ söz)",
-      tokens: "aztarixifb docx azerbaycan tarixi tarix fenn birlesmesi fbk 07 seide quliyeva muhazire ders vesaiti ibtidai icma manna atropatena albaniya sasani",
+      tokens: "aztarixifb pdf azerbaycan tarixi tarix fenn birlesmesi fbk 07 seide quliyeva muhazire ders vesaiti ibtidai icma manna atropatena albaniya sasani",
       action: () => {
         const link = document.createElement("a");
-        link.href = "aztarixifb.docx";
-        link.download = "aztarixifb.docx";
+        link.href = "aztarixifb.pdf";
+        link.download = "aztarixifb.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -18671,14 +18671,14 @@ function initGlobalSearchModule() {
       category: "structure",
       categories: ["structure", "library"],
       icon: "🌍",
-      badge: "DOCX • Mühazirə",
-      title: "umtarixfb.docx — Ümumi Tarix Fənnindən Mühazirələr Toplusu",
+      badge: "PDF • Mühazirə",
+      title: "umtarixfb.pdf — Ümumi Tarix Fənnindən Mühazirələr Toplusu",
       desc: "Humanitar və İctimai Elmlər FBK (Səidə Quliyeva) · Qədim Misir, Roma, Yunanıstan, Türk dövlətləri və Osmanlı imperiyası üzrə 36 saatlıq rəsmi mühazirə vəsaiti (20 000+ söz)",
-      tokens: "umtarixfb docx umumi tarix dunya tarixi fenn birlesmesi fbk 07 seide quliyeva muhazire ders vesaiti misir roma yunanistan osmanli",
+      tokens: "umtarixfb pdf umumi tarix dunya tarixi fenn birlesmesi fbk 07 seide quliyeva muhazire ders vesaiti misir roma yunanistan osmanli",
       action: () => {
         const link = document.createElement("a");
-        link.href = "umtarixfb.docx";
-        link.download = "umtarixfb.docx";
+        link.href = "umtarixfb.pdf";
+        link.download = "umtarixfb.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -18696,14 +18696,14 @@ function initGlobalSearchModule() {
       category: "structure",
       categories: ["structure", "library"],
       icon: "⚖️",
-      badge: "DOCX • Mühazirə",
-      title: "yeni mühazirələr.docx — Hüququn Əsasları Fənnindən Mühazirələr Toplusu",
+      badge: "PDF • Mühazirə",
+      title: "yeni mühazirələr.pdf — Hüququn Əsasları Fənnindən Mühazirələr Toplusu",
       desc: "Humanitar və İctimai Elmlər FBK · Dövlət və hüquq nəzəriyyəsi, AR Konstitusiyası, insan hüquqları, əmək və cinayət hüququ üzrə 8 mövzuluq rəsmi mühazirə vəsaiti (16 000+ söz)",
-      tokens: "yeni muhazireler yeni mühazirələr docx huququn esaslari hüququn əsasları dovlet ve huquq konstitusiya emek cinayet fbk 07 fenn birlesmesi muhazire ders vesaiti",
+      tokens: "yeni muhazireler yeni mühazirələr pdf huququn esaslari hüququn əsasları dovlet ve huquq konstitusiya emek cinayet fbk 07 fenn birlesmesi muhazire ders vesaiti",
       action: () => {
         const link = document.createElement("a");
-        link.href = "yeni mühazirələr.docx";
-        link.download = "yeni mühazirələr.docx";
+        link.href = "yeni mühazirələr.pdf";
+        link.download = "yeni mühazirələr.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -19033,14 +19033,14 @@ function initGlobalSearchModule() {
       category: "structure",
       categories: ["structure", "library"],
       icon: "💬",
-      badge: "DOCX • 25k+ Söz",
+      badge: "PDF • 25k+ Söz",
       title: "İşgüzar və Akademik Kommunikasiya — Natəvan Hüseynova",
       desc: "Azərbaycan Dili və Ədəbiyyat FBK (FBK-06) · Ünsiyyət növləri, akademik yazı, elmi mətnlər və nitq mədəniyyəti üzrə rəsmi mühazirələr toplusu (257 KB)",
-      tokens: "kommunikasiya isguzar işgüzar akademik unsiyyet ünsiyyət nitq medeniyyeti mədəniyyəti natevan natəvan huseynova hüseynova fbk 06 docx derslik",
+      tokens: "kommunikasiya isguzar işgüzar akademik unsiyyet ünsiyyət nitq medeniyyeti mədəniyyəti natevan natəvan huseynova hüseynova fbk 06 pdf derslik",
       action: () => {
         const link = document.createElement("a");
-        link.href = "KOMMUNİKASİYA DF 2 (1).docx";
-        link.download = "KOMMUNİKASİYA DF 2 (1).docx";
+        link.href = "KOMMUNİKASİYA DF 2 (1).pdf";
+        link.download = "KOMMUNİKASİYA DF 2 (1).pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -19542,8 +19542,8 @@ function initGlobalSearchModule() {
         <div class="search-suggestions">
           <button type="button" class="search-chip-quick" data-search-term="Kompüter" data-i18n="search_chip_cs">💻 Kompüter sistemləri</button>
           <button type="button" class="search-chip-quick" data-search-term="Sənan Mirzəzadə" data-i18n="search_chip_senan">⭐ Sənan Mirzəzadə (Fəxri tələbə)</button>
-          <button type="button" class="search-chip-quick" data-search-term="edebiyyatfb" data-i18n="search_chip_edebiyyat">📖 Ədəbiyyat (edebiyyatfb.docx)</button>
-          <button type="button" class="search-chip-quick" data-search-term="aztarixifb" data-i18n="search_chip_tarix">🏛️ Azərbaycan Tarixi (aztarixifb.docx)</button>
+          <button type="button" class="search-chip-quick" data-search-term="edebiyyatfb" data-i18n="search_chip_edebiyyat">📖 Ədəbiyyat (edebiyyatfb.pdf)</button>
+          <button type="button" class="search-chip-quick" data-search-term="aztarixifb" data-i18n="search_chip_tarix">🏛️ Azərbaycan Tarixi (aztarixifb.pdf)</button>
           <button type="button" class="search-chip-quick" data-search-term="Aytən Namazova" data-i18n="search_chip_science">🔬 Aytən Namazova (Elmi nəşrlər)</button>
           <button type="button" class="search-chip-quick" data-search-term="Qəbul" data-i18n="search_chip_admission">❓ Qəbul qaydaları və ballar</button>
           <button type="button" class="search-chip-quick" data-search-term="Telekommunikasiya" data-i18n="search_chip_telecom">📡 Telekommunikasiya</button>
