@@ -7626,7 +7626,7 @@ function initStructureModule() {
       }).join("");
     }
 
-    // ═══ 1-Cİ SIRA (İLK BEŞLİK): Səbuhi, Boş blok, Şahmurad, İsmayıl, Səidə ═══
+    // ═══ 1-Cİ SIRA (1-ci Beşlik): Səbuhi, Boş blok, Şahmurad, İsmayıl, Səidə ═══
     const firstFiveConfig = [
       {
         id: "1",
@@ -7658,7 +7658,7 @@ function initStructureModule() {
       },
     ];
 
-    // ═══ 2-Cİ SIRA (İKİNCİ BEŞLİK): Günel, Ləman, Azər, Vəfa, Rəsmiyyə ═══
+    // ═══ 2-Cİ SIRA (2-ci Beşlik): Günel, Ləman, Azər, Vəfa, Rəsmiyyə ═══
     const secondFiveConfig = [
       {
         id: "30",
@@ -7687,20 +7687,48 @@ function initStructureModule() {
       },
     ];
 
+    // ═══ 3-CÜ SIRA (3-cü Beşlik): Səkinə, Yeganə, Babək, Natiq, Ceyhun ═══
+    const thirdFiveConfig = [
+      {
+        id: "9",
+        num: "11",
+        badge: "Şöbə Müdiri",
+      },
+      {
+        id: "23",
+        num: "12",
+        badge: "Şöbə Müdiri",
+      },
+      {
+        id: "7",
+        num: "13",
+        badge: "Şöbə Müdiri",
+      },
+      {
+        id: "24",
+        num: "14",
+        badge: "Şöbə Müdiri",
+      },
+      {
+        id: "11",
+        num: "15",
+        badge: "Şöbə Müdiri",
+      },
+    ];
+
     const firstFiveHtml = buildFiveRow(firstFiveConfig);
     const secondFiveHtml = buildFiveRow(secondFiveConfig);
+    const thirdFiveHtml = buildFiveRow(thirdFiveConfig);
 
-    // Qalan Şöbə Müdirləri & İnzibati Heyət (Qanadlar)
-    // 1-ci və 2-ci beşlikdə olanları qanadlardan çıxarırıq ki, təkrarlanmasın
-    const usedIds = new Set(["1", "vacant-deputy", "2", "3", "12", "30", "20", "19", "16", "14"]);
-
-    const academicOrder = ["9", "23", "7", "24", "11"].filter((id) => !usedIds.has(id));
-    const wingAcademicStaff = academicOrder
-      .map((id) => staffData.departments.find((p) => p.id === id))
-      .filter(Boolean);
+    // Qalan İnzibati Heyət
+    const usedIds = new Set([
+      "1", "vacant-deputy", "2", "3", "12",
+      "30", "20", "19", "16", "14",
+      "9", "23", "7", "24", "11"
+    ]);
 
     const adminOrder = ["18", "26", "25", "13", "27", "22", "29", "28", "17"].filter((id) => !usedIds.has(id));
-    const wingAdminStaff = adminOrder
+    const remainingStaff = adminOrder
       .map((id) => staffData.departments.find((p) => p.id === id))
       .filter(Boolean);
 
@@ -7750,25 +7778,26 @@ function initStructureModule() {
       <!-- Bağlantı Xətti 2 -> 3 -->
       <div class="tree-stem-vertical"></div>
 
-      <!-- ═══ 3-CÜ MƏRHƏLƏ: ŞÖBƏ MÜDİRLƏRİ VƏ İNZİBATİ HEYƏT ═══ -->
+      <!-- ═══ 3-CÜ SIRA: İXTİSAS VƏ TƏDRİS ŞÖBƏ MÜDİRLƏRİ (ÜÇÜNCÜ BEŞLİK) — YAN-YANA BLOKLAR ═══ -->
+      <div class="tree-tier-block tier-third-five mb-6">
+        <div class="tree-tier-tag">
+          <span>İxtisas və Tədris Şöbə Müdirləri · 3-cü Beşlik</span>
+        </div>
+        <div class="tree-row-five">
+          ${thirdFiveHtml}
+        </div>
+      </div>
+
+      <!-- Bağlantı Xətti 3 -> 4 -->
+      <div class="tree-stem-vertical"></div>
+
+      <!-- ═══ 4-CÜ MƏRHƏLƏ: İNZİBATİ VƏ TƏMİNAT HEYƏTİ ═══ -->
       <div class="tree-tier-block tier-4">
         <div class="tree-tier-tag">
-          <span>Şöbə Müdirləri və İnzibati Struktur</span>
+          <span>İnzibati və Xidmət Heyəti</span>
         </div>
-        <div class="tree-wings-grid">
-          <!-- Qanad 1: Tədris Heyəti -->
-          <div class="tree-wing-panel">
-            <div class="tree-wing-cards">
-              ${renderDeptCards(wingAcademicStaff)}
-            </div>
-          </div>
-
-          <!-- Qanad 2: İnzibati Heyət -->
-          <div class="tree-wing-panel">
-            <div class="tree-wing-cards">
-              ${renderDeptCards(wingAdminStaff)}
-            </div>
-          </div>
+        <div class="tree-wing-cards" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; max-width: 1280px; margin: 0 auto; width: 100%;">
+          ${renderDeptCards(remainingStaff)}
         </div>
       </div>
     `;
