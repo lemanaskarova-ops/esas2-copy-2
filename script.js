@@ -6976,7 +6976,7 @@ const libraryData = [
   },
   {
     id: 86,
-    title_az: "Ali Riyaziyyat (Mühazirələr Toplusu)",
+    title_az: "Ali Riyaziyyatın Əsasları (Mühazirələr Toplusu)",
     title_en: "Higher Mathematics (Lecture Notes)",
     title_ru: "Высшая математика (Сборник лекций)",
     author_az: "Dəqiq Elmlər FBK",
@@ -10307,14 +10307,14 @@ function initLibraryModule() {
       fieldBadge: "ALİ RİYAZİYYAT",
       fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
       subject_az: "Ali Riyaziyyat",
-      title_az: "Ali Riyaziyyat Fənnindən Fundamental Mühazirələr Toplusu",
+      title_az: "Ali Riyaziyyatın Əsasları — Fundamental Mühazirələr Toplusu (2025)",
       author_az: "Dəqiq Elmlər FBK",
       format: "pdf",
       icon: "📊",
       volume: "Fundamental Mühazirə · PDF",
       fileSize: "6.5 MB",
-      desc_az: "Xətti cəbr, matrislər və determinantlar, xətti tənliklər sistemi, vektorlar cəbri, analitik həndəsə, limit, diferensial və inteqral hesabı üzrə ali riyaziyyat mühazirələri.",
-      topics_az: ["Xətti Cəbr", "Matris və Determinant", "Analitik Həndəsə", "Riyazi Analiz"],
+      desc_az: "Matrislər və determinantlar, Kramer, Qauss və Matris üsulları, ikitərtibli əyrilər (çevrə, ellips, hiperbola, parabola), funksiyanın limiti, Lopital qaydası, müəyyən inteqral, ədədi və Teylor sıraları, adi və xətti diferensial tənliklər üzrə rəsmi mühazirələr toplusu.",
+      topics_az: ["Matrislər və Determinantlar", "Kramer və Qauss Üsulu", "İkitərtibli Əyrilər", "Diferensial və İnteqral"],
       url: "ALI RIY muhazire (1).pdf"
     },
     {
