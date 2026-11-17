@@ -157,7 +157,7 @@ const i18n = {
     structure_badge: "Təşkilat",
     structure_title: "İnstitusional Struktur",
     structure_desc:
-      "Kollecdə tədris olunan dövlət standartlı ixtisas proqramları və tədris planları — bir baxışda.",
+      "Rəhbərlik heyəti, şöbə müdirləri və inzibati struktur — bir baxışda.",
     struct_view_tree: "İerarxiya Sxemi",
     struct_view_cards: "Heyət Kartları",
     struct_tab_hierarchy: "İdarəetmə və Şöbələr",
@@ -1107,7 +1107,7 @@ const i18n = {
     structure_badge: "Organization",
     structure_title: "Institutional Structure",
     structure_desc:
-      "State-standard specialized academic programs and curricula at the College — at a glance.",
+      "Leadership, department heads, and administrative structure — at a glance.",
     struct_view_tree: "Hierarchy Tree",
     struct_view_cards: "Staff Cards",
     struct_tab_hierarchy: "Management & Departments",
@@ -2045,7 +2045,7 @@ const i18n = {
     feature3_desc: "Последние события, семинары и новости колледжа",
     structure_badge: "Организация",
     structure_title: "Институциональная Структура",
-    structure_desc: "Государственные образовательные программы специальностей и учебные планы колледжа — с первого взгляда.",
+    structure_desc: "Руководство, заведующие отделениями и административная структура — с первого взгляда.",
     struct_view_tree: "Иерархическая Схема",
     struct_view_cards: "Карточки Сотрудников",
     struct_tab_hierarchy: "Специальности",
