@@ -19328,6 +19328,31 @@ if (document.readyState === "loading") {
 /* ═══════════════ TEACHER CERTIFICATES & HONORED FACULTY DATA & MODULE ═══════════════ */
 const teacherCertificatesData = [
   {
+    id: "tcert-xumar-01",
+    teacher: "Xumar Cəmilova",
+    dept: "FBK-05 Ümumtexnika və Nəqliyyat",
+    category: "beynelxalq",
+    badge_az: "IRU Academy Beynəlxalq Sertifikatı",
+    badge_en: "IRU Academy International Certificate",
+    badge_ru: "Международный Сертификат IRU Academy",
+    badgeClass: "badge-purple",
+    icon: "🚛",
+    year: "2023",
+    title_az: "IRU Academy CPC Manager Beynəlxalq Təlimatçı və Təlimçi Sertifikatı",
+    title_en: "IRU Academy CPC Manager Programme Instructor Certification",
+    title_ru: "Международный сертификат инструктора программы CPC Manager IRU Academy",
+    issuer_az: "IRU Academy — Beynəlxalq Avtomobil Nəqliyyatı İttifaqı (İsveçrə)",
+    issuer_en: "IRU Academy — International Road Transport Union (Switzerland)",
+    issuer_ru: "IRU Academy — Международный союз автомобильного транспорта (Швейцария)",
+    regNo: "52fd98c4-0125-492b-a9ae-f7dbb0daef92",
+    hours: "IRU Academy Train the Trainer (EU 1071/2009)",
+    desc_az: "Kollecin müəllimi Xumar Cəmilovanın İsveçrə mərkəzli IRU Academy (Beynəlxalq Avtomobil Nəqliyyatı İttifaqı) tərəfindən təşkil olunmuş 'Train the Trainer' proqramını uğurla başa vuraraq, Avropa İttifaqının 1071/2009 saylı tənzimləməsinə uyğun CPC Menecer beynəlxalq təlimatçısı kvalifikasiyasını təsdiq edən rəsmi beynəlxalq sertifikat.",
+    desc_en: "Official international certificate confirming that Teacher Khumar Jamilova successfully completed the IRU Academy 'Train the Trainer' programme in full compliance with EU Regulation 1071/2009, qualifying as a certified instructor for the CPC Manager Programme.",
+    desc_ru: "Официальный международный сертификат преподавателя Хумар Джамиловой об успешном прохождении программы IRU Academy 'Train the Trainer' в соответствии с регламентом ЕС 1071/2009 и присвоении квалификации международного инструктора программы CPC Manager.",
+    imageUrl: "xumarser.jpeg",
+    docUrl: "xumarser.jpeg"
+  },
+  {
     id: "tcert-ziba-01",
     teacher: "Ziba Səfərova",
     dept: "FBK-06 Azərbaycan Dili və Ədəbiyyatı",
