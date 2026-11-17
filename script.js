@@ -7583,7 +7583,7 @@ function initStructureModule() {
   function renderTree() {
     if (!treeCanvas) return;
 
-    // ═══ İLK BEŞLİK HEYƏTİ (SIRALI VƏ ALT-ALTA) ═══
+    // ═══ İLK BEŞLİK HEYƏTİ (YAN-YANA BLOKLAR) ═══
     // 1. Səbuhi Qurbanov (Direktor)
     // 2. Boş blok (Direktor müavini)
     // 3. Şahmurad Məmmədov (Tərbiyə işləri üzrə direktor müavini)
@@ -7593,38 +7593,33 @@ function initStructureModule() {
       {
         id: "1",
         num: "01",
-        badge: "Kollec Direktorluğu",
+        badge: "Direktor",
         extraClass: "tree-card-director-apex tree-card-rank-1",
-        avatarWidth: 84,
       },
       {
         id: "vacant-deputy",
         num: "02",
-        badge: "Direktor Müavini (Vakant)",
-        extraClass: "tree-card-vacant tree-card-rank-2",
-        avatarWidth: 72,
+        badge: "Direktor Müavini",
+        extraClass: "tree-card-vacant",
         isVacant: true,
       },
       {
         id: "2",
         num: "03",
         badge: "Direktor Müavini",
-        extraClass: "tree-card-rank-3",
-        avatarWidth: 72,
+        extraClass: "",
       },
       {
         id: "3",
         num: "04",
         badge: "Direktor Müavini",
-        extraClass: "tree-card-rank-4",
-        avatarWidth: 72,
+        extraClass: "",
       },
       {
         id: "12",
         num: "05",
         badge: "YAP Sədri · Şöbə Müdiri",
-        extraClass: "tree-card-rank-5",
-        avatarWidth: 72,
+        extraClass: "",
       },
     ];
 
@@ -7645,32 +7640,29 @@ function initStructureModule() {
       const role = person ? (person[`role_${currentLang}`] || person.role_az) : "Direktor müavini";
 
       const avatarHtml = item.isVacant
-        ? `<div class="tree-avatar-vacant" aria-hidden="true">
+        ? `<div class="tree-grid-avatar-vacant" aria-hidden="true">
              <svg class="w-10 h-10 text-[#c59b27]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                <circle cx="12" cy="7" r="4"></circle>
              </svg>
            </div>`
-        : `<div class="tree-director-avatar" style="width:${item.avatarWidth}px;height:${item.avatarWidth}px;">
+        : `<div class="tree-grid-avatar-wrap">
              <img src="${person.img}" alt="${name}" onerror="this.onerror=null;this.src='logo.jpg';">
            </div>`;
 
-      const cardHtml = `
-        <div class="tree-card-director tree-card-rank ${item.extraClass}" data-person-id="${item.id}" title="${name} - ${role.replace(/<[^>]+>/g, ' ')}">
+      return `
+        <div class="tree-card-grid-block ${item.extraClass}" data-person-id="${item.id}" title="${name} - ${role.replace(/<[^>]+>/g, ' ')}">
           ${avatarHtml}
-          <div class="tree-director-info">
+          <div class="tree-card-grid-info">
             <div class="tree-card-meta-line">
               <span class="tree-card-num-chip">${item.num}</span>
               <span class="tree-card-badge-gold">${item.badge}</span>
             </div>
-            <h3 class="tree-director-name">${name}</h3>
-            <span class="tree-director-role">${role}</span>
+            <h4 class="tree-card-grid-title">${name}</h4>
+            <span class="tree-card-grid-role">${role}</span>
           </div>
         </div>
       `;
-
-      const stemHtml = `<div class="tree-stem-vertical"></div>`;
-      return cardHtml + stemHtml;
     }).join("");
 
     // 4-cü Səviyyə: Şöbə Müdirləri & Birləşmə Komissiyaları (2 Balanslaşdırılmış Qanad)
@@ -7703,15 +7695,18 @@ function initStructureModule() {
     };
 
     treeCanvas.innerHTML = `
-      <!-- ═══ 1-Cİ MƏRHƏLƏ: İDARƏ HEYƏTİ (İLK BEŞLİK) — SIRALI VƏ ALT-ALTA ═══ -->
+      <!-- ═══ 1-Cİ SIRA: İDARƏ HEYƏTİ (İLK BEŞLİK) — YAN-YANA BLOKLAR ═══ -->
       <div class="tree-tier-block tier-first-five">
         <div class="tree-tier-tag">
           <span>${gT("struct_tier1_label") || "İdarə Heyəti və Rəhbərlik"} · İlk Beşlik</span>
         </div>
-        <div class="tree-first-five-stack">
+        <div class="tree-row-five">
           ${firstFiveHtml}
         </div>
       </div>
+
+      <!-- Bağlantı Xətti -->
+      <div class="tree-stem-vertical"></div>
 
       <!-- ═══ 2-Cİ MƏRHƏLƏ: ŞÖBƏ MÜDİRLƏRİ VƏ BİRLƏŞMƏ KOMİSSİYALARI ═══ -->
       <div class="tree-tier-block tier-4">
@@ -8879,7 +8874,7 @@ function initStructureModule() {
     }
 
     if (currentView === "tree") {
-      const items = treeCanvas.querySelectorAll(".tree-card-director, .tree-card-deputy, .tree-card-tier3, .tree-dept-card");
+      const items = treeCanvas.querySelectorAll(".tree-card-director, .tree-card-deputy, .tree-card-tier3, .tree-dept-card, .tree-card-grid-block");
       items.forEach((item) => {
         const text = (item.textContent || "").toLowerCase();
         if (!q || text.includes(q)) {
