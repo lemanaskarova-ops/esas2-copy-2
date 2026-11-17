@@ -8023,6 +8023,9 @@ function initStructureModule() {
         if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('1Русский язык 1 курс (лекции) (1).pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🇷🇺</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
+                if (fbk.id === "fbk-9" && (d === "Fizika" || d.includes("Fizika"))) {
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('Günel fizika elektron.pdf', '${d} (Elektron Mühazirələr)', 'Dəqiq Elmlər FBK');"><span class="chip-doc-icon">⚛️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
+        }
         if (fbk.id === "fbk-9" && (d === "Riyaziyyat" || d.includes("Riyaziyyat"))) {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('1 ci semestr riyaziyyat.pdf', '${d} (I Semestr Mühazirələri)', 'Dəqiq Elmlər FBK');"><span class="chip-doc-icon">📐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
@@ -10032,6 +10035,22 @@ function initLibraryModule() {
       desc_az: "Gənclərin çağırışaqədərki hazırlığı (GÇH) fənni üzrə dövləti müdafiənin tarixi və hüquqları, həyat fəaliyyətinin təhlükəsizliyi və ilk tibbi yardım qaydalarını əhatə edən I semestr rəsmi plan konspekti və mühazirə vəsaiti.",
       topics_az: ["Dövləti Müdafiənin Əsasları", "Silahlı Qüvvələr", "Təhlükəsizlik Təminatı", "İlk Tibbi Yardım"],
       url: "GÇH plan konspekt 1 semestr.pdf"
+    },
+    {
+      id: "fbk-lec-fizika-gunel",
+      fbkId: "fbk-9",
+      fieldBadge: "FİZİKA",
+      fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
+      subject_az: "Fizika",
+      title_az: "Fizika Fənnindən Elektron Mühazirələr Toplusu",
+      author_az: "Müəllim: Günel Mirzəyeva",
+      format: "pdf",
+      icon: "⚛️",
+      volume: "Elektron Mühazirələr · PDF",
+      fileSize: "2.6 MB",
+      desc_az: "Molekulyar kinetik nəzəriyyə, maddənin daxili quruluşu, istilik hadisələri, elektrodinamika və fiziki qanunauyğunluqlar üzrə rəsmi elektron mühazirələr toplusu.",
+      topics_az: ["Molekulyar Fizika", "İstilik Hadisələri", "Elektrodinamika", "Fiziki Qanunlar"],
+      url: "Günel fizika elektron.pdf"
     }
   ];
 
