@@ -3029,7 +3029,7 @@ const staffData = {
       role_az: '"Qiyabi şöbəsi"-Şöbə müdiri',
       role_en: 'Head of "Correspondence" Dept',
       role_ru: 'Заведующий "Заочным отделом"',
-      img: "ceyhunx3.jpeg",
+      img: "ceyhuny.jpeg",
     },
     {
       id: "12",
