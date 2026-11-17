@@ -3462,7 +3462,8 @@ const newsData = [
       "date_az": "17 Noyabr 2026",
       "date_en": "17 November 2026",
       "date_ru": "17 Ноября 2026",
-      "image": "WhatsApp Video 2026-11-16 at 12.42.38.mp4",
+      "image": "neqliyyat_dasinmalar_reel.mp4",
+      "url": "https://www.facebook.com/reel/2060036278042439",
       "tag_az": "Açıq Dərs",
       "tag_en": "Open Lesson",
       "tag_ru": "Открытый Урок"
@@ -11893,7 +11894,18 @@ function initGalleryModule() {
     study: [
       {
         type: "video",
-        src: "WhatsApp Video 2026-11-16 at 12.42.38.mp4",
+        src: "WhatsApp Video 2026-11-17 at 17.08.02.mp4",
+        tall: true,
+        label: "İnteraktiv Tədris və Canlı Dərs Mühiti",
+        label_az: "İnteraktiv Tədris və Canlı Dərs Mühiti",
+        label_en: "Interactive Teaching & Live Study Environment",
+        label_ru: "Интерактивное обучение и живая учебная среда",
+        badge: "DƏRS MÜHİTİ",
+        i18n: "gallery_cat_study",
+      },
+      {
+        type: "video",
+        src: "neqliyyat_dasinmalar_reel.mp4",
         tall: true,
         label: "Nəqliyyatda daşınmalar · Açıq Dərs (Xumar Cəmilova, Gülər Mustafayeva, Coşqun Yəhyayev)",
         label_az: "Nəqliyyatda daşınmalar · Açıq Dərs (Xumar Cəmilova, Gülər Mustafayeva, Coşqun Yəhyayev)",
