@@ -7716,18 +7716,49 @@ function initStructureModule() {
       },
     ];
 
+    // ═══ 4-CÜ SIRA (4-cü Beşlik): Şöhlə, Xəlil, Aygün, Aynur, Günay ═══
+    const fourthFiveConfig = [
+      {
+        id: "28",
+        num: "16",
+        badge: "Mülki Müdafiə",
+      },
+      {
+        id: "13",
+        num: "17",
+        badge: "Təcrübə Rəhbəri",
+      },
+      {
+        id: "27",
+        num: "18",
+        badge: "Həmkarlar İttifaqı",
+      },
+      {
+        id: "22",
+        num: "19",
+        badge: "Kitabxana Müdiri",
+      },
+      {
+        id: "18",
+        num: "20",
+        badge: "Arxiv Müdiri",
+      },
+    ];
+
     const firstFiveHtml = buildFiveRow(firstFiveConfig);
     const secondFiveHtml = buildFiveRow(secondFiveConfig);
     const thirdFiveHtml = buildFiveRow(thirdFiveConfig);
+    const fourthFiveHtml = buildFiveRow(fourthFiveConfig);
 
     // Qalan İnzibati Heyət
     const usedIds = new Set([
       "1", "vacant-deputy", "2", "3", "12",
       "30", "20", "19", "16", "14",
-      "9", "23", "7", "24", "11"
+      "9", "23", "7", "24", "11",
+      "28", "13", "27", "22", "18"
     ]);
 
-    const adminOrder = ["18", "26", "25", "13", "27", "22", "29", "28", "17"].filter((id) => !usedIds.has(id));
+    const adminOrder = ["26", "25", "29", "17"].filter((id) => !usedIds.has(id));
     const remainingStaff = adminOrder
       .map((id) => staffData.departments.find((p) => p.id === id))
       .filter(Boolean);
@@ -7791,15 +7822,30 @@ function initStructureModule() {
       <!-- Bağlantı Xətti 3 -> 4 -->
       <div class="tree-stem-vertical"></div>
 
-      <!-- ═══ 4-CÜ MƏRHƏLƏ: İNZİBATİ VƏ TƏMİNAT HEYƏTİ ═══ -->
-      <div class="tree-tier-block tier-4">
+      <!-- ═══ 4-CÜ SIRA: İCTİMAİ VƏ TƏMİNAT STRUKTURU (DÖRDÜNCÜ BEŞLİK) — YAN-YANA BLOKLAR ═══ -->
+      <div class="tree-tier-block tier-fourth-five mb-6">
         <div class="tree-tier-tag">
-          <span>İnzibati və Xidmət Heyəti</span>
+          <span>İctimai, Təcrübə və Təminat Strukturu · 4-cü Beşlik</span>
+        </div>
+        <div class="tree-row-five">
+          ${fourthFiveHtml}
+        </div>
+      </div>
+
+      ${remainingStaff.length > 0 ? `
+      <!-- Bağlantı Xətti 4 -> 5 -->
+      <div class="tree-stem-vertical"></div>
+
+      <!-- ═══ 5-Cİ MƏRHƏLƏ: METODİKİ VƏ TEXNİKİ XİDMƏT HEYƏTİ ═══ -->
+      <div class="tree-tier-block tier-5">
+        <div class="tree-tier-tag">
+          <span>Metodiki və Texniki Xidmət Heyəti</span>
         </div>
         <div class="tree-wing-cards" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; max-width: 1280px; margin: 0 auto; width: 100%;">
           ${renderDeptCards(remainingStaff)}
         </div>
       </div>
+      ` : ''}
     `;
 
     // Click on any tree member triggers person detail
