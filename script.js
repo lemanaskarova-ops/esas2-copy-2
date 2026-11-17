@@ -3059,7 +3059,7 @@ const staffData = {
       role_az: "Kadrlar üzrə mütəxəssis",
       role_en: "HR Specialist",
       role_ru: "Специалист по кадрам",
-      img: "lemanx1.jpeg",
+      img: "logo.jpg",
     },
     {
       id: "19",
@@ -3099,7 +3099,7 @@ const staffData = {
       role_az: "Metodist",
       role_en: "Methodist",
       role_ru: "Методист",
-      img: "selalex1.jpeg",
+      img: "logo.jpg",
     },
     {
       id: "25",
@@ -3109,7 +3109,7 @@ const staffData = {
       role_az: "Metodist",
       role_en: "Methodist",
       role_ru: "Методист",
-      img: "metodistx.jpeg",
+      img: "logo.jpg",
     },
     {
       id: "13",
@@ -3181,7 +3181,7 @@ const staffData = {
       role_az: "Metodist",
       role_en: "Methodist",
       role_ru: "Методист",
-      img: "metodistx.jpeg",
+      img: "logo.jpg",
     },
   ],
   majors: {
@@ -8694,15 +8694,15 @@ function initStructureModule() {
     else if (person.id === "17" || (person.img && person.img.includes("munir"))) photoClass = "munir-photo";
     else if (person.id === "18") photoClass = "gunay-photo";
     else if (person.id === "19") photoClass = "azer-photo";
-    else if (person.id === "20") photoClass = "leman-photo";
+    else if (person.id === "20" && person.img !== "logo.jpg") photoClass = "leman-photo";
     else if (person.id === "22") photoClass = "aynur-photo";
     else if (person.id === "27") photoClass = "aygun-photo";
     else if (person.id === "28") photoClass = "sohle-photo";
     else if (person.id === "29" || (person.img && person.img.includes("fizuli"))) photoClass = "fizuli-photo";
     else if (person.id === "23") photoClass = "yegane-photo";
     else if (person.id === "24") photoClass = "natiq-photo";
-    else if (person.id === "25") photoClass = "sevda-photo";
-    else if (person.id === "26") photoClass = "selale-photo";
+    else if (person.id === "25" && person.img !== "logo.jpg") photoClass = "sevda-photo";
+    else if (person.id === "26" && person.img !== "logo.jpg") photoClass = "selale-photo";
 
     const bioText = person[`bio_${currentLang}`] || person.bio_az;
     const highlights = person.highlights || [];
