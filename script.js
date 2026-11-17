@@ -6309,7 +6309,7 @@ const libraryData = [
     author_ru: "Автор: Сусанна Алыева",
     category: "riyaziyyat",
     icon: "📐",
-    url: "Riyaziyyat.docx.pdf",
+    url: "Riyaziyyat.docx (2).pdf",
   },
   {
     id: 30,
