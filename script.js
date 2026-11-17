@@ -7717,10 +7717,6 @@ function initStructureModule() {
               <img src="${tier3.img}" alt="${tier3Name}" onerror="this.onerror=null;this.src='logo.jpg';">
             </div>
             <div class="tree-tier3-info">
-              <span class="tree-tier3-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span>${gT("struct_tier3_badge") || "YAP Ərazi Partiya Təşkilatı Sədri · Şöbə Müdiri"}</span>
-              </span>
               <h4 class="tree-tier3-name">${tier3Name}</h4>
               <span class="tree-tier3-role">${tier3Role}</span>
             </div>
