@@ -7615,7 +7615,6 @@ function initStructureModule() {
             ${avatarHtml}
             <div class="tree-card-grid-info">
               <div class="tree-card-meta-line">
-                <span class="tree-card-num-chip">${item.num}</span>
                 <span class="tree-card-badge-gold">${item.badge}</span>
               </div>
               <h4 class="tree-card-grid-title">${name}</h4>
