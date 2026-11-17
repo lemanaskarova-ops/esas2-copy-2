@@ -2603,3 +2603,107 @@ body.dark-mode .labor-conf-back-btn:hover {
 
 
 
+
+
+/* ── Structure: İlk Beşlik (Alt-alta Sıralı Yerləşdirmə) ── */
+.tree-first-five-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.tree-card-rank {
+  background: linear-gradient(135deg, rgba(14, 34, 61, 0.95) 0%, rgba(7, 25, 48, 0.98) 100%);
+  border: 1.5px solid rgba(207, 169, 94, 0.4);
+  border-radius: 18px;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 12px 32px rgba(7, 25, 48, 0.4), 0 0 18px rgba(184, 147, 74, 0.12);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+  position: relative;
+}
+
+.tree-card-rank:hover {
+  transform: translateY(-3px) scale(1.015);
+  border-color: #c59b27;
+  box-shadow: 0 18px 44px rgba(7, 25, 48, 0.55), 0 0 26px rgba(197, 155, 39, 0.28);
+}
+
+.tree-card-rank-1 {
+  border-color: #c59b27;
+  border-width: 2px;
+  box-shadow: 0 16px 40px rgba(7, 25, 48, 0.5), 0 0 28px rgba(197, 155, 39, 0.25);
+}
+
+.tree-card-vacant {
+  border: 2px dashed rgba(207, 169, 94, 0.6) !important;
+  background: linear-gradient(135deg, rgba(14, 34, 61, 0.72) 0%, rgba(7, 25, 48, 0.85) 100%) !important;
+}
+
+.tree-avatar-vacant {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px dashed #c59b27;
+  background: rgba(197, 155, 39, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.tree-card-meta-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+  flex-wrap: wrap;
+}
+
+.tree-card-num-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 6px;
+  background: rgba(197, 155, 39, 0.22);
+  color: #f3d98b;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 800;
+  border: 1px solid rgba(197, 155, 39, 0.45);
+}
+
+.tree-card-badge-gold {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #dfc07f;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: rgba(197, 155, 39, 0.12);
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(197, 155, 39, 0.28);
+}
+
+body.dark-mode .tree-card-rank {
+  background: linear-gradient(145deg, rgba(14, 30, 54, 0.96), rgba(8, 20, 38, 0.98)) !important;
+  border-color: rgba(207, 169, 94, 0.38) !important;
+}
+
+body.dark-mode .tree-card-vacant {
+  background: linear-gradient(145deg, rgba(14, 30, 54, 0.7), rgba(8, 20, 38, 0.8)) !important;
+  border-color: rgba(207, 169, 94, 0.55) !important;
+}
+

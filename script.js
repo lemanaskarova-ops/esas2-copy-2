@@ -2950,6 +2950,20 @@ const staffData = {
       img: "sebuhix4.jpeg?v=20261106_08",
     },
     {
+      id: "vacant-deputy",
+      name_az: "Direktor müavini",
+      name_en: "Deputy Director",
+      name_ru: "Заместитель директора",
+      role_az: "Direktor müavini",
+      role_en: "Deputy Director",
+      role_ru: "Заместитель директора",
+      img: "logo.jpg",
+      isVacant: true,
+      bio_az: "Vakant vəzifə — Təyinat prosesi davam edir.",
+      bio_en: "Vacant position — Appointment in progress.",
+      bio_ru: "Вакантная должность — Назначение в процессе.",
+    },
+    {
       id: "2",
       name_az: "Şahmurad Məmmədov Zöhtün oğlu",
       name_en: "Shahmurad Mammadov Zohtun",
@@ -2968,6 +2982,16 @@ const staffData = {
       role_en: "Deputy Director for Administrative & Economic Affairs",
       role_ru: "Заместитель директора по административно-хозяйственной части",
       img: "ismayilx.jpeg",
+    },
+    {
+      id: "12",
+      name_az: "Səidə Quliyeva Novruz qızı",
+      name_en: "Saida Guliyeva Novruz",
+      name_ru: "Саида Гулиева Новруз гызы",
+      role_az: 'Yeni Azərbaycan Partiyası Ərazi Partiya Təşkilatı sədri<br>"Qeydiyyat, qiymətləndirmə və Monitorinq şöbəsi"-Şöbə müdiri',
+      role_en: 'Chair of YAP Territorial Party Organization<br>Head of "Registration, Evaluation and Monitoring" Dept',
+      role_ru: 'Председатель территориальной партийной организации YAP<br>Заведующая отделом "Регистрации, оценки и мониторинга"',
+      img: "seidex2.jpeg",
     },
   ],
   departments: [
@@ -7559,28 +7583,95 @@ function initStructureModule() {
   function renderTree() {
     if (!treeCanvas) return;
 
-    // 1-ci Səviyyə: Direktor
-    const director = staffData.leadership.find((p) => p.id === "1") || staffData.leadership[0];
-    const directorName = director ? (director[`name_${currentLang}`] || director.name_az) : "";
-    const directorRole = director ? (director[`role_${currentLang}`] || director.role_az) : "";
+    // ═══ İLK BEŞLİK HEYƏTİ (SIRALI VƏ ALT-ALTA) ═══
+    // 1. Səbuhi Qurbanov (Direktor)
+    // 2. Boş blok (Direktor müavini)
+    // 3. Şahmurad Məmmədov (Tərbiyə işləri üzrə direktor müavini)
+    // 4. İsmayıl Səfiyev (İnzibati təsərüffat işləri üzrə direktor müavini)
+    // 5. Səidə Quliyeva (YAP sədri / Qeydiyyat, qiymətləndirmə və Monitorinq şöbəsi müdiri)
+    const firstFiveConfig = [
+      {
+        id: "1",
+        num: "01",
+        badge: "Kollec Direktorluğu",
+        extraClass: "tree-card-director-apex tree-card-rank-1",
+        avatarWidth: 84,
+      },
+      {
+        id: "vacant-deputy",
+        num: "02",
+        badge: "Direktor Müavini (Vakant)",
+        extraClass: "tree-card-vacant tree-card-rank-2",
+        avatarWidth: 72,
+        isVacant: true,
+      },
+      {
+        id: "2",
+        num: "03",
+        badge: "Direktor Müavini",
+        extraClass: "tree-card-rank-3",
+        avatarWidth: 72,
+      },
+      {
+        id: "3",
+        num: "04",
+        badge: "Direktor Müavini",
+        extraClass: "tree-card-rank-4",
+        avatarWidth: 72,
+      },
+      {
+        id: "12",
+        num: "05",
+        badge: "YAP Sədri · Şöbə Müdiri",
+        extraClass: "tree-card-rank-5",
+        avatarWidth: 72,
+      },
+    ];
 
-    // 2-ci Səviyyə: Şahmurad Məmmədov və İsmayıl Səfiyev
-    const deputy1 = staffData.leadership.find((p) => p.id === "2") || staffData.leadership[1];
-    const deputy2 = staffData.leadership.find((p) => p.id === "3") || staffData.leadership[2];
-    const deputy1Name = deputy1 ? (deputy1[`name_${currentLang}`] || deputy1.name_az) : "";
-    const deputy1Role = deputy1 ? (deputy1[`role_${currentLang}`] || deputy1.role_az) : "";
-    const deputy2Name = deputy2 ? (deputy2[`name_${currentLang}`] || deputy2.name_az) : "";
-    const deputy2Role = deputy2 ? (deputy2[`role_${currentLang}`] || deputy2.role_az) : "";
+    const firstFiveHtml = firstFiveConfig.map((item) => {
+      let person = staffData.leadership.find((p) => p.id === item.id);
+      if (!person && item.id === "12") {
+        person = staffData.departments.find((p) => p.id === "12");
+      }
+      if (!person && item.isVacant) {
+        person = {
+          id: "vacant-deputy",
+          name_az: "Direktor müavini",
+          role_az: "Direktor müavini",
+          isVacant: true
+        };
+      }
+      const name = person ? (person[`name_${currentLang}`] || person.name_az) : "Direktor müavini";
+      const role = person ? (person[`role_${currentLang}`] || person.role_az) : "Direktor müavini";
 
-    // 3-cü Səviyyə: Səidə Quliyeva
-    const tier3 = staffData.departments.find((p) => p.id === "12") || {
-      id: "12",
-      name_az: "Səidə Quliyeva Novruz qızı",
-      role_az: 'Yeni Azərbaycan Partiyası Ərazi Partiya Təşkilatı sədri<br>"Qeydiyyat, qiymətləndirmə və Monitorinq şöbəsi"-Şöbə müdiri',
-      img: "seidex2.jpeg",
-    };
-    const tier3Name = tier3[`name_${currentLang}`] || tier3.name_az || "";
-    const tier3Role = tier3[`role_${currentLang}`] || tier3.role_az || "";
+      const avatarHtml = item.isVacant
+        ? `<div class="tree-avatar-vacant" aria-hidden="true">
+             <svg class="w-10 h-10 text-[#c59b27]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+               <circle cx="12" cy="7" r="4"></circle>
+             </svg>
+           </div>`
+        : `<div class="tree-director-avatar" style="width:${item.avatarWidth}px;height:${item.avatarWidth}px;">
+             <img src="${person.img}" alt="${name}" onerror="this.onerror=null;this.src='logo.jpg';">
+           </div>`;
+
+      const cardHtml = `
+        <div class="tree-card-director tree-card-rank ${item.extraClass}" data-person-id="${item.id}" title="${name} - ${role.replace(/<[^>]+>/g, ' ')}">
+          ${avatarHtml}
+          <div class="tree-director-info">
+            <div class="tree-card-meta-line">
+              <span class="tree-card-num-chip">${item.num}</span>
+              <span class="tree-card-badge-gold">${item.badge}</span>
+            </div>
+            <h3 class="tree-director-name">${name}</h3>
+            <span class="tree-director-role">${role}</span>
+          </div>
+        </div>
+      `;
+
+      const stemHtml = `<div class="tree-stem-vertical"></div>`;
+      return cardHtml + stemHtml;
+    }).join("");
 
     // 4-cü Səviyyə: Şöbə Müdirləri & Birləşmə Komissiyaları (2 Balanslaşdırılmış Qanad)
     const academicOrder = ["14", "9", "23", "7", "24", "11"];
@@ -7611,158 +7702,22 @@ function initStructureModule() {
         .join("");
     };
 
-    // İxtisaslar Məlumatı (Müasir Akademik Cədvəl Dizaynı)
-    const majorIcons = {
-      "040406": "📊", // Mühasibat uçotu
-      "040554": "📮", // Poçt rabitəsi
-      "040556": "📻", // Radio, televiziya vasitə və qurğuları
-      "040405": "📈", // Marketinq
-      "040544": "📱", // Mobil şəbəkə sistemləri və operatorluğu
-      "040565": "🌐", // Telekommunikasiya şəbəkələri və xətləri
-      "040508": "📡", // Çoxkanallı telekommunikasiya sistemlərinin istismarı
-      "040572": "🚃", // Vaqon və refrijerator sistemləri
-      "040552": "🚚", // Nəqliyyatın logistikası
-      "040550": "🚗", // Nəqliyyat vasitələrinin texniki istismarı
-      "040518": "🌱", // Ətraf mühitin mühafizəsi və bərpası
-      "040529": "💻", // Kompüter sistemləri və kompleksləri
-      "040533": "🛠️", // Kompüter şəbəkə avadanlıqlarının təmiri və servisi
-      "040553": "🛠️", // Kompüter şəbəkə avadanlıqlarının təmiri və servisi
-      "040532": "🛡️", // Kompüter şəbəkələri və şəbəkə inzibatçılığı
-    };
-
-    const eyaniMajors = staffData.majors.eyani || [];
-    const qiyabiMajors = staffData.majors.qiyabi || [];
-
-    function renderTableRows(list, mode) {
-      let lastDept = null;
-      let rowNum = 0;
-
-      return list
-        .map((m) => {
-          const deptTitle = m[`dept_${currentLang}`] || m.dept_az || "";
-          let deptHeaderHtml = "";
-          if (deptTitle && deptTitle !== lastDept) {
-            lastDept = deptTitle;
-            rowNum = 0;
-            const deptCount = list.filter((item) => (item[`dept_${currentLang}`] || item.dept_az || "") === deptTitle).length;
-            deptHeaderHtml = `
-              <tr class="major-dept-group-row">
-                <td colspan="5">
-                  <div class="major-dept-group-inner">
-                    <span class="major-dept-group-icon" aria-hidden="true">🏛️</span>
-                    <span class="major-dept-group-title">${deptTitle}</span>
-                    <span class="major-dept-group-count">${deptCount}</span>
-                  </div>
-                </td>
-              </tr>`;
-          }
-
-          rowNum += 1;
-          const name = m[`name_${currentLang}`] || m.name_az;
-          const field = m[`field_${currentLang}`] || m.field_az;
-          const icon = majorIcons[m.code] || "📘";
-          const modeLabel =
-            mode === "eyani"
-              ? (currentLang === "en" ? "Full-time" : currentLang === "ru" ? "Очно" : "Əyani")
-              : (currentLang === "en" ? "Part-time" : currentLang === "ru" ? "Заочно" : "Qiyabi");
-          const subDegree =
-            currentLang === "en" ? "Sub-bachelor" : currentLang === "ru" ? "Суббакалавр" : "Subbakalavr";
-
-          return `${deptHeaderHtml}
-            <tr class="major-row" data-code="${m.code}">
-              <td class="td-num">${rowNum}</td>
-              <td class="td-code" data-label="${gT("th_code") || "Kod"}">
-                <span class="major-code-pill">${m.code}</span>
-              </td>
-              <td class="td-name" data-label="${gT("th_major") || "İxtisas"}">
-                <div class="major-name-wrap">
-                  <span class="major-row-icon">${icon}</span>
-                  <div class="major-title-group">
-                    <span class="major-row-title">${name}</span>
-                    <span class="major-row-sub">${m.code} · ${field}</span>
-                  </div>
-                </div>
-              </td>
-              <td class="td-field" data-label="${gT("th_field") || "Sahə"}">
-                <span class="major-field-chip">${field}</span>
-              </td>
-              <td class="td-degree" data-label="${gT("th_degree") || "Dərəcə"}">
-                <div class="major-degree-badge">
-                  <span class="degree-sub">${subDegree}</span>
-                  <span class="degree-mode mode-${mode}">${modeLabel}</span>
-                </div>
-              </td>
-            </tr>`;
-        })
-        .join("");
-    }
-
     treeCanvas.innerHTML = `
-      <!-- ═══ 1-Cİ SƏVİYYƏ: DİREKTOR ═══ -->
-      <div class="tree-tier-block tier-1">
-        <div class="tree-tier-tag"><span>${gT("struct_tier1_label") || "İdarə Heyəti"}</span></div>
-        <div class="tree-card-director" data-person-id="${director.id}" title="${directorName}">
-          <div class="tree-director-avatar">
-            <img src="${director.img}" alt="${directorName}" onerror="this.onerror=null;this.src='logo.jpg';">
-          </div>
-          <div class="tree-director-info">
-            <h3 class="tree-director-name">${directorName}</h3>
-            <span class="tree-director-role">${directorRole}</span>
-          </div>
+      <!-- ═══ 1-Cİ MƏRHƏLƏ: İDARƏ HEYƏTİ (İLK BEŞLİK) — SIRALI VƏ ALT-ALTA ═══ -->
+      <div class="tree-tier-block tier-first-five">
+        <div class="tree-tier-tag">
+          <span>${gT("struct_tier1_label") || "İdarə Heyəti və Rəhbərlik"} · İlk Beşlik</span>
+        </div>
+        <div class="tree-first-five-stack">
+          ${firstFiveHtml}
         </div>
       </div>
 
-      <!-- Bağlantı Xətti 1 -> 2 -->
-      <div class="tree-stem-vertical"></div>
-
-      <!-- ═══ 2-Cİ SƏVİYYƏ: ŞAHMURAD MƏMMƏDOV VƏ İSMAYIL SƏFİYEV ═══ -->
-      <div class="tree-tier-block tier-2">
-        <div class="tree-level-deputies">
-          <div class="tree-card-deputy" data-person-id="${deputy1.id}" title="${deputy1Name}">
-            <div class="tree-deputy-avatar">
-              <img src="${deputy1.img}" alt="${deputy1Name}" onerror="this.onerror=null;this.src='logo.jpg';">
-            </div>
-            <div class="tree-deputy-info">
-              <h4 class="tree-deputy-name">${deputy1Name}</h4>
-              <span class="tree-deputy-role">${deputy1Role}</span>
-            </div>
-          </div>
-
-          <div class="tree-card-deputy" data-person-id="${deputy2.id}" title="${deputy2Name}">
-            <div class="tree-deputy-avatar">
-              <img src="${deputy2.img}" alt="${deputy2Name}" onerror="this.onerror=null;this.src='logo.jpg';">
-            </div>
-            <div class="tree-deputy-info">
-              <h4 class="tree-deputy-name">${deputy2Name}</h4>
-              <span class="tree-deputy-role">${deputy2Role}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bağlantı Xətti 2 -> 3 -->
-      <div class="tree-stem-vertical"></div>
-
-      <!-- ═══ 3-CÜ SƏVİYYƏ: SƏİDƏ QULİYEVA ═══ -->
-      <div class="tree-tier-block tier-3">
-        <div class="tree-level-tier3">
-          <div class="tree-card-tier3" data-person-id="${tier3.id}" title="${tier3Name}">
-            <div class="tree-tier3-avatar">
-              <img src="${tier3.img}" alt="${tier3Name}" onerror="this.onerror=null;this.src='logo.jpg';">
-            </div>
-            <div class="tree-tier3-info">
-              <h4 class="tree-tier3-name">${tier3Name}</h4>
-              <span class="tree-tier3-role">${tier3Role}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bağlantı Xətti 3 -> 4 -->
-      <div class="tree-stem-vertical"></div>
-
-      <!-- ═══ 4-CÜ SƏVİYYƏ: ŞÖBƏ MÜDİRLƏRİ VƏ BİRLƏŞMƏ KOMİSSİYALARI ═══ -->
+      <!-- ═══ 2-Cİ MƏRHƏLƏ: ŞÖBƏ MÜDİRLƏRİ VƏ BİRLƏŞMƏ KOMİSSİYALARI ═══ -->
       <div class="tree-tier-block tier-4">
+        <div class="tree-tier-tag">
+          <span>Şöbə Müdirləri və İnzibati Heyət</span>
+        </div>
         <div class="tree-wings-grid">
           <!-- Qanad 1: Tədris Heyəti -->
           <div class="tree-wing-panel">
@@ -8715,8 +8670,8 @@ function initStructureModule() {
     let badgeText = gT("struct_director_badge") || "Kollec Rəhbərliyi";
     if (person.id === "1") {
       badgeText = gT("struct_director_badge") || "Kollec Direktorluğu";
-    } else if (person.id === "2" || person.id === "3") {
-      badgeText = gT("struct_deputies_badge") || "Direktor Müavini";
+    } else if (person.id === "2" || person.id === "3" || person.id === "vacant-deputy") {
+      badgeText = person.isVacant ? "Direktor Müavini (Vakant)" : (gT("struct_deputies_badge") || "Direktor Müavini");
     } else if (staffData.departments && staffData.departments.some((p) => p.id === person.id)) {
       badgeText = gT("cat_departments") || "Şöbə Müdiri / İnzibati Heyət";
     } else if (staffData.commissions && staffData.commissions.some((p) => p.id === person.id)) {
