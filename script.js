@@ -7583,8 +7583,8 @@ function initStructureModule() {
   function renderTree() {
     if (!treeCanvas) return;
 
-    // Helper to generate a 5-card row HTML
-    function buildFiveRow(config) {
+    // Helper to generate grid cards HTML
+    function buildGridRow(config) {
       return config.map((item) => {
         let person = staffData.leadership.find((p) => p.id === item.id) ||
                      staffData.departments.find((p) => p.id === item.id);
@@ -7745,42 +7745,35 @@ function initStructureModule() {
       },
     ];
 
-    const firstFiveHtml = buildFiveRow(firstFiveConfig);
-    const secondFiveHtml = buildFiveRow(secondFiveConfig);
-    const thirdFiveHtml = buildFiveRow(thirdFiveConfig);
-    const fourthFiveHtml = buildFiveRow(fourthFiveConfig);
+    // ═══ 5-Cİ SIRA (Qalan 4-lük): Şəlalə, Sevda, Fizuli, Munir ═══
+    const fifthFourConfig = [
+      {
+        id: "26",
+        num: "21",
+        badge: "Metodist",
+      },
+      {
+        id: "25",
+        num: "22",
+        badge: "Metodist",
+      },
+      {
+        id: "29",
+        num: "23",
+        badge: "EHM Mühəndisi",
+      },
+      {
+        id: "17",
+        num: "24",
+        badge: "Emalatxana Müdiri",
+      },
+    ];
 
-    // Qalan İnzibati Heyət
-    const usedIds = new Set([
-      "1", "vacant-deputy", "2", "3", "12",
-      "30", "20", "19", "16", "14",
-      "9", "23", "7", "24", "11",
-      "28", "13", "27", "22", "18"
-    ]);
-
-    const adminOrder = ["26", "25", "29", "17"].filter((id) => !usedIds.has(id));
-    const remainingStaff = adminOrder
-      .map((id) => staffData.departments.find((p) => p.id === id))
-      .filter(Boolean);
-
-    const renderDeptCards = (members) => {
-      return members
-        .map((p) => {
-          const name = p[`name_${currentLang}`] || p.name_az;
-          const role = p[`role_${currentLang}`] || p.role_az;
-          return `
-            <div class="tree-dept-card" data-person-id="${p.id}" title="${name} - ${role}">
-              <div class="tree-dept-avatar">
-                <img src="${p.img}" alt="${name}" loading="lazy" onerror="this.onerror=null;this.src='logo.jpg';">
-              </div>
-              <div class="tree-dept-info">
-                <h5 class="tree-dept-name">${name}</h5>
-                <span class="tree-dept-role">${role}</span>
-              </div>
-            </div>`;
-        })
-        .join("");
-    };
+    const firstFiveHtml = buildGridRow(firstFiveConfig);
+    const secondFiveHtml = buildGridRow(secondFiveConfig);
+    const thirdFiveHtml = buildGridRow(thirdFiveConfig);
+    const fourthFiveHtml = buildGridRow(fourthFiveConfig);
+    const fifthFourHtml = buildGridRow(fifthFourConfig);
 
     treeCanvas.innerHTML = `
       <!-- ═══ 1-Cİ SIRA: İDARƏ HEYƏTİ (İLK BEŞLİK) — YAN-YANA BLOKLAR ═══ -->
@@ -7832,20 +7825,18 @@ function initStructureModule() {
         </div>
       </div>
 
-      ${remainingStaff.length > 0 ? `
       <!-- Bağlantı Xətti 4 -> 5 -->
       <div class="tree-stem-vertical"></div>
 
-      <!-- ═══ 5-Cİ MƏRHƏLƏ: METODİKİ VƏ TEXNİKİ XİDMƏT HEYƏTİ ═══ -->
-      <div class="tree-tier-block tier-5">
+      <!-- ═══ 5-Cİ SIRA: METODİKİ VƏ TEXNİKİ TƏMİNAT HEYƏTİ (QALAN 4-LÜK) — YAN-YANA BLOKLAR ═══ -->
+      <div class="tree-tier-block tier-fifth-four mb-6">
         <div class="tree-tier-tag">
-          <span>Metodiki və Texniki Xidmət Heyəti</span>
+          <span>Metodiki və Texniki Təminat Heyəti · 5-ci Sıra</span>
         </div>
-        <div class="tree-wing-cards" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; max-width: 1280px; margin: 0 auto; width: 100%;">
-          ${renderDeptCards(remainingStaff)}
+        <div class="tree-row-four">
+          ${fifthFourHtml}
         </div>
       </div>
-      ` : ''}
     `;
 
     // Click on any tree member triggers person detail
