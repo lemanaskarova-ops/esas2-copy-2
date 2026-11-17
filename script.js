@@ -6609,7 +6609,7 @@ const libraryData = [
     author_ru: "Автор: Гюльнара Мамедова Мухтар",
     category: "menecment",
     icon: "🛍️",
-    url: "kitab.ƏSLİ-İSTEHLAKÇI DAVRANIŞLARI-1 (1).pdf",
+    url: "kitab.ƏSLİ-İSTEHLAKÇI DAVRANIŞLARI-1 (2).pdf",
   }
 ];
 
