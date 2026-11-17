@@ -157,7 +157,7 @@ const i18n = {
     structure_badge: "Təşkilat",
     structure_title: "İnstitusional Struktur",
     structure_desc:
-      "Kollecdə tədris olunan dövlət standartlı ixtisas proqramları və tədris planları — bir baxışda.",
+      "Rəhbərlik heyəti, şöbə müdirləri və inzibati struktur — bir baxışda.",
     struct_view_tree: "İerarxiya Sxemi",
     struct_view_cards: "Heyət Kartları",
     struct_tab_hierarchy: "İdarəetmə və Şöbələr",
@@ -883,7 +883,7 @@ const i18n = {
     search_cat_faq: "❓ Qəbul & FAQ",
     search_cat_contact: "📞 Əlaqə & Xidmətlər",
     search_hint_text: "Sürətli naviqasiya üçün axtardığınız mövzunu yazın və ya kateqoriyalardan birini seçin:",
-    search_chip_cs: "💻 Kompüter sistemləri",
+    search_chip_cs: "💻 Komputer sistemləri",
     search_chip_senan: "⭐ Sənan Mirzəzadə (Fəxri tələbə)",
     search_chip_edebiyyat: "📖 Ədəbiyyat (edebiyyatfb.pdf)",
     search_chip_tarix: "🏛️ Azərbaycan Tarixi (aztarixifb.pdf)",
@@ -1107,7 +1107,7 @@ const i18n = {
     structure_badge: "Organization",
     structure_title: "Institutional Structure",
     structure_desc:
-      "State-standard specialized academic programs and curricula at the College — at a glance.",
+      "Leadership, department heads, and administrative structure — at a glance.",
     struct_view_tree: "Hierarchy Tree",
     struct_view_cards: "Staff Cards",
     struct_tab_hierarchy: "Management & Departments",
@@ -2045,7 +2045,7 @@ const i18n = {
     feature3_desc: "Последние события, семинары и новости колледжа",
     structure_badge: "Организация",
     structure_title: "Институциональная Структура",
-    structure_desc: "Государственные образовательные программы специальностей и учебные планы колледжа — с первого взгляда.",
+    structure_desc: "Руководство, заведующие отделениями и административная структура — с первого взгляда.",
     struct_view_tree: "Иерархическая Схема",
     struct_view_cards: "Карточки Сотрудников",
     struct_tab_hierarchy: "Специальности",
@@ -2999,7 +2999,7 @@ const staffData = {
       role_az: '"Nəqliyyat şöbəsi"-Şöbə müdiri',
       role_en: 'Head of "Transport" Dept',
       role_ru: 'Заведующая отделом "Транспорт"',
-      img: "yegane.jpeg",
+      img: "yeganey.jpeg",
     },
     {
       id: "7",
@@ -6040,7 +6040,7 @@ const libraryData = [
   },
   {
     id: 8,
-    title_az: "Kompyuter qrafikası",
+    title_az: "Komputer qrafikası",
     title_en: "Computer Graphics",
     title_ru: "Компьютерная графика",
     author_az: "Müəllif: Fəridə Məmmədova",
@@ -6064,7 +6064,7 @@ const libraryData = [
   },
   {
     id: 10,
-    title_az: "Kompyuter şəbəkəsinin proqram təminatı",
+    title_az: "Komputer şəbəkəsinin proqram təminatı",
     title_en: "Computer Network Software",
     title_ru: "Программное обеспечение компьютерных сетей",
     author_az: "Müəllif: Fəridə Məmmədova",
@@ -6076,7 +6076,7 @@ const libraryData = [
   },
   {
     id: 11,
-    title_az: "Kompyuter şəbəkələri",
+    title_az: "Komputer şəbəkələri",
     title_en: "Computer Networks",
     title_ru: "Компьютерные сети",
     author_az: "Müəllif: Gülnarə Əliyeva",
@@ -6100,7 +6100,7 @@ const libraryData = [
   },
   {
     id: 13,
-    title_az: "Kompyuterin Arxitekturası",
+    title_az: "Komputerin Arxitekturası",
     title_en: "Computer Architecture",
     title_ru: "Архитектура компьютера",
     author_az: "Müəllif: Gültəkin Quliyeva",
@@ -6256,7 +6256,7 @@ const libraryData = [
   },
   {
     id: 26,
-    title_az: "Kompüter sistemlərinin təmiri və servisi",
+    title_az: "Komputer sistemlərinin təmiri və servisi",
     title_en: "Repair and Maintenance of Computer Systems",
     title_ru: "Ремонт и обслуживание компьютерных систем",
     author_az: "Müəllif: İlkin Rəhmətov",
@@ -6268,7 +6268,7 @@ const libraryData = [
   },
   {
     id: 27,
-    title_az: "Kompüter şəbəkələrinin idarə etməsinin təşkili",
+    title_az: "Komputer şəbəkələrinin idarə etməsinin təşkili",
     title_en: "Organization of Computer Network Management",
     title_ru: "Организация управления компьютерными сетями",
     author_az: "Müəllif: Aysel Pənahova",
@@ -7004,7 +7004,7 @@ const lecturesData = [
   // ─── 1. İNFORMATİKA VƏ İKT (Kollecin Rəsmi Müəllimi: İlkin Rəhmətov) ───
   {
     id: 2,
-    title_az: "Kompüter diaqnostikası fənni (Qrup KT-511a) — İlkin Rəhmətov",
+    title_az: "Komputer diaqnostikası fənni (Qrup KT-511a) — İlkin Rəhmətov",
     title_en: "Computer Diagnostics (Group KT-511a) — Ilkin Rahmatov",
     title_ru: "Компьютерная диагностика (Группа КТ-511а) — Илькин Рахматов",
     duration: "18:45",
@@ -19472,7 +19472,7 @@ function initGlobalSearchModule() {
       <div class="search-initial-state">
         <p class="search-hint-text" data-i18n="search_hint_text">${gT("search_hint_text") || "Sürətli naviqasiya üçün axtardığınız mövzunu yazın və ya kateqoriyalardan birini seçin:"}</p>
         <div class="search-suggestions">
-          <button type="button" class="search-chip-quick" data-search-term="Kompüter" data-i18n="search_chip_cs">💻 Kompüter sistemləri</button>
+          <button type="button" class="search-chip-quick" data-search-term="Komputer" data-i18n="search_chip_cs">💻 Komputer sistemləri</button>
           <button type="button" class="search-chip-quick" data-search-term="Sənan Mirzəzadə" data-i18n="search_chip_senan">⭐ Sənan Mirzəzadə (Fəxri tələbə)</button>
           <button type="button" class="search-chip-quick" data-search-term="edebiyyatfb" data-i18n="search_chip_edebiyyat">📖 Ədəbiyyat (edebiyyatfb.pdf)</button>
           <button type="button" class="search-chip-quick" data-search-term="aztarixifb" data-i18n="search_chip_tarix">🏛️ Azərbaycan Tarixi (aztarixifb.pdf)</button>
