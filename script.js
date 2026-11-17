@@ -5988,9 +5988,7 @@ const libraryData = [
     author_ru: "Автор: Илькин Рахметов",
     category: "informatika",
     icon: "📊",
-    url:
-      "https://azontest.runasp.net/book/SpecialRead?id=38" +
-      "&key=ABCD1234SECRET",
+    url: "Microsoft Excel - İlkin Rəhmətov.pdf",
   },
   {
     id: 4,
@@ -6002,9 +6000,7 @@ const libraryData = [
     author_ru: "Автор: Илькин Рахметов",
     category: "informatika",
     icon: "📝",
-    url:
-      "https://azontest.runasp.net/book/SpecialRead?id=7" +
-      "&key=ABCD1234SECRET",
+    url: "Microsoft Word - İlkin Rəhmətov.pdf",
   },
   {
     id: 5,
@@ -6953,6 +6949,54 @@ const libraryData = [
     category: "menecment",
     icon: "🛍️",
     url: "kitab.ƏSLİ-İSTEHLAKÇI DAVRANIŞLARI-1 (1).pdf",
+  },
+  {
+    id: 84,
+    title_az: "Riyaziyyat (II Semestr Mühazirələri)",
+    title_en: "Mathematics (Semester II Lectures)",
+    title_ru: "Математика (Лекции II семестра)",
+    author_az: "Dəqiq Elmlər FBK",
+    author_en: "Exact Sciences Department",
+    author_ru: "ФБК Точных наук",
+    category: "riyaziyyat",
+    icon: "📐",
+    url: "2 ci semestr riyaziyyat.pdf",
+  },
+  {
+    id: 85,
+    title_az: "Riyaziyyat (I Semestr Mühazirələri)",
+    title_en: "Mathematics (Semester I Lectures)",
+    title_ru: "Математика (Лекции I семестра)",
+    author_az: "Dəqiq Elmlər FBK",
+    author_en: "Exact Sciences Department",
+    author_ru: "ФБК Точных наук",
+    category: "riyaziyyat",
+    icon: "📐",
+    url: "1 ci semestr riyaziyyat.pdf",
+  },
+  {
+    id: 86,
+    title_az: "Ali Riyaziyyat (Mühazirələr Toplusu)",
+    title_en: "Higher Mathematics (Lecture Notes)",
+    title_ru: "Высшая математика (Сборник лекций)",
+    author_az: "Dəqiq Elmlər FBK",
+    author_en: "Exact Sciences Department",
+    author_ru: "ФБК Точных наук",
+    category: "riyaziyyat",
+    icon: "📊",
+    url: "ALI RIY muhazire (1).pdf",
+  },
+  {
+    id: 87,
+    title_az: "Biologiya (Mövzular və Mühazirələr)",
+    title_en: "Biology (Topics & Lectures)",
+    title_ru: "Биология (Темы и лекции)",
+    author_az: "Dəqiq Elmlər FBK (İlahə Qaraxanova)",
+    author_en: "Exact Sciences Department",
+    author_ru: "ФБК Точных наук",
+    category: "ekologiya",
+    icon: "🔬",
+    url: "Biologiya mövzular.pdf",
   },
 ];
 
@@ -10223,6 +10267,71 @@ function initLibraryModule() {
       desc_az: "Həyat fəaliyyətinin təhlükəsizliyinin nəzəri əsasları, əməyin mühafizəsi qanunvericiliyi, sənaye sanitariyası, fövqəladə hallar və mülki müdafiə, yanğın təhlükəsizliyi, zərərli amillərdən mühafizə və ilk tibbi yardım üzrə 74 səhifəlik rəsmi PDF dərs vəsaiti.",
       topics_az: ["HFT Nəzəriyyəsi", "Əmək Mühafizəsi", "Mülki Müdafiə", "Yanğın və İlk Yardım"],
       url: "Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf"
+    },
+    // --- Riyaziyyat və Dəqiq Elmlər (Yeni Mühazirələr) ---
+    {
+      id: "fbk-lec-riyaziyyat-2",
+      fbkId: "fbk-9",
+      fieldBadge: "RİYAZİYYAT",
+      fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
+      subject_az: "Riyaziyyat (II Semestr)",
+      title_az: "Riyaziyyat Fənnindən Mühazirələr Toplusu (II Semestr)",
+      author_az: "Dəqiq Elmlər FBK",
+      format: "pdf",
+      icon: "📐",
+      volume: "Mühazirələr Toplusu · PDF",
+      fileSize: "706 KB",
+      desc_az: "Kompleks ədədin tərifi, qoşma kompleks ədədlər, kompleks ədədlər üzərində cəbri əməllər, funksiyalar və riyazi analiz üzrə II semestr rəsmi mühazirə vəsaiti.",
+      topics_az: ["Kompleks Ədədlər", "Cəbri Əməllər", "Qoşma Ədədlər", "II Semestr Mövzuları"],
+      url: "2 ci semestr riyaziyyat.pdf"
+    },
+    {
+      id: "fbk-lec-riyaziyyat-1",
+      fbkId: "fbk-9",
+      fieldBadge: "RİYAZİYYAT",
+      fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
+      subject_az: "Riyaziyyat (I Semestr)",
+      title_az: "Riyaziyyat Fənnindən Mühazirələr Toplusu (I Semestr)",
+      author_az: "Dəqiq Elmlər FBK",
+      format: "pdf",
+      icon: "📐",
+      volume: "Mühazirələr Toplusu · PDF",
+      fileSize: "866 KB",
+      desc_az: "Ədədi funksiyanın tərifi, təyin oblastı, qiymətlər çoxluğu və qrafiki, təyin oblastının tapılması üsulları və funksional asılılıqlar üzrə I semestr mühazirə vəsaiti.",
+      topics_az: ["Ədədi Funksiyalar", "Təyin Oblastı", "Qiymətlər Çoxluğu", "Funksiya Qrafikləri"],
+      url: "1 ci semestr riyaziyyat.pdf"
+    },
+    {
+      id: "fbk-lec-ali-riy",
+      fbkId: "fbk-9",
+      fieldBadge: "ALİ RİYAZİYYAT",
+      fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
+      subject_az: "Ali Riyaziyyat",
+      title_az: "Ali Riyaziyyat Fənnindən Fundamental Mühazirələr Toplusu",
+      author_az: "Dəqiq Elmlər FBK",
+      format: "pdf",
+      icon: "📊",
+      volume: "Fundamental Mühazirə · PDF",
+      fileSize: "6.5 MB",
+      desc_az: "Xətti cəbr, matrislər və determinantlar, xətti tənliklər sistemi, vektorlar cəbri, analitik həndəsə, limit, diferensial və inteqral hesabı üzrə ali riyaziyyat mühazirələri.",
+      topics_az: ["Xətti Cəbr", "Matris və Determinant", "Analitik Həndəsə", "Riyazi Analiz"],
+      url: "ALI RIY muhazire (1).pdf"
+    },
+    {
+      id: "fbk-lec-biologiya",
+      fbkId: "fbk-9",
+      fieldBadge: "BİOLOGİYA",
+      fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
+      subject_az: "Biologiya",
+      title_az: "Biologiya Fənni Üzrə Mövzular və Mühazirələr Toplusu",
+      author_az: "Dəqiq Elmlər FBK (Qaraxanova İlahə)",
+      format: "pdf",
+      icon: "🔬",
+      volume: "Mövzular Toplusu · PDF",
+      fileSize: "2.0 MB",
+      desc_az: "Canlılarda qidalanma, tənəffüs, ifrazat, çoxalma və qıcıqlanma, avtotrof və heterotrof canlılar, hüceyrə biologiyası və orqanizmlərin həyat fəaliyyəti üzrə mühazirə vəsaiti.",
+      topics_az: ["Canlıların Xüsusiyyətləri", "Qidalanma və Tənəffüs", "Çoxalma və İfrazat", "Hüceyrə Nəzəriyyəsi"],
+      url: "Biologiya mövzular.pdf"
     }
   ];
 
