@@ -8023,6 +8023,9 @@ function initStructureModule() {
         if (fbk.id === "fbk-9" && (d.includes("Həyat Fəaliyyəti") || d.includes("HFT") || d.includes("Mülki Müdafiə"))) {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🛡️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
+        if (fbk.id === "fbk-9" && (d.includes("Çağırış") || d.includes("ÇHQ") || d.includes("GÇH") || d.includes("Hərbi"))) {
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('GÇH plan konspekt 1 semestr.pdf', '${d}', 'Dəqiq Elmlər FBK');"><span class="chip-doc-icon">🎖️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
+        }
         return `<span class="fbk-chip">${d}</span>`;
       }).join("")}
           </div>
@@ -10001,6 +10004,22 @@ function initLibraryModule() {
       desc_az: "Canlılarda qidalanma, tənəffüs, ifrazat, çoxalma və qıcıqlanma, zülal biosintezi, ATF, DNT və RNT mexanizmləri, fotosintez, xemosintez və fotoperiodizm üzrə rəsmi mühazirə toplusu.",
       topics_az: ["Zülal Biosintezi və DNT", "Fotosintez və Xemosintez", "Qidalanma və Tənəffüs", "Fotoperiodizm"],
       url: "Biologiya mövzular.pdf"
+    },
+    {
+      id: "fbk-lec-gch-1",
+      fbkId: "fbk-9",
+      fieldBadge: "ÇHQ / GÇH",
+      fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
+      subject_az: "Gənclərin Çağırışaqədərki Hazırlığı (I Semestr)",
+      title_az: "Gənclərin Çağırışaqədərki Hazırlığı (GÇH) — Plan Konspekt və Mühazirələr (I Semestr)",
+      author_az: "Dəqiq Elmlər, FT və ÇHQ FBK",
+      format: "pdf",
+      icon: "🎖️",
+      volume: "Plan Konspekt · I Semestr",
+      fileSize: "1.1 MB",
+      desc_az: "Gənclərin çağırışaqədərki hazırlığı (GÇH) fənni üzrə dövləti müdafiənin tarixi və hüquqları, həyat fəaliyyətinin təhlükəsizliyi və ilk tibbi yardım qaydalarını əhatə edən I semestr rəsmi plan konspekti və mühazirə vəsaiti.",
+      topics_az: ["Dövləti Müdafiənin Əsasları", "Silahlı Qüvvələr", "Təhlükəsizlik Təminatı", "İlk Tibbi Yardım"],
+      url: "GÇH plan konspekt 1 semestr.pdf"
     }
   ];
 
