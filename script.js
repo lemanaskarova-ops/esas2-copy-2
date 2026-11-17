@@ -6000,6 +6000,18 @@ newsData.sort((a, b) => {
 
 const libraryData = [
   {
+    id: 88,
+    title_az: "Fizika (Fundamental Dərslik — 519 səh.)",
+    title_en: "Physics (Fundamental Textbook — 519 pages)",
+    title_ru: "Физика (Фундаментальный учебник — 519 стр.)",
+    author_az: "Müəlliflər: Günel Mirzəyeva, Cəvahir Mürşüdova (2026)",
+    author_en: "Authors: Gunel Mirzayeva, Javahir Murshudova (2026)",
+    author_ru: "Авторы: Гюнель Мирзаева, Джавахир Муршудова (2026)",
+    category: "fizika",
+    icon: "⚛️",
+    url: "Fizika Final (1).pdf",
+  },
+  {
     id: 3,
     title_az: "Microsoft Excel",
     title_en: "Microsoft Excel",
@@ -8011,6 +8023,9 @@ function initStructureModule() {
         if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('1Русский язык 1 курс (лекции) (1).pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🇷🇺</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
+                if (fbk.id === "fbk-9" && (d === "Fizika" || d.includes("Fizika"))) {
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('Günel fizika elektron.pdf', '${d} (Elektron Mühazirələr)', 'Dəqiq Elmlər FBK');"><span class="chip-doc-icon">⚛️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
+        }
         if (fbk.id === "fbk-9" && (d === "Riyaziyyat" || d.includes("Riyaziyyat"))) {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('1 ci semestr riyaziyyat.pdf', '${d} (I Semestr Mühazirələri)', 'Dəqiq Elmlər FBK');"><span class="chip-doc-icon">📐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
@@ -8022,6 +8037,9 @@ function initStructureModule() {
         }
         if (fbk.id === "fbk-9" && (d.includes("Həyat Fəaliyyəti") || d.includes("HFT") || d.includes("Mülki Müdafiə"))) {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🛡️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
+        }
+        if (fbk.id === "fbk-9" && (d.includes("Çağırış") || d.includes("ÇHQ") || d.includes("GÇH") || d.includes("Hərbi"))) {
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('GÇH plan konspekt 1 semestr.pdf', '${d}', 'Dəqiq Elmlər FBK');"><span class="chip-doc-icon">🎖️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         return `<span class="fbk-chip">${d}</span>`;
       }).join("")}
@@ -10001,6 +10019,38 @@ function initLibraryModule() {
       desc_az: "Canlılarda qidalanma, tənəffüs, ifrazat, çoxalma və qıcıqlanma, zülal biosintezi, ATF, DNT və RNT mexanizmləri, fotosintez, xemosintez və fotoperiodizm üzrə rəsmi mühazirə toplusu.",
       topics_az: ["Zülal Biosintezi və DNT", "Fotosintez və Xemosintez", "Qidalanma və Tənəffüs", "Fotoperiodizm"],
       url: "Biologiya mövzular.pdf"
+    },
+    {
+      id: "fbk-lec-gch-1",
+      fbkId: "fbk-9",
+      fieldBadge: "ÇHQ / GÇH",
+      fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
+      subject_az: "Gənclərin Çağırışaqədərki Hazırlığı (I Semestr)",
+      title_az: "Gənclərin Çağırışaqədərki Hazırlığı (GÇH) — Plan Konspekt və Mühazirələr (I Semestr)",
+      author_az: "Dəqiq Elmlər, FT və ÇHQ FBK",
+      format: "pdf",
+      icon: "🎖️",
+      volume: "Plan Konspekt · I Semestr",
+      fileSize: "1.1 MB",
+      desc_az: "Gənclərin çağırışaqədərki hazırlığı (GÇH) fənni üzrə dövləti müdafiənin tarixi və hüquqları, həyat fəaliyyətinin təhlükəsizliyi və ilk tibbi yardım qaydalarını əhatə edən I semestr rəsmi plan konspekti və mühazirə vəsaiti.",
+      topics_az: ["Dövləti Müdafiənin Əsasları", "Silahlı Qüvvələr", "Təhlükəsizlik Təminatı", "İlk Tibbi Yardım"],
+      url: "GÇH plan konspekt 1 semestr.pdf"
+    },
+    {
+      id: "fbk-lec-fizika-gunel",
+      fbkId: "fbk-9",
+      fieldBadge: "FİZİKA",
+      fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
+      subject_az: "Fizika",
+      title_az: "Fizika Fənnindən Elektron Mühazirələr Toplusu",
+      author_az: "Müəllim: Günel Mirzəyeva",
+      format: "pdf",
+      icon: "⚛️",
+      volume: "Elektron Mühazirələr · PDF",
+      fileSize: "2.6 MB",
+      desc_az: "Molekulyar kinetik nəzəriyyə, maddənin daxili quruluşu, istilik hadisələri, elektrodinamika və fiziki qanunauyğunluqlar üzrə rəsmi elektron mühazirələr toplusu.",
+      topics_az: ["Molekulyar Fizika", "İstilik Hadisələri", "Elektrodinamika", "Fiziki Qanunlar"],
+      url: "Günel fizika elektron.pdf"
     }
   ];
 
