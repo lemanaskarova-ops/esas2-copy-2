@@ -8023,7 +8023,10 @@ function initStructureModule() {
         if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('1Русский язык 1 курс (лекции) (1).pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🇷🇺</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
-                if (fbk.id === "fbk-9" && (d === "Fizika" || d.includes("Fizika"))) {
+                if (fbk.id === "fbk-9" && (d === "Kimya" || d.includes("Kimya"))) {
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('KİMYA PDF YENİ.pdf', '${d} (Fundamental Mühazirələr)', 'Dəqiq Elmlər FBK');"><span class="chip-doc-icon">🧪</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
+        }
+        if (fbk.id === "fbk-9" && (d === "Fizika" || d.includes("Fizika"))) {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('Günel fizika elektron.pdf', '${d} (Elektron Mühazirələr)', 'Dəqiq Elmlər FBK');"><span class="chip-doc-icon">⚛️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-9" && (d === "Riyaziyyat" || d.includes("Riyaziyyat"))) {
@@ -10051,6 +10054,22 @@ function initLibraryModule() {
       desc_az: "Molekulyar kinetik nəzəriyyə, maddənin daxili quruluşu, istilik hadisələri, elektrodinamika və fiziki qanunauyğunluqlar üzrə rəsmi elektron mühazirələr toplusu.",
       topics_az: ["Molekulyar Fizika", "İstilik Hadisələri", "Elektrodinamika", "Fiziki Qanunlar"],
       url: "Günel fizika elektron.pdf"
+    },
+    {
+      id: "fbk-lec-kimya-yeni",
+      fbkId: "fbk-9",
+      fieldBadge: "KİMYA",
+      fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
+      subject_az: "Kimya",
+      title_az: "Kimya Fənnindən Fundamental Mühazirələr Toplusu",
+      author_az: "Dəqiq Elmlər FBK",
+      format: "pdf",
+      icon: "🧪",
+      volume: "Fundamental Mühazirələr · PDF",
+      fileSize: "7.9 MB",
+      desc_az: "Karbon yarımqrupu elementləri (C, Si, Ge, Sn, Pb), dövri sistem, atom quruluşu, oksidləşmə dərəcələri, kimyəvi rabitələr və qeyri-üzvi kimya üzrə rəsmi mühazirə toplusu.",
+      topics_az: ["Karbon Yarımqrupu", "Atom Quruluşu", "Oksidləşmə Dərəcələri", "Qeyri-üzvi Kimya"],
+      url: "KİMYA PDF YENİ.pdf"
     }
   ];
 
