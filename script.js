@@ -6000,6 +6000,18 @@ newsData.sort((a, b) => {
 
 const libraryData = [
   {
+    id: 88,
+    title_az: "Fizika (Fundamental Dərslik — 519 səh.)",
+    title_en: "Physics (Fundamental Textbook — 519 pages)",
+    title_ru: "Физика (Фундаментальный учебник — 519 стр.)",
+    author_az: "Müəlliflər: Günel Mirzəyeva, Cəvahir Mürşüdova (2026)",
+    author_en: "Authors: Gunel Mirzayeva, Javahir Murshudova (2026)",
+    author_ru: "Авторы: Гюнель Мирзаева, Джавахир Муршудова (2026)",
+    category: "fizika",
+    icon: "⚛️",
+    url: "Fizika Final (1).pdf",
+  },
+  {
     id: 3,
     title_az: "Microsoft Excel",
     title_en: "Microsoft Excel",
