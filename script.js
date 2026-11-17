@@ -19766,8 +19766,8 @@ const teacherCertificatesData = [
     desc_az: "Azərbaycan dili və ədəbiyyatı müəllimi Ziba Səfərovanın Mature Coaching beynəlxalq proqramı üzrə pedaqoji kouçinq, müasir tədris metodikaları və mentorluq istiqamətində qazandığı beynəlxalq dərəcəli rəsmi sertifikat.",
     desc_en: "Official international certificate awarded to Azerbaijani Language & Literature Teacher Ziba Safarova under the Mature Coaching International Program for pedagogical coaching, modern teaching methodologies, and educational mentoring.",
     desc_ru: "Официальный международный сертификат преподавателя азербайджанского языка и литературы Зибы Сафаровой по международной программе Mature Coaching в области педагогического коучинга, современных методик преподавания и наставничества.",
-    imageUrl: "",
-    docUrl: ""
+    imageUrl: "zibaserti.jpeg",
+    docUrl: "zibaserti.jpeg"
   },
   {
     id: "tcert-saida-01",
