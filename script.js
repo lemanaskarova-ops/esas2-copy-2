@@ -2999,7 +2999,7 @@ const staffData = {
       role_az: '"Nəqliyyat şöbəsi"-Şöbə müdiri',
       role_en: 'Head of "Transport" Dept',
       role_ru: 'Заведующая отделом "Транспорт"',
-      img: "yegane.jpeg",
+      img: "yeganey.jpeg",
     },
     {
       id: "7",
