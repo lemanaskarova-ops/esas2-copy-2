@@ -3462,7 +3462,8 @@ const newsData = [
       "date_az": "17 Noyabr 2026",
       "date_en": "17 November 2026",
       "date_ru": "17 Ноября 2026",
-      "image": "WhatsApp Video 2026-11-16 at 12.42.38.mp4",
+      "image": "neqliyyat_dasinmalar_reel.mp4",
+      "url": "https://www.facebook.com/reel/2060036278042439",
       "tag_az": "Açıq Dərs",
       "tag_en": "Open Lesson",
       "tag_ru": "Открытый Урок"
@@ -11904,7 +11905,7 @@ function initGalleryModule() {
       },
       {
         type: "video",
-        src: "WhatsApp Video 2026-11-16 at 12.42.38.mp4",
+        src: "neqliyyat_dasinmalar_reel.mp4",
         tall: true,
         label: "Nəqliyyatda daşınmalar · Açıq Dərs (Xumar Cəmilova, Gülər Mustafayeva, Coşqun Yəhyayev)",
         label_az: "Nəqliyyatda daşınmalar · Açıq Dərs (Xumar Cəmilova, Gülər Mustafayeva, Coşqun Yəhyayev)",
