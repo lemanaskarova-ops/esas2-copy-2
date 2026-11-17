@@ -7583,12 +7583,50 @@ function initStructureModule() {
   function renderTree() {
     if (!treeCanvas) return;
 
-    // ═══ İLK BEŞLİK HEYƏTİ (YAN-YANA BLOKLAR) ═══
-    // 1. Səbuhi Qurbanov (Direktor)
-    // 2. Boş blok (Direktor müavini)
-    // 3. Şahmurad Məmmədov (Tərbiyə işləri üzrə direktor müavini)
-    // 4. İsmayıl Səfiyev (İnzibati təsərüffat işləri üzrə direktor müavini)
-    // 5. Səidə Quliyeva (YAP sədri / Qeydiyyat, qiymətləndirmə və Monitorinq şöbəsi müdiri)
+    // Helper to generate a 5-card row HTML
+    function buildFiveRow(config) {
+      return config.map((item) => {
+        let person = staffData.leadership.find((p) => p.id === item.id) ||
+                     staffData.departments.find((p) => p.id === item.id);
+        if (!person && item.isVacant) {
+          person = {
+            id: "vacant-deputy",
+            name_az: "Direktor müavini",
+            role_az: "Direktor müavini",
+            isVacant: true
+          };
+        }
+        const name = person ? (person[`name_${currentLang}`] || person.name_az) : "Direktor müavini";
+        const role = person ? (person[`role_${currentLang}`] || person.role_az) : "Direktor müavini";
+
+        const avatarHtml = item.isVacant
+          ? `<div class="tree-grid-avatar-vacant" aria-hidden="true">
+               <svg class="w-10 h-10 text-[#c59b27]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                 <circle cx="12" cy="7" r="4"></circle>
+               </svg>
+             </div>`
+          : `<div class="tree-grid-avatar-wrap">
+               <img src="${person.img}" alt="${name}" onerror="this.onerror=null;this.src='logo.jpg';">
+             </div>`;
+
+        return `
+          <div class="tree-card-grid-block ${item.extraClass || ''}" data-person-id="${item.id}" title="${name} - ${role.replace(/<[^>]+>/g, ' ')}">
+            ${avatarHtml}
+            <div class="tree-card-grid-info">
+              <div class="tree-card-meta-line">
+                <span class="tree-card-num-chip">${item.num}</span>
+                <span class="tree-card-badge-gold">${item.badge}</span>
+              </div>
+              <h4 class="tree-card-grid-title">${name}</h4>
+              <span class="tree-card-grid-role">${role}</span>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // ═══ 1-Cİ SIRA (İLK BEŞLİK): Səbuhi, Boş blok, Şahmurad, İsmayıl, Səidə ═══
     const firstFiveConfig = [
       {
         id: "1",
@@ -7607,70 +7645,61 @@ function initStructureModule() {
         id: "2",
         num: "03",
         badge: "Direktor Müavini",
-        extraClass: "",
       },
       {
         id: "3",
         num: "04",
         badge: "Direktor Müavini",
-        extraClass: "",
       },
       {
         id: "12",
         num: "05",
         badge: "YAP Sədri · Şöbə Müdiri",
-        extraClass: "",
       },
     ];
 
-    const firstFiveHtml = firstFiveConfig.map((item) => {
-      let person = staffData.leadership.find((p) => p.id === item.id);
-      if (!person && item.id === "12") {
-        person = staffData.departments.find((p) => p.id === "12");
-      }
-      if (!person && item.isVacant) {
-        person = {
-          id: "vacant-deputy",
-          name_az: "Direktor müavini",
-          role_az: "Direktor müavini",
-          isVacant: true
-        };
-      }
-      const name = person ? (person[`name_${currentLang}`] || person.name_az) : "Direktor müavini";
-      const role = person ? (person[`role_${currentLang}`] || person.role_az) : "Direktor müavini";
+    // ═══ 2-Cİ SIRA (İKİNCİ BEŞLİK): Günel, Ləman, Azər, Vəfa, Rəsmiyyə ═══
+    const secondFiveConfig = [
+      {
+        id: "30",
+        num: "06",
+        badge: "Tədris Hissə Müdiri",
+      },
+      {
+        id: "20",
+        num: "07",
+        badge: "Kadrlar Şöbəsi",
+      },
+      {
+        id: "19",
+        num: "08",
+        badge: "Baş Mühasib",
+      },
+      {
+        id: "16",
+        num: "09",
+        badge: "Hüquqşünas",
+      },
+      {
+        id: "14",
+        num: "10",
+        badge: "İKT Şöbə Müdiri",
+      },
+    ];
 
-      const avatarHtml = item.isVacant
-        ? `<div class="tree-grid-avatar-vacant" aria-hidden="true">
-             <svg class="w-10 h-10 text-[#c59b27]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-               <circle cx="12" cy="7" r="4"></circle>
-             </svg>
-           </div>`
-        : `<div class="tree-grid-avatar-wrap">
-             <img src="${person.img}" alt="${name}" onerror="this.onerror=null;this.src='logo.jpg';">
-           </div>`;
+    const firstFiveHtml = buildFiveRow(firstFiveConfig);
+    const secondFiveHtml = buildFiveRow(secondFiveConfig);
 
-      return `
-        <div class="tree-card-grid-block ${item.extraClass}" data-person-id="${item.id}" title="${name} - ${role.replace(/<[^>]+>/g, ' ')}">
-          ${avatarHtml}
-          <div class="tree-card-grid-info">
-            <div class="tree-card-meta-line">
-              <span class="tree-card-num-chip">${item.num}</span>
-              <span class="tree-card-badge-gold">${item.badge}</span>
-            </div>
-            <h4 class="tree-card-grid-title">${name}</h4>
-            <span class="tree-card-grid-role">${role}</span>
-          </div>
-        </div>
-      `;
-    }).join("");
+    // Qalan Şöbə Müdirləri & İnzibati Heyət (Qanadlar)
+    // 1-ci və 2-ci beşlikdə olanları qanadlardan çıxarırıq ki, təkrarlanmasın
+    const usedIds = new Set(["1", "vacant-deputy", "2", "3", "12", "30", "20", "19", "16", "14"]);
 
-    // 4-cü Səviyyə: Şöbə Müdirləri & Birləşmə Komissiyaları (2 Balanslaşdırılmış Qanad)
-    const academicOrder = ["14", "9", "23", "7", "24", "11"];
+    const academicOrder = ["9", "23", "7", "24", "11"].filter((id) => !usedIds.has(id));
     const wingAcademicStaff = academicOrder
       .map((id) => staffData.departments.find((p) => p.id === id))
       .filter(Boolean);
-    const adminOrder = ["30", "20", "19", "16", "18", "26", "25", "13", "27", "22", "29", "28", "17"];
+
+    const adminOrder = ["18", "26", "25", "13", "27", "22", "29", "28", "17"].filter((id) => !usedIds.has(id));
     const wingAdminStaff = adminOrder
       .map((id) => staffData.departments.find((p) => p.id === id))
       .filter(Boolean);
@@ -7696,22 +7725,35 @@ function initStructureModule() {
 
     treeCanvas.innerHTML = `
       <!-- ═══ 1-Cİ SIRA: İDARƏ HEYƏTİ (İLK BEŞLİK) — YAN-YANA BLOKLAR ═══ -->
-      <div class="tree-tier-block tier-first-five">
+      <div class="tree-tier-block tier-first-five mb-6">
         <div class="tree-tier-tag">
-          <span>${gT("struct_tier1_label") || "İdarə Heyəti və Rəhbərlik"} · İlk Beşlik</span>
+          <span>${gT("struct_tier1_label") || "İdarə Heyəti və Rəhbərlik"} · 1-ci Beşlik</span>
         </div>
         <div class="tree-row-five">
           ${firstFiveHtml}
         </div>
       </div>
 
-      <!-- Bağlantı Xətti -->
+      <!-- Bağlantı Xətti 1 -> 2 -->
       <div class="tree-stem-vertical"></div>
 
-      <!-- ═══ 2-Cİ MƏRHƏLƏ: ŞÖBƏ MÜDİRLƏRİ VƏ BİRLƏŞMƏ KOMİSSİYALARI ═══ -->
+      <!-- ═══ 2-Cİ SIRA: İNZİBATİ VƏ TƏDRİS RƏHBƏRLİYİ (İKİNCİ BEŞLİK) — YAN-YANA BLOKLAR ═══ -->
+      <div class="tree-tier-block tier-second-five mb-6">
+        <div class="tree-tier-tag">
+          <span>Tədris və İnzibati İdarəetmə · 2-ci Beşlik</span>
+        </div>
+        <div class="tree-row-five">
+          ${secondFiveHtml}
+        </div>
+      </div>
+
+      <!-- Bağlantı Xətti 2 -> 3 -->
+      <div class="tree-stem-vertical"></div>
+
+      <!-- ═══ 3-CÜ MƏRHƏLƏ: ŞÖBƏ MÜDİRLƏRİ VƏ İNZİBATİ HEYƏT ═══ -->
       <div class="tree-tier-block tier-4">
         <div class="tree-tier-tag">
-          <span>Şöbə Müdirləri və İnzibati Heyət</span>
+          <span>Şöbə Müdirləri və İnzibati Struktur</span>
         </div>
         <div class="tree-wings-grid">
           <!-- Qanad 1: Tədris Heyəti -->
