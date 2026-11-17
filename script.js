@@ -7776,11 +7776,8 @@ function initStructureModule() {
     const fifthFourHtml = buildGridRow(fifthFourConfig);
 
     treeCanvas.innerHTML = `
-      <!-- ═══ 1-Cİ SIRA: İDARƏ HEYƏTİ (İLK BEŞLİK) — YAN-YANA BLOKLAR ═══ -->
-      <div class="tree-tier-block tier-first-five mb-6">
-        <div class="tree-tier-tag">
-          <span>${gT("struct_tier1_label") || "İdarə Heyəti və Rəhbərlik"} · 1-ci Beşlik</span>
-        </div>
+      <!-- ═══ 1-Cİ SIRA (İLK BEŞLİK) ═══ -->
+      <div class="tree-tier-block tier-first-five">
         <div class="tree-row-five">
           ${firstFiveHtml}
         </div>
@@ -7789,11 +7786,8 @@ function initStructureModule() {
       <!-- Bağlantı Xətti 1 -> 2 -->
       <div class="tree-stem-vertical"></div>
 
-      <!-- ═══ 2-Cİ SIRA: İNZİBATİ VƏ TƏDRİS RƏHBƏRLİYİ (İKİNCİ BEŞLİK) — YAN-YANA BLOKLAR ═══ -->
-      <div class="tree-tier-block tier-second-five mb-6">
-        <div class="tree-tier-tag">
-          <span>Tədris və İnzibati İdarəetmə · 2-ci Beşlik</span>
-        </div>
+      <!-- ═══ 2-Cİ SIRA (İKİNCİ BEŞLİK) ═══ -->
+      <div class="tree-tier-block tier-second-five">
         <div class="tree-row-five">
           ${secondFiveHtml}
         </div>
@@ -7802,11 +7796,8 @@ function initStructureModule() {
       <!-- Bağlantı Xətti 2 -> 3 -->
       <div class="tree-stem-vertical"></div>
 
-      <!-- ═══ 3-CÜ SIRA: İXTİSAS VƏ TƏDRİS ŞÖBƏ MÜDİRLƏRİ (ÜÇÜNCÜ BEŞLİK) — YAN-YANA BLOKLAR ═══ -->
-      <div class="tree-tier-block tier-third-five mb-6">
-        <div class="tree-tier-tag">
-          <span>İxtisas və Tədris Şöbə Müdirləri · 3-cü Beşlik</span>
-        </div>
+      <!-- ═══ 3-CÜ SIRA (ÜÇÜNCÜ BEŞLİK) ═══ -->
+      <div class="tree-tier-block tier-third-five">
         <div class="tree-row-five">
           ${thirdFiveHtml}
         </div>
@@ -7815,11 +7806,8 @@ function initStructureModule() {
       <!-- Bağlantı Xətti 3 -> 4 -->
       <div class="tree-stem-vertical"></div>
 
-      <!-- ═══ 4-CÜ SIRA: İCTİMAİ VƏ TƏMİNAT STRUKTURU (DÖRDÜNCÜ BEŞLİK) — YAN-YANA BLOKLAR ═══ -->
-      <div class="tree-tier-block tier-fourth-five mb-6">
-        <div class="tree-tier-tag">
-          <span>İctimai, Təcrübə və Təminat Strukturu · 4-cü Beşlik</span>
-        </div>
+      <!-- ═══ 4-CÜ SIRA (DÖRDÜNCÜ BEŞLİK) ═══ -->
+      <div class="tree-tier-block tier-fourth-five">
         <div class="tree-row-five">
           ${fourthFiveHtml}
         </div>
@@ -7828,11 +7816,8 @@ function initStructureModule() {
       <!-- Bağlantı Xətti 4 -> 5 -->
       <div class="tree-stem-vertical"></div>
 
-      <!-- ═══ 5-Cİ SIRA: METODİKİ VƏ TEXNİKİ TƏMİNAT HEYƏTİ (QALAN 4-LÜK) — YAN-YANA BLOKLAR ═══ -->
-      <div class="tree-tier-block tier-fifth-four mb-6">
-        <div class="tree-tier-tag">
-          <span>Metodiki və Texniki Təminat Heyəti · 5-ci Sıra</span>
-        </div>
+      <!-- ═══ 5-Cİ SIRA (4-LÜK) ═══ -->
+      <div class="tree-tier-block tier-fifth-four">
         <div class="tree-row-four">
           ${fifthFourHtml}
         </div>
