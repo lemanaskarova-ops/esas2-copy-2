@@ -3009,7 +3009,7 @@ const staffData = {
       role_az: '"Telekommunikasiya şöbəsi"-Şöbə müdiri',
       role_en: 'Head of "Telecommunications" Dept',
       role_ru: 'Заведующая отделом "Телекоммуникации"',
-      img: "babek4x.jpeg",
+      img: "babeky.jpeg",
     },
     {
       id: "24",
