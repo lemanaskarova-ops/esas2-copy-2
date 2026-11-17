@@ -11893,6 +11893,17 @@ function initGalleryModule() {
     study: [
       {
         type: "video",
+        src: "WhatsApp Video 2026-11-17 at 17.08.02.mp4",
+        tall: true,
+        label: "İnteraktiv Tədris və Canlı Dərs Mühiti",
+        label_az: "İnteraktiv Tədris və Canlı Dərs Mühiti",
+        label_en: "Interactive Teaching & Live Study Environment",
+        label_ru: "Интерактивное обучение и живая учебная среда",
+        badge: "DƏRS MÜHİTİ",
+        i18n: "gallery_cat_study",
+      },
+      {
+        type: "video",
         src: "WhatsApp Video 2026-11-16 at 12.42.38.mp4",
         tall: true,
         label: "Nəqliyyatda daşınmalar · Açıq Dərs (Xumar Cəmilova, Gülər Mustafayeva, Coşqun Yəhyayev)",
