@@ -20052,3 +20052,27 @@ if (document.readyState === "loading") {
     ], 0);
   });
 })();
+
+/* Labor Conference Multi-Version Media Switcher */
+window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
+  try {
+    const img = document.getElementById("labor-conf-active-img");
+    const badge = document.getElementById("labor-conf-active-badge-text");
+    if (img) {
+      img.src = src;
+      img.setAttribute("data-caption", caption);
+      img.setAttribute("data-cat-title", catTitle || "Əmək Bazarına Uyğunluq");
+      img.alt = caption;
+    }
+    if (badge && badgeText) {
+      badge.textContent = badgeText;
+    }
+    document.querySelectorAll(".labor-conf-thumb-btn").forEach(function(b) {
+      b.classList.remove("active");
+    });
+    if (btn) btn.classList.add("active");
+  } catch(e) {
+    console.error("switchLaborConfMedia error:", e);
+  }
+};
+

@@ -1994,6 +1994,221 @@ body.dark-mode,
   color: #071930;
 }
 
+/* --- Labor Conference Media Multi-Version Switcher & PDF Reader --- */
+.labor-conf-hero-media {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.labor-conf-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.labor-conf-thumb-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid rgba(197, 155, 39, 0.25);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: left;
+}
+
+.labor-conf-thumb-btn:hover {
+  background: #ffffff;
+  border-color: #c59b27;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(197, 155, 39, 0.15);
+}
+
+.labor-conf-thumb-btn.active {
+  background: linear-gradient(135deg, rgba(197, 155, 39, 0.12), rgba(10, 34, 64, 0.05));
+  border-color: #c59b27;
+  box-shadow: 0 0 0 2px rgba(197, 155, 39, 0.35);
+}
+
+.labor-conf-thumb-preview {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(10, 34, 64, 0.1);
+}
+
+.labor-conf-thumb-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.labor-conf-thumb-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #0a2240;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.labor-conf-thumb-sub {
+  font-size: 0.68rem;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* PDF Action CTA Button */
+.labor-conf-pdf-cta-wrap {
+  width: 100%;
+}
+
+.labor-conf-pdf-cta-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0a2240 0%, #102a4e 100%);
+  border: 1px solid rgba(197, 155, 39, 0.5);
+  box-shadow: 0 8px 20px -4px rgba(10, 34, 64, 0.25), 0 0 0 1px rgba(197, 155, 39, 0.2);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+}
+
+.labor-conf-pdf-cta-btn:hover {
+  background: linear-gradient(135deg, #102a4e 0%, #163660 100%);
+  border-color: #c59b27;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(10, 34, 64, 0.35), 0 0 0 2px rgba(197, 155, 39, 0.4);
+}
+
+.labor-conf-pdf-cta-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.labor-conf-pdf-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(197, 155, 39, 0.15);
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.labor-conf-pdf-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.labor-conf-pdf-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.labor-conf-pdf-chip {
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  background: rgba(197, 155, 39, 0.25);
+  color: #f3d98b;
+  border: 1px solid rgba(197, 155, 39, 0.45);
+}
+
+.labor-conf-pdf-desc {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.labor-conf-pdf-arrow-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: rgba(197, 155, 39, 0.2);
+  border: 1px solid rgba(197, 155, 39, 0.5);
+  color: #f3d98b;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.labor-conf-pdf-cta-btn:hover .labor-conf-pdf-arrow-box {
+  background: #c59b27;
+  color: #071930;
+  border-color: #c59b27;
+}
+
+/* Dark Mode Support */
+body.dark-mode .labor-conf-thumb-btn {
+  background: rgba(15, 34, 61, 0.6);
+  border-color: rgba(207, 169, 94, 0.25);
+}
+
+body.dark-mode .labor-conf-thumb-btn:hover {
+  background: rgba(20, 45, 80, 0.8);
+  border-color: #cfc27f;
+}
+
+body.dark-mode .labor-conf-thumb-btn.active {
+  background: rgba(207, 169, 94, 0.15);
+  border-color: #cfc27f;
+}
+
+body.dark-mode .labor-conf-thumb-title {
+  color: #f1f5f9;
+}
+
+body.dark-mode .labor-conf-thumb-sub {
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .labor-conf-thumbs {
+    grid-template-columns: 1fr;
+  }
+  .labor-conf-pdf-cta-btn {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .labor-conf-pdf-arrow-box {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
 /* Key Highlights Cards (Right Column) */
 .labor-conf-pills {
   display: flex;
