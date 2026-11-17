@@ -12195,6 +12195,17 @@ function initGalleryModule() {
     study: [
       {
         type: "video",
+        src: "reyhan.mp4",
+        tall: true,
+        label: "Dərs Mühiti · Canlı Tədris Prosesi",
+        label_az: "Dərs Mühiti · Canlı Tədris Prosesi",
+        label_en: "Study Environment · Live Teaching Process",
+        label_ru: "Учебная среда · Живой учебный процесс",
+        badge: "DƏRS MÜHİTİ",
+        i18n: "gallery_cat_study",
+      },
+      {
+        type: "video",
         src: "informders.mp4",
         tall: true,
         label: "İnformatika · Canlı Dərs Mühiti",
