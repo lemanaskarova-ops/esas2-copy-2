@@ -5988,9 +5988,7 @@ const libraryData = [
     author_ru: "Автор: Илькин Рахметов",
     category: "informatika",
     icon: "📊",
-    url:
-      "https://azontest.runasp.net/book/SpecialRead?id=38" +
-      "&key=ABCD1234SECRET",
+    url: "Microsoft Excel - İlkin Rəhmətov.pdf",
   },
   {
     id: 4,
@@ -6002,9 +6000,7 @@ const libraryData = [
     author_ru: "Автор: Илькин Рахметов",
     category: "informatika",
     icon: "📝",
-    url:
-      "https://azontest.runasp.net/book/SpecialRead?id=7" +
-      "&key=ABCD1234SECRET",
+    url: "Microsoft Word - İlkin Rəhmətov.pdf",
   },
   {
     id: 5,
@@ -6953,6 +6949,54 @@ const libraryData = [
     category: "menecment",
     icon: "🛍️",
     url: "kitab.ƏSLİ-İSTEHLAKÇI DAVRANIŞLARI-1 (1).pdf",
+  },
+  {
+    id: 84,
+    title_az: "Riyaziyyat (II Semestr Mühazirələri)",
+    title_en: "Mathematics (Semester II Lectures)",
+    title_ru: "Математика (Лекции II семестра)",
+    author_az: "Dəqiq Elmlər FBK",
+    author_en: "Exact Sciences Department",
+    author_ru: "ФБК Точных наук",
+    category: "riyaziyyat",
+    icon: "📐",
+    url: "2 ci semestr riyaziyyat.pdf",
+  },
+  {
+    id: 85,
+    title_az: "Riyaziyyat (I Semestr Mühazirələri)",
+    title_en: "Mathematics (Semester I Lectures)",
+    title_ru: "Математика (Лекции I семестра)",
+    author_az: "Dəqiq Elmlər FBK",
+    author_en: "Exact Sciences Department",
+    author_ru: "ФБК Точных наук",
+    category: "riyaziyyat",
+    icon: "📐",
+    url: "1 ci semestr riyaziyyat.pdf",
+  },
+  {
+    id: 86,
+    title_az: "Ali Riyaziyyatın Əsasları (Mühazirələr Toplusu)",
+    title_en: "Higher Mathematics (Lecture Notes)",
+    title_ru: "Высшая математика (Сборник лекций)",
+    author_az: "Dəqiq Elmlər FBK",
+    author_en: "Exact Sciences Department",
+    author_ru: "ФБК Точных наук",
+    category: "riyaziyyat",
+    icon: "📊",
+    url: "ALI RIY muhazire (1).pdf",
+  },
+  {
+    id: 87,
+    title_az: "Biologiya (Mövzular və Mühazirələr)",
+    title_en: "Biology (Topics & Lectures)",
+    title_ru: "Биология (Темы и лекции)",
+    author_az: "Dəqiq Elmlər FBK (İlahə Qaraxanova)",
+    author_en: "Exact Sciences Department",
+    author_ru: "ФБК Точных наук",
+    category: "ekologiya",
+    icon: "🔬",
+    url: "Biologiya mövzular.pdf",
   },
 ];
 
@@ -8370,6 +8414,12 @@ function initStructureModule() {
         if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('1Русский язык 1 курс (лекции) (1).pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🇷🇺</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
+        if (fbk.id === "fbk-9" && (d === "Riyaziyyat" || d.includes("Riyaziyyat"))) {
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('1 ci semestr riyaziyyat.pdf', '${d} (I Semestr Mühazirələri)', 'Dəqiq Elmlər FBK');"><span class="chip-doc-icon">📐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
+        }
+        if (fbk.id === "fbk-9" && d.includes("Biologiya")) {
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('Biologiya mövzular.pdf', '${d}', 'Dəqiq Elmlər FBK');"><span class="chip-doc-icon">🔬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
+        }
         if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('ƏMM mühazirələr.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🌱</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
@@ -8468,6 +8518,12 @@ function initStructureModule() {
             }
             if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
               return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('1Русский язык 1 курс (лекции) (1).pdf', '🇷🇺 ${d}', 'FBK Tədris Vəsaiti');"><span>🇷🇺 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
+            }
+            if (fbk.id === "fbk-9" && (d === "Riyaziyyat" || d.includes("Riyaziyyat"))) {
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('1 ci semestr riyaziyyat.pdf', '📐 ${d} (I Semestr)', 'FBK Tədris Vəsaiti');"><span>📐 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
+            }
+            if (fbk.id === "fbk-9" && d.includes("Biologiya")) {
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('Biologiya mövzular.pdf', '🔬 ${d}', 'FBK Tədris Vəsaiti');"><span>🔬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
               return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('ƏMM mühazirələr.pdf', '🌱 ${d}', 'FBK Tədris Vəsaiti');"><span>🌱 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
@@ -8896,6 +8952,66 @@ function initStructureModule() {
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
   <span>Oxu Zalında Aç</span>
 </button>
+                    </div>
+                  </div>
+
+                  <!-- Material 3: Riyaziyyat I Semestr (Mühazirə) -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">📐</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Mühazirə Vəsaiti</span> • <span>PDF</span> • <span>I Semestr</span> • <span>866 KB</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Riyaziyyat Fənnindən Mühazirələr Toplusu (I Semestr)</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Dəqiq Elmlər FBK (FBK-09). Ədədi funksiyanın tərifi, təyin oblastı, qiymətlər çoxluğu, funksiyaların qrafikləri və analizi üzrə rəsmi I semestr mühazirə vəsaiti.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('1 ci semestr riyaziyyat.pdf', 'Riyaziyyat (I Semestr Mühazirələri)', 'Dəqiq Elmlər FBK');">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        <span>Oxu Zalında Aç</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Material 4: Riyaziyyat II Semestr (Mühazirə) -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">📐</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Mühazirə Vəsaiti</span> • <span>PDF</span> • <span>II Semestr</span> • <span>706 KB</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Riyaziyyat Fənnindən Mühazirələr Toplusu (II Semestr)</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Dəqiq Elmlər FBK (FBK-09). Kompleks ədədin tərifi, qoşma kompleks ədədlər, cəbri əməllər və riyazi analiz üzrə rəsmi II semestr mühazirə vəsaiti.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('2 ci semestr riyaziyyat.pdf', 'Riyaziyyat (II Semestr Mühazirələri)', 'Dəqiq Elmlər FBK');">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        <span>Oxu Zalında Aç</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Material 5: Ali Riyaziyyatın Əsasları (2025) -->
+                  <div style="display:flex; flex-direction:column; gap:10px; padding-top:14px; border-top:1px dashed rgba(184,147,74,0.3);">
+                    <div style="display:flex; align-items:flex-start; gap:14px;">
+                      <div style="font-size:2.2rem; line-height:1;">📊</div>
+                      <div style="flex:1;">
+                        <div style="display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; background:rgba(184,147,74,0.15); padding:2px 8px; border-radius:4px; margin-bottom:6px;">
+                          <span>Rəsmi Dərs Vəsaiti</span> • <span>PDF</span> • <span>6.5 MB</span>
+                        </div>
+                        <h4 style="margin:0 0 6px; font-size:1.1rem; font-weight:800; color:var(--text);">Ali Riyaziyyatın Əsasları — Mühazirələr Toplusu</h4>
+                        <p style="margin:0; font-size:0.86rem; color:var(--text-dim); line-height:1.55;">Dəqiq Elmlər FBK (FBK-09). Matrislər və determinantlar, Kramer və Qauss üsulları, ikitərtibli əyrilər, limit, müəyyən inteqral və diferensial tənliklər üzrə 15 mövzuluq rəsmi mühazirələr toplusu.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('ALI RIY muhazire (1).pdf', 'Ali Riyaziyyatın Əsasları', 'Dəqiq Elmlər FBK');">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        <span>Oxu Zalında Aç</span>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -10223,6 +10339,71 @@ function initLibraryModule() {
       desc_az: "Həyat fəaliyyətinin təhlükəsizliyinin nəzəri əsasları, əməyin mühafizəsi qanunvericiliyi, sənaye sanitariyası, fövqəladə hallar və mülki müdafiə, yanğın təhlükəsizliyi, zərərli amillərdən mühafizə və ilk tibbi yardım üzrə 74 səhifəlik rəsmi PDF dərs vəsaiti.",
       topics_az: ["HFT Nəzəriyyəsi", "Əmək Mühafizəsi", "Mülki Müdafiə", "Yanğın və İlk Yardım"],
       url: "Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf"
+    },
+    // --- Riyaziyyat və Dəqiq Elmlər (Yeni Mühazirələr) ---
+    {
+      id: "fbk-lec-riyaziyyat-2",
+      fbkId: "fbk-9",
+      fieldBadge: "RİYAZİYYAT",
+      fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
+      subject_az: "Riyaziyyat (II Semestr)",
+      title_az: "Riyaziyyat Fənnindən Mühazirələr Toplusu (II Semestr)",
+      author_az: "Dəqiq Elmlər FBK",
+      format: "pdf",
+      icon: "📐",
+      volume: "Mühazirələr Toplusu · PDF",
+      fileSize: "706 KB",
+      desc_az: "Kompleks ədədin tərifi, qoşma kompleks ədədlər, kompleks ədədlər üzərində cəbri əməllər, funksiyalar və riyazi analiz üzrə II semestr rəsmi mühazirə vəsaiti.",
+      topics_az: ["Kompleks Ədədlər", "Cəbri Əməllər", "Qoşma Ədədlər", "II Semestr Mövzuları"],
+      url: "2 ci semestr riyaziyyat.pdf"
+    },
+    {
+      id: "fbk-lec-riyaziyyat-1",
+      fbkId: "fbk-9",
+      fieldBadge: "RİYAZİYYAT",
+      fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
+      subject_az: "Riyaziyyat (I Semestr)",
+      title_az: "Riyaziyyat Fənnindən Mühazirələr Toplusu (I Semestr)",
+      author_az: "Dəqiq Elmlər FBK",
+      format: "pdf",
+      icon: "📐",
+      volume: "Mühazirələr Toplusu · PDF",
+      fileSize: "866 KB",
+      desc_az: "Ədədi funksiyanın tərifi, təyin oblastı, qiymətlər çoxluğu və qrafiki, təyin oblastının tapılması üsulları və funksional asılılıqlar üzrə I semestr mühazirə vəsaiti.",
+      topics_az: ["Ədədi Funksiyalar", "Təyin Oblastı", "Qiymətlər Çoxluğu", "Funksiya Qrafikləri"],
+      url: "1 ci semestr riyaziyyat.pdf"
+    },
+    {
+      id: "fbk-lec-ali-riy",
+      fbkId: "fbk-9",
+      fieldBadge: "ALİ RİYAZİYYAT",
+      fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
+      subject_az: "Ali Riyaziyyat",
+      title_az: "Ali Riyaziyyatın Əsasları — Fundamental Mühazirələr Toplusu (2025)",
+      author_az: "Dəqiq Elmlər FBK",
+      format: "pdf",
+      icon: "📊",
+      volume: "Fundamental Mühazirə · PDF",
+      fileSize: "6.5 MB",
+      desc_az: "Matrislər və determinantlar, Kramer, Qauss və Matris üsulları, ikitərtibli əyrilər (çevrə, ellips, hiperbola, parabola), funksiyanın limiti, Lopital qaydası, müəyyən inteqral, ədədi və Teylor sıraları, adi və xətti diferensial tənliklər üzrə rəsmi mühazirələr toplusu.",
+      topics_az: ["Matrislər və Determinantlar", "Kramer və Qauss Üsulu", "İkitərtibli Əyrilər", "Diferensial və İnteqral"],
+      url: "ALI RIY muhazire (1).pdf"
+    },
+    {
+      id: "fbk-lec-biologiya",
+      fbkId: "fbk-9",
+      fieldBadge: "BİOLOGİYA",
+      fieldName_az: "Dəqiq Elmlər, FT və ÇHQ",
+      subject_az: "Biologiya",
+      title_az: "Biologiya Fənni Üzrə Mövzular və Mühazirələr Toplusu",
+      author_az: "Dəqiq Elmlər FBK (Qaraxanova İlahə)",
+      format: "pdf",
+      icon: "🔬",
+      volume: "Mövzular Toplusu · PDF",
+      fileSize: "2.0 MB",
+      desc_az: "Canlılarda qidalanma, tənəffüs, ifrazat, çoxalma və qıcıqlanma, zülal biosintezi, ATF, DNT və RNT mexanizmləri, fotosintez, xemosintez və fotoperiodizm üzrə rəsmi mühazirə toplusu.",
+      topics_az: ["Zülal Biosintezi və DNT", "Fotosintez və Xemosintez", "Qidalanma və Tənəffüs", "Fotoperiodizm"],
+      url: "Biologiya mövzular.pdf"
     }
   ];
 
