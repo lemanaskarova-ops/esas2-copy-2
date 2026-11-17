@@ -3447,6 +3447,39 @@ const staffData = {
 
 const newsData = [
   {
+    "id": 116,
+    "official_id": "reyhan_aciq_ders_2026",
+    "title_az": "Şəmsiyeva Reyhan müəllimin “Naqilsiz rabitə texnologiyası” fənnindən açıq dərsi keçirildi",
+    "title_en": "Open Lesson by Teacher Shamsiyeva Reyhan on “Wireless Communication Technology” Held",
+    "title_ru": "Проведен открытый урок преподавателя Шамсиевой Рейхан по предмету «Беспроводные технологии связи»",
+    "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Naqilsiz rabitə texnologiyası” fənnindən III kurs, 365-ci qrup tələbələri üçün açıq dərs keçirildi. Dərsin məqsədi tələbələrin nəzəri biliklərinin möhkəmləndirilməsi və praktiki bacarıqlarının inkişafıdır.",
+    "desc_en": "An open lesson on 'Wireless Communication Technology' was held at Baku State Communications and Transport College for 3rd-year students of group 365. The goal was to consolidate theoretical knowledge and develop practical skills.",
+    "desc_ru": "В Бакинском государственном колледже связи и транспорта прошел открытый урок по предмету «Беспроводные технологии связи» для студентов III курса группы 365 с целью закрепления теоретических знаний и развития практических навыков.",
+    "full_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində fənn müəllimi Şəmsiyeva Reyhan tərəfindən “Naqilsiz rabitə texnologiyası” fənnindən III kurs, 365-ci qrup tələbələri üçün açıq dərs təşkil olundu.
+
+Açıq dərsin məqsədi tələbələrin nəzəri biliklərinin möhkəmləndirilməsi, praktiki bacarıqlarının inkişaf etdirilməsi və müasir rabitə texnologiyaları üzrə biliklərinin artırılmasıdır.
+
+Dərs zamanı simsiz şəbəkə arxitekturası, siqnalların ötürülməsi prinsipləri və naqilsiz rabitənin müasir sənayedə tətbiqi interaktiv formada tələbələrin diqqətinə çatdırılmış, sual-cavab və əyani təqdimatlarla mövzu dərindən mənimsənilmişdir.",
+    "full_en": "An open lesson on 'Wireless Communication Technology' was organized at Baku State Communications and Transport College by subject teacher Shamsiyeva Reyhan for 3rd-year students of group 365.
+
+The main goal of the open lesson is to reinforce students' theoretical knowledge, enhance their practical skills, and advance their understanding of modern wireless communication technologies.
+
+During the session, modern wireless network architectures, transmission principles, and practical industrial applications were presented interactively, followed by engaging discussions and demonstrations.",
+    "full_ru": "В Бакинском государственном колледже связи и транспорта преподавателем Шамсиевой Рейхан был организован открытый урок по предмету «Беспроводные технологии связи» для студентов III курса группы 365.
+
+Цель открытого урока — закрепление теоретических знаний студентов, развитие практических навыков и углубление компетенций в области современных технологий беспроводной связи.
+
+В ходе занятия в интерактивной форме были рассмотрены архитектура беспроводных сетей, принципы передачи сигналов и их применение в современной индустрии, закрепленные наглядными примерами и дискуссиями.",
+    "date": "17 Noyabr 2026",
+    "date_az": "17 Noyabr 2026",
+    "date_en": "17 November 2026",
+    "date_ru": "17 Ноября 2026",
+    "image": "reyhan.mp4",
+    "tag_az": "Açıq Dərs",
+    "tag_en": "Open Lesson",
+    "tag_ru": "Открытый Урок"
+  },
+  {
     "id": 115,
     "official_id": "tashkent_online_2026",
     "title_az": "Əməkdaşlıq sərhədləri aşan, təcrübə mübadiləsi isə gələcəyi formalaşdıran körpüdür – Daşkənd Nəqliyyat Texnikumu ilə onlayn görüş",
@@ -12197,11 +12230,11 @@ function initGalleryModule() {
         type: "video",
         src: "reyhan.mp4",
         tall: true,
-        label: "Dərs Mühiti · Canlı Tədris Prosesi",
-        label_az: "Dərs Mühiti · Canlı Tədris Prosesi",
-        label_en: "Study Environment · Live Teaching Process",
-        label_ru: "Учебная среда · Живой учебный процесс",
-        badge: "DƏRS MÜHİTİ",
+        label: "Naqilsiz rabitə texnologiyası · Açıq Dərs (Reyhan Şəmsiyeva)",
+        label_az: "Naqilsiz rabitə texnologiyası · Açıq Dərs (Reyhan Şəmsiyeva)",
+        label_en: "Wireless Communication Technology · Open Lesson (Reyhan Shamsiyeva)",
+        label_ru: "Беспроводные технологии связи · Открытый урок (Рейхан Шамсиева)",
+        badge: "AÇIQ DƏRS",
         i18n: "gallery_cat_study",
       },
       {
