@@ -10401,8 +10401,8 @@ function initLibraryModule() {
       icon: "🔬",
       volume: "Mövzular Toplusu · PDF",
       fileSize: "2.0 MB",
-      desc_az: "Canlılarda qidalanma, tənəffüs, ifrazat, çoxalma və qıcıqlanma, avtotrof və heterotrof canlılar, hüceyrə biologiyası və orqanizmlərin həyat fəaliyyəti üzrə mühazirə vəsaiti.",
-      topics_az: ["Canlıların Xüsusiyyətləri", "Qidalanma və Tənəffüs", "Çoxalma və İfrazat", "Hüceyrə Nəzəriyyəsi"],
+      desc_az: "Canlılarda qidalanma, tənəffüs, ifrazat, çoxalma və qıcıqlanma, zülal biosintezi, ATF, DNT və RNT mexanizmləri, fotosintez, xemosintez və fotoperiodizm üzrə rəsmi mühazirə toplusu.",
+      topics_az: ["Zülal Biosintezi və DNT", "Fotosintez və Xemosintez", "Qidalanma və Tənəffüs", "Fotoperiodizm"],
       url: "Biologiya mövzular.pdf"
     }
   ];
