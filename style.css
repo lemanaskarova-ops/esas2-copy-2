@@ -24401,3 +24401,27 @@ body.dark-mode .about-memo-aesthetic-btn:hover .memo-btn-arrow-box,
   background: #d4af37;
   color: #07101d;
 }
+
+
+/* ══════════════════════════════════════════════════════════════
+   DIGITAL READING ROOM ENFORCEMENT — NO DOWNLOADS
+══════════════════════════════════════════════════════════════ */
+.book-btn-ext,
+.lib-lec-btn-dl,
+.lib-lec-btn-dl-alt,
+.btn-reader-ext,
+#reader-open-ext {
+  display: none !important;
+}
+
+.book-btn {
+  width: 100% !important;
+  flex: 1 1 100% !important;
+  justify-content: center !important;
+}
+
+.lib-lec-btn-read {
+  width: 100% !important;
+  flex: 1 1 100% !important;
+  justify-content: center !important;
+}

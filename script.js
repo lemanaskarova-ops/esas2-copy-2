@@ -7432,9 +7432,9 @@ const faqData = [
       "en": "How can I access the digital library and learning materials?"
     },
     "a": {
-      "az": "Saytımızın 'Kitabxana' və 'Videodərslər' bölməsindən ixtisasınıza uyğun bütün dərslikləri, metodik vəsaitləri və mühazirələri heç bir ödəniş olmadan onlayn oxuya, yükləyə və videodərslərə baxa bilərsiniz.",
-      "ru": "В разделах 'Библиотека' и 'Видеоуроки' нашего сайта вы можете в любое время бесплатно читать онлайн или скачивать все профильные учебники, методические пособия и лекционные видеоматериалы.",
-      "en": "In the 'Library' and 'Lectures' sections of our portal, you can freely view, read online, or download all textbook manuals, syllabus guidelines, and lecture video recordings suited to your major."
+      "az": "Saytımızın 'Kitabxana' və 'Videodərslər' bölməsindən ixtisasınıza uyğun bütün dərslikləri, metodik vəsaitləri və mühazirələri heç bir ödəniş olmadan rəqəmsal oxu zalında onlayn oxuya və videodərslərə baxa bilərsiniz.",
+      "ru": "В разделах 'Библиотека' и 'Видеоуроки' нашего сайта вы можете в любое время бесплатно читать онлайн в цифровом читальном зале все профильные учебники, методические пособия и лекционные видеоматериалы.",
+      "en": "In the 'Library' and 'Lectures' sections of our portal, you can freely view and read online in the digital reading room all textbook manuals, syllabus guidelines, and lecture video recordings suited to your major."
     }
   },
 
@@ -8320,61 +8320,61 @@ function initStructureModule() {
           <div class="fbk-disciplines">
             ${disciplines.map(d => {
         if (fbk.id === "fbk-4" && (d === "Rəqəmsal Elektronika və MPS" || d.includes("Rəqəmsal"))) {
-          return `<a href="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" target="_blank" download="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" class="fbk-chip fbk-chip-has-doc" title="Rəqəmsal elektronika və MPS fənnindən leksiyalar toplusu (56 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🔌</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🔌</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-4" && (d === "Elektronika" || (d.includes("Elektronika") && !d.includes("Rəqəmsal")) || d.includes("MPS"))) {
-          return `<a href="ELEKTRONIKA VE MPS.pdf" target="_blank" download="ELEKTRONIKA VE MPS.pdf" class="fbk-chip fbk-chip-has-doc" title="Elektronika və MPS fənnindən dərs vəsaiti (65 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">⚡</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('ELEKTRONIKA VE MPS.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">⚡</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-4" && (d.includes("Ölçmə") || d.includes("Metrologiya") || d.includes("Standartlaşdırma"))) {
-          return `<a href="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" target="_blank" download="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" class="fbk-chip fbk-chip-has-doc" title="Metrologiya, standartlaşdırma və sertifikatlaşdırma (Dərs vəsaiti, 46 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">📐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">📐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-5" && (d.includes("Diaqnostika") || d.includes("Diaqnostikası"))) {
-          return `<a href="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" target="_blank" download="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" class="fbk-chip fbk-chip-has-doc" title="Nəqliyyat vasitələrinin diaqnostikası (Kollec dərs vəsaiti, 78 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🚗</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🚗</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-5" && (d.includes("Yol Hərəkəti") || d.includes("Təhlükəsizliyi"))) {
-          return `<a href="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" target="_blank" download="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" class="fbk-chip fbk-chip-has-doc" title="Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi (15 mövzu, 59 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🚘</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🚘</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-5" && (d === "Avtomobil Daşımaları" || (d.includes("Avtomobil") && !d.includes("Vahid")))) {
-          return `<a href="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" target="_blank" download="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" class="fbk-chip fbk-chip-has-doc" title="Avtomobil daşımaları mühazirələr toplusu (93 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🚛</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🚛</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-5" && (d === "Vahid Nəqliyyat Sistemi" || d.includes("Vahid Nəqliyyat") || d.includes("VNS"))) {
-          return `<a href="VAHİD NƏQLİYYAT SİSTEMİ.pdf" target="_blank" download="VAHİD NƏQLİYYAT SİSTEMİ.pdf" class="fbk-chip fbk-chip-has-doc" title="Vahid Nəqliyyat Sistemi (VNS) mühazirələr toplusu və dərs vəsaiti (63 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('VAHİD NƏQLİYYAT SİSTEMİ.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🌐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-5" && d.includes("Materialşünaslıq")) {
-          return `<a href="materialşünasliq,mühazire, 15 mövzu.pdf" target="_blank" download="materialşünasliq,mühazire, 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" title="Materialşünaslıq fənni üzrə mühazirələr toplusu (15 mövzu, 33 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🔬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('materialşünasliq,mühazire, 15 mövzu.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🔬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-5" && (d.includes("Yağlar") || d.includes("Sürtkü"))) {
-          return `<a href="yağlar mühazire 15 mövzu.pdf" target="_blank" download="yağlar mühazire 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" title="Yağlar və sürtkü materialları fənnindən mühazirələr toplusu (15 mövzu, 40 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🛢️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('yağlar mühazire 15 mövzu.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🛢️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-5" && (d.includes("Material") || d.includes("Konstruksiya"))) {
-          return `<a href="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" target="_blank" download="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" class="fbk-chip fbk-chip-has-doc" title="Konstruksiya materiallarının texnologiyası (Alidə Mahmudova, 28 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🔩</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🔩</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-6" && (d === "Azərbaycan Dili" || d.includes("Azərbaycan Dili"))) {
-          return `<a href="azdilifb.pdf" download="azdilifb.pdf" class="fbk-chip fbk-chip-has-doc" title="Azərbaycan dili fənnindən mühazirələr toplusu (azdilifb.pdf) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('azdilifb.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-6" && (d === "Ədəbiyyat" || d.includes("Ədəbiyyat"))) {
-          return `<a href="edebiyyatfb.pdf" download="edebiyyatfb.pdf" class="fbk-chip fbk-chip-has-doc" title="Ədəbiyyat fənnindən mühazirələr toplusu (edebiyyatfb.pdf) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('edebiyyatfb.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-6" && (d.includes("Kommunikasiya") || d.includes("İşgüzar") || d.includes("Yazışmalar"))) {
-          return `<a href="KOMMUNİKASİYA DF 2 (1).pdf" download="KOMMUNİKASİYA DF 2 (1).pdf" class="fbk-chip fbk-chip-has-doc" title="İşgüzar və akademik kommunikasiya (Natəvan Hüseynova, 25 000+ söz, DOCX) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">💬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('KOMMUNİKASİYA DF 2 (1).pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">💬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-7" && (d === "Azərbaycan Tarixi" || d.includes("Azərbaycan Tarixi"))) {
-          return `<a href="aztarixi2fb.pdf" target="_blank" download="aztarixi2fb.pdf" class="fbk-chip fbk-chip-has-doc" title="Azərbaycan tarixi rəsmi dərslik və mühazirə vəsaiti (495 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🏛️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('aztarixi2fb.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🏛️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-7" && (d === "Ümumi Tarix" || d.includes("Ümumi Tarix"))) {
-          return `<a href="umtarixfb.pdf" download="umtarixfb.pdf" class="fbk-chip fbk-chip-has-doc" title="Ümumi tarix fənnindən mühazirələr toplusu (umtarixfb.pdf) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌍</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('umtarixfb.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🌍</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-7" && (d === "Hüququn Əsasları" || d.includes("Hüququn Əsasları") || d.includes("Hüquq"))) {
-          return `<a href="yeni mühazirələr.pdf" download="yeni mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" title="Hüququn əsasları fənnindən mühazirələr toplusu (yeni mühazirələr.pdf) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">⚖️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('yeni mühazirələr.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">⚖️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
-          return `<a href="1Русский язык 1 курс (лекции) (1).pdf" download="1Русский язык 1 курс (лекции) (1).pdf" class="fbk-chip fbk-chip-has-doc" title="Rus dili I və II kurs mühazirələr toplusu (DOCX) — Yüklə" onclick="event.stopPropagation();"><span class="chip-doc-icon">🇷🇺</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 2 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('1Русский язык 1 курс (лекции) (1).pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🇷🇺</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
-          return `<a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" title="Ətraf mühitin qorunması və bərpası (ƏMM) fənnindən mühazirələr toplusu (98 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🌱</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('ƏMM mühazirələr.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🌱</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-9" && (d.includes("Həyat Fəaliyyəti") || d.includes("HFT") || d.includes("Mülki Müdafiə"))) {
-          return `<a href="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" target="_blank" download="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" class="fbk-chip fbk-chip-has-doc" title="Həyat fəaliyyətinin təhlükəsizliyi (Alidə Mahmudova, Azadə Quliyeva, 74 səhifə, PDF) — Yüklə / Oxu" onclick="event.stopPropagation();"><span class="chip-doc-icon">🛡️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📥 PDF</span></a>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🛡️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         return `<span class="fbk-chip">${d}</span>`;
       }).join("")}
@@ -8419,61 +8419,61 @@ function initStructureModule() {
                 <div style="display: flex; flex-wrap: wrap; gap: 8px;">
                   ${disciplines.map(d => {
             if (fbk.id === "fbk-4" && (d === "Rəqəmsal Elektronika və MPS" || d.includes("Rəqəmsal"))) {
-              return `<a href="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" target="_blank" download="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf (56 Səhifə PDF)"><span>🔌 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf', '🔌 ${d}', 'FBK Tədris Vəsaiti');"><span>🔌 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-4" && (d === "Elektronika" || (d.includes("Elektronika") && !d.includes("Rəqəmsal")) || d.includes("MPS"))) {
-              return `<a href="ELEKTRONIKA VE MPS.pdf" target="_blank" download="ELEKTRONIKA VE MPS.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: ELEKTRONIKA VE MPS.pdf (65 Səhifə PDF)"><span>⚡ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('ELEKTRONIKA VE MPS.pdf', '⚡ ${d}', 'FBK Tədris Vəsaiti');"><span>⚡ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-4" && (d.includes("Ölçmə") || d.includes("Metrologiya") || d.includes("Standartlaşdırma"))) {
-              return `<a href="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" target="_blank" download="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf (46 Səhifə PDF)"><span>📐 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf', '📐 ${d}', 'FBK Tədris Vəsaiti');"><span>📐 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-5" && (d.includes("Diaqnostika") || d.includes("Diaqnostikası"))) {
-              return `<a href="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" target="_blank" download="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: 2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf (78 Səhifə PDF)"><span>🚗 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf', '🚗 ${d}', 'FBK Tədris Vəsaiti');"><span>🚗 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-5" && (d.includes("Yol Hərəkəti") || d.includes("Təhlükəsizliyi"))) {
-              return `<a href="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" target="_blank" download="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf (59 Səhifə PDF)"><span>🚘 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf', '🚘 ${d}', 'FBK Tədris Vəsaiti');"><span>🚘 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-5" && (d === "Avtomobil Daşımaları" || (d.includes("Avtomobil") && !d.includes("Vahid")))) {
-              return `<a href="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" target="_blank" download="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf (93 Səhifə PDF)"><span>🚛 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf', '🚛 ${d}', 'FBK Tədris Vəsaiti');"><span>🚛 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-5" && (d === "Vahid Nəqliyyat Sistemi" || d.includes("Vahid Nəqliyyat") || d.includes("VNS"))) {
-              return `<a href="VAHİD NƏQLİYYAT SİSTEMİ.pdf" target="_blank" download="VAHİD NƏQLİYYAT SİSTEMİ.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: VAHİD NƏQLİYYAT SİSTEMİ.pdf (63 Səhifə PDF)"><span>🌐 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('VAHİD NƏQLİYYAT SİSTEMİ.pdf', '🌐 ${d}', 'FBK Tədris Vəsaiti');"><span>🌐 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-5" && d.includes("Materialşünaslıq")) {
-              return `<a href="materialşünasliq,mühazire, 15 mövzu.pdf" target="_blank" download="materialşünasliq,mühazire, 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: materialşünasliq,mühazire, 15 mövzu.pdf (15 Mövzu, 33 Səhifə PDF)"><span>🔬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('materialşünasliq,mühazire, 15 mövzu.pdf', '🔬 ${d}', 'FBK Tədris Vəsaiti');"><span>🔬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-5" && (d.includes("Yağlar") || d.includes("Sürtkü"))) {
-              return `<a href="yağlar mühazire 15 mövzu.pdf" target="_blank" download="yağlar mühazire 15 mövzu.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: yağlar mühazire 15 mövzu.pdf (15 Mövzu, 40 Səhifə PDF)"><span>🛢️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('yağlar mühazire 15 mövzu.pdf', '🛢️ ${d}', 'FBK Tədris Vəsaiti');"><span>🛢️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-5" && (d.includes("Material") || d.includes("Konstruksiya"))) {
-              return `<a href="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" target="_blank" download="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf (28 Səhifə PDF)"><span>🔩 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf', '🔩 ${d}', 'FBK Tədris Vəsaiti');"><span>🔩 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-6" && (d === "Azərbaycan Dili" || d.includes("Azərbaycan Dili"))) {
-              return `<a href="azdilifb.pdf" download="azdilifb.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: azdilifb.pdf (36 Saat)"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('azdilifb.pdf', '📖 ${d}', 'FBK Tədris Vəsaiti');"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-6" && (d === "Ədəbiyyat" || d.includes("Ədəbiyyat"))) {
-              return `<a href="edebiyyatfb.pdf" download="edebiyyatfb.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: edebiyyatfb.pdf"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('edebiyyatfb.pdf', '📖 ${d}', 'FBK Tədris Vəsaiti');"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-6" && (d.includes("Kommunikasiya") || d.includes("İşgüzar") || d.includes("Yazışmalar"))) {
-              return `<a href="KOMMUNİKASİYA DF 2 (1).pdf" download="KOMMUNİKASİYA DF 2 (1).pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: KOMMUNİKASİYA DF 2 (1).pdf (Natəvan Hüseynova, 25 000+ söz)"><span>💬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('KOMMUNİKASİYA DF 2 (1).pdf', '💬 ${d}', 'FBK Tədris Vəsaiti');"><span>💬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-7" && (d === "Azərbaycan Tarixi" || d.includes("Azərbaycan Tarixi"))) {
-              return `<a href="aztarixi2fb.pdf" target="_blank" download="aztarixi2fb.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: aztarixi2fb.pdf (495 Səhifə)"><span>🏛️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('aztarixi2fb.pdf', '🏛️ ${d}', 'FBK Tədris Vəsaiti');"><span>🏛️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-7" && (d === "Ümumi Tarix" || d.includes("Ümumi Tarix"))) {
-              return `<a href="umtarixfb.pdf" download="umtarixfb.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: umtarixfb.pdf (36 Saat)"><span>🌍 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('umtarixfb.pdf', '🌍 ${d}', 'FBK Tədris Vəsaiti');"><span>🌍 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-7" && (d === "Hüququn Əsasları" || d.includes("Hüququn Əsasları") || d.includes("Hüquq"))) {
-              return `<a href="yeni mühazirələr.pdf" download="yeni mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: yeni mühazirələr.pdf (8 Mövzu, 16 000+ söz)"><span>⚖️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('yeni mühazirələr.pdf', '⚖️ ${d}', 'FBK Tədris Vəsaiti');"><span>⚖️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-8" && (d === "Rus Dili" || d.includes("Rus Dili") || d.includes("Русский"))) {
-              return `<a href="1Русский язык 1 курс (лекции) (1).pdf" download="1Русский язык 1 курс (лекции) (1).pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə: Rus Dili I və II Kurs Mühazirələr (DOCX)"><span>🇷🇺 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 2 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('1Русский язык 1 курс (лекции) (1).pdf', '🇷🇺 ${d}', 'FBK Tədris Vəsaiti');"><span>🇷🇺 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-9" && (d.includes("ƏMM") || d.includes("Ətraf Mühit") || d.includes("Ekologiya"))) {
-              return `<a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: ƏMM mühazirələr.pdf (98 Səhifə PDF)"><span>🌱 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('ƏMM mühazirələr.pdf', '🌱 ${d}', 'FBK Tədris Vəsaiti');"><span>🌱 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-9" && (d.includes("Həyat Fəaliyyəti") || d.includes("HFT") || d.includes("Mülki Müdafiə"))) {
-              return `<a href="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" target="_blank" download="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700;" title="Yüklə / Oxu: Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf (74 Səhifə PDF)"><span>🛡️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📥 PDF</span></a>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf', '🛡️ ${d}', 'FBK Tədris Vəsaiti');"><span>🛡️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             return `<span style="background: var(--surface); border: 1px solid var(--border); padding: 5px 12px; border-radius: 12px; font-size: 0.82rem; font-weight: 600;">${d}</span>`;
           }).join("")}
@@ -8494,10 +8494,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" target="_blank" download="RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf Yüklə / Oxu (56 Səhifə PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf', 'RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
 
@@ -8514,10 +8514,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="ELEKTRONIKA VE MPS.pdf" target="_blank" download="ELEKTRONIKA VE MPS.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Elektronika və MPS Yüklə / Oxu (65 Səhifə PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('ELEKTRONIKA VE MPS.pdf', 'ELEKTRONIKA VE MPS.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
 
@@ -8534,10 +8534,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" target="_blank" download="Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Metrologiya və Standartlaşdırma Yüklə / Oxu (46 Səhifə PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf', 'Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
                 </div>
@@ -8557,10 +8557,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" target="_blank" download="Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Mühazirəni Yüklə / Oxu (59 Səhifə PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf', 'Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
 
@@ -8577,10 +8577,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" target="_blank" download="Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Konstruksiya Materialları Dərslik Yüklə / Oxu (28 Səhifə PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf', 'Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
 
@@ -8597,10 +8597,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="materialşünasliq,mühazire, 15 mövzu.pdf" target="_blank" download="materialşünasliq,mühazire, 15 mövzu.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Materialşünaslıq Mühazirə Yüklə / Oxu (33 Səhifə PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('materialşünasliq,mühazire, 15 mövzu.pdf', 'materialşünasliq,mühazire, 15 mövzu.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
 
@@ -8617,10 +8617,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="yağlar mühazire 15 mövzu.pdf" target="_blank" download="yağlar mühazire 15 mövzu.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Yağlar Mühazirə Yüklə / Oxu (40 Səhifə PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('yağlar mühazire 15 mövzu.pdf', 'yağlar mühazire 15 mövzu.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
 
@@ -8637,10 +8637,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" target="_blank" download="AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Avtomobil Daşımaları və VNS Yüklə / Oxu (93 Səhifə PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf', 'AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
 
@@ -8657,10 +8657,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="VAHİD NƏQLİYYAT SİSTEMİ.pdf" target="_blank" download="VAHİD NƏQLİYYAT SİSTEMİ.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Vahid Nəqliyyat Sistemi Yüklə / Oxu (63 Səhifə PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('VAHİD NƏQLİYYAT SİSTEMİ.pdf', 'VAHİD NƏQLİYYAT SİSTEMİ.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
 
@@ -8677,10 +8677,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" target="_blank" download="2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Nəqliyyat Diaqnostikası Yüklə / Oxu (78 Səhifə PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf', '2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
                 </div>
@@ -8700,10 +8700,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="azdilifb.pdf" download="azdilifb.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>azdilifb.pdf Faylını Aç / Yüklə</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('azdilifb.pdf', 'azdilifb.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
 
@@ -8720,10 +8720,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="edebiyyatfb.pdf" download="edebiyyatfb.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>edebiyyatfb.pdf Faylını Aç / Yüklə</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('edebiyyatfb.pdf', 'edebiyyatfb.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
 
@@ -8740,10 +8740,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="KOMMUNİKASİYA DF 2 (1).pdf" download="KOMMUNİKASİYA DF 2 (1).pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Kommunikasiya Mühazirəsini Aç / Yüklə (PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('KOMMUNİKASİYA DF 2 (1).pdf', 'KOMMUNİKASİYA DF 2 (1).pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
                 </div>
@@ -8763,14 +8763,14 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="aztarixi2fb.pdf" target="_blank" download="aztarixi2fb.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>aztarixi2fb.pdf Yüklə (495 Səhifə PDF)</span>
-                      </a>
-                      <a href="aztarixifb.pdf" download="aztarixifb.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08); color:var(--text); border:1px solid rgba(255,255,255,0.2); padding:9px 16px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>aztarixifb.pdf (PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('aztarixi2fb.pdf', 'aztarixi2fb.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('aztarixifb.pdf', 'aztarixifb.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
 
@@ -8787,10 +8787,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="umtarixfb.pdf" download="umtarixfb.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>umtarixfb.pdf Faylını Aç / Yüklə</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('umtarixfb.pdf', 'umtarixfb.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
 
@@ -8807,10 +8807,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="yeni mühazirələr.pdf" download="yeni mühazirələr.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>yeni mühazirələr.pdf Faylını Aç / Yüklə</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('yeni mühazirələr.pdf', 'yeni mühazirələr.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
                 </div>
@@ -8830,10 +8830,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="1Русский язык 1 курс (лекции) (1).pdf" download="1Русский язык 1 курс (лекции) (1).pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Rus Dili I Kurs Mühazirəni Aç / Yüklə (PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('1Русский язык 1 курс (лекции) (1).pdf', '1Русский язык 1 курс (лекции) (1).pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
                   <!-- Material 2: Rus Dili II Kurs -->
@@ -8849,10 +8849,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="2Русский язык 2 курс лекции книга  (1).pdf" download="2Русский язык 2 курс лекции книга  (1).pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Rus Dili II Kurs Mühazirə Kitabını Aç / Yüklə (PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('2Русский язык 2 курс лекции книга  (1).pdf', '2Русский язык 2 курс лекции книга  (1).pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
                 </div>
@@ -8872,10 +8872,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="ƏMM mühazirələr.pdf" target="_blank" download="ƏMM mühazirələr.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>ƏMM mühazirələr.pdf Yüklə / Oxu (98 Səhifə PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('ƏMM mühazirələr.pdf', 'ƏMM mühazirələr.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
 
@@ -8892,10 +8892,10 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <a href="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" target="_blank" download="Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Həyat Fəaliyyətinin Təhlükəsizliyi Yüklə / Oxu (74 Səhifə PDF)</span>
-                      </a>
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf', 'Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf', 'FBK Mühazirələr Fondu');">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  <span>Oxu Zalında Aç</span>
+</button>
                     </div>
                   </div>
                 </div>
@@ -9297,6 +9297,18 @@ function initLibraryModule() {
     return btn ? btn.textContent.trim() : catKey;
   }
 
+    window.openDocumentReader = function(url, title, author, cat) {
+    if (typeof openBookReader === "function") {
+      openBookReader({
+        title_az: title || "Tədris Vəsaiti",
+        author_az: author || "BDRNK Fənn Birləşməsi",
+        category: cat || "Rəqəmsal Kitabxana",
+        icon: "📖",
+        url: url
+      });
+    }
+  };
+
   function openBookReader(book) {
     if (!readerModal) return;
     const title = book[`title_${currentLang}`] || book.title_az;
@@ -9333,7 +9345,7 @@ function initLibraryModule() {
     if (readerIcon) readerIcon.textContent = book.icon || "📘";
     if (readerCat) readerCat.textContent = `${roomTitle} · ${catLabel}`;
     if (readerTitle) readerTitle.textContent = title;
-    if (readerOpenExt) readerOpenExt.href = url;
+    if (readerOpenExt) readerOpenExt.style.display = "none";
     if (readerCoverEmoji) readerCoverEmoji.textContent = book.icon || "📘";
     if (readerCoverName) readerCoverName.textContent = title;
     if (readerCoverAuthor) readerCoverAuthor.textContent = author;
@@ -9342,7 +9354,7 @@ function initLibraryModule() {
 
     if (readerViewport) {
       if (isPdf) {
-        readerViewport.innerHTML = `<iframe class="book-reader-iframe" src="${encodeURI(url)}" title="${title}"></iframe>`;
+        readerViewport.innerHTML = `<iframe class="book-reader-iframe" src="${encodeURI(url)}#toolbar=0&navpanes=0" title="${title}"></iframe>`;
       } else {
         readerViewport.innerHTML = `
           <div class="reader-doc-fallback">
@@ -9351,10 +9363,9 @@ function initLibraryModule() {
             <h4>${title}</h4>
             <p>${author}</p>
             <p class="reader-doc-note">${docNote}</p>
-            <a href="${encodeURI(url)}" download class="btn btn-primary reader-doc-dl-btn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              <span>${docDlBtn}</span>
-            </a>
+            <div class="btn btn-primary reader-doc-dl-btn" style="pointer-events:none; opacity:0.8;">
+              <span>📕 Rəqəmsal Oxu Zalı</span>
+            </div>
           </div>
         `;
       }
@@ -9462,13 +9473,10 @@ function initLibraryModule() {
               <h4 class="book-title">${title}</h4>
               <span class="book-author">${author}</span>
               <div class="book-actions">
-                <button type="button" class="book-btn book-btn-preview">
+                <button type="button" class="book-btn book-btn-preview" style="width:100%; justify-content:center;">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
                   <span>${readingRoomBtnText}</span>
                 </button>
-                <a href="${book.url || "#"}" target="_blank" rel="noopener noreferrer" class="book-btn-ext" title="${extBtnTitle}">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
               </div>
             </div>
           </div>
@@ -10333,17 +10341,10 @@ function initLibraryModule() {
             </div>
 
             <div class="lib-lec-actions">
-              <button type="button" class="lib-lec-btn-read" data-open-lec="${lec.id}">
+              <button type="button" class="lib-lec-btn-read" data-open-lec="${lec.id}" style="width:100%; justify-content:center;">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                <span>${isPdf ? "Oxu Zalında Aç" : "Məlumat və Yüklə"}</span>
+                <span>Oxu Zalında Aç</span>
               </button>
-              <a href="${safeUrl}" download class="lib-lec-btn-dl" title="${lec.url} — Birbaşa Yüklə">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Yüklə</span>
-              </a>
-              ${lec.extraDocUrl ? `
-                <a href="${encodeURI(lec.extraDocUrl)}" download class="lib-lec-btn-dl-alt" title="Alternativ DOCX Konspekti Yüklə">DOCX</a>
-              ` : ""}
             </div>
           </article>
         `;
@@ -18575,93 +18576,9 @@ function initGlobalSearchModule() {
       desc: "Müəllimə: Məmmədova Vüsalə (FBK-06) · I kurs, 36 saatlıq rəsmi mühazirə vəsaiti, dil və nitq mədəniyyəti",
       tokens: "azdilifb azdili pdf azerbaycan dili fenn birlesmesi fbk 06 memmedova vusale muhazire ders vesaiti qrammatika nitq medeniyyeti",
       action: () => {
-        const link = document.createElement("a");
-        link.href = "azdilifb.pdf";
-        link.download = "azdilifb.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    });
-
-    // 4b. EDEBIYYAT DƏRS VƏSAİTİ (edebiyyatfb.pdf)
-    catalog.push({
-      type: "structure",
-      category: "structure",
-      categories: ["structure", "library"],
-      icon: "📑",
-      badge: "PDF • Mühazirə",
-      title: "edebiyyatfb.pdf — Ədəbiyyat Fənnindən Mühazirələr Toplusu",
-      desc: "Azərbaycan dili və ədəbiyyat FBK (Ziba Səfərova) · Dədə Qorqud eposu, klassik və müasir ədəbiyyat mühazirəsi (15 000+ söz)",
-      tokens: "edebiyyatfb pdf edebiyyat fenn birlesmesi fbk 06 azerbaycan dili ziba seferova muhazire ders vesaiti dede qorqud eposu",
-      action: () => {
-        const link = document.createElement("a");
-        link.href = "edebiyyatfb.pdf";
-        link.download = "edebiyyatfb.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    });
-
-    // 4b. AZƏRBAYCAN TARİXİ DƏRS VƏSAİTİ (aztarixifb.pdf)
-    catalog.push({
-      type: "structure",
-      category: "structure",
-      categories: ["structure", "library"],
-      icon: "🏛️",
-      badge: "PDF • Mühazirə",
-      title: "aztarixifb.pdf — Azərbaycan Tarixi Fənnindən Mühazirələr Toplusu",
-      desc: "Humanitar və İctimai Elmlər FBK (Səidə Quliyeva) · İbtidai icmadan müasir dövrə və Zəfər tarixinə qədər 72 saatlıq rəsmi mühazirələr toplusu (60 000+ söz)",
-      tokens: "aztarixifb pdf azerbaycan tarixi tarix fenn birlesmesi fbk 07 seide quliyeva muhazire ders vesaiti ibtidai icma manna atropatena albaniya sasani",
-      action: () => {
-        const link = document.createElement("a");
-        link.href = "aztarixifb.pdf";
-        link.download = "aztarixifb.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    });
-
-    // 4c. AZƏRBAYCAN TARİXİ FUNDAMENTAL DƏRSLİK (aztarixi2fb.pdf - 495 Səhifə)
-    catalog.push({
-      type: "structure",
-      category: "structure",
-      categories: ["structure", "library"],
-      icon: "📕",
-      badge: "PDF • 495 Səh.",
-      title: "aztarixi2fb.pdf — Azərbaycan Tarixi Fundamental Mühazirə Vəsaiti (495 səh.)",
-      desc: "Müəllif: Səidə Quliyeva (FBK-07) · 495 səhifəlik tam rəsmi PDF dərs vəsaiti, ibtidai icmadan Zəfər tarixinə qədər",
-      tokens: "aztarixi2fb aztarixi2 pdf azerbaycan tarixi tarix derslik 495 sehife seide quliyeva fbk 07 muhazire vesait",
-      action: () => {
-        const link = document.createElement("a");
-        link.href = "aztarixi2fb.pdf";
-        link.download = "aztarixi2fb.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
+        window.openDocumentReader("aztarixi2fb.pdf", "aztarixi2fb.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
 
@@ -18676,68 +18593,9 @@ function initGlobalSearchModule() {
       desc: "Humanitar və İctimai Elmlər FBK (Səidə Quliyeva) · Qədim Misir, Roma, Yunanıstan, Türk dövlətləri və Osmanlı imperiyası üzrə 36 saatlıq rəsmi mühazirə vəsaiti (20 000+ söz)",
       tokens: "umtarixfb pdf umumi tarix dunya tarixi fenn birlesmesi fbk 07 seide quliyeva muhazire ders vesaiti misir roma yunanistan osmanli",
       action: () => {
-        const link = document.createElement("a");
-        link.href = "umtarixfb.pdf";
-        link.download = "umtarixfb.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    });
-
-    // 4e. HÜQUQUN ƏSASLARI DƏRS VƏSAİTİ (yeni mühazirələr.docx - 8 Mövzu)
-    catalog.push({
-      type: "structure",
-      category: "structure",
-      categories: ["structure", "library"],
-      icon: "⚖️",
-      badge: "PDF • Mühazirə",
-      title: "yeni mühazirələr.pdf — Hüququn Əsasları Fənnindən Mühazirələr Toplusu",
-      desc: "Humanitar və İctimai Elmlər FBK · Dövlət və hüquq nəzəriyyəsi, AR Konstitusiyası, insan hüquqları, əmək və cinayət hüququ üzrə 8 mövzuluq rəsmi mühazirə vəsaiti (16 000+ söz)",
-      tokens: "yeni muhazireler yeni mühazirələr pdf huququn esaslari hüququn əsasları dovlet ve huquq konstitusiya emek cinayet fbk 07 fenn birlesmesi muhazire ders vesaiti",
-      action: () => {
-        const link = document.createElement("a");
-        link.href = "yeni mühazirələr.pdf";
-        link.download = "yeni mühazirələr.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    });
-
-    // 4f. RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR (PDF - 56 Səhifə)
-    catalog.push({
-      type: "structure",
-      category: "structure",
-      categories: ["structure", "library"],
-      icon: "🔌",
-      badge: "PDF • 56 Səh.",
-      title: "RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf — Dərs Vəsaiti",
-      desc: "Elektrotexnika və Sxematexnika FBK · Rəqəmsal elektronika, məntiq sxemləri və mikroprosessor sistemləri (MPS) üzrə 56 səhifəlik rəsmi leksiya vəsaiti",
-      tokens: "reqemsal elektronika mps leksiyalar rəqəmsal elektronika mikroprosessor sistemleri sxematexnika fbk 04 elektrotexnika pdf muhazire leksiya derslik",
-      action: () => {
-        const link = document.createElement("a");
-        link.href = "RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf";
-        link.download = "RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
+        window.openDocumentReader("RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf", "RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
 
@@ -18752,18 +18610,9 @@ function initGlobalSearchModule() {
       desc: "Dəqiq Elmlər, FT və ÇHQ FBK (FBK-09) · Müəllim: Ə. Mustafayeva · Ekologiya, biosfer, litosfer, ekosistemin enerjisi və ətraf mühitin bərpası üzrə 98 səhifəlik rəsmi mühazirələr toplusu",
       tokens: "emm əmm muhazireler mühazirələr pdf etraf muhitin muhafizesi berpa qorunmasi ekologiya fbk 09 mustafayeva ders vesaiti deqiq tebiet elmleri",
       action: () => {
-        const link = document.createElement("a");
-        link.href = "ƏMM mühazirələr.pdf";
-        link.download = "ƏMM mühazirələr.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
+        window.openDocumentReader("ƏMM mühazirələr.pdf", "ƏMM mühazirələr.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
 
@@ -18778,18 +18627,9 @@ function initGlobalSearchModule() {
       desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Müəllim: Kərimov Faiq · Yol hərəkətinin nizamlanması, svetofor və yol nişanları, hərəkət təhlükəsizliyi üzrə 15 mövzuluq rəsmi mühazirə vəsaiti (59 səhifə)",
       tokens: "yol hereketi qaydalari tehlukesizliyi muellim kerimov faiq mühazirə 15 movzu fbk 05 umumtexnika neqliyyat pdf derslik",
       action: () => {
-        const link = document.createElement("a");
-        link.href = "Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf";
-        link.download = "Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
+        window.openDocumentReader("Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf", "Mühazirə.(15mövzu)Yol hərəkəti qaydaları və hərəkətin təhlükəsizliyi.Müəllim Kərimov Faiq.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
 
@@ -18804,18 +18644,9 @@ function initGlobalSearchModule() {
       desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Müəllif: Alidə Mahmudova · Metallar, ərintilər, polad, çuqun, termiki emal və materialşünaslıq üzrə 28 səhifəlik rəsmi dərs vəsaiti",
       tokens: "konstruksiya materiallarinin texnologiyasi alide alidə mahmudova materialşünaslıq materialsunasliq fbk 05 umumtexnika neqliyyat pdf derslik vesait",
       action: () => {
-        const link = document.createElement("a");
-        link.href = "Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf";
-        link.download = "Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
+        window.openDocumentReader("Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf", "Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
 
@@ -18830,18 +18661,9 @@ function initGlobalSearchModule() {
       desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Metalların strukturu, polad, çuqun, legirlənmiş ərintilər, korroziya və polimer materiallar üzrə 15 mövzuluq rəsmi mühazirə vəsaiti (33 səhifə)",
       tokens: "materialsunasliq materialşünaslıq materialşünasliq muhazire mühazirə 15 movzu mövzu fbk 05 umumtexnika neqliyyat pdf derslik vesait",
       action: () => {
-        const link = document.createElement("a");
-        link.href = "materialşünasliq,mühazire, 15 mövzu.pdf";
-        link.download = "materialşünasliq,mühazire, 15 mövzu.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
+        window.openDocumentReader("materialşünasliq,mühazire, 15 mövzu.pdf", "materialşünasliq,mühazire, 15 mövzu.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
 
@@ -18856,18 +18678,9 @@ function initGlobalSearchModule() {
       desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Neft məhsulları, mühərrik yağları, transmissiya sürtküləri, özlülük və aşqarlar üzrə 15 mövzuluq rəsmi mühazirə toplusu (40 səhifə)",
       tokens: "yaglar yağlar muhazire mühazirə 15 movzu mövzu surtku sürtkü materiallari fbk 05 umumtexnika neqliyyat pdf derslik",
       action: () => {
-        const link = document.createElement("a");
-        link.href = "yağlar mühazire 15 mövzu.pdf";
-        link.download = "yağlar mühazire 15 mövzu.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
+        window.openDocumentReader("yağlar mühazire 15 mövzu.pdf", "yağlar mühazire 15 mövzu.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
 
@@ -18882,18 +18695,9 @@ function initGlobalSearchModule() {
       desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Nəqliyyat xidməti, Vahid Nəqliyyat Sistemi, yük və sərnişin daşımaları üzrə əhatəli rəsmi mühazirələr toplusu (93 səhifə)",
       tokens: "avtomobil dasimalari daşımaları vns vahid neqliyyat nəqliyyat sistemi muhazire mühazirə fbk 05 umumtexnika pdf derslik",
       action: () => {
-        const link = document.createElement("a");
-        link.href = "AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf";
-        link.download = "AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
+        window.openDocumentReader("AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf", "AVTOMOBİL DAŞIMALARI VƏ VNS  MÜHAZİRƏ.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
 
@@ -18908,18 +18712,9 @@ function initGlobalSearchModule() {
       desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Nəqliyyat qovşaqları, multimodal daşımalar və vahid nəqliyyat şəbəkəsinin təşkili üzrə rəsmi PDF dərs vəsaiti (63 səhifə)",
       tokens: "vahid neqliyyat nəqliyyat sistemi vns multimodal qovsaqlar fbk 05 umumtexnika pdf derslik muhazire",
       action: () => {
-        const link = document.createElement("a");
-        link.href = "VAHİD NƏQLİYYAT SİSTEMİ.pdf";
-        link.download = "VAHİD NƏQLİYYAT SİSTEMİ.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
+        window.openDocumentReader("VAHİD NƏQLİYYAT SİSTEMİ.pdf", "VAHİD NƏQLİYYAT SİSTEMİ.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
 
@@ -18934,18 +18729,9 @@ function initGlobalSearchModule() {
       desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Nəqliyyat vasitələrinin texniki vəziyyəti, funksional diaqnostika, mühərrik və transmissiya sistemləri üzrə rəsmi PDF dərs vəsaiti (78 səhifə)",
       tokens: "neqliyyat nəqliyyat vasitelerinin vasitələrinin diaqnostikasi diaqnostikası kollec fbk 05 umumtexnika pdf derslik 2026",
       action: () => {
-        const link = document.createElement("a");
-        link.href = "2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf";
-        link.download = "2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
+        window.openDocumentReader("2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf", "2026 - N.V.-nin diaqnostikası (Kollec) - Dəyişdirilmiş.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
 
@@ -18960,18 +18746,9 @@ function initGlobalSearchModule() {
       desc: "Dəqiq Elmlər, Fiziki Tərbiyə və ÇHQ FBK (FBK-09) · Əməyin mühafizəsi, sənaye sanitariyası, fövqəladə hallar və mülki müdafiə üzrə rəsmi PDF dərs vəsaiti (74 səhifə)",
       tokens: "heyat heyat fealiyyetinin həyat fəaliyyətinin tehlukesizliyi təhlükəsizliyi hft alide alidə mahmudova azade azadə quliyeva mulki mülki müdafiə mudafie emeyin əməyin muhafizesi mühafizəsi fbk 09 pdf derslik",
       action: () => {
-        const link = document.createElement("a");
-        link.href = "Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf";
-        link.download = "Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
+        window.openDocumentReader("Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf", "Həyat fəaliyyətinin təhlükəsizliyi. Alidə Mahmudova, Azadə Quliyeva.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
 
@@ -18986,18 +18763,9 @@ function initGlobalSearchModule() {
       desc: "Elektrotexnika və Sxematexnika FBK (FBK-04) · Yarımkeçiricilər, tranzistorlar, gücləndiricilər və mikroprosessor texnikası üzrə rəsmi PDF dərs vəsaiti (65 səhifə)",
       tokens: "elektronika mps mikroprosessor sistemleri yarimkeciriciler tranzistor sxematexnika fbk 04 pdf derslik",
       action: () => {
-        const link = document.createElement("a");
-        link.href = "ELEKTRONIKA VE MPS.pdf";
-        link.download = "ELEKTRONIKA VE MPS.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
+        window.openDocumentReader("ELEKTRONIKA VE MPS.pdf", "ELEKTRONIKA VE MPS.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
 
@@ -19012,18 +18780,9 @@ function initGlobalSearchModule() {
       desc: "Elektrotexnika və Sxematexnika FBK (FBK-04) · Ölçmə nəzəriyyəsi, beynəlxalq ISO standartları, ölçmə xətaları və sertifikatlaşdırma üzrə rəsmi PDF dərs vəsaiti (46 səhifə)",
       tokens: "metrologiya standartlasdirma standartlaşdırma sertifikatlasdirma sertifikatlaşdırma olcme ölçmə iso standartlar fbk 04 pdf derslik",
       action: () => {
-        const link = document.createElement("a");
-        link.href = "Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf";
-        link.download = "Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf";
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        if (window.openLibraryLecturesView) {
-          window.openLibraryLecturesView("all");
-        } else {
-          document.getElementById("library")?.scrollIntoView({ behavior: "smooth" });
-        }
+        window.openDocumentReader("Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf", "Metrologiya, standartlaşdırma və sertifikatlaşdırma.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
 
@@ -19039,11 +18798,7 @@ function initGlobalSearchModule() {
       tokens: "kommunikasiya isguzar işgüzar akademik unsiyyet ünsiyyət nitq medeniyyeti mədəniyyəti natevan natəvan huseynova hüseynova fbk 06 pdf derslik",
       action: () => {
         const link = document.createElement("a");
-        link.href = "KOMMUNİKASİYA DF 2 (1).pdf";
-        link.download = "KOMMUNİKASİYA DF 2 (1).pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        window.openDocumentReader("KOMMUNİKASİYA DF 2 (1).pdf", "İşgüzar və Akademik Kommunikasiya", "Natəvan Hüseynova", "azer_dili");
         if (window.openLibraryLecturesView) {
           window.openLibraryLecturesView("all");
         } else {
@@ -19096,15 +18851,11 @@ function initGlobalSearchModule() {
           tokens: [(b.title_az || ""), (b.title_en || ""), (b.title || ""), (b.author_az || ""), (b.category || ""), (b.url || ""), "kitab", "derslik", "oxu", "vesait"].join(" ").toLowerCase(),
           action: () => {
             if (b.url) {
-              const link = document.createElement("a");
-              link.href = b.url;
-              link.download = b.url.split("/").pop();
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
+              openBookReader(b);
+            } else {
+              const sec = document.getElementById("library");
+              sec?.scrollIntoView({ behavior: "smooth" });
             }
-            const sec = document.getElementById("library");
-            sec?.scrollIntoView({ behavior: "smooth" });
           }
         });
       });
