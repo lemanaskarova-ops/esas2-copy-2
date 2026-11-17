@@ -2989,7 +2989,7 @@ const staffData = {
       role_az: '"Kompüter texnologiyaları şöbəsi"-Şöbə müdiri',
       role_en: 'Head of "Computer Technologies" Dept',
       role_ru: 'Заведующая отделом "Компьютерные технологии"',
-      img: "sekinex.jpeg",
+      img: "sekiney.jpeg",
     },
     {
       id: "23",
