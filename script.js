@@ -6091,7 +6091,7 @@ const libraryData = [
     author_ru: "Автор: Натаван Гусейнова",
     category: "azer_dili",
     icon: "📢",
-    url: "KOMMUNİKASİYA DF 2.pdf",
+    url: "KOMMUNİKASİYA DF 2.pdf",
   },
   {
     id: 6,
@@ -6139,7 +6139,7 @@ const libraryData = [
     author_ru: "Автор: Гульнара Алиева",
     category: "informatika",
     icon: "📡",
-    url: "Kompüter şəbəkələri  derslik.pdf",
+    url: "Kompüter şəbəkələri  derslik.pdf",
   },
   {
     id: 12,
@@ -6151,7 +6151,7 @@ const libraryData = [
     author_ru: "Автор: Лейла Махмудбейли",
     category: "informatika",
     icon: "💻",
-    url: "DƏRSLİK  İT 3.pdf",
+    url: "DƏRSLİK  İT 3.pdf",
   },
   {
     id: 13,
@@ -6199,7 +6199,7 @@ const libraryData = [
     author_ru: "Автор: Аида Сираджова",
     category: "sxematexnika",
     icon: "🔌",
-    url: "DƏRSLİK  SXEMATEXNİKA-1 (2) (2).pdf",
+    url: "DƏRSLİK  SXEMATEXNİKA-1 (2) (2).pdf",
   },
   {
     id: 17,
@@ -6235,7 +6235,7 @@ const libraryData = [
     author_ru: "Автор: Самире Имамелиева",
     category: "rus_dili",
     icon: "🇷🇺",
-    url: "1Русский язык 1 курс (лекции) (1).pdf",
+    url: "1Русский язык 1 курс (лекции) (1).pdf",
   },
   {
     id: 20,
@@ -6247,7 +6247,7 @@ const libraryData = [
     author_ru: "Авторы: Айгюн Годжаева, Самире Имамелиева",
     category: "rus_dili",
     icon: "🇷🇺",
-    url: "2Русский язык 2 курс лекции книга  (1).pdf",
+    url: "2Русский язык 2 курс лекции книга  (1).pdf",
   },
   {
     id: 21,
@@ -6283,7 +6283,7 @@ const libraryData = [
     author_ru: "Авторы: Антига Эминалиева, Кенуль Махмудова",
     category: "ekologiya",
     icon: "🌱",
-    url: "EKOLOJİ MONİTORİNQ.DƏRSLİK.Yeni (1).pdf",
+    url: "EKOLOJİ MONİTORİNQ.DƏRSLİK.Yeni (1).pdf",
   },
   {
     id: 24,
@@ -6331,7 +6331,7 @@ const libraryData = [
     author_ru: "Автор: Айсель Панахова",
     category: "informatika",
     icon: "🌐",
-    url: "Kompyüter şəbəkələrinin idarə etməsinin təşkili 1 (1).pdf",
+    url: "Kompyüter şəbəkələrinin idarə etməsinin təşkili 1 (1).pdf",
   },
   {
     id: 28,
@@ -6367,7 +6367,7 @@ const libraryData = [
     author_ru: "Автор: Шукуфа Алыева",
     category: "edne",
     icon: "⚡",
-    url: "Ş.M. Alıyeva EDNƏ dərslik 2023 (1).pdf",
+    url: "Ş.M. Alıyeva EDNƏ dərslik 2023 (1).pdf",
   },
   {
     id: 31,
@@ -6379,7 +6379,7 @@ const libraryData = [
     author_ru: "Автор: Илаха Аббаслы",
     category: "menecment",
     icon: "📊",
-    url: "Abbaslı İlahə Akif qızı (1) (1) (1).pdf",
+    url: "Abbaslı İlahə Akif qızı (1) (1) (1).pdf",
   },
   {
     id: 32,
@@ -6403,7 +6403,7 @@ const libraryData = [
     author_ru: "Авторы: Гасанлы Ламан, Алиева Натаван",
     category: "sebeke_avadanliqlari",
     icon: "🔌",
-    url: "BÖLMƏ Kitab Natavan mm Ləman m (1).pdf",
+    url: "BÖLMƏ Kitab Natavan mm Ləman m (1).pdf",
   },
   {
     id: 34,
@@ -7683,15 +7683,15 @@ function initStructureModule() {
       },
     ];
 
-    // ═══ 3-CÜ SIRA (3-cü Beşlik): Sevda, Şəlalə, Rəsmiyyə, Xəlil, Aynur ═══
+    // ═══ 3-CÜ SIRA (3-cü Beşlik): Şəlalə, Sevda, Rəsmiyyə, Səkinə, Babək ═══
     const thirdFiveConfig = [
       {
-        id: "25",
+        id: "26",
         num: "11",
         badge: "Metodist",
       },
       {
-        id: "26",
+        id: "25",
         num: "12",
         badge: "Metodist",
       },
@@ -7701,62 +7701,62 @@ function initStructureModule() {
         badge: "İKT Şöbə Müdiri",
       },
       {
-        id: "13",
-        num: "14",
-        badge: "Təcrübə Rəhbəri",
-      },
-      {
-        id: "22",
-        num: "15",
-        badge: "Kitabxana Müdiri",
-      },
-    ];
-
-    // ═══ 4-CÜ SIRA (4-cü Beşlik - Şöbə Müdirləri): Səkinə, Yeganə, Babək, Natiq, Ceyhun ═══
-    const fourthFiveConfig = [
-      {
         id: "9",
-        num: "16",
-        badge: "Şöbə Müdiri",
-      },
-      {
-        id: "23",
-        num: "17",
+        num: "14",
         badge: "Şöbə Müdiri",
       },
       {
         id: "7",
-        num: "18",
-        badge: "Şöbə Müdiri",
-      },
-      {
-        id: "24",
-        num: "19",
-        badge: "Şöbə Müdiri",
-      },
-      {
-        id: "11",
-        num: "20",
+        num: "15",
         badge: "Şöbə Müdiri",
       },
     ];
 
-    // ═══ 5-Cİ SIRA (Qalan 4-lük): Günay, Fizuli, Şöhlə, Munir ═══
-    const fifthFourConfig = [
+    // ═══ 4-CÜ SIRA (4-cü Beşlik): Yeganə, Natiq, Ceyhun, Xəlil, Şöhlə ═══
+    const fourthFiveConfig = [
       {
-        id: "18",
-        num: "21",
-        badge: "Arxiv Müdiri",
+        id: "23",
+        num: "16",
+        badge: "Şöbə Müdiri",
       },
       {
-        id: "29",
-        num: "22",
-        badge: "EHM Mühəndisi",
+        id: "24",
+        num: "17",
+        badge: "Şöbə Müdiri",
+      },
+      {
+        id: "11",
+        num: "18",
+        badge: "Şöbə Müdiri",
+      },
+      {
+        id: "13",
+        num: "19",
+        badge: "Təcrübə Rəhbəri",
       },
       {
         id: "28",
-        num: "23",
+        num: "20",
         badge: "Mülki Müdafiə",
+      },
+    ];
+
+    // ═══ 5-Cİ SIRA (Qalan 4-lük): Fizuli, Aynur, Günay, Munir ═══
+    const fifthFourConfig = [
+      {
+        id: "29",
+        num: "21",
+        badge: "EHM Mühəndisi",
+      },
+      {
+        id: "22",
+        num: "22",
+        badge: "Kitabxana Müdiri",
+      },
+      {
+        id: "18",
+        num: "23",
+        badge: "Arxiv Müdiri",
       },
       {
         id: "17",
@@ -8058,10 +8058,10 @@ function initStructureModule() {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('VAHİD NƏQLİYYAT SİSTEMİ.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🌐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-5" && d.includes("Materialşünaslıq")) {
-          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('materialşünasliq,mühazire, 15 mövzu.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🔬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('materialşünasliq,mühazire, 15 mövzu.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🔬</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-5" && (d.includes("Yağlar") || d.includes("Sürtkü"))) {
-          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('yağlar mühazire 15 mövzu.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🛢️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('yağlar mühazire 15 mövzu.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🛢️</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
         if (fbk.id === "fbk-5" && (d.includes("Material") || d.includes("Konstruksiya"))) {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🔩</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
@@ -8172,10 +8172,10 @@ function initStructureModule() {
               return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('VAHİD NƏQLİYYAT SİSTEMİ.pdf', '🌐 ${d}', 'FBK Tədris Vəsaiti');"><span>🌐 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-5" && d.includes("Materialşünaslıq")) {
-              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('materialşünasliq,mühazire, 15 mövzu.pdf', '🔬 ${d}', 'FBK Tədris Vəsaiti');"><span>🔬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('materialşünasliq,mühazire, 15 mövzu.pdf', '🔬 ${d}', 'FBK Tədris Vəsaiti');"><span>🔬 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-5" && (d.includes("Yağlar") || d.includes("Sürtkü"))) {
-              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('yağlar mühazire 15 mövzu.pdf', '🛢️ ${d}', 'FBK Tədris Vəsaiti');"><span>🛢️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('yağlar mühazire 15 mövzu.pdf', '🛢️ ${d}', 'FBK Tədris Vəsaiti');"><span>🛢️ ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-5" && (d.includes("Material") || d.includes("Konstruksiya"))) {
               return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf', '🔩 ${d}', 'FBK Tədris Vəsaiti');"><span>🔩 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
@@ -8335,7 +8335,7 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('materialşünasliq,mühazire, 15 mövzu.pdf', 'materialşünasliq,mühazire, 15 mövzu.pdf', 'FBK Mühazirələr Fondu');">
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('materialşünasliq,mühazire, 15 mövzu.pdf', 'materialşünasliq,mühazire, 15 mövzu.pdf', 'FBK Mühazirələr Fondu');">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
   <span>Oxu Zalında Aç</span>
 </button>
@@ -8355,7 +8355,7 @@ function initStructureModule() {
                       </div>
                     </div>
                     <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-top:6px;">
-                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('yağlar mühazire 15 mövzu.pdf', 'yağlar mühazire 15 mövzu.pdf', 'FBK Mühazirələr Fondu');">
+                      <button type="button" class="fbk-mat-download-btn" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#111; padding:9px 18px; border-radius:10px; font-weight:700; font-size:0.88rem; border:none; cursor:pointer; box-shadow:0 4px 12px rgba(184,147,74,0.3); transition:all 0.2s ease;" onclick="window.openDocumentReader('yağlar mühazire 15 mövzu.pdf', 'yağlar mühazire 15 mövzu.pdf', 'FBK Mühazirələr Fondu');">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
   <span>Oxu Zalında Aç</span>
 </button>
@@ -9102,7 +9102,7 @@ function initLibraryModule() {
         author_az: author || "BDRNK Fənn Birləşməsi",
         category: cat || "Rəqəmsal Kitabxana",
         icon: "📖",
-        url: url
+        url: (url || "").normalize("NFC")
       });
     }
   };
@@ -9112,8 +9112,9 @@ function initLibraryModule() {
     const title = book[`title_${currentLang}`] || book.title_az;
     const author = book[`author_${currentLang}`] || book.author_az;
     const catLabel = getCategoryDisplayName(book.category);
-    const url = book.url || "#";
-    const isPdf = /\.pdf$/i.test(url);
+    const cleanUrl = (book.url || "#").normalize("NFC");
+    const isPdf = /\.pdf$/i.test(cleanUrl);
+    const encodedUrl = encodeURI(cleanUrl);
 
     const roomTitle =
       currentLang === "en"
@@ -9143,7 +9144,13 @@ function initLibraryModule() {
     if (readerIcon) readerIcon.textContent = book.icon || "📘";
     if (readerCat) readerCat.textContent = `${roomTitle} · ${catLabel}`;
     if (readerTitle) readerTitle.textContent = title;
-    if (readerOpenExt) readerOpenExt.style.display = "none";
+    if (readerOpenExt) {
+      readerOpenExt.style.display = "inline-flex";
+      readerOpenExt.href = encodedUrl;
+      readerOpenExt.setAttribute("target", "_blank");
+      readerOpenExt.setAttribute("rel", "noopener");
+      readerOpenExt.setAttribute("title", currentLang === "en" ? "Open in new window / Download" : currentLang === "ru" ? "Открыть в новом окне / Скачать" : "Yeni pəncərədə aç / Yüklə");
+    }
     if (readerCoverEmoji) readerCoverEmoji.textContent = book.icon || "📘";
     if (readerCoverName) readerCoverName.textContent = title;
     if (readerCoverAuthor) readerCoverAuthor.textContent = author;
@@ -9152,7 +9159,15 @@ function initLibraryModule() {
 
     if (readerViewport) {
       if (isPdf) {
-        readerViewport.innerHTML = `<iframe class="book-reader-iframe" src="${encodeURI(url)}#toolbar=0&navpanes=0" title="${title}"></iframe>`;
+        readerViewport.innerHTML = `
+          <iframe class="book-reader-iframe" src="${encodedUrl}#toolbar=0&navpanes=0" title="${title}"></iframe>
+          <div class="book-reader-floating-action" style="position:absolute; bottom:16px; right:16px; z-index:15;">
+            <a href="${encodedUrl}" target="_blank" rel="noopener" class="btn btn-primary" style="box-shadow: 0 4px 18px rgba(0,0,0,0.45); font-size:12px; padding:7px 16px; gap:7px; border-radius:999px; background:linear-gradient(135deg, #0a2240, #133a6b); border:1px solid rgba(207,169,94,0.6); color:#fff; display:inline-flex; align-items:center;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <span>Yeni Pəncərədə Aç / Yüklə</span>
+            </a>
+          </div>
+        `;
       } else {
         readerViewport.innerHTML = `
           <div class="reader-doc-fallback">
@@ -9161,9 +9176,9 @@ function initLibraryModule() {
             <h4>${title}</h4>
             <p>${author}</p>
             <p class="reader-doc-note">${docNote}</p>
-            <div class="btn btn-primary reader-doc-dl-btn" style="pointer-events:none; opacity:0.8;">
-              <span>📕 Rəqəmsal Oxu Zalı</span>
-            </div>
+            <a href="${encodedUrl}" target="_blank" rel="noopener" download class="btn btn-primary reader-doc-dl-btn" style="box-shadow: 0 4px 18px rgba(0,0,0,0.35); text-decoration:none;">
+              <span>📥 ${docDlBtn}</span>
+            </a>
           </div>
         `;
       }
@@ -9577,7 +9592,7 @@ function initLibraryModule() {
       fileSize: "PDF Vəsait",
       desc_az: "Metalların strukturu və kristallik quruluşu, ərintilərin mexaniki xassələri, polad və çuqunlar, legirlənmiş materiallar, əlvan metallar, korroziya və ondan mühafizə, plastik kütlələr və kompozitləri əhatə edən 15 mövzuluq, 33 səhifəlik rəsmi PDF mühazirə toplusu.",
       topics_az: ["Kristallik Quruluş", "Polad və Çuqunlar", "Əlvan Metallar", "Korroziyadan Mühafizə"],
-      url: "materialşünasliq,mühazire, 15 mövzu.pdf"
+      url: "materialşünasliq,mühazire, 15 mövzu.pdf"
     },
     {
       id: "fbk-lec-9",
@@ -9593,7 +9608,7 @@ function initLibraryModule() {
       fileSize: "PDF Vəsait",
       desc_az: "Neft və neft-kimya məhsulları, mühərrik və transmissiya yağları, sürtkü yağlarının özlülük-temperatur xassələri, konsistent sürtkülər, xüsusi aşqarlar, korroziyadan qorunma və yağların regenerasiyası üzrə 15 mövzuluq, 40 səhifəlik rəsmi PDF mühazirə toplusu.",
       topics_az: ["Mühərrik Yağları", "Özlülük Xassələri", "Konsistent Sürtkülər", "Aşqarlar və Regenerasiya"],
-      url: "yağlar mühazire 15 mövzu.pdf"
+      url: "yağlar mühazire 15 mövzu.pdf"
     },
     {
       id: "fbk-lec-10",
@@ -9675,7 +9690,7 @@ function initLibraryModule() {
       fileSize: "257 KB",
       desc_az: "Ünsiyyətin formaları və növləri (formal, qeyri-formal, şaquli, üfüqi), şifahi və yazılı akademik nitq mədəniyyəti, elmi mətnlərin növləri (tezis, məqalə, annotasiya, avtoreferat), işgüzar danışıqlar və auditoriya qarşısında çıxış qaydalarını əhatə edən 25 000-dən artıq sözlük əhatəli rəsmi mühazirə vəsaiti.",
       topics_az: ["Ünsiyyət Modelləri", "Akademik Nitq", "Elmi Mətn Növləri", "İşgüzar Danışıqlar"],
-      url: "KOMMUNİKASİYA DF 2 (1).pdf"
+      url: "KOMMUNİKASİYA DF 2 (1).pdf"
     },
 
     // --- Tarix və Hüquq (4) ---
@@ -9742,7 +9757,7 @@ function initLibraryModule() {
       fileSize: "PDF Konspekt",
       desc_az: "Dövlət və hüququn nəzəriyyəsi, Azərbaycan Respublikasının Konstitusiyası, insan hüquq və azadlıqları, dövlət quruluşu, seçki sistemi, dövlət hakimiyyət orqanları, əmək və cinayət hüququnu əhatə edən 8 mövzuluq rəsmi mühazirə vəsaiti.",
       topics_az: ["Hüquq Nəzəriyyəsi", "AR Konstitusiyası", "Seçki və İdarəetmə", "Əmək və Cinayət Hüququ"],
-      url: "yeni mühazirələr.pdf"
+      url: "yeni mühazirələr.pdf"
     },
 
     // --- Coğrafiya və Təbiət Elmləri (2) ---
@@ -9776,7 +9791,7 @@ function initLibraryModule() {
       fileSize: "PDF Konspekt",
       desc_az: "Təsərrüfat sahələrinin xəritələrə əsasən təhlili, mineral ehtiyatlar, demoqrafiya, Azərbaycanın iqtisadi rayonları (14 iqtisadi rayon), nəqliyyat və beynəlxalq inteqrasiyanı əhatə edən 18 mövzuluq rəsmi mühazirə konspekti.",
       topics_az: ["Təsərrüfat Sahələri", "Azərbaycanın 14 İqtisadi Rayonu", "Demoqrafiya və Əmək", "Ekoloji Problemlər"],
-      url: "II-yarımil.Coğrafiyadan mövzular.2024.pdf"
+      url: "II-yarımil.Coğrafiyadan mövzular.2024.pdf"
     },
 
     // --- İqtisadiyyat, Vergi, Statistika və Biznes (6) ---
@@ -18790,7 +18805,7 @@ function initGlobalSearchModule() {
       desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Metalların strukturu, polad, çuqun, legirlənmiş ərintilər, korroziya və polimer materiallar üzrə 15 mövzuluq rəsmi mühazirə vəsaiti (33 səhifə)",
       tokens: "materialsunasliq materialşünaslıq materialşünasliq muhazire mühazirə 15 movzu mövzu fbk 05 umumtexnika neqliyyat pdf derslik vesait",
       action: () => {
-        window.openDocumentReader("materialşünasliq,mühazire, 15 mövzu.pdf", "materialşünasliq,mühazire, 15 mövzu.pdf", "FBK Mühazirələr Fondu");
+        window.openDocumentReader("materialşünasliq,mühazire, 15 mövzu.pdf", "materialşünasliq,mühazire, 15 mövzu.pdf", "FBK Mühazirələr Fondu");
         const sec = document.getElementById("library");
         sec?.scrollIntoView({ behavior: "smooth" });
       }
@@ -18807,7 +18822,7 @@ function initGlobalSearchModule() {
       desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Neft məhsulları, mühərrik yağları, transmissiya sürtküləri, özlülük və aşqarlar üzrə 15 mövzuluq rəsmi mühazirə toplusu (40 səhifə)",
       tokens: "yaglar yağlar muhazire mühazirə 15 movzu mövzu surtku sürtkü materiallari fbk 05 umumtexnika neqliyyat pdf derslik",
       action: () => {
-        window.openDocumentReader("yağlar mühazire 15 mövzu.pdf", "yağlar mühazire 15 mövzu.pdf", "FBK Mühazirələr Fondu");
+        window.openDocumentReader("yağlar mühazire 15 mövzu.pdf", "yağlar mühazire 15 mövzu.pdf", "FBK Mühazirələr Fondu");
         const sec = document.getElementById("library");
         sec?.scrollIntoView({ behavior: "smooth" });
       }
