@@ -19757,7 +19757,7 @@ const teacherCertificatesData = [
   {
     id: "tcert-saida-01",
     teacher: "Səidə Quliyeva",
-    dept: "FBK-08 Tarix və İctimai Fənlər",
+    dept: "FBK-08 Tarix və Humanitar Fənlər",
     category: "beynelxalq",
     badge_az: "IEQC Beynəlxalq Akkreditasiya",
     badge_en: "IEQC International Accreditation",
@@ -19773,7 +19773,7 @@ const teacherCertificatesData = [
     issuer_ru: "IEQC — Международный Совет по Качеству Образования (ISO 9001:2015 и ISO 21001:2018)",
     regNo: "26-ta40011",
     hours: "Accreditation with Distinction",
-    desc_az: "Tarix və ictimai fənlər müəllimi Səidə Quliyevanın beynəlxalq IEQC imtahanından fərqlənmə dərəcəsi ilə keçərək beynəlxalq təhsil standartları (ISO 21001:2018) üzrə Akkreditasiya olunmuş Müəllim/Təlimçi (Accredited Teacher/Trainer) statusu alması haqqında rəsmi sertifikat.",
+    desc_az: "Tarix və humanitar fənlər müəllimi Səidə Quliyevanın beynəlxalq IEQC imtahanından fərqlənmə dərəcəsi ilə keçərək beynəlxalq təhsil standartları (ISO 21001:2018) üzrə Akkreditasiya olunmuş Müəllim/Təlimçi (Accredited Teacher/Trainer) statusu alması haqqında rəsmi sertifikat.",
     desc_en: "Official international accreditation confirming that History Teacher Saida Guliyeva successfully passed the IEQC International Teacher and Trainer examination with distinction, awarded Accredited Teacher/Trainer status under ISO 21001:2018 standards.",
     desc_ru: "Официальный международный сертификат об успешной сдаче экзамена с отличием преподавателем истории Саидой Гулиевой и присвоении статуса аккредитованного преподавателя/тренера по международным стандартам ISO 21001:2018.",
     imageUrl: "seideser.jpeg",
