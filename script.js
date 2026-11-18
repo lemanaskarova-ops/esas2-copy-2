@@ -7614,9 +7614,6 @@ function initStructureModule() {
           <div class="tree-card-grid-block ${item.extraClass || ''}" data-person-id="${item.id}" title="${name} - ${role.replace(/<[^>]+>/g, ' ')}">
             ${avatarHtml}
             <div class="tree-card-grid-info">
-              <div class="tree-card-meta-line">
-                <span class="tree-card-badge-gold">${item.badge}</span>
-              </div>
               <h4 class="tree-card-grid-title">${name}</h4>
               <span class="tree-card-grid-role">${role}</span>
             </div>
@@ -12274,12 +12271,33 @@ function initGalleryModule() {
           });
           const zoomBtn = el.querySelector(".gal-media-zoom");
           const doOpen = () => openCinemaLightbox(viewableItems, idx);
-          el.querySelector("img,video")?.addEventListener("click", doOpen);
+
+          // Make the entire card comfortably clickable to open cinema view
+          el.addEventListener("click", (e) => {
+            if (!e.target.closest("a")) {
+              doOpen();
+            }
+          });
+          el.style.cursor = "pointer";
+
           zoomBtn?.addEventListener("click", (e) => {
             e.stopPropagation();
             doOpen();
           });
         });
+
+        // Wire panel header direct "Slayd-Şou" button
+        const panelSlideshowBtn = document.getElementById("gal-panel-slideshow-btn");
+        if (panelSlideshowBtn) {
+          if (viewableItems.length > 0) {
+            panelSlideshowBtn.style.display = "inline-flex";
+            panelSlideshowBtn.onclick = () => {
+              openCinemaLightbox(viewableItems, 0, true);
+            };
+          } else {
+            panelSlideshowBtn.style.display = "none";
+          }
+        }
 
         // Auto-play videos on hover
         panelBody.querySelectorAll("video").forEach((vid) => {
@@ -12398,41 +12416,92 @@ function initGalleryModule() {
 
   let lbList = [];
   let lbIndex = 0;
+  let lbIsPlayingSlideshow = false;
   let lbSlideshowTimer = null;
   let lbZoomed = false;
 
   function stopSlideshow() {
+    lbIsPlayingSlideshow = false;
     if (lbSlideshowTimer) {
-      clearInterval(lbSlideshowTimer);
+      clearTimeout(lbSlideshowTimer);
       lbSlideshowTimer = null;
     }
-    lbSlideshowBtn?.classList.remove("active");
-    if (lbSlideshowLabel) {
-      lbSlideshowLabel.textContent =
-        currentLang === "en"
-          ? "Slideshow"
-          : currentLang === "ru"
-            ? "Слайд-шоу"
-            : "Slayd-Şou";
+    if (lightboxVideo) {
+      lightboxVideo.onended = null;
     }
+    lbSlideshowBtn?.classList.remove("active");
+    updateSlideshowUI(false);
+  }
+
+  function startSlideshow() {
+    if (!lbList || lbList.length <= 1) return;
+    lbIsPlayingSlideshow = true;
+    lbSlideshowBtn?.classList.add("active");
+    updateSlideshowUI(true);
+    scheduleNextSlide();
   }
 
   function toggleSlideshow() {
-    if (lbSlideshowTimer) {
+    if (lbIsPlayingSlideshow) {
       stopSlideshow();
     } else {
-      lbSlideshowBtn?.classList.add("active");
+      startSlideshow();
+    }
+  }
+
+  function updateSlideshowUI(isPlaying) {
+    if (!lbSlideshowBtn) return;
+    const svg = lbSlideshowBtn.querySelector("svg");
+    if (isPlaying) {
+      if (svg) {
+        svg.innerHTML = '<rect x="6" y="4" width="4" height="16" fill="currentColor"></rect><rect x="14" y="4" width="4" height="16" fill="currentColor"></rect>';
+      }
       if (lbSlideshowLabel) {
         lbSlideshowLabel.textContent =
-          currentLang === "en"
-            ? "Stop"
-            : currentLang === "ru"
-              ? "Остановить"
-              : "Dayandır";
+          currentLang === "en" ? "Stop" : currentLang === "ru" ? "Остановить" : "Dayandır";
       }
-      lbSlideshowTimer = setInterval(() => {
-        stepLightbox(1);
-      }, 3600);
+    } else {
+      if (svg) {
+        svg.innerHTML = '<polygon points="5 3 19 12 5 21 5 3" fill="currentColor"></polygon>';
+      }
+      if (lbSlideshowLabel) {
+        lbSlideshowLabel.textContent =
+          currentLang === "en" ? "Slideshow" : currentLang === "ru" ? "Слайд-шоу" : "Slayd-Şou";
+      }
+    }
+  }
+
+  function scheduleNextSlide() {
+    if (lbSlideshowTimer) {
+      clearTimeout(lbSlideshowTimer);
+      lbSlideshowTimer = null;
+    }
+    if (!lbIsPlayingSlideshow) return;
+
+    const item = lbList[lbIndex];
+    if (item && item.type === "video" && lightboxVideo) {
+      // For video: listen to ended event to smoothly advance when video finishes!
+      lightboxVideo.onended = () => {
+        if (lbIsPlayingSlideshow) {
+          stepLightbox(1);
+        }
+      };
+      // Safety timer (e.g. 25s) in case video doesn't end or user paused
+      lbSlideshowTimer = setTimeout(() => {
+        if (lbIsPlayingSlideshow) {
+          stepLightbox(1);
+        }
+      }, 25000);
+    } else {
+      // For images: 4.5 seconds
+      if (lightboxVideo) {
+        lightboxVideo.onended = null;
+      }
+      lbSlideshowTimer = setTimeout(() => {
+        if (lbIsPlayingSlideshow) {
+          stepLightbox(1);
+        }
+      }, 4500);
     }
   }
 
@@ -12456,14 +12525,25 @@ function initGalleryModule() {
     if (lightboxVideo) {
       lightboxVideo.classList.remove("active");
       lightboxVideo.pause();
+      lightboxVideo.onended = null;
       lightboxVideo.src = "";
     }
 
     if (item.type === "video") {
       if (lightboxVideo) {
         lightboxVideo.src = item.src;
+        if (item.poster) lightboxVideo.poster = item.poster;
         lightboxVideo.classList.add("active");
-        lightboxVideo.play().catch(() => { });
+        lightboxVideo.controls = true;
+
+        const playPromise = lightboxVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Browser autoplay policy blocked unmuted play: fallback to muted autoplay so it plays seamlessly
+            lightboxVideo.muted = true;
+            lightboxVideo.play().catch(() => {});
+          });
+        }
       }
     } else {
       if (lightboxImg) {
@@ -12484,9 +12564,14 @@ function initGalleryModule() {
       const activeThumb = lightboxThumbs.querySelector(".lb-thumb.active");
       activeThumb?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
     }
+
+    // Schedule next slide if slideshow is actively playing
+    if (lbIsPlayingSlideshow) {
+      scheduleNextSlide();
+    }
   }
 
-  function openCinemaLightbox(list, startIndex = 0) {
+  function openCinemaLightbox(list, startIndex = 0, autoStartSlideshow = false) {
     if (!lightbox || !list || list.length === 0) return;
     lbList = list;
     lbIndex = startIndex;
@@ -12518,6 +12603,10 @@ function initGalleryModule() {
 
     renderLightboxItem();
     lightbox.classList.add("active");
+
+    if (autoStartSlideshow) {
+      startSlideshow();
+    }
   }
 
   function stepLightbox(dir) {
