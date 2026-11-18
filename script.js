@@ -7683,7 +7683,7 @@ function initStructureModule() {
       },
     ];
 
-    // ═══ 3-CÜ SIRA (3-cü Beşlik): Sevda, Şəlalə, Rəsmiyyə, Səkinə, Yeganə ═══
+    // ═══ 3-CÜ SIRA (3-cü Beşlik): Sevda, Şəlalə, Rəsmiyyə, Xəlil, Aynur ═══
     const thirdFiveConfig = [
       {
         id: "25",
@@ -7701,62 +7701,62 @@ function initStructureModule() {
         badge: "İKT Şöbə Müdiri",
       },
       {
-        id: "9",
+        id: "13",
         num: "14",
-        badge: "Şöbə Müdiri",
+        badge: "Təcrübə Rəhbəri",
       },
       {
-        id: "23",
+        id: "22",
         num: "15",
-        badge: "Şöbə Müdiri",
+        badge: "Kitabxana Müdiri",
       },
     ];
 
-    // ═══ 4-CÜ SIRA (4-cü Beşlik): Babək, Natiq, Ceyhun, Şöhlə, Xəlil ═══
+    // ═══ 4-CÜ SIRA (4-cü Beşlik - Şöbə Müdirləri): Səkinə, Yeganə, Babək, Natiq, Ceyhun ═══
     const fourthFiveConfig = [
       {
-        id: "7",
+        id: "9",
         num: "16",
         badge: "Şöbə Müdiri",
       },
       {
-        id: "24",
+        id: "23",
         num: "17",
         badge: "Şöbə Müdiri",
       },
       {
-        id: "11",
+        id: "7",
         num: "18",
         badge: "Şöbə Müdiri",
       },
       {
-        id: "28",
+        id: "24",
         num: "19",
-        badge: "Mülki Müdafiə",
+        badge: "Şöbə Müdiri",
       },
       {
-        id: "13",
+        id: "11",
         num: "20",
-        badge: "Təcrübə Rəhbəri",
+        badge: "Şöbə Müdiri",
       },
     ];
 
-    // ═══ 5-Cİ SIRA (Qalan 4-lük): Aynur, Günay, Fizuli, Munir ═══
+    // ═══ 5-Cİ SIRA (Qalan 4-lük): Günay, Fizuli, Şöhlə, Munir ═══
     const fifthFourConfig = [
       {
-        id: "22",
-        num: "21",
-        badge: "Kitabxana Müdiri",
-      },
-      {
         id: "18",
-        num: "22",
+        num: "21",
         badge: "Arxiv Müdiri",
       },
       {
         id: "29",
-        num: "23",
+        num: "22",
         badge: "EHM Mühəndisi",
+      },
+      {
+        id: "28",
+        num: "23",
+        badge: "Mülki Müdafiə",
       },
       {
         id: "17",
