@@ -19657,7 +19657,7 @@ const teacherCertificatesData = [
   {
     id: "tcert-xumar-01",
     teacher: "Xumar Cəmilova",
-    dept: "FBK-05 Ümumtexnika və Nəqliyyat",
+    dept: "FBK-05 Ümumtexniki və Nəqliyyat",
     category: "beynelxalq",
     badge_az: "IRU Academy Beynəlxalq Sertifikatı",
     badge_en: "IRU Academy International Certificate",
