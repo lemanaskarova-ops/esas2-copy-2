@@ -11624,10 +11624,8 @@ document.addEventListener("DOMContentLoaded", () => {
   safeInit("Structure", initStructureModule);
   safeInit("Library", initLibraryModule);
   safeInit("Lectures", initLecturesModule);
-  // Karabakh Showcase Fullscreen & Playback handler (Consecutive videos)
+  // Karabakh Showcase Fullscreen & Photo Lightbox handler
   safeInit("QarabagCinema", () => {
-    const qarabagExpandBtn = document.getElementById("qarabag-cinema-expand-btn");
-    const qarabagPlayer = document.getElementById("qarabag-inline-player");
     const qarabagGezintiBtn = document.getElementById("qarabag-gezinti-expand-btn");
     const qarabagGezintiPlayer = document.getElementById("qarabag-gezinti-player");
 
@@ -11635,30 +11633,67 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!elem) return;
       if (elem.requestFullscreen) elem.requestFullscreen();
       else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+      else if (elem.webkitEnterFullscreen) elem.webkitEnterFullscreen();
       else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
     };
 
-    if (qarabagExpandBtn && qarabagPlayer) {
-      qarabagExpandBtn.addEventListener("click", () => reqFs(qarabagPlayer));
-    }
     if (qarabagGezintiBtn && qarabagGezintiPlayer) {
-      qarabagGezintiBtn.addEventListener("click", () => reqFs(qarabagGezintiPlayer));
+      qarabagGezintiBtn.addEventListener("click", () => {
+        if (typeof window.openCinemaLightbox === "function") {
+          window.openCinemaLightbox([
+            {
+              src: "qarabaqgezinti.mp4",
+              label: "Qarabağ Gəzintisi · Ağdam - Xankəndi - Şuşa",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "video"
+            },
+            {
+              src: "qarabag_foto_1.jpg",
+              label: "BDRNK Kollektivi Qarabağ Zəfər Səfərində · Xankəndi & Ağdam",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "image"
+            },
+            {
+              src: "qarabag_foto_2.jpg",
+              label: "BDRNK Kollektivi Cıdır Düzündə · Şuşa Zirvəsi",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "image"
+            }
+          ], 0, true);
+        } else {
+          reqFs(qarabagGezintiPlayer);
+        }
+      });
     }
 
-    // Mutual pause & sequential auto-flow
-    if (qarabagPlayer && qarabagGezintiPlayer) {
-      qarabagPlayer.addEventListener("play", () => {
-        if (!qarabagGezintiPlayer.paused) qarabagGezintiPlayer.pause();
+    // Photo lightbox handlers
+    document.querySelectorAll("[data-qarabag-photo]").forEach((el) => {
+      el.addEventListener("click", () => {
+        const photoIdx = parseInt(el.getAttribute("data-qarabag-photo") || "0", 10);
+        if (typeof window.openCinemaLightbox === "function") {
+          window.openCinemaLightbox([
+            {
+              src: "qarabag_foto_1.jpg",
+              label: "BDRNK Kollektivi Qarabağ Zəfər Səfərində · Xankəndi & Ağdam",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "image"
+            },
+            {
+              src: "qarabag_foto_2.jpg",
+              label: "BDRNK Kollektivi Cıdır Düzündə · Şuşa Zirvəsi",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "image"
+            },
+            {
+              src: "qarabaqgezinti.mp4",
+              label: "Qarabağ Gəzintisi · Ağdam - Xankəndi - Şuşa",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "video"
+            }
+          ], photoIdx, false);
+        }
       });
-      qarabagGezintiPlayer.addEventListener("play", () => {
-        if (!qarabagPlayer.paused) qarabagPlayer.pause();
-      });
-      qarabagPlayer.addEventListener("ended", () => {
-        try {
-          qarabagGezintiPlayer.play();
-        } catch (_) { }
-      });
-    }
+    });
   });
 
   safeInit("News", initNewsModule);
@@ -11775,6 +11810,24 @@ function initGalleryModule() {
         label_ru: "Торжественное мероприятие ко Дню Победы 8 Ноября",
         badge: "8 NOYABR · ZƏFƏR GÜNÜ",
         i18n: "gallery_event_8noyabr",
+      },
+      {
+        type: "image",
+        src: "qarabag_foto_1.jpg",
+        label: "BDRNK Kollektivi Qarabağ Zəfər Səfərində · Xankəndi & Ağdam",
+        label_az: "BDRNK Kollektivi Qarabağ Zəfər Səfərində · Xankəndi & Ağdam",
+        label_en: "BDRNK Collective on Karabakh Victory Tour · Khankendi & Aghdam",
+        label_ru: "Коллектив БГКСТ в поездке Победы по Карабаху · Ханкенди и Агдам",
+        badge: "ZƏFƏR SƏFƏRİ",
+      },
+      {
+        type: "image",
+        src: "qarabag_foto_2.jpg",
+        label: "BDRNK Kollektivi Şuşada · Cıdır Düzü Zirvəsi",
+        label_az: "BDRNK Kollektivi Şuşada · Cıdır Düzü Zirvəsi",
+        label_en: "BDRNK Collective in Shusha · Jydyr Duzu",
+        label_ru: "Коллектив БГКСТ в Шуше · Джидыр Дюзю",
+        badge: "ŞUŞA · CIDIR DÜZÜ",
       },
       {
         type: "youtube",
