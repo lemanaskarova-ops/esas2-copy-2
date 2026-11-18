@@ -44,17 +44,17 @@ const i18n = {
     nav_lectures_archive: "Mühazirələr",
 
     nav_science: "Elm və Nəşrlər",
-    science_badge: "Tədqiqat Fəaliyyəti və Beynəlxalq Nəşrlər",
-    science_title: "Əməkdaşlarımızın Beynəlxalq və Yerli Nəşrləri",
-    science_desc: "Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin pedaqoji heyətinin nüfuzlu beynəlxalq indeksli jurnallarda və yerli nəşrlərdə dərc olunmuş məqalə və tezisləri.",
+    science_badge: "Tədqiqat Fəaliyyəti və Xarici Nəşrlər",
+    science_title: "Əməkdaşlarımızın Xarici və Yerli Nəşrləri",
+    science_desc: "Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin pedaqoji heyətinin nüfuzlu xarici indeksli jurnallarda və yerli nəşrlərdə dərc olunmuş məqalə və tezisləri.",
     science_ceremony_tag: "Rəsmi Təqdimat və Qəbul",
     science_ceremony_kicker: "BDRNK Pedaqoji Heyəti · 2026",
     science_ceremony_heading: "Kollec rəhbərliyi və müəllim heyətinin nailiyyətləri",
-    science_ceremony_p: "Direktor Səbuhi Qurbanovun təşəbbüsü ilə pedaqoji heyətin beynəlxalq arenada təmsil olunması, impakt faktorlu və Index Copernicus, ERIH PLUS indeksli nəşrlərdə dərc olunan araşdırmaları yüksək qiymətləndirilmişdir.",
+    science_ceremony_p: "Direktor Səbuhi Qurbanovun təşəbbüsü ilə pedaqoji heyətin xarici arenada təmsil olunması, impakt faktorlu və Index Copernicus, ERIH PLUS indeksli nəşrlərdə dərc olunan araşdırmaları yüksək qiymətləndirilmişdir.",
     science_stat_authors: "Tədqiqatçı Müəllim",
     science_stat_articles: "Məqalə və Tezis",
     science_stat_countries: "Xarici və Yerli Ölkə",
-    science_stat_indexed: "Beynəlxalq & Respublika",
+    science_stat_indexed: "Xarici & Respublika",
     science_tab_all: "Bütün Nəşrlər (23)",
     science_tab_foreign: "Xarici Jurnallar (17)",
     science_tab_local: "Yerli Jurnallar (6)",
@@ -801,9 +801,9 @@ const i18n = {
     lib_tb_4_title: "İnformasiya-Şəbəkə Texnologiyaları",
     lib_tb_4_meta: "İKT və Telekommunikasiya · 2026",
     trophy_silver_4x: "4x II Yer",
-    science_scope_both: "🇦🇿 Yerli / Xarici",
-    science_scope_foreign: "Beynəlxalq",
-    science_scope_local: "🇦🇿 Yerli",
+    science_scope_both: "Yerli / Xarici",
+    science_scope_foreign: "Xarici",
+    science_scope_local: "Yerli",
     bio_aw_pres_type: "AZƏRBAYCAN RESPUBLİKASI PREZİDENTİ",
     bio_aw_min_type: "ELM VƏ TƏHSİL NAZİRLİYİ",
     bio_aw_grant_type: "İNNOVASİYALAR ÜZRƏ QRANT",
@@ -836,7 +836,7 @@ const i18n = {
     nav_lectures_archive_sub: "24 rəsmi mühazirə və tədris vəsaiti",
     mobile_nav_lectures_archive: "Mühazirələr (24 Vəsait)",
     nav_lectures_archive: "Mühazirələr",
-    nav_science_sub: "Beynəlxalq və yerli məqalə və nəşrlər",
+    nav_science_sub: "Xarici və yerli məqalə və nəşrlər",
     nav_media: "Media & Həyat",
     nav_news_sub: "Rəsmi elanlar və kollec tədbirləri",
     nav_qarabag: "Qarabağ Zəfər Salnaməsi",
@@ -16905,32 +16905,8 @@ function initSceneTransition() {
   let searchQuery = '';
   let activeView = 'cards'; // 'cards' or 'table'
 
-  const flagMap = {
-    AZ: '🇦🇿',
-    SE: '🇸🇪',
-    DK: '🇩🇰',
-    LV: '🇱🇻',
-    UA: '🇺🇦',
-    TR: '🇹🇷',
-    KZ: '🇰🇿',
-    RU: '🇷🇺',
-    UZ: '🇺🇿',
-    PL: '🇵🇱'
-  };
-
   function getCountryFlag(country, code) {
-    if (code && flagMap[code]) return flagMap[code];
-    if (!country) return '🇦🇿';
-    if (country.includes('İsveç') || country.includes('Sweden') || country.includes('Швеция')) return '🇸🇪';
-    if (country.includes('Danimarka') || country.includes('Denmark') || country.includes('Дания')) return '🇩🇰';
-    if (country.includes('Latviya') || country.includes('Latvia') || country.includes('Латвия')) return '🇱🇻';
-    if (country.includes('Polşa') || country.includes('Poland') || country.includes('Польша')) return '🇵🇱';
-    if (country.includes('Ukrayna') || country.includes('Ukraine') || country.includes('Украина')) return '🇺🇦';
-    if (country.includes('Türkiyə') || country.includes('Turkey') || country.includes('Турция')) return '🇹🇷';
-    if (country.includes('Qazaxıstan') || country.includes('Kazakhstan') || country.includes('Казахстан')) return '🇰🇿';
-    if (country.includes('Rusiya') || country.includes('Russia') || country.includes('Россия')) return '🇷🇺';
-    if (country.includes('Özbəkistan') || country.includes('Uzbekistan') || country.includes('Узбекистан')) return '🇺🇿';
-    return '🇦🇿';
+    return '';
   }
 
   function getLocalizedText(obj, field) {
@@ -17006,13 +16982,12 @@ function initSceneTransition() {
       const authorRole = getLocalizedText(author, 'role');
       const scopeText = getLocalizedText(author, 'scope');
       const initials = author.author_az.split(' ').map(n => n[0]).slice(0, 2).join('');
-      const primaryFlag = getCountryFlag(author.works[0] ? author.works[0].country : 'Azərbaycan', author.works[0] ? author.works[0].country_code : 'AZ');
 
       const badgesHtml = [
         author.copernicus ? `<span class="science-badge-copernicus">Index Copernicus</span>` : '',
         author.erih ? `<span class="science-badge-erih">ERIH PLUS</span>` : '',
         author.scope_type === 'both' ? `<span class="science-badge-scope local">${typeof gT === 'function' ? gT('science_scope_both') : 'Yerli / Xarici'}</span>` :
-          author.scope_type === 'xarici' ? `<span class="science-badge-scope foreign">${typeof gT === 'function' ? gT('science_scope_foreign') : 'Beynəlxalq'}</span>` :
+          author.scope_type === 'xarici' ? `<span class="science-badge-scope foreign">${typeof gT === 'function' ? gT('science_scope_foreign') : 'Xarici'}</span>` :
             `<span class="science-badge-scope local">${typeof gT === 'function' ? gT('science_scope_local') : 'Yerli'}</span>`
       ].filter(Boolean).join('');
 
@@ -17020,7 +16995,6 @@ function initSceneTransition() {
       const articlesCountText = `${author.works.length} ${countLabel}`;
 
       const worksHtml = author.works.map((w, idx) => {
-        const flag = getCountryFlag(w.country, w.country_code);
         const wTitle = getLocalizedText(w, 'title');
         const wJournal = getLocalizedText(w, 'journal');
         const wCountry = getLocalizedText(w, 'country');
@@ -17029,7 +17003,7 @@ function initSceneTransition() {
             <h4 class="science-article-title"><span class="science-work-num">${idx + 1}.</span>${escapeHTML(wTitle)}</h4>
             <div class="science-work-journal-tag">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-              <span><strong>${escapeHTML(wJournal)}</strong> (${flag} ${escapeHTML(wCountry)})</span>
+              <span><strong>${escapeHTML(wJournal)}</strong> (${escapeHTML(wCountry)})</span>
             </div>
           </div>
         `;
@@ -17047,7 +17021,6 @@ function initSceneTransition() {
           <div class="science-card-header">
             <div class="science-author-avatar-wrap">
               <div class="science-author-avatar">${initials}</div>
-              <span class="science-country-badge">${primaryFlag}</span>
             </div>
             <div class="science-author-info">
               <h3 class="science-author-name">${escapeHTML(authorName)}</h3>
@@ -17110,10 +17083,9 @@ function initSceneTransition() {
 
       const journalsList = item.works.length > 1
         ? `<ol class="science-table-list">${item.works.map(w => {
-          const flag = getCountryFlag(w.country, w.country_code);
-          return `<li>${escapeHTML(getLocalizedText(w, 'journal'))} (${flag} ${escapeHTML(getLocalizedText(w, 'country'))})</li>`;
+          return `<li>${escapeHTML(getLocalizedText(w, 'journal'))} (${escapeHTML(getLocalizedText(w, 'country'))})</li>`;
         }).join('')}</ol>`
-        : `${escapeHTML(getLocalizedText(item.works[0], 'journal'))} (${getCountryFlag(item.works[0].country, item.works[0].country_code)} ${escapeHTML(getLocalizedText(item.works[0], 'country'))})`;
+        : `${escapeHTML(getLocalizedText(item.works[0], 'journal'))} (${escapeHTML(getLocalizedText(item.works[0], 'country'))})`;
 
       const orcidCell = item.orcid
         ? `<a href="${item.orcid}" target="_blank" rel="noopener noreferrer" class="science-table-orcid-link" title="ORCID: ${item.orcid_id}">
