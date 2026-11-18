@@ -7683,15 +7683,15 @@ function initStructureModule() {
       },
     ];
 
-    // ═══ 3-CÜ SIRA (3-cü Beşlik): Sevda, Şəlalə, Rəsmiyyə, Xəlil, Aynur ═══
+    // ═══ 3-CÜ SIRA (3-cü Beşlik): Şəlalə, Sevda, Rəsmiyyə, Səkinə, Babək ═══
     const thirdFiveConfig = [
       {
-        id: "25",
+        id: "26",
         num: "11",
         badge: "Metodist",
       },
       {
-        id: "26",
+        id: "25",
         num: "12",
         badge: "Metodist",
       },
@@ -7701,62 +7701,62 @@ function initStructureModule() {
         badge: "İKT Şöbə Müdiri",
       },
       {
-        id: "13",
-        num: "14",
-        badge: "Təcrübə Rəhbəri",
-      },
-      {
-        id: "22",
-        num: "15",
-        badge: "Kitabxana Müdiri",
-      },
-    ];
-
-    // ═══ 4-CÜ SIRA (4-cü Beşlik - Şöbə Müdirləri): Səkinə, Yeganə, Babək, Natiq, Ceyhun ═══
-    const fourthFiveConfig = [
-      {
         id: "9",
-        num: "16",
-        badge: "Şöbə Müdiri",
-      },
-      {
-        id: "23",
-        num: "17",
+        num: "14",
         badge: "Şöbə Müdiri",
       },
       {
         id: "7",
-        num: "18",
-        badge: "Şöbə Müdiri",
-      },
-      {
-        id: "24",
-        num: "19",
-        badge: "Şöbə Müdiri",
-      },
-      {
-        id: "11",
-        num: "20",
+        num: "15",
         badge: "Şöbə Müdiri",
       },
     ];
 
-    // ═══ 5-Cİ SIRA (Qalan 4-lük): Günay, Fizuli, Şöhlə, Munir ═══
-    const fifthFourConfig = [
+    // ═══ 4-CÜ SIRA (4-cü Beşlik): Yeganə, Natiq, Ceyhun, Xəlil, Şöhlə ═══
+    const fourthFiveConfig = [
       {
-        id: "18",
-        num: "21",
-        badge: "Arxiv Müdiri",
+        id: "23",
+        num: "16",
+        badge: "Şöbə Müdiri",
       },
       {
-        id: "29",
-        num: "22",
-        badge: "EHM Mühəndisi",
+        id: "24",
+        num: "17",
+        badge: "Şöbə Müdiri",
+      },
+      {
+        id: "11",
+        num: "18",
+        badge: "Şöbə Müdiri",
+      },
+      {
+        id: "13",
+        num: "19",
+        badge: "Təcrübə Rəhbəri",
       },
       {
         id: "28",
-        num: "23",
+        num: "20",
         badge: "Mülki Müdafiə",
+      },
+    ];
+
+    // ═══ 5-Cİ SIRA (Qalan 4-lük): Fizuli, Aynur, Günay, Munir ═══
+    const fifthFourConfig = [
+      {
+        id: "29",
+        num: "21",
+        badge: "EHM Mühəndisi",
+      },
+      {
+        id: "22",
+        num: "22",
+        badge: "Kitabxana Müdiri",
+      },
+      {
+        id: "18",
+        num: "23",
+        badge: "Arxiv Müdiri",
       },
       {
         id: "17",
