@@ -7657,104 +7657,104 @@ function initStructureModule() {
       },
     ];
 
-    // ═══ 2-Cİ SIRA (2-ci Beşlik): Günel, Ləman, Azər, Vəfa, Rəsmiyyə ═══
+    // ═══ 2-Cİ SIRA (2-ci Beşlik): Aygün (Həmkar Sədri), Günel, Ləman, Azər, Vəfa ═══
     const secondFiveConfig = [
       {
-        id: "30",
+        id: "27",
         num: "06",
+        badge: "Həmkarlar İttifaqı Sədri",
+      },
+      {
+        id: "30",
+        num: "07",
         badge: "Tədris Hissə Müdiri",
       },
       {
         id: "20",
-        num: "07",
+        num: "08",
         badge: "Kadrlar Şöbəsi",
       },
       {
         id: "19",
-        num: "08",
+        num: "09",
         badge: "Baş Mühasib",
       },
       {
         id: "16",
-        num: "09",
-        badge: "Hüquqşünas",
-      },
-      {
-        id: "14",
         num: "10",
-        badge: "İKT Şöbə Müdiri",
+        badge: "Hüquqşünas",
       },
     ];
 
-    // ═══ 3-CÜ SIRA (3-cü Beşlik): Səkinə, Yeganə, Babək, Natiq, Ceyhun ═══
+    // ═══ 3-CÜ SIRA (3-cü Beşlik): Sevda, Şəlalə, Rəsmiyyə, Səkinə, Yeganə ═══
     const thirdFiveConfig = [
       {
-        id: "9",
+        id: "25",
         num: "11",
-        badge: "Şöbə Müdiri",
+        badge: "Metodist",
       },
       {
-        id: "23",
+        id: "26",
         num: "12",
-        badge: "Şöbə Müdiri",
+        badge: "Metodist",
       },
       {
-        id: "7",
+        id: "14",
         num: "13",
-        badge: "Şöbə Müdiri",
+        badge: "İKT Şöbə Müdiri",
       },
       {
-        id: "24",
+        id: "9",
         num: "14",
         badge: "Şöbə Müdiri",
       },
       {
-        id: "11",
+        id: "23",
         num: "15",
         badge: "Şöbə Müdiri",
       },
     ];
 
-    // ═══ 4-CÜ SIRA (4-cü Beşlik): Şöhlə, Xəlil, Aygün, Aynur, Günay ═══
+    // ═══ 4-CÜ SIRA (4-cü Beşlik): Babək, Natiq, Ceyhun, Şöhlə, Xəlil ═══
     const fourthFiveConfig = [
       {
-        id: "28",
+        id: "7",
         num: "16",
+        badge: "Şöbə Müdiri",
+      },
+      {
+        id: "24",
+        num: "17",
+        badge: "Şöbə Müdiri",
+      },
+      {
+        id: "11",
+        num: "18",
+        badge: "Şöbə Müdiri",
+      },
+      {
+        id: "28",
+        num: "19",
         badge: "Mülki Müdafiə",
       },
       {
         id: "13",
-        num: "17",
+        num: "20",
         badge: "Təcrübə Rəhbəri",
       },
-      {
-        id: "27",
-        num: "18",
-        badge: "Həmkarlar İttifaqı",
-      },
+    ];
+
+    // ═══ 5-Cİ SIRA (Qalan 4-lük): Aynur, Günay, Fizuli, Munir ═══
+    const fifthFourConfig = [
       {
         id: "22",
-        num: "19",
+        num: "21",
         badge: "Kitabxana Müdiri",
       },
       {
         id: "18",
-        num: "20",
-        badge: "Arxiv Müdiri",
-      },
-    ];
-
-    // ═══ 5-Cİ SIRA (Qalan 4-lük): Şəlalə, Sevda, Fizuli, Munir ═══
-    const fifthFourConfig = [
-      {
-        id: "26",
-        num: "21",
-        badge: "Metodist",
-      },
-      {
-        id: "25",
         num: "22",
-        badge: "Metodist",
+        badge: "Arxiv Müdiri",
       },
       {
         id: "29",
