@@ -2719,17 +2719,9 @@ body.dark-mode .labor-conf-back-btn:hover {
   border: 1px solid rgba(197, 155, 39, 0.45);
 }
 
+.tree-card-meta-line,
 .tree-card-badge-gold {
-  font-family: var(--font-mono, monospace);
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: #dfc07f;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  background: rgba(197, 155, 39, 0.12);
-  padding: 2px 7px;
-  border-radius: 6px;
-  border: 1px solid rgba(197, 155, 39, 0.28);
+  display: none !important;
 }
 
 .tree-card-grid-title {

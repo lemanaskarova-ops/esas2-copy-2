@@ -7614,9 +7614,6 @@ function initStructureModule() {
           <div class="tree-card-grid-block ${item.extraClass || ''}" data-person-id="${item.id}" title="${name} - ${role.replace(/<[^>]+>/g, ' ')}">
             ${avatarHtml}
             <div class="tree-card-grid-info">
-              <div class="tree-card-meta-line">
-                <span class="tree-card-badge-gold">${item.badge}</span>
-              </div>
               <h4 class="tree-card-grid-title">${name}</h4>
               <span class="tree-card-grid-role">${role}</span>
             </div>
