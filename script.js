@@ -7777,6 +7777,9 @@ function initStructureModule() {
     treeCanvas.innerHTML = `
       <!-- ═══ 1-Cİ SIRA (İLK BEŞLİK) ═══ -->
       <div class="tree-tier-block tier-first-five">
+        <div class="tree-tier-tag">
+          <span>${gT("struct_tier1_label") || "İdarə Heyəti"}</span>
+        </div>
         <div class="tree-row-five">
           ${firstFiveHtml}
         </div>
@@ -11936,6 +11939,32 @@ function initGalleryModule() {
     study: [
       {
         type: "video",
+        src: "suni_intellekt_tedris_seminar.mp4",
+        poster: "suni_intellekt_tedris_seminar_poster.jpg",
+        tall: true,
+        label: "Seminar Məruzəsi: Süni İntellekt və Müasir Tədris Texnologiyaları (Sədaqət Kərimova)",
+        label_az: "Seminar Məruzəsi: Süni İntellekt və Müasir Tədris Texnologiyaları (Sədaqət Kərimova)",
+        label_en: "Seminar Report: AI and Modern Teaching Technologies (Sadagat Karimova)",
+        label_ru: "Семинар-доклад: Искусственный интеллект и современные технологии обучения (Садагат Керимова)",
+        badge: "SEMİNAR · TƏDRİS",
+        catTitle: "Dərs Mühiti · Seminar",
+        i18n: "gallery_cat_study",
+      },
+      {
+        type: "video",
+        src: "ingilis_dili_gunel_mammadova.mp4",
+        poster: "ingilis_dili_gunel_mammadova_poster.jpg",
+        tall: true,
+        label: "İngilis dili · İnteraktiv Açıq Dərs (Günel Məmmədova)",
+        label_az: "İngilis dili · İnteraktiv Açıq Dərs (Günel Məmmədova)",
+        label_en: "English Language · Interactive Open Lesson (Gunel Mammadova)",
+        label_ru: "Английский язык · Интерактивный открытый урок (Гюнель Мамедова)",
+        badge: "AÇIQ DƏRS · İNGİLİS DİLİ",
+        catTitle: "Dərs Mühiti · Açıq Dərs",
+        i18n: "gallery_cat_study",
+      },
+      {
+        type: "video",
         src: "WhatsApp Video 2026-11-17 at 17.08.02.mp4",
         tall: true,
         label: "İnteraktiv Tədris və Canlı Dərs Mühiti",
@@ -12195,21 +12224,22 @@ function initGalleryModule() {
           if (item.type === "video") {
             const isTall = cat === "events" || item.tall;
             const cardClass = isTall ? "gal-media-item gal-video-tall-card" : "gal-media-item";
+            const posterAttr = item.poster ? ` poster="${item.poster}"` : "";
             const innerMedia = isTall
               ? `
                 <div class="gal-video-tall-container">
-                  <video src="${item.src}" muted loop preload="metadata" playsinline></video>
+                  <video src="${item.src}"${posterAttr} muted loop preload="metadata" playsinline></video>
                   <div class="gal-video-tall-play-btn" aria-hidden="true">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
                   </div>
                   <span class="gal-video-badge">▶ ${item.badge || "VİDEO"}</span>
                 </div>`
               : `
-                <video src="${item.src}" muted loop preload="metadata" playsinline></video>
+                <video src="${item.src}"${posterAttr} muted loop preload="metadata" playsinline></video>
                 <span class="gal-video-badge">▶ ${item.badge || "VİDEO"}</span>`;
 
             return `
-              <div class="${cardClass}" style="animation-delay:${delay}" data-src="${item.src}" data-type="video" data-label="${label}">
+              <div class="${cardClass}" style="animation-delay:${delay}" data-src="${item.src}" data-type="video" data-label="${label}" ${item.poster ? `data-poster="${item.poster}"` : ""}>
                 ${innerMedia}
                 <div class="gal-media-info">
                   <span class="gal-media-label">${label}</span>
@@ -12239,6 +12269,7 @@ function initGalleryModule() {
             src: el.dataset.src,
             label: el.dataset.label || "",
             type: el.dataset.type || "image",
+            poster: el.dataset.poster || "",
             catTitle: gT(meta.i18n || cat),
           });
           const zoomBtn = el.querySelector(".gal-media-zoom");
@@ -12466,6 +12497,7 @@ function initGalleryModule() {
         .map((it, idx) => {
           if (it.type === "video") {
             return `<button type="button" class="lb-thumb ${idx === lbIndex ? "active" : ""}" data-idx="${idx}" title="${it.label || "Video"}">
+              ${it.poster ? `<img src="${it.poster}" alt="" loading="lazy" style="object-fit:cover;width:100%;height:100%;border-radius:inherit;" />` : ""}
               <span class="lb-thumb-vid">▶</span>
             </button>`;
           }
