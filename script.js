@@ -7777,6 +7777,9 @@ function initStructureModule() {
     treeCanvas.innerHTML = `
       <!-- ═══ 1-Cİ SIRA (İLK BEŞLİK) ═══ -->
       <div class="tree-tier-block tier-first-five">
+        <div class="tree-tier-tag">
+          <span>${gT("struct_tier1_label") || "İdarə Heyəti"}</span>
+        </div>
         <div class="tree-row-five">
           ${firstFiveHtml}
         </div>
