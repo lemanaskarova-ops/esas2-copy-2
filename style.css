@@ -3430,9 +3430,10 @@ body.dark-mode .sun-and-moon>.moon>circle {
   transform: scale(1.1);
 }
 
+.tree-card-grid-block[data-person-id="16"] .tree-grid-avatar-wrap img,
 .tree-dept-card[data-person-id="16"] .tree-dept-avatar img {
-  object-position: 45% 15%;
-  transform: scale(1.15);
+  object-position: center 38%;
+  transform: scale(1.08);
 }
 
 .tree-dept-card[data-person-id="14"] .tree-dept-avatar img {
@@ -4578,12 +4579,12 @@ body.dark-mode .sun-and-moon>.moon>circle {
 }
 
 .person-detail-photo-frame.vefa-photo img {
-  transform: scale(1.15);
-  object-position: 45% 15%;
+  transform: scale(1.05);
+  object-position: center 38%;
 }
 
 .person-detail-photo-frame.vefa-photo:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .person-detail-photo-frame.resmiyye-photo img {
@@ -5038,10 +5039,10 @@ body.dark-mode .sun-and-moon>.moon>circle {
   object-position: center 20%;
 }
 
-/* Vefa's photo needs to hide the mirror in background */
+/* Vefa's official photo */
 .vefa-card .card-img-wrap img {
-  transform: scale(1.4);
-  object-position: center 10%;
+  transform: scale(1.05);
+  object-position: center 38%;
 }
 
 /* Gunay's photo needs a bit of zoom */

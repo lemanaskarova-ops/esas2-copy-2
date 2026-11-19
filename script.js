@@ -3151,7 +3151,7 @@ const staffData = {
       role_az: "Hüquqşünas",
       role_en: "Legal Counsel",
       role_ru: "Юрист",
-      img: "vefax.jpeg",
+      img: "vefa.jpeg",
     },
     {
       id: "18",
