@@ -14856,7 +14856,74 @@ function initSceneTransition() {
                   "note_ru": "Чемпионаты АТА и САМ"
             }
       ],
-      "keyHighlights": [
+      "stats": [
+            {
+                  "icon": "🥇",
+                  "val": "7 QAT ÇEMPİON",
+                  "val_az": "7 QAT ÇEMPİON",
+                  "val_en": "7x CHAMPION",
+                  "val_ru": "7-КРАТНЫЙ ЧЕМПИОН",
+                  "label": "Respublika Çempionatı",
+                  "label_az": "Respublika Çempionatı",
+                  "label_en": "National Championship",
+                  "label_ru": "Чемпионат Республики",
+                  "sub": "Azərbaycan və Bakı birincilikləri",
+                  "sub_az": "Azərbaycan və Bakı birincilikləri",
+                  "sub_en": "Azerbaijan & Baku championships",
+                  "sub_ru": "Первенства Азербайджана и Баку"
+            },
+            {
+                  "icon": "🎵",
+                  "val": "K-POP FESTİVAL",
+                  "val_az": "K-POP FESTİVAL",
+                  "val_en": "K-POP FESTIVAL",
+                  "val_ru": "K-POP ФЕСТИВАЛЬ",
+                  "label": "I Yer Qalibi",
+                  "label_az": "I Yer Qalibi",
+                  "label_en": "1st Place Winner",
+                  "label_ru": "Победительница (I место)",
+                  "sub": "Gənclər Festivalı Qızıl Diplom",
+                  "sub_az": "Gənclər Festivalı Qızıl Diplom",
+                  "sub_en": "Youth Festival Gold Diploma",
+                  "sub_ru": "Золотой диплом молодежного фестиваля"
+            },
+            {
+                  "icon": "🏆",
+                  "val": "RESPUBLİKA KUBOKU",
+                  "val_az": "RESPUBLİKA KUBOKU",
+                  "val_en": "NATIONAL CUP",
+                  "val_ru": "КУБОК РЕСПУБЛИКИ",
+                  "label": "Rəqs Assosiasiyası",
+                  "label_az": "Rəqs Assosiasiyası",
+                  "label_en": "Dance Association",
+                  "label_ru": "Ассоциация Танца",
+                  "sub": "Xüsusi Səhnə Məharəti Diplomu",
+                  "sub_az": "Xüsusi Səhnə Məharəti Diplomu",
+                  "sub_en": "Special Stage Performance Diploma",
+                  "sub_ru": "Диплом за сценическое мастерство"
+            }
+      ],
+      "tags": [
+            "#İncəsənətVəRəqs",
+            "#AzərbaycanÇempionatı_I_Yer",
+            "#BakıÇempionatı",
+            "#KPOP_Talent_Festival",
+            "#ModernDance",
+            "#HipHop_Show",
+            "#QızılDiplom",
+            "#BDRNK_İstedadlıGənclər"
+      ],
+      "tags_az": [
+            "#İncəsənətVəRəqs",
+            "#AzərbaycanÇempionatı_I_Yer",
+            "#BakıÇempionatı",
+            "#KPOP_Talent_Festival",
+            "#ModernDance",
+            "#HipHop_Show",
+            "#QızılDiplom",
+            "#BDRNK_İstedadlıGənclər"
+      ],
+      "highlights": [
             {
                   "year": "2025",
                   "flag": "🥇",
@@ -15216,7 +15283,7 @@ function initSceneTransition() {
     const highlightsHeading = student["highlightsHeading_" + currentLang] || student.highlightsHeading || gT("honor_highlights_heading") || (currentLang === "en" ? "KEY INTERNATIONAL REPRESENTATIONS & TARGETS" : currentLang === "ru" ? "ОСНОВНЫЕ МЕЖДУНАРОДНЫЕ ПРЕДСТАВИТЕЛЬСТВА И ЦЕЛИ" : "ƏSAS BEYNƏLXALQ TƏMSİLÇİLİKLƏR VƏ HƏDƏFLƏR");
     const quoteText = student["quote_" + currentLang] || student.quote;
 
-    const flagsHtml = student.flags
+    const flagsHtml = (student.flags || [])
       .map(
         (f) =>
           '<span class="honor-flag-tag" title="' + (f["note_" + currentLang] || f.note) + '">' +
@@ -15226,7 +15293,7 @@ function initSceneTransition() {
       )
       .join("");
 
-    const statsHtml = student.stats
+    const statsHtml = (student.stats || [])
       .map(
         (s) =>
           '<div class="honor-stat-card mouse-glow-card">' +
@@ -15240,7 +15307,7 @@ function initSceneTransition() {
       )
       .join("");
 
-    const highlightsHtml = student.highlights
+    const highlightsHtml = (student.highlights || student.keyHighlights || [])
       .map(
         (h) =>
           '<div class="honor-highlight-row">' +
@@ -15253,13 +15320,13 @@ function initSceneTransition() {
       )
       .join("");
 
-    const curTags = student["tags_" + currentLang] || student.tags;
+    const curTags = student["tags_" + currentLang] || student.tags || [];
     const tagsHtml = curTags
       .map((t) => '<span class="honor-tag-pill">' + t + '</span>')
       .join("");
 
     // Mini thumbnails (clean image selection)
-    const allImages = student.gallery.filter((g) => g.type === "image");
+    const allImages = (student.gallery || []).filter((g) => g.type === "image");
     const previewImages = allImages.length <= 4 ? allImages.slice(0, 4) : allImages.slice(1, 5);
     const thumbsHtml = previewImages
       .map((g) => {
@@ -15428,7 +15495,7 @@ function initSceneTransition() {
     const modalVerified = gT("honor_modal_pill") || (currentLang === "en" ? "🏆 Honor Student" : currentLang === "ru" ? "🏆 Почетный Студент" : "🏆 Fəxri Tələbə");
 
     // Timeline HTML
-    const timelineList = student.timeline;
+    const timelineList = student.timeline || [];
     const timelineHtml = timelineList
       .map(
         (t) =>
