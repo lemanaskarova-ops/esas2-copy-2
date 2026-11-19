@@ -14856,7 +14856,74 @@ function initSceneTransition() {
                   "note_ru": "Чемпионаты АТА и САМ"
             }
       ],
-      "keyHighlights": [
+      "stats": [
+            {
+                  "icon": "🥇",
+                  "val": "7 QAT ÇEMPİON",
+                  "val_az": "7 QAT ÇEMPİON",
+                  "val_en": "7x CHAMPION",
+                  "val_ru": "7-КРАТНЫЙ ЧЕМПИОН",
+                  "label": "Respublika Çempionatı",
+                  "label_az": "Respublika Çempionatı",
+                  "label_en": "National Championship",
+                  "label_ru": "Чемпионат Республики",
+                  "sub": "Azərbaycan və Bakı birincilikləri",
+                  "sub_az": "Azərbaycan və Bakı birincilikləri",
+                  "sub_en": "Azerbaijan & Baku championships",
+                  "sub_ru": "Первенства Азербайджана и Баку"
+            },
+            {
+                  "icon": "🎵",
+                  "val": "K-POP FESTİVAL",
+                  "val_az": "K-POP FESTİVAL",
+                  "val_en": "K-POP FESTIVAL",
+                  "val_ru": "K-POP ФЕСТИВАЛЬ",
+                  "label": "I Yer Qalibi",
+                  "label_az": "I Yer Qalibi",
+                  "label_en": "1st Place Winner",
+                  "label_ru": "Победительница (I место)",
+                  "sub": "Gənclər Festivalı Qızıl Diplom",
+                  "sub_az": "Gənclər Festivalı Qızıl Diplom",
+                  "sub_en": "Youth Festival Gold Diploma",
+                  "sub_ru": "Золотой диплом молодежного фестиваля"
+            },
+            {
+                  "icon": "🏆",
+                  "val": "RESPUBLİKA KUBOKU",
+                  "val_az": "RESPUBLİKA KUBOKU",
+                  "val_en": "NATIONAL CUP",
+                  "val_ru": "КУБОК РЕСПУБЛИКИ",
+                  "label": "Rəqs Assosiasiyası",
+                  "label_az": "Rəqs Assosiasiyası",
+                  "label_en": "Dance Association",
+                  "label_ru": "Ассоциация Танца",
+                  "sub": "Xüsusi Səhnə Məharəti Diplomu",
+                  "sub_az": "Xüsusi Səhnə Məharəti Diplomu",
+                  "sub_en": "Special Stage Performance Diploma",
+                  "sub_ru": "Диплом за сценическое мастерство"
+            }
+      ],
+      "tags": [
+            "#İncəsənətVəRəqs",
+            "#AzərbaycanÇempionatı_I_Yer",
+            "#BakıÇempionatı",
+            "#KPOP_Talent_Festival",
+            "#ModernDance",
+            "#HipHop_Show",
+            "#QızılDiplom",
+            "#BDRNK_İstedadlıGənclər"
+      ],
+      "tags_az": [
+            "#İncəsənətVəRəqs",
+            "#AzərbaycanÇempionatı_I_Yer",
+            "#BakıÇempionatı",
+            "#KPOP_Talent_Festival",
+            "#ModernDance",
+            "#HipHop_Show",
+            "#QızılDiplom",
+            "#BDRNK_İstedadlıGənclər"
+      ],
+      "highlights": [
             {
                   "year": "2025",
                   "flag": "🥇",
@@ -15216,7 +15283,7 @@ function initSceneTransition() {
     const highlightsHeading = student["highlightsHeading_" + currentLang] || student.highlightsHeading || gT("honor_highlights_heading") || (currentLang === "en" ? "KEY INTERNATIONAL REPRESENTATIONS & TARGETS" : currentLang === "ru" ? "ОСНОВНЫЕ МЕЖДУНАРОДНЫЕ ПРЕДСТАВИТЕЛЬСТВА И ЦЕЛИ" : "ƏSAS BEYNƏLXALQ TƏMSİLÇİLİKLƏR VƏ HƏDƏFLƏR");
     const quoteText = student["quote_" + currentLang] || student.quote;
 
-    const flagsHtml = student.flags
+    const flagsHtml = (student.flags || [])
       .map(
         (f) =>
           '<span class="honor-flag-tag" title="' + (f["note_" + currentLang] || f.note) + '">' +
@@ -15226,7 +15293,7 @@ function initSceneTransition() {
       )
       .join("");
 
-    const statsHtml = student.stats
+    const statsHtml = (student.stats || [])
       .map(
         (s) =>
           '<div class="honor-stat-card mouse-glow-card">' +
@@ -15240,7 +15307,7 @@ function initSceneTransition() {
       )
       .join("");
 
-    const highlightsHtml = student.highlights
+    const highlightsHtml = (student.highlights || student.keyHighlights || [])
       .map(
         (h) =>
           '<div class="honor-highlight-row">' +
@@ -15253,13 +15320,13 @@ function initSceneTransition() {
       )
       .join("");
 
-    const curTags = student["tags_" + currentLang] || student.tags;
+    const curTags = student["tags_" + currentLang] || student.tags || [];
     const tagsHtml = curTags
       .map((t) => '<span class="honor-tag-pill">' + t + '</span>')
       .join("");
 
     // Mini thumbnails (clean image selection)
-    const allImages = student.gallery.filter((g) => g.type === "image");
+    const allImages = (student.gallery || []).filter((g) => g.type === "image");
     const previewImages = allImages.length <= 4 ? allImages.slice(0, 4) : allImages.slice(1, 5);
     const thumbsHtml = previewImages
       .map((g) => {
@@ -15428,7 +15495,7 @@ function initSceneTransition() {
     const modalVerified = gT("honor_modal_pill") || (currentLang === "en" ? "🏆 Honor Student" : currentLang === "ru" ? "🏆 Почетный Студент" : "🏆 Fəxri Tələbə");
 
     // Timeline HTML
-    const timelineList = student.timeline;
+    const timelineList = student.timeline || [];
     const timelineHtml = timelineList
       .map(
         (t) =>
@@ -20717,6 +20784,81 @@ const teacherCertificatesData = [
     desc_ru: "Официальный международный сертификат об успешной сдаче экзамена с отличием преподавателем филологии Айтен Намазовой и присвоении статуса аккредитованного преподавателя/тренера по международным стандартам ISO 21001:2018.",
     imageUrl: "aytanser.jpeg",
     docUrl: "aytanser.jpeg"
+  },
+  {
+    id: "tcert-konul-01",
+    teacher: "Könül Mahmudova",
+    dept: "FBK-07 Tarix və Humanitar Fənlər",
+    category: "beynelxalq",
+    badge_az: "Beynəlxalq Konfrans Sertifikatı",
+    badge_en: "International Conference Certificate",
+    badge_ru: "Сертификат Международной Конференции",
+    badgeClass: "badge-gold",
+    icon: "🎯",
+    year: "2026",
+    title_az: 'Beynəlxalq Konfrans: "The Art of Leadership and Self-Management" (Liderlik Sənəti və Özünü İdarəetmə)',
+    title_en: 'International Conference: "The Art of Leadership and Self-Management"',
+    title_ru: 'Международная Конференция: «Искусство Лидерства и Самоменеджмента» ("The Art of Leadership and Self-Management")',
+    issuer_az: "Maral Academy & IN Vision Group (Azərbaycan & Beynəlxalq)",
+    issuer_en: "Maral Academy & IN Vision Group (Azerbaijan & International)",
+    issuer_ru: "Maral Academy & IN Vision Group (Азербайджан и Международный)",
+    regNo: "MA-LSM-IC-100",
+    hours: "09 Avqust 2026 · Liderlik və Peşəkar İnkişaf Proqramı",
+    desc_az: "Kollecin Tarix və Humanitar Fənlər müəllimi Könül Mahmudovanın Maral Academy və IN Vision Group-un birgə təşkilatçılığı ilə keçirilmiş 'The Art of Leadership and Self-Management' (Liderlik Sənəti və Özünü İdarəetmə) beynəlxalq konfransında fəal iştirakı, peşəkar inkişafı və liderlik mükəmməlliyinə verdiyi dəyərli töhfəyə görə təltif olunduğu rəsmi beynəlxalq sertifikat.",
+    desc_en: "Official international certificate presented to History and Humanities Teacher Konul Mahmudova by Maral Academy and IN Vision Group for successfully participating in the International Conference 'The Art of Leadership and Self-Management', in recognition of outstanding participation, commitment to professional development, and contribution to leadership excellence.",
+    desc_ru: "Официальный международный сертификат, врученный преподавателю истории и гуманитарных дисциплин Кенуль Махмудовой академией Maral Academy и группой IN Vision Group за успешное участие в Международной Конференции «Искусство Лидерства и Самоменеджмента» ('The Art of Leadership and Self-Management'), стремление к профессиональному развитию и выдающийся вклад в лидерство.",
+    imageUrl: "konulser.jpeg",
+    docUrl: "konulser.jpeg"
+  },
+  {
+    id: "tcert-konul-02",
+    teacher: "Könül Mahmudova",
+    dept: "FBK-07 Tarix və Humanitar Fənlər",
+    category: "beynelxalq",
+    badge_az: "Coursera & SDU Beynəlxalq Sertifikatı",
+    badge_en: "Coursera & SSU International Certificate",
+    badge_ru: "Международный Сертификат Coursera и СГУ",
+    badgeClass: "badge-blue",
+    icon: "🎓",
+    year: "2026",
+    title_az: 'Coursera & SDU: "Pedaqogika" İxtisasartırma Kurs Sertifikatı',
+    title_en: 'Coursera & SSU: "Pedagogy" Professional Course Certificate',
+    title_ru: 'Coursera и СГУ: Сертификат курса «Педагогика» ("Pedaqogika")',
+    issuer_az: "Coursera · Sumqayıt Dövlət Universiteti & 4IR Academy (Nation Program)",
+    issuer_en: "Coursera · Sumgayit State University & 4IR Academy (Nation Program)",
+    issuer_ru: "Coursera · Сумгаитский Государственный Университет и 4IR Academy (Nation Program)",
+    regNo: "K1ZUYTWWPCQS",
+    hours: "21 Sentyabr 2026 · Onlayn Kurs & İxtisasartırma Təlimi",
+    desc_az: "Kollecin Tarix və Humanitar Fənlər müəllimi Könül Mahmudovanın Sumqayıt Dövlət Universiteti, 4IR Academy və Coursera platformasının birgə 'Nation Program' layihəsi çərçivəsində təşkil olunmuş 'Pedaqogika' kursunu müvəffəqiyyətlə başa vurduğunu təsdiq edən rəsmi beynəlxalq təhsil sertifikatı (Verifikasiya: coursera.org/verify/K1ZUYTWWPCQS).",
+    desc_en: "Official international certificate confirming that History and Humanities Teacher Konul Mahmudova successfully completed the 'Pedagogy' course offered by Sumgayit State University and 4IR Academy via Coursera under the Nation Program (Verification: coursera.org/verify/K1ZUYTWWPCQS).",
+    desc_ru: "Официальный международный сертификат, подтверждающий успешное окончание курса «Педагогика» преподавателем истории и гуманитарных дисциплин Кенуль Махмудовой, организованного Сумгаитским Государственным Университетом и 4IR Academy на платформе Coursera в рамках программы Nation Program (Верификация: coursera.org/verify/K1ZUYTWWPCQS).",
+    imageUrl: "konul_pedaqogika.jpeg",
+    docUrl: "konul_pedaqogika.jpeg"
+  },
+  {
+    id: "tcert-vusala-01",
+    teacher: "Vüsalə Kərimova",
+    dept: "FBK-07 Tarix və Humanitar Fənlər",
+    category: "beynelxalq",
+    badge_az: "Beynəlxalq Konfrans Sertifikatı",
+    badge_en: "International Conference Certificate",
+    badge_ru: "Сертификат Международной Конференции",
+    badgeClass: "badge-gold",
+    icon: "🎯",
+    year: "2026",
+    title_az: 'Beynəlxalq Konfrans: "The Art of Leadership and Self-Management" (Liderlik Sənəti və Özünü İdarəetmə)',
+    title_en: 'International Conference: "The Art of Leadership and Self-Management"',
+    title_ru: 'Международная Конференция: «Искусство Лидерства и Самоменеджмента» ("The Art of Leadership and Self-Management")',
+    issuer_az: "Maral Academy & IN Vision Group (Azərbaycan & Beynəlxalq)",
+    issuer_en: "Maral Academy & IN Vision Group (Azerbaijan & International)",
+    issuer_ru: "Maral Academy & IN Vision Group (Азербайджан и Международный)",
+    regNo: "MA-LSM-IC-100",
+    hours: "09 Avqust 2026 · Liderlik və Peşəkar İnkişaf Proqramı",
+    desc_az: "Kollecin Tarix və Humanitar Fənlər müəllimi Vüsalə Kərimovanın Maral Academy və IN Vision Group-un birgə təşkilatçılığı ilə keçirilmiş 'The Art of Leadership and Self-Management' (Liderlik Sənəti və Özünü İdarəetmə) beynəlxalq konfransında fəal iştirakı, peşəkar inkişafı və liderlik mükəmməlliyinə verdiyi dəyərli töhfəyə görə təltif olunduğu rəsmi beynəlxalq sertifikat.",
+    desc_en: "Official international certificate presented to History and Humanities Teacher Vusala Karimova by Maral Academy and IN Vision Group for successfully participating in the International Conference 'The Art of Leadership and Self-Management', in recognition of outstanding participation, commitment to professional development, and contribution to leadership excellence.",
+    desc_ru: "Официальный международный сертификат, врученный преподавателю истории и гуманитарных дисциплин Вусале Керимовой академией Maral Academy и группой IN Vision Group за успешное участие в Международной Конференции «Искусство Лидерства и Самоменеджмента» ('The Art of Leadership and Self-Management'), стремление к профессиональному развитию и выдающийся вклад в лидерство.",
+    imageUrl: "vusaleser.jpeg",
+    docUrl: "vusaleser.jpeg"
   }
 ];
 
