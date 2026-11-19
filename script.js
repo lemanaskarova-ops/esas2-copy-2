@@ -3221,7 +3221,7 @@ const staffData = {
       role_az: "EHM üzrə mühəndis",
       role_en: "Electronic Computer Engineer",
       role_ru: "Инженер по ЭВМ",
-      img: "fizulix.jpeg",
+      img: "fizuli.jpeg",
     },
     {
       id: "28",

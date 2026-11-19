@@ -4618,12 +4618,18 @@ body.dark-mode .sun-and-moon>.moon>circle {
   transform: scale(1.1);
 }
 
-.person-detail-photo-frame.fizuli-photo img,
-.person-detail-photo-frame.xelil-photo img {
-  object-position: center 12%;
+.person-detail-photo-frame.fizuli-photo img {
+  object-position: center 38%;
+  transform: scale(1.05);
 }
 
+.tree-card-grid-block[data-person-id="29"] .tree-grid-avatar-wrap img,
 .tree-dept-card[data-person-id="29"] .tree-dept-avatar img {
+  object-position: center 38%;
+  transform: scale(1.08);
+}
+
+.person-detail-photo-frame.xelil-photo img {
   object-position: center 12%;
 }
 
@@ -5021,10 +5027,11 @@ body.dark-mode .sun-and-moon>.moon>circle {
   transition: transform 0.5s ease;
 }
 
-/* Fizuli's photo is landscape, needs special framing */
+/* Fizuli Qurbanov official photo */
 .fizuli-card .card-img-wrap img {
   object-fit: cover !important;
-  object-position: center 5% !important;
+  object-position: center 38% !important;
+  transform: scale(1.05);
 }
 
 /* Xelil's photo framing */
