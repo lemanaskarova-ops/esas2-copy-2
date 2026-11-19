@@ -6526,18 +6526,6 @@ const libraryData = [
     url: "Informatika kitabı (1).pdf",
   },
   {
-    id: 45,
-    title_az: "Azərbaycan tarixi (Fundamental dərslik, 495 səh.)",
-    title_en: "History of Azerbaijan (Comprehensive, 495 p.)",
-    title_ru: "История Азербайджана (Фундаментальный учебник, 495 с.)",
-    author_az: "Müəllif: Səidə Quliyeva (Humanitar elmlər FBK)",
-    author_en: "Author: Saida Guliyeva (Humanities Department)",
-    author_ru: "Автор: Саида Гулиева (ФБК Гуманитарных наук)",
-    category: "humanitar",
-    icon: "🏛️",
-    url: "aztarixi2fb.pdf",
-  },
-  {
     id: 49,
     title_az: "Rəqəmsal elektronika və MPS (Leksiyalar toplusu, 56 səh.)",
     title_en: "Digital Electronics and MPS (Lecture Notes, 56 p.)",
@@ -9705,15 +9693,15 @@ function initLibraryModule() {
       url: "KOMMUNİKASİYA DF 2 (1).pdf"
     },
 
-    // --- Tarix və Hüquq (4) ---
+    // --- Tarix və Humanitar Fənlər ---
     {
       id: "fbk-lec-14",
       fbkId: "fbk-7",
-      fieldBadge: "TARİX VƏ HÜQUQ",
-      fieldName_az: "Tarix və Hüquq Elmləri",
+      fieldBadge: "TARİX VƏ HUMANİTAR",
+      fieldName_az: "Tarix və Humanitar Fənlər",
       subject_az: "Azərbaycan Tarixi",
-      title_az: "Azərbaycan Tarixi Fənnindən Fundamental Mühazirə və Dərs Vəsaiti (495 Səhifə)",
-      author_az: "Müəllif: Səidə Quliyeva",
+      title_az: "Azərbaycan Tarixi (Fundamental Mühazirə və Dərs Vəsaiti, 495 Səhifə)",
+      author_az: "Müəllif: Səidə Quliyeva (Tarix və Humanitar Fənlər FBK)",
       format: "pdf",
       icon: "🏛️",
       volume: "495 Səhifə · 72 Saat",
@@ -9726,8 +9714,8 @@ function initLibraryModule() {
     {
       id: "fbk-lec-15",
       fbkId: "fbk-7",
-      fieldBadge: "TARİX VƏ HÜQUQ",
-      fieldName_az: "Tarix və Hüquq Elmləri",
+      fieldBadge: "TARİX VƏ HUMANİTAR",
+      fieldName_az: "Tarix və Humanitar Fənlər",
       subject_az: "Azərbaycan Tarixi (Mühazirə Konspekti)",
       title_az: "Azərbaycan Tarixi Fənnindən Mühazirələr Toplusu (72 Saat · Mühazirə Konspekti)",
       author_az: "Müəllif: Səidə Quliyeva",
@@ -9742,8 +9730,8 @@ function initLibraryModule() {
     {
       id: "fbk-lec-16",
       fbkId: "fbk-7",
-      fieldBadge: "TARİX VƏ HÜQUQ",
-      fieldName_az: "Tarix və Hüquq Elmləri",
+      fieldBadge: "TARİX VƏ HUMANİTAR",
+      fieldName_az: "Tarix və Humanitar Fənlər",
       subject_az: "Ümumi Tarix",
       title_az: "Ümumi Tarix Fənnindən Mühazirələr Toplusu (36 Saat)",
       author_az: "Tərtibçi: Səidə Quliyeva",
