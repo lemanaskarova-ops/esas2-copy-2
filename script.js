@@ -3201,7 +3201,7 @@ const staffData = {
       role_az: "Həmkarlar İttifaqı Komitəsinin sədri",
       role_en: "Chair of Trade Union Committee",
       role_ru: "Председатель Профсоюзного комитета",
-      img: "hemkarx.jpeg",
+      img: "hemkar.jpeg",
     },
     {
       id: "22",

@@ -3460,8 +3460,9 @@ body.dark-mode .sun-and-moon>.moon>circle {
   transform: scale(1.05);
 }
 
+.tree-card-grid-block[data-person-id="27"] .tree-grid-avatar-wrap img,
 .tree-dept-card[data-person-id="27"] .tree-dept-avatar img {
-  object-position: center 15%;
+  object-position: center 30%;
   transform: scale(1.05);
 }
 
@@ -4705,7 +4706,7 @@ body.dark-mode .sun-and-moon>.moon>circle {
 }
 
 .person-detail-photo-frame.aygun-photo img {
-  object-position: center 15%;
+  object-position: center 30%;
 }
 
 .person-detail-photo-frame.aygun-photo:hover img {
