@@ -7538,7 +7538,7 @@ function initStructureModule() {
       code: "FBK-05",
       icon: "🚘",
       status: "Aktiv",
-      title_az: "Ümumtexnika və Nəqliyyat",
+      title_az: "Ümumtexniki və Nəqliyyat",
       title_en: "General Engineering & Transport",
       title_ru: "Общая техника и транспорт",
       desc_az: "Avtomobil və dəmiryol nəqliyyatının istismarı, yol hərəkətinin təşkili və texniki diaqnostika.",
@@ -7570,10 +7570,10 @@ function initStructureModule() {
       code: "FBK-07",
       icon: "🏛️",
       status: "Aktiv",
-      title_az: "Humanitar və İctimai Elmlər",
+      title_az: "Tarix və Humanitar Fənlər",
       title_en: "Humanities and Social Sciences",
       title_ru: "Гуманитарные и общественные науки",
-      desc_az: "Azərbaycan tarixi, konstitusiya və hüququn əsasları, fəlsəfə və ictimai elmlər.",
+      desc_az: "Azərbaycan tarixi, ümumi tarix, konstitusiya və hüququn əsasları, fəlsəfə və humanitar fənlər.",
       desc_en: "History of Azerbaijan, constitutional law fundamentals, civic ethics, and philosophy.",
       desc_ru: "История Азербайджана, основы конституционного права, гражданское право и философия.",
       disciplines_az: ["Azərbaycan Tarixi", "Ümumi Tarix", "Hüququn Əsasları", "Fəlsəfə", "Multikulturalizm", "İctimaiyyət"],
@@ -9786,7 +9786,7 @@ function initLibraryModule() {
       fieldName_az: "Tarix və Hüquq Elmləri",
       subject_az: "Hüququn Əsasları",
       title_az: "Hüququn Əsasları Fənnindən Fundamental Mühazirələr Toplusu (8 Mövzu)",
-      author_az: "Humanitar və İctimai Elmlər İstiqaməti",
+      author_az: "Tarix və Humanitar Fənlər İstiqaməti",
       format: "pdf",
       icon: "⚖️",
       volume: "8 Mövzu · 16 000+ Söz",
@@ -19620,11 +19620,11 @@ function initGlobalSearchModule() {
       icon: "🌍",
       badge: "PDF • Mühazirə",
       title: "umtarixfb.pdf — Ümumi Tarix Fənnindən Mühazirələr Toplusu",
-      desc: "Humanitar və İctimai Elmlər FBK (Səidə Quliyeva) · Qədim Misir, Roma, Yunanıstan, Türk dövlətləri və Osmanlı imperiyası üzrə 36 saatlıq rəsmi mühazirə vəsaiti (20 000+ söz)",
+      desc: "Tarix və Humanitar Fənlər FBK (Səidə Quliyeva) · Qədim Misir, Roma, Yunanıstan, Türk dövlətləri və Osmanlı imperiyası üzrə 36 saatlıq rəsmi mühazirə vəsaiti (20 000+ söz)",
       tokens: "umtarixfb pdf umumi tarix dunya tarixi fenn birlesmesi fbk 07 seide quliyeva muhazire ders vesaiti misir roma yunanistan osmanli",
       action: () => {
-        window.openDocumentReader("RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf", "RƏQƏMSAL ELEKTRONİKA VƏ MPS LEKSİYALAR.pdf", "FBK Mühazirələr Fondu");
-        const sec = document.getElementById("library");
+        window.openDocumentReader("umtarixfb.pdf", "umtarixfb.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("lectures");
         sec?.scrollIntoView({ behavior: "smooth" });
       }
     });
