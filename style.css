@@ -4646,20 +4646,22 @@ body.dark-mode .sun-and-moon>.moon>circle {
   }
 
   .person-detail-photo-frame.sevda-photo img {
-    object-position: center 15%;
-  }
-
-  .person-detail-photo-frame.sevda-photo:hover img {
+    object-position: center 38%;
     transform: scale(1.05);
   }
 
+  .person-detail-photo-frame.sevda-photo:hover img {
+    transform: scale(1.1);
+  }
+
   .person-detail-photo-frame.seide-photo img {
-    object-position: center 12%;
-    transform: scale(1.02);
+    object-position: center 65%;
+    transform: scale(1.25);
+    transform-origin: 48% 72%;
   }
 
   .person-detail-photo-frame.seide-photo:hover img {
-    transform: scale(1.06);
+    transform: scale(1.3);
   }
 
   .person-detail-photo-frame.selale-photo img {
@@ -5062,11 +5064,17 @@ body.dark-mode .sun-and-moon>.moon>circle {
 
   /* Saida Guliyeva framing */
   .seide-card .card-img-wrap img {
-    object-position: center 10%;
+    object-position: center 75% !important;
+    transform: scale(1.35);
+    transform-origin: 48% 65%;
   }
 
+  .tree-card-grid-block[data-person-id="12"] .tree-grid-avatar-wrap img,
+  .tree-dept-card[data-person-id="12"] .tree-dept-avatar img,
   .tree-member-row[data-person-id="12"] .tree-member-avatar img {
-    object-position: center 10%;
+    object-position: 48% 82% !important;
+    transform: scale(1.65);
+    transform-origin: 48% 50%;
   }
 
   /* Yegana Aliyeva framing */
@@ -5080,11 +5088,15 @@ body.dark-mode .sun-and-moon>.moon>circle {
 
   /* Sevda Bagizada framing */
   .sevda-card .card-img-wrap img {
-    object-position: center 15%;
+    object-position: center 38%;
+    transform: scale(1.08);
   }
 
+  .tree-card-grid-block[data-person-id="25"] .tree-grid-avatar-wrap img,
+  .tree-dept-card[data-person-id="25"] .tree-dept-avatar img,
   .tree-member-row[data-person-id="25"] .tree-member-avatar img {
-    object-position: center 15%;
+    object-position: center 38%;
+    transform: scale(1.08);
   }
 
   .staff-card:hover .card-img-wrap img {

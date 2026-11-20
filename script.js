@@ -3192,7 +3192,7 @@ const staffData = {
       role_az: 'Yeni Azərbaycan Partiyası Ərazi Partiya Təşkilatı sədri<br>"Qeydiyyat, qiymətləndirmə və Monitorinq şöbəsi"-Şöbə müdiri',
       role_en: 'Chair of YAP Territorial Party Organization<br>Head of "Registration, Evaluation and Monitoring" Dept',
       role_ru: 'Председатель территориальной партийной организации YAP<br>Заведующая отделом "Регистрации, оценки и мониторинга"',
-      img: "seidex2.jpeg",
+      img: "seide1.jpeg",
     },
   ],
   departments: [
@@ -3264,7 +3264,7 @@ const staffData = {
       role_az: 'Yeni Azərbaycan Partiyası Ərazi Partiya Təşkilatı sədri<br>"Qeydiyyat, qiymətləndirmə və Monitorinq şöbəsi"-Şöbə müdiri',
       role_en: 'Chair of YAP Territorial Party Organization<br>Head of "Registration, Evaluation and Monitoring" Dept',
       role_ru: 'Председатель территориальной партийной организации YAP<br>Заведующая отделом "Регистрации, оценки и мониторинга"',
-      img: "seidex2.jpeg",
+      img: "seide1.jpeg",
     },
     {
       id: "30",
@@ -3334,7 +3334,7 @@ const staffData = {
       role_az: "Metodist",
       role_en: "Methodist",
       role_ru: "Методист",
-      img: "logo.jpg",
+      img: "sevda.jpeg",
     },
     {
       id: "13",
@@ -3406,7 +3406,7 @@ const staffData = {
       role_az: "Metodist",
       role_en: "Methodist",
       role_ru: "Методист",
-      img: "logo.jpg",
+      img: "sevda.jpeg",
     },
   ],
   majors: {
