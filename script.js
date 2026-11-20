@@ -45,8 +45,8 @@ const i18n = {
 
     nav_science: "Elm və Nəşrlər",
     science_badge: "Tədqiqat Fəaliyyəti və Xarici Nəşrlər",
-    science_title: "Əməkdaşlarımızın Xarici və Yerli Nəşrləri",
-    science_desc: "Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin pedaqoji heyətinin nüfuzlu xarici indeksli jurnallarda və yerli nəşrlərdə dərc olunmuş məqalə və tezisləri.",
+    science_title: "Elmi və metodiki fəaliyyət",
+    science_desc: "Azərbaycan Texniki Universitetinin nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin pedaqoji heyətinin nüfuzlu xarici indeksli jurnallarda və yerli nəşrlərdə dərc olunmuş məqalə, tezis, dərslik və metodiki tədbirləri.",
     science_ceremony_tag: "Rəsmi Təqdimat və Qəbul",
     science_ceremony_kicker: "BDRNK Pedaqoji Heyəti · 2026",
     science_ceremony_heading: "Kollec rəhbərliyi və müəllim heyətinin nailiyyətləri",
@@ -167,9 +167,9 @@ const i18n = {
     feature3_title: "Tədbirlər",
     feature3_desc: "Kollecdə baş tutan ən son tədbirlər və yeniliklər",
     structure_badge: "Təşkilat",
-    structure_title: "İnstitusional Struktur",
+    structure_title: "Rəhbərlik və struktur",
     structure_desc:
-      "Rəhbərlik heyəti, şöbə müdirləri və inzibati struktur — bir baxışda.",
+      "Rəhbərlik, şöbələr, bölmələr və əməkdaşlar — institusional struktur bir baxışda.",
     struct_view_tree: "İerarxiya Sxemi",
     struct_view_cards: "Heyət Kartları",
     struct_tab_hierarchy: "İdarəetmə və Şöbələr",
@@ -212,9 +212,9 @@ const i18n = {
     filter_it: "İT",
     library_search_placeholder: "Kitab axtar...",
     lectures_badge: "Video",
-    lectures_title: "Videodərslər",
+    lectures_title: "Video dərslər və rəqəmsal təhsil",
     lectures_desc:
-      "Müəllimlərimizin hazırladığı video dərslər və tədris materialları.",
+      "Açıq dərslər, video mühazirələr və təlim materialları.",
     sis_badge: "Portal",
     sis_title: "Tələbə Məlumat Sistemi",
     sis_desc:
@@ -234,7 +234,7 @@ const i18n = {
     exam_grade: "Qiymət",
     dash_attend_title: "Aylıq Davamiyyət",
     contact_badge: "Əlaqə",
-    contact_title: "Bizimlə Əlaqə",
+    contact_title: "Müraciətlər",
     cf_name: "Ad və Soyad",
     cf_email: "E-poçt",
     cf_message: "Mesaj",
@@ -360,8 +360,8 @@ const i18n = {
     trophy_cta_filter: "🎯 Bu İdman Üzrə Filtrlə",
     nav_news: "Xəbərlər",
     news_badge: "Yeniliklər",
-    news_title: "Son Xəbərlər",
-    news_desc: "Kollecimizdə baş verən ən son yeniliklər, elanlar və nailiyyətlər bir arada.",
+    news_title: "Elanlar və xəbərlər",
+    news_desc: "Kollecimizdə baş verən rəsmi xəbərlər, tədbirlər və elanlar bir arada.",
     news_all: "Bütün Xəbərlər",
     news_read_more: "Ətraflı oxu →",
     gallery_badge: "Foto",
@@ -951,6 +951,57 @@ const i18n = {
     wtab_contact: "Əlaqə & FAQ",
     wtab_all: "Tam Baxış",
     wtab_memo: "Memorandumlar ↗",
+    nav_s1: "Haqqımızda",
+    nav_s1_sub: "Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız",
+    nav_s2: "Rəhbərlik və struktur",
+    nav_s2_sub: "Rəhbərlik, şöbələr, bölmələr və əməkdaşlar",
+    nav_s3: "Təhsil və ixtisaslar",
+    nav_s3_sub: "İxtisaslar, tədris prosesi, təhsil proqramları",
+    nav_s4: "Elmi və metodiki fəaliyyət",
+    nav_s4_sub: "Elmi məqalələr, nəşrlər, konfranslar, seminarlar",
+    nav_s5: "Elektron kitabxana",
+    nav_s5_sub: "Dərsliklər, dərs vəsaitləri, metodiki materiallar",
+    nav_s6: "Video dərslər və rəqəmsal təhsil",
+    nav_s6_sub: "Açıq dərslər, video mühazirələr, təlim materialları",
+    nav_s7: "Beynəlxalq əlaqələr",
+    nav_s7_sub: "Əməkdaşlıq, memorandumlar, beynəlxalq layihələr",
+    nav_s8: "Tələbə həyatı və nailiyyətlər",
+    nav_s8_sub: "Tələbə tədbirləri, fəxri tələbələr, uğurlar",
+    nav_s9: "Sertifikatlar və təltiflər",
+    nav_s9_sub: "Beynəlxalq sertifikatlar, mükafatlar və diplomlar",
+    nav_s10: "Elanlar və xəbərlər",
+    nav_s10_sub: "Rəsmi xəbərlər, tədbirlər, elanlar",
+    nav_s11: "Müraciətlər",
+    nav_s11_sub: "Elektron müraciət, əlaqə və qəbul",
+    dir_eyebrow: "RƏSMİ İNTERNET SƏHİFƏSİ · ƏSAS NAVİQASİYA",
+    dir_title: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin Rəsmi Portal Bölmələri",
+    hub_honored_badge: "🎖️ Kollecin İnkişafında Xidmətləri Olan Əməkdaşlar",
+    hub_honored_title: "Fəxri əməkdaşlar",
+    hub_honored_desc: "Beynəlxalq akkreditasiya, pedaqoji ustalıq və tədris-metodiki fəaliyyəti ilə fərqlənən kollec əməkdaşlarımız.",
+    hub_honored_cta: "Bütün Sertifikatlar Portfeli →",
+    edu_proc_badge: "📚 TƏDRİS PROSESİ VƏ PROQRAMLAR",
+    edu_proc_title: "Tədris prosesi, təhsil proqramları və istehsalat təcrübəsi",
+    edu_proc_desc: "19 dövlət standartlı ixtisas üzrə nəzəri tədris, rəqəmsal kitabxana resursları, video dərslər və real sənaye müəssisələrində istehsalat təcrübəsi.",
+    sci_conf_badge: "🎤 Akademik Forum və Konfranslar",
+    sci_conf_title: "Elmi konfranslar",
+    sci_sem_badge: "💡 Elmi-Pedaqoji Seminar və Təlimlər",
+    sci_sem_title: "Seminarlar",
+    sci_open_badge: "👩‍🏫 Nümunəvi Dərslər və Metodiki Təcrübə",
+    sci_open_title: "Açıq dərslər",
+    intl_badge: "🌐 Qlobal Akademik İnteqrasiya",
+    intl_title: "Beynəlxalq əlaqələr",
+    intl_desc: "Xarici ali və orta ixtisas təhsili müəssisələri ilə əməkdaşlıq, üçtərəfli memorandumlar, beynəlxalq elmi konfranslar və akkreditasiya olunmuş sertifikatlar.",
+    intl_coop_title: "🌍 Beynəlxalq əməkdaşlıq",
+    intl_memo_title: "🤝 Memorandumlar",
+    intl_memo_cta: "Tam Memorandum Portalını Aç (PDF & Cədvəl) ↗",
+    intl_conf_title: "🏛️ Beynəlxalq konfranslar və beynəlxalq görüşlər",
+    intl_cert_title: "🎖️ Beynəlxalq sertifikatlar",
+    intl_cert_cta: "Bütün Sertifikatlara Bax (10+) →",
+    stu_proj_badge: "🚀 İNNOVASİYA, STEAM VƏ İSTEHSALAT TƏCRÜBƏSİ",
+    stu_proj_title: "Tələbə layihələri",
+    stu_proj_desc: "Robototexnika, STEAM, NASA/FIRST Robotics təşəbbüsləri, gənclər layihələri və istehsalat müəssisələrində praktiki layihələr.",
+    stu_comp_badge: "🥇 RESPUBLİKA VƏ BEYNƏLXALQ YARIŞLAR",
+    stu_comp_title: "Müsabiqələr və olimpiadalar",
     bento_badge: "PORTAL BÖLMƏLƏRİ",
     bento_title: "Sürətli Kateqoriya Keçidləri",
     bento_sub: "BDRNK ekosisteminin bütün bölmələrinə ayrıca səliqəli tablarda bir kliklə keçid edin.",
@@ -1011,8 +1062,8 @@ const i18n = {
 
     nav_science: "Science & Publications",
     science_badge: "Research Activity & Publications",
-    science_title: "International & Domestic Publications of Our Staff",
-    science_desc: "Articles and conference theses published by teaching staff of Baku State Communications and Transport College under Azerbaijan Technical University in prestigious indexed journals and domestic editions.",
+    science_title: "Scientific & Methodical Activities",
+    science_desc: "Indexed international & domestic papers, textbooks, conferences, seminars, and methodical activities of our college faculty.",
     science_ceremony_tag: "Official Ceremony & Reception",
     science_ceremony_kicker: "BDRNK Teaching Staff · 2026",
     science_ceremony_heading: "Achievements of College Leadership & Teaching Staff",
@@ -1133,9 +1184,9 @@ const i18n = {
     feature3_title: "Events",
     feature3_desc: "Latest events, seminars, and college news",
     structure_badge: "Organization",
-    structure_title: "Institutional Structure",
+    structure_title: "Leadership & Structure",
     structure_desc:
-      "Leadership, department heads, and administrative structure — at a glance.",
+      "Leadership, departments, divisions, and faculty structure — at a glance.",
     struct_view_tree: "Hierarchy Tree",
     struct_view_cards: "Staff Cards",
     struct_tab_hierarchy: "Management & Departments",
@@ -1178,9 +1229,9 @@ const i18n = {
     filter_it: "IT",
     library_search_placeholder: "Search books...",
     lectures_badge: "Video",
-    lectures_title: "Video Lectures",
+    lectures_title: "Video Lessons & Digital Education",
     lectures_desc:
-      "Video lessons and educational materials prepared by our teachers.",
+      "Open lessons, video lectures, and digital training materials.",
     sis_badge: "Portal",
     sis_title: "Student Information System",
     sis_desc: "Track exam results, attendance, and performance metrics.",
@@ -1199,7 +1250,7 @@ const i18n = {
     exam_grade: "Grade",
     dash_attend_title: "Monthly Attendance",
     contact_badge: "Contact",
-    contact_title: "Contact Us",
+    contact_title: "Inquiries & Applications",
     cf_name: "Full Name",
     cf_email: "Email",
     cf_message: "Message",
@@ -1320,7 +1371,7 @@ const i18n = {
     trophy_cta_filter: "🎯 Filter by this Sport",
     nav_news: "News",
     news_badge: "Updates",
-    news_title: "Latest News",
+    news_title: "Announcements & News",
     news_desc: "The latest updates, announcements and achievements at our college.",
     news_all: "All News",
     news_read_more: "Read more →",
@@ -1910,6 +1961,57 @@ const i18n = {
     wtab_contact: "Contact & FAQ",
     wtab_all: "All Sections",
     wtab_memo: "Memorandums ↗",
+    nav_s1: "About Us",
+    nav_s1_sub: "History, mission, activities, development strategy",
+    nav_s2: "Leadership & Structure",
+    nav_s2_sub: "Leadership, departments, divisions and staff",
+    nav_s3: "Education & Specialties",
+    nav_s3_sub: "Specialties, educational process, curricula",
+    nav_s4: "Scientific & Methodical Activity",
+    nav_s4_sub: "Articles, publications, conferences, seminars",
+    nav_s5: "Electronic Library",
+    nav_s5_sub: "Textbooks, study guides, methodical materials",
+    nav_s6: "Video Lessons & Digital Education",
+    nav_s6_sub: "Open lessons, video lectures, training resources",
+    nav_s7: "International Relations",
+    nav_s7_sub: "Cooperation, memorandums, international projects",
+    nav_s8: "Student Life & Achievements",
+    nav_s8_sub: "Student events, honor students, achievements",
+    nav_s9: "Certificates & Awards",
+    nav_s9_sub: "International certificates, awards and diplomas",
+    nav_s10: "Announcements & News",
+    nav_s10_sub: "Official news, events, announcements",
+    nav_s11: "Inquiries & Applications",
+    nav_s11_sub: "Online application, contact and admissions",
+    dir_eyebrow: "OFFICIAL WEBSITE · MAIN NAVIGATION",
+    dir_title: "Official Portal Sections of Baku State Communications & Transport College",
+    hub_honored_badge: "🎖️ Distinguished Staff Contributing to College Development",
+    hub_honored_title: "Honored Staff Members",
+    hub_honored_desc: "Faculty and staff distinguished for international accreditation, pedagogical mastery, and methodical excellence.",
+    hub_honored_cta: "Full Certificates Portfolio →",
+    edu_proc_badge: "📚 ACADEMIC PROCESS & CURRICULA",
+    edu_proc_title: "Academic process, study programs and industrial internships",
+    edu_proc_desc: "Theoretical instruction across 19 state-accredited majors, electronic library, video lessons, and industrial placements.",
+    sci_conf_badge: "🎤 Academic Forums & Conferences",
+    sci_conf_title: "Scientific Conferences",
+    sci_sem_badge: "💡 Scientific-Pedagogical Seminars & Training",
+    sci_sem_title: "Seminars",
+    sci_open_badge: "👩‍🏫 Open Lessons & Methodical Practice",
+    sci_open_title: "Open Lessons",
+    intl_badge: "🌐 Global Academic Integration",
+    intl_title: "International Relations",
+    intl_desc: "Institutional partnerships with foreign colleges, trilateral memorandums, international conferences, and accredited certifications.",
+    intl_coop_title: "🌍 International Cooperation",
+    intl_memo_title: "🤝 Memorandums",
+    intl_memo_cta: "Open Full Memorandum Portal (PDF & Table) ↗",
+    intl_conf_title: "🏛️ International Conferences & Official Meetings",
+    intl_cert_title: "🎖️ International Certificates",
+    intl_cert_cta: "View All Certificates (10+) →",
+    stu_proj_badge: "🚀 INNOVATION, STEAM & INDUSTRIAL INTERNSHIP",
+    stu_proj_title: "Student Projects",
+    stu_proj_desc: "Robotics, STEAM, NASA/FIRST Robotics initiatives, youth innovation projects, and industrial training.",
+    stu_comp_badge: "🥇 NATIONAL & INTERNATIONAL COMPETITIONS",
+    stu_comp_title: "Competitions & Olympiads",
     bento_badge: "PORTAL SECTIONS",
     bento_title: "Quick Category Access",
     bento_sub: "Switch cleanly between all BDRNK ecosystem modules in dedicated workspace tabs.",
@@ -1965,7 +2067,7 @@ const i18n = {
 
     nav_science: "Наука и Публикации",
     science_badge: "Исследовательская Деятельность и Публикации",
-    science_title: "Международные и Отечественные Публикации Преподавателей",
+    science_title: "Научная и методическая деятельность",
     science_desc: "Статьи и тезисы преподавательского состава Бакинского государственного колледжа связи и транспорта при Азербайджанском техническом университете, опубликованные в авторитетных индексируемых и отечественных журналах.",
     science_ceremony_tag: "Официальная Презентация",
     science_ceremony_kicker: "Педагогический состав БГКСТ · 2026",
@@ -2088,8 +2190,8 @@ const i18n = {
     feature3_title: "Мероприятия",
     feature3_desc: "Последние события, семинары и новости колледжа",
     structure_badge: "Организация",
-    structure_title: "Институциональная Структура",
-    structure_desc: "Руководство, заведующие отделениями и административная структура — с первого взгляда.",
+    structure_title: "Руководство и структура",
+    structure_desc: "Руководство, отделы, подразделения и сотрудники — организационная структура с первого взгляда.",
     struct_view_tree: "Иерархическая Схема",
     struct_view_cards: "Карточки Сотрудников",
     struct_tab_hierarchy: "Специальности",
@@ -2132,8 +2234,8 @@ const i18n = {
     filter_it: "ИТ",
     library_search_placeholder: "Поиск книг...",
     lectures_badge: "Видео",
-    lectures_title: "Видеоуроки",
-    lectures_desc: "Видеоуроки и материалы, подготовленные нашими учителями.",
+    lectures_title: "Видеоуроки и цифровое образование",
+    lectures_desc: "Открытые уроки, видеолекции и учебные материалы, подготовленные нашими преподавателями.",
     sis_badge: "Портал",
     sis_title: "Студенческая Информ. Система",
     sis_desc: "Оценки, посещаемость и показатели успеваемости.",
@@ -2152,7 +2254,7 @@ const i18n = {
     exam_grade: "Оценка",
     dash_attend_title: "Посещаемость за Месяц",
     contact_badge: "Контакты",
-    contact_title: "Свяжитесь с нами",
+    contact_title: "Обращения",
     cf_name: "Имя Фамилия",
     cf_email: "E-mail",
     cf_message: "Сообщение",
@@ -2278,7 +2380,7 @@ const i18n = {
     trophy_cta_filter: "🎯 Показать дипломы по спорту",
     nav_news: "Новости",
     news_badge: "Обновления",
-    news_title: "Последние Новости",
+    news_title: "Объявления и новости",
     news_desc: "Последние обновления, объявления и достижения нашего колледжа.",
     news_all: "Все Новости",
     news_read_more: "Подробнее →",
@@ -2868,6 +2970,57 @@ const i18n = {
     wtab_contact: "Контакты и FAQ",
     wtab_all: "Все Разделы",
     wtab_memo: "Меморандумы ↗",
+    nav_s1: "О нас",
+    nav_s1_sub: "История, миссия, деятельность, стратегия развития",
+    nav_s2: "Руководство и структура",
+    nav_s2_sub: "Руководство, отделы, подразделения и сотрудники",
+    nav_s3: "Образование и специальности",
+    nav_s3_sub: "Специальности, учебный процесс, образовательные программы",
+    nav_s4: "Научная и методическая деятельность",
+    nav_s4_sub: "Научные статьи, публикации, конференции, семинары",
+    nav_s5: "Электронная библиотека",
+    nav_s5_sub: "Учебники, учебные пособия, методические материалы",
+    nav_s6: "Видеоуроки и цифровое образование",
+    nav_s6_sub: "Открытые уроки, видеолекции, учебные материалы",
+    nav_s7: "Международные связи",
+    nav_s7_sub: "Сотрудничество, меморандумы, международные проекты",
+    nav_s8: "Студенческая жизнь и достижения",
+    nav_s8_sub: "Студенческие мероприятия, почетные студенты, успехи",
+    nav_s9: "Сертификаты и награды",
+    nav_s9_sub: "Международные сертификаты, награды и дипломы",
+    nav_s10: "Объявления и новости",
+    nav_s10_sub: "Официальные новости, события, объявления",
+    nav_s11: "Обращения",
+    nav_s11_sub: "Электронные обращения, контакты и прием",
+    dir_eyebrow: "ОФИЦИАЛЬНЫЙ САЙТ · ОСНОВНАЯ НАВИГАЦИЯ",
+    dir_title: "Официальные разделы портала Бакинского колледжа связи и транспорта",
+    hub_honored_badge: "🎖️ Сотрудники, внесшие вклад в развитие колледжа",
+    hub_honored_title: "Почетные сотрудники",
+    hub_honored_desc: "Преподаватели и специалисты, отмеченные за международную аккредитацию и педагогическое мастерство.",
+    hub_honored_cta: "Полное портфолио сертификатов →",
+    edu_proc_badge: "📚 УЧЕБНЫЙ ПРОЦЕСС И ПРОГРАММЫ",
+    edu_proc_title: "Учебный процесс, образовательные программы и практика",
+    edu_proc_desc: "Обучение по 19 государственным специальностям, электронная библиотека, видеоуроки и производственная практика.",
+    sci_conf_badge: "🎤 Академические форумы и конференции",
+    sci_conf_title: "Научные конференции",
+    sci_sem_badge: "💡 Научно-педагогические семинары",
+    sci_sem_title: "Семинары",
+    sci_open_badge: "👩‍🏫 Открытые уроки и методический опыт",
+    sci_open_title: "Открытые уроки",
+    intl_badge: "🌐 Глобальная академическая интеграция",
+    intl_title: "Международные связи",
+    intl_desc: "Международное партнерство, трехсторонние меморандумы, конференции и аккредитованные сертификаты.",
+    intl_coop_title: "🌍 Международное сотрудничество",
+    intl_memo_title: "🤝 Меморандумы",
+    intl_memo_cta: "Открыть портал меморандумов (PDF и Таблица) ↗",
+    intl_conf_title: "🏛️ Международные конференции и встречи",
+    intl_cert_title: "🎖️ Международные сертификаты",
+    intl_cert_cta: "Смотреть все сертификаты (10+) →",
+    stu_proj_badge: "🚀 ИННОВАЦИИ, STEAM И ПРАКТИКА",
+    stu_proj_title: "Студенческие проекты",
+    stu_proj_desc: "Робототехника, STEAM, проекты NASA/FIRST Robotics, молодежные инициативы и производственная практика.",
+    stu_comp_badge: "🥇 РЕСПУБЛИКАНСКИЕ И МЕЖДУНАРОДНЫЕ КОНКУРСЫ",
+    stu_comp_title: "Конкурсы и олимпиады",
     bento_badge: "РАЗДЕЛЫ ПОРТАЛА",
     bento_title: "Быстрый Переход по Категориям",
     bento_sub: "Переключайтесь между всеми модулями экосистемы БГКСТ в отдельных вкладках.",
@@ -11543,6 +11696,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     renderNews();
+    window.openNewsReader = openNewsReader;
 
     // Re-render on language and theme change
     document.addEventListener("themeChanged", renderNews);
@@ -20007,7 +20161,7 @@ function initGlobalSearchModule() {
         desc: authRole + " · " + dept + " (" + worksCount + " elmi əsər)",
         tokens: [authName, authRole, dept, "alim", "muellim", "meqale", "elmi", "tedqiqat", "ayten namazova"].join(" ").toLowerCase(),
         action: () => {
-          const sec = document.getElementById("science-portal");
+          const sec = document.getElementById("science-portal") || document.getElementById("science");
           sec?.scrollIntoView({ behavior: "smooth" });
         }
       });
@@ -20028,7 +20182,7 @@ function initGlobalSearchModule() {
           desc: authName + " · " + jTitle + (cTitle ? " (" + cTitle + ")" : ""),
           tokens: [artTitle, authName, jTitle, cTitle, "meqale", "jurnal", "nesr", "konfrans", "beynelxalq"].join(" ").toLowerCase(),
           action: () => {
-            const sec = document.getElementById("science-portal");
+            const sec = document.getElementById("science-portal") || document.getElementById("science");
             sec?.scrollIntoView({ behavior: "smooth" });
           }
         });
@@ -20313,17 +20467,20 @@ function initGlobalSearchModule() {
       });
     }
 
-    // 7. Workspace Category Tabs (8 Bölmə + Tam Baxış) & Beynəlxalq Memorandumlar
+    // 7. Workspace Category Tabs (11 Rəsmi Bölmə + Tam Baxış) & Beynəlxalq Memorandumlar
     const workspaceTabEntries = [
-      { tab: "home", categories: ["structure", "majors"], icon: "🏠", key: "wtab_home", desc: "Əsas səhifə, statistika, məzun günü və sürətli bento keçidlər", tokens: "ana sehife baslangic hero statistika portal" },
-      { tab: "structure", categories: ["structure", "majors"], icon: "🏛️", key: "wtab_structure", desc: "Rəhbərlik, 10 FBK kafedrası, fəxri əməkdaşlar və qəbul ixtisasları", tokens: "struktur rehberlik fbk kafedra ixtisaslar qebul" },
-      { tab: "academics", categories: ["science", "lectures"], icon: "🎓", key: "wtab_academics", desc: "Videodərslər, Tədqiqat & Elm müəllifləri, IEQC sertifikatları və karyera", tokens: "tedris elm tedqiqat video ders meqale nesrler" },
-      { tab: "library", categories: ["library"], icon: "📚", key: "wtab_library", desc: "Elektron kitabxana, 80+ dərslik və 40+ FBK mühazirə fondu", tokens: "elektron kitabxana derslik muhazire pdf docx oxu zali" },
-      { tab: "campus", categories: ["campus"], icon: "🗺️", key: "wtab_campus", desc: "5 mərtəbəli interaktiv kampus planı, auditoriyalar və laboratoriyalar", tokens: "kampus mertebe otaqlar auditoriya laboratoriya bina" },
-      { tab: "achievements", categories: ["achieve"], icon: "🏆", key: "wtab_achievements", desc: "Fəxri tələbə portfeli, beynəlxalq diplomlar və İdman Kuboku", tokens: "nailiyyet seref fexri telebe idman kubok diplom" },
-      { tab: "media", categories: ["news"], icon: "📰", key: "wtab_media", desc: "110+ rəsmi xəbər, redaksiya oxu zalı və 4-panel media qalereyası", tokens: "xeberler qalereya media foto video arxiv" },
-      { tab: "contact", categories: ["contact", "faq"], icon: "📞", key: "wtab_contact", desc: "Xəritə, birbaşa onlayn müraciət formu və tez-tez verilən suallar", tokens: "elaqe unvan xidmetler form faq suallar" },
-      { tab: "all", categories: ["structure", "campus", "library", "science", "achieve", "lectures", "news", "faq", "contact"], icon: "⊞", key: "wtab_all", desc: "Bütün bölmələri eyni səhifədə tam şəkildə görüntüləyin", tokens: "tam baxis hamisi butun bolmeler" },
+      { tab: "about", categories: ["structure", "campus"], icon: "1", key: "nav_s1", desc: "Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız, kampus xəritəsi və Qarabağ salnaməsi", tokens: "haqqimizda tarix missiya strategiya kampus qarabag mezun hero" },
+      { tab: "structure", categories: ["structure"], icon: "2", key: "nav_s2", desc: "Rəhbərlik, şöbələr, bölmələr, FBK-lar və fəxri əməkdaşlar", tokens: "rehberlik struktur sobeler bolmeler fbk fexri emekdaslar" },
+      { tab: "majors", categories: ["majors", "structure"], icon: "3", key: "nav_s3", desc: "19 rəsmi ixtisas, tədris prosesi, təhsil proqramları və istehsalat təcrübəsi", tokens: "tehsil ixtisaslar tedris prosesi proqramlar tecrube yol xeritesi" },
+      { tab: "science", categories: ["science"], icon: "4", key: "nav_s4", desc: "Elmi məqalələr (ORCID), müəllimlərin nəşrləri, dərsliklər, konfranslar, seminarlar və açıq dərslər", tokens: "elmi metodiki fealiyyet meqaleler nesrler orcid konfranslar seminarlar aciq dersler" },
+      { tab: "library", categories: ["library"], icon: "5", key: "nav_s5", desc: "Dərsliklər, 80 dərs vəsaiti, 40 mühazirə və metodiki materiallar", tokens: "elektron kitabxana derslik ders vesaiti metodiki materiallar muhazire pdf" },
+      { tab: "lectures", categories: ["lectures"], icon: "6", key: "nav_s6", desc: "Açıq dərslər, 19 video mühazirə və rəqəmsal təlim materialları", tokens: "video dersler reqemsal tehsil aciq dersler video muhazirələr telim" },
+      { tab: "international", categories: ["structure", "science"], icon: "7", key: "nav_s7", desc: "Beynəlxalq əməkdaşlıq, Qazaxıstan ALT və Özbəkistan Daşkənd memorandumları, konfranslar və sertifikatlar", tokens: "beynelxalq elaqeler emekdasliq memorandumlar qazaxistan daskend layiheler" },
+      { tab: "students", categories: ["achieve"], icon: "8", key: "nav_s8", desc: "Fəxri tələbələr, tələbə layihələri, nailiyyətlər, idman kubokları, müsabiqələr və olimpiadalar", tokens: "telebe heyati nailiyyetler fexri telebeler layiheler musabiqeler olimpiadalar kubok" },
+      { tab: "certificates", categories: ["achieve"], icon: "9", key: "nav_s9", desc: "Beynəlxalq sertifikatlar, mükafatlar və 24 rəsmi diplom", tokens: "sertifikatlar teltifler mukafatlar diplomlar beynelxalq fexri ferman" },
+      { tab: "news", categories: ["news"], icon: "10", key: "nav_s10", desc: "116+ rəsmi xəbər, tədbirlər, elanlar və foto-video qalereya", tokens: "elanlar xeberler tedbirler qalereya foto video" },
+      { tab: "contact", categories: ["contact", "faq"], icon: "11", key: "nav_s11", desc: "Elektron müraciət, əlaqə, xəritə, qəbul və tez-tez verilən suallar", tokens: "muracietler elektron muraciet elaqe qebul unvan faq" },
+      { tab: "all", categories: ["structure", "campus", "library", "science", "achieve", "lectures", "news", "faq", "contact"], icon: "⊞", key: "wtab_all", desc: "Bütün 11 bölməni eyni səhifədə tam şəkildə görüntüləyin", tokens: "tam baxis hamisi butun bolmeler" },
     ];
 
     workspaceTabEntries.forEach((wt) => {
@@ -21739,5 +21896,252 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
     document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
+  }
+})();
+
+/**
+ * ═══════════════════════════════════════════════════════════════════
+ * OFFICIAL 11-SECTION HIERARCHICAL SUB-SECTION HUBS RENDERER
+ * Pulls live items from verified newsData, teacherCertificatesData,
+ * scienceAuthorsData, and honorStudentsData (zero fabricated records).
+ * ═══════════════════════════════════════════════════════════════════
+ */
+(function initPortalHierarchyHubs() {
+  function getLang() {
+    return typeof currentLang !== "undefined" ? currentLang : "az";
+  }
+
+  function safeEsc(val) {
+    if (typeof window.escapeHTML === "function") return window.escapeHTML(val);
+    if (val == null) return "";
+    return String(val)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function renderNewsCardsInto(container, items, tagFallback) {
+    if (!container) return;
+    const lang = getLang();
+    const readLabel = lang === "en" ? "Read details →" : lang === "ru" ? "Подробнее →" : "Ətraflı oxu →";
+    container.innerHTML = "";
+    items.forEach(({ item, index }) => {
+      const card = document.createElement("article");
+      card.className = "portal-hub-card";
+      card.style.cursor = "pointer";
+      const title = item["title_" + lang] || item.title_az || "";
+      const desc = item["desc_" + lang] || item.desc_az || "";
+      const tag = item["tag_" + lang] || item.tag_az || tagFallback || "Tədbir";
+      const dateStr = item["date_" + lang] || item.date_az || item.date || "";
+      card.innerHTML = `
+        <span class="portal-hub-tag">${safeEsc(tag)}${dateStr ? " · " + safeEsc(dateStr) : ""}</span>
+        <h4 class="portal-hub-title">${safeEsc(title)}</h4>
+        <p class="portal-hub-desc">${safeEsc(desc.slice(0, 170))}${desc.length > 170 ? "..." : ""}</p>
+        <button type="button" class="portal-hub-link">${safeEsc(readLabel)}</button>
+      `;
+      card.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (typeof window.openNewsReader === "function") {
+          window.openNewsReader(index);
+        }
+      });
+      container.appendChild(card);
+    });
+  }
+
+  function renderCertCardsInto(container, certs) {
+    if (!container) return;
+    const lang = getLang();
+    const viewLabel = lang === "en" ? "View certificate →" : lang === "ru" ? "Открыть сертификат →" : "Sertifikata bax →";
+    container.innerHTML = "";
+    certs.forEach((cert) => {
+      const card = document.createElement("article");
+      card.className = "portal-hub-card";
+      card.style.cursor = "pointer";
+      const badge = cert["badge_" + lang] || cert.badge_az || "";
+      const title = cert["title_" + lang] || cert.title_az || "";
+      const issuer = cert["issuer_" + lang] || cert.issuer_az || "";
+      card.innerHTML = `
+        <span class="portal-hub-tag">${safeEsc(cert.icon || "🎖️")} ${safeEsc(cert.teacher)} · ${safeEsc(cert.year || "")}</span>
+        <h4 class="portal-hub-title">${safeEsc(title)}</h4>
+        <p class="portal-hub-desc">${safeEsc(issuer)}${badge ? " — " + safeEsc(badge) : ""}</p>
+        <button type="button" class="portal-hub-link">${safeEsc(viewLabel)}</button>
+      `;
+      card.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (typeof window.openTeacherCertModal === "function") {
+          window.openTeacherCertModal(cert.id);
+        }
+      });
+      container.appendChild(card);
+    });
+  }
+
+  function renderAllHubs() {
+    const lang = getLang();
+    const newsList = typeof newsData !== "undefined" && Array.isArray(newsData) ? newsData : [];
+    const tCerts = typeof teacherCertificatesData !== "undefined" && Array.isArray(teacherCertificatesData) ? teacherCertificatesData : [];
+    const hStudents = window.honorStudentsData && Array.isArray(window.honorStudentsData) ? window.honorStudentsData : [];
+    const sAuthors = window.scienceAuthorsData && Array.isArray(window.scienceAuthorsData) ? window.scienceAuthorsData : [];
+
+    // 1. Tab 2: Fəxri əməkdaşlar highlight (#honored-staff-highlight-grid)
+    const honoredGrid = document.getElementById("honored-staff-highlight-grid");
+    if (honoredGrid && tCerts.length) {
+      const byTeacher = [];
+      const seenTeachers = new Set();
+      tCerts.forEach((c) => {
+        if (!seenTeachers.has(c.teacher)) {
+          seenTeachers.add(c.teacher);
+          byTeacher.push(c);
+        }
+      });
+      renderCertCardsInto(honoredGrid, byTeacher);
+    }
+
+    // Helper for indexing newsData matches
+    const indexedNews = newsList.map((item, index) => ({ item, index }));
+    const matchNews = (re, limit = 6) =>
+      indexedNews
+        .filter(({ item }) => {
+          const hay = [item.title_az, item.tag_az, item.desc_az, item.full_az].filter(Boolean).join(" ").toLowerCase();
+          return re.test(hay);
+        })
+        .slice(0, limit);
+
+    // 2. Tab 4: Elmi konfranslar (#science-conferences-grid)
+    const sciConfGrid = document.getElementById("science-conferences-grid");
+    if (sciConfGrid) {
+      const confItems = matchNews(/konfrans|forum|simpozium|əmək bazar/i, 4);
+      renderNewsCardsInto(sciConfGrid, confItems, "Konfrans");
+      // Also append the institutional Employment Agency Partnership Conference card linking directly to #labor-market-conference
+      const confCard = document.createElement("article");
+      confCard.className = "portal-hub-card";
+      confCard.style.cursor = "pointer";
+      confCard.innerHTML = `
+        <span class="portal-hub-tag">💼 Tərəfdaşlıq Konfransı</span>
+        <h4 class="portal-hub-title">“Təhsil – Təlim – Məşğulluq – Sənaye: Tərəfdaşlıq Konfransı”</h4>
+        <p class="portal-hub-desc">Dövlət Məşğulluq Agentliyi ilə əmək bazarına uyğunluq və kadr hazırlığı üzrə rəsmi konfrans.</p>
+        <button type="button" class="portal-hub-link">Konfransa Bax →</button>
+      `;
+      confCard.addEventListener("click", () => {
+        const tabBtn = document.getElementById("tab-btn-conference");
+        tabBtn?.click();
+        if (typeof window.switchWorkspaceTab === "function") {
+          window.switchWorkspaceTab("about", { focusAnchor: "about-mvv-anchor", updateUrl: true });
+        }
+      });
+      sciConfGrid.appendChild(confCard);
+    }
+
+    // 3. Tab 4: Seminarlar (#science-seminars-grid)
+    const sciSemGrid = document.getElementById("science-seminars-grid");
+    if (sciSemGrid) {
+      renderNewsCardsInto(sciSemGrid, matchNews(/seminar|təlim|meis|iqlim|yaşıl dünya/i, 6), "Seminar");
+    }
+
+    // 4. Tab 4: Açıq dərslər (#science-open-lessons-grid)
+    const sciOpenGrid = document.getElementById("science-open-lessons-grid");
+    if (sciOpenGrid) {
+      renderNewsCardsInto(sciOpenGrid, matchNews(/açıq dərs|nümunəvi dərs/i, 6), "Açıq Dərs");
+    }
+
+    // 5. Tab 7: Beynəlxalq konfranslar & nəşrlər (#intl-conferences-grid)
+    const intlConfGrid = document.getElementById("intl-conferences-grid");
+    if (intlConfGrid) {
+      const intlNews = matchNews(/daşkənd|qazaxıstan|aktau|memorandum|beynəlxalq əməkdaşlıq|wuf13|marafon/i, 4);
+      renderNewsCardsInto(intlConfGrid, intlNews, "Beynəlxalq Görüş");
+      // Add top foreign indexed journal authors summary cards
+      sAuthors
+        .filter((a) => a.scope_type === "xarici" || a.scope_type === "both")
+        .slice(0, 3)
+        .forEach((auth) => {
+          const w = auth.works && auth.works[0];
+          if (!w) return;
+          const card = document.createElement("article");
+          card.className = "portal-hub-card";
+          card.style.cursor = "pointer";
+          const authName = auth["author_" + lang] || auth.author_az;
+          const wTitle = w["title_" + lang] || w.title_az || w.title;
+          const wJournal = w["journal_" + lang] || w.journal_az || w.journal;
+          card.innerHTML = `
+            <span class="portal-hub-tag">🌍 Xarici Nəşr · ${safeEsc(w["country_" + lang] || w.country_az || "")}</span>
+            <h4 class="portal-hub-title">${safeEsc(authName)}</h4>
+            <p class="portal-hub-desc">${safeEsc(wTitle)} — <strong>${safeEsc(wJournal)}</strong></p>
+            <button type="button" class="portal-hub-link">Elmi Fəaliyyət Bölməsində Bax →</button>
+          `;
+          card.addEventListener("click", () => {
+            if (typeof window.switchWorkspaceTab === "function") {
+              window.switchWorkspaceTab("science", { focusAnchor: "science-articles-anchor", updateUrl: true });
+            }
+          });
+          intlConfGrid.appendChild(card);
+        });
+    }
+
+    // 6. Tab 7: Beynəlxalq sertifikatlar (#intl-certificates-grid)
+    const intlCertGrid = document.getElementById("intl-certificates-grid");
+    if (intlCertGrid && tCerts.length) {
+      renderCertCardsInto(intlCertGrid, tCerts.slice(0, 6));
+    }
+
+    // 7. Tab 8: Tələbə layihələri (#student-projects-grid)
+    const stuProjGrid = document.getElementById("student-projects-grid");
+    if (stuProjGrid) {
+      const projNews = matchNews(/steam|layihə|qanad|robot|ixtira/i, 5);
+      renderNewsCardsInto(stuProjGrid, projNews, "Tələbə Layihəsi");
+      if (hStudents.length) {
+        const senan = hStudents[0];
+        const card = document.createElement("article");
+        card.className = "portal-hub-card";
+        card.style.cursor = "pointer";
+        card.innerHTML = `
+          <span class="portal-hub-tag">🇺🇸 FIRST Robotics & NASA Layihəsi</span>
+          <h4 class="portal-hub-title">${safeEsc(senan["fullName_" + lang] || senan.fullName_az)}</h4>
+          <p class="portal-hub-desc">${safeEsc((senan["quote_" + lang] || senan.quote_az || "").slice(0, 165))}...</p>
+          <button type="button" class="portal-hub-link">Layihə Dosyesini Aç →</button>
+        `;
+        card.addEventListener("click", () => {
+          if (typeof window.openHonorModal === "function") {
+            window.openHonorModal(senan.id);
+          }
+        });
+        stuProjGrid.appendChild(card);
+      }
+    }
+
+    // 8. Tab 8: Müsabiqələr və olimpiadalar (#student-competitions-grid)
+    const stuCompGrid = document.getElementById("student-competitions-grid");
+    if (stuCompGrid) {
+      const compNews = matchNews(/olimpiada|müsabiqə|spartakiada|voleybol yarışı|çempionat/i, 5);
+      renderNewsCardsInto(stuCompGrid, compNews, "Müsabiqə / Olimpiada");
+      if (hStudents.length) {
+        hStudents.forEach((st) => {
+          const card = document.createElement("article");
+          card.className = "portal-hub-card";
+          card.style.cursor = "pointer";
+          card.innerHTML = `
+            <span class="portal-hub-tag">🥇 ${safeEsc(st["titleBadge_" + lang] || st.titleBadge_az || "Fəxri Tələbə")}</span>
+            <h4 class="portal-hub-title">${safeEsc(st["fullName_" + lang] || st.fullName_az)}</h4>
+            <p class="portal-hub-desc">${safeEsc(st["statusText_" + lang] || st.statusText_az)} — ${safeEsc(st["role_" + lang] || st.role_az)}</p>
+            <button type="button" class="portal-hub-link">Qalib Dosyesinə Bax →</button>
+          `;
+          card.addEventListener("click", () => {
+            if (typeof window.openHonorModal === "function") {
+              window.openHonorModal(st.id);
+            }
+          });
+          stuCompGrid.appendChild(card);
+        });
+      }
+    }
+  }
+
+  document.addEventListener("languageChanged", renderAllHubs);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderAllHubs);
+  } else {
+    renderAllHubs();
   }
 })();

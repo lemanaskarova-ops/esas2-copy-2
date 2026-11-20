@@ -10,69 +10,99 @@
     "about",
     "structure",
     "majors",
-    "lectures",
-    "library",
-    "library-lectures",
     "science",
-    "honor-students",
-    "teacher-certificates",
-    "campus",
+    "library",
+    "lectures",
+    "international",
+    "students",
+    "certificates",
     "news",
-    "qarabag",
-    "gallery",
     "contact",
     "all",
   ];
 
-  // Map every section ID or sub-anchor in index.html to its exact category tab
+  // Backward-compatible aliases so legacy ?tab=... links & search entries resolve cleanly
+  const TAB_ALIASES = {
+    home: { tab: "about" },
+    "library-lectures": { tab: "library", libView: "lectures", anchor: "library-lectures-section" },
+    "honor-students": { tab: "students", anchor: "honor-students" },
+    "teacher-certificates": { tab: "certificates", anchor: "teacher-certificates" },
+    campus: { tab: "about", anchor: "campus-navigator", floor: "all" },
+    qarabag: { tab: "about", anchor: "qarabag" },
+    gallery: { tab: "news", anchor: "gallery" },
+    academics: { tab: "science" },
+    achievements: { tab: "students" },
+    media: { tab: "news" },
+  };
+
+  // Map every section ID or sub-anchor in index.html to its exact canonical tab
   const TARGET_TO_TAB = {
     hero: "about",
+    "portal-directory": "about",
     "executive-hub": "about",
     about: "about",
+    "about-mvv-anchor": "about",
+    "labor-market-conference": "about",
+    "campus-navigator": "about",
+    "campus-all-floors": "about",
+    campus: "about",
+    "campus-floor-1": "about",
+    "campus-floor-2": "about",
+    "campus-floor-3": "about",
+    "campus-floor-4": "about",
+    "campus-floor-5": "about",
+    qarabag: "about",
+    memorial: "about",
     graduates: "about",
 
     structure: "structure",
     "struct-tree-view": "structure",
     "struct-cards-view": "structure",
+    "honored-staff-highlight": "structure",
 
     majors: "majors",
     "majors-section": "majors",
     "tree-majors-block": "majors",
+    "education-process-section": "majors",
+    roadmap: "majors",
 
-    lectures: "lectures",
-    "lecture-studio": "lectures",
+    science: "science",
+    "science-portal": "science",
+    "science-textbooks-section": "science",
+    "science-articles-anchor": "science",
+    "science-methodical-hub": "science",
+    "science-conferences-section": "science",
+    "science-seminars-section": "science",
+    "science-open-lessons-section": "science",
 
     library: "library",
     "library-books-pane": "library",
     "lib-master-switcher": "library",
+    "library-lectures": "library",
+    "library-lectures-section": "library",
 
-    "library-lectures": "library-lectures",
-    "library-lectures-section": "library-lectures",
+    lectures: "lectures",
+    "lecture-studio": "lectures",
+    "lectures-grid": "lectures",
 
-    science: "science",
-    roadmap: "science",
+    international: "international",
+    "intl-cooperation": "international",
+    "intl-memorandums": "international",
+    "intl-conferences": "international",
+    "intl-certificates": "international",
 
-    "honor-students": "honor-students",
-    "teacher-certificates": "teacher-certificates",
+    "honor-students": "students",
+    "student-projects-section": "students",
+    "sports-trophies": "students",
+    "trophy-stage": "students",
+    "student-competitions-section": "students",
 
-    certificates: "honor-students",
-    "sports-trophies": "honor-students",
-    "trophy-stage": "honor-students",
-
-    "campus-navigator": "campus",
-    "campus-all-floors": "campus",
-    campus: "campus",
-
-    "campus-floor-1": "campus",
-    "campus-floor-2": "campus",
-    "campus-floor-3": "campus",
-    "campus-floor-4": "campus",
-    "campus-floor-5": "campus",
+    "teacher-certificates": "certificates",
+    certificates: "certificates",
+    "cert-grid": "certificates",
 
     news: "news",
-    qarabag: "qarabag",
-    memorial: "qarabag",
-    gallery: "gallery",
+    gallery: "news",
 
     contact: "contact",
     "contact-form": "contact",
@@ -152,20 +182,29 @@
 
   const originalScrollIntoView = Element.prototype.scrollIntoView;
 
-  function setActiveTab(tabId, options = {}) {
-    let resolvedTab = tabId;
-    let autoFloor = null;
-    if (tabId && tabId.startsWith("campus-floor-")) {
-      autoFloor = tabId.replace("campus-floor-", "");
-      resolvedTab = "campus";
+  function resolveAliasConfig(rawTabId) {
+    if (!rawTabId) return { tab: "about" };
+    if (rawTabId.startsWith("campus-floor-")) {
+      return { tab: "about", anchor: "campus-navigator", floor: rawTabId.replace("campus-floor-", "") };
     }
+    if (TAB_ALIASES[rawTabId]) {
+      return TAB_ALIASES[rawTabId];
+    }
+    return { tab: rawTabId };
+  }
+
+  function setActiveTab(tabId, options = {}) {
+    const aliasCfg = resolveAliasConfig(tabId);
+    const resolvedTab = aliasCfg.tab;
+    const autoFloor = options.floor || aliasCfg.floor || null;
+    const autoLibView = options.libView || aliasCfg.libView || null;
 
     const nextTab = VALID_TABS.includes(resolvedTab) ? resolvedTab : "about";
     const {
       scrollToTop = false,
       updateUrl = true,
       pushHistory = false,
-      focusAnchor = null,
+      focusAnchor = aliasCfg.anchor || null,
     } = options;
     const prevTab = activeTab;
     activeTab = nextTab;
@@ -174,17 +213,12 @@
       try {
         window.switchCampusFloor(autoFloor);
       } catch (e) { }
-    } else if (nextTab === "campus" && !autoFloor && typeof window.switchCampusFloor === "function") {
-      try {
-        window.switchCampusFloor("all");
-      } catch (e) { }
     }
 
     // Toggle category panels & pause playing videos inside hidden panels
-    const actualPanelName = nextTab === "library-lectures" ? "library" : nextTab;
     document.querySelectorAll("[data-tab-panel]").forEach((panel) => {
       const panelName = panel.getAttribute("data-tab-panel");
-      const shouldShow = nextTab === "all" || panelName === actualPanelName;
+      const shouldShow = nextTab === "all" || panelName === nextTab;
       panel.classList.toggle("is-active", shouldShow);
       panel.setAttribute("aria-hidden", shouldShow ? "false" : "true");
       if (!shouldShow) {
@@ -198,19 +232,19 @@
       }
     });
 
-    // If opening library vs library-lectures, automatically toggle inner switcher
-    if (nextTab === "library") {
-      const booksBtn = document.querySelector('#lib-master-switcher [data-view="books"]');
-      if (booksBtn && typeof booksBtn.click === "function") booksBtn.click();
-    } else if (nextTab === "library-lectures") {
+    // If opening library vs library-lectures, toggle inner switcher accurately
+    if (autoLibView === "lectures") {
       const lecBtn = document.querySelector('#lib-master-switcher [data-view="lectures"]');
       if (lecBtn && typeof lecBtn.click === "function") lecBtn.click();
+    } else if (autoLibView === "books" || (nextTab === "library" && prevTab !== "library" && !autoLibView)) {
+      const booksBtn = document.querySelector('#lib-master-switcher [data-view="books"]');
+      if (booksBtn && typeof booksBtn.click === "function") booksBtn.click();
     }
 
     // Update Workspace Tab Pills (roving tabindex for WAI-ARIA tablist)
     document.querySelectorAll("[data-workspace-tab]").forEach((btn) => {
       const btnTab = btn.getAttribute("data-workspace-tab");
-      const isMatch = btnTab === tabId || btnTab === nextTab;
+      const isMatch = btnTab === nextTab;
       btn.classList.toggle("is-active", isMatch);
       btn.setAttribute("aria-selected", isMatch ? "true" : "false");
       if (btn.classList.contains("workspace-tab-btn")) {
@@ -222,7 +256,7 @@
     if (updateUrl && window.history && typeof window.history.replaceState === "function") {
       try {
         const url = new URL(window.location.href);
-        if (nextTab === "about") {
+        if (nextTab === "about" && !focusAnchor) {
           url.searchParams.delete("tab");
         } else {
           url.searchParams.set("tab", nextTab);
@@ -288,7 +322,7 @@
       if (focusAnchor) {
         const target = document.getElementById(focusAnchor);
         if (target) {
-          const headerH = (document.getElementById("site-header")?.offsetHeight || 72) + 58;
+          const headerH = (document.getElementById("site-header")?.offsetHeight || 72) + 24;
           const y = target.getBoundingClientRect().top + window.scrollY - headerH;
           window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
           return;
@@ -335,8 +369,22 @@
     return el ? findTabForElement(el) : null;
   }
 
-  // Intercept clicks on workspace tabs and in-page section anchors
+  // Intercept clicks on workspace tabs, library subview buttons, and in-page anchors
   document.addEventListener("click", (e) => {
+    const libSubTrigger = e.target.closest("[data-lib-subview]");
+    if (libSubTrigger) {
+      e.preventDefault();
+      const viewMode = libSubTrigger.getAttribute("data-lib-subview") || "books";
+      setActiveTab("library", {
+        scrollToTop: false,
+        updateUrl: true,
+        pushHistory: true,
+        libView: viewMode,
+        focusAnchor: "lib-master-switcher",
+      });
+      return;
+    }
+
     const tabTrigger = e.target.closest("[data-workspace-tab]");
     if (tabTrigger) {
       // Allow Ctrl/Cmd/Shift/Middle-click to open as a new browser tab natively
@@ -356,25 +404,18 @@
     const targetId = href.slice(1);
     const ownerTab = resolveTabForTarget(targetId);
 
-    // Highlight clicked pill in #desktop-nav when it is an anchor pill
-    if (anchor.classList.contains("workspace-tab-btn") && anchor.closest("#desktop-nav")) {
-      document.querySelectorAll("#desktop-nav .workspace-tab-btn").forEach((b) => {
-        b.classList.toggle("is-active", b === anchor);
-      });
-    }
-
     // Special campus floor shortcut anchors (#campus-floor-1 .. #campus-floor-5, #campus-all-floors)
     if (targetId.startsWith("campus-floor-") && typeof window.switchCampusFloor === "function") {
       e.preventDefault();
       closeMobileDrawerIfOpen();
-      setActiveTab("campus", { scrollToTop: false, updateUrl: true, focusAnchor: "campus-navigator" });
+      setActiveTab("about", { scrollToTop: false, updateUrl: true, focusAnchor: "campus-navigator", floor: targetId.replace("campus-floor-", "") });
       window.switchCampusFloor(targetId.replace("campus-floor-", ""));
       return;
     }
     if (targetId === "campus-all-floors" && typeof window.switchCampusFloor === "function") {
       e.preventDefault();
       closeMobileDrawerIfOpen();
-      setActiveTab("campus", { scrollToTop: false, updateUrl: true, focusAnchor: "campus-navigator" });
+      setActiveTab("about", { scrollToTop: false, updateUrl: true, focusAnchor: "campus-navigator", floor: "all" });
       window.switchCampusFloor("all");
       return;
     }
@@ -383,7 +424,7 @@
     if (targetId === "library") {
       const booksBtn = document.querySelector('#lib-master-switcher [data-view="books"]');
       if (booksBtn && typeof booksBtn.click === "function") booksBtn.click();
-    } else if (targetId === "library-lectures") {
+    } else if (targetId === "library-lectures" || targetId === "library-lectures-section") {
       const lecBtn = document.querySelector('#lib-master-switcher [data-view="lectures"]');
       if (lecBtn && typeof lecBtn.click === "function") lecBtn.click();
     }
@@ -392,6 +433,15 @@
       e.preventDefault();
       closeMobileDrawerIfOpen();
       setActiveTab(ownerTab, { scrollToTop: false, updateUrl: true, pushHistory: true, focusAnchor: targetId });
+    } else if (ownerTab && (activeTab === ownerTab || activeTab === "all")) {
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        closeMobileDrawerIfOpen();
+        const headerH = (document.getElementById("site-header")?.offsetHeight || 72) + 24;
+        const y = targetEl.getBoundingClientRect().top + window.scrollY - headerH;
+        window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+      }
     }
   });
 
@@ -440,8 +490,8 @@
     if (typeof window.switchCampusFloor === "function") {
       const origCampus = window.switchCampusFloor;
       window.switchCampusFloor = function wrappedSwitchCampusFloor(floor) {
-        if (activeTab !== "all" && activeTab !== "campus") {
-          setActiveTab("campus", { scrollToTop: false, updateUrl: true });
+        if (activeTab !== "all" && activeTab !== "about") {
+          setActiveTab("about", { scrollToTop: false, updateUrl: true, focusAnchor: "campus-navigator" });
         }
         return origCampus.apply(this, arguments);
       };
@@ -450,20 +500,20 @@
     if (typeof window.openLibraryLecturesView === "function") {
       const origLib = window.openLibraryLecturesView;
       window.openLibraryLecturesView = function wrappedOpenLibLectures(fbkFilter) {
-        if (activeTab !== "all" && activeTab !== "library" && activeTab !== "library-lectures") {
-          setActiveTab("library-lectures", { scrollToTop: false, updateUrl: true });
+        if (activeTab !== "all" && activeTab !== "library") {
+          setActiveTab("library", { scrollToTop: false, updateUrl: true, libView: "lectures", focusAnchor: "library-lectures-section" });
         }
         return origLib.apply(this, arguments);
       };
     }
 
-    // Trigger tab activation on initial URL query (?tab=...) or #hash
+    // Trigger tab activation on initial URL query (?tab=...) or #hash (supporting aliases)
     let initialTab = "about";
     let initialAnchor = null;
     try {
       const params = new URLSearchParams(window.location.search);
       const qTab = params.get("tab");
-      if (qTab && VALID_TABS.includes(qTab)) {
+      if (qTab && (VALID_TABS.includes(qTab) || TAB_ALIASES[qTab] || qTab.startsWith("campus-floor-"))) {
         initialTab = qTab;
       }
       if (window.location.hash && window.location.hash.length > 1) {
@@ -496,13 +546,13 @@
     let popTab = "about";
     let popAnchor = null;
     try {
-      if (e.state && e.state.tab && VALID_TABS.includes(e.state.tab)) {
+      if (e.state && e.state.tab && (VALID_TABS.includes(e.state.tab) || TAB_ALIASES[e.state.tab])) {
         popTab = e.state.tab;
         popAnchor = e.state.anchor || null;
       } else {
         const params = new URLSearchParams(window.location.search);
         const qTab = params.get("tab");
-        if (qTab && VALID_TABS.includes(qTab)) {
+        if (qTab && (VALID_TABS.includes(qTab) || TAB_ALIASES[qTab] || qTab.startsWith("campus-floor-"))) {
           popTab = qTab;
         } else if (window.location.hash && window.location.hash.length > 1) {
           const hashId = window.location.hash.slice(1);
