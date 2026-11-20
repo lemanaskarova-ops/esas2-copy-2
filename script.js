@@ -3701,6 +3701,15 @@ const newsData = [
       "date_ru": "20 Ноября 2026",
       "image": "susanna_riyaziyyat_aciq_ders.mp4",
       "extra_image": "susanna_riyaziyyat_aciq_ders_poster.jpg",
+      "extra_videos": [
+        {
+          "src": "susanna_riyaziyyat_aciq_ders_2.mp4",
+          "poster": "susanna_riyaziyyat_aciq_ders_2_poster.jpg",
+          "label_az": "Açıq dərs prosesi və tələbələrin fəal iştirakı (II video)",
+          "label_en": "Open lesson process and active student participation (Video 2)",
+          "label_ru": "Процесс открытого урока и активное участие студентов (Видео 2)"
+        }
+      ],
       "tag_az": "Açıq Dərs",
       "tag_en": "Open Lesson",
       "tag_ru": "Открытый Урок"
@@ -11563,16 +11572,33 @@ document.addEventListener("DOMContentLoaded", () => {
              </div>`
           : "";
 
-        const mediaWrapHtml = (item.fb_reel_embed || item.extra_image || extraGalleryHtml || item.url)
+        const extraVideosHtml = Array.isArray(item.extra_videos) && item.extra_videos.length
+          ? `<div class="nr-gallery-title" style="font-weight:700;font-size:0.92rem;color:var(--text,#0a2240);">🎬 ${currentLang === "en" ? "Additional Video from the Open Lesson" : currentLang === "ru" ? "Дополнительное видео с открытого урока" : "Açıq Dərsdən Əlavə Videomaterial"} (${item.extra_videos.length})</div>
+             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;">
+               ${item.extra_videos.map((vObj) => {
+                 const vSrc = typeof vObj === "string" ? vObj : vObj.src;
+                 const vPoster = typeof vObj === "object" && vObj.poster ? vObj.poster : "";
+                 const vLabel = typeof vObj === "object" ? (vObj[`label_${currentLang}`] || vObj.label_az || "") : "";
+                 return `<div style="display:flex;flex-direction:column;gap:8px;">
+                   <video src="${vSrc}" ${vPoster ? `poster="${vPoster}"` : ""} controls playsinline preload="metadata" style="width:100%;max-height:460px;border-radius:12px;background:#040d1a;border:1px solid rgba(184,147,74,0.35);box-shadow:0 6px 16px rgba(10,34,64,0.12);"></video>
+                   ${vLabel ? `<span style="font-size:0.8rem;font-weight:600;opacity:0.85;">${vLabel}</span>` : ""}
+                 </div>`;
+               }).join("")}
+             </div>`
+          : "";
+
+        const showStillExtraImage = !item.fb_reel_embed && item.extra_image && !isVideoMedia(item.image);
+        const mediaWrapHtml = (item.fb_reel_embed || showStillExtraImage || extraGalleryHtml || extraVideosHtml || item.url)
           ? `
             <div class="nr-combined-media" style="margin:22px 0;padding:18px;border-radius:16px;border:1px solid rgba(184,147,74,0.35);background:rgba(10,34,64,0.04);display:flex;flex-direction:column;gap:14px;">
+              ${extraVideosHtml}
               ${extraGalleryHtml}
               ${item.fb_reel_embed ? `<div style="font-weight:700;font-size:0.92rem;">🎬 ${currentLang === "en" ? "Official Facebook Reel" : currentLang === "ru" ? "Официальный Facebook Reel" : "Rəsmi Facebook Reel Videosu"}</div>
               <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;">
                 <iframe src="${item.fb_reel_embed}" style="width:100%;max-width:340px;height:480px;border:none;border-radius:12px;overflow:hidden;background:#040d1a;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
                 ${item.extra_image ? `<img src="${item.extra_image}" alt="${title}" style="max-width:280px;width:100%;border-radius:12px;object-fit:cover;border:1px solid rgba(184,147,74,0.28);" loading="lazy" />` : ""}
               </div>` : ""}
-              ${!item.fb_reel_embed && item.extra_image ? `<img src="${item.extra_image}" alt="${title}" style="max-width:360px;width:100%;border-radius:12px;object-fit:cover;" loading="lazy" />` : ""}
+              ${showStillExtraImage ? `<img src="${item.extra_image}" alt="${title}" style="max-width:360px;width:100%;border-radius:12px;object-fit:cover;" loading="lazy" />` : ""}
               ${item.url ? `<div><a href="${item.url}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:linear-gradient(135deg,#0a2240,#153e75);color:#ffffff;font-weight:700;font-size:0.84rem;text-decoration:none;border:1px solid rgba(207,169,94,0.5);">🔗 ${sourceLabel}</a></div>` : ""}
             </div>`
           : "";
@@ -11603,7 +11629,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const nTag = n[`tag_${currentLang}`] || n.tag_az;
             const nDate = getNewsDate(n);
             const relMedia = isVideoMedia(n.image)
-              ? `<video src="${n.image}#t=0.5" muted playsinline preload="metadata" style="width:68px;height:52px;object-fit:cover;border-radius:8px;flex-shrink:0;"></video>`
+              ? `<video src="${n.image}#t=0.5" ${n.extra_image ? `poster="${n.extra_image}"` : ""} muted playsinline preload="metadata" style="width:68px;height:52px;object-fit:cover;border-radius:8px;flex-shrink:0;"></video>`
               : `<img src="${n.image}" alt="" loading="lazy" onerror="this.onerror=null;this.src='news1.webp';" />`;
             return `
               <button type="button" class="nr-related-card" data-news-idx="${idx}">
@@ -11633,8 +11659,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function closeNewsReader() {
       if (!nrModal) return;
-      const nrVideo = document.getElementById("nr-video");
-      if (nrVideo) nrVideo.pause();
+      nrModal.querySelectorAll("video").forEach((v) => v.pause());
       nrModal.classList.remove("active");
       nrModal.setAttribute("aria-hidden", "true");
       document.documentElement.classList.remove("scroll-locked");
@@ -11681,12 +11706,16 @@ document.addEventListener("DOMContentLoaded", () => {
         card.className = "news-card";
         card.style.cursor = "pointer";
         const cardMediaHtml = isVideoMedia(item.image)
-          ? `<video class="news-card-img" src="${item.image}#t=0.5" muted playsinline preload="metadata" loop onmouseenter="this.play().catch(()=>{})" onmouseleave="this.pause()"></video>`
+          ? `<video class="news-card-img" src="${item.image}#t=0.5" ${item.extra_image ? `poster="${item.extra_image}"` : ""} muted playsinline preload="metadata" loop onmouseenter="this.play().catch(()=>{})" onmouseleave="this.pause()"></video>`
           : `<img class="news-card-img" src="${item.image}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='news1.webp';" />`;
+        const videoCountBadge = Array.isArray(item.extra_videos) && item.extra_videos.length
+          ? `<span class="news-card-video-count" style="position:absolute;bottom:10px;right:10px;z-index:2;background:rgba(7,25,48,0.88);color:#f3d284;border:1px solid rgba(207,169,94,0.55);padding:3px 10px;border-radius:999px;font-size:0.72rem;font-weight:700;backdrop-filter:blur(6px);">🎬 ${1 + item.extra_videos.length} Video</span>`
+          : "";
         card.innerHTML = `
           <div class="news-card-media">
             ${cardMediaHtml}
             <span class="news-card-tag">${tag}</span>
+            ${videoCountBadge}
           </div>
           <div class="news-card-overlay">
             ${localizedDate ? `<span class="news-card-date">${localizedDate}</span>` : ""}
@@ -12236,6 +12265,19 @@ function initGalleryModule() {
         label_az: "Riyaziyyat · İnteraktiv Açıq Dərs (Susanna Alıyeva)",
         label_en: "Mathematics · Interactive Open Lesson (Susanna Aliyeva)",
         label_ru: "Математика · Интерактивный открытый урок (Сусанна Алиева)",
+        badge: "AÇIQ DƏRS · RİYAZİYYAT",
+        catTitle: "Dərs Mühiti · Açıq Dərs",
+        i18n: "gallery_cat_study",
+      },
+      {
+        type: "video",
+        src: "susanna_riyaziyyat_aciq_ders_2.mp4",
+        poster: "susanna_riyaziyyat_aciq_ders_2_poster.jpg",
+        tall: true,
+        label: "Riyaziyyat · Açıq Dərs və Tələbələrin Fəal İştirakı (Susanna Alıyeva)",
+        label_az: "Riyaziyyat · Açıq Dərs və Tələbələrin Fəal İştirakı (Susanna Alıyeva)",
+        label_en: "Mathematics · Open Lesson & Active Student Participation (Susanna Aliyeva)",
+        label_ru: "Математика · Открытый урок и активное участие студентов (Сусанна Алиева)",
         badge: "AÇIQ DƏRS · RİYAZİYYAT",
         catTitle: "Dərs Mühiti · Açıq Dərs",
         i18n: "gallery_cat_study",
