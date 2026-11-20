@@ -3445,9 +3445,12 @@ body.dark-mode .sun-and-moon>.moon>circle {
   transform: scale(1.08);
 }
 
-.tree-dept-card[data-person-id="14"] .tree-dept-avatar img {
-  object-position: 62% 20%;
-  transform: scale(1.15);
+.tree-card-grid-block[data-person-id="14"] .tree-grid-avatar-wrap img,
+.tree-dept-card[data-person-id="14"] .tree-dept-avatar img,
+.tree-member-row[data-person-id="14"] .tree-member-avatar img {
+  object-position: 49% 25% !important;
+  transform: scale(1.42);
+  transform-origin: 49% 27%;
 }
 
 .tree-dept-card[data-person-id="18"] .tree-dept-avatar img {
@@ -3482,6 +3485,14 @@ body.dark-mode .sun-and-moon>.moon>circle {
   object-position: 52% 25% !important;
   transform: scale(1.38);
   transform-origin: 52% 28%;
+}
+
+.tree-card-grid-block[data-person-id="30"] .tree-grid-avatar-wrap img,
+.tree-dept-card[data-person-id="30"] .tree-dept-avatar img,
+.tree-member-row[data-person-id="30"] .tree-member-avatar img {
+  object-position: 44% 35% !important;
+  transform: scale(1.48) translateX(4%);
+  transform-origin: 44% 35%;
 }
 
 .tree-dept-info {
@@ -4605,12 +4616,12 @@ body.dark-mode .sun-and-moon>.moon>circle {
 }
 
 .person-detail-photo-frame.resmiyye-photo img {
-  transform: scale(1.1);
-  object-position: 60% 18%;
+  transform: scale(1.02);
+  object-position: 49% 25%;
 }
 
 .person-detail-photo-frame.resmiyye-photo:hover img {
-  transform: scale(1.15);
+  transform: scale(1.06);
 }
 
 .person-detail-photo-frame.munir-photo img {
@@ -4745,6 +4756,15 @@ body.dark-mode .sun-and-moon>.moon>circle {
   }
 
   .person-detail-photo-frame.sohle-photo:hover img {
+    transform: scale(1.06);
+  }
+
+  .person-detail-photo-frame.gunel-photo img {
+    object-position: 28% 35%;
+    transform: scale(1.02);
+  }
+
+  .person-detail-photo-frame.gunel-photo:hover img {
     transform: scale(1.06);
   }
 
