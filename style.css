@@ -3474,9 +3474,11 @@ body.dark-mode .sun-and-moon>.moon>circle {
 }
 
 .tree-card-grid-block[data-person-id="27"] .tree-grid-avatar-wrap img,
-.tree-dept-card[data-person-id="27"] .tree-dept-avatar img {
-  object-position: center 30%;
-  transform: scale(1.05);
+.tree-dept-card[data-person-id="27"] .tree-dept-avatar img,
+.tree-member-row[data-person-id="27"] .tree-member-avatar img {
+  object-position: 53% 26% !important;
+  transform: scale(1.42);
+  transform-origin: 53% 28%;
 }
 
 .tree-card-grid-block[data-person-id="28"] .tree-grid-avatar-wrap img,
@@ -4743,11 +4745,12 @@ body.dark-mode .sun-and-moon>.moon>circle {
   }
 
   .person-detail-photo-frame.aygun-photo img {
-    object-position: center 30%;
+    object-position: 50% 25%;
+    transform: scale(1.02);
   }
 
   .person-detail-photo-frame.aygun-photo:hover img {
-    transform: scale(1.05);
+    transform: scale(1.06);
   }
 
   .person-detail-photo-frame.sohle-photo img {
