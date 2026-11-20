@@ -3476,9 +3476,12 @@ body.dark-mode .sun-and-moon>.moon>circle {
   transform: scale(1.05);
 }
 
-.tree-dept-card[data-person-id="28"] .tree-dept-avatar img {
-  object-position: center 15%;
-  transform: scale(1.05);
+.tree-card-grid-block[data-person-id="28"] .tree-grid-avatar-wrap img,
+.tree-dept-card[data-person-id="28"] .tree-dept-avatar img,
+.tree-member-row[data-person-id="28"] .tree-member-avatar img {
+  object-position: 52% 25% !important;
+  transform: scale(1.38);
+  transform-origin: 52% 28%;
 }
 
 .tree-dept-info {
@@ -4737,11 +4740,12 @@ body.dark-mode .sun-and-moon>.moon>circle {
   }
 
   .person-detail-photo-frame.sohle-photo img {
-    object-position: center 15%;
+    object-position: 52% 25%;
+    transform: scale(1.02);
   }
 
   .person-detail-photo-frame.sohle-photo:hover img {
-    transform: scale(1.05);
+    transform: scale(1.06);
   }
 
   /* Floating Zoom Badge on Photo */

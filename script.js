@@ -3396,7 +3396,7 @@ const staffData = {
       role_az: "Mülki-müdafiə üzrə mühəndis",
       role_en: "Civil Defense Engineer",
       role_ru: "Инженер по гражданской обороне",
-      img: "sohlex.jpeg",
+      img: "sohles.jpeg",
     },
     {
       id: "17",
