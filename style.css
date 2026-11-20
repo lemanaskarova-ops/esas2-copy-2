@@ -3410,6 +3410,15 @@ body.dark-mode .sun-and-moon>.moon>circle {
 }
 
 /* Custom avatar framing for specific staff members */
+.tree-card-grid-block[data-person-id="1"] .tree-grid-avatar-wrap img,
+.tree-card-director .tree-director-avatar img,
+.tree-dept-card[data-person-id="1"] .tree-dept-avatar img,
+.tree-member-row[data-person-id="1"] .tree-member-avatar img {
+  object-position: 49% 82% !important;
+  transform: scale(1.7);
+  transform-origin: 49% 50%;
+}
+
 .tree-dept-card[data-person-id="20"] .tree-dept-avatar img {
   object-position: center 25%;
   transform: scale(1.05);
@@ -4554,7 +4563,12 @@ body.dark-mode .sun-and-moon>.moon>circle {
 
 /* Specific framing adjustments for staff members */
 .person-detail-photo-frame.director-photo img {
-  object-position: center 12%;
+  object-position: center 45%;
+  transform: scale(1.02);
+}
+
+.person-detail-photo-frame.director-photo:hover img {
+  transform: scale(1.06);
 }
 
 .person-detail-photo-frame.sahmurad-photo img {
