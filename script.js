@@ -572,6 +572,9 @@ const i18n = {
     cf_guarantee_text: "Müraciətiniz rəsmi qeydiyyata alınır və 1–3 iş günü ərzində e-poçt və ya telefon vasitəsilə cavablandırılır.",
     footer_copyright:
       "© 2026 BDRNK - Müəllif hüquqları qorunur. Hazırlayan: Ləman Əskərova",
+    footer_kicker: "Rəsmi Təhsil Portalı",
+    footer_rights: "Bütün müəllif hüquqları qorunur",
+    footer_author_label: "Hazırlayan",
 
     // CAMPUS & ROOMS
     nav_campus: "Kampus & Otaqlar",
@@ -1584,6 +1587,9 @@ const i18n = {
     cf_guarantee_text: "Your inquiry is officially registered and answered within 1–3 business days via email or phone.",
     footer_copyright:
       "© 2026 BDRNK - All rights reserved. Created by: Ləman Əskərova",
+    footer_kicker: "Official Education Portal",
+    footer_rights: "All rights reserved",
+    footer_author_label: "Created by",
 
     // CAMPUS & ROOMS
     nav_campus: "Campus & Rooms",
@@ -2594,6 +2600,9 @@ const i18n = {
     cf_guarantee_text: "Ваше обращение официально регистрируется и рассматривается в течение 1–3 рабочих дней по эл. почте или телефону.",
     footer_copyright:
       "© 2026 BDRNK - Все права защищены. Разработчик: Ləman Əskərova",
+    footer_kicker: "Официальный образовательный портал",
+    footer_rights: "Все права защищены",
+    footer_author_label: "Разработчик",
 
     // CAMPUS & ROOMS
     nav_campus: "Кампус и Аудитории",
