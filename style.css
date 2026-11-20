@@ -3445,9 +3445,12 @@ body.dark-mode .sun-and-moon>.moon>circle {
   transform: scale(1.08);
 }
 
-.tree-dept-card[data-person-id="14"] .tree-dept-avatar img {
-  object-position: 62% 20%;
-  transform: scale(1.15);
+.tree-card-grid-block[data-person-id="14"] .tree-grid-avatar-wrap img,
+.tree-dept-card[data-person-id="14"] .tree-dept-avatar img,
+.tree-member-row[data-person-id="14"] .tree-member-avatar img {
+  object-position: 49% 25% !important;
+  transform: scale(1.42);
+  transform-origin: 49% 27%;
 }
 
 .tree-dept-card[data-person-id="18"] .tree-dept-avatar img {
@@ -3471,14 +3474,27 @@ body.dark-mode .sun-and-moon>.moon>circle {
 }
 
 .tree-card-grid-block[data-person-id="27"] .tree-grid-avatar-wrap img,
-.tree-dept-card[data-person-id="27"] .tree-dept-avatar img {
-  object-position: center 30%;
-  transform: scale(1.05);
+.tree-dept-card[data-person-id="27"] .tree-dept-avatar img,
+.tree-member-row[data-person-id="27"] .tree-member-avatar img {
+  object-position: 53% 26% !important;
+  transform: scale(1.42);
+  transform-origin: 53% 28%;
 }
 
-.tree-dept-card[data-person-id="28"] .tree-dept-avatar img {
-  object-position: center 15%;
-  transform: scale(1.05);
+.tree-card-grid-block[data-person-id="28"] .tree-grid-avatar-wrap img,
+.tree-dept-card[data-person-id="28"] .tree-dept-avatar img,
+.tree-member-row[data-person-id="28"] .tree-member-avatar img {
+  object-position: 52% 25% !important;
+  transform: scale(1.38);
+  transform-origin: 52% 28%;
+}
+
+.tree-card-grid-block[data-person-id="30"] .tree-grid-avatar-wrap img,
+.tree-dept-card[data-person-id="30"] .tree-dept-avatar img,
+.tree-member-row[data-person-id="30"] .tree-member-avatar img {
+  object-position: 44% 35% !important;
+  transform: scale(1.48) translateX(4%);
+  transform-origin: 44% 35%;
 }
 
 .tree-dept-info {
@@ -4602,12 +4618,12 @@ body.dark-mode .sun-and-moon>.moon>circle {
 }
 
 .person-detail-photo-frame.resmiyye-photo img {
-  transform: scale(1.1);
-  object-position: 60% 18%;
+  transform: scale(1.02);
+  object-position: 49% 25%;
 }
 
 .person-detail-photo-frame.resmiyye-photo:hover img {
-  transform: scale(1.15);
+  transform: scale(1.06);
 }
 
 .person-detail-photo-frame.munir-photo img {
@@ -4729,19 +4745,30 @@ body.dark-mode .sun-and-moon>.moon>circle {
   }
 
   .person-detail-photo-frame.aygun-photo img {
-    object-position: center 30%;
+    object-position: 50% 25%;
+    transform: scale(1.02);
   }
 
   .person-detail-photo-frame.aygun-photo:hover img {
-    transform: scale(1.05);
+    transform: scale(1.06);
   }
 
   .person-detail-photo-frame.sohle-photo img {
-    object-position: center 15%;
+    object-position: 52% 25%;
+    transform: scale(1.02);
   }
 
   .person-detail-photo-frame.sohle-photo:hover img {
-    transform: scale(1.05);
+    transform: scale(1.06);
+  }
+
+  .person-detail-photo-frame.gunel-photo img {
+    object-position: 28% 35%;
+    transform: scale(1.02);
+  }
+
+  .person-detail-photo-frame.gunel-photo:hover img {
+    transform: scale(1.06);
   }
 
   /* Floating Zoom Badge on Photo */
@@ -6453,9 +6480,9 @@ body.dark-mode .sun-and-moon>.moon>circle {
    FOOTER — Institutional Imperial Navy (WCU / AzTU Style)
    ═══════════════════════════════════════ */
   .site-footer {
-    padding-bottom: 56px;
-    /* space for marquee */
-    background: #071930;
+    padding-bottom: 84px;
+    /* space for marquee & back-to-top */
+    background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(207, 169, 94, 0.08), transparent 72%), linear-gradient(180deg, #071930 0%, #051122 100%);
     color: #e2e8f0;
     border-top: 3px solid var(--gold);
   }
@@ -6470,7 +6497,24 @@ body.dark-mode .sun-and-moon>.moon>circle {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 48px;
-    padding: 64px 0 44px;
+    padding: 64px 0 40px;
+  }
+
+  .footer-brand-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .footer-crest {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid rgba(207, 169, 94, 0.55);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    flex-shrink: 0;
   }
 
   .footer-logo {
@@ -6479,7 +6523,17 @@ body.dark-mode .sun-and-moon>.moon>circle {
     font-weight: 900;
     color: #ffffff;
     letter-spacing: 0.03em;
-    margin-bottom: 12px;
+    margin-bottom: 2px;
+    line-height: 1.1;
+  }
+
+  .footer-kicker {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #dfc07f;
   }
 
   .footer-brand-desc {
@@ -6512,23 +6566,106 @@ body.dark-mode .sun-and-moon>.moon>circle {
     transition: color var(--transition);
   }
 
+  .footer-contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
   .footer-links a:hover {
     color: var(--gold-light);
   }
 
   .footer-bottom {
-    padding: 24px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 8px;
+    padding: 20px 24px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(207, 169, 94, 0.05) 100%);
+    border: 1px solid rgba(207, 169, 94, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 14px 20px;
   }
 
   .footer-bottom p {
     font-size: 0.8rem;
     color: #94a3b8;
+  }
+
+  .footer-legal {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  .footer-copy-badge {
+    color: #f8fafc;
+    font-weight: 600;
+  }
+
+  .footer-copy-dot {
+    color: #cfa95e;
+    font-weight: 800;
+  }
+
+  .footer-copy-rights {
+    color: #cbd5e1;
+  }
+
+  .footer-author-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(207, 169, 94, 0.16) 0%, rgba(15, 34, 62, 0.85) 100%);
+    border: 1px solid rgba(223, 192, 127, 0.42);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .footer-author-badge:hover {
+    transform: translateY(-1px);
+    border-color: rgba(245, 215, 142, 0.72);
+    box-shadow: 0 8px 24px rgba(207, 169, 94, 0.22);
+  }
+
+  .footer-author-spark {
+    color: #e2b857;
+    font-size: 0.78rem;
+    line-height: 1;
+  }
+
+  .footer-author-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #cbd5e1;
+    font-weight: 600;
+  }
+
+  .footer-author-sep {
+    width: 1px;
+    height: 14px;
+    background: rgba(207, 169, 94, 0.45);
+  }
+
+  .footer-author-name {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #f3d284;
+    background: linear-gradient(135deg, #fffbeb 0%, #f3d284 55%, #cfa95e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .footer-bottom-links {
@@ -6538,12 +6675,12 @@ body.dark-mode .sun-and-moon>.moon>circle {
 
   .dim-link {
     display: inline-block;
-    padding: 9px 18px;
-    background: var(--gold);
+    padding: 9px 20px;
+    background: linear-gradient(135deg, #dfc07f 0%, #c8a45d 100%);
     color: #071930;
     font-size: 0.8rem;
     font-weight: 700;
-    border-radius: var(--radius-sm);
+    border-radius: 999px;
     text-decoration: none;
     transition: all 0.3s var(--ease);
     box-shadow: 0 4px 12px rgba(184, 147, 74, 0.25);
@@ -6588,6 +6725,10 @@ body.dark-mode .sun-and-moon>.moon>circle {
     .footer-top {
       grid-template-columns: 1fr 1fr;
       gap: 32px;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
     }
   }
 
@@ -6709,6 +6850,16 @@ body.dark-mode .sun-and-moon>.moon>circle {
     .footer-top {
       grid-template-columns: 1fr;
       gap: 24px;
+    }
+
+    .footer-bottom {
+      padding: 18px 16px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .footer-legal {
+      justify-content: center;
     }
   }
 

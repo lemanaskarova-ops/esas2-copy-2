@@ -572,6 +572,9 @@ const i18n = {
     cf_guarantee_text: "Müraciətiniz rəsmi qeydiyyata alınır və 1–3 iş günü ərzində e-poçt və ya telefon vasitəsilə cavablandırılır.",
     footer_copyright:
       "© 2026 BDRNK - Müəllif hüquqları qorunur. Hazırlayan: Ləman Əskərova",
+    footer_kicker: "Rəsmi Təhsil Portalı",
+    footer_rights: "Bütün müəllif hüquqları qorunur",
+    footer_author_label: "Hazırlayan",
 
     // CAMPUS & ROOMS
     nav_campus: "Kampus & Otaqlar",
@@ -1584,6 +1587,9 @@ const i18n = {
     cf_guarantee_text: "Your inquiry is officially registered and answered within 1–3 business days via email or phone.",
     footer_copyright:
       "© 2026 BDRNK - All rights reserved. Created by: Ləman Əskərova",
+    footer_kicker: "Official Education Portal",
+    footer_rights: "All rights reserved",
+    footer_author_label: "Created by",
 
     // CAMPUS & ROOMS
     nav_campus: "Campus & Rooms",
@@ -2594,6 +2600,9 @@ const i18n = {
     cf_guarantee_text: "Ваше обращение официально регистрируется и рассматривается в течение 1–3 рабочих дней по эл. почте или телефону.",
     footer_copyright:
       "© 2026 BDRNK - Все права защищены. Разработчик: Ləman Əskərova",
+    footer_kicker: "Официальный образовательный портал",
+    footer_rights: "Все права защищены",
+    footer_author_label: "Разработчик",
 
     // CAMPUS & ROOMS
     nav_campus: "Кампус и Аудитории",
@@ -3207,7 +3216,7 @@ const staffData = {
       role_az: '"İnformasiya, kommunikasiya texnologiyaları şöbəsi"-Şöbə müdiri',
       role_en: 'Head of "Information and Communication Technologies" Dept',
       role_ru: 'Заведующая отделом "Информационных и коммуникационных технологий"',
-      img: "resmiyyex.jpeg",
+      img: "resmiyye.jpeg",
     },
     {
       id: "9",
@@ -3277,7 +3286,7 @@ const staffData = {
       role_az: "Tədris hissə müdiri",
       role_en: "Head of Academic Department",
       role_ru: "Заведующая учебной частью",
-      img: "gunelx.jpeg",
+      img: "gunel.jpeg",
     },
     {
       id: "20",
@@ -3357,7 +3366,7 @@ const staffData = {
       role_az: "Həmkarlar İttifaqı Komitəsinin sədri",
       role_en: "Chair of Trade Union Committee",
       role_ru: "Председатель Профсоюзного комитета",
-      img: "hemkar.jpeg",
+      img: "aygun.jpeg",
     },
     {
       id: "22",
@@ -3387,7 +3396,7 @@ const staffData = {
       role_az: "Mülki-müdafiə üzrə mühəndis",
       role_en: "Civil Defense Engineer",
       role_ru: "Инженер по гражданской обороне",
-      img: "sohlex.jpeg",
+      img: "sohles.jpeg",
     },
     {
       id: "17",
@@ -3674,6 +3683,28 @@ const staffData = {
 };
 
 const newsData = [
+  {
+      "id": 118,
+      "official_id": "susanna_riyaziyyat_aciq_ders_2026",
+      "title_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində riyaziyyat fənni üzrə açıq dərs uğurla keçirildi",
+      "title_en": "Open Mathematics Lesson Successfully Held at Baku State Communications and Transport College",
+      "title_ru": "В Бакинском государственном колледже связи и транспорта успешно прошел открытый урок по математике",
+      "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin riyaziyyat müəllimi Susanna Alıyevanın təqdimatında müasir təlim metodları, əyani vəsaitlər və interaktiv təqdimatlarla zəngin açıq dərs keçirilib.",
+      "desc_en": "An open mathematics lesson presented by teacher Susanna Aliyeva at Baku State Communications and Transport College featured modern teaching methods, visual aids, and interactive presentations.",
+      "desc_ru": "В Бакинском государственном колледже связи и транспорта прошел открытый урок по математике преподавателя Сусанны Алиевой с применением современных методов обучения и интерактивных презентаций.",
+      "full_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində növbəti açıq dərs uğurla keçirildi!\n\nBakı Dövlət Rabitə və Nəqliyyat Kollecinin riyaziyyat müəllimi Susanna Alıyevanın təqdimatında riyaziyyat fənni üzrə açıq dərs keçirilib.\n\nAçıq dərs zamanı müəllim tərəfindən mövzunun izahına xüsusi diqqət yetirilmiş, müasir təlim metodlarından, əyani vəsaitlərdən və interaktiv təqdimatlardan istifadə olunmuşdur. Dərsin gedişində tələbələrin fəallığının təmin edilməsi, onların analitik düşünmə, məntiqi mühakimə və müstəqil qərarvermə bacarıqlarının inkişaf etdirilməsi istiqamətində səmərəli iş aparılmışdır.\n\nMüşahidə olunan dərs prosesi müəllimin pedaqoji ustalığını, fənn üzrə bilik və təcrübəsini, tədrisə yaradıcı yanaşmasını və tələbələrlə səmərəli ünsiyyət qurmaq bacarığını nümayiş etdirmişdir.\n\nSusanna Alıyevaya pedaqoji fəaliyyətində uğurlar, yeni nailiyyətlər və tələbələrinin qazandığı uğurlardan daim qürur duymağı arzulayırıq.\n\n#AçıqDərs #Riyaziyyat #SusannaAlıyeva #MüasirTəhsil #BakıDövlətRabitəVəNəqliyyatKolleci",
+      "full_en": "Another open lesson was successfully held at Baku State Communications and Transport College!\n\nAn open lesson in mathematics was presented by mathematics teacher Susanna Aliyeva at Baku State Communications and Transport College.\n\nDuring the open lesson, special attention was paid to explaining the topic clearly using modern teaching methods, visual aids, and interactive presentations. Effective work was carried out to ensure active student engagement and develop their analytical thinking, logical reasoning, and independent decision-making skills.\n\nThe observed lesson demonstrated the teacher's pedagogical mastery, deep subject knowledge and experience, creative approach to instruction, and ability to build effective communication with students.\n\nWe wish Susanna Aliyeva continued success and new achievements in her pedagogical career, and lasting pride in the accomplishments of her students.",
+      "full_ru": "В Бакинском государственном колледже связи и транспорта успешно прошел очередной открытый урок!\n\nОткрытый урок по математике был проведен преподавателем математики Бакинского государственного колледжа связи и транспорта Сусанной Алиевой.\n\nВ ходе открытого урока особое внимание было уделено доступному объяснению темы с использованием современных методов обучения, наглядных пособий и интерактивных презентаций. Была проведена эффективная работа по обеспечению активности студентов, развитию их аналитического мышления, логических рассуждений и навыков самостоятельного принятия решений.\n\nУчебный процесс наглядно продемонстрировал педагогическое мастерство преподавателя, глубокие знания предмета, творческий подход к преподаванию и умение выстраивать эффективное взаимодействие со студентами.\n\nЖелаем Сусанне Алиевой дальнейших успехов в педагогической деятельности, новых достижений и постоянной гордости за успехи своих студентов.",
+      "date": "20 Noyabr 2026",
+      "date_az": "20 Noyabr 2026",
+      "date_en": "20 November 2026",
+      "date_ru": "20 Ноября 2026",
+      "image": "susanna_riyaziyyat_aciq_ders.mp4",
+      "extra_image": "susanna_riyaziyyat_aciq_ders_poster.jpg",
+      "tag_az": "Açıq Dərs",
+      "tag_en": "Open Lesson",
+      "tag_ru": "Открытый Урок"
+  },
   {
       "id": 117,
       "official_id": "open_lesson_transport_shipping_2026",
@@ -8980,6 +9011,7 @@ function initStructureModule() {
     else if (person.id === "24") photoClass = "natiq-photo";
     else if (person.id === "25" && person.img !== "logo.jpg") photoClass = "sevda-photo";
     else if (person.id === "26" && person.img !== "logo.jpg") photoClass = "selale-photo";
+    else if (person.id === "30") photoClass = "gunel-photo";
 
     const bioText = person[`bio_${currentLang}`] || person.bio_az;
     const highlights = person.highlights || [];
@@ -12195,6 +12227,19 @@ function initGalleryModule() {
       }
     ],
     study: [
+      {
+        type: "video",
+        src: "susanna_riyaziyyat_aciq_ders.mp4",
+        poster: "susanna_riyaziyyat_aciq_ders_poster.jpg",
+        tall: true,
+        label: "Riyaziyyat · İnteraktiv Açıq Dərs (Susanna Alıyeva)",
+        label_az: "Riyaziyyat · İnteraktiv Açıq Dərs (Susanna Alıyeva)",
+        label_en: "Mathematics · Interactive Open Lesson (Susanna Aliyeva)",
+        label_ru: "Математика · Интерактивный открытый урок (Сусанна Алиева)",
+        badge: "AÇIQ DƏRS · RİYAZİYYAT",
+        catTitle: "Dərs Mühiti · Açıq Dərs",
+        i18n: "gallery_cat_study",
+      },
       {
         type: "video",
         src: "suni_intellekt_tedris_seminar.mp4",
