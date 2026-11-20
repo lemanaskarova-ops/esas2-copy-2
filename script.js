@@ -3296,7 +3296,7 @@ const staffData = {
       role_az: "Kadrlar üzrə mütəxəssis",
       role_en: "HR Specialist",
       role_ru: "Специалист по кадрам",
-      img: "logo.jpg",
+      img: "lemo.jpeg",
     },
     {
       id: "19",
