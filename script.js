@@ -3334,7 +3334,7 @@ const staffData = {
       role_az: "Metodist",
       role_en: "Methodist",
       role_ru: "Методист",
-      img: "logo.jpg",
+      img: "sevda.jpeg",
     },
     {
       id: "13",
@@ -3406,7 +3406,7 @@ const staffData = {
       role_az: "Metodist",
       role_en: "Methodist",
       role_ru: "Методист",
-      img: "logo.jpg",
+      img: "sevda.jpeg",
     },
   ],
   majors: {

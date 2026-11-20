@@ -4646,11 +4646,12 @@ body.dark-mode .sun-and-moon>.moon>circle {
   }
 
   .person-detail-photo-frame.sevda-photo img {
-    object-position: center 15%;
+    object-position: center 38%;
+    transform: scale(1.05);
   }
 
   .person-detail-photo-frame.sevda-photo:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 
   .person-detail-photo-frame.seide-photo img {
@@ -5080,11 +5081,15 @@ body.dark-mode .sun-and-moon>.moon>circle {
 
   /* Sevda Bagizada framing */
   .sevda-card .card-img-wrap img {
-    object-position: center 15%;
+    object-position: center 38%;
+    transform: scale(1.08);
   }
 
+  .tree-card-grid-block[data-person-id="25"] .tree-grid-avatar-wrap img,
+  .tree-dept-card[data-person-id="25"] .tree-dept-avatar img,
   .tree-member-row[data-person-id="25"] .tree-member-avatar img {
-    object-position: center 15%;
+    object-position: center 38%;
+    transform: scale(1.08);
   }
 
   .staff-card:hover .card-img-wrap img {
