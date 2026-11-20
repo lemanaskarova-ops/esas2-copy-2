@@ -890,7 +890,7 @@ const i18n = {
     cert_modal_team_default: "Bakı Dövlət Rabitə və Nəqliyyat Kolleci",
     search_cat_all: "Hamısı",
     search_cat_majors: "🎓 İxtisaslar",
-    search_cat_structure: "🏛️ Struktur & FBK",
+    search_cat_structure: "🏛️ Struktur",
     search_cat_campus: "🏢 Kampus & Otaqlar",
     search_cat_library: "📚 Kitabxana",
     search_cat_science: "🔬 Elm & Nəşrlər",
