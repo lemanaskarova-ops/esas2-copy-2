@@ -13414,12 +13414,18 @@ function initSceneTransition() {
   function isRevealBypassedOrInView(el) {
     if (!el || el.classList.contains("visible")) return true;
     const vh = window.innerHeight || document.documentElement.clientHeight || 900;
-    const rect = el.getBoundingClientRect();
+    const rect = typeof el.getBoundingClientRect === "function" ? el.getBoundingClientRect() : { top: 0, height: 0 };
     // Reveal immediately if element is tall (e.g. section-inner for #library/#structure), in/above viewport, or active hash target
     if (el.tagName === "SECTION" || el.classList.contains("section-inner") || rect.height > vh * 0.65) {
       return true;
     }
     return rect.top <= vh + 140;
+  }
+
+  if (typeof IntersectionObserver === "undefined") {
+    document.querySelectorAll(".reveal, .reveal-group, .reveal-stagger").forEach((el) => el.classList.add("visible"));
+    window.syncSafeReveals = function () {};
+    return;
   }
 
   const observer = new IntersectionObserver((entries) => {
