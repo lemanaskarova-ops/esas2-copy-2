@@ -3151,7 +3151,7 @@ const staffData = {
       role_az: "Hüquqşünas",
       role_en: "Legal Counsel",
       role_ru: "Юрист",
-      img: "vefax.jpeg",
+      img: "vefa.jpeg",
     },
     {
       id: "18",
@@ -3171,7 +3171,7 @@ const staffData = {
       role_az: "Metodist",
       role_en: "Methodist",
       role_ru: "Методист",
-      img: "logo.jpg",
+      img: "selale.jpeg",
     },
     {
       id: "25",
@@ -3201,7 +3201,7 @@ const staffData = {
       role_az: "Həmkarlar İttifaqı Komitəsinin sədri",
       role_en: "Chair of Trade Union Committee",
       role_ru: "Председатель Профсоюзного комитета",
-      img: "hemkarx.jpeg",
+      img: "hemkar.jpeg",
     },
     {
       id: "22",
@@ -3221,7 +3221,7 @@ const staffData = {
       role_az: "EHM üzrə mühəndis",
       role_en: "Electronic Computer Engineer",
       role_ru: "Инженер по ЭВМ",
-      img: "fizulix.jpeg",
+      img: "fizuli.jpeg",
     },
     {
       id: "28",
@@ -13414,12 +13414,18 @@ function initSceneTransition() {
   function isRevealBypassedOrInView(el) {
     if (!el || el.classList.contains("visible")) return true;
     const vh = window.innerHeight || document.documentElement.clientHeight || 900;
-    const rect = el.getBoundingClientRect();
+    const rect = typeof el.getBoundingClientRect === "function" ? el.getBoundingClientRect() : { top: 0, height: 0 };
     // Reveal immediately if element is tall (e.g. section-inner for #library/#structure), in/above viewport, or active hash target
     if (el.tagName === "SECTION" || el.classList.contains("section-inner") || rect.height > vh * 0.65) {
       return true;
     }
     return rect.top <= vh + 140;
+  }
+
+  if (typeof IntersectionObserver === "undefined") {
+    document.querySelectorAll(".reveal, .reveal-group, .reveal-stagger").forEach((el) => el.classList.add("visible"));
+    window.syncSafeReveals = function () {};
+    return;
   }
 
   const observer = new IntersectionObserver((entries) => {
