@@ -22134,7 +22134,7 @@ function initSceneTransition() {
     }
   ];
 
-  const sportsTrophyData = {
+    const sportsTrophyData = {
     football: {
       sport_az: "Minifutbol (Qızlar)",
       sport_en: "Mini-football (Girls)",
