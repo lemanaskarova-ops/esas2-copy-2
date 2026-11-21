@@ -319,13 +319,13 @@ const i18n = {
     cert_badge: "RƏSMİ TƏLTİFLƏR VƏ DİPLOMLAR",
     cert_title: "Kollecimizin Qürur və Nailiyyət Guşəsi",
     cert_desc: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin komandası və tələbələrinin Respublika birinciliklərində, spartakiadalarda və turnirlərdə qazandığı rəsmi diplom və təltifnamələr.",
-    cert_stat_gold_val: "23 Qızıl",
+    cert_stat_gold_val: "11 Qızıl",
     cert_stat_gold_lbl: "I Yer Çempionluğu",
-    cert_stat_silver_val: "13 Gümüş",
+    cert_stat_silver_val: "9 Gümüş",
     cert_stat_silver_lbl: "II Yer Respublika & Rayon",
-    cert_stat_bronze_val: "6 Bürünc",
+    cert_stat_bronze_val: "3 Bürünc",
     cert_stat_bronze_lbl: "III Yer Uğuru",
-    cert_stat_total_val: "73 Sənəd",
+    cert_stat_total_val: "24 Sənəd",
     cert_stat_total_lbl: "Rəsmi Arxiv Təltifi",
     cert_filter_all: "Hamısı",
     cert_filter_respublika: "Respublika Birinciliyi",
@@ -1334,13 +1334,13 @@ const i18n = {
     cert_badge: "OFFICIAL AWARDS & DIPLOMAS",
     cert_title: "College Certificates & Achievements",
     cert_desc: "Official diplomas, certificates, and honorary citations awarded to Baku State College of Communications and Transport in national competitions and championships.",
-    cert_stat_gold_val: "23 Gold",
+    cert_stat_gold_val: "11 Gold",
     cert_stat_gold_lbl: "1st Place Championship",
-    cert_stat_silver_val: "13 Silver",
+    cert_stat_silver_val: "9 Silver",
     cert_stat_silver_lbl: "2nd Place National & District",
-    cert_stat_bronze_val: "6 Bronze",
+    cert_stat_bronze_val: "3 Bronze",
     cert_stat_bronze_lbl: "3rd Place Achievement",
-    cert_stat_total_val: "73 Awards",
+    cert_stat_total_val: "24 Awards",
     cert_stat_total_lbl: "Official Archived Records",
     cert_filter_all: "All",
     cert_filter_respublika: "National Championship",
@@ -2347,13 +2347,13 @@ const i18n = {
     cert_badge: "ОФИЦИАЛЬНЫЕ НАГРАДЫ И ДИПЛОМЫ",
     cert_title: "Зал Славы и Достижений Колледжа",
     cert_desc: "Официальные дипломы, почетные грамоты и свидетельства побед команды и студентов Бакинского государственного колледжа связи и транспорта на республиканских спартакиадах и турнирах.",
-    cert_stat_gold_val: "23 Золото",
+    cert_stat_gold_val: "11 Золото",
     cert_stat_gold_lbl: "I Место (Чемпионы)",
-    cert_stat_silver_val: "13 Серебро",
+    cert_stat_silver_val: "9 Серебро",
     cert_stat_silver_lbl: "II Место Республиканских и районных первенств",
-    cert_stat_bronze_val: "6 Бронза",
+    cert_stat_bronze_val: "3 Бронза",
     cert_stat_bronze_lbl: "III Место Турниров",
-    cert_stat_total_val: "73 Награды",
+    cert_stat_total_val: "24 Награды",
     cert_stat_total_lbl: "Официальный архив наград",
     cert_filter_all: "Все",
     cert_filter_respublika: "Республиканские первенства",
@@ -21930,6 +21930,8 @@ function initSceneTransition() {
 
   function filterCertificates() {
     return certificatesData.filter((item) => {
+      // Tab 9 (Rəsmi Kollec Arxiv Vitrini) ONLY displays college/institutional awards:
+      if (item.category === "telebe") return false;
       const matchCat = currentCategory === "all" || item.category === currentCategory;
       const matchYear = currentYear === "all" || item.year === currentYear;
       const q = searchQuery.trim().toLowerCase();
@@ -22150,14 +22152,12 @@ function initSceneTransition() {
         /cert_(aysel|elvin|huseyn)_/i.test(item.img || "");
       if (!isStudentCert) return false;
       if (currentStuCertFilter === "all") return true;
-      const hay = (
-        (item.title_az || "") +
-        " " +
-        (item.recipient_az || "") +
-        " " +
-        (item.subtitle_az || "")
-      ).toLowerCase();
-      return hay.includes(currentStuCertFilter.toLowerCase());
+      const rec = (item.recipient_az || "").toLowerCase();
+      const title = (item.title_az || "").toLowerCase();
+      const sub = (item.subtitle_az || "").toLowerCase();
+      if (currentStuCertFilter === "Xatirə") return rec.includes("xatirə") || rec.includes("cəfərzadə");
+      if (currentStuCertFilter === "Aydın") return rec.includes("aydın") || rec.includes("orucov");
+      return (rec + " " + title + " " + sub).includes(currentStuCertFilter.toLowerCase());
     });
   }
 
@@ -22267,19 +22267,20 @@ function initSceneTransition() {
       }
     });
 
-    // Update dynamic certificate category counts on filter buttons
-    const catCountBtns = document.querySelectorAll(".cert-filter-btn[data-cert-cat]");
+    // Update dynamic certificate category counts on filter buttons (Tab 9: Institutional only)
+    const institutionalCerts = certificatesData.filter((c) => c.category !== "telebe");
+    const catCountBtns = document.querySelectorAll("#panel-certificates .cert-filter-btn[data-cert-cat]");
     catCountBtns.forEach((btn) => {
       const cat = btn.getAttribute("data-cert-cat");
       const countSpan = btn.querySelector(".cert-btn-count");
       if (countSpan) {
-        const cnt = cat === "all" ? certificatesData.length : certificatesData.filter((c) => c.category === cat).length;
+        const cnt = cat === "all" ? institutionalCerts.length : institutionalCerts.filter((c) => c.category === cat).length;
         countSpan.textContent = String(cnt);
       }
     });
 
     // Category filter buttons
-    const catBtns = document.querySelectorAll(".cert-filter-btn[data-cert-cat]");
+    const catBtns = document.querySelectorAll("#panel-certificates .cert-filter-btn[data-cert-cat]");
     catBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
         catBtns.forEach((b) => b.classList.remove("active"));
