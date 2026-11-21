@@ -24205,14 +24205,14 @@ function initSceneTransition() {
       id: "f2_director",
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
-      no: "Qəbul otağı",
-      name_az: "Qəbul otağı", name_en: "Reception Office", name_ru: "Приемная комната",
+      no: "Direktor",
+      name_az: "Direktor otağı (Qəbul otağı)", name_en: "Director's Office (Reception)", name_ru: "Кабинет директора (Приемная)",
       cat: "admin",
       catLabel_az: "Rəhbərlik", catLabel_en: "Leadership", catLabel_ru: "Руководство",
       icon: "🏛️",
-      desc_az: "Kollec rəhbərliyinin iş və qəbul otağı, strateji idarəetmə mərkəzi.",
-      desc_en: "Executive and reception office of college leadership, strategic management center.",
-      desc_ru: "Рабочий кабинет руководства колледжа, приемная комната и центр стратегического управления.",
+      desc_az: "BDRNK direktoru və rəhbərliyin iş və qəbul otağı, kollecin strateji idarəetmə mərkəzi.",
+      desc_en: "Executive and reception office of BDRNK director and leadership, college strategic management center.",
+      desc_ru: "Рабочий кабинет и приемная директора и руководства колледжа, центр стратегического управления.",
       features_az: ["Rəhbərlik kabineti", "Qəbul otağı", "Müşavirə və iclas masası"],
       features_en: ["Executive office", "Reception room", "Conference meeting table"],
       features_ru: ["Кабинет руководства", "Приемная комната", "Стол для совещаний"],
@@ -24711,19 +24711,19 @@ function initSceneTransition() {
       desc_ru: "На 2-м этаже находятся кабинет директора, заместители, 3 компьютерных класса, методический кабинет и Библиотека (каб. 206).",
       countBadge_az: "11 Əsas Otaq və Mərkəz", countBadge_en: "11 Main Rooms & Hubs", countBadge_ru: "11 Основных Помещений",
       wings_az: [
-        { label: "Mərkəzi Qanad", text: "Qəbul otağı", icon: "🏛️" },
+        { label: "Mərkəzi Qanad", text: "Direktor otağı (Qəbul otağı)", icon: "🏛️" },
         { label: "Qərb Qanadı", text: "205 (Tədris müavini), Həmkar otağı, Mühəndis (FBK 2 otaq), 201, 203 (Kompüter), 202 (Ceyhun m.)", icon: "⬅️" },
         { label: "Şərq Qanadı", text: "214 (Qeydiyyat & Monitorinq), 217 (Metodiki kabinet), 211 (Kompüter otağı)", icon: "➡️" },
         { label: "Kitabxana", text: "206 - Kitabxana və Oxu Zalı (2 otaq daxilində)", icon: "📚" }
       ],
       wings_en: [
-        { label: "Central Wing", text: "Reception office", icon: "🏛️" },
+        { label: "Central Wing", text: "Director's office (Reception)", icon: "🏛️" },
         { label: "West Wing", text: "205 (Academic Deputy), Trade Union, Engineering (FBK), 201, 203 (Computer), 202 (Faculty)", icon: "⬅️" },
         { label: "East Wing", text: "214 (Registration & Monitoring), 217 (Methodic office), 211 (Computer)", icon: "➡️" },
         { label: "Library", text: "206 - Library and Reading Hall (2 rooms)", icon: "📚" }
       ],
       wings_ru: [
-        { label: "Центральное", text: "Приемная комната", icon: "🏛️" },
+        { label: "Центральное", text: "Кабинет директора (Приемная)", icon: "🏛️" },
         { label: "Западное крыло", text: "205 (Зам по учебной части), Профком, Инженерия (ПЦК), 201, 203 (ПК), 202 (Кабинет)", icon: "⬅️" },
         { label: "Восточное крыло", text: "214 (Регистрация и Мониторинг), 217 (Методический кабинет), 211 (ПК)", icon: "➡️" },
         { label: "Библиотека", text: "206 - Библиотека и Читальный зал (2 комнаты)", icon: "📚" }
