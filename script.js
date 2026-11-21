@@ -21735,6 +21735,72 @@ function initSceneTransition() {
       signer_ru: "Директор клуба: Р. Рзагулиев",
       img: "certificates/cert_seyfulla_boks_rr_2022.jpg",
       thumb: "certificates/thumbs/cert_seyfulla_boks_rr_2022.jpg"
+    },
+    {
+      id: 77,
+      title_az: "Kunq-fu Sanda üzrə Azərbaycan Çempionatı (+18, 61 kq) — II Yer",
+      title_en: "Kung-Fu Sanda Azerbaijan Championship (+18, 61 kg) — 2nd Place",
+      title_ru: "Чемпионат Азербайджана по Кунг-фу Санда (+18, 61 кг) — II Место",
+      subtitle_az: "Şabanov Fight idman təşkilatı adından ölkə çempionatında gümüş medal uğuru",
+      subtitle_en: "Silver medal achievement at the national championship representing Shabanov Fight",
+      subtitle_ru: "Серебряная медаль на чемпионате страны от спортивной организации Shabanov Fight",
+      recipient_az: "Mahmudov Rasim (BDRNK tələbəsi)",
+      recipient_en: "Mahmudov Rasim (BDRNK student)",
+      recipient_ru: "Махмудов Расим (студент БГКСТ)",
+      place_az: "II YER (Gümüş)",
+      place_en: "2nd PLACE (Silver)",
+      place_ru: "II МЕСТО (Серебро)",
+      placeType: "silver",
+      sport_az: "Kunq-fu Sanda",
+      sport_en: "Kung-Fu Sanda",
+      sport_ru: "Кунг-фу Санда",
+      sportIcon: "🥋",
+      category: "telebe",
+      year: "2025",
+      date_az: "23.11.2025",
+      date_en: "23.11.2025",
+      date_ru: "23.11.2025",
+      org_az: "Azərbaycan Respublikası Gənclər və İdman Nazirliyi · Şabanov Fight",
+      org_en: "Ministry of Youth and Sports of Azerbaijan · Shabanov Fight",
+      org_ru: "Министерство молодежи и спорта Азербайджана · Shabanov Fight",
+      signer_az: "Nazir: Fərid Qayıbov",
+      signer_en: "Minister: Farid Gayibov",
+      signer_ru: "Министр: Фарид Гаибов",
+      img: "certificates/cert_rasim_kunqfu_2025.jpg",
+      thumb: "certificates/thumbs/cert_rasim_kunqfu_2025.jpg"
+    },
+    {
+      id: 78,
+      title_az: "Boks üzrə Yoldaşlıq Turniri (64 kq) — I Yer Çempionu",
+      title_en: "Boxing Friendly Tournament (64 kg) — 1st Place Champion",
+      title_ru: "Товарищеский турнир по боксу (64 кг) — I Место Чемпион",
+      subtitle_az: "Boks idman növü üzrə çempionluq qızıl medalı və fəxri diplom",
+      subtitle_en: "Championship gold medal and honorary diploma in boxing",
+      subtitle_ru: "Золотая медаль чемпиона и почетный диплом по боксу",
+      recipient_az: "Mahmudov Rasim (BDRNK tələbəsi)",
+      recipient_en: "Mahmudov Rasim (BDRNK student)",
+      recipient_ru: "Махмудов Расим (студент БГКСТ)",
+      place_az: "I YER (Qızıl)",
+      place_en: "1st PLACE (Gold)",
+      place_ru: "I МЕСТО (Золото)",
+      placeType: "gold",
+      sport_az: "Boks",
+      sport_en: "Boxing",
+      sport_ru: "Бокс",
+      sportIcon: "🥊",
+      category: "telebe",
+      year: "2026",
+      date_az: "2026-cı il",
+      date_en: "Year 2026",
+      date_ru: "2026 год",
+      org_az: "Boks İdman Klubu · X.İ.N. Boxing",
+      org_en: "Boxing Sports Club · X.I.N. Boxing",
+      org_ru: "Боксерский клуб · X.I.N. Boxing",
+      signer_az: "Direktor: S. Əlizadə · Məşqçi: Ü. Eyyubov",
+      signer_en: "Director: S. Alizadeh · Coach: U. Eyyubov",
+      signer_ru: "Директор: С. Ализаде · Тренер: У. Эйюбов",
+      img: "certificates/cert_rasim_boks_2026.jpg",
+      thumb: "certificates/thumbs/cert_rasim_boks_2026.jpg"
     }
   ];
 
@@ -22257,6 +22323,7 @@ function initSceneTransition() {
       if (currentStuCertFilter === "Xatirə") return rec.includes("xatirə") || rec.includes("cəfərzadə");
       if (currentStuCertFilter === "Aydın") return rec.includes("aydın") || rec.includes("orucov");
       if (currentStuCertFilter === "Seyfulla") return rec.includes("seyfulla") || rec.includes("əsədov");
+      if (currentStuCertFilter === "Rasim") return rec.includes("rasim") || rec.includes("mahmudov");
       return (rec + " " + title + " " + sub).includes(currentStuCertFilter.toLowerCase());
     });
   }
