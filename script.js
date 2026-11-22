@@ -13177,6 +13177,7 @@ function initContextMenu() {
 }
 
 function initPreloader() {
+  if (document.getElementById("neon-preloader")) return;
   const preloader = document.getElementById("preloader");
   if (!preloader) return;
 
