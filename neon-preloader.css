@@ -1,0 +1,768 @@
+/* ==========================================================================
+   BDRNK NEON "NETWORK CONNECTION" SPLASH SCREEN & FLY-TO-NAVBAR TRANSITION
+   ========================================================================== */
+
+:root {
+  --nn-bg-deep: #06060b;
+  --nn-bg-core: #0b0914;
+  --nn-violet: #a855f7;
+  --nn-violet-soft: #c084fc;
+  --nn-cyan: #22d3ee;
+  --nn-cyan-soft: #38bdf8;
+  --nn-text: #f8fafc;
+  --nn-muted: #94a3b8;
+  --nn-logo-size: 96px;
+  --nn-center-y: 45vh;
+}
+
+/* Zero-flash guards controlled synchronously from <head> */
+html.nn-skip-intro #neon-preloader {
+  display: none !important;
+}
+
+html.nn-intro-active {
+  overflow: hidden;
+}
+
+/* Keep navbar logo box laid out cleanly while invisible during flight */
+#navbar-logo-target.nn-logo-incoming {
+  opacity: 0 !important;
+  transition: none !important;
+}
+
+#navbar-logo-target.nn-landed-pulse {
+  animation: nnLandPulse 0.52s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes nnLandPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.65), 0 0 18px rgba(168, 85, 247, 0.45);
+    transform: scale(1.06);
+  }
+  65% {
+    box-shadow: 0 0 0 8px rgba(34, 211, 238, 0), 0 0 22px rgba(168, 85, 247, 0.2);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0);
+    transform: scale(1);
+  }
+}
+
+/* ─── Overlay Container ─── */
+#neon-preloader.nn-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: auto;
+  user-select: none;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#neon-preloader.is-hidden {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* Dark Radial Backdrop, Dual Aurora & Crisp Tech Grid */
+.nn-backdrop {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 68% 58% at 50% 45%,
+    var(--nn-bg-core) 0%,
+    #070710 52%,
+    var(--nn-bg-deep) 100%
+  );
+  transition: opacity 0.52s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
+}
+
+#neon-preloader.is-exiting .nn-backdrop {
+  opacity: 0;
+}
+
+.nn-aurora {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle 420px at 34% 34%, rgba(168, 85, 247, 0.14), transparent 72%),
+    radial-gradient(circle 420px at 66% 62%, rgba(34, 211, 238, 0.11), transparent 72%);
+  pointer-events: none;
+}
+
+.nn-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(ellipse 62% 56% at 50% 45%, rgba(0, 0, 0, 0.85) 18%, transparent 78%);
+  mask-image: radial-gradient(ellipse 62% 56% at 50% 45%, rgba(0, 0, 0, 0.85) 18%, transparent 78%);
+  pointer-events: none;
+}
+
+/* ─── Phase 1: Center Node & Fiber-Optic SVG Stage ─── */
+.nn-fiber-stage {
+  position: fixed;
+  top: var(--nn-center-y);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(92vw, 780px);
+  aspect-ratio: 800 / 440;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.26s ease, transform 0.32s ease;
+}
+
+#neon-preloader.is-preparing-exit .nn-fiber-stage,
+#neon-preloader.is-flying .nn-fiber-stage {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.04);
+}
+
+.nn-fiber-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Default initial states so replay() starts crisply from t=0 */
+.nn-ignition-dot {
+  opacity: 0;
+  transform-origin: 400px 220px;
+  transform: scale(0.3);
+}
+
+.nn-ignition-wave {
+  opacity: 0;
+  transform-origin: 400px 220px;
+  transform: scale(0.5);
+}
+
+.nn-fiber-line {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  opacity: 0;
+}
+
+.nn-fiber-pulse {
+  stroke-dasharray: 18 110;
+  stroke-dashoffset: -100;
+  opacity: 0;
+}
+
+.nn-sat-node {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0);
+}
+
+.nn-orbit-dashed {
+  opacity: 0;
+  transform-origin: 400px 220px;
+}
+
+.nn-lock-arc {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  opacity: 0;
+}
+
+/* Phase 1 active keyframe animations (scoped under .nn-running) */
+#neon-preloader.nn-running .nn-ignition-dot {
+  animation: nnIgnitionDot 0.56s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+#neon-preloader.nn-running .nn-ignition-wave {
+  animation: nnIgnitionWave 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.04s forwards;
+}
+
+#neon-preloader.nn-running .nn-fiber-line {
+  animation: nnFiberTrace 0.44s cubic-bezier(0.22, 1, 0.36, 1) calc(40ms + var(--d, 0ms)) forwards;
+}
+
+#neon-preloader.nn-running .nn-fiber-pulse {
+  animation: nnFiberPulseIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) calc(260ms + var(--d, 0ms)) forwards;
+}
+
+#neon-preloader.nn-running .nn-sat-node {
+  animation: nnSatPop 0.26s cubic-bezier(0.16, 1, 0.3, 1) calc(260ms + var(--d, 0ms)) forwards;
+}
+
+#neon-preloader.nn-running .nn-orbit-dashed {
+  animation:
+    nnOrbitFade 0.5s ease 0.24s forwards,
+    nnOrbitSpin 16s linear 0.24s infinite;
+}
+
+#neon-preloader.nn-running .nn-lock-arc {
+  animation: nnLockArcDraw 0.52s cubic-bezier(0.22, 1, 0.36, 1) calc(200ms + var(--ad, 0ms)) forwards;
+}
+
+@keyframes nnIgnitionDot {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  42% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+
+@keyframes nnIgnitionWave {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(4.2);
+  }
+}
+
+@keyframes nnFiberTrace {
+  0% {
+    opacity: 0.25;
+    stroke-dashoffset: 100;
+  }
+  30% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0.42;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes nnFiberPulseIn {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: -100;
+  }
+  20% {
+    opacity: 0.95;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 24;
+  }
+}
+
+@keyframes nnSatPop {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+}
+
+@keyframes nnOrbitFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.45;
+  }
+}
+
+@keyframes nnOrbitSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes nnLockArcDraw {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 100;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.85;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ─── Flying Central Emblem (Shared-Element FLIP Target) ─── */
+.nn-flying-logo {
+  position: fixed;
+  top: var(--nn-center-y);
+  left: 50%;
+  width: var(--nn-logo-size);
+  height: var(--nn-logo-size);
+  margin-left: calc(var(--nn-logo-size) / -2);
+  margin-top: calc(var(--nn-logo-size) / -2);
+  z-index: 20;
+  border-radius: 50%;
+  transform: translate3d(0, 0, 0) scale(1);
+  transform-origin: center center;
+  will-change: transform, border-radius, opacity;
+  pointer-events: none;
+}
+
+#neon-preloader.is-flying .nn-flying-logo {
+  transition:
+    transform 0.62s cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 0.62s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.14s ease;
+}
+
+.nn-logo-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  opacity: 0;
+  transform: scale(0.35);
+}
+
+#neon-preloader.nn-running .nn-logo-inner {
+  animation: nnLogoInnerReveal 0.56s cubic-bezier(0.16, 1, 0.3, 1) 0.16s forwards;
+}
+
+@keyframes nnLogoInnerReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.35);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.nn-logo-rim {
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, var(--nn-cyan) 0%, var(--nn-violet) 55%, var(--nn-cyan-soft) 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  box-shadow:
+    0 0 22px rgba(168, 85, 247, 0.32),
+    0 0 40px rgba(34, 211, 238, 0.18);
+  transition: opacity 0.28s ease;
+  pointer-events: none;
+}
+
+#neon-preloader.is-flying .nn-logo-rim {
+  opacity: 0;
+}
+
+.nn-logo-surface {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  background: #ffffff;
+  border-radius: inherit;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(6, 6, 11, 0.55);
+}
+
+.nn-emblem-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: 1;
+  transition: opacity 0.32s ease;
+}
+
+.nn-emblem-draw {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+#neon-preloader.nn-running .nn-emblem-draw {
+  animation: nnEmblemStroke 0.52s cubic-bezier(0.22, 1, 0.36, 1) calc(200ms + var(--ed, 0ms)) forwards;
+}
+
+@keyframes nnEmblemStroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.nn-logo-img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+  opacity: 0;
+  transform: scale(0.92);
+}
+
+#neon-preloader.nn-running .nn-flying-logo:not(.nn-svg-fallback) .nn-emblem-svg {
+  animation: nnEmblemFadeOut 0.34s ease 0.54s forwards;
+}
+
+@keyframes nnEmblemFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#neon-preloader.nn-running .nn-logo-img {
+  animation: nnImgCrossfade 0.34s cubic-bezier(0.16, 1, 0.3, 1) 0.54s forwards;
+}
+
+@keyframes nnImgCrossfade {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Keep SVG emblem cleanly visible if external image fails to load */
+.nn-flying-logo.nn-svg-fallback .nn-logo-img {
+  display: none !important;
+}
+
+.nn-flying-logo.nn-svg-fallback .nn-logo-surface {
+  background: var(--nn-bg-core);
+  padding: 0;
+}
+
+/* ─── Phase 2: College Title & Network Status ─── */
+.nn-caption {
+  position: fixed;
+  top: calc(var(--nn-center-y) + (var(--nn-logo-size) / 2) + 28px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: min(92vw, 620px);
+  text-align: center;
+  z-index: 15;
+  pointer-events: none;
+  transition: opacity 0.24s ease, transform 0.24s ease;
+}
+
+#neon-preloader.is-preparing-exit .nn-caption,
+#neon-preloader.is-flying .nn-caption {
+  opacity: 0;
+  transform: translate(-50%, -8px);
+}
+
+.nn-title {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(1.08rem, 2.25vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin: 0 0 14px;
+  color: var(--nn-text);
+}
+
+.nn-word-clip {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  margin: 0 0.16em;
+}
+
+.nn-word {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 58%, #bae6fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: translateY(115%);
+  filter: blur(4px);
+}
+
+.nn-title-entity {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.78em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.nn-title-entity .nn-word {
+  background: linear-gradient(135deg, #e9d5ff 0%, #c084fc 45%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#neon-preloader.nn-running .nn-word {
+  animation: nnWordReveal 0.46s cubic-bezier(0.16, 1, 0.3, 1) calc(460ms + var(--wi, 0) * 45ms) forwards;
+}
+
+@keyframes nnWordReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(115%);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.nn-progress-track {
+  position: relative;
+  width: 176px;
+  height: 2px;
+  margin: 0 auto 12px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.16);
+  overflow: hidden;
+  opacity: 0;
+}
+
+#neon-preloader.nn-running .nn-progress-track {
+  animation: nnFadeInOnly 0.3s ease 0.16s forwards;
+}
+
+.nn-progress-fill {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--nn-violet), var(--nn-cyan));
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.65);
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
+#neon-preloader.nn-running .nn-progress-fill {
+  animation: nnProgressSweep 1.04s cubic-bezier(0.22, 1, 0.36, 1) 0.16s forwards;
+}
+
+@keyframes nnProgressSweep {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes nnFadeInOnly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nn-status {
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--nn-muted);
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+#neon-preloader.nn-running .nn-status {
+  animation: nnFadeUp 0.4s ease 0.42s forwards;
+}
+
+@keyframes nnFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nn-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--nn-violet-soft);
+  box-shadow: 0 0 8px rgba(192, 132, 252, 0.8);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nn-status.is-connected {
+  color: var(--nn-cyan);
+  text-shadow: 0 0 12px rgba(34, 211, 238, 0.35), 0 0 18px rgba(168, 85, 247, 0.25);
+}
+
+.nn-status.is-connected .nn-status-dot {
+  background: var(--nn-cyan);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.95);
+}
+
+/* Whisper-quiet skip hint */
+.nn-skip-hint {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--nn-muted);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 15;
+  transition: opacity 0.24s ease;
+}
+
+#neon-preloader.nn-running .nn-skip-hint {
+  animation: nnSkipHintIn 0.4s ease 0.7s forwards;
+}
+
+#neon-preloader.is-preparing-exit .nn-skip-hint,
+#neon-preloader.is-flying .nn-skip-hint {
+  opacity: 0 !important;
+  animation: none !important;
+}
+
+@keyframes nnSkipHintIn {
+  to {
+    opacity: 0.32;
+  }
+}
+
+/* ─── Replay Intro Button in Header Utility Bar ─── */
+.nn-replay-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(34, 211, 238, 0.28);
+  color: #e2e8f0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.nn-replay-btn:hover,
+.nn-replay-btn:focus-visible {
+  border-color: var(--nn-cyan);
+  background: rgba(168, 85, 247, 0.22);
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.28), 0 0 18px rgba(168, 85, 247, 0.2);
+  outline: none;
+}
+
+.nn-replay-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--nn-cyan), var(--nn-violet));
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.8);
+  flex-shrink: 0;
+}
+
+/* ─── Reduced Motion Accessibility ─── */
+@media (prefers-reduced-motion: reduce) {
+  #neon-preloader *,
+  #neon-preloader::before,
+  #neon-preloader::after,
+  #navbar-logo-target.nn-landed-pulse {
+    animation: none !important;
+    transition: opacity 0.26s ease !important;
+  }
+
+  #neon-preloader.nn-reduced-replay .nn-logo-inner,
+  #neon-preloader.nn-reduced-replay .nn-logo-img,
+  #neon-preloader.nn-reduced-replay .nn-word,
+  #neon-preloader.nn-reduced-replay .nn-progress-track,
+  #neon-preloader.nn-reduced-replay .nn-status {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  #neon-preloader.nn-reduced-replay .nn-flying-logo:not(.nn-svg-fallback) .nn-emblem-svg {
+    opacity: 0 !important;
+  }
+
+  #neon-preloader.nn-reduced-replay .nn-progress-fill {
+    transform: scaleX(1) !important;
+  }
+}
+
+/* ─── Mobile Viewport Tuning ─── */
+@media (max-width: 640px) {
+  :root {
+    --nn-logo-size: 78px;
+    --nn-center-y: 42vh;
+  }
+
+  .nn-caption {
+    top: calc(var(--nn-center-y) + (var(--nn-logo-size) / 2) + 22px);
+  }
+
+  .nn-status {
+    font-size: 0.64rem;
+    letter-spacing: 0.14em;
+  }
+
+  .nn-replay-btn {
+    padding: 2px 8px;
+    font-size: 10.5px;
+    gap: 5px;
+  }
+}

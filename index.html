@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="style.css?v=20261118_1400" />
     <link rel="stylesheet" href="tailwind-utilities.css?v=20261118_1400" />
     <link rel="stylesheet" href="design-system.css?v=20261118_1400" />
+    <link rel="stylesheet" href="neon-preloader.css?v=20261122_01" />
     <script>
         (function () {
             try {
@@ -62,99 +63,181 @@
             } catch (e) { }
         })();
     </script>
+    <script>
+        (function () {
+            try {
+                var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                var skipParam = new URLSearchParams(window.location.search).get('skipIntro') === '1';
+                if (reduce || skipParam) {
+                    document.documentElement.classList.add('nn-skip-intro');
+                } else {
+                    document.documentElement.classList.add('nn-intro-active');
+                }
+            } catch (e) {
+                document.documentElement.classList.add('nn-intro-active');
+            }
+        })();
+    </script>
 </head>
 
 <body class="bg-white text-[#0a192f] dark:bg-[#081120] dark:text-slate-100 antialiased selection:bg-[#b8934a]/25">
     <div class="ambient-noise" aria-hidden="true"></div>
 
-    <div id="preloader" class="intro-aura-preloader" aria-label="Yüklənir...">
-        <!-- Luxury Ambient Radial Glow Backdrop -->
-        <div class="aura-bg-glow" aria-hidden="true"></div>
-
-        <!-- Golden Concentric Sonar Pulse Rings (Idea 1) -->
-        <div class="aura-pulse-wrapper" id="aura-pulse-wrapper" aria-hidden="true">
-            <div class="aura-ring aura-ring-1"></div>
-            <div class="aura-ring aura-ring-2"></div>
-            <div class="aura-ring aura-ring-3"></div>
+    <!-- ═══ NEON NETWORK CONNECTION SPLASH SCREEN & FLY-TO-NAVBAR PRELOADER ═══ -->
+    <div id="neon-preloader" class="nn-preloader" role="status" aria-live="polite"
+        aria-label="Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik Hüquqi Şəxsi yüklənir">
+        <div class="nn-backdrop" aria-hidden="true">
+            <div class="nn-aurora"></div>
+            <div class="nn-grid"></div>
         </div>
 
-        <!-- Central Stage with Seamless Flying Logo (Idea 4) -->
-        <div class="aura-morph-hub" id="aura-morph-hub">
-            <div class="aura-morph-box" id="aura-morph-box">
-                <img src="logo.jpg" alt="BDRNK Logo" class="aura-morph-img" />
-                <div class="aura-shimmer-sweep" aria-hidden="true"></div>
-            </div>
+        <!-- Phase 1: Center Node & Radiating/Converging Fiber-Optic Stage -->
+        <div class="nn-fiber-stage" aria-hidden="true">
+            <svg class="nn-fiber-svg" viewBox="0 0 800 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="nn-grad-cv" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#22d3ee" />
+                        <stop offset="100%" stop-color="#a855f7" />
+                    </linearGradient>
+                    <linearGradient id="nn-grad-vc" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#a855f7" />
+                        <stop offset="100%" stop-color="#38bdf8" />
+                    </linearGradient>
+                    <filter id="nn-glow-soft" x="-25%" y="-25%" width="150%" height="150%">
+                        <feGaussianBlur stdDeviation="2.5" result="blur" />
+                        <feMerge>
+                            <feMergeNode in="blur" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
 
-            <div class="aura-caption" id="aura-caption">
-                <span class="aura-badge">BDRNK</span>
-                <h1 class="aura-inst-name" data-i18n="inst_full_name">BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ PUBLİK
-                    HÜQUQİ ŞƏXSİ</h1>
-                <p class="aura-tagline" data-i18n="hero_aura_tagline">Dövlət Standartı ilə Rəqəmsal Gələcəyə Doğru</p>
+                <!-- 8 Symmetrical Fiber-Optic Conduit Paths -->
+                <g filter="url(#nn-glow-soft)">
+                    <path class="nn-fiber-line" style="--d:0ms" pathLength="100" stroke="url(#nn-grad-cv)"
+                        stroke-width="1.3" stroke-linecap="round" d="M 400 220 L 265 152 L 112 152" />
+                    <path class="nn-fiber-line" style="--d:20ms" pathLength="100" stroke="url(#nn-grad-vc)"
+                        stroke-width="1.3" stroke-linecap="round" d="M 400 220 L 535 152 L 688 152" />
+                    <path class="nn-fiber-line" style="--d:35ms" pathLength="100" stroke="url(#nn-grad-vc)"
+                        stroke-width="1.3" stroke-linecap="round" d="M 400 220 L 265 288 L 112 288" />
+                    <path class="nn-fiber-line" style="--d:50ms" pathLength="100" stroke="url(#nn-grad-cv)"
+                        stroke-width="1.3" stroke-linecap="round" d="M 400 220 L 535 288 L 688 288" />
+                    <path class="nn-fiber-line" style="--d:65ms" pathLength="100" stroke="url(#nn-grad-cv)"
+                        stroke-width="1.15" stroke-linecap="round" d="M 400 220 L 315 92 L 185 92" />
+                    <path class="nn-fiber-line" style="--d:80ms" pathLength="100" stroke="url(#nn-grad-vc)"
+                        stroke-width="1.15" stroke-linecap="round" d="M 400 220 L 485 92 L 615 92" />
+                    <path class="nn-fiber-line" style="--d:95ms" pathLength="100" stroke="url(#nn-grad-vc)"
+                        stroke-width="1.15" stroke-linecap="round" d="M 400 220 L 315 348 L 185 348" />
+                    <path class="nn-fiber-line" style="--d:110ms" pathLength="100" stroke="url(#nn-grad-cv)"
+                        stroke-width="1.15" stroke-linecap="round" d="M 400 220 L 485 348 L 615 348" />
+
+                    <!-- Converging Return Pulses -->
+                    <path class="nn-fiber-pulse" style="--d:0ms" pathLength="100" stroke="#22d3ee"
+                        stroke-width="2" stroke-linecap="round" d="M 400 220 L 265 152 L 112 152" />
+                    <path class="nn-fiber-pulse" style="--d:25ms" pathLength="100" stroke="#c084fc"
+                        stroke-width="2" stroke-linecap="round" d="M 400 220 L 535 152 L 688 152" />
+                    <path class="nn-fiber-pulse" style="--d:45ms" pathLength="100" stroke="#c084fc"
+                        stroke-width="2" stroke-linecap="round" d="M 400 220 L 265 288 L 112 288" />
+                    <path class="nn-fiber-pulse" style="--d:65ms" pathLength="100" stroke="#38bdf8"
+                        stroke-width="2" stroke-linecap="round" d="M 400 220 L 535 288 L 688 288" />
+                    <path class="nn-fiber-pulse" style="--d:85ms" pathLength="100" stroke="#38bdf8"
+                        stroke-width="1.8" stroke-linecap="round" d="M 400 220 L 315 92 L 185 92" />
+                    <path class="nn-fiber-pulse" style="--d:100ms" pathLength="100" stroke="#a855f7"
+                        stroke-width="1.8" stroke-linecap="round" d="M 400 220 L 485 92 L 615 92" />
+                    <path class="nn-fiber-pulse" style="--d:115ms" pathLength="100" stroke="#a855f7"
+                        stroke-width="1.8" stroke-linecap="round" d="M 400 220 L 315 348 L 185 348" />
+                    <path class="nn-fiber-pulse" style="--d:130ms" pathLength="100" stroke="#22d3ee"
+                        stroke-width="1.8" stroke-linecap="round" d="M 400 220 L 485 348 L 615 348" />
+                </g>
+
+                <!-- Peripheral Endpoint Nodes -->
+                <g filter="url(#nn-glow-soft)">
+                    <circle class="nn-sat-node" style="--d:0ms" cx="112" cy="152" r="3.5" fill="#22d3ee" />
+                    <circle class="nn-sat-node" style="--d:20ms" cx="688" cy="152" r="3.5" fill="#c084fc" />
+                    <circle class="nn-sat-node" style="--d:35ms" cx="112" cy="288" r="3.5" fill="#c084fc" />
+                    <circle class="nn-sat-node" style="--d:50ms" cx="688" cy="288" r="3.5" fill="#22d3ee" />
+                    <circle class="nn-sat-node" style="--d:65ms" cx="185" cy="92" r="3" fill="#38bdf8" />
+                    <circle class="nn-sat-node" style="--d:80ms" cx="615" cy="92" r="3" fill="#a855f7" />
+                    <circle class="nn-sat-node" style="--d:95ms" cx="185" cy="348" r="3" fill="#a855f7" />
+                    <circle class="nn-sat-node" style="--d:110ms" cx="615" cy="348" r="3" fill="#38bdf8" />
+                </g>
+
+                <!-- Central Telemetry Rings & Lock Arcs -->
+                <circle class="nn-orbit-dashed" cx="400" cy="220" r="74" stroke="rgba(192,132,252,0.45)"
+                    stroke-width="1" stroke-dasharray="3 6" />
+                <path class="nn-lock-arc" style="--ad:0ms" pathLength="100" stroke="#22d3ee" stroke-width="1.6"
+                    stroke-linecap="round" d="M 400 160 A 60 60 0 0 1 400 280" filter="url(#nn-glow-soft)" />
+                <path class="nn-lock-arc" style="--ad:45ms" pathLength="100" stroke="#a855f7" stroke-width="1.6"
+                    stroke-linecap="round" d="M 400 280 A 60 60 0 0 1 400 160" filter="url(#nn-glow-soft)" />
+
+                <!-- Center Ignition Point & Wave -->
+                <circle class="nn-ignition-wave" cx="400" cy="220" r="14" stroke="#22d3ee" stroke-width="1.6" />
+                <circle class="nn-ignition-dot" cx="400" cy="220" r="5" fill="#22d3ee" filter="url(#nn-glow-soft)" />
+            </svg>
+        </div>
+
+        <!-- Shared-Element Central Emblem (Flies seamlessly into #navbar-logo-target) -->
+        <div class="nn-flying-logo" id="nn-flying-logo">
+            <div class="nn-logo-inner">
+                <div class="nn-logo-rim" aria-hidden="true"></div>
+                <div class="nn-logo-surface">
+                    <!-- Clean Vector Network + College Emblem SVG -->
+                    <svg class="nn-emblem-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <circle cx="40" cy="40" r="40" fill="#0b0914" />
+                        <!-- Outer Network Arcs -->
+                        <path class="nn-emblem-draw" style="--ed:0ms" pathLength="100"
+                            d="M 21 26 A 26 26 0 0 1 59 26" stroke="#22d3ee" stroke-width="2"
+                            stroke-linecap="round" />
+                        <path class="nn-emblem-draw" style="--ed:40ms" pathLength="100"
+                            d="M 27 32 A 18 18 0 0 1 53 32" stroke="#c084fc" stroke-width="1.8"
+                            stroke-linecap="round" />
+                        <!-- Central Signal Beacon -->
+                        <circle cx="40" cy="30" r="3" fill="#22d3ee" />
+                        <path class="nn-emblem-draw" style="--ed:60ms" pathLength="100"
+                            d="M 40 33 L 34 45 L 46 45 Z" stroke="#38bdf8" stroke-width="1.8"
+                            stroke-linejoin="round" />
+                        <!-- Academic Open Book Base -->
+                        <path class="nn-emblem-draw" style="--ed:90ms" pathLength="100"
+                            d="M 20 50 Q 30 46 40 52 Q 50 46 60 50 L 60 62 Q 50 58 40 64 Q 30 58 20 62 Z"
+                            stroke="#a855f7" stroke-width="2" stroke-linejoin="round" />
+                        <path class="nn-emblem-draw" style="--ed:120ms" pathLength="100"
+                            d="M 40 52 L 40 64" stroke="#22d3ee" stroke-width="1.6" stroke-linecap="round" />
+                        <!-- Circuit Nodes -->
+                        <circle cx="21" cy="26" r="2" fill="#22d3ee" />
+                        <circle cx="59" cy="26" r="2" fill="#a855f7" />
+                    </svg>
+                    <img src="logo.jpg" alt="Bakı Dövlət Rabitə və Nəqliyyat Kolleci" class="nn-logo-img" />
+                </div>
             </div>
         </div>
+
+        <!-- Phase 2: College Title & Telemetry Status -->
+        <div class="nn-caption">
+            <h1 class="nn-title" aria-label="Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik Hüquqi Şəxsi">
+                <span class="nn-word-clip"><span class="nn-word" style="--wi:0">Bakı</span></span>
+                <span class="nn-word-clip"><span class="nn-word" style="--wi:1">Dövlət</span></span>
+                <span class="nn-word-clip"><span class="nn-word" style="--wi:2">Rabitə</span></span>
+                <span class="nn-word-clip"><span class="nn-word" style="--wi:3">və</span></span>
+                <span class="nn-word-clip"><span class="nn-word" style="--wi:4">Nəqliyyat</span></span>
+                <span class="nn-word-clip"><span class="nn-word" style="--wi:5">Kolleci</span></span>
+                <span class="nn-title-entity">
+                    <span class="nn-word-clip"><span class="nn-word" style="--wi:6">Publik</span></span>
+                    <span class="nn-word-clip"><span class="nn-word" style="--wi:7">Hüquqi</span></span>
+                    <span class="nn-word-clip"><span class="nn-word" style="--wi:8">Şəxsi</span></span>
+                </span>
+            </h1>
+            <div class="nn-progress-track" aria-hidden="true">
+                <div class="nn-progress-fill"></div>
+            </div>
+            <p class="nn-status" id="nn-status">
+                <span class="nn-status-dot" aria-hidden="true"></span>
+                <span id="nn-status-text">CONNECTING NODE · 0%</span>
+            </p>
+        </div>
+
+        <div class="nn-skip-hint" aria-hidden="true">Click or press ESC to skip</div>
     </div>
-    <script>
-        (function () {
-            var preloader = document.getElementById("preloader");
-            var morphBox = document.getElementById("aura-morph-box");
-            var caption = document.getElementById("aura-caption");
-            var rings = document.getElementById("aura-pulse-wrapper");
-            var headerLogo = document.querySelector(".header-logo-img");
-
-            if (!preloader || !morphBox) return;
-
-            var hasMorphed = false;
-
-            function startMorph() {
-                if (hasMorphed) return;
-                hasMorphed = true;
-
-                // 1. Fade caption and expanding pulse rings
-                if (caption) caption.classList.add("aura-hide");
-                if (rings) rings.classList.add("aura-hide");
-
-                // 2. Compute exact target coordinates of the header logo
-                var targetRect = headerLogo ? headerLogo.getBoundingClientRect() : null;
-                var currentRect = morphBox.getBoundingClientRect();
-
-                if (targetRect && targetRect.width > 0 && targetRect.top >= 0) {
-                    var currentCenterX = currentRect.left + currentRect.width / 2;
-                    var currentCenterY = currentRect.top + currentRect.height / 2;
-
-                    var targetCenterX = targetRect.left + targetRect.width / 2;
-                    var targetCenterY = targetRect.top + targetRect.height / 2;
-
-                    var deltaX = targetCenterX - currentCenterX;
-                    var deltaY = targetCenterY - currentCenterY;
-                    var scale = targetRect.width / currentRect.width;
-
-                    morphBox.style.transform = "translate(" + deltaX + "px, " + deltaY + "px) scale(" + scale + ")";
-                    morphBox.style.borderRadius = "4px";
-                    morphBox.style.boxShadow = "none";
-                    morphBox.style.borderColor = "transparent";
-                } else {
-                    morphBox.style.transform = "scale(0.85)";
-                    morphBox.style.opacity = "0";
-                }
-
-                // 3. Fade out the dark backdrop seamlessly
-                setTimeout(function () {
-                    preloader.classList.add("morph-fade");
-                }, 100);
-
-                // 4. Remove preloader from DOM flow once animation settles
-                setTimeout(function () {
-                    preloader.style.display = "none";
-                }, 850);
-            }
-
-            // Start morphing after initial aura pulse showcase
-            setTimeout(startMorph, 900);
-
-            // Click to skip instantly
-            preloader.addEventListener("click", startMorph);
-        })();
-    </script>
 
     <!-- ═══ SCENE TRANSITION OVERLAY ═══ -->
 
@@ -209,7 +292,12 @@
                         <span>www.rabitankolleci.edu.az</span>
                     </span>
                 </div>
-                <div class="top-utility-right">
+                <div class="top-utility-right flex items-center gap-2 shrink-0">
+                    <button type="button" id="nn-replay-intro-btn" class="nn-replay-btn"
+                        title="Neon giriş animasiyasını təkrarla" aria-label="Replay Intro">
+                        <span class="nn-replay-dot" aria-hidden="true"></span>
+                        <span>Replay Intro</span>
+                    </button>
                     <a href="https://dim.gov.az/az" target="_blank" rel="noopener noreferrer"
                         class="utility-portal-link inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#0a2240]/10 dark:bg-[#c8a45d]/20 hover:bg-[#0a2240]/20 dark:bg-[#c8a45d]/30 text-blue-300 font-semibold border border-[#b8934a]/30 dark:border-[#c8a45d]/30 transition"
                         data-i18n="nav_register">
@@ -222,7 +310,7 @@
         <div
             class="header-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-4">
             <a href="#hero" class="logo-group flex items-center gap-3 shrink-0 group">
-                <div
+                <div id="navbar-logo-target" data-logo-target="true"
                     class="logo-icon w-11 h-11 rounded-2xl overflow-hidden border border-slate-900/10 dark:border-white/15 shadow-sm group-hover:scale-105 transition-transform duration-300">
                     <img src="logo.jpg" alt="BDRNK Logo" class="header-logo-img w-full h-full object-cover" />
                 </div>
@@ -377,6 +465,7 @@
         </nav>
 
     </header>
+    <script src="js/neon-preloader.js?v=20261122_01"></script>
 
     <!-- ═══ MOBILE NAV ═══ -->
 
@@ -3871,7 +3960,7 @@
                         </div>
                     </div>
                     <div class="subnav-pills-wrap">
-                        <a href="#honor-students" class="subnav-pill">🌟 Fəxri tələbələr (18)</a><a href="#student-certificates-section" class="subnav-pill subnav-pill-gold">🎖️ Tələbə sertifikatları (75)</a><a href="#student-projects-section" class="subnav-pill">🚀 Tələbə layihələri</a><a href="#sports-trophies" class="subnav-pill">🏆 Tələbə nailiyyətləri</a><a href="#student-competitions-section" class="subnav-pill">🥇 Müsabiqələr və olimpiadalar</a>
+                        <a href="#honor-students" class="subnav-pill">🌟 Fəxri tələbələr (18)</a><a href="#student-certificates-section" class="subnav-pill subnav-pill-gold">🎖️ Tələbə sertifikatları (78)</a><a href="#student-projects-section" class="subnav-pill">🚀 Tələbə layihələri</a><a href="#sports-trophies" class="subnav-pill">🏆 Tələbə nailiyyətləri</a><a href="#student-competitions-section" class="subnav-pill">🥇 Müsabiqələr və olimpiadalar</a>
                     </div>
                 </div>
             </div>
@@ -3980,7 +4069,11 @@
                         <div class="cert-filters-group" id="student-cert-filters-bar">
                             <button type="button" class="cert-filter-btn active" data-stu-cert-filter="all">
                                 <span>Bütün Tələbələr</span>
-                                <span class="cert-btn-count">75</span>
+                                <span class="cert-btn-count">78</span>
+                            </button>
+                            <button type="button" class="cert-filter-btn" data-stu-cert-filter="Səma">
+                                <span>👩‍💻 Cəbizadə Səma</span>
+                                <span class="cert-btn-count">3</span>
                             </button>
                             <button type="button" class="cert-filter-btn" data-stu-cert-filter="Nurlan">
                                 <span>🥋 Əyyubov Nurlan</span>
