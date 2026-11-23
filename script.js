@@ -28337,81 +28337,124 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
     function setupDropdown() {
       const wrapper = document.getElementById("nav-about-dropdown-wrapper") || document.querySelector(".nav-tab-dropdown-wrapper");
       const menu = document.getElementById("nav-about-dropdown-menu") || document.querySelector(".nav-tab-dropdown-menu");
+      const desktopNav = document.getElementById("desktop-nav");
       if (!wrapper || !menu) return;
 
       let closeTimer = null;
+      let lastOpenedAt = 0;
+
+      const canHover = () => window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+      function applyPosition() {
+        const rect = wrapper.getBoundingClientRect();
+        const menuWidth = menu.offsetWidth || Math.min(290, window.innerWidth - 20);
+        const left = Math.max(10, Math.min(Math.round(rect.left), window.innerWidth - menuWidth - 10));
+        menu.style.position = "fixed";
+        menu.style.top = `${Math.round(rect.bottom) + 4}px`;
+        menu.style.left = `${left}px`;
+        menu.style.zIndex = "999999";
+      }
+
+      function closeNow() {
+        if (closeTimer) {
+          clearTimeout(closeTimer);
+          closeTimer = null;
+        }
+        menu.classList.remove("is-open");
+        wrapper.classList.remove("is-open");
+      }
 
       function positionAndOpen() {
         if (closeTimer) {
           clearTimeout(closeTimer);
           closeTimer = null;
         }
-        const rect = wrapper.getBoundingClientRect();
-        menu.style.position = "fixed";
-        menu.style.top = `${Math.round(rect.bottom) + 4}px`;
-        menu.style.left = `${Math.max(10, Math.round(rect.left))}px`;
-        menu.style.zIndex = "999999";
+        lastOpenedAt = Date.now();
+        applyPosition();
         menu.classList.add("is-open");
         wrapper.classList.add("is-open");
       }
 
       function scheduleClose(delay = 180) {
         if (closeTimer) clearTimeout(closeTimer);
-        closeTimer = setTimeout(() => {
-          menu.classList.remove("is-open");
-          wrapper.classList.remove("is-open");
-        }, delay);
+        closeTimer = setTimeout(closeNow, delay);
       }
 
-      wrapper.addEventListener("mouseenter", positionAndOpen);
-      wrapper.addEventListener("mouseleave", () => scheduleClose(180));
+      wrapper.addEventListener("mouseenter", () => {
+        if (canHover()) positionAndOpen();
+      });
+      wrapper.addEventListener("mouseleave", () => {
+        if (canHover()) scheduleClose(180);
+      });
 
       menu.addEventListener("mouseenter", () => {
-        if (closeTimer) {
+        if (canHover() && closeTimer) {
           clearTimeout(closeTimer);
           closeTimer = null;
         }
       });
-      menu.addEventListener("mouseleave", () => scheduleClose(140));
+      menu.addEventListener("mouseleave", () => {
+        if (canHover()) scheduleClose(140);
+      });
 
-      // Click handling on wrapper or chevron
+      // Click / tap handling on wrapper or chevron
       wrapper.addEventListener("click", (e) => {
-        // If clicking on dropdown items, let navigation proceed and close menu
-        const itemLink = e.target.closest(".nav-tab-dropdown-item");
-        if (itemLink) {
-          menu.classList.remove("is-open");
-          wrapper.classList.remove("is-open");
+        // If clicking on dropdown items, close menu and allow navigation
+        if (e.target.closest(".nav-tab-dropdown-item")) {
+          closeNow();
           return;
         }
-        // If clicking chevron or on touch screen, toggle
-        const isSvg = e.target.closest("svg");
-        if (isSvg || ("ontouchstart" in window)) {
+
+        // Chevron tap/click always toggles dropdown without tab navigation
+        if (e.target.closest("svg")) {
+          e.preventDefault();
+          e.stopPropagation();
           if (menu.classList.contains("is-open")) {
-            scheduleClose(0);
+            closeNow();
+          } else {
+            positionAndOpen();
+          }
+          return;
+        }
+
+        // On touch devices / mobile widths, toggle dropdown cleanly on tap
+        if (!canHover() || window.innerWidth < 1024) {
+          if (menu.classList.contains("is-open")) {
+            closeNow();
           } else {
             positionAndOpen();
           }
         }
       });
 
-      // Close on outside click
-      document.addEventListener("click", (e) => {
+      // Close on outside click or touch
+      function handleOutsideInteract(e) {
         if (!wrapper.contains(e.target) && !menu.contains(e.target)) {
-          menu.classList.remove("is-open");
-          wrapper.classList.remove("is-open");
+          closeNow();
         }
-      });
+      }
+      document.addEventListener("click", handleOutsideInteract);
+      document.addEventListener("touchstart", handleOutsideInteract, { passive: true });
 
-      // Update position on scroll / resize while open
+      // Update clamped position on scroll / resize while open
       const updatePos = () => {
         if (menu.classList.contains("is-open")) {
-          const rect = wrapper.getBoundingClientRect();
-          menu.style.top = `${Math.round(rect.bottom) + 4}px`;
-          menu.style.left = `${Math.max(10, Math.round(rect.left))}px`;
+          applyPosition();
         }
       };
       window.addEventListener("scroll", updatePos, { passive: true });
       window.addEventListener("resize", updatePos, { passive: true });
+
+      if (desktopNav) {
+        desktopNav.addEventListener("scroll", () => {
+          if (!menu.classList.contains("is-open")) return;
+          if (Date.now() - lastOpenedAt < 400) {
+            applyPosition();
+          } else {
+            closeNow();
+          }
+        }, { passive: true });
+      }
     }
 
     if (document.readyState === "loading") {
