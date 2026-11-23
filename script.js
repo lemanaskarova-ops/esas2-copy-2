@@ -17,7 +17,7 @@ const i18n = {
   az: {
     hero_qarabag_cta: "Qarabağ Zəfəri",
     campus_nav_floor_1: "I Mərtəbə",
-    campus_nav_floor_1_sub: "İdman kompleksi, Kimya & Telekom",
+    campus_nav_floor_1_sub: "İdman kompleksi, Kimya & Telekommunikasiya",
     campus_nav_floor_2: "II Mərtəbə",
     campus_nav_floor_2_sub: "Rəhbərlik, Kitabxana & Optika",
     campus_nav_floor_3: "III Mərtəbə",
@@ -4395,7 +4395,7 @@ const newsData = [
     "date_az": "23 Noyabr 2026",
     "date_en": "23 November 2026",
     "date_ru": "23 Ноября 2026",
-    "image": "WhatsApp Video 2026-11-23 at 10.06.03.mp4",
+    "image": "WhatsApp Video 2026-11-23 at 15.38.22.mp4",
     "tag_az": "Mədəniyyət / Tədbir",
     "tag_en": "Culture / Event",
     "tag_ru": "Культура / Мероприятие"
@@ -12570,6 +12570,18 @@ document.addEventListener("DOMContentLoaded", () => {
               label: "BDRNK Kollektivi Cıdır Düzündə · Şuşa Zirvəsi",
               catTitle: "Qarabağ Zəfər Salnaməsi",
               type: "image"
+            },
+            {
+              src: "qarabag_foto_3.jpg",
+              label: "BDRNK Kollektivi Qarabağ Universitetində · Xankəndi",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "image"
+            },
+            {
+              src: "qarabag_foto_4.jpg",
+              label: "BDRNK Kollektivi Yuxarı Gövhər Ağa Məscidində · Şuşa",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "image"
             }
           ], 0, true);
         } else {
@@ -12593,6 +12605,18 @@ document.addEventListener("DOMContentLoaded", () => {
             {
               src: "qarabag_foto_2.jpg",
               label: "BDRNK Kollektivi Cıdır Düzündə · Şuşa Zirvəsi",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "image"
+            },
+            {
+              src: "qarabag_foto_3.jpg",
+              label: "BDRNK Kollektivi Qarabağ Universitetində · Xankəndi",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "image"
+            },
+            {
+              src: "qarabag_foto_4.jpg",
+              label: "BDRNK Kollektivi Yuxarı Gövhər Ağa Məscidində · Şuşa",
               catTitle: "Qarabağ Zəfər Salnaməsi",
               type: "image"
             },
@@ -12740,6 +12764,24 @@ function initGalleryModule() {
         label_en: "BDRNK Collective in Shusha · Jydyr Duzu",
         label_ru: "Коллектив БГКСТ в Шуше · Джидыр Дюзю",
         badge: "ŞUŞA · CIDIR DÜZÜ",
+      },
+      {
+        type: "image",
+        src: "qarabag_foto_3.jpg",
+        label: "BDRNK Kollektivi Qarabağ Universitetində · Xankəndi",
+        label_az: "BDRNK Kollektivi Qarabağ Universitetində · Xankəndi",
+        label_en: "BDRNK Collective at Karabakh University · Khankendi",
+        label_ru: "Коллектив БГКСТ в Карабахском университете · Ханкенди",
+        badge: "QARABAĞ UNİVERSİTETİ",
+      },
+      {
+        type: "image",
+        src: "qarabag_foto_4.jpg",
+        label: "BDRNK Kollektivi Yuxarı Gövhər Ağa Məscidində · Şuşa",
+        label_az: "BDRNK Kollektivi Yuxarı Gövhər Ağa Məscidində · Şuşa",
+        label_en: "BDRNK Collective at Upper Govhar Agha Mosque · Shusha",
+        label_ru: "Коллектив БГКСТ в мечети Юхары Гёвхар-ага · Шуша",
+        badge: "ŞUŞA · GÖVHƏR AĞA MƏSCİDİ",
       },
       {
         type: "youtube",
@@ -18250,7 +18292,7 @@ function initSceneTransition() {
       }
     ]
   }
-];;
+];
 
   function renderHonorCard(student) {
     const mediaCount = Array.isArray(student.gallery) ? student.gallery.length : 0;
@@ -22580,7 +22622,7 @@ function initSceneTransition() {
       cat: "admin",
       catLabel_az: "İnzibati Şöbə", catLabel_en: "Administrative Dept", catLabel_ru: "Административный отдел",
       icon: "👥",
-      desc_az: "Kollec əməkdaşlarının, professor-müəllim heyətinin şəxsi işləri, əmr layihələri və kadr qeydiyyatı.",
+      desc_az: "Kollec əməkdaşlarının, müəllim heyətinin şəxsi işləri, əmr layihələri və kadr qeydiyyatı.",
       desc_en: "Faculty and personnel records management, official staff decrees, and employment registry.",
       desc_ru: "Учет личных дел преподавателей и сотрудников, проекты кадровых приказов и трудовой реестр.",
       features_az: ["Şəxsi işlər arxivi","Kadr kargüzarlığı","Müqavilələr fondu"],
@@ -23149,7 +23191,7 @@ function initSceneTransition() {
       desc_ru: "На 1-м этаже расположен спортзал, актовый зал, 2 химические лаборатории, телекоммуникационная лаборатория и административные отделы.",
       countBadge_az: "13 Əsas Otaq və Məkan", countBadge_en: "13 Main Rooms & Spaces", countBadge_ru: "13 Основных Кабинетов",
       wings_az: [
-        { label: "Qərb Qanadı", text: "107 (Qiyabi), 106A (Hərbi), 106 (Kimya), 107A (Telekom), 103 (Kimya)", icon: "⬅️" },
+        { label: "Qərb Qanadı", text: "107 (Qiyabi), 106A (Hərbi), 106 (Kimya), 107A (Telekommunikasiya), 103 (Kimya)", icon: "⬅️" },
         { label: "Mərkəzi", text: "Kadrlar şöbəsi, Kompüter laboratoriyası", icon: "🏛️" },
         { label: "Şərq Qanadı", text: "113 (Mühasibat - 2 otaq), 114 (Təsərrüfat), 115 (Təcrübə), 116 (Tərbiyə), Akt zalı", icon: "➡️" },
         { label: "İdman", text: "İdman zalı (geyinmə otağı ilə)", icon: "⚽" }
@@ -23205,7 +23247,7 @@ function initSceneTransition() {
       desc_ru: "Ключевая лекционная зона: современная лаборатория физики, интерактивная аудитория со смарт-доской и всего 16 комнат.",
       countBadge_az: "Cəmi 16 Otaq Fondu", countBadge_en: "Total 16 Rooms Capacity", countBadge_ru: "Всего 16 Кабинетов",
       wings_az: [
-        { label: "Qərb Qanadı", text: "301 (Fizika lab), 306 (Elektron lövhə), 307 (Telekom şöbəsi), 309 (Mühəndis)", icon: "⬅️" },
+        { label: "Qərb Qanadı", text: "301 (Fizika lab), 306 (Elektron lövhə), 307 (Telekommunikasiya şöbəsi), 309 (Mühəndis)", icon: "⬅️" },
         { label: "Mərkəzi Korpus", text: "302 (Tədris şöbəsi), 303 (Müəllimlər otağı)", icon: "🏛️" },
         { label: "Tədris Fondu", text: "10 Mühazirə və Seminar Auditoriyası (Cəmi 16 otaq)", icon: "🎓" }
       ],
