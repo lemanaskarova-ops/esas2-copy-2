@@ -3187,9 +3187,9 @@ const staffData = {
       name_az: "Şahmurad Məmmədov Zöhtün oğlu",
       name_en: "Shahmurad Mammadov Zohtun",
       name_ru: "Шахмурад Мамедов Зехтюн оглы",
-      role_az: "Tərbiyə işləri üzrə direktor müavini",
-      role_en: "Vice-Director for Educational Affairs",
-      role_ru: "Заместитель директора по воспитательной работе",
+      role_az: "Tədris işləri üzrə direktor müavini",
+      role_en: "Deputy Director for Academic Affairs",
+      role_ru: "Заместитель директора по учебной работе",
       img: "sahumuradx.jpeg",
     },
     {
@@ -3804,6 +3804,27 @@ const openLessonsData = [
 ];
 
 const newsData = [
+  {
+    "id": 119,
+    "official_id": "zefer_dastani_mugam_2026",
+    "title_az": "BDRNK rəhbərliyi Beynəlxalq Muğam Mərkəzində “Zəfər dastanı – Sazın, sözün qüdrətində” konsert proqramında iştirak edib",
+    "title_en": "BDRNK Leadership Attended the 'Victory Epic – In the Power of Saz and Word' Concert at the International Mugham Center",
+    "title_ru": "Руководство БДРНК приняло участие в концертной программе «Эпос Победы — в силе саза и слова» в Международном центре мугама",
+    "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin direktoru Səbuhi Qurbanov, direktor müavini Şahmurad Məmmədov və YAP ƏPT sədri Səidə Quliyeva Beynəlxalq Muğam Mərkəzində “Sazın səsi, sözün nəfəsi” layihəsi çərçivəsində keçirilən konsert proqramında iştirak ediblər...",
+    "desc_en": "Sabuhi Gurbanov, Director of Baku State Communications and Transport College, Deputy Director Shahmurad Mammadov, and Chairperson of the YAP Primary Party Organization Saida Guliyeva attended the concert program under the 'Voice of Saz, Breath of Word' project at the International Mugham Center...",
+    "desc_ru": "Директор Бакинского государственного колледжа связи и транспорта Сабухи Гурбанов, заместитель директора Шахмурад Мамедов и председатель первичной организации ПЕА Саида Гулиева приняли участие в концертной программе в рамках проекта «Голос саза, дыхание слова» в Международном центре мугама...",
+    "full_az": "Yasamal rayon ictimaiyyətinin nümayəndələri, Bakı Dövlət Rabitə və Nəqliyyat Kollecinin direktoru Səbuhi Qurbanov, tədris işləri üzrə direktor müavini Şahmurad Məmmədov, Qeydiyyat, qiymətləndirmə və Monitorinq şöbəsinin müdiri, YAP ƏPT sədri Səidə Quliyeva Beynəlxalq Muğam Mərkəzində “Sazın səsi, sözün nəfəsi” adlı layihə çərçivəsində “Zəfər dastanı – Sazın, sözün qüdrətində” adlı konsert proqramında iştirak ediblər.\n\nQəhrəmanlıq tariximizə və Zəfər salnaməmizə həsr olunan tədbirdə Yasamal Rayon İcra Hakimiyyətinin başçısı Elşad Həsənov, Yeni Azərbaycan Partiyası Yasamal rayon təşkilatının sədri Bəxtiyar Nəbiyev, Milli Məclisin deputatı Göydəniz Qəhrəmanov, şəhid ailələrinin üzvləri, qazilər və rayon ictimaiyyətinin nümayəndələri iştirak ediblər.\n\nKonsert proqramında Azərbaycan xalqının zəngin aşıq sənəti, milli musiqi ənənələri və qəhrəmanlıq salnaməsi bədii kompozisiyalar vasitəsilə təqdim olunub. Sazın və sözün qüdrətini özündə əks etdirən musiqi nömrələri iştirakçılara unudulmaz anlar yaşadıb. Tədbirdə Azərbaycanın tarixi Zəfərinin, milli-mənəvi dəyərlərinin və qəhrəmanlıq ənənələrinin təbliğinin əhəmiyyəti ön plana çəkilib.\n\n#BakıDövlətRabitəvəNəqliyyatKolleciPHŞ #Yasamal #YasamalRayonu #YasamalRİH #ZəfərDastanı #SazınSəsiSözünNəfəsi #SazınSözünQüdrəti #ZəfərSalnaməsi #ZəfərGünü #AzərbaycanMədəniyyəti #AşıqSənəti #MilliMusiqimiz #MilliMənəviDəyərlər #QəhrəmanlıqTariximiz #ŞəhidAilələri #Qazilər #BeynəlxalqMuğamMərkəzi #AzərbaycanınZəfəri",
+    "full_en": "Representatives of the Yasamal district community, Sabuhi Gurbanov, Director of Baku State Communications and Transport College, Shahmurad Mammadov, Deputy Director for Academic Affairs, and Saida Guliyeva, Head of Registration, Assessment and Monitoring Department and Chairperson of the YAP Primary Party Organization, attended the concert program titled “Victory Epic – In the Power of Saz and Word” as part of the “Voice of Saz, Breath of Word” project at the International Mugham Center.\n\nThe event dedicated to our heroic history and Victory chronicle was attended by Elshad Hasanov, Head of the Yasamal District Executive Authority, Bakhtiyar Nabiyev, Chairman of the Yasamal District Organization of the New Azerbaijan Party, Goydaniz Gahramanov, Member of the Milli Majlis, members of martyrs' families, veterans, and community representatives.\n\nDuring the concert program, the rich ashug art of the Azerbaijani people, national musical traditions, and heroic chronicle were presented through artistic compositions. Musical performances reflecting the power of the saz and the spoken word created unforgettable moments for the participants, highlighting the importance of promoting Azerbaijan's historic Victory, national-spiritual values, and heroic traditions.",
+    "full_ru": "Представители общественности Ясамальского района — директор Бакинского государственного колледжа связи и транспорта Сабухи Гурбанов, заместитель директора по учебной работе Шахмурад Мамедов, заведующая отделом регистрации, оценивания и мониторинга, председатель первичной партийной организации ПЕА Саида Гулиева приняли участие в концертной программе «Эпос Победы — в силе саза и слова» в рамках проекта «Голос саза, дыхание слова» в Международном центре мугама.\n\nВ мероприятии, посвященном героической истории и летописи Победы, приняли участие глава Исполнительной власти Ясамальского района Эльшад Гасанов, председатель Ясамальской районной организации партии «Ени Азербайджан» Бахтияр Набиев, депутат Милли Меджлиса Гёйдениз Гахраманов, члены семей шехидов, ветераны и представители общественности района.\n\nВ концертной программе посредством художественных композиций были представлены богатое ашугское искусство азербайджанского народа, национальные музыкальные традиции и героическая летопись. Музыкальные номера, отражающие силу саза и слова, подарили участникам незабываемые мгновения и подчеркнули значимость пропаганды исторической Победы, национально-духовных ценностей и героических традиций Азербайджана.",
+    "date": "23 Noyabr 2026",
+    "date_az": "23 Noyabr 2026",
+    "date_en": "23 November 2026",
+    "date_ru": "23 Ноября 2026",
+    "image": "WhatsApp Video 2026-11-23 at 10.06.03.mp4",
+    "tag_az": "Mədəniyyət / Tədbir",
+    "tag_en": "Culture / Event",
+    "tag_ru": "Культура / Мероприятие"
+  },
   {
     "id": 115,
     "official_id": "tashkent_online_2026",
@@ -24421,7 +24442,7 @@ function initSceneTransition() {
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "№ 214",
-      name_az: "Qeydiyyat, qiymətləndirmə və monitorinq şöbəsi", name_en: "Registration, Assessment & Monitoring", name_ru: "Отдел регистрации, оценивания и мониторинга",
+      name_az: "Qeydiyyat, qiymətləndirmə və Monitorinq şöbəsi", name_en: "Registration, Assessment & Monitoring", name_ru: "Отдел регистрации, оценивания и мониторинга",
       cat: "admin",
       catLabel_az: "Akademik Qeydiyyat", catLabel_en: "Academic Registry", catLabel_ru: "Академический реестр",
       icon: "📊",
@@ -24474,8 +24495,8 @@ function initSceneTransition() {
       order: 6,
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
-      no: "Həmkar",
-      name_az: "Həmkar otağı", name_en: "Trade Union Office", name_ru: "Профсоюзный кабинет",
+      no: "HİK",
+      name_az: "Həmkarlar İttifaqı Komitəsinin otağı", name_en: "Trade Union Committee Office", name_ru: "Кабинет профсоюзного комитета",
       cat: "admin",
       catLabel_az: "Həmkarlar Təşkilatı", catLabel_en: "Trade Union", catLabel_ru: "Профсоюз",
       icon: "🤝",
@@ -24841,7 +24862,7 @@ function initSceneTransition() {
       floor: 5,
       floorText_az: "V Mərtəbə", floorText_en: "5th Floor", floorText_ru: "5-й Этаж",
       no: "№ 514",
-      name_az: "Təhsildə keyfiyyətə nəzarət və monitorinq şöbəsi", name_en: "Quality Assurance & Academic Monitoring Dept", name_ru: "Отдел контроля качества образования и мониторинга",
+      name_az: "Təhsildə keyfiyyətə nəzarət və Monitorinq şöbəsi", name_en: "Quality Assurance & Academic Monitoring Dept", name_ru: "Отдел контроля качества образования и мониторинга",
       cat: "admin",
       catLabel_az: "Keyfiyyət & Monitorinq", catLabel_en: "Quality & Monitoring", catLabel_ru: "Качество и Мониторинг",
       icon: "🎯",
@@ -24914,7 +24935,7 @@ function initSceneTransition() {
       countBadge_az: "11 Əsas Otaq və Mərkəz", countBadge_en: "11 Main Rooms & Hubs", countBadge_ru: "11 Основных Помещений",
       wings_az: [
         { label: "Mərkəzi Qanad", text: "Direktor otağı (Qəbul otağı)", icon: "🏛️" },
-        { label: "Qərb Qanadı", text: "205 (Tədris müavini), Həmkar otağı, Mühəndis (FBK 2 otaq), 201, 203 (Kompüter), 202 (Müəllim kabineti)", icon: "⬅️" },
+        { label: "Qərb Qanadı", text: "205 (Tədris müavini), Həmkarlar İttifaqı Komitəsinin otağı, Mühəndis (FBK 2 otaq), 201, 203 (Kompüter), 202 (Müəllim kabineti)", icon: "⬅️" },
         { label: "Şərq Qanadı", text: "214 (Qeydiyyat & Monitorinq), 217 (Metodiki kabinet), 211 (Kompüter otağı)", icon: "➡️" },
         { label: "Kitabxana", text: "206 - Kitabxana və Oxu Zalı (2 otaq daxilində)", icon: "📚" }
       ],
@@ -24986,12 +25007,12 @@ function initSceneTransition() {
       title_az: "V MƏRTƏBƏ — Kompüter Texnologiyaları Şöbəsi, Keyfiyyət Təminatı & 18 Auditoriya",
       title_en: "5TH FLOOR — Computer Technologies Department, Quality Assurance & 18 Classrooms",
       title_ru: "5-Й ЭТАЖ — Отделение Компьютерных Технологий, Контроль Качества и 18 Аудиторий",
-      desc_az: "5-ci mərtəbə proqramlaşdırma və kompüter ixtisasları, təhsildə keyfiyyətə nəzarət və monitorinq şöbəsi və 18 geniş auditoriyadan ibarətdir.",
+      desc_az: "5-ci mərtəbə proqramlaşdırma və kompüter ixtisasları, təhsildə keyfiyyətə nəzarət və Monitorinq şöbəsi və 18 geniş auditoriyadan ibarətdir.",
       desc_en: "Programming and software engineering department, educational quality control office, and 18 spacious lecture rooms.",
       desc_ru: "Отделение компьютерных наук и программирования, отдел контроля качества образования и 18 аудиторий.",
       countBadge_az: "Cəmi 18 Otaq Fondu", countBadge_en: "Total 18 Rooms Capacity", countBadge_ru: "Всего 18 Кабинетов",
       wings_az: [
-        { label: "Şərq Qanadı", text: "512 (Kompüter texnologiyası şöbəsi), 514 (Keyfiyyətə nəzarət və monitorinq)", icon: "➡️" },
+        { label: "Şərq Qanadı", text: "512 (Kompüter texnologiyası şöbəsi), 514 (Keyfiyyətə nəzarət və Monitorinq)", icon: "➡️" },
         { label: "Qərb Qanadı", text: "508 (Proyektorlu konfrans və tədris auditoriyası)", icon: "⬅️" },
         { label: "Tədris Fondu", text: "15 Tədris və İxtisas Seminar Otağı (Cəmi 18 otaq)", icon: "🎓" }
       ],
@@ -28340,6 +28361,11 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
       const desktopNav = document.getElementById("desktop-nav");
       if (!wrapper || !menu) return;
 
+      // Portal menu to document.body so overflow-x: auto on #desktop-nav never clips it
+      if (menu.parentElement !== document.body) {
+        document.body.appendChild(menu);
+      }
+
       let closeTimer = null;
       let lastOpenedAt = 0;
 
@@ -28396,15 +28422,14 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
       menu.addEventListener("mouseleave", () => {
         if (canHover()) scheduleClose(140);
       });
+      menu.addEventListener("click", (e) => {
+        if (e.target.closest(".nav-tab-dropdown-item")) {
+          closeNow();
+        }
+      });
 
       // Click / tap handling on wrapper or chevron
       wrapper.addEventListener("click", (e) => {
-        // If clicking on dropdown items, close menu and allow navigation
-        if (e.target.closest(".nav-tab-dropdown-item")) {
-          closeNow();
-          return;
-        }
-
         // Chevron tap/click always toggles dropdown without tab navigation
         if (e.target.closest("svg")) {
           e.preventDefault();
