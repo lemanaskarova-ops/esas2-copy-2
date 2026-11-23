@@ -27813,4 +27813,178 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
   } else {
     renderAllHubs();
   }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     2026/2027 RƏSMİ TƏLƏBƏ QƏBULU NƏTİCƏLƏRİ & İNFOQRAFİKA POSTERİ
+     ══════════════════════════════════════════════════════════════════════ */
+  (function initAdmissionResultsTable() {
+    const admissionMajorsData = [
+      { id: 1, code: "331118", name_az: "Kompüter sistemlərində proqram təminatı", p9_state: 15, p9_paid: 20, a9_state: 15, a9_paid: 20, p11_state: 25, p11_paid: 45, a11_state: 25, a11_paid: 45 },
+      { id: 2, code: "331126", name_az: "Kompüter şəbəkələrinin avadanlıqlarının istismarı", p9_state: 12, p9_paid: 18, a9_state: 12, a9_paid: 18, p11_state: 20, p11_paid: 35, a11_state: 20, a11_paid: 35 },
+      { id: 3, code: "331134", name_az: "İnformasiya texnologiyaları sistemləri", p9_state: 10, p9_paid: 15, a9_state: 10, a9_paid: 15, p11_state: 22, p11_paid: 38, a11_state: 22, a11_paid: 38 },
+      { id: 4, code: "331142", name_az: "Rabitə qovşaqları və kommutasiya sistemləri", p9_state: 6, p9_paid: 9, a9_state: 6, a9_paid: 9, p11_state: 16, p11_paid: 24, a11_state: 16, a11_paid: 23 },
+      { id: 5, code: "331159", name_az: "Poçt rabitəsi xidməti", p9_state: 4, p9_paid: 6, a9_state: 4, a9_paid: 5, p11_state: 10, p11_paid: 15, a11_state: 10, a11_paid: 14 },
+      { id: 6, code: "331167", name_az: "Telekommunikasiya şəbəkələri və sistemləri", p9_state: 8, p9_paid: 12, a9_state: 8, a9_paid: 12, p11_state: 18, p11_paid: 27, a11_state: 18, a11_paid: 26 },
+      { id: 7, code: "331175", name_az: "Radioelektron avadanlıqların təmiri və xidməti", p9_state: 5, p9_paid: 8, a9_state: 5, a9_paid: 7, p11_state: 14, p11_paid: 21, a11_state: 14, a11_paid: 20 },
+      { id: 8, code: "331183", name_az: "Dəmir yolu nəqliyyatında hərəkətin idarə olunması", p9_state: 4, p9_paid: 6, a9_state: 4, a9_paid: 6, p11_state: 15, p11_paid: 25, a11_state: 15, a11_paid: 25 },
+      { id: 9, code: "331191", name_az: "Avtomobil nəqliyyatı ilə daşımaların təşkili", p9_state: 4, p9_paid: 7, a9_state: 4, a9_paid: 7, p11_state: 18, p11_paid: 32, a11_state: 18, a11_paid: 31 },
+      { id: 10, code: "331215", name_az: "Yol hərəkətinin təşkili", p9_state: 4, p9_paid: 6, a9_state: 4, a9_paid: 6, p11_state: 15, p11_paid: 25, a11_state: 15, a11_paid: 24 },
+      { id: 11, code: "331223", name_az: "Nəqliyyatda logistika", p9_state: 4, p9_paid: 7, a9_state: 4, a9_paid: 6, p11_state: 16, p11_paid: 30, a11_state: 16, a11_paid: 30 },
+      { id: 12, code: "331231", name_az: "Mühasibat uçotu", p9_state: 2, p9_paid: 3, a9_state: 2, a9_paid: 3, p11_state: 10, p11_paid: 18, a11_state: 9, a11_paid: 17 },
+      { id: 13, code: "331248", name_az: "Bank işi", p9_state: 2, p9_paid: 3, a9_state: 2, a9_paid: 3, p11_state: 8, p11_paid: 15, a11_state: 7, a11_paid: 15 },
+      { id: 14, code: "331256", name_az: "Marketinq", p9_state: 2, p9_paid: 3, a9_state: 2, a9_paid: 3, p11_state: 8, p11_paid: 16, a11_state: 7, a11_paid: 15 }
+    ];
+
+    function renderAdmissionTable(view) {
+      const mount = document.getElementById("admission-table-mount");
+      if (!mount) return;
+
+      let rowsHtml = "";
+      let totPlanState = 0, totPlanPaid = 0, totActState = 0, totActPaid = 0;
+
+      admissionMajorsData.forEach((m, idx) => {
+        let pState = 0, pPaid = 0, aState = 0, aPaid = 0;
+        if (view === "basis9") {
+          pState = m.p9_state; pPaid = m.p9_paid;
+          aState = m.a9_state; aPaid = m.a9_paid;
+        } else if (view === "basis11") {
+          pState = m.p11_state; pPaid = m.p11_paid;
+          aState = m.a11_state; aPaid = m.a11_paid;
+        } else {
+          pState = m.p9_state + m.p11_state;
+          pPaid = m.p9_paid + m.p11_paid;
+          aState = m.a9_state + m.a11_state;
+          aPaid = m.a9_paid + m.a11_paid;
+        }
+
+        const pTotal = pState + pPaid;
+        const aTotal = aState + aPaid;
+        const pct = pTotal > 0 ? ((aTotal / pTotal) * 100).toFixed(1) : "100.0";
+
+        totPlanState += pState; totPlanPaid += pPaid;
+        totActState += aState; totActPaid += aPaid;
+
+        const isFull = pct >= 98.0;
+
+        rowsHtml += `
+          <tr class="border-b border-slate-900/[0.05] dark:border-white/[0.05] hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition-colors">
+            <td class="px-3 py-2.5 text-xs text-slate-500 dark:text-slate-400 font-mono text-center">${idx + 1}</td>
+            <td class="px-3 py-2.5 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              ${m.name_az}
+            </td>
+            <td class="px-2.5 py-2.5 text-xs text-slate-500 dark:text-slate-400 font-mono text-center">${m.code}</td>
+            <td class="px-3 py-2.5 text-xs text-slate-600 dark:text-slate-300 text-center">
+              <span class="font-bold">${pTotal}</span>
+              <span class="text-[10px] text-slate-400">(${pState} dövlət / ${pPaid} ödənişli)</span>
+            </td>
+            <td class="px-3 py-2.5 text-xs text-slate-900 dark:text-white text-center">
+              <span class="font-bold text-emerald-600 dark:text-emerald-400">${aTotal}</span>
+              <span class="text-[10px] text-slate-400">(${aState} / ${aPaid})</span>
+            </td>
+            <td class="px-3 py-2.5 text-xs text-center">
+              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold ${
+                isFull
+                  ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20"
+                  : "bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20"
+              }">
+                ${pct}%
+              </span>
+            </td>
+          </tr>
+        `;
+      });
+
+      const grandPlan = totPlanState + totPlanPaid;
+      const grandAct = totActState + totActPaid;
+      const grandPct = grandPlan > 0 ? ((grandAct / grandPlan) * 100).toFixed(1) : "98.0";
+
+      mount.innerHTML = `
+        <table class="w-full text-left border-collapse min-w-[620px]">
+          <thead>
+            <tr class="bg-slate-100/80 dark:bg-slate-800/80 border-b border-slate-900/10 dark:border-white/10 text-[11px] uppercase tracking-wider text-slate-600 dark:text-slate-400">
+              <th class="px-3 py-2.5 text-center font-bold">№</th>
+              <th class="px-3 py-2.5 font-bold">İxtisasın Adı</th>
+              <th class="px-2.5 py-2.5 text-center font-bold">DİM Kodu</th>
+              <th class="px-3 py-2.5 text-center font-bold">Plan Yeri</th>
+              <th class="px-3 py-2.5 text-center font-bold">Faktiki Qəbul</th>
+              <th class="px-3 py-2.5 text-center font-bold">Dolma (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rowsHtml}
+          </tbody>
+          <tfoot>
+            <tr class="bg-amber-500/[0.08] dark:bg-amber-500/[0.12] border-t-2 border-amber-500/30 font-bold text-xs">
+              <td class="px-3 py-3 text-center text-amber-700 dark:text-amber-300">★</td>
+              <td class="px-3 py-3 text-slate-900 dark:text-white" colspan="2">
+                YEKUN CƏMİ (${view === "basis9" ? "9-İllik Baza" : view === "basis11" ? "11-İllik Baza" : "Kollec Üzrə Cəmi"})
+              </td>
+              <td class="px-3 py-3 text-center text-slate-900 dark:text-white">
+                ${grandPlan} <span class="text-[10px] font-normal text-slate-500">(${totPlanState} dövlət / ${totPlanPaid} ödənişli)</span>
+              </td>
+              <td class="px-3 py-3 text-center text-emerald-600 dark:text-emerald-400">
+                ${grandAct} <span class="text-[10px] font-normal text-slate-500">(${totActState} dövlət / ${totActPaid} ödənişli)</span>
+              </td>
+              <td class="px-3 py-3 text-center">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-black bg-emerald-600 text-white shadow-sm">
+                  ${grandPct}%
+                </span>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      `;
+    }
+
+    // Tab buttons event listeners
+    const tabBtns = document.querySelectorAll(".admission-table-tab-btn");
+    tabBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        tabBtns.forEach((b) => b.classList.remove("active", "bg-primary-600", "text-white", "shadow-sm"));
+        btn.classList.add("active", "bg-primary-600", "text-white", "shadow-sm");
+        const view = btn.getAttribute("data-adm-view") || "basis9";
+        renderAdmissionTable(view);
+      });
+    });
+
+    // Poster Modal Trigger
+    const zoomBtn = document.getElementById("btn-zoom-admission-poster");
+    const modal = document.getElementById("admission-poster-modal");
+    const closeBtn = document.getElementById("admission-poster-modal-close");
+
+    if (zoomBtn && modal) {
+      zoomBtn.addEventListener("click", () => {
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      });
+    }
+    if (closeBtn && modal) {
+      closeBtn.addEventListener("click", () => {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      });
+    }
+    if (modal) {
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.remove("active");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+          modal.classList.remove("active");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+      });
+    }
+
+    // Initial render
+    renderAdmissionTable("basis9");
+  })();
+
 })();
