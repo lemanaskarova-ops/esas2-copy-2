@@ -3688,81 +3688,122 @@ const staffData = {
   }
 };
 
+/* ══════════════════════════════════════════════════════════════════════
+   BDRNK RƏSMİ AÇIQ DƏRSLƏR VƏ TƏDRİS VİDEOMATERİALLARI BAZASI
+   ══════════════════════════════════════════════════════════════════════ */
+const openLessonsData = [
+  {
+    id: "susanna_riyaziyyat",
+    official_id: "susanna_riyaziyyat_aciq_ders_2026",
+    subject_az: "Riyaziyyat",
+    subject_en: "Mathematics",
+    subject_ru: "Математика",
+    subject_icon: "📐",
+    teacher_az: "Susanna Alıyeva",
+    teacher_en: "Susanna Aliyeva",
+    teacher_ru: "Сусанна Алиева",
+    teacher_role_az: "Riyaziyyat fənn müəllimi",
+    date: "20 Noyabr 2026",
+    title_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində riyaziyyat fənni üzrə açıq dərs uğurla keçirildi",
+    title_en: "Open Mathematics Lesson Successfully Held at Baku State Communications and Transport College",
+    title_ru: "В Бакинском государственном колледже связи и транспорта успешно прошел открытый урок по математике",
+    desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin riyaziyyat müəllimi Susanna Alıyevanın təqdimatında müasir təlim metodları, əyani vəsaitlər və interaktiv təqdimatlarla zəngin açıq dərs keçirilib.",
+    full_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində növbəti açıq dərs uğurla keçirildi!\n\nBakı Dövlət Rabitə və Nəqliyyat Kollecinin riyaziyyat müəllimi Susanna Alıyevanın təqdimatında riyaziyyat fənni üzrə açıq dərs keçirilib.\n\nAçıq dərs zamanı müəllim tərəfindən mövzunun izahına xüsusi diqqət yetirilmiş, müasir təlim metodlarından, əyani vəsaitlərdən və interaktiv təqdimatlardan istifadə olunmuşdur. Dərsin gedişində tələbələrin fəallığının təmin edilməsi, onların analitik düşünmə, məntiqi mühakimə və müstəqil qərarvermə bacarıqlarının inkişaf etdirilməsi istiqamətində səmərəli iş aparılmışdır.\n\nMüşahidə olunan dərs prosesi müəllimin pedaqoji ustalığını, fənn üzrə bilik və təcrübəsini, tədrisə yaradıcı yanaşmasını və tələbələrlə səmərəli ünsiyyət qurmaq bacarığını nümayiş etdirmişdir.\n\nSusanna Alıyevaya pedaqoji fəaliyyətində uğurlar, yeni nailiyyətlər və tələbələrinin qazandığı uğurlardan daim qürur duymağı arzulayırıq.\n\n#AçıqDərs #Riyaziyyat #SusannaAlıyeva #MüasirTəhsil #BakıDövlətRabitəVəNəqliyyatKolleci",
+    videos: [
+      {
+        src: "susanna_riyaziyyat_aciq_ders.mp4",
+        poster: "susanna_riyaziyyat_aciq_ders_poster.jpg",
+        title_az: "I Hissə: Mövzunun İnteraktiv İzahı və Metodika"
+      },
+      {
+        src: "susanna_riyaziyyat_aciq_ders_2.mp4",
+        poster: "susanna_riyaziyyat_aciq_ders_2_poster.jpg",
+        title_az: "II Hissə: Tələbələrin Fəal İştirakı və Məsələ Həlli"
+      }
+    ],
+    tags: ["Açıq Dərs", "Riyaziyyat", "Susanna Alıyeva", "Müasir Təhsil"]
+  },
+  {
+    id: "neqliyyat_dasinmalar",
+    official_id: "open_lesson_transport_shipping_2026",
+    subject_az: "Nəqliyyatda daşınmalar",
+    subject_en: "Transport Shipping",
+    subject_ru: "Перевозки на транспорте",
+    subject_icon: "🚆",
+    teacher_az: "Xumar Cəmilova, Gülər Mustafayeva, Coşqun Yəhyayev",
+    teacher_en: "Khumar Jamilova, Gular Mustafayeva, Joshgun Yahyayev",
+    teacher_ru: "Хумар Джамилова, Гюляр Мустафаева, Джошгун Яхьяев",
+    teacher_role_az: "Nəqliyyat fənn birləşməsinin müəllimləri",
+    date: "17 Noyabr 2026",
+    title_az: "“Nəqliyyatda daşınmalar” mövzusu üzrə açıq dərs və tədris videomaterialları",
+    title_en: "Open Lesson and Educational Video Materials on “Transport Shipping”",
+    title_ru: "Открытый урок и учебные видеоматериалы по теме «Перевозки на транспорте»",
+    desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimləri Xumar Cəmilova, Gülər Mustafayeva və Coşqun Yəhyayevin “Nəqliyyatda daşınmalar” mövzusunda apardıqları dərslərə dair təqdim olunan videomateriallar.",
+    full_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimləri Xumar Cəmilova, Gülər Mustafayeva və Coşqun Yəhyayevin “Nəqliyyatda daşınmalar” mövzusunda apardıqları dərslərə dair videomateriallar təqdim olunmuşdur.\n\nVideolarda mövzunun tədrisi, dərsin təşkili, istifadə olunan təlim metodları və tələbələrin dərs prosesində fəal iştirakı nümayiş etdirilir.\n\nBu videomaterialların paylaşılmasında əsas məqsəd qabaqcıl pedaqoji təcrübənin öyrənilməsi, müəllimlər arasında təcrübə mübadiləsinin genişləndirilməsi və nəqliyyat sahəsi üzrə tədrisin keyfiyyətinin daha da artırılmasına töhfə verməkdir.",
+    videos: [
+      {
+        src: "neqliyyat_dasinmalar_reel.mp4",
+        poster: "college_bg.jpg",
+        title_az: "“Nəqliyyatda daşınmalar” dərsinin video icmalı"
+      }
+    ],
+    tags: ["Açıq Dərs", "Nəqliyyat", "Daşınmalar", "Coşqun Yəhyayev"]
+  },
+  {
+    id: "reyhan_naqilsiz_rabite",
+    official_id: "reyhan_aciq_ders_2026",
+    subject_az: "Naqilsiz rabitə texnologiyası",
+    subject_en: "Wireless Communication Technology",
+    subject_ru: "Беспроводные технологии связи",
+    subject_icon: "📡",
+    teacher_az: "Şəmsiyeva Reyhan",
+    teacher_en: "Reyhan Shamsiyeva",
+    teacher_ru: "Рейхан Шамсиева",
+    teacher_role_az: "Rabitə müəllimi (III kurs, 365-ci qrup)",
+    date: "17 Noyabr 2026",
+    title_az: "Şəmsiyeva Reyhan müəllimin “Naqilsiz rabitə texnologiyası” fənnindən açıq dərsi keçirildi",
+    title_en: "Open Lesson by Teacher Shamsiyeva Reyhan on “Wireless Communication Technology” Held",
+    title_ru: "Проведен открытый урок преподавателя Шамсиевой Рейхан по предмету «Беспроводные технологии связи»",
+    desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Naqilsiz rabitə texnologiyası” fənnindən III kurs, 365-ci qrup tələbələri üçün açıq dərs keçirildi. Dərsin məqsədi tələbələrin nəzəri biliklərinin möhkəmləndirilməsi və praktiki bacarıqlarının inkişafıdır.",
+    full_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində fənn müəllimi Şəmsiyeva Reyhan tərəfindən “Naqilsiz rabitə texnologiyası” fənnindən III kurs, 365-ci qrup tələbələri üçün açıq dərs təşkil olundu.\n\nAçıq dərsin məqsədi tələbələrin nəzəri biliklərinin möhkəmləndirilməsi, praktiki bacarıqlarının inkişaf etdirilməsi və müasir rabitə texnologiyaları üzrə biliklərinin artırılmasıdır.\n\nDərs zamanı simsiz şəbəkə arxitekturası, siqnalların ötürülməsi prinsipləri və naqilsiz rabitənin müasir sənayedə tətbiqi interaktiv formada tələbələrin diqqətinə çatdırılmış, sual-cavab və əyani təqdimatlarla mövzu dərindən mənimsənilmişdir.",
+    videos: [
+      {
+        src: "reyhan.mp4",
+        poster: "college_bg.jpg",
+        title_az: "“Naqilsiz rabitə texnologiyası” açıq dərsi"
+      }
+    ],
+    tags: ["Açıq Dərs", "Naqilsiz Rabitə", "Reyhan Şəmsiyeva", "Telekommunikasiya"]
+  },
+  {
+    id: "gunel_ingilis_dili",
+    official_id: "gunel_ingilis_dili_2026",
+    subject_az: "Xarici Dil (İngilis dili)",
+    subject_en: "English Language",
+    subject_ru: "Английский язык",
+    subject_icon: "🇬🇧",
+    teacher_az: "Günel Məmmədova",
+    teacher_en: "Gunel Mammadova",
+    teacher_ru: "Гюнель Мамедова",
+    teacher_role_az: "Xarici dillər fənn müəllimi",
+    date: "15 Noyabr 2026",
+    title_az: "İngilis dili fənni üzrə interaktiv açıq dərs və tələbələrin danışıq təcrübəsi",
+    title_en: "Interactive English Language Open Lesson and Student Speaking Practice",
+    title_ru: "Интерактивный открытый урок по английскому языку и разговорная практика студентов",
+    desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin xarici dillər müəllimi Günel Məmmədovanın təqdimatında interaktiv tədris metodları ilə ingilis dili fənni üzrə nümunəvi açıq dərs keçirilmişdir.",
+    full_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində Günel Məmmədova tərəfindən ingilis dili fənnindən tələbələrin qrammatik və danışıq bacarıqlarının inkişaf etdirilməsi məqsədilə interaktiv açıq dərs keçirilmişdir.\n\nDərs zamanı qrup işləri, canlı dialoqlar və audio-vizual tədris materiallarından geniş istifadə olunmuşdur. Tələbələrin fəal iştirakı ilə xarici dildə sərbəst ünsiyyət mühiti formalaşdırılmış, müasir elektron lüğət və interaktiv platformalar tətbiq edilmişdir.",
+    videos: [
+      {
+        src: "ingilis_dili_gunel_mammadova.mp4",
+        poster: "ingilis_dili_gunel_mammadova_poster.jpg",
+        title_az: "İngilis dili interaktiv açıq dərsi"
+      }
+    ],
+    tags: ["Açıq Dərs", "İngilis Dili", "Günel Məmmədova", "Canlı Dialoq"]
+  }
+];
+
 const newsData = [
-  {
-      "id": 118,
-      "official_id": "susanna_riyaziyyat_aciq_ders_2026",
-      "title_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində riyaziyyat fənni üzrə açıq dərs uğurla keçirildi",
-      "title_en": "Open Mathematics Lesson Successfully Held at Baku State Communications and Transport College",
-      "title_ru": "В Бакинском государственном колледже связи и транспорта успешно прошел открытый урок по математике",
-      "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin riyaziyyat müəllimi Susanna Alıyevanın təqdimatında müasir təlim metodları, əyani vəsaitlər və interaktiv təqdimatlarla zəngin açıq dərs keçirilib.",
-      "desc_en": "An open mathematics lesson presented by teacher Susanna Aliyeva at Baku State Communications and Transport College featured modern teaching methods, visual aids, and interactive presentations.",
-      "desc_ru": "В Бакинском государственном колледже связи и транспорта прошел открытый урок по математике преподавателя Сусанны Алиевой с применением современных методов обучения и интерактивных презентаций.",
-      "full_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində növbəti açıq dərs uğurla keçirildi!\n\nBakı Dövlət Rabitə və Nəqliyyat Kollecinin riyaziyyat müəllimi Susanna Alıyevanın təqdimatında riyaziyyat fənni üzrə açıq dərs keçirilib.\n\nAçıq dərs zamanı müəllim tərəfindən mövzunun izahına xüsusi diqqət yetirilmiş, müasir təlim metodlarından, əyani vəsaitlərdən və interaktiv təqdimatlardan istifadə olunmuşdur. Dərsin gedişində tələbələrin fəallığının təmin edilməsi, onların analitik düşünmə, məntiqi mühakimə və müstəqil qərarvermə bacarıqlarının inkişaf etdirilməsi istiqamətində səmərəli iş aparılmışdır.\n\nMüşahidə olunan dərs prosesi müəllimin pedaqoji ustalığını, fənn üzrə bilik və təcrübəsini, tədrisə yaradıcı yanaşmasını və tələbələrlə səmərəli ünsiyyət qurmaq bacarığını nümayiş etdirmişdir.\n\nSusanna Alıyevaya pedaqoji fəaliyyətində uğurlar, yeni nailiyyətlər və tələbələrinin qazandığı uğurlardan daim qürur duymağı arzulayırıq.\n\n#AçıqDərs #Riyaziyyat #SusannaAlıyeva #MüasirTəhsil #BakıDövlətRabitəVəNəqliyyatKolleci",
-      "full_en": "Another open lesson was successfully held at Baku State Communications and Transport College!\n\nAn open lesson in mathematics was presented by mathematics teacher Susanna Aliyeva at Baku State Communications and Transport College.\n\nDuring the open lesson, special attention was paid to explaining the topic clearly using modern teaching methods, visual aids, and interactive presentations. Effective work was carried out to ensure active student engagement and develop their analytical thinking, logical reasoning, and independent decision-making skills.\n\nThe observed lesson demonstrated the teacher's pedagogical mastery, deep subject knowledge and experience, creative approach to instruction, and ability to build effective communication with students.\n\nWe wish Susanna Aliyeva continued success and new achievements in her pedagogical career, and lasting pride in the accomplishments of her students.",
-      "full_ru": "В Бакинском государственном колледже связи и транспорта успешно прошел очередной открытый урок!\n\nОткрытый урок по математике был проведен преподавателем математики Бакинского государственного колледжа связи и транспорта Сусанной Алиевой.\n\nВ ходе открытого урока особое внимание было уделено доступному объяснению темы с использованием современных методов обучения, наглядных пособий и интерактивных презентаций. Была проведена эффективная работа по обеспечению активности студентов, развитию их аналитического мышления, логических рассуждений и навыков самостоятельного принятия решений.\n\nУчебный процесс наглядно продемонстрировал педагогическое мастерство преподавателя, глубокие знания предмета, творческий подход к преподаванию и умение выстраивать эффективное взаимодействие со студентами.\n\nЖелаем Сусанне Алиевой дальнейших успехов в педагогической деятельности, новых достижений и постоянной гордости за успехи своих студентов.",
-      "date": "20 Noyabr 2026",
-      "date_az": "20 Noyabr 2026",
-      "date_en": "20 November 2026",
-      "date_ru": "20 Ноября 2026",
-      "image": "susanna_riyaziyyat_aciq_ders.mp4",
-      "extra_image": "susanna_riyaziyyat_aciq_ders_poster.jpg",
-      "extra_videos": [
-        {
-          "src": "susanna_riyaziyyat_aciq_ders_2.mp4",
-          "poster": "susanna_riyaziyyat_aciq_ders_2_poster.jpg",
-          "label_az": "Açıq dərs prosesi və tələbələrin fəal iştirakı (II video)",
-          "label_en": "Open lesson process and active student participation (Video 2)",
-          "label_ru": "Процесс открытого урока и активное участие студентов (Видео 2)"
-        }
-      ],
-      "tag_az": "Açıq Dərs",
-      "tag_en": "Open Lesson",
-      "tag_ru": "Открытый Урок"
-  },
-  {
-      "id": 117,
-      "official_id": "open_lesson_transport_shipping_2026",
-      "title_az": "“Nəqliyyatda daşınmalar” mövzusu üzrə açıq dərs və tədris videomaterialları",
-      "title_en": "Open Lesson and Educational Video Materials on “Transport Shipping”",
-      "title_ru": "Открытый урок и учебные видеоматериалы по теме «Перевозки на транспорте»",
-      "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimləri Xumar Cəmilova, Gülər Mustafayeva və Coşqun Yəhyayevin “Nəqliyyatda daşınmalar” mövzusunda apardıqları dərslərə dair təqdim olunan videomateriallar.",
-      "desc_en": "Educational video materials from open lessons on “Transport Shipping” conducted by teachers Khumar Jamilova, Gular Mustafayeva, and Joshgun Yahyayev at Baku State Communications and Transport College.",
-      "desc_ru": "Учебные видеоматериалы открытых уроков по теме «Перевозки на транспорте», проведенных преподавателями Хумар Джамиловой, Гюляр Мустафаевой и Джошгуном Яхьяевым в Бакинском государственном колледже связи и транспорта.",
-      "full_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimləri Xumar Cəmilova, Gülər Mustafayeva və Coşqun Yəhyayevin “Nəqliyyatda daşınmalar” mövzusunda apardıqları dərslərə dair videomateriallar təqdim olunmuşdur.\n\nVideolarda mövzunun tədrisi, dərsin təşkili, istifadə olunan təlim metodları və tələbələrin dərs prosesində fəal iştirakı nümayiş etdirilir.\n\nBu videomaterialların paylaşılmasında əsas məqsəd qabaqcıl pedaqoji təcrübənin öyrənilməsi, müəllimlər arasında təcrübə mübadiləsinin genişləndirilməsi və nəqliyyat sahəsi üzrə tədrisin keyfiyyətinin daha da artırılmasına töhfə verməkdir.",
-      "full_en": "Video materials on the lessons conducted on “Transport Shipping” by teachers Khumar Jamilova, Gular Mustafayeva, and Joshgun Yahyayev at Baku State Communications and Transport College have been presented.\n\nThe videos demonstrate the teaching methodology, organization of the lesson, interactive instructional methods, and active participation of students in the learning process.\n\nThe primary goal of sharing these video materials is to explore innovative pedagogical practices, foster professional experience exchange among educators, and enhance the quality of education in the transport sector.",
-      "full_ru": "Представлены видеоматериалы открытых уроков по теме «Перевозки на транспорте», проведенных преподавателями Бакинского государственного колледжа связи и транспорта Хумар Джамиловой, Гюляр Мустафаевой и Джошгуном Яхьяевым.\n\nВ видеоматериалах наглядно продемонстрированы методика преподавания темы, организация учебного процесса, современные интерактивные методы обучения и активное участие студентов.\n\nОсновная цель публикации данных видеоматериалов — изучение передового педагогического опыта, расширение профессионального обмена среди преподавателей и повышение качества образования в транспортной сфере.",
-      "date": "17 Noyabr 2026",
-      "date_az": "17 Noyabr 2026",
-      "date_en": "17 November 2026",
-      "date_ru": "17 Ноября 2026",
-      "image": "neqliyyat_dasinmalar_reel.mp4",
-      "url": "https://www.facebook.com/reel/2060036278042439",
-      "tag_az": "Açıq Dərs",
-      "tag_en": "Open Lesson",
-      "tag_ru": "Открытый Урок"
-  },
-  {
-      "id": 116,
-      "official_id": "reyhan_aciq_ders_2026",
-      "title_az": "Şəmsiyeva Reyhan müəllimin “Naqilsiz rabitə texnologiyası” fənnindən açıq dərsi keçirildi",
-      "title_en": "Open Lesson by Teacher Shamsiyeva Reyhan on “Wireless Communication Technology” Held",
-      "title_ru": "Проведен открытый урок преподавателя Шамсиевой Рейхан по предмету «Беспроводные технологии связи»",
-      "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Naqilsiz rabitə texnologiyası” fənnindən III kurs, 365-ci qrup tələbələri üçün açıq dərs keçirildi. Dərsin məqsədi tələbələrin nəzəri biliklərinin möhkəmləndirilməsi və praktiki bacarıqlarının inkişafıdır.",
-      "desc_en": "An open lesson on \"Wireless Communication Technology\" was held at Baku State Communications and Transport College for 3rd-year students of group 365. The goal was to consolidate theoretical knowledge and develop practical skills.",
-      "desc_ru": "В Бакинском государственном колледже связи и транспорта прошел открытый урок по предмету «Беспроводные технологии связи» для студентов III курса группы 365 с целью закрепления теоретических знаний и развития практических навыков.",
-      "full_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində fənn müəllimi Şəmsiyeva Reyhan tərəfindən “Naqilsiz rabitə texnologiyası” fənnindən III kurs, 365-ci qrup tələbələri üçün açıq dərs təşkil olundu.\n\nAçıq dərsin məqsədi tələbələrin nəzəri biliklərinin möhkəmləndirilməsi, praktiki bacarıqlarının inkişaf etdirilməsi və müasir rabitə texnologiyaları üzrə biliklərinin artırılmasıdır.\n\nDərs zamanı simsiz şəbəkə arxitekturası, siqnalların ötürülməsi prinsipləri və naqilsiz rabitənin müasir sənayedə tətbiqi interaktiv formada tələbələrin diqqətinə çatdırılmış, sual-cavab və əyani təqdimatlarla mövzu dərindən mənimsənilmişdir.",
-      "full_en": "An open lesson on \"Wireless Communication Technology\" was organized at Baku State Communications and Transport College by subject teacher Shamsiyeva Reyhan for 3rd-year students of group 365.\n\nThe main goal of the open lesson is to reinforce students' theoretical knowledge, enhance their practical skills, and advance their understanding of modern wireless communication technologies.\n\nDuring the session, modern wireless network architectures, transmission principles, and practical industrial applications were presented interactively, followed by engaging discussions and demonstrations.",
-      "full_ru": "В Бакинском государственном колледже связи и транспорта преподавателем Шамсиевой Рейхан был организован открытый урок по предмету «Беспроводные технологии связи» для студентов III курса группы 365.\n\nЦель открытого урока — закрепление теоретических знаний студентов, развитие практических навыков и углубление компетенций в области современных технологий беспроводной связи.\n\nВ ходе занятия в интерактивной форме были рассмотрены архитектура беспроводных сетей, принципы передачи сигналов и их применение в современной индустрии, закрепленные наглядными примерами и дискуссиями.",
-      "date": "17 Noyabr 2026",
-      "date_az": "17 Noyabr 2026",
-      "date_en": "17 November 2026",
-      "date_ru": "17 Ноября 2026",
-      "image": "reyhan.mp4",
-      "tag_az": "Açıq Dərs",
-      "tag_en": "Open Lesson",
-      "tag_ru": "Открытый Урок"
-  },
   {
     "id": 115,
     "official_id": "tashkent_online_2026",
@@ -27712,7 +27753,31 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
     // 4. Tab 4: Açıq dərslər (#science-open-lessons-grid)
     const sciOpenGrid = document.getElementById("science-open-lessons-grid");
     if (sciOpenGrid) {
-      renderNewsCardsInto(sciOpenGrid, matchNews(/açıq dərs|nümunəvi dərs/i, 6), "Açıq Dərs");
+      if (typeof openLessonsData !== "undefined" && openLessonsData.length) {
+        sciOpenGrid.innerHTML = openLessonsData.map((lesson) => {
+          return `
+            <article class="portal-hub-card cursor-pointer" data-open-lesson-jump="${lesson.id}">
+              <span class="portal-hub-tag">${lesson.subject_icon} AÇIQ DƏRS · ${lesson.subject_az}</span>
+              <h4 class="portal-hub-title">${lesson.teacher_az}: ${lesson.title_az}</h4>
+              <p class="portal-hub-desc">${lesson.desc_az}</p>
+              <button type="button" class="portal-hub-link">Videoya və Pedaqoji Yazıya Bax →</button>
+            </article>
+          `;
+        }).join("");
+        sciOpenGrid.querySelectorAll("[data-open-lesson-jump]").forEach((card) => {
+          card.addEventListener("click", () => {
+            if (typeof switchWorkspaceTab === "function") {
+              switchWorkspaceTab("lectures");
+            }
+            const stage = document.getElementById("open-lessons-block");
+            if (stage) {
+              setTimeout(() => stage.scrollIntoView({ behavior: "smooth", block: "start" }), 150);
+            }
+          });
+        });
+      } else {
+        renderNewsCardsInto(sciOpenGrid, matchNews(/açıq dərs|nümunəvi dərs/i, 6), "Açıq Dərs");
+      }
     }
 
     // 5. Tab 7: Beynəlxalq konfranslar & nəşrlər (#intl-conferences-grid)
@@ -27986,5 +28051,245 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
     // Initial render
     renderAdmissionTable("basis9");
   })();
+
+  /* ══════════════════════════════════════════════════════════════════════
+     BDRNK AÇIQ DƏRSLƏR VƏ TƏDRİS VİDEOMATERİALLARI BLOKU CONTROLLER
+     ══════════════════════════════════════════════════════════════════════ */
+  (function initOpenLessonsBlock() {
+    const filterBar = document.getElementById("open-lessons-filter-bar");
+    const featuredStage = document.getElementById("open-lesson-featured-stage");
+    const cardsGrid = document.getElementById("open-lessons-cards-grid");
+
+    if (!featuredStage || typeof openLessonsData === "undefined" || !openLessonsData.length) return;
+
+    let currentLessonId = openLessonsData[0].id;
+    let currentVideoIdx = 0;
+
+    function esc(str) {
+      if (!str) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function renderFilterTabs() {
+      if (!filterBar) return;
+      filterBar.innerHTML = openLessonsData
+        .map((item) => {
+          const isActive = item.id === currentLessonId;
+          return `
+            <button type="button" 
+                    class="open-lesson-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 border flex items-center gap-2 ${
+                      isActive
+                        ? "bg-[#0a2240] text-white border-[#0a2240] dark:bg-[#c8a45d] dark:text-slate-950 dark:border-[#c8a45d] shadow-sm font-bold scale-[1.02]"
+                        : "bg-white/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border-slate-900/10 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-700"
+                    }" 
+                    data-lesson-id="${item.id}">
+              <span>${item.subject_icon}</span>
+              <span>${esc(item.subject_az)} (${esc(item.teacher_az)})</span>
+            </button>
+          `;
+        })
+        .join("");
+
+      filterBar.querySelectorAll(".open-lesson-tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const lId = btn.getAttribute("data-lesson-id");
+          if (lId && lId !== currentLessonId) {
+            currentLessonId = lId;
+            currentVideoIdx = 0;
+            renderAll();
+          }
+        });
+      });
+    }
+
+    function renderFeaturedStage() {
+      const lesson = openLessonsData.find((l) => l.id === currentLessonId) || openLessonsData[0];
+      const video = lesson.videos[currentVideoIdx] || lesson.videos[0];
+
+      const paragraphs = lesson.full_az
+        .split("\n\n")
+        .map((p) => {
+          const trimmed = p.trim();
+          if (!trimmed) return "";
+          if (trimmed.startsWith("#")) {
+            const tags = trimmed
+              .split(/\s+/)
+              .map((t) => `<span class="inline-block px-2.5 py-1 text-xs font-semibold rounded-lg bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20 mr-1.5 mb-1.5">${esc(t)}</span>`)
+              .join("");
+            return `<div class="pt-2 flex flex-wrap">${tags}</div>`;
+          }
+          return `<p class="text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-3">${esc(trimmed)}</p>`;
+        })
+        .join("");
+
+      const videoSwitchButtons =
+        lesson.videos.length > 1
+          ? `
+          <div class="mt-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-900/80 border border-slate-900/10 dark:border-white/10 flex flex-wrap items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Dərsin Video Hissələri:</span>
+            ${lesson.videos
+              .map(
+                (v, idx) => `
+                <button type="button" 
+                        class="open-lesson-vid-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${
+                          idx === currentVideoIdx
+                            ? "bg-amber-600 text-white shadow-sm"
+                            : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-900/10 dark:border-white/10 hover:bg-slate-200"
+                        }" 
+                        data-vid-idx="${idx}">
+                  📹 ${esc(v.title_az || `Hissə ${idx + 1}`)}
+                </button>
+              `
+              )
+              .join("")}
+          </div>
+        `
+          : "";
+
+      featuredStage.innerHTML = `
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+          <!-- Left Column: Video Player Showcase -->
+          <div class="lg:col-span-7 space-y-3">
+            <div class="open-lesson-player-box relative rounded-2xl overflow-hidden bg-slate-950 shadow-2xl border border-slate-900/20 dark:border-white/10 aspect-video flex items-center justify-center">
+              <video id="open-lesson-active-video" 
+                     class="w-full h-full object-contain" 
+                     controls 
+                     playsinline 
+                     preload="metadata" 
+                     poster="${video.poster || 'college_bg.jpg'}">
+                <source src="${video.src}" type="video/mp4">
+                Brauzeriniz video oxutmağı dəstəkləmir.
+              </video>
+            </div>
+            ${videoSwitchButtons}
+            <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 px-1">
+              <span>Rəsmi Dərs Qeydiyyatı · BDRNK Video Studiyası</span>
+              <span class="font-mono">${esc(video.src)}</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Full Written Pedagogical Article -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-[#0a2240] text-white dark:bg-[#c8a45d] dark:text-slate-950">
+                ${lesson.subject_icon} ${esc(lesson.subject_az)}
+              </span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                👩‍🏫 ${esc(lesson.teacher_az)}
+              </span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                📅 ${esc(lesson.date)}
+              </span>
+            </div>
+
+            <h4 class="font-display text-xl sm:text-2xl font-black text-slate-900 dark:text-white leading-snug">
+              ${esc(lesson.title_az)}
+            </h4>
+
+            <div class="p-3.5 rounded-xl bg-amber-500/[0.08] dark:bg-amber-500/[0.12] border-l-4 border-amber-500 text-xs sm:text-sm text-slate-800 dark:text-slate-200 italic font-medium leading-relaxed">
+              «${esc(lesson.desc_az)}»
+            </div>
+
+            <div class="open-lesson-full-text prose dark:prose-invert max-w-none max-h-[340px] overflow-y-auto pr-2 scrollbar-thin text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+              ${paragraphs}
+            </div>
+          </div>
+        </div>
+      `;
+
+      featuredStage.querySelectorAll(".open-lesson-vid-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const vIdx = parseInt(btn.getAttribute("data-vid-idx"), 10) || 0;
+          currentVideoIdx = vIdx;
+          renderFeaturedStage();
+          const vidEl = document.getElementById("open-lesson-active-video");
+          if (vidEl) {
+            vidEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            vidEl.play().catch(() => {});
+          }
+        });
+      });
+    }
+
+    function renderCardsGrid() {
+      if (!cardsGrid) return;
+      cardsGrid.innerHTML = openLessonsData
+        .map((item) => {
+          const isSelected = item.id === currentLessonId;
+          const mainVideo = item.videos[0];
+          return `
+            <div class="open-lesson-card group cursor-pointer p-4 rounded-2xl transition-all duration-300 border flex flex-col justify-between ${
+              isSelected
+                ? "bg-amber-500/[0.06] dark:bg-amber-500/[0.12] border-amber-500/50 shadow-md ring-2 ring-amber-500/30"
+                : "bg-white dark:bg-slate-900 border-slate-900/[0.08] dark:border-white/[0.08] hover:border-amber-500/30 hover:shadow-lg"
+            }" data-card-lesson-id="${item.id}">
+              <div class="space-y-3">
+                <div class="relative rounded-xl overflow-hidden bg-slate-950 aspect-video flex items-center justify-center">
+                  <img src="${mainVideo.poster || 'college_bg.jpg'}" alt="${esc(item.title_az)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                  <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/25 transition-colors">
+                    <span class="w-10 h-10 rounded-full bg-white/90 dark:bg-[#c8a45d] text-slate-900 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform font-bold text-sm">
+                      ▶
+                    </span>
+                  </div>
+                  <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-md text-[10px] font-bold bg-black/75 text-white backdrop-blur-sm">
+                    ${item.videos.length > 1 ? `${item.videos.length} Video` : "Video Dərs"}
+                  </span>
+                </div>
+
+                <div class="space-y-1">
+                  <div class="flex items-center gap-1.5 text-[11px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
+                    <span>${item.subject_icon}</span>
+                    <span>${esc(item.subject_az)}</span>
+                  </div>
+                  <h5 class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2 leading-snug">
+                    ${esc(item.teacher_az)} — Açıq Dərs
+                  </h5>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">
+                    ${esc(item.desc_az)}
+                  </p>
+                </div>
+              </div>
+
+              <div class="pt-3 mt-3 border-t border-slate-900/[0.06] dark:border-white/[0.06] flex items-center justify-between text-xs">
+                <span class="text-slate-400">${esc(item.date)}</span>
+                <span class="font-bold text-[#0a2240] dark:text-[#c8a45d] group-hover:translate-x-0.5 transition-transform">
+                  ${isSelected ? "Seçilib ✓" : "Bax & Oxu →"}
+                </span>
+              </div>
+            </div>
+          `;
+        })
+        .join("");
+
+      cardsGrid.querySelectorAll("[data-card-lesson-id]").forEach((card) => {
+        card.addEventListener("click", () => {
+          const lId = card.getAttribute("data-card-lesson-id");
+          if (lId) {
+            currentLessonId = lId;
+            currentVideoIdx = 0;
+            renderAll();
+            const stage = document.getElementById("open-lessons-block");
+            if (stage) {
+              stage.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }
+        });
+      });
+    }
+
+    function renderAll() {
+      renderFilterTabs();
+      renderFeaturedStage();
+      renderCardsGrid();
+    }
+
+    renderAll();
+  })();
+
 
 })();
