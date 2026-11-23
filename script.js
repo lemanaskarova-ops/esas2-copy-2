@@ -28291,5 +28291,96 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
     renderAll();
   })();
 
+  /* ══════════════════════════════════════════════════════════════════════
+     HAQQIMIZDA DROPDOWN (RƏHBƏRLİK VƏ STRUKTUR) FLOATING CONTROLLER
+     ══════════════════════════════════════════════════════════════════════ */
+  (function initAboutDropdown() {
+    function setupDropdown() {
+      const wrapper = document.getElementById("nav-about-dropdown-wrapper") || document.querySelector(".nav-tab-dropdown-wrapper");
+      const menu = document.getElementById("nav-about-dropdown-menu") || document.querySelector(".nav-tab-dropdown-menu");
+      if (!wrapper || !menu) return;
+
+      let closeTimer = null;
+
+      function positionAndOpen() {
+        if (closeTimer) {
+          clearTimeout(closeTimer);
+          closeTimer = null;
+        }
+        const rect = wrapper.getBoundingClientRect();
+        menu.style.position = "fixed";
+        menu.style.top = `${Math.round(rect.bottom) + 4}px`;
+        menu.style.left = `${Math.max(10, Math.round(rect.left))}px`;
+        menu.style.zIndex = "999999";
+        menu.classList.add("is-open");
+        wrapper.classList.add("is-open");
+      }
+
+      function scheduleClose(delay = 180) {
+        if (closeTimer) clearTimeout(closeTimer);
+        closeTimer = setTimeout(() => {
+          menu.classList.remove("is-open");
+          wrapper.classList.remove("is-open");
+        }, delay);
+      }
+
+      wrapper.addEventListener("mouseenter", positionAndOpen);
+      wrapper.addEventListener("mouseleave", () => scheduleClose(180));
+
+      menu.addEventListener("mouseenter", () => {
+        if (closeTimer) {
+          clearTimeout(closeTimer);
+          closeTimer = null;
+        }
+      });
+      menu.addEventListener("mouseleave", () => scheduleClose(140));
+
+      // Click handling on wrapper or chevron
+      wrapper.addEventListener("click", (e) => {
+        // If clicking on dropdown items, let navigation proceed and close menu
+        const itemLink = e.target.closest(".nav-tab-dropdown-item");
+        if (itemLink) {
+          menu.classList.remove("is-open");
+          wrapper.classList.remove("is-open");
+          return;
+        }
+        // If clicking chevron or on touch screen, toggle
+        const isSvg = e.target.closest("svg");
+        if (isSvg || ("ontouchstart" in window)) {
+          if (menu.classList.contains("is-open")) {
+            scheduleClose(0);
+          } else {
+            positionAndOpen();
+          }
+        }
+      });
+
+      // Close on outside click
+      document.addEventListener("click", (e) => {
+        if (!wrapper.contains(e.target) && !menu.contains(e.target)) {
+          menu.classList.remove("is-open");
+          wrapper.classList.remove("is-open");
+        }
+      });
+
+      // Update position on scroll / resize while open
+      const updatePos = () => {
+        if (menu.classList.contains("is-open")) {
+          const rect = wrapper.getBoundingClientRect();
+          menu.style.top = `${Math.round(rect.bottom) + 4}px`;
+          menu.style.left = `${Math.max(10, Math.round(rect.left))}px`;
+        }
+      };
+      window.addEventListener("scroll", updatePos, { passive: true });
+      window.addEventListener("resize", updatePos, { passive: true });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", setupDropdown);
+    } else {
+      setupDropdown();
+    }
+  })();
+
 
 })();

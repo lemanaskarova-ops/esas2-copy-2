@@ -388,19 +388,19 @@
         <nav id="workspace-tabs-bar" aria-label="Bölmə Kateqoriyaları"
             class="workspace-nav-bar border-t border-slate-900/[0.06] dark:border-white/[0.06] bg-white/80 dark:bg-[#081120]/80">
             <div id="desktop-nav"
-                class="workspace-nav-inner max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 flex items-center gap-1.5 overflow-x-auto"
+                class="workspace-nav-inner max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 flex items-center gap-1.5 overflow-x-auto lg:overflow-visible"
                 role="tablist">
                 <!-- 1. Haqqımızda (Hover Dropdown with Rəhbərlik və Struktur) -->
-                <div class="nav-tab-dropdown-wrapper relative group shrink-0">
+                <div class="nav-tab-dropdown-wrapper relative group shrink-0" id="nav-about-dropdown-wrapper">
                     <a href="?tab=about" data-workspace-tab="about" role="tab" aria-selected="true"
                         title="Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız"
                         class="workspace-tab-btn is-active shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
                         <span class="wtab-num" aria-hidden="true">1</span><span data-i18n="nav_s1">Haqqımızda</span>
-                        <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180 opacity-75 cursor-pointer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         <span class="sr-only" data-i18n="nav_s1_sub">Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız</span>
                     </a>
                     <!-- Hover Dropdown Menu -->
-                    <div class="nav-tab-dropdown-menu">
+                    <div class="nav-tab-dropdown-menu" id="nav-about-dropdown-menu">
                         <div class="nav-tab-dropdown-panel">
                             <a href="?tab=about" data-workspace-tab="about" class="nav-tab-dropdown-item">
                                 <span class="text-base" aria-hidden="true">🏛️</span>
@@ -6764,8 +6764,6 @@
             </svg>
         </span>
     </button>
-
-
 
     <script src="script.js?v=20261119_1115" defer></script>
     <script src="ui-tabs.js?v=20261118_1400" defer></script>
