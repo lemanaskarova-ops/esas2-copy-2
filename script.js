@@ -35,7 +35,7 @@ const i18n = {
     search_no_results: "Axtarış üzrə heç bir məlumat tapılmadı",
     search_quick_heading: "Sürətli naviqasiya mövzuları:",
 
-    header_subtitle: "Bakı Dövlət Rabitə və Nəqliyyat Kolleci<br><span class=\"logo-subtitle-entity\">publik hüquqi şəxsi</span>",
+    header_subtitle: "Bakı Dövlət Rabitə və Nəqliyyat Kolleci<br><span class=\"logo-subtitle-entity\">Publik hüquqi şəxsi</span>",
     nav_home: "Ana Səhifə",
     nav_about: "Haqqımızda",
     nav_structure: "Struktur",
@@ -102,7 +102,7 @@ const i18n = {
     nav_register: "Qeydiyyat",
     hero_badge: "Rəsmi Təhsil Portalı",
     hero_title:
-      '<span class="hero-inst-name">Bakı Dövlət Rabitə və Nəqliyyat Kolleci publik hüquqi şəxsi</span><span class="hero-main-slogan">"Dövlət Standartı ilə Rəqəmsal Gələcəyə Doğru"</span>',
+      '<span class="hero-inst-name">Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik hüquqi şəxsi</span><span class="hero-main-slogan">"Dövlət Standartı ilə Rəqəmsal Gələcəyə Doğru"</span>',
     hero_desc:
       "Gələcəyin rabitə və nəqliyyat mütəxəssislərini yetişdirən müasir təhsil mərkəzi.",
     hero_cta_portal: "Tələbə Portalı",
@@ -251,7 +251,7 @@ const i18n = {
     marquee9: "📸 Instagram: @bdrnk__official",
     marquee10: "👥 Facebook: bdrnk.official",
     footer_desc:
-      "Bakı Dövlət Rabitə və Nəqliyyat Kolleci<br><span class=\"footer-entity\">publik hüquqi şəxsi</span> — gələcəyin mütəxəssislərini yetişdiririk.",
+      "Bakı Dövlət Rabitə və Nəqliyyat Kolleci<br><span class=\"footer-entity\">Publik hüquqi şəxsi</span> — gələcəyin mütəxəssislərini yetişdiririk.",
     footer_quick: "Sürətli Keçidlər",
     footer_contact: "Əlaqə",
     dash_greeting: "Tədris Hesabatı",
@@ -425,7 +425,7 @@ const i18n = {
     about_subtitle: "Azərbaycan Texniki Universitetinin nəzdində fəaliyyət göstərən, bir əsrə yaxın zəngin ənənələri müasir rəqəmsal təhsillə birləşdirən qabaqcıl dövlət təhsil müəssisəsi.",
     about_seal_title: "95 İLLİK AKADEMİK İRS",
     about_seal_sub: "AzTU NƏZDİNDƏ BDRNK",
-    about_status_pill: "publik hüquqi şəxs",
+    about_status_pill: "Publik hüquqi şəxs",
     about_lead_heading: "Rabitə, Telekommunikasiya və Nəqliyyat Sektorunun Peşəkar Kadr Mərkəzi",
     about_director_quote: "Əsas hədəfimiz milli-mənəvi dəyərlərə sadiq, müasir rəqəmsal texnologiyalara dərindən yiyələnmiş, ölkəmizin rabitə və nəqliyyat infrastrukturunun inkişafına töhfə verən peşəkar gənc mütəxəssislər yetişdirməkdir.",
     about_director_name: "Səbuhi Qurbanov",
@@ -514,7 +514,7 @@ const i18n = {
     lb_slideshow: "Slayd-Şou",
     lb_stop: "Dayandır",
     contact_city: "Bakı, Azərbaycan",
-    contact_subtitle: "AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci<br><span class=\"contact-entity\">publik hüquqi şəxsi</span> ilə birbaşa əlaqə kanalları, rəsmi elektron müraciət sistemi və sosial media resursları.",
+    contact_subtitle: "AzTU nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci<br><span class=\"contact-entity\">Publik hüquqi şəxsi</span> ilə birbaşa əlaqə kanalları, rəsmi elektron müraciət sistemi və sosial media resursları.",
     cac_phone_tag: "QAYNAR XƏTT",
     cac_phone_title: "Telefon və Qəbul Əlaqəsi",
     cac_call_btn: "Birbaşa Zəng",
@@ -675,7 +675,7 @@ const i18n = {
     bio_official_title: "Rəsmi Bioqrafiya",
     bio_director_role: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin Direktoru",
 
-    page_title: "BDRNK — Bakı Dövlət Rabitə və Nəqliyyat Kolleci publik hüquqi şəxsi",
+    page_title: "BDRNK — Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik hüquqi şəxsi",
     hero_aura_tagline: "Dövlət Standartı ilə Rəqəmsal Gələcəyə Doğru",
     about_director_bio_btn: "Rəsmi Bioqrafiya",
     honors_sub_badge: "Qlobal Nailiyyətlər & Beynəlxalq Təmsilçilik",
@@ -866,10 +866,10 @@ const i18n = {
     nav_fbk: "Fənn Birləşmə Komissiyaları",
     nav_fbk_sub: "9 tədris-metodiki fənn komissiyası",
     majors_badge_count: "14 İxtisas",
-    inst_full_name: "BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ publik hüquqi şəxsi",
+    inst_full_name: "BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ Publik hüquqi şəxsi",
     hero_inst_ministry: "Azərbaycan Respublikası Elm və Təhsil Nazirliyi",
     hero_inst_agency: "Elm və Ali Təhsil üzrə Dövlət Agentliyi",
-    hero_inst_sub: "AzTU-nun nəzdində BDRNK publik hüquqi şəxsi",
+    hero_inst_sub: "AzTU-nun nəzdində BDRNK Publik hüquqi şəxsi",
     calc_msg_low: "Qəbul şansı aşağıdır. Balınızı artırmağı və digər ixtisasları nəzərdən keçirməyi tövsiyə edirik.",
     calc_msg_mid: "Orta qəbul şansı. Müsabiqə vəziyyətindən asılı olaraq qəbul olunmaq ehtimalınız var.",
     calc_msg_high: "Yüksək qəbul şansı! Bu ixtisasa qəbul olunmaq ehtimalınız çox böyükdür.",
@@ -3582,7 +3582,7 @@ const staffData = {
         dept_az: "Kompüter texnologiyaları şöbəsi",
         dept_en: "Department of Computer Technologies",
         dept_ru: "Отделение компьютерных технологий",
-        name_az: "Kompüter şəbəkə avadanlıqlarının təmiri və servisi",
+        name_az: "Kompüter şəbəkəsi avadanlıqlarının təmiri və servisi",
         name_en: "Repair and Service of Computer Network Equipment",
         name_ru: "Ремонт и сервис компьютерного сетевого оборудования",
         field_az: "İKT",
@@ -3688,81 +3688,122 @@ const staffData = {
   }
 };
 
+/* ══════════════════════════════════════════════════════════════════════
+   BDRNK RƏSMİ AÇIQ DƏRSLƏR VƏ TƏDRİS VİDEOMATERİALLARI BAZASI
+   ══════════════════════════════════════════════════════════════════════ */
+const openLessonsData = [
+  {
+    id: "susanna_riyaziyyat",
+    official_id: "susanna_riyaziyyat_aciq_ders_2026",
+    subject_az: "Riyaziyyat",
+    subject_en: "Mathematics",
+    subject_ru: "Математика",
+    subject_icon: "📐",
+    teacher_az: "Susanna Alıyeva",
+    teacher_en: "Susanna Aliyeva",
+    teacher_ru: "Сусанна Алиева",
+    teacher_role_az: "Riyaziyyat fənn müəllimi",
+    date: "20 Noyabr 2026",
+    title_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində riyaziyyat fənni üzrə açıq dərs uğurla keçirildi",
+    title_en: "Open Mathematics Lesson Successfully Held at Baku State Communications and Transport College",
+    title_ru: "В Бакинском государственном колледже связи и транспорта успешно прошел открытый урок по математике",
+    desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin riyaziyyat müəllimi Susanna Alıyevanın təqdimatında müasir təlim metodları, əyani vəsaitlər və interaktiv təqdimatlarla zəngin açıq dərs keçirilib.",
+    full_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində növbəti açıq dərs uğurla keçirildi!\n\nBakı Dövlət Rabitə və Nəqliyyat Kollecinin riyaziyyat müəllimi Susanna Alıyevanın təqdimatında riyaziyyat fənni üzrə açıq dərs keçirilib.\n\nAçıq dərs zamanı müəllim tərəfindən mövzunun izahına xüsusi diqqət yetirilmiş, müasir təlim metodlarından, əyani vəsaitlərdən və interaktiv təqdimatlardan istifadə olunmuşdur. Dərsin gedişində tələbələrin fəallığının təmin edilməsi, onların analitik düşünmə, məntiqi mühakimə və müstəqil qərarvermə bacarıqlarının inkişaf etdirilməsi istiqamətində səmərəli iş aparılmışdır.\n\nMüşahidə olunan dərs prosesi müəllimin pedaqoji ustalığını, fənn üzrə bilik və təcrübəsini, tədrisə yaradıcı yanaşmasını və tələbələrlə səmərəli ünsiyyət qurmaq bacarığını nümayiş etdirmişdir.\n\nSusanna Alıyevaya pedaqoji fəaliyyətində uğurlar, yeni nailiyyətlər və tələbələrinin qazandığı uğurlardan daim qürur duymağı arzulayırıq.\n\n#AçıqDərs #Riyaziyyat #SusannaAlıyeva #MüasirTəhsil #BakıDövlətRabitəVəNəqliyyatKolleci",
+    videos: [
+      {
+        src: "susanna_riyaziyyat_aciq_ders.mp4",
+        poster: "susanna_riyaziyyat_aciq_ders_poster.jpg",
+        title_az: "I Hissə: Mövzunun İnteraktiv İzahı və Metodika"
+      },
+      {
+        src: "susanna_riyaziyyat_aciq_ders_2.mp4",
+        poster: "susanna_riyaziyyat_aciq_ders_2_poster.jpg",
+        title_az: "II Hissə: Tələbələrin Fəal İştirakı və Məsələ Həlli"
+      }
+    ],
+    tags: ["Açıq Dərs", "Riyaziyyat", "Susanna Alıyeva", "Müasir Təhsil"]
+  },
+  {
+    id: "neqliyyat_dasinmalar",
+    official_id: "open_lesson_transport_shipping_2026",
+    subject_az: "Nəqliyyatda daşınmalar",
+    subject_en: "Transport Shipping",
+    subject_ru: "Перевозки на транспорте",
+    subject_icon: "🚆",
+    teacher_az: "Xumar Cəmilova, Gülər Mustafayeva, Coşqun Yəhyayev",
+    teacher_en: "Khumar Jamilova, Gular Mustafayeva, Joshgun Yahyayev",
+    teacher_ru: "Хумар Джамилова, Гюляр Мустафаева, Джошгун Яхьяев",
+    teacher_role_az: "Nəqliyyat fənn birləşməsinin müəllimləri",
+    date: "17 Noyabr 2026",
+    title_az: "“Nəqliyyatda daşınmalar” mövzusu üzrə açıq dərs və tədris videomaterialları",
+    title_en: "Open Lesson and Educational Video Materials on “Transport Shipping”",
+    title_ru: "Открытый урок и учебные видеоматериалы по теме «Перевозки на транспорте»",
+    desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimləri Xumar Cəmilova, Gülər Mustafayeva və Coşqun Yəhyayevin “Nəqliyyatda daşınmalar” mövzusunda apardıqları dərslərə dair təqdim olunan videomateriallar.",
+    full_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimləri Xumar Cəmilova, Gülər Mustafayeva və Coşqun Yəhyayevin “Nəqliyyatda daşınmalar” mövzusunda apardıqları dərslərə dair videomateriallar təqdim olunmuşdur.\n\nVideolarda mövzunun tədrisi, dərsin təşkili, istifadə olunan təlim metodları və tələbələrin dərs prosesində fəal iştirakı nümayiş etdirilir.\n\nBu videomaterialların paylaşılmasında əsas məqsəd qabaqcıl pedaqoji təcrübənin öyrənilməsi, müəllimlər arasında təcrübə mübadiləsinin genişləndirilməsi və nəqliyyat sahəsi üzrə tədrisin keyfiyyətinin daha da artırılmasına töhfə verməkdir.",
+    videos: [
+      {
+        src: "neqliyyat_dasinmalar_reel.mp4",
+        poster: "college_bg.jpg",
+        title_az: "“Nəqliyyatda daşınmalar” dərsinin video icmalı"
+      }
+    ],
+    tags: ["Açıq Dərs", "Nəqliyyat", "Daşınmalar", "Coşqun Yəhyayev"]
+  },
+  {
+    id: "reyhan_naqilsiz_rabite",
+    official_id: "reyhan_aciq_ders_2026",
+    subject_az: "Naqilsiz rabitə texnologiyası",
+    subject_en: "Wireless Communication Technology",
+    subject_ru: "Беспроводные технологии связи",
+    subject_icon: "📡",
+    teacher_az: "Şəmsiyeva Reyhan",
+    teacher_en: "Reyhan Shamsiyeva",
+    teacher_ru: "Рейхан Шамсиева",
+    teacher_role_az: "Rabitə müəllimi (III kurs, 365-ci qrup)",
+    date: "17 Noyabr 2026",
+    title_az: "Şəmsiyeva Reyhan müəllimin “Naqilsiz rabitə texnologiyası” fənnindən açıq dərsi keçirildi",
+    title_en: "Open Lesson by Teacher Shamsiyeva Reyhan on “Wireless Communication Technology” Held",
+    title_ru: "Проведен открытый урок преподавателя Шамсиевой Рейхан по предмету «Беспроводные технологии связи»",
+    desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Naqilsiz rabitə texnologiyası” fənnindən III kurs, 365-ci qrup tələbələri üçün açıq dərs keçirildi. Dərsin məqsədi tələbələrin nəzəri biliklərinin möhkəmləndirilməsi və praktiki bacarıqlarının inkişafıdır.",
+    full_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində fənn müəllimi Şəmsiyeva Reyhan tərəfindən “Naqilsiz rabitə texnologiyası” fənnindən III kurs, 365-ci qrup tələbələri üçün açıq dərs təşkil olundu.\n\nAçıq dərsin məqsədi tələbələrin nəzəri biliklərinin möhkəmləndirilməsi, praktiki bacarıqlarının inkişaf etdirilməsi və müasir rabitə texnologiyaları üzrə biliklərinin artırılmasıdır.\n\nDərs zamanı simsiz şəbəkə arxitekturası, siqnalların ötürülməsi prinsipləri və naqilsiz rabitənin müasir sənayedə tətbiqi interaktiv formada tələbələrin diqqətinə çatdırılmış, sual-cavab və əyani təqdimatlarla mövzu dərindən mənimsənilmişdir.",
+    videos: [
+      {
+        src: "reyhan.mp4",
+        poster: "college_bg.jpg",
+        title_az: "“Naqilsiz rabitə texnologiyası” açıq dərsi"
+      }
+    ],
+    tags: ["Açıq Dərs", "Naqilsiz Rabitə", "Reyhan Şəmsiyeva", "Telekommunikasiya"]
+  },
+  {
+    id: "gunel_ingilis_dili",
+    official_id: "gunel_ingilis_dili_2026",
+    subject_az: "Xarici Dil (İngilis dili)",
+    subject_en: "English Language",
+    subject_ru: "Английский язык",
+    subject_icon: "🇬🇧",
+    teacher_az: "Günel Məmmədova",
+    teacher_en: "Gunel Mammadova",
+    teacher_ru: "Гюнель Мамедова",
+    teacher_role_az: "Xarici dillər fənn müəllimi",
+    date: "15 Noyabr 2026",
+    title_az: "İngilis dili fənni üzrə interaktiv açıq dərs və tələbələrin danışıq təcrübəsi",
+    title_en: "Interactive English Language Open Lesson and Student Speaking Practice",
+    title_ru: "Интерактивный открытый урок по английскому языку и разговорная практика студентов",
+    desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin xarici dillər müəllimi Günel Məmmədovanın təqdimatında interaktiv tədris metodları ilə ingilis dili fənni üzrə nümunəvi açıq dərs keçirilmişdir.",
+    full_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində Günel Məmmədova tərəfindən ingilis dili fənnindən tələbələrin qrammatik və danışıq bacarıqlarının inkişaf etdirilməsi məqsədilə interaktiv açıq dərs keçirilmişdir.\n\nDərs zamanı qrup işləri, canlı dialoqlar və audio-vizual tədris materiallarından geniş istifadə olunmuşdur. Tələbələrin fəal iştirakı ilə xarici dildə sərbəst ünsiyyət mühiti formalaşdırılmış, müasir elektron lüğət və interaktiv platformalar tətbiq edilmişdir.",
+    videos: [
+      {
+        src: "ingilis_dili_gunel_mammadova.mp4",
+        poster: "ingilis_dili_gunel_mammadova_poster.jpg",
+        title_az: "İngilis dili interaktiv açıq dərsi"
+      }
+    ],
+    tags: ["Açıq Dərs", "İngilis Dili", "Günel Məmmədova", "Canlı Dialoq"]
+  }
+];
+
 const newsData = [
-  {
-      "id": 118,
-      "official_id": "susanna_riyaziyyat_aciq_ders_2026",
-      "title_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində riyaziyyat fənni üzrə açıq dərs uğurla keçirildi",
-      "title_en": "Open Mathematics Lesson Successfully Held at Baku State Communications and Transport College",
-      "title_ru": "В Бакинском государственном колледже связи и транспорта успешно прошел открытый урок по математике",
-      "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin riyaziyyat müəllimi Susanna Alıyevanın təqdimatında müasir təlim metodları, əyani vəsaitlər və interaktiv təqdimatlarla zəngin açıq dərs keçirilib.",
-      "desc_en": "An open mathematics lesson presented by teacher Susanna Aliyeva at Baku State Communications and Transport College featured modern teaching methods, visual aids, and interactive presentations.",
-      "desc_ru": "В Бакинском государственном колледже связи и транспорта прошел открытый урок по математике преподавателя Сусанны Алиевой с применением современных методов обучения и интерактивных презентаций.",
-      "full_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində növbəti açıq dərs uğurla keçirildi!\n\nBakı Dövlət Rabitə və Nəqliyyat Kollecinin riyaziyyat müəllimi Susanna Alıyevanın təqdimatında riyaziyyat fənni üzrə açıq dərs keçirilib.\n\nAçıq dərs zamanı müəllim tərəfindən mövzunun izahına xüsusi diqqət yetirilmiş, müasir təlim metodlarından, əyani vəsaitlərdən və interaktiv təqdimatlardan istifadə olunmuşdur. Dərsin gedişində tələbələrin fəallığının təmin edilməsi, onların analitik düşünmə, məntiqi mühakimə və müstəqil qərarvermə bacarıqlarının inkişaf etdirilməsi istiqamətində səmərəli iş aparılmışdır.\n\nMüşahidə olunan dərs prosesi müəllimin pedaqoji ustalığını, fənn üzrə bilik və təcrübəsini, tədrisə yaradıcı yanaşmasını və tələbələrlə səmərəli ünsiyyət qurmaq bacarığını nümayiş etdirmişdir.\n\nSusanna Alıyevaya pedaqoji fəaliyyətində uğurlar, yeni nailiyyətlər və tələbələrinin qazandığı uğurlardan daim qürur duymağı arzulayırıq.\n\n#AçıqDərs #Riyaziyyat #SusannaAlıyeva #MüasirTəhsil #BakıDövlətRabitəVəNəqliyyatKolleci",
-      "full_en": "Another open lesson was successfully held at Baku State Communications and Transport College!\n\nAn open lesson in mathematics was presented by mathematics teacher Susanna Aliyeva at Baku State Communications and Transport College.\n\nDuring the open lesson, special attention was paid to explaining the topic clearly using modern teaching methods, visual aids, and interactive presentations. Effective work was carried out to ensure active student engagement and develop their analytical thinking, logical reasoning, and independent decision-making skills.\n\nThe observed lesson demonstrated the teacher's pedagogical mastery, deep subject knowledge and experience, creative approach to instruction, and ability to build effective communication with students.\n\nWe wish Susanna Aliyeva continued success and new achievements in her pedagogical career, and lasting pride in the accomplishments of her students.",
-      "full_ru": "В Бакинском государственном колледже связи и транспорта успешно прошел очередной открытый урок!\n\nОткрытый урок по математике был проведен преподавателем математики Бакинского государственного колледжа связи и транспорта Сусанной Алиевой.\n\nВ ходе открытого урока особое внимание было уделено доступному объяснению темы с использованием современных методов обучения, наглядных пособий и интерактивных презентаций. Была проведена эффективная работа по обеспечению активности студентов, развитию их аналитического мышления, логических рассуждений и навыков самостоятельного принятия решений.\n\nУчебный процесс наглядно продемонстрировал педагогическое мастерство преподавателя, глубокие знания предмета, творческий подход к преподаванию и умение выстраивать эффективное взаимодействие со студентами.\n\nЖелаем Сусанне Алиевой дальнейших успехов в педагогической деятельности, новых достижений и постоянной гордости за успехи своих студентов.",
-      "date": "20 Noyabr 2026",
-      "date_az": "20 Noyabr 2026",
-      "date_en": "20 November 2026",
-      "date_ru": "20 Ноября 2026",
-      "image": "susanna_riyaziyyat_aciq_ders.mp4",
-      "extra_image": "susanna_riyaziyyat_aciq_ders_poster.jpg",
-      "extra_videos": [
-        {
-          "src": "susanna_riyaziyyat_aciq_ders_2.mp4",
-          "poster": "susanna_riyaziyyat_aciq_ders_2_poster.jpg",
-          "label_az": "Açıq dərs prosesi və tələbələrin fəal iştirakı (II video)",
-          "label_en": "Open lesson process and active student participation (Video 2)",
-          "label_ru": "Процесс открытого урока и активное участие студентов (Видео 2)"
-        }
-      ],
-      "tag_az": "Açıq Dərs",
-      "tag_en": "Open Lesson",
-      "tag_ru": "Открытый Урок"
-  },
-  {
-      "id": 117,
-      "official_id": "open_lesson_transport_shipping_2026",
-      "title_az": "“Nəqliyyatda daşınmalar” mövzusu üzrə açıq dərs və tədris videomaterialları",
-      "title_en": "Open Lesson and Educational Video Materials on “Transport Shipping”",
-      "title_ru": "Открытый урок и учебные видеоматериалы по теме «Перевозки на транспорте»",
-      "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimləri Xumar Cəmilova, Gülər Mustafayeva və Coşqun Yəhyayevin “Nəqliyyatda daşınmalar” mövzusunda apardıqları dərslərə dair təqdim olunan videomateriallar.",
-      "desc_en": "Educational video materials from open lessons on “Transport Shipping” conducted by teachers Khumar Jamilova, Gular Mustafayeva, and Joshgun Yahyayev at Baku State Communications and Transport College.",
-      "desc_ru": "Учебные видеоматериалы открытых уроков по теме «Перевозки на транспорте», проведенных преподавателями Хумар Джамиловой, Гюляр Мустафаевой и Джошгуном Яхьяевым в Бакинском государственном колледже связи и транспорта.",
-      "full_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimləri Xumar Cəmilova, Gülər Mustafayeva və Coşqun Yəhyayevin “Nəqliyyatda daşınmalar” mövzusunda apardıqları dərslərə dair videomateriallar təqdim olunmuşdur.\n\nVideolarda mövzunun tədrisi, dərsin təşkili, istifadə olunan təlim metodları və tələbələrin dərs prosesində fəal iştirakı nümayiş etdirilir.\n\nBu videomaterialların paylaşılmasında əsas məqsəd qabaqcıl pedaqoji təcrübənin öyrənilməsi, müəllimlər arasında təcrübə mübadiləsinin genişləndirilməsi və nəqliyyat sahəsi üzrə tədrisin keyfiyyətinin daha da artırılmasına töhfə verməkdir.",
-      "full_en": "Video materials on the lessons conducted on “Transport Shipping” by teachers Khumar Jamilova, Gular Mustafayeva, and Joshgun Yahyayev at Baku State Communications and Transport College have been presented.\n\nThe videos demonstrate the teaching methodology, organization of the lesson, interactive instructional methods, and active participation of students in the learning process.\n\nThe primary goal of sharing these video materials is to explore innovative pedagogical practices, foster professional experience exchange among educators, and enhance the quality of education in the transport sector.",
-      "full_ru": "Представлены видеоматериалы открытых уроков по теме «Перевозки на транспорте», проведенных преподавателями Бакинского государственного колледжа связи и транспорта Хумар Джамиловой, Гюляр Мустафаевой и Джошгуном Яхьяевым.\n\nВ видеоматериалах наглядно продемонстрированы методика преподавания темы, организация учебного процесса, современные интерактивные методы обучения и активное участие студентов.\n\nОсновная цель публикации данных видеоматериалов — изучение передового педагогического опыта, расширение профессионального обмена среди преподавателей и повышение качества образования в транспортной сфере.",
-      "date": "17 Noyabr 2026",
-      "date_az": "17 Noyabr 2026",
-      "date_en": "17 November 2026",
-      "date_ru": "17 Ноября 2026",
-      "image": "neqliyyat_dasinmalar_reel.mp4",
-      "url": "https://www.facebook.com/reel/2060036278042439",
-      "tag_az": "Açıq Dərs",
-      "tag_en": "Open Lesson",
-      "tag_ru": "Открытый Урок"
-  },
-  {
-      "id": 116,
-      "official_id": "reyhan_aciq_ders_2026",
-      "title_az": "Şəmsiyeva Reyhan müəllimin “Naqilsiz rabitə texnologiyası” fənnindən açıq dərsi keçirildi",
-      "title_en": "Open Lesson by Teacher Shamsiyeva Reyhan on “Wireless Communication Technology” Held",
-      "title_ru": "Проведен открытый урок преподавателя Шамсиевой Рейхан по предмету «Беспроводные технологии связи»",
-      "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Naqilsiz rabitə texnologiyası” fənnindən III kurs, 365-ci qrup tələbələri üçün açıq dərs keçirildi. Dərsin məqsədi tələbələrin nəzəri biliklərinin möhkəmləndirilməsi və praktiki bacarıqlarının inkişafıdır.",
-      "desc_en": "An open lesson on \"Wireless Communication Technology\" was held at Baku State Communications and Transport College for 3rd-year students of group 365. The goal was to consolidate theoretical knowledge and develop practical skills.",
-      "desc_ru": "В Бакинском государственном колледже связи и транспорта прошел открытый урок по предмету «Беспроводные технологии связи» для студентов III курса группы 365 с целью закрепления теоретических знаний и развития практических навыков.",
-      "full_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində fənn müəllimi Şəmsiyeva Reyhan tərəfindən “Naqilsiz rabitə texnologiyası” fənnindən III kurs, 365-ci qrup tələbələri üçün açıq dərs təşkil olundu.\n\nAçıq dərsin məqsədi tələbələrin nəzəri biliklərinin möhkəmləndirilməsi, praktiki bacarıqlarının inkişaf etdirilməsi və müasir rabitə texnologiyaları üzrə biliklərinin artırılmasıdır.\n\nDərs zamanı simsiz şəbəkə arxitekturası, siqnalların ötürülməsi prinsipləri və naqilsiz rabitənin müasir sənayedə tətbiqi interaktiv formada tələbələrin diqqətinə çatdırılmış, sual-cavab və əyani təqdimatlarla mövzu dərindən mənimsənilmişdir.",
-      "full_en": "An open lesson on \"Wireless Communication Technology\" was organized at Baku State Communications and Transport College by subject teacher Shamsiyeva Reyhan for 3rd-year students of group 365.\n\nThe main goal of the open lesson is to reinforce students' theoretical knowledge, enhance their practical skills, and advance their understanding of modern wireless communication technologies.\n\nDuring the session, modern wireless network architectures, transmission principles, and practical industrial applications were presented interactively, followed by engaging discussions and demonstrations.",
-      "full_ru": "В Бакинском государственном колледже связи и транспорта преподавателем Шамсиевой Рейхан был организован открытый урок по предмету «Беспроводные технологии связи» для студентов III курса группы 365.\n\nЦель открытого урока — закрепление теоретических знаний студентов, развитие практических навыков и углубление компетенций в области современных технологий беспроводной связи.\n\nВ ходе занятия в интерактивной форме были рассмотрены архитектура беспроводных сетей, принципы передачи сигналов и их применение в современной индустрии, закрепленные наглядными примерами и дискуссиями.",
-      "date": "17 Noyabr 2026",
-      "date_az": "17 Noyabr 2026",
-      "date_en": "17 November 2026",
-      "date_ru": "17 Ноября 2026",
-      "image": "reyhan.mp4",
-      "tag_az": "Açıq Dərs",
-      "tag_en": "Open Lesson",
-      "tag_ru": "Открытый Урок"
-  },
   {
     "id": 115,
     "official_id": "tashkent_online_2026",
@@ -13911,10 +13952,10 @@ function initSceneTransition() {
       tag_az: "RƏQƏMSAL TRANSFORMASİYA",
       tag_en: "DIGITAL TRANSFORMATION",
       tag_ru: "ЦИФРОВАЯ ТРАНСФОРМАЦИЯ",
-      title_az: "publik hüquqi şəxs və Müasir Rəqəmsal Kampus",
+      title_az: "Publik hüquqi şəxs və Müasir Rəqəmsal Kampus",
       title_en: "Public Legal Entity & Modern Digital Campus",
       desc_az:
-        "Bu gün kollec publik hüquqi şəxs statusu ilə 154 nəfərlik peşəkar müəllim heyəti, rəqəmsal laboratoriyaları, elektron kitabxanası və müasir videodərs bazası ilə gələcəyin ІТ, rabitə və nəqliyyat mütəxəssislərini yetişdirir.",
+        "Bu gün kollec Publik hüquqi şəxs statusu ilə 154 nəfərlik peşəkar müəllim heyəti, rəqəmsal laboratoriyaları, elektron kitabxanası və müasir videodərs bazası ilə gələcəyin ІТ, rabitə və nəqliyyat mütəxəssislərini yetişdirir.",
       desc_en:
         "Today, as a Public Legal Entity with 154 faculty members, digital laboratories, an online reading room, and open video lectures, the college prepares the next generation of IT, telecom, and transport specialists.",
       title_ru: "Публичное юридическое лицо и современный цифровой кампус",
@@ -23743,6 +23784,7 @@ function initSceneTransition() {
 
       return true;
     });
+
   }
 
   function updateSummaryBadge(filtered) {
@@ -24101,9 +24143,10 @@ function initSceneTransition() {
  */
 (function initCampusNavigatorModule() {
   const CAMPUS_ROOMS = [
-    // ═════════════ I MƏRTƏBƏ (12 Otaq) ═════════════
+    // ═════════════ I MƏRTƏBƏ (13 Otaq) ═════════════
     {
       id: "f1_107",
+      order: 1,
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
       no: "№ 107",
@@ -24114,13 +24157,14 @@ function initSceneTransition() {
       desc_az: "Qiyabi təhsil alan tələbələrin sənədləşməsi, tədris cədvəli və sessiya imtahanlarının təşkili mərkəzi.",
       desc_en: "Coordination of documentation, academic schedules, and examination sessions for distance learning students.",
       desc_ru: "Организация документации, учебных графиков и экзаменационных сессий для студентов заочного отделения.",
-      features_az: ["Qiyabi təhsil kabineti", "Tələbə sənədlər fondu", "İmtahan qeydiyyatı"],
-      features_en: ["Distance learning office", "Student archives", "Exam registration"],
-      features_ru: ["Кабинет заочного обучения", "Студенческий архив", "Экзаменационный учет"],
+      features_az: ["Qiyabi təhsil kabineti","Tələbə sənədlər fondu","İmtahan qeydiyyatı"],
+      features_en: ["Distance learning office","Student archives","Exam registration"],
+      features_ru: ["Кабинет заочного обучения","Студенческий архив","Экзаменационный учет"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f1_106a",
+      order: 2,
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
       no: "№ 106A",
@@ -24131,30 +24175,32 @@ function initSceneTransition() {
       desc_az: "Gənclərin çağırışaqədərki hazırlığı və hərbi vətənpərvərlik tədrisi kabineti.",
       desc_en: "Classroom for pre-conscription military training and civil defense education.",
       desc_ru: "Кабинет допризывной подготовки молодежи и военно-патриотического воспитания.",
-      features_az: ["Tədris stendləri", "Hərbi hazırlıq vəsaitləri", "Mülki müdafiə bazası"],
-      features_en: ["Training stands", "Military visual aids", "Civil defense aids"],
-      features_ru: ["Учебные стенды", "Военные пособия", "База гражданской обороны"],
+      features_az: ["Tədris stendləri","Hərbi hazırlıq vəsaitləri","Mülki müdafiə bazası"],
+      features_en: ["Training stands","Military visual aids","Civil defense aids"],
+      features_ru: ["Учебные стенды","Военные пособия","База гражданской обороны"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f1_106",
+      order: 3,
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
       no: "№ 106",
-      name_az: "Kimya laboratoriyası №1", name_en: "Chemistry Laboratory No. 1", name_ru: "Химическая лаборатория №1",
+      name_az: "Kimya laboratoriyası", name_en: "Chemistry Laboratory", name_ru: "Химическая лаборатория",
       cat: "lab",
       catLabel_az: "Laboratoriya", catLabel_en: "Laboratory", catLabel_ru: "Лаборатория",
       icon: "🧪",
       desc_az: "Kimyəvi tədqiqatlar, reaktivlər və tələbələrin laboratoriya təcrübələri üçün xüsusi avadanlıqlar.",
       desc_en: "Specialized equipment for chemical synthesis, reactions, and practical student experiments.",
       desc_ru: "Специализированное оборудование для химических исследований, реактивов и практических опытов.",
-      features_az: ["Dartıcı şkaf", "Reaktivlər guşəsi", "Təhlükəsizlik avadanlıqları", "Təcrübə masaları"],
-      features_en: ["Fume hood", "Reagent corner", "Safety gear", "Experiment benches"],
-      features_ru: ["Вытяжной шкаф", "Уголок реактивов", "Средства защиты", "Лабораторные столы"],
+      features_az: ["Dartıcı şkaf","Reaktivlər guşəsi","Təhlükəsizlik avadanlıqları","Təcrübə masaları"],
+      features_en: ["Fume hood","Reagent corner","Safety gear","Experiment benches"],
+      features_ru: ["Вытяжной шкаф","Уголок реактивов","Средства защиты","Лабораторные столы"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f1_113",
+      order: 4,
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
       no: "№ 113",
@@ -24165,13 +24211,14 @@ function initSceneTransition() {
       desc_az: "Kollecin maliyyə-təsərrüfat fəaliyyəti, təqaüd və əməkhaqqı əməliyyatları mərkəzi (2 otaq daxilində).",
       desc_en: "Financial operations, payroll management, and student scholarship processing (within 2 rooms).",
       desc_ru: "Финансово-хозяйственный центр колледжа, начисление зарплат и стипендий (в 2 кабинетах).",
-      features_az: ["2 otaq daxilində", "Maliyyə arxivi", "Mühasibat uçotu sistemi"],
-      features_en: ["Within 2 rooms", "Financial archive", "Accounting software"],
-      features_ru: ["В пределах 2 комнат", "Финансовый архив", "Бухгалтерская система"],
+      features_az: ["2 otaq daxilində","Maliyyə arxivi","Mühasibat uçotu sistemi"],
+      features_en: ["Within 2 rooms","Financial archive","Accounting software"],
+      features_ru: ["В пределах 2 комнат","Финансовый архив","Бухгалтерская система"],
       wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
     },
     {
       id: "f1_114",
+      order: 5,
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
       no: "№ 114",
@@ -24182,13 +24229,14 @@ function initSceneTransition() {
       desc_az: "Kollecin maddi-texniki təminatı, abadlıq, təhlükəsizlik və infrastruktur idarəetməsi.",
       desc_en: "Logistical management, facility safety, infrastructure maintenance, and supply services.",
       desc_ru: "Материально-техническое обеспечение, безопасность помещений, снабжение и эксплуатация здания.",
-      features_az: ["İnzibati kabinet", "Təsərrüfat təchizatı", "Texniki nəzarət"],
-      features_en: ["Executive office", "Facility supplies", "Technical supervision"],
-      features_ru: ["Административный кабинет", "Хозяйственный инвентарь", "Технадзор"],
+      features_az: ["İnzibati kabinet","Təsərrüfat təchizatı","Texniki nəzarət"],
+      features_en: ["Executive office","Facility supplies","Technical supervision"],
+      features_ru: ["Административный кабинет","Хозяйственный инвентарь","Технадзор"],
       wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
     },
     {
       id: "f1_115",
+      order: 6,
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
       no: "№ 115",
@@ -24199,13 +24247,14 @@ function initSceneTransition() {
       desc_az: "Tələbələrin müəssisələrdə istehsalat və diplomqabağı təcrübələrinin təşkili, karyera mərkəzi.",
       desc_en: "Organization of internships, career development, and industrial partner relationships.",
       desc_ru: "Организация производственной и преддипломной практики на предприятиях, карьерный центр.",
-      features_az: ["Təcrübə müqavilələri bazası", "İstehsalat koordinasiyası", "Müəssisələrlə əməkdaşlıq"],
-      features_en: ["Internship database", "Industrial coordination", "Corporate partnerships"],
-      features_ru: ["База договоров о практике", "Координация стажировок", "Связь с предприятиями"],
+      features_az: ["Təcrübə müqavilələri bazası","İstehsalat koordinasiyası","Müəssisələrlə əməkdaşlıq"],
+      features_en: ["Internship database","Industrial coordination","Corporate partnerships"],
+      features_ru: ["База договоров о практике","Координация стажировок","Связь с предприятиями"],
       wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
     },
     {
       id: "f1_116",
+      order: 7,
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
       no: "№ 116",
@@ -24216,13 +24265,14 @@ function initSceneTransition() {
       desc_az: "Tələbələrin sosial-mədəni fəallığı, tədbirlər və vətənpərvərlik layihələrinin koordinasiyası.",
       desc_en: "Student life leadership, cultural initiatives, youth clubs, and civic projects coordination.",
       desc_ru: "Координация культурных инициатив, студенческих клубов и молодежных патриотических проектов.",
-      features_az: ["İnzibati kabinet", "Gənclər təşkilatı ilə əlaqə", "Tələbə tədbirləri mərkəzi"],
-      features_en: ["Administrative office", "Youth organizations liaison", "Student events center"],
-      features_ru: ["Административный кабинет", "Связь с молодежными союзами", "Центр студенческих мероприятий"],
+      features_az: ["İnzibati kabinet","Gənclər təşkilatı ilə əlaqə","Tələbə tədbirləri mərkəzi"],
+      features_en: ["Administrative office","Youth organizations liaison","Student events center"],
+      features_ru: ["Административный кабинет","Связь с молодежными союзами","Центр студенческих мероприятий"],
       wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
     },
     {
       id: "f1_107a",
+      order: 8,
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
       no: "№ 107A",
@@ -24233,30 +24283,32 @@ function initSceneTransition() {
       desc_az: "Simli və simsiz rabitə, optik lifli rabitə xətləri və kommutasiya stendləri ilə təchiz olunmuş laboratoriya.",
       desc_en: "Modern lab equipped with optical fiber lines, telecom switching units, and signal analyzers.",
       desc_ru: "Современная лаборатория оптоволоконных линий, телекоммутационных стендов и анализаторов сигналов.",
-      features_az: ["Optik lif stendləri", "Siqnal generatorları", "Şəbəkə analizatorları", "Ölçmə cihazları"],
-      features_en: ["Fiber optics stands", "Signal generators", "Network analyzers", "Testing devices"],
-      features_ru: ["Оптоволоконные стенды", "Генераторы сигналов", "Сетевые анализаторы", "Измерительные приборы"],
+      features_az: ["Optik lif stendləri","Siqnal generatorları","Şəbəkə analizatorları","Ölçmə cihazları"],
+      features_en: ["Fiber optics stands","Signal generators","Network analyzers","Testing devices"],
+      features_ru: ["Оптоволоконные стенды","Генераторы сигналов","Сетевые анализаторы","Измерительные приборы"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f1_103",
+      order: 9,
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
       no: "№ 103",
-      name_az: "Kimya laboratoriyası №2", name_en: "Chemistry Laboratory No. 2", name_ru: "Химическая лаборатория №2",
+      name_az: "Kimya laboratoriyası", name_en: "Chemistry Laboratory", name_ru: "Химическая лаборатория",
       cat: "lab",
       catLabel_az: "Laboratoriya", catLabel_en: "Laboratory", catLabel_ru: "Лаборатория",
       icon: "⚗️",
       desc_az: "Qeyri-üzvi və analitik kimya fənləri üzrə tələbələrin praktiki dərsləri və kimyəvi sınaqlar.",
       desc_en: "Analytical and inorganic chemistry research facility for experimental student courseworks.",
       desc_ru: "Исследовательский кабинет аналитической и неорганической химии для лабораторных работ.",
-      features_az: ["Mikroskoplar", "Analitik tərəzilər", "Kimyəvi reaktivlər fondu"],
-      features_en: ["Microscopes", "Analytical balances", "Chemical reagents stock"],
-      features_ru: ["Микроскопы", "Аналитические весы", "Фонд химических реактивов"],
+      features_az: ["Mikroskoplar","Analitik tərəzilər","Kimyəvi reaktivlər fondu"],
+      features_en: ["Microscopes","Analytical balances","Chemical reagents stock"],
+      features_ru: ["Микроскопы","Аналитические весы","Фонд химических реактивов"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f1_kadrlar",
+      order: 10,
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
       no: "Kadrlar",
@@ -24267,13 +24319,14 @@ function initSceneTransition() {
       desc_az: "Kollec əməkdaşlarının, professor-müəllim heyətinin şəxsi işləri, əmr layihələri və kadr qeydiyyatı.",
       desc_en: "Faculty and personnel records management, official staff decrees, and employment registry.",
       desc_ru: "Учет личных дел преподавателей и сотрудников, проекты кадровых приказов и трудовой реестр.",
-      features_az: ["Şəxsi işlər arxivi", "Kadr kargüzarlığı", "Müqavilələr fondu"],
-      features_en: ["Personal files archive", "HR paperwork", "Contracts fund"],
-      features_ru: ["Архив личных дел", "Кадровое делопроизводство", "Фонд договоров"],
+      features_az: ["Şəxsi işlər arxivi","Kadr kargüzarlığı","Müqavilələr fondu"],
+      features_en: ["Personal files archive","HR paperwork","Contracts fund"],
+      features_ru: ["Архив личных дел","Кадровое делопроизводство","Фонд договоров"],
       wing_az: "Mərkəzi korpus", wing_en: "Central Wing", wing_ru: "Центральный корпус"
     },
     {
       id: "f1_comp_lab",
+      order: 11,
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
       no: "Komp. Lab",
@@ -24284,16 +24337,17 @@ function initSceneTransition() {
       desc_az: "Yüksək sürətli lokal şəbəkə, proqramlaşdırma və rəqəmsal bacarıqlar üçün kompüter laboratoriyası.",
       desc_en: "Equipped with high-speed LAN, IDE environments, and digital development tools.",
       desc_ru: "Оснащена высокоскоростной локальной сетью, средами программирования и ПК.",
-      features_az: ["Lokal şəbəkə", "Yüksəksürətli internet", "Proqramlaşdırma mühiti", "Kondisioner"],
-      features_en: ["Local LAN network", "High-speed Internet", "Programming tools", "Climate control"],
-      features_ru: ["Локальная сеть", "Высокоскоростной интернет", "Среды разработки", "Кондиционер"],
+      features_az: ["Lokal şəbəkə","Yüksəksürətli internet","Proqramlaşdırma mühiti","Kondisioner"],
+      features_en: ["Local LAN network","High-speed Internet","Programming tools","Climate control"],
+      features_ru: ["Локальная сеть","Высокоскоростной интернет","Среды разработки","Кондиционер"],
       wing_az: "Mərkəzi korpus", wing_en: "Central Wing", wing_ru: "Центральный корпус"
     },
     {
       id: "f1_sport",
+      order: 12,
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
-      no: "ZAL",
+      no: "İdman Zalı",
       name_az: "İdman zalı (daxilində geyinmə otağı)", name_en: "Sports Complex & Gym (with locker rooms)", name_ru: "Спортивный зал (с раздевалками)",
       cat: "sport",
       catLabel_az: "İdman Kompleksi", catLabel_en: "Sports Complex", catLabel_ru: "Спорткомплекс",
@@ -24301,16 +24355,17 @@ function initSceneTransition() {
       desc_az: "Basketbol, voleybol, mini-futbol, stolüstü tennis və gimnastika üçün geniş müasir idman kompleksi.",
       desc_en: "Spacious gymnasium for basketball, volleyball, futsal, table tennis, and athletics.",
       desc_ru: "Просторный спортзал для баскетбола, волейбола, мини-футбола, настольного тенниса и атлетики.",
-      features_az: ["Daxilində geyinmə otaqları", "Duş və sanitar qovşaq", "Basketbol və voleybol meydançası", "İdman inventarı"],
-      features_en: ["Locker rooms inside", "Showers and facilities", "Basketball & volleyball courts", "Sports equipment"],
-      features_ru: ["Раздевалки внутри", "Душевые и санузел", "Баскетбольная площадка", "Спортивный инвентарь"],
+      features_az: ["Daxilində geyinmə otaqları","Duş və sanitar qovşaq","Basketbol və voleybol meydançası","İdman inventarı"],
+      features_en: ["Locker rooms inside","Showers and facilities","Basketball & volleyball courts","Sports equipment"],
+      features_ru: ["Раздевалки внутри","Душевые и санузел","Баскетбольная площадка","Спортивный инвентарь"],
       wing_az: "İdman korpusu", wing_en: "Sports Wing", wing_ru: "Спортивное крыло"
     },
     {
       id: "f1_akt_zali",
+      order: 13,
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
-      no: "AKT ZALI",
+      no: "Akt Zalı",
       name_az: "Akt zalı", name_en: "Assembly Hall", name_ru: "Актовый зал",
       cat: "classroom",
       catLabel_az: "Tədbirlər & Akt Zalı", catLabel_en: "Events & Assembly Hall", catLabel_ru: "Мероприятия и Актовый зал",
@@ -24318,32 +24373,33 @@ function initSceneTransition() {
       desc_az: "Kollecin rəsmi tədbirləri, elmi konfranslar, mədəni-kütləvi proqramlar, tələbə yığıncaqları və bayram mərasimləri üçün geniş akt zalı.",
       desc_en: "Spacious assembly hall for official college events, scientific conferences, cultural programs, student gatherings, and ceremonies.",
       desc_ru: "Просторный актовый зал для официальных мероприятий колледжа, научных конференций, культурных программ и торжественных собраний.",
-      features_az: ["Səhnə və tribuna", "Səs və akustika sistemi", "Proyektor və ekran", "Geniş tamaşaçı zalı"],
-      features_en: ["Stage & podium", "Sound & acoustic system", "Projector & screen", "Spacious seating hall"],
-      features_ru: ["Сцена и трибуна", "Звуковая и акустическая система", "Проектор и экран", "Просторный зрительный зал"],
+      features_az: ["Səhnə və tribuna","Səs və akustika sistemi","Proyektor və ekran","Geniş tamaşaçı zalı"],
+      features_en: ["Stage & podium","Sound & acoustic system","Projector & screen","Spacious seating hall"],
+      features_ru: ["Сцена и трибуна","Звуковая и акустическая система","Проектор и экран","Просторный зрительный зал"],
       wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
     },
-
     // ═════════════ II MƏRTƏBƏ (11 Otaq) ═════════════
     {
       id: "f2_director",
+      order: 1,
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "Direktor",
-      name_az: "Direktor otağı (Qəbul otağı)", name_en: "Director's Office (Reception)", name_ru: "Кабинет директора (Приемная)",
+      name_az: "Direktor otağı (qəbul otağı ilə)", name_en: "Director's Office (Reception)", name_ru: "Кабинет директора (Приемная)",
       cat: "admin",
       catLabel_az: "Rəhbərlik", catLabel_en: "Leadership", catLabel_ru: "Руководство",
       icon: "🏛️",
       desc_az: "BDRNK direktoru və rəhbərliyin iş və qəbul otağı, kollecin strateji idarəetmə mərkəzi.",
       desc_en: "Executive and reception office of BDRNK director and leadership, college strategic management center.",
       desc_ru: "Рабочий кабинет и приемная директора и руководства колледжа, центр стратегического управления.",
-      features_az: ["Rəhbərlik kabineti", "Qəbul otağı", "Müşavirə və iclas masası"],
-      features_en: ["Executive office", "Reception room", "Conference meeting table"],
-      features_ru: ["Кабинет руководства", "Приемная комната", "Стол для совещаний"],
+      features_az: ["Rəhbərlik kabineti","Qəbul otağı","Müşavirə və iclas masası"],
+      features_en: ["Executive office","Reception room","Conference meeting table"],
+      features_ru: ["Кабинет руководства","Приемная комната","Стол для совещаний"],
       wing_az: "Mərkəzi qanad", wing_en: "Central Wing", wing_ru: "Центральное крыло"
     },
     {
       id: "f2_engineer",
+      order: 2,
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "Mühəndis",
@@ -24354,13 +24410,14 @@ function initSceneTransition() {
       desc_az: "Fənn Birləşmə Komissiyası (FBK) və baş mühəndisin texniki xidmət otaqları (2 otaq daxilində).",
       desc_en: "Offices for subject commission coordinators and chief engineering technical maintenance.",
       desc_ru: "Кабинеты предметных цикловых комиссий (ПЦК) и службы главного инженера (2 совмещенные комнаты).",
-      features_az: ["2 otaq daxilində", "FBK mərkəzi", "Texniki mühəndislik sənədləri"],
-      features_en: ["Within 2 rooms", "Subject commission hub", "Engineering documentation"],
-      features_ru: ["В составе 2 комнат", "Центр ПЦК", "Инженерная документация"],
+      features_az: ["2 otaq daxilində","FBK mərkəzi","Texniki mühəndislik sənədləri"],
+      features_en: ["Within 2 rooms","Subject commission hub","Engineering documentation"],
+      features_ru: ["В составе 2 комнат","Центр ПЦК","Инженерная документация"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f2_214",
+      order: 3,
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "№ 214",
@@ -24371,13 +24428,14 @@ function initSceneTransition() {
       desc_az: "Tələbələrin akademik göstəriciləri, imtahan nəticələri, transkriptlər və monitorinq sistemi.",
       desc_en: "Academic grading records, exam results administration, transcript services, and monitoring.",
       desc_ru: "Учет успеваемости студентов, результаты экзаменов, оформление транскриптов и мониторинг.",
-      features_az: ["Elektron qiymətləndirmə bazası", "İmtahan qeydiyyatı", "Akademik monitorinq"],
-      features_en: ["Electronic gradebook", "Exam registrar", "Academic monitoring"],
-      features_ru: ["Электронный журнал", "Реестр экзаменов", "Академический мониторинг"],
+      features_az: ["Elektron qiymətləndirmə bazası","İmtahan qeydiyyatı","Akademik monitorinq"],
+      features_en: ["Electronic gradebook","Exam registrar","Academic monitoring"],
+      features_ru: ["Электронный журнал","Реестр экзаменов","Академический мониторинг"],
       wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
     },
     {
       id: "f2_217",
+      order: 4,
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "№ 217",
@@ -24388,13 +24446,14 @@ function initSceneTransition() {
       desc_az: "Tədris proqramları, sillabuslar, metodik vəsaitlər və müəllimlərin ixtisasartırma mərkəzi.",
       desc_en: "Curriculum plans, teaching guidelines, syllabi archives, and pedagogical training.",
       desc_ru: "Учебные планы, методические пособия, фонд силлабусов и повышение квалификации преподавателей.",
-      features_az: ["Metodik vəsaitlər fondu", "Tədris planları", "Sillabus arxivi"],
-      features_en: ["Methodology collection", "Curriculum plans", "Syllabi archive"],
-      features_ru: ["Методический фонд", "Учебные планы", "Архив силлабусов"],
+      features_az: ["Metodik vəsaitlər fondu","Tədris planları","Sillabus arxivi"],
+      features_en: ["Methodology collection","Curriculum plans","Syllabi archive"],
+      features_ru: ["Методический фонд","Учебные планы","Архив силлабусов"],
       wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
     },
     {
       id: "f2_205",
+      order: 5,
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "№ 205",
@@ -24405,118 +24464,124 @@ function initSceneTransition() {
       desc_az: "Tədris prosesinin təşkili, akademik cədvəllər və tədris keyfiyyətinin təminatı rəhbərliyi.",
       desc_en: "Overall management of the academic process, curriculum scheduling, and pedagogical standards.",
       desc_ru: "Организация учебного процесса, академические расписания и обеспечение качества преподавания.",
-      features_az: ["İnzibati kabinet", "Tədris idarəetməsi", "Qəbul masası"],
-      features_en: ["Executive office", "Academic management", "Advisory desk"],
-      features_ru: ["Административный кабинет", "Учебное управление", "Приемная зона"],
+      features_az: ["İnzibati kabinet","Tədris idarəetməsi","Qəbul masası"],
+      features_en: ["Executive office","Academic management","Advisory desk"],
+      features_ru: ["Административный кабинет","Учебное управление","Приемная зона"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f2_hemkar",
+      order: 6,
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "Həmkar",
-      name_az: "Həmkarlar İttifaqı Komitəsi (Həmkar otağı)", name_en: "Trade Union Committee Office", name_ru: "Профсоюзный комитет",
+      name_az: "Həmkar otağı", name_en: "Trade Union Office", name_ru: "Профсоюзный кабинет",
       cat: "admin",
       catLabel_az: "Həmkarlar Təşkilatı", catLabel_en: "Trade Union", catLabel_ru: "Профсоюз",
       icon: "🤝",
       desc_az: "Əməkdaşların və müəllimlərin əmək hüquqlarının və sosial rifahının təminatı otağı.",
       desc_en: "Representation of labor rights, social benefits, and collective contracts for staff and teachers.",
       desc_ru: "Защита трудовых прав сотрудников, социальное обеспечение и профсоюзная деятельность.",
-      features_az: ["Həmkarlar təşkilatı", "Sosial dəstək", "Kollektiv müqavilələr"],
-      features_en: ["Union committee", "Social support", "Collective agreements"],
-      features_ru: ["Профсоюзная организация", "Социальная поддержка", "Коллективные договоры"],
+      features_az: ["Həmkarlar təşkilatı","Sosial dəstək","Kollektiv müqavilələr"],
+      features_en: ["Union committee","Social support","Collective agreements"],
+      features_ru: ["Профсоюзная организация","Социальная поддержка","Коллективные договоры"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f2_203",
+      order: 7,
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "№ 203",
-      name_az: "Kompüter otağı №1", name_en: "Computer Room No. 1", name_ru: "Компьютерный класс №1",
+      name_az: "Kompüter otağı", name_en: "Computer Lab", name_ru: "Компьютерный класс",
       cat: "it",
       catLabel_az: "Kompüter & İKT", catLabel_en: "Computer & IT", catLabel_ru: "Компьютеры и ИКТ",
       icon: "💻",
       desc_az: "İKT və kompüter texnologiyaları ixtisası tələbələri üçün praktiki dərslər otağı.",
       desc_en: "Hands-on computing lab for students in information systems and digital technology programs.",
       desc_ru: "Практический класс для студентов специальностей ИКТ и компьютерных технологий.",
-      features_az: ["Fərdi kompüterlər", "Lokal şəbəkə", "İnternet təminatı"],
-      features_en: ["Personal workstations", "Local LAN", "Internet access"],
-      features_ru: ["Рабочие станции", "Локальная сеть", "Доступ в интернет"],
+      features_az: ["Fərdi kompüterlər","Lokal şəbəkə","İnternet təminatı"],
+      features_en: ["Personal workstations","Local LAN","Internet access"],
+      features_ru: ["Рабочие станции","Локальная сеть","Доступ в интернет"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f2_202",
+      order: 8,
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "№ 202",
-      name_az: "Müəllim kabineti (Ceyhun m.)", name_en: "Faculty Office (Instructor Jeyhun)", name_ru: "Кабинет преподавателя (Джейхун м.)",
+      name_az: "Müəllim kabineti", name_en: "Faculty Office", name_ru: "Кабинет преподавателя",
       cat: "classroom",
       catLabel_az: "Müəllim Kabineti", catLabel_en: "Faculty Office", catLabel_ru: "Кабинет преподавателя",
       icon: "👨‍🏫",
       desc_az: "İxtisas fənni müəlliminin fərdi iş və tələbələrə fərdi məsləhət kabineti.",
       desc_en: "Private office for specialized discipline instructor consultations and student advising.",
       desc_ru: "Рабочий кабинет преподавателя специальных дисциплин и индивидуальных консультаций.",
-      features_az: ["Müəllim iş yeri", "Məsləhət guşəsi", "Metodik vəsaitlər"],
-      features_en: ["Teacher workspace", "Advising corner", "Teaching guides"],
-      features_ru: ["Рабочее место преподавателя", "Зона консультаций", "Методические материалы"],
+      features_az: ["Müəllim iş yeri","Məsləhət guşəsi","Metodik vəsaitlər"],
+      features_en: ["Teacher workspace","Advising corner","Teaching guides"],
+      features_ru: ["Рабочее место преподавателя","Зона консультаций","Методические материалы"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f2_211",
+      order: 9,
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "№ 211",
-      name_az: "Kompüter otağı №2", name_en: "Computer Room No. 2", name_ru: "Компьютерный класс №2",
+      name_az: "Kompüter otağı", name_en: "Computer Lab", name_ru: "Компьютерный класс",
       cat: "it",
       catLabel_az: "Kompüter & İKT", catLabel_en: "Computer & IT", catLabel_ru: "Компьютеры и ИКТ",
       icon: "🖥️",
       desc_az: "Kompüter qrafikası, şəbəkə inzibatçılığı və proqramlaşdırma dərsləri üçün sinif.",
       desc_en: "Dedicated classroom for computer graphics, network administration, and coding.",
       desc_ru: "Аудитория компьютерной графики, сетевого администрирования и программирования.",
-      features_az: ["Qrafik kompüterlər", "Proyektor", "Tədris proqramları"],
-      features_en: ["Graphics workstations", "Projector", "Educational software"],
-      features_ru: ["Графические ПК", "Проектор", "Учебные программы"],
+      features_az: ["Qrafik kompüterlər","Proyektor","Tədris proqramları"],
+      features_en: ["Graphics workstations","Projector","Educational software"],
+      features_ru: ["Графические ПК","Проектор","Учебные программы"],
       wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
     },
     {
       id: "f2_201",
+      order: 10,
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "№ 201",
-      name_az: "Kompüter otağı №3", name_en: "Computer Room No. 3", name_ru: "Компьютерный класс №3",
+      name_az: "Kompüter otağı", name_en: "Computer Lab", name_ru: "Компьютерный класс",
       cat: "it",
       catLabel_az: "Kompüter & İKT", catLabel_en: "Computer & IT", catLabel_ru: "Компьютеры и ИКТ",
       icon: "💻",
       desc_az: "İnformasiya texnologiyaları və verilənlər bazası fənlərinin tədrisi üçün müasir kompüter otağı.",
       desc_en: "Modern computing lab for databases, algorithms, and practical software design.",
       desc_ru: "Современный компьютерный класс для баз данных, алгоритмов и практического ПО.",
-      features_az: ["İKT avadanlıqları", "Lokal şəbəkə", "İnteraktiv tədris mühiti"],
-      features_en: ["IT equipment", "Local network", "Interactive learning environment"],
-      features_ru: ["ИКТ оборудование", "Локальная сеть", "Интерактивная среда"],
+      features_az: ["İKT avadanlıqları","Lokal şəbəkə","İnteraktiv tədris mühiti"],
+      features_en: ["IT equipment","Local network","Interactive learning environment"],
+      features_ru: ["ИКТ оборудование","Локальная сеть","Интерактивная среда"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f2_206",
+      order: 11,
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "№ 206",
-      name_az: "Kollec Kitabxanası və Oxu Zalı (2 otaq)", name_en: "College Library & Reading Hall (2 rooms)", name_ru: "Библиотека колледжа и Читальный зал (2 комнаты)",
+      name_az: "Kitabxana (oxu zalı ilə bir yerdə 2 otaq)", name_en: "Library (with reading room, 2 rooms)", name_ru: "Библиотека (с читальным залом, 2 комнаты)",
       cat: "library",
       catLabel_az: "Kitabxana & Oxu Zalı", catLabel_en: "Library & Reading Hall", catLabel_ru: "Библиотека и Читальный зал",
       icon: "📚",
       desc_az: "22 000-dən çox ümumi kitab fondu, 10 000-dən artıq dərslik və işıqlı oxu zalı (oxu zalı ilə bir yerdə 2 otaq).",
       desc_en: "Rich collection exceeding 22,000 books, 10,000+ textbooks, and a serene reading hall (within 2 rooms).",
       desc_ru: "Богатый фонд из более 22 000 книг, свыше 10 000 учебников и светлый читальный зал (в составе 2 комнат).",
-      features_az: ["2 otaq daxilində", "Geniş oxu zalı", "22 000+ kitab fondu", "Prezident sərəncamı ilə dərsliklər"],
-      features_en: ["Within 2 rooms", "Spacious reading hall", "22,000+ book fund", "Presidential decree textbooks"],
-      features_ru: ["В пределах 2 комнат", "Просторный читальный зал", "Фонд 22 000+ книг", "Учебники по президентскому указу"],
-      wing_az: "Mərkəzi / Şərq", wing_en: "Central / East Wing", wing_ru: "Центральное / Восточное крыло",
-      action: "library_fund"
+      features_az: ["2 otaq daxilində","Geniş oxu zalı","22 000+ kitab fondu","Prezident sərəncamı ilə dərsliklər"],
+      features_en: ["Within 2 rooms","Spacious reading hall","22,000+ book fund","Presidential decree textbooks"],
+      features_ru: ["В пределах 2 комнат","Просторный читальный зал","Фонд 22 000+ книг","Учебники по президентскому указу"],
+      action: "library_fund",
+      wing_az: "Mərkəzi / Şərq", wing_en: "Central / East Wing", wing_ru: "Центральное / Восточное крыло"
     },
-
-    // ═════════════ III MƏRTƏBƏ (Cəmi 16 Otaq) ═════════════
+    // ═════════════ III MƏRTƏBƏ (7 Otaq) ═════════════
     {
       id: "f3_307",
+      order: 1,
       floor: 3,
       floorText_az: "III Mərtəbə", floorText_en: "3rd Floor", floorText_ru: "3-й Этаж",
       no: "№ 307",
@@ -24527,13 +24592,14 @@ function initSceneTransition() {
       desc_az: "Telekommunikasiya sistemləri və rabitə ixtisaslarının tədris və təşkilati idarəetmə mərkəzi.",
       desc_en: "Academic management and curriculum coordination for telecommunication systems majors.",
       desc_ru: "Центр организации учебного процесса для специальностей телекоммуникаций и связи.",
-      features_az: ["Şöbə rəhbərliyi", "Tələbə sənədləşməsi", "İxtisas koordinasiyası"],
-      features_en: ["Department chair", "Student records", "Curriculum coordination"],
-      features_ru: ["Заведующий отделением", "Студенческая документация", "Координация специальности"],
+      features_az: ["Şöbə rəhbərliyi","Tələbə sənədləşməsi","İxtisas koordinasiyası"],
+      features_en: ["Department chair","Student records","Curriculum coordination"],
+      features_ru: ["Заведующий отделением","Студенческая документация","Координация специальности"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f3_309",
+      order: 2,
       floor: 3,
       floorText_az: "III Mərtəbə", floorText_en: "3rd Floor", floorText_ru: "3-й Этаж",
       no: "№ 309",
@@ -24544,13 +24610,14 @@ function initSceneTransition() {
       desc_az: "Kollecin mühəndis-texniki heyətinin iş və texniki layihələndirmə kabineti.",
       desc_en: "Technical team office for engineering design, campus wiring, and infrastructure blueprints.",
       desc_ru: "Рабочий кабинет инженерно-технического персонала по проектированию и обслуживанию.",
-      features_az: ["Texniki avadanlıqlar", "Çertyoj və planlar", "Mühəndis masaları"],
-      features_en: ["Technical equipment", "Blueprints & layouts", "Engineering workstations"],
-      features_ru: ["Техническое оснащение", "Чертежи и схемы", "Инженерные столы"],
+      features_az: ["Texniki avadanlıqlar","Çertyoj və planlar","Mühəndis masaları"],
+      features_en: ["Technical equipment","Blueprints & layouts","Engineering workstations"],
+      features_ru: ["Техническое оснащение","Чертежи и схемы","Инженерные столы"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f3_301",
+      order: 3,
       floor: 3,
       floorText_az: "III Mərtəbə", floorText_en: "3rd Floor", floorText_ru: "3-й Этаж",
       no: "№ 301",
@@ -24561,13 +24628,14 @@ function initSceneTransition() {
       desc_az: "Mexanika, optika, elektromaqnetizm və dalğa fizikası üzrə praktiki təcrübə stendləri.",
       desc_en: "Practical experimental stands covering mechanics, optics, electromagnetism, and wave physics.",
       desc_ru: "Практические стенды по механике, оптике, электромагнетизму и волновой физике.",
-      features_az: ["Optika qurğuları", "Elektrik ölçmə cihazları", "Laboratoriya stendləri", "Təcrübə masaları"],
-      features_en: ["Optics apparatus", "Electrical meters", "Lab benches", "Experiment tables"],
-      features_ru: ["Оптические установки", "Электроизмерители", "Лабораторные стенды", "Экспериментальные столы"],
+      features_az: ["Optika qurğuları","Elektrik ölçmə cihazları","Laboratoriya stendləri","Təcrübə masaları"],
+      features_en: ["Optics apparatus","Electrical meters","Lab benches","Experiment tables"],
+      features_ru: ["Оптические установки","Электроизмерители","Лабораторные стенды","Экспериментальные столы"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f3_306",
+      order: 4,
       floor: 3,
       floorText_az: "III Mərtəbə", floorText_en: "3rd Floor", floorText_ru: "3-й Этаж",
       no: "№ 306",
@@ -24578,13 +24646,14 @@ function initSceneTransition() {
       desc_az: "Ağıllı lövhə (Smart Board) və interaktiv multimedia dərs vəsaitləri ilə təchiz olunmuş qabaqcıl auditoriya.",
       desc_en: "Equipped with interactive Smart Board touchscreens and multimedia visual teaching software.",
       desc_ru: "Оснащена интерактивной смарт-доской и мультимедийными учебными программами.",
-      features_az: ["Smart Board elektron lövhə", "Proyektor", "Multimedia tədris proqramları"],
-      features_en: ["Smart Board touchscreen", "HD projector", "Multimedia lesson aids"],
-      features_ru: ["Электронная смарт-доска", "HD проектор", "Мультимедийные пособия"],
+      features_az: ["Smart Board elektron lövhə","Proyektor","Multimedia tədris proqramları"],
+      features_en: ["Smart Board touchscreen","HD projector","Multimedia lesson aids"],
+      features_ru: ["Электронная смарт-доска","HD проектор","Мультимедийные пособия"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f3_302",
+      order: 5,
       floor: 3,
       floorText_az: "III Mərtəbə", floorText_en: "3rd Floor", floorText_ru: "3-й Этаж",
       no: "№ 302",
@@ -24595,13 +24664,14 @@ function initSceneTransition() {
       desc_az: "Dərs cədvəllərinin tərtibi, pedaqoji yükün bölüşdürülməsi və auditoriya fondu idarəçiliyi.",
       desc_en: "Timetable scheduling, faculty teaching load allocation, and classroom allocation management.",
       desc_ru: "Составление расписания занятий, распределение педагогической нагрузки и аудиторного фонда.",
-      features_az: ["Dərs cədvəli monitoru", "Auditoriya fondu uçotu", "Akademik qrafik"],
-      features_en: ["Timetable monitor", "Classroom allocation", "Academic timeline"],
-      features_ru: ["Монитор расписания", "Учет аудиторного фонда", "Академический график"],
+      features_az: ["Dərs cədvəli monitoru","Auditoriya fondu uçotu","Akademik qrafik"],
+      features_en: ["Timetable monitor","Classroom allocation","Academic timeline"],
+      features_ru: ["Монитор расписания","Учет аудиторного фонда","Академический график"],
       wing_az: "Mərkəzi korpus", wing_en: "Central Wing", wing_ru: "Центральный корпус"
     },
     {
       id: "f3_303",
+      order: 6,
       floor: 3,
       floorText_az: "III Mərtəbə", floorText_en: "3rd Floor", floorText_ru: "3-й Этаж",
       no: "№ 303",
@@ -24612,13 +24682,14 @@ function initSceneTransition() {
       desc_az: "Pedaqoji heyətin dərslərarası istirahəti, metodiki müzakirələr və hazırlıq mərkəzi.",
       desc_en: "Comfortable faculty lounge for inter-lecture rest, lesson preparation, and peer collaboration.",
       desc_ru: "Комната отдыха преподавателей между парами, методические дискуссии и подготовка к занятиям.",
-      features_az: ["Müəllimlər üçün istirahət guşəsi", "Metodik ədəbiyyat", "İş masaları"],
-      features_en: ["Rest lounge area", "Methodological literature", "Workstations"],
-      features_ru: ["Зона отдыха преподавателей", "Методическая литература", "Рабочие столы"],
+      features_az: ["Müəllimlər üçün istirahət guşəsi","Metodik ədəbiyyat","İş masaları"],
+      features_en: ["Rest lounge area","Methodological literature","Workstations"],
+      features_ru: ["Зона отдыха преподавателей","Методическая литература","Рабочие столы"],
       wing_az: "Mərkəzi korpus", wing_en: "Central Wing", wing_ru: "Центральный корпус"
     },
     {
       id: "f3_auditoriyalar",
+      order: 7,
       floor: 3,
       floorText_az: "III Mərtəbə", floorText_en: "3rd Floor", floorText_ru: "3-й Этаж",
       no: "Auditoriyalar",
@@ -24629,16 +24700,16 @@ function initSceneTransition() {
       desc_az: "III mərtəbə üzrə ümumilikdə 16 otaq mövcuddur; 10 müasir tədris auditoriyası burada yerləşir.",
       desc_en: "3rd floor houses 16 rooms in total; 10 modern lecture and seminar classrooms are located here.",
       desc_ru: "На 3-м этаже всего 16 кабинетов; здесь расположено 10 современных лекционных и семинарских аудиторий.",
-      features_az: ["Cəmi 16 otaq fondu", "İşıqlı və geniş mühazirə otaqları", "Müasir partalar və yazı lövhələri"],
-      features_en: ["Total 16 room capacity", "Bright and spacious halls", "Modern desks and whiteboards"],
-      features_ru: ["Всего 16 помещений", "Светлые и просторные залы", "Современные парты и доски"],
-      classrooms: ["304", "305", "308", "310", "311", "312", "313", "314", "315", "316"],
+      features_az: ["Cəmi 16 otaq fondu","İşıqlı və geniş mühazirə otaqları","Müasir partalar və yazı lövhələri"],
+      features_en: ["Total 16 room capacity","Bright and spacious halls","Modern desks and whiteboards"],
+      features_ru: ["Всего 16 помещений","Светлые и просторные залы","Современные парты и доски"],
+      classrooms: ["304","305","308","310","311","312","313","314","315","316"],
       wing_az: "Bütün mərtəbə boyu", wing_en: "Across the Floor", wing_ru: "По всему этажу"
     },
-
-    // ═════════════ IV MƏRTƏBƏ (Cəmi 17 Otaq) ═════════════
+    // ═════════════ IV MƏRTƏBƏ (5 Otaq) ═════════════
     {
       id: "f4_410",
+      order: 1,
       floor: 4,
       floorText_az: "IV Mərtəbə", floorText_en: "4th Floor", floorText_ru: "4-й Этаж",
       no: "№ 410",
@@ -24649,13 +24720,14 @@ function initSceneTransition() {
       desc_az: "Poçt əməliyyatları, bank xidmətləri simulyatorları və logistika qeydiyyatı təlim laboratoriyası.",
       desc_en: "Training laboratory equipped for postal operations, banking services simulation, and shipment sorting.",
       desc_ru: "Учебно-практическая лаборатория почтовых операций, банковских услуг и сортировки отправлений.",
-      features_az: ["Poçt əməliyyat stendi", "Barkod və qeydiyyat terminalları", "Tədris kassa simulyatoru"],
-      features_en: ["Postal operations stand", "Barcode and registration terminals", "Cashier simulation"],
-      features_ru: ["Стенд почтовых операций", "Терминалы штрихкодов и учета", "Учебная кассовая зона"],
+      features_az: ["Poçt əməliyyat stendi","Barkod və qeydiyyat terminalları","Tədris kassa simulyatoru"],
+      features_en: ["Postal operations stand","Barcode and registration terminals","Cashier simulation"],
+      features_ru: ["Стенд почтовых операций","Терминалы штрихкодов и учета","Учебная кассовая зона"],
       wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
     },
     {
       id: "f4_409",
+      order: 2,
       floor: 4,
       floorText_az: "IV Mərtəbə", floorText_en: "4th Floor", floorText_ru: "4-й Этаж",
       no: "№ 409",
@@ -24666,13 +24738,14 @@ function initSceneTransition() {
       desc_az: "İnformasiya-Kommunikasiya Texnologiyaları ixtisaslarının tədris prosesi və şöbə rəhbərliyi.",
       desc_en: "Academic administration and development oversight for ICT and communication majors.",
       desc_ru: "Учебно-методическое руководство и координация специальностей сферы ИКТ и связи.",
-      features_az: ["İKT rəhbərliyi", "Tələbə layihələri arxivi", "Server bağlantısı"],
-      features_en: ["IT department chair", "Student projects archive", "Server infrastructure"],
-      features_ru: ["Руководство ИКТ", "Архив проектов студентов", "Серверное подключение"],
+      features_az: ["İKT rəhbərliyi","Tələbə layihələri arxivi","Server bağlantısı"],
+      features_en: ["IT department chair","Student projects archive","Server infrastructure"],
+      features_ru: ["Руководство ИКТ","Архив проектов студентов","Серверное подключение"],
       wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
     },
     {
       id: "f4_413",
+      order: 3,
       floor: 4,
       floorText_az: "IV Mərtəbə", floorText_en: "4th Floor", floorText_ru: "4-й Этаж",
       no: "№ 413",
@@ -24683,13 +24756,14 @@ function initSceneTransition() {
       desc_az: "Poçt rabitəsi və mühasibat uçotu ixtisasları üzrə akademik koordinasiya və tələbə qeydiyyatı.",
       desc_en: "Academic leadership and student registrar for postal communications and accounting tracks.",
       desc_ru: "Академическая координация и учет студентов специальностей почтовой связи и бухгалтерии.",
-      features_az: ["Şöbə müdirliyi", "İxtisas qeydiyyatı", "Tələbə sənədləşməsi"],
-      features_en: ["Department office", "Majors registry", "Student records"],
-      features_ru: ["Заведующий отделением", "Реестр специальностей", "Студенческая документация"],
+      features_az: ["Şöbə müdirliyi","İxtisas qeydiyyatı","Tələbə sənədləşməsi"],
+      features_en: ["Department office","Majors registry","Student records"],
+      features_ru: ["Заведующий отделением","Реестр специальностей","Студенческая документация"],
       wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
     },
     {
       id: "f4_408",
+      order: 4,
       floor: 4,
       floorText_az: "IV Mərtəbə", floorText_en: "4th Floor", floorText_ru: "4-й Этаж",
       no: "№ 408",
@@ -24700,13 +24774,14 @@ function initSceneTransition() {
       desc_az: "Mühazirələrin proyektor və audio sistem vasitəsilə vizual təqdimatı üçün multimedia auditoriyası.",
       desc_en: "Visual presentation classroom with high-definition digital projection and acoustics.",
       desc_ru: "Мультимедийная аудитория для визуальных презентаций лекций с проектором и акустикой.",
-      features_az: ["Yüksək dəqiqlikli proyektor", "Böyük proyeksiya ekranı", "Audio akustika sistemi"],
-      features_en: ["High-res projector", "Large projection screen", "Audio acoustics system"],
-      features_ru: ["HD проектор", "Большой проекционный экран", "Акустическая система"],
+      features_az: ["Yüksək dəqiqlikli proyektor","Böyük proyeksiya ekranı","Audio akustika sistemi"],
+      features_en: ["High-res projector","Large projection screen","Audio acoustics system"],
+      features_ru: ["HD проектор","Большой проекционный экран","Акустическая система"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f4_auditoriyalar",
+      order: 5,
       floor: 4,
       floorText_az: "IV Mərtəbə", floorText_en: "4th Floor", floorText_ru: "4-й Этаж",
       no: "Auditoriyalar",
@@ -24717,16 +24792,16 @@ function initSceneTransition() {
       desc_az: "IV mərtəbə üzrə ümumilikdə 17 otaq mövcuddur; 13 tədris və mühazirə auditoriyası burada fəaliyyət göstərir.",
       desc_en: "4th floor has 17 total rooms; 13 classrooms and lecture halls provide comfortable study environments.",
       desc_ru: "На 4-м этаже 17 помещений; 13 учебных аудиторий создают комфортную академическую среду.",
-      features_az: ["Cəmi 17 otaq fondu", "Təbii havalandırma və işıqlanma", "Akademik mühit"],
-      features_en: ["17 room capacity", "Natural daylight & ventilation", "Academic environment"],
-      features_ru: ["17 помещений всего", "Естественная вентиляция и свет", "Академическая среда"],
-      classrooms: ["401", "402", "403", "404", "405", "406", "407", "411", "412", "414", "415", "416", "417"],
+      features_az: ["Cəmi 17 otaq fondu","Təbii havalandırma və işıqlanma","Akademik mühit"],
+      features_en: ["17 room capacity","Natural daylight & ventilation","Academic environment"],
+      features_ru: ["17 помещений всего","Естественная вентиляция и свет","Академическая среда"],
+      classrooms: ["401","402","403","404","405","406","407","411","412","414","415","416","417"],
       wing_az: "Bütün mərtəbə boyu", wing_en: "Across the Floor", wing_ru: "По всему этажу"
     },
-
-    // ═════════════ V MƏRTƏBƏ (Cəmi 18 Otaq) ═════════════
+    // ═════════════ V MƏRTƏBƏ (4 Otaq) ═════════════
     {
       id: "f5_508",
+      order: 1,
       floor: 5,
       floorText_az: "V Mərtəbə", floorText_en: "5th Floor", floorText_ru: "5-й Этаж",
       no: "№ 508",
@@ -24737,13 +24812,14 @@ function initSceneTransition() {
       desc_az: "Multimedia təqdimatları, açıq dərslər və seminar mühazirələri üçün proyektorlu auditoriya.",
       desc_en: "Multimedia presentations, open lectures, and defense seminars hall with digital projection.",
       desc_ru: "Мультимедийные презентации, открытые уроки и семинары в аудитории с проектором.",
-      features_az: ["HD Proyektor", "Mühazirə tribunası", "Motorlu proyeksiya pərdəsi"],
-      features_en: ["HD Projector", "Lecture rostrum", "Motorized screen"],
-      features_ru: ["HD Проектор", "Лекционная трибуна", "Моторизованный экран"],
+      features_az: ["HD Proyektor","Mühazirə tribunası","Motorlu proyeksiya pərdəsi"],
+      features_en: ["HD Projector","Lecture rostrum","Motorized screen"],
+      features_ru: ["HD Проектор","Лекционная трибуна","Моторизованный экран"],
       wing_az: "Qərb qanadı", wing_en: "West Wing", wing_ru: "Западное крыло"
     },
     {
       id: "f5_512",
+      order: 2,
       floor: 5,
       floorText_az: "V Mərtəbə", floorText_en: "5th Floor", floorText_ru: "5-й Этаж",
       no: "№ 512",
@@ -24754,13 +24830,14 @@ function initSceneTransition() {
       desc_az: "Kompüter sistemləri, şəbəkə inzibatçılığı və proqram təminatı ixtisaslarının akademik rəhbərliyi.",
       desc_en: "Academic administration for software engineering, network systems, and computing specialties.",
       desc_ru: "Руководство специальностями программного обеспечения, компьютерных систем и сетей.",
-      features_az: ["Şöbə müdirliyi", "İxtisas komissiyası", "Tələbə layihələri laboratoriyası"],
-      features_en: ["Department office", "Specialty committee", "Student projects hub"],
-      features_ru: ["Заведующий отделением", "Профильная комиссия", "Лаборатория проектов студентов"],
+      features_az: ["Şöbə müdirliyi","İxtisas komissiyası","Tələbə layihələri laboratoriyası"],
+      features_en: ["Department office","Specialty committee","Student projects hub"],
+      features_ru: ["Заведующий отделением","Профильная комиссия","Лаборатория проектов студентов"],
       wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
     },
     {
       id: "f5_514",
+      order: 3,
       floor: 5,
       floorText_az: "V Mərtəbə", floorText_en: "5th Floor", floorText_ru: "5-й Этаж",
       no: "№ 514",
@@ -24771,13 +24848,14 @@ function initSceneTransition() {
       desc_az: "Tədrisin keyfiyyət standartlarına uyğunluğunun qiymətləndirilməsi, daxili audit və akkreditasiya mərkəzi.",
       desc_en: "Evaluation of academic standards compliance, internal audit, and educational accreditation center.",
       desc_ru: "Оценка стандартов качества преподавания, внутренний аудит и аккредитация учебных программ.",
-      features_az: ["Keyfiyyət təminatı", "Monitorinq və daxili audit", "Tədris statistikası bazası"],
-      features_en: ["Quality assurance", "Monitoring & internal audit", "Academic statistics database"],
-      features_ru: ["Обеспечение качества", "Мониторинг и внутренний аудит", "База академической статистики"],
+      features_az: ["Keyfiyyət təminatı","Monitorinq və daxili audit","Tədris statistikası bazası"],
+      features_en: ["Quality assurance","Monitoring & internal audit","Academic statistics database"],
+      features_ru: ["Обеспечение качества","Мониторинг и внутренний аудит","База академической статистики"],
       wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
     },
     {
       id: "f5_auditoriyalar",
+      order: 4,
       floor: 5,
       floorText_az: "V Mərtəbə", floorText_en: "5th Floor", floorText_ru: "5-й Этаж",
       no: "Auditoriyalar",
@@ -24788,13 +24866,13 @@ function initSceneTransition() {
       desc_az: "V mərtəbə üzrə ümumilikdə 18 otaq mövcuddur; 15 mühazirə və qrup seminar otağı fəaliyyət göstərir.",
       desc_en: "5th floor comprises 18 total rooms; 15 quiet and focused lecture rooms provide an elevated study atmosphere.",
       desc_ru: "На 5-м этаже расположено 18 помещений; 15 лекционных и аудиторных залов обеспечивают спокойную атмосферу.",
-      features_az: ["Cəmi 18 otaq fondu", "Sakit və konsentrasiyalı mühit", "Geniş mühazirə otaqları"],
-      features_en: ["Total 18 rooms", "Quiet & focused atmosphere", "Spacious study halls"],
-      features_ru: ["Всего 18 помещений", "Тихая сосредоточенная атмосфера", "Просторные аудитории"],
-      classrooms: ["501", "502", "503", "504", "505", "506", "507", "509", "510", "511", "513", "515", "516", "517", "518"],
+      features_az: ["Cəmi 18 otaq fondu","Sakit və konsentrasiyalı mühit","Geniş mühazirə otaqları"],
+      features_en: ["Total 18 rooms","Quiet & focused atmosphere","Spacious study halls"],
+      features_ru: ["Всего 18 помещений","Тихая сосредоточенная атмосфера","Просторные аудитории"],
+      classrooms: ["501","502","503","504","505","506","507","509","510","511","513","515","516","517","518"],
       wing_az: "Bütün mərtəbə boyu", wing_en: "Across the Floor", wing_ru: "По всему этажу"
     }
-  ];
+    ];
 
   const FLOOR_CONFIGS = {
     "1": {
@@ -24807,19 +24885,19 @@ function initSceneTransition() {
       desc_ru: "На 1-м этаже расположен спортзал, актовый зал, 2 химические лаборатории, телекоммуникационная лаборатория и административные отделы.",
       countBadge_az: "13 Əsas Otaq və Məkan", countBadge_en: "13 Main Rooms & Spaces", countBadge_ru: "13 Основных Кабинетов",
       wings_az: [
-        { label: "Qərb Qanadı", text: "107 (Qiyabi), 106A (Hərbi), 106 (Kimya-1), 107A (Telekom), 103 (Kimya-2)", icon: "⬅️" },
+        { label: "Qərb Qanadı", text: "107 (Qiyabi), 106A (Hərbi), 106 (Kimya), 107A (Telekom), 103 (Kimya)", icon: "⬅️" },
         { label: "Mərkəzi", text: "Kadrlar şöbəsi, Kompüter laboratoriyası", icon: "🏛️" },
         { label: "Şərq Qanadı", text: "113 (Mühasibat - 2 otaq), 114 (Təsərrüfat), 115 (Təcrübə), 116 (Tərbiyə), Akt zalı", icon: "➡️" },
         { label: "İdman", text: "İdman zalı (geyinmə otağı ilə)", icon: "⚽" }
       ],
       wings_en: [
-        { label: "West Wing", text: "107 (Distance), 106A (Military), 106 (Chem-1), 107A (Telecom), 103 (Chem-2)", icon: "⬅️" },
+        { label: "West Wing", text: "107 (Distance), 106A (Military), 106 (Chemistry), 107A (Telecom), 103 (Chemistry)", icon: "⬅️" },
         { label: "Central", text: "Human Resources, Computer Laboratory", icon: "🏛️" },
         { label: "East Wing", text: "113 (Accounting - 2 rooms), 114 (Economic), 115 (Internship), 116 (Student Affairs), Assembly Hall", icon: "➡️" },
         { label: "Sports", text: "Sports gym (with locker rooms)", icon: "⚽" }
       ],
       wings_ru: [
-        { label: "Западное крыло", text: "107 (Заочное), 106A (Военный), 106 (Химия-1), 107A (Связь), 103 (Химия-2)", icon: "⬅️" },
+        { label: "Западное крыло", text: "107 (Заочное), 106A (Военный), 106 (Химия), 107A (Связь), 103 (Химия)", icon: "⬅️" },
         { label: "Центральное", text: "Отдел кадров, Компьютерная лаборатория", icon: "🏛️" },
         { label: "Восточное крыло", text: "113 (Бухгалтерия - 2 комнаты), 114 (Хозчасть), 115 (Практика), 116 (Воспитание), Актовый зал", icon: "➡️" },
         { label: "Спорткомплекс", text: "Спортивный зал (с раздевалками)", icon: "⚽" }
@@ -24836,7 +24914,7 @@ function initSceneTransition() {
       countBadge_az: "11 Əsas Otaq və Mərkəz", countBadge_en: "11 Main Rooms & Hubs", countBadge_ru: "11 Основных Помещений",
       wings_az: [
         { label: "Mərkəzi Qanad", text: "Direktor otağı (Qəbul otağı)", icon: "🏛️" },
-        { label: "Qərb Qanadı", text: "205 (Tədris müavini), Həmkar otağı, Mühəndis (FBK 2 otaq), 201, 203 (Kompüter), 202 (Ceyhun m.)", icon: "⬅️" },
+        { label: "Qərb Qanadı", text: "205 (Tədris müavini), Həmkar otağı, Mühəndis (FBK 2 otaq), 201, 203 (Kompüter), 202 (Müəllim kabineti)", icon: "⬅️" },
         { label: "Şərq Qanadı", text: "214 (Qeydiyyat & Monitorinq), 217 (Metodiki kabinet), 211 (Kompüter otağı)", icon: "➡️" },
         { label: "Kitabxana", text: "206 - Kitabxana və Oxu Zalı (2 otaq daxilində)", icon: "📚" }
       ],
@@ -25065,6 +25143,8 @@ function initSceneTransition() {
 
       return true;
     });
+
+    targetRooms.sort((a, b) => (a.floor - b.floor) || ((a.order || 0) - (b.order || 0)));
 
     if (countText) {
       const dict = (typeof i18n !== "undefined" && i18n[l]) ? i18n[l] : {};
@@ -27208,7 +27288,7 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
       authors_az: "Səbuhi Qurbanov Yusif, Suzanna Alıyeva Mirzalı",
       authors_en: "Sabuhi Gurbanov Yusif, Susanna Aliyeva Mirzali",
       authors_ru: "Сабухи Гурбанов Юсиф оглы, Сусанна Алиева Мирзалы гызы",
-      roles_az: "1. BDRNK publik hüquqi şəxsin direktoru · 2. Müəllim / Ümumtəhsil fənn birləşməsi",
+      roles_az: "1. BDRNK Publik hüquqi şəxsin direktoru · 2. Müəllim / Ümumtəhsil fənn birləşməsi",
       roles_en: "1. Director of BDRNK · 2. Teacher / General Education Department",
       roles_ru: "1. Директор БГКСТ · 2. Преподаватель / ФБК общего образования",
       type_az: "Dərslik",
@@ -27712,7 +27792,31 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
     // 4. Tab 4: Açıq dərslər (#science-open-lessons-grid)
     const sciOpenGrid = document.getElementById("science-open-lessons-grid");
     if (sciOpenGrid) {
-      renderNewsCardsInto(sciOpenGrid, matchNews(/açıq dərs|nümunəvi dərs/i, 6), "Açıq Dərs");
+      if (typeof openLessonsData !== "undefined" && openLessonsData.length) {
+        sciOpenGrid.innerHTML = openLessonsData.map((lesson) => {
+          return `
+            <article class="portal-hub-card cursor-pointer" data-open-lesson-jump="${lesson.id}">
+              <span class="portal-hub-tag">${lesson.subject_icon} AÇIQ DƏRS · ${lesson.subject_az}</span>
+              <h4 class="portal-hub-title">${lesson.teacher_az}: ${lesson.title_az}</h4>
+              <p class="portal-hub-desc">${lesson.desc_az}</p>
+              <button type="button" class="portal-hub-link">Videoya və Pedaqoji Yazıya Bax →</button>
+            </article>
+          `;
+        }).join("");
+        sciOpenGrid.querySelectorAll("[data-open-lesson-jump]").forEach((card) => {
+          card.addEventListener("click", () => {
+            if (typeof switchWorkspaceTab === "function") {
+              switchWorkspaceTab("lectures");
+            }
+            const stage = document.getElementById("open-lessons-block");
+            if (stage) {
+              setTimeout(() => stage.scrollIntoView({ behavior: "smooth", block: "start" }), 150);
+            }
+          });
+        });
+      } else {
+        renderNewsCardsInto(sciOpenGrid, matchNews(/açıq dərs|nümunəvi dərs/i, 6), "Açıq Dərs");
+      }
     }
 
     // 5. Tab 7: Beynəlxalq konfranslar & nəşrlər (#intl-conferences-grid)
@@ -27986,5 +28090,379 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
     // Initial render
     renderAdmissionTable("basis9");
   })();
+
+  /* ══════════════════════════════════════════════════════════════════════
+     BDRNK AÇIQ DƏRSLƏR VƏ TƏDRİS VİDEOMATERİALLARI BLOKU CONTROLLER
+     ══════════════════════════════════════════════════════════════════════ */
+  (function initOpenLessonsBlock() {
+    const filterBar = document.getElementById("open-lessons-filter-bar");
+    const featuredStage = document.getElementById("open-lesson-featured-stage");
+    const cardsGrid = document.getElementById("open-lessons-cards-grid");
+
+    if (!featuredStage || typeof openLessonsData === "undefined" || !openLessonsData.length) return;
+
+    let currentLessonId = openLessonsData[0].id;
+    let currentVideoIdx = 0;
+
+    function esc(str) {
+      if (!str) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function renderFilterTabs() {
+      if (!filterBar) return;
+      filterBar.innerHTML = openLessonsData
+        .map((item) => {
+          const isActive = item.id === currentLessonId;
+          return `
+            <button type="button" 
+                    class="open-lesson-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 border flex items-center gap-2 ${
+                      isActive
+                        ? "bg-[#0a2240] text-white border-[#0a2240] dark:bg-[#c8a45d] dark:text-slate-950 dark:border-[#c8a45d] shadow-sm font-bold scale-[1.02]"
+                        : "bg-white/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border-slate-900/10 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-slate-700"
+                    }" 
+                    data-lesson-id="${item.id}">
+              <span>${item.subject_icon}</span>
+              <span>${esc(item.subject_az)} (${esc(item.teacher_az)})</span>
+            </button>
+          `;
+        })
+        .join("");
+
+      filterBar.querySelectorAll(".open-lesson-tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const lId = btn.getAttribute("data-lesson-id");
+          if (lId && lId !== currentLessonId) {
+            currentLessonId = lId;
+            currentVideoIdx = 0;
+            renderAll();
+          }
+        });
+      });
+    }
+
+    function renderFeaturedStage() {
+      const lesson = openLessonsData.find((l) => l.id === currentLessonId) || openLessonsData[0];
+      const video = lesson.videos[currentVideoIdx] || lesson.videos[0];
+
+      const paragraphs = lesson.full_az
+        .split("\n\n")
+        .map((p) => {
+          const trimmed = p.trim();
+          if (!trimmed) return "";
+          if (trimmed.startsWith("#")) {
+            const tags = trimmed
+              .split(/\s+/)
+              .map((t) => `<span class="inline-block px-2.5 py-1 text-xs font-semibold rounded-lg bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20 mr-1.5 mb-1.5">${esc(t)}</span>`)
+              .join("");
+            return `<div class="pt-2 flex flex-wrap">${tags}</div>`;
+          }
+          return `<p class="text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-3">${esc(trimmed)}</p>`;
+        })
+        .join("");
+
+      const videoSwitchButtons =
+        lesson.videos.length > 1
+          ? `
+          <div class="mt-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-900/80 border border-slate-900/10 dark:border-white/10 flex flex-wrap items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Dərsin Video Hissələri:</span>
+            ${lesson.videos
+              .map(
+                (v, idx) => `
+                <button type="button" 
+                        class="open-lesson-vid-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${
+                          idx === currentVideoIdx
+                            ? "bg-amber-600 text-white shadow-sm"
+                            : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-900/10 dark:border-white/10 hover:bg-slate-200"
+                        }" 
+                        data-vid-idx="${idx}">
+                  📹 ${esc(v.title_az || `Hissə ${idx + 1}`)}
+                </button>
+              `
+              )
+              .join("")}
+          </div>
+        `
+          : "";
+
+      featuredStage.innerHTML = `
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+          <!-- Left Column: Video Player Showcase -->
+          <div class="lg:col-span-7 space-y-3">
+            <div class="open-lesson-player-box relative rounded-2xl overflow-hidden bg-slate-950 shadow-2xl border border-slate-900/20 dark:border-white/10 aspect-video flex items-center justify-center">
+              <video id="open-lesson-active-video" 
+                     class="w-full h-full object-contain" 
+                     controls 
+                     playsinline 
+                     preload="metadata" 
+                     poster="${video.poster || 'college_bg.jpg'}">
+                <source src="${video.src}" type="video/mp4">
+                Brauzeriniz video oxutmağı dəstəkləmir.
+              </video>
+            </div>
+            ${videoSwitchButtons}
+            <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 px-1">
+              <span>Rəsmi Dərs Qeydiyyatı · BDRNK Video Studiyası</span>
+              <span class="font-mono">${esc(video.src)}</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Full Written Pedagogical Article -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-[#0a2240] text-white dark:bg-[#c8a45d] dark:text-slate-950">
+                ${lesson.subject_icon} ${esc(lesson.subject_az)}
+              </span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                👩‍🏫 ${esc(lesson.teacher_az)}
+              </span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                📅 ${esc(lesson.date)}
+              </span>
+            </div>
+
+            <h4 class="font-display text-xl sm:text-2xl font-black text-slate-900 dark:text-white leading-snug">
+              ${esc(lesson.title_az)}
+            </h4>
+
+            <div class="p-3.5 rounded-xl bg-amber-500/[0.08] dark:bg-amber-500/[0.12] border-l-4 border-amber-500 text-xs sm:text-sm text-slate-800 dark:text-slate-200 italic font-medium leading-relaxed">
+              «${esc(lesson.desc_az)}»
+            </div>
+
+            <div class="open-lesson-full-text prose dark:prose-invert max-w-none max-h-[340px] overflow-y-auto pr-2 scrollbar-thin text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+              ${paragraphs}
+            </div>
+          </div>
+        </div>
+      `;
+
+      featuredStage.querySelectorAll(".open-lesson-vid-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const vIdx = parseInt(btn.getAttribute("data-vid-idx"), 10) || 0;
+          currentVideoIdx = vIdx;
+          renderFeaturedStage();
+          const vidEl = document.getElementById("open-lesson-active-video");
+          if (vidEl) {
+            vidEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            vidEl.play().catch(() => {});
+          }
+        });
+      });
+    }
+
+    function renderCardsGrid() {
+      if (!cardsGrid) return;
+      cardsGrid.innerHTML = openLessonsData
+        .map((item) => {
+          const isSelected = item.id === currentLessonId;
+          const mainVideo = item.videos[0];
+          return `
+            <div class="open-lesson-card group cursor-pointer p-4 rounded-2xl transition-all duration-300 border flex flex-col justify-between ${
+              isSelected
+                ? "bg-amber-500/[0.06] dark:bg-amber-500/[0.12] border-amber-500/50 shadow-md ring-2 ring-amber-500/30"
+                : "bg-white dark:bg-slate-900 border-slate-900/[0.08] dark:border-white/[0.08] hover:border-amber-500/30 hover:shadow-lg"
+            }" data-card-lesson-id="${item.id}">
+              <div class="space-y-3">
+                <div class="relative rounded-xl overflow-hidden bg-slate-950 aspect-video flex items-center justify-center">
+                  <img src="${mainVideo.poster || 'college_bg.jpg'}" alt="${esc(item.title_az)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                  <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/25 transition-colors">
+                    <span class="w-10 h-10 rounded-full bg-white/90 dark:bg-[#c8a45d] text-slate-900 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform font-bold text-sm">
+                      ▶
+                    </span>
+                  </div>
+                  <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-md text-[10px] font-bold bg-black/75 text-white backdrop-blur-sm">
+                    ${item.videos.length > 1 ? `${item.videos.length} Video` : "Video Dərs"}
+                  </span>
+                </div>
+
+                <div class="space-y-1">
+                  <div class="flex items-center gap-1.5 text-[11px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
+                    <span>${item.subject_icon}</span>
+                    <span>${esc(item.subject_az)}</span>
+                  </div>
+                  <h5 class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2 leading-snug">
+                    ${esc(item.teacher_az)} — Açıq Dərs
+                  </h5>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">
+                    ${esc(item.desc_az)}
+                  </p>
+                </div>
+              </div>
+
+              <div class="pt-3 mt-3 border-t border-slate-900/[0.06] dark:border-white/[0.06] flex items-center justify-between text-xs">
+                <span class="text-slate-400">${esc(item.date)}</span>
+                <span class="font-bold text-[#0a2240] dark:text-[#c8a45d] group-hover:translate-x-0.5 transition-transform">
+                  ${isSelected ? "Seçilib ✓" : "Bax & Oxu →"}
+                </span>
+              </div>
+            </div>
+          `;
+        })
+        .join("");
+
+      cardsGrid.querySelectorAll("[data-card-lesson-id]").forEach((card) => {
+        card.addEventListener("click", () => {
+          const lId = card.getAttribute("data-card-lesson-id");
+          if (lId) {
+            currentLessonId = lId;
+            currentVideoIdx = 0;
+            renderAll();
+            const stage = document.getElementById("open-lessons-block");
+            if (stage) {
+              stage.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }
+        });
+      });
+    }
+
+    function renderAll() {
+      renderFilterTabs();
+      renderFeaturedStage();
+      renderCardsGrid();
+    }
+
+    renderAll();
+  })();
+
+  /* ══════════════════════════════════════════════════════════════════════
+     HAQQIMIZDA DROPDOWN (RƏHBƏRLİK VƏ STRUKTUR) FLOATING CONTROLLER
+     ══════════════════════════════════════════════════════════════════════ */
+  (function initAboutDropdown() {
+    function setupDropdown() {
+      const wrapper = document.getElementById("nav-about-dropdown-wrapper") || document.querySelector(".nav-tab-dropdown-wrapper");
+      const menu = document.getElementById("nav-about-dropdown-menu") || document.querySelector(".nav-tab-dropdown-menu");
+      const desktopNav = document.getElementById("desktop-nav");
+      if (!wrapper || !menu) return;
+
+      let closeTimer = null;
+      let lastOpenedAt = 0;
+
+      const canHover = () => window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+      function applyPosition() {
+        const rect = wrapper.getBoundingClientRect();
+        const menuWidth = menu.offsetWidth || Math.min(290, window.innerWidth - 20);
+        const left = Math.max(10, Math.min(Math.round(rect.left), window.innerWidth - menuWidth - 10));
+        menu.style.position = "fixed";
+        menu.style.top = `${Math.round(rect.bottom) + 4}px`;
+        menu.style.left = `${left}px`;
+        menu.style.zIndex = "999999";
+      }
+
+      function closeNow() {
+        if (closeTimer) {
+          clearTimeout(closeTimer);
+          closeTimer = null;
+        }
+        menu.classList.remove("is-open");
+        wrapper.classList.remove("is-open");
+      }
+
+      function positionAndOpen() {
+        if (closeTimer) {
+          clearTimeout(closeTimer);
+          closeTimer = null;
+        }
+        lastOpenedAt = Date.now();
+        applyPosition();
+        menu.classList.add("is-open");
+        wrapper.classList.add("is-open");
+      }
+
+      function scheduleClose(delay = 180) {
+        if (closeTimer) clearTimeout(closeTimer);
+        closeTimer = setTimeout(closeNow, delay);
+      }
+
+      wrapper.addEventListener("mouseenter", () => {
+        if (canHover()) positionAndOpen();
+      });
+      wrapper.addEventListener("mouseleave", () => {
+        if (canHover()) scheduleClose(180);
+      });
+
+      menu.addEventListener("mouseenter", () => {
+        if (canHover() && closeTimer) {
+          clearTimeout(closeTimer);
+          closeTimer = null;
+        }
+      });
+      menu.addEventListener("mouseleave", () => {
+        if (canHover()) scheduleClose(140);
+      });
+
+      // Click / tap handling on wrapper or chevron
+      wrapper.addEventListener("click", (e) => {
+        // If clicking on dropdown items, close menu and allow navigation
+        if (e.target.closest(".nav-tab-dropdown-item")) {
+          closeNow();
+          return;
+        }
+
+        // Chevron tap/click always toggles dropdown without tab navigation
+        if (e.target.closest("svg")) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (menu.classList.contains("is-open")) {
+            closeNow();
+          } else {
+            positionAndOpen();
+          }
+          return;
+        }
+
+        // On touch devices / mobile widths, toggle dropdown cleanly on tap
+        if (!canHover() || window.innerWidth < 1024) {
+          if (menu.classList.contains("is-open")) {
+            closeNow();
+          } else {
+            positionAndOpen();
+          }
+        }
+      });
+
+      // Close on outside click or touch
+      function handleOutsideInteract(e) {
+        if (!wrapper.contains(e.target) && !menu.contains(e.target)) {
+          closeNow();
+        }
+      }
+      document.addEventListener("click", handleOutsideInteract);
+      document.addEventListener("touchstart", handleOutsideInteract, { passive: true });
+
+      // Update clamped position on scroll / resize while open
+      const updatePos = () => {
+        if (menu.classList.contains("is-open")) {
+          applyPosition();
+        }
+      };
+      window.addEventListener("scroll", updatePos, { passive: true });
+      window.addEventListener("resize", updatePos, { passive: true });
+
+      if (desktopNav) {
+        desktopNav.addEventListener("scroll", () => {
+          if (!menu.classList.contains("is-open")) return;
+          if (Date.now() - lastOpenedAt < 400) {
+            applyPosition();
+          } else {
+            closeNow();
+          }
+        }, { passive: true });
+      }
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", setupDropdown);
+    } else {
+      setupDropdown();
+    }
+  })();
+
 
 })();

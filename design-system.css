@@ -3262,12 +3262,18 @@ html.dark-mode .portal-hub-link {
   display: inline-flex;
 }
 
-.workspace-nav-bar {
+.workspace-nav-bar,
+#workspace-tabs-bar {
   overflow: visible !important;
+  position: relative;
+  z-index: 50;
 }
 
 @media (min-width: 1024px) {
-  .workspace-nav-inner {
+  .workspace-nav-inner,
+  #desktop-nav {
+    overflow: visible !important;
+    overflow-x: visible !important;
     overflow-y: visible !important;
   }
 }
@@ -3277,21 +3283,36 @@ html.dark-mode .portal-hub-link {
   top: 100%;
   left: 0;
   padding-top: 8px;
-  min-width: 280px;
+  min-width: 290px;
+  max-width: calc(100vw - 20px);
   opacity: 0;
   visibility: hidden;
   transform: translateY(6px);
   transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s;
-  z-index: 1000;
+  z-index: 99999;
   pointer-events: none;
 }
 
-.nav-tab-dropdown-wrapper:hover .nav-tab-dropdown-menu,
-.nav-tab-dropdown-wrapper:focus-within .nav-tab-dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
+@media (hover: hover) and (pointer: fine) {
+  .nav-tab-dropdown-wrapper:hover .nav-tab-dropdown-menu,
+  .nav-tab-dropdown-wrapper:focus-within .nav-tab-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+  }
+}
+
+.nav-tab-dropdown-wrapper.is-open .nav-tab-dropdown-menu,
+.nav-tab-dropdown-menu.is-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+.nav-tab-dropdown-wrapper.is-open > a svg {
+  transform: rotate(180deg);
 }
 
 .nav-tab-dropdown-panel {
@@ -3323,6 +3344,18 @@ html.dark-mode .nav-tab-dropdown-panel {
   text-decoration: none;
   transition: all 0.18s ease;
   color: #1e293b;
+}
+
+@media (max-width: 640px) {
+  .nav-tab-dropdown-menu {
+    min-width: 240px;
+    width: min(290px, calc(100vw - 20px));
+  }
+
+  .nav-tab-dropdown-item {
+    min-height: 44px;
+    padding: 10px 12px;
+  }
 }
 
 html.dark .nav-tab-dropdown-item,
