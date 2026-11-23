@@ -1031,6 +1031,185 @@ const i18n = {
     cf_err_email: "Zəhmət olmasa düzgün elektron poçt ünvanı daxil edin.",
     cf_err_msg: "Zəhmət olmasa müraciət mətnini qeyd edin (minimum 5 simvol).",
     cf_err_rate: "Zəhmət olmasa yeni müraciət göndərməzdən əvvəl bir neçə saniyə gözləyin.",
+    lib_lec_hero_tag: "AKADEMİK RESURSLAR FONDU",
+    lib_lec_hero_title: "Akademik Mühazirələr və Dərs Vəsaitləri Fondu",
+    lib_lec_hero_desc: "Kollecimizin müəllimləri və metodik heyəti tərəfindən hazırlanmış bütün mühazirə mətnləri, leksiyalar və dərs vəsaitləri vahid rəqəmsal oxu zalında. Bütün materiallar daxili rəqəmsal oxu zalında oxunaqlı şəkildə təqdim olunur.",
+    lib_switch_lectures: "Mühazirələr Bölməsi",
+    lib_switch_books: "Dərs Vəsaitləri və Kitablar",
+    dd_badge_section: "Bölmə",
+    dd_structure_desc: "Rəhbərlik, şöbələr, bölmələr və FBK-lar",
+    adm_mob_overview: "Qəbul Qaydaları & Şərtlər",
+    adm_mob_roadmap: "Tələbənin Yol Xəritəsi",
+    adm_mob_docs: "Tələb Olunan Sənədlər",
+    adm_mob_majors: "14 Rəsmi İxtisas",
+    adm_mob_calc: "Bal Kalkulyatoru",
+    adm_mob_faq: "Qəbul FAQ & Əlaqə",
+    adm_pill_results: "🏆 Qəbul Nəticələri (98%)",
+    adm_pill_overview: "📢 Qəbul Qaydaları & Şərtlər",
+    adm_pill_roadmap: "🧭 Tələbənin Yol Xəritəsi",
+    adm_pill_docs: "📋 Tələb Olunan Sənədlər",
+    adm_pill_majors: "🎓 14 Rəsmi İxtisas",
+    adm_pill_faq: "❓ Qəbul FAQ & Əlaqə",
+    adm_res_badge: "🏆 RESPUBLİKA GÖSTƏRİCİSİ · 98% DOLMA NƏTİCƏSİ",
+    adm_res_title_main: "Tələbə Qəbulunun",
+    adm_res_title_hl: "Rəsmi Nəticələri",
+    adm_res_desc: "Azərbaycan Texniki Universiteti nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik hüquqi şəxsin tələbə qəbulu planının yerinə yetirilməsinə dair rəsmi hesabatı və müqayisəli analitikası.",
+    adm_poster_zoom: "🔍 Tam Ölçüdə İncələ",
+    adm_poster_tag: "Rəsmi İnfoqrafika",
+    adm_poster_caption: "BDRNK · 2026/2027 Qəbul Nəticələri Hesabatı",
+    adm_poster_download: "Yüklə",
+    adm_comp_label: "Müqayisəli Göstərici",
+    adm_comp_title: "2026/2027 Qəbul Planının Nəticəsi",
+    adm_comp_az: "Azərbaycan Üzrə",
+    adm_comp_bdrnk: "BDRNK Üzrə",
+    adm_comp_college: "Bakı Dövlət Rabitə və Nəqliyyat Kolleci",
+    adm_comp_quote: "“2026/2027-ci tədris ilində ölkə üzrə orta ixtisas təhsili müəssisələrinin qəbul planının yerinə yetirilməsi 87,2% təşkil etdiyi halda, Bakı Dövlət Rabitə və Nəqliyyat Kollecində bu göstərici 98%-ə çatmışdır. Bu, kollecdə aparılan məqsədyönlü işin, ixtisaslara marağın və təhsilin keyfiyyətinə olan etimadın nəticəsidir.”",
+    adm_stat_actual: "Faktiki Qəbul",
+    adm_stat_plan: "Plan: 793 yer",
+    adm_stat_state: "Dövlət Sifarişi",
+    adm_stat_state_sub: "294 / 297 tələbə",
+    adm_stat_b9: "9-İllik Baza",
+    adm_stat_b9_sub: "205 / 210 tələbə",
+    adm_stat_b11: "11-İllik Baza",
+    adm_stat_b11_sub: "570 / 583 tələbə",
+    adm_tbl_title: "İxtisaslar Üzrə Rəsmi Qəbul Cədvəli",
+    adm_tbl_sub: "Dövlət İmtahan Mərkəzinin təsdiqlədiyi qəbul göstəriciləri",
+    adm_tab_b9: "9-İllik (205)",
+    adm_tab_b11: "11-İllik (570)",
+    adm_tab_all: "Yekun (775)",
+    adm_ov_badge: "📢 QƏBUL PROSESİ VƏ QEYDİYYAT",
+    adm_ov_title: "Mərkəzləşdirilmiş Tələbə Qəbulu və Ümumi Şərtlər",
+    adm_ov_desc: "Kollecimizə tələbə qəbulu Azərbaycan Respublikası <strong>Dövlət İmtahan Mərkəzi (DİM)</strong> tərəfindən mərkəzləşdirilmiş qaydada ümumi orta (<strong>9 illik</strong>) və tam orta (<strong>11 illik</strong>) təhsil bazasında aparılır. Kollecdə 14 dövlət standartlı ixtisas üzrə həm dövlət sifarişi (təqaüdlü, ödənişsiz), həm də ödənişli əsaslarla əyani və qiyabi təhsil formaları fəaliyyət göstərir.",
+    adm_ov_btn_portal: "🌐 Portal.edu.az ilə Qeydiyyat",
+    adm_ov_btn_roadmap: "🧭 Yol Xəritəsinə Bax",
+    adm_ov_btn_docs: "📋 Tələb Olunan Sənədlər",
+    adm_ov_kpi1: "Rəsmi İxtisas (İKT, Nəqliyyat, Rabitə, Maliyyə)",
+    adm_ov_kpi2: "İllik Təhsil Bazasında Qəbul Müsabiqəsi",
+    adm_ov_kpi3_title: "Dövlət",
+    adm_ov_kpi3_desc: "Sifarişli & Ödənişsiz Təhsil Yerləri",
+    adm_ov_kpi4_title: "Təqaüd",
+    adm_ov_kpi4_desc: "Əlaçı, Həvəsləndirici və Adi Təqaüdlər",
+    adm_rm_badge: "🧭 ADDIM-ADDIM BƏLƏDÇİ",
+    adm_rm_title: "Abituriyentin Qəbul və Qeydiyyat Yol Xəritəsi",
+    adm_rm_desc: "DİM imtahanından ilk dərs gününə qədər keçəcəyiniz bütün addımlar aydın şəkildə sıralanmışdır.",
+    adm_rm_s1_t: "İxtisas Seçimi",
+    adm_rm_s1_d: "DİM müsabiqəsində BDRNK-nın 14 ixtisas kodunu qeyd edin.",
+    adm_rm_s2_t: "Elektron Qeydiyyat",
+    adm_rm_s2_d: "portal.edu.az platformasında onlayn qeydiyyatdan keçin.",
+    adm_rm_s3_t: "Sənəd Təqdimatı",
+    adm_rm_s3_d: "Tələb olunan sənədlər paketini kollecin Qəbul Komissiyasına təqdim edin.",
+    adm_rm_s4_t: "Tanışlıq & Qeydiyyat",
+    adm_rm_s4_d: "Tədris korpusları, laboratoriyalar və qrup rəhbərləri ilə tanışlıq günü.",
+    adm_rm_s5_t: "İlk Dərs Günü!",
+    adm_rm_s5_d: "Tələbə biletinin təqdim olunması və dərslərə rəsmi start verilməsi.",
+    adm_doc_badge: "📋 SƏNƏDLƏR PAKETİ",
+    adm_doc_title: "Qəbul Üçün Tələb Olunan Rəsmi Sənədlər",
+    adm_doc_desc: "Qəbul Komissiyasına müraciət edərkən aşağıdakı sənədlərin əsli və nüsxələrini təqdim etməlisiniz.",
+    adm_doc_1_t: "Təhsil Sənədi",
+    adm_doc_1_d: "Ümumi orta (şəhadətnamə) və ya tam orta təhsil haqqında sənədin (attestat) əsli.",
+    adm_doc_2_t: "Şəxsiyyət Vəsiqəsi",
+    adm_doc_2_d: "Şəxsiyyət vəsiqəsinin əsli və 3 ədəd aydın surəti (hər iki üzü).",
+    adm_doc_3_t: "Hərbi Xidmət Vəsiqəsi",
+    adm_doc_3_d: "İlkin hərbi qeydiyyata alınma vəsiqəsi və ya hərbi biletin surəti (oğlanlar üçün).",
+    adm_doc_4_t: "Fotoşəkillər (6 ədəd)",
+    adm_doc_4_d: "3x4 sm ölçüdə, eyni formatda, ağ arxa fonda 6 ədəd rəngli fotoşəkil.",
+    adm_doc_5_t: "Tibbi Arayış",
+    adm_doc_5_d: "Sağlamlıq vəziyyəti haqqında Forma № 086/U tibbi arayış.",
+    adm_doc_6_t: "DİM İmtahan Nəticəsi",
+    adm_doc_6_d: "DİM-in elektron ərizəsinin və imtahan balının təsdiq çapı.",
+    adm_doc_7_t: "Portal.edu.az Çıxarışı",
+    adm_doc_7_d: "Təhsil Mərkəzləşdirilmiş İnformasiya Sistemindən qeydiyyat təsdiq sənədi.",
+    adm_doc_8_t: "İmtiyaz Sənədləri",
+    adm_doc_8_d: "Şəhid övladı, qazi ailəsi, əlilliyi olan şəxslər üçün dövlət ödəniş güzəşti sənədi.",
+    adm_maj_badge: "🎓 14 RƏSMİ İXTİSAS",
+    adm_maj_title: "Kollecdə Tədris Olunan İxtisaslar",
+    adm_maj_desc: "Əyani və qiyabi bölmələr üzrə 14 rəsmi dövlət standartlı ixtisas proqramı və DİM qrup kodları.",
+    adm_maj_cta: "Bütün İxtisaslar Kataloquna Keçid →",
+    adm_maj_1_t: "Kompüter sistemləri və kompleksləri",
+    adm_maj_1_m: "Kod: 216 (9-il) / 266 (11-il) · Əyani",
+    adm_maj_2_t: "Kompüter şəbəkələri və şəbəkə inzibatçılığı",
+    adm_maj_2_m: "Kod: 1316 (9-il) / 1366 (11-il) · Əyani",
+    adm_maj_3_t: "Kompüter şəbəkəsi avadanlıqlarının təmiri və servisi",
+    adm_maj_3_m: "Kod: 516 (9-il) / 566 (11-il) · Əyani",
+    adm_maj_4_t: "Mobil şəbəkə sistemləri və operatorluğu",
+    adm_maj_4_m: "Kod: 115 (9-il) / 166 (11-il) · Əyani",
+    adm_maj_5_t: "Telekommunikasiya şəbəkələri və xətləri",
+    adm_maj_5_m: "Kod: 316 (9-il) / 366 (11-il) · Əyani & Qiyabi",
+    adm_maj_6_t: "Çoxkanallı telekommunikasiya sistemlərinin istismarı",
+    adm_maj_6_m: "Kod: 416 (9-il) / 466 (11-il) · Əyani",
+    adm_maj_7_t: "Radio, televiziya vasitə və qurğuları",
+    adm_maj_7_m: "Kod: 916 (9-il) / 966 (11-il) · Əyani",
+    adm_maj_8_t: "Poçt rabitəsi",
+    adm_maj_8_m: "Kod: 616 (9-il) / 666 (11-il) · Əyani & Qiyabi",
+    adm_maj_9_t: "Vaqon və refrijerator təsərrüfatı",
+    adm_maj_9_m: "Kod: 1016 (9-il) / 1066 (11-il) · Əyani",
+    adm_maj_10_t: "Nəqliyyatın logistikası",
+    adm_maj_10_m: "Kod: 1116 (9-il) / 1166 (11-il) · Əyani",
+    adm_maj_11_t: "Nəqliyyat vasitələrinin texniki istismarı",
+    adm_maj_11_m: "Kod: 816 (9-il) / 866 (11-il) · Əyani & Qiyabi",
+    adm_maj_12_t: "Ətraf mühitin mühafizəsi və bərpası",
+    adm_maj_12_m: "Kod: 1416 (9-il) / 1466 (11-il) · Əyani",
+    adm_maj_13_t: "Mühasibat uçotu",
+    adm_maj_13_m: "Kod: 716 (9-il) / 766 (11-il) · Əyani & Qiyabi",
+    adm_maj_14_t: "Marketinq (Sahələr üzrə)",
+    adm_maj_14_m: "Kod: 1216 (9-il) / 1266 (11-il) · Əyani",
+    adm_com_badge: "📞 QƏBUL KOMİSSİYASI",
+    adm_com_title: "Əlaqə və Qaynar Xətt",
+    adm_com_desc: "Qəbul qaydaları, sənədlərin təqdimi və ixtisas seçimi ilə bağlı suallarınız üçün kollecin Qəbul Komissiyası ilə əlaqə saxlaya bilərsiniz.",
+    adm_com_hotline: "Qaynar Xətt",
+    adm_com_email: "Rəsmi E-poçt",
+    adm_com_addr: "Ünvan",
+    adm_com_addr_val: "Bakı şəhəri, Şəfaət Mehdiyev küçəsi 538-ci məhəllə",
+    adm_faq_badge: "❓ TEZ-TEZ VERİLƏN SUALLAR (FAQ)",
+    adm_faq_1_q: "Kollecə qəbul üçün sənədlər necə təqdim olunur?",
+    adm_faq_1_a: "DİM müsabiqəsindən uğurla keçən abituriyentlər ilk olaraq portal.edu.az platformasında onlayn qeydiyyatdan keçir, daha sonra sənədlərini kollecin Qəbul Komissiyasına təqdim edirlər.",
+    adm_faq_2_q: "Ödənişsiz (dövlət sifarişli) təhsil yerləri mövcuddurmu?",
+    adm_faq_2_a: "Bəli, kollecin bütün 14 ixtisası üzrə dövlət sifarişli (ödənişsiz və təqaüdlü) təhsil yerləri ayrılır. Yüksək bal toplayan tələbələr əlavə olaraq əlaçı və həvəsləndirici təqaüdlər alırlar.",
+    adm_faq_3_q: "Oğlan tələbələrə hərbi xidmətdən möhlət verilirmi?",
+    adm_faq_3_a: "Bəli, əyani formada təhsil alan tələbələrə qanunvericiliyə uyğun olaraq təhsil müddətində hərbi xidmətdən möhlət hüququ şamil edilir.",
+    adm_modal_title: "2026/2027 Tələbə Qəbulu Nəticələri — Rəsmi İnfoqrafika",
+    adm_modal_sub: "Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik hüquqi şəxsi",
+    ol_eyebrow: "MÜASİR PEDAQOJİ METODİKA · NÜMUNƏVİ AÇIQ DƏRSLƏR",
+    ol_title: "Kollecin Rəsmi Açıq Dərsləri və Video Təqdimatları",
+    ol_desc: "Kollecimizin peşəkar müəllimlərinin qabaqcıl təlim metodları, əyani vəsaitlər və interaktiv təqdimatlarla keçirdiyi açıq dərslərin video qeydləri, mövzu izahları və tam pedaqoji hesabatları.",
+    ol_count_badge: "🎬 4 Açıq Dərs · 5 Rəsmi Video",
+    sub_str_depts: "👥 Rəhbərlik və Bölmələr",
+    sub_str_tree: "🏢 İnstitusional Sxem",
+    sub_str_honored: "🎖️ Fəxri Əməkdaşlar",
+    sub_maj_list: "🎓 14 Rəsmi İxtisas",
+    sub_maj_edu: "📚 Tədris Prosesi & Proqramlar",
+    sub_maj_roadmap: "🧭 Tələbənin Yol Xəritəsi",
+    sub_maj_intern: "🚆 İstehsalat Təcrübəsi ↗",
+    sub_sci_articles: "📄 Elmi məqalələr",
+    sub_sci_books: "📚 Müəllimlərin elmi nəşrləri",
+    sub_sci_conf: "🎤 Elmi konfranslar",
+    sub_sci_sem: "💡 Seminarlar",
+    sub_sci_open: "👩‍🏫 Açıq dərslər",
+    sub_lib_books: "📘 Dərsliklər və Dərs Vəsaitləri (80)",
+    sub_lib_lectures: "📖 Metodiki Materiallar & Mühazirələr (40)",
+    sub_lib_textbooks: "🔬 Qrifli Dərslik Reyestri (8) →",
+    sub_lec_open: "✨ Rəsmi Açıq Dərslər (4 Dərs)",
+    sub_lec_studio: "🎬 Video Mühazirələr Studiyası",
+    sub_lec_depts: "👩‍🏫 Fənn Bölmələri (19)",
+    sub_lec_mat: "📖 Təlim Materialları (40) →",
+    sub_intl_coop: "🌍 Beynəlxalq əməkdaşlıq",
+    sub_intl_memo: "🤝 Memorandumlar",
+    sub_intl_conf: "🏛️ Beynəlxalq konfranslar",
+    sub_intl_cert: "🎖️ Beynəlxalq sertifikatlar",
+    sub_intl_portal: "Tam Memorandum Portalı ↗",
+    sub_stu_honor: "🌟 Fəxri tələbələr (18)",
+    sub_stu_cert: "🎖️ Tələbə sertifikatları (78)",
+    sub_stu_proj: "🚀 Tələbə layihələri",
+    sub_stu_ach: "🏆 Tələbə nailiyyətləri",
+    sub_stu_comp: "🥇 Müsabiqələr və olimpiadalar",
+    sub_cert_t: "🎖️ Beynəlxalq sertifikatlar (Fəxri əməkdaşlar)",
+    sub_cert_award: "🏆 Mükafatlar və diplomlar (24 Sənəd)",
+    sub_cert_pdf: "📥 PDF Arxiv",
+    sub_news_list: "📰 Rəsmi xəbərlər və elanlar (118)",
+    sub_news_gal: "📸 Tədbirlər · Foto & Video Qalereya",
+    sub_cnt_form: "📩 Elektron müraciət",
+    sub_cnt_map: "📞 Əlaqə və xəritə",
+    sub_cnt_faq: "❓ Qəbul və Tez-tez verilən suallar",
   },
   en: {
     hero_qarabag_cta: "Karabakh Victory",
@@ -2047,6 +2226,185 @@ const i18n = {
     cf_err_email: "Please enter a valid email address.",
     cf_err_msg: "Please write your message (at least 5 characters).",
     cf_err_rate: "Please wait a few seconds before sending another inquiry.",
+    lib_lec_hero_tag: "ACADEMIC RESOURCES ARCHIVE",
+    lib_lec_hero_title: "Academic Lectures & Textbooks Archive",
+    lib_lec_hero_desc: "All lecture notes, teaching guides, and textbooks prepared by our college faculty and methodological team in one unified digital reading room.",
+    lib_switch_lectures: "Lectures Section",
+    lib_switch_books: "Textbooks & Books",
+    dd_badge_section: "Section",
+    dd_structure_desc: "Leadership, departments, divisions and commissions",
+    adm_mob_overview: "Admission Rules & Conditions",
+    adm_mob_roadmap: "Student Roadmap",
+    adm_mob_docs: "Required Documents",
+    adm_mob_majors: "14 Official Specialties",
+    adm_mob_calc: "Score Calculator",
+    adm_mob_faq: "Admission FAQ & Contact",
+    adm_pill_results: "🏆 Admission Results (98%)",
+    adm_pill_overview: "📢 Admission Rules & Conditions",
+    adm_pill_roadmap: "🧭 Student Roadmap",
+    adm_pill_docs: "📋 Required Documents",
+    adm_pill_majors: "🎓 14 Official Specialties",
+    adm_pill_faq: "❓ Admission FAQ & Contact",
+    adm_res_badge: "🏆 NATIONAL PERFORMANCE · 98% ENROLLMENT RATE",
+    adm_res_title_main: "Official Student",
+    adm_res_title_hl: "Admission Results",
+    adm_res_desc: "Official report and comparative analytics on the fulfillment of the student admission plan at Baku State Communications and Transport College under Azerbaijan Technical University.",
+    adm_poster_zoom: "🔍 View Full Size",
+    adm_poster_tag: "Official Infographic",
+    adm_poster_caption: "BDRNK · 2026/2027 Admission Results Report",
+    adm_poster_download: "Download",
+    adm_comp_label: "Comparative Metric",
+    adm_comp_title: "2026/2027 Admission Plan Result",
+    adm_comp_az: "Across Azerbaijan",
+    adm_comp_bdrnk: "At BDRNK",
+    adm_comp_college: "Baku State Communications and Transport College",
+    adm_comp_quote: "“While the national fulfillment rate for secondary specialized education institutions stood at 87.2% in the 2026/2027 academic year, Baku State Communications and Transport College reached 98%. This reflects purposeful institutional work, growing interest in our majors, and trust in our education quality.”",
+    adm_stat_actual: "Actual Enrolled",
+    adm_stat_plan: "Quota: 793 seats",
+    adm_stat_state: "State Funded",
+    adm_stat_state_sub: "294 / 297 students",
+    adm_stat_b9: "9-Year Basis",
+    adm_stat_b9_sub: "205 / 210 students",
+    adm_stat_b11: "11-Year Basis",
+    adm_stat_b11_sub: "570 / 583 students",
+    adm_tbl_title: "Official Admission Table by Specialty",
+    adm_tbl_sub: "Admission figures verified by the State Examination Center",
+    adm_tab_b9: "9-Year (205)",
+    adm_tab_b11: "11-Year (570)",
+    adm_tab_all: "Total (775)",
+    adm_ov_badge: "📢 ADMISSION PROCESS & REGISTRATION",
+    adm_ov_title: "Centralized Student Admission & General Rules",
+    adm_ov_desc: "Admission to our college is conducted centrally by the <strong>State Examination Center (SEC)</strong> on both general secondary (<strong>9-year</strong>) and full secondary (<strong>11-year</strong>) education bases. Full-time and distance education tracks operate across 14 state-standard specialties on both state-funded and tuition-paid bases.",
+    adm_ov_btn_portal: "🌐 Register via Portal.edu.az",
+    adm_ov_btn_roadmap: "🧭 View Roadmap",
+    adm_ov_btn_docs: "📋 Required Documents",
+    adm_ov_kpi1: "Official Specialties (ICT, Transport, Telecom, Finance)",
+    adm_ov_kpi2: "Year Education Basis Admission Competition",
+    adm_ov_kpi3_title: "State",
+    adm_ov_kpi3_desc: "State-Funded & Tuition-Free Seats",
+    adm_ov_kpi4_title: "Scholarships",
+    adm_ov_kpi4_desc: "Honors, Merit & Standard Stipends",
+    adm_rm_badge: "🧭 STEP-BY-STEP GUIDE",
+    adm_rm_title: "Applicant Admission & Registration Roadmap",
+    adm_rm_desc: "Every step from the SEC entrance exam to your first day of classes is clearly outlined below.",
+    adm_rm_s1_t: "Specialty Selection",
+    adm_rm_s1_d: "Select BDRNK's 14 specialty codes during the SEC competition.",
+    adm_rm_s2_t: "Online Registration",
+    adm_rm_s2_d: "Complete electronic registration on the portal.edu.az platform.",
+    adm_rm_s3_t: "Document Submission",
+    adm_rm_s3_d: "Submit the required document package to the College Admissions Committee.",
+    adm_rm_s4_t: "Orientation & Enrollment",
+    adm_rm_s4_d: "Campus tour, laboratories introduction, and meeting group advisors.",
+    adm_rm_s5_t: "First Day of Class!",
+    adm_rm_s5_d: "Issuance of student ID card and official start of academic classes.",
+    adm_doc_badge: "📋 DOCUMENT PACKAGE",
+    adm_doc_title: "Official Documents Required for Admission",
+    adm_doc_desc: "When applying to the Admissions Committee, please present the originals and copies of the following documents.",
+    adm_doc_1_t: "Education Certificate",
+    adm_doc_1_d: "Original general secondary (9-year) or full secondary (11-year) education certificate.",
+    adm_doc_2_t: "National ID Card",
+    adm_doc_2_d: "Original ID card and 3 clear double-sided photocopies.",
+    adm_doc_3_t: "Military Registration Card",
+    adm_doc_3_d: "Copy of initial military conscription registration card or military ID (for male applicants).",
+    adm_doc_4_t: "Photographs (6 pcs)",
+    adm_doc_4_d: "6 identical color photos sized 3x4 cm on a clean white background.",
+    adm_doc_5_t: "Medical Certificate",
+    adm_doc_5_d: "Official health status medical certificate Form No. 086/U.",
+    adm_doc_6_t: "SEC Exam Result",
+    adm_doc_6_d: "Printed confirmation of the SEC electronic application and exam score.",
+    adm_doc_7_t: "Portal.edu.az Extract",
+    adm_doc_7_d: "Registration confirmation extracted from the Centralized Education Information System.",
+    adm_doc_8_t: "Privilege Documents",
+    adm_doc_8_d: "Official tuition-exemption documents for families of martyrs, veterans, or applicants with disabilities.",
+    adm_maj_badge: "🎓 14 OFFICIAL SPECIALTIES",
+    adm_maj_title: "Specialties Taught at the College",
+    adm_maj_desc: "14 state-standard specialty programs and SEC group codes across full-time and distance tracks.",
+    adm_maj_cta: "Go to All Specialties Catalog →",
+    adm_maj_1_t: "Computer Systems and Complexes",
+    adm_maj_1_m: "Code: 216 (9-yr) / 266 (11-yr) · Full-time",
+    adm_maj_2_t: "Computer Networks and Network Administration",
+    adm_maj_2_m: "Code: 1316 (9-yr) / 1366 (11-yr) · Full-time",
+    adm_maj_3_t: "Repair and Service of Computer Network Equipment",
+    adm_maj_3_m: "Code: 516 (9-yr) / 566 (11-yr) · Full-time",
+    adm_maj_4_t: "Mobile Network Systems and Operation",
+    adm_maj_4_m: "Code: 115 (9-yr) / 166 (11-yr) · Full-time",
+    adm_maj_5_t: "Telecommunication Networks and Lines",
+    adm_maj_5_m: "Code: 316 (9-yr) / 366 (11-yr) · Full-time & Distance",
+    adm_maj_6_t: "Operation of Multichannel Telecommunication Systems",
+    adm_maj_6_m: "Code: 416 (9-yr) / 466 (11-yr) · Full-time",
+    adm_maj_7_t: "Radio and Television Facilities and Equipment",
+    adm_maj_7_m: "Code: 916 (9-yr) / 966 (11-yr) · Full-time",
+    adm_maj_8_t: "Postal Communications",
+    adm_maj_8_m: "Code: 616 (9-yr) / 666 (11-yr) · Full-time & Distance",
+    adm_maj_9_t: "Wagon and Refrigerator Systems Economy",
+    adm_maj_9_m: "Code: 1016 (9-yr) / 1066 (11-yr) · Full-time",
+    adm_maj_10_t: "Transport Logistics",
+    adm_maj_10_m: "Code: 1116 (9-yr) / 1166 (11-yr) · Full-time",
+    adm_maj_11_t: "Technical Operation of Transport Vehicles",
+    adm_maj_11_m: "Code: 816 (9-yr) / 866 (11-yr) · Full-time & Distance",
+    adm_maj_12_t: "Environmental Protection and Restoration",
+    adm_maj_12_m: "Code: 1416 (9-yr) / 1466 (11-yr) · Full-time",
+    adm_maj_13_t: "Accounting",
+    adm_maj_13_m: "Code: 716 (9-yr) / 766 (11-yr) · Full-time & Distance",
+    adm_maj_14_t: "Marketing (by Sectors)",
+    adm_maj_14_m: "Code: 1216 (9-yr) / 1266 (11-yr) · Full-time",
+    adm_com_badge: "📞 ADMISSIONS COMMITTEE",
+    adm_com_title: "Contact & Hotline",
+    adm_com_desc: "Contact the College Admissions Committee for any questions regarding admission rules, document submission, and specialty selection.",
+    adm_com_hotline: "Hotline",
+    adm_com_email: "Official Email",
+    adm_com_addr: "Address",
+    adm_com_addr_val: "Baku, Shafaat Mehdiyev St., Block 538",
+    adm_faq_badge: "❓ FREQUENTLY ASKED QUESTIONS (FAQ)",
+    adm_faq_1_q: "How are documents submitted for college admission?",
+    adm_faq_1_a: "Applicants who succeed in the SEC competition first complete online registration on portal.edu.az and then submit their physical documents to the College Admissions Committee.",
+    adm_faq_2_q: "Are tuition-free (state-funded) seats available?",
+    adm_faq_2_a: "Yes, state-funded (tuition-free with monthly stipend) seats are allocated across all 14 college specialties. High-scoring students receive honors and merit scholarships.",
+    adm_faq_3_q: "Is military service deferment granted to male students?",
+    adm_faq_3_a: "Yes, full-time students are granted deferment from military conscription for the duration of their studies in accordance with national legislation.",
+    adm_modal_title: "2026/2027 Student Admission Results — Official Infographic",
+    adm_modal_sub: "Baku State Communications and Transport College Public Legal Entity",
+    ol_eyebrow: "MODERN PEDAGOGICAL METHODOLOGY · MODEL OPEN LESSONS",
+    ol_title: "Official College Open Lessons & Video Presentations",
+    ol_desc: "Video recordings, topic explanations, and full pedagogical reports of open lessons conducted by our faculty using modern teaching methodologies, visual aids, and interactive presentations.",
+    ol_count_badge: "🎬 4 Open Lessons · 5 Official Videos",
+    sub_str_depts: "👥 Leadership & Divisions",
+    sub_str_tree: "🏢 Institutional Chart",
+    sub_str_honored: "🎖️ Honored Staff",
+    sub_maj_list: "🎓 14 Official Specialties",
+    sub_maj_edu: "📚 Academic Process & Programs",
+    sub_maj_roadmap: "🧭 Student Roadmap",
+    sub_maj_intern: "🚆 Industrial Internship ↗",
+    sub_sci_articles: "📄 Research Articles",
+    sub_sci_books: "📚 Faculty Publications",
+    sub_sci_conf: "🎤 Scientific Conferences",
+    sub_sci_sem: "💡 Seminars",
+    sub_sci_open: "👩‍🏫 Open Lessons",
+    sub_lib_books: "📘 Textbooks & Manuals (80)",
+    sub_lib_lectures: "📖 Methodical Guides & Lectures (40)",
+    sub_lib_textbooks: "🔬 Approved Textbooks Registry (8) →",
+    sub_lec_open: "✨ Official Open Lessons (4 Lessons)",
+    sub_lec_studio: "🎬 Video Lecture Studio",
+    sub_lec_depts: "👩‍🏫 Subject Divisions (19)",
+    sub_lec_mat: "📖 Study Materials (40) →",
+    sub_intl_coop: "🌍 International Cooperation",
+    sub_intl_memo: "🤝 Memorandums",
+    sub_intl_conf: "🏛️ International Conferences",
+    sub_intl_cert: "🎖️ International Certificates",
+    sub_intl_portal: "Full Memorandum Portal ↗",
+    sub_stu_honor: "🌟 Honor Students (18)",
+    sub_stu_cert: "🎖️ Student Certificates (78)",
+    sub_stu_proj: "🚀 Student Projects",
+    sub_stu_ach: "🏆 Student Achievements",
+    sub_stu_comp: "🥇 Competitions & Olympiads",
+    sub_cert_t: "🎖️ International Certificates (Honored Staff)",
+    sub_cert_award: "🏆 Awards & Diplomas (24 Documents)",
+    sub_cert_pdf: "📥 PDF Archive",
+    sub_news_list: "📰 Official News & Announcements (118)",
+    sub_news_gal: "📸 Events · Photo & Video Gallery",
+    sub_cnt_form: "📩 Online Application",
+    sub_cnt_map: "📞 Contact & Map",
+    sub_cnt_faq: "❓ Admission & FAQ",
   },
   ru: {
     hero_qarabag_cta: "Карабахская Победа",
@@ -3062,6 +3420,185 @@ const i18n = {
     cf_err_email: "Пожалуйста, введите корректный адрес электронной почты.",
     cf_err_msg: "Пожалуйста, введите текст обращения (минимум 5 символов).",
     cf_err_rate: "Пожалуйста, подождите несколько секунд перед повторной отправкой.",
+    lib_lec_hero_tag: "ФОНД АКАДЕМИЧЕСКИХ РЕСУРСОВ",
+    lib_lec_hero_title: "Фонд академических лекций и учебных пособий",
+    lib_lec_hero_desc: "Все тексты лекций, методические материалы и учебные пособия, подготовленные преподавателями и методическим составом колледжа, в едином цифровом читальном зале.",
+    lib_switch_lectures: "Раздел лекций",
+    lib_switch_books: "Учебники и пособия",
+    dd_badge_section: "Раздел",
+    dd_structure_desc: "Руководство, отделы, отделения и ПЦК",
+    adm_mob_overview: "Правила приема и условия",
+    adm_mob_roadmap: "Дорожная карта студента",
+    adm_mob_docs: "Необходимые документы",
+    adm_mob_majors: "14 официальных специальностей",
+    adm_mob_calc: "Калькулятор баллов",
+    adm_mob_faq: "FAQ и контакты",
+    adm_pill_results: "🏆 Результаты приема (98%)",
+    adm_pill_overview: "📢 Правила приема и условия",
+    adm_pill_roadmap: "🧭 Дорожная карта студента",
+    adm_pill_docs: "📋 Необходимые документы",
+    adm_pill_majors: "🎓 14 официальных специальностей",
+    adm_pill_faq: "❓ FAQ и контакты приема",
+    adm_res_badge: "🏆 РЕСПУБЛИКАНСКИЙ ПОКАЗАТЕЛЬ · 98% ЗАПОЛНЕНИЯ",
+    adm_res_title_main: "Официальные итоги",
+    adm_res_title_hl: "Приема студентов",
+    adm_res_desc: "Официальный отчет и сравнительная аналитика выполнения плана приема студентов в Бакинский государственный колледж связи и транспорта при АзТУ.",
+    adm_poster_zoom: "🔍 Открыть полностью",
+    adm_poster_tag: "Официальная инфографика",
+    adm_poster_caption: "БДРНК · Отчет о результатах приема 2026/2027",
+    adm_poster_download: "Скачать",
+    adm_comp_label: "Сравнительный показатель",
+    adm_comp_title: "Итоги плана приема 2026/2027",
+    adm_comp_az: "По Азербайджану",
+    adm_comp_bdrnk: "По БДРНК",
+    adm_comp_college: "Бакинский государственный колледж связи и транспорта",
+    adm_comp_quote: "«Если в 2026/2027 учебном году выполнение плана приема по средним специальным учебным заведениям страны составило 87,2%, то в Бакинском государственном колледже связи и транспорта этот показатель достиг 98%. Это результат целенаправленной работы колледжа, интереса к специальностям и доверия к качеству образования.»",
+    adm_stat_actual: "Факт приема",
+    adm_stat_plan: "План: 793 места",
+    adm_stat_state: "Госзаказ",
+    adm_stat_state_sub: "294 / 297 студентов",
+    adm_stat_b9: "База 9 классов",
+    adm_stat_b9_sub: "205 / 210 студентов",
+    adm_stat_b11: "База 11 классов",
+    adm_stat_b11_sub: "570 / 583 студентов",
+    adm_tbl_title: "Официальная таблица приема по специальностям",
+    adm_tbl_sub: "Показатели приема, утвержденные Государственным экзаменационным центром",
+    adm_tab_b9: "9 классов (205)",
+    adm_tab_b11: "11 классов (570)",
+    adm_tab_all: "Итого (775)",
+    adm_ov_badge: "📢 ПРОЦЕСС ПРИЕМА И РЕГИСТРАЦИЯ",
+    adm_ov_title: "Централизованный прием студентов и общие условия",
+    adm_ov_desc: "Прием в наш колледж проводится централизованно <strong>Государственным экзаменационным центром (ГЭЦ)</strong> на базе общего среднего (<strong>9 лет</strong>) и полного среднего (<strong>11 лет</strong>) образования. Очное и заочное обучение ведется по 14 государственным специальностям на бюджетной (бесплатной, со стипендией) и платной основах.",
+    adm_ov_btn_portal: "🌐 Регистрация на Portal.edu.az",
+    adm_ov_btn_roadmap: "🧭 Смотреть карту",
+    adm_ov_btn_docs: "📋 Необходимые документы",
+    adm_ov_kpi1: "Официальных специальностей (ИКТ, Транспорт, Связь, Финансы)",
+    adm_ov_kpi2: "Конкурс приема на базе общего и полного среднего образования",
+    adm_ov_kpi3_title: "Бюджет",
+    adm_ov_kpi3_desc: "Бесплатные места по государственному заказу",
+    adm_ov_kpi4_title: "Стипендия",
+    adm_ov_kpi4_desc: "Отличникам, поощрительные и обычные стипендии",
+    adm_rm_badge: "🧭 ПОШАГОВОЕ РУКОВОДСТВО",
+    adm_rm_title: "Дорожная карта приема и регистрации абитуриента",
+    adm_rm_desc: "Все шаги от экзамена ГЭЦ до первого дня занятий изложены четко и последовательно.",
+    adm_rm_s1_t: "Выбор специальности",
+    adm_rm_s1_d: "Укажите 14 кодов специальностей БДРНК в конкурсе ГЭЦ.",
+    adm_rm_s2_t: "Онлайн-регистрация",
+    adm_rm_s2_d: "Пройдите электронную регистрацию на платформе portal.edu.az.",
+    adm_rm_s3_t: "Подача документов",
+    adm_rm_s3_d: "Представьте пакет необходимых документов в Приемную комиссию колледжа.",
+    adm_rm_s4_t: "Знакомство и оформление",
+    adm_rm_s4_d: "День знакомства с учебными корпусами, лабораториями и кураторами групп.",
+    adm_rm_s5_t: "Первый день учебы!",
+    adm_rm_s5_d: "Вручение студенческого билета и официальный старт занятий.",
+    adm_doc_badge: "📋 ПАКЕТ ДОКУМЕНТОВ",
+    adm_doc_title: "Официальные документы, требуемые для приема",
+    adm_doc_desc: "При обращении в Приемную комиссию необходимо представить оригиналы и копии следующих документов.",
+    adm_doc_1_t: "Документ об образовании",
+    adm_doc_1_d: "Оригинал свидетельства об общем среднем или аттестата о полном среднем образовании.",
+    adm_doc_2_t: "Удостоверение личности",
+    adm_doc_2_d: "Оригинал удостоверения личности и 3 четкие двусторонние копии.",
+    adm_doc_3_t: "Воинский документ",
+    adm_doc_3_d: "Копия приписного свидетельства или военного билета (для юношей).",
+    adm_doc_4_t: "Фотографии (6 шт.)",
+    adm_doc_4_d: "6 цветных фотографий единого формата размером 3x4 см на белом фоне.",
+    adm_doc_5_t: "Медицинская справка",
+    adm_doc_5_d: "Медицинская справка о состоянии здоровья по форме № 086/У.",
+    adm_doc_6_t: "Результаты экзамена ГЭЦ",
+    adm_doc_6_d: "Распечатка электронного заявления ГЭЦ и подтверждения баллов.",
+    adm_doc_7_t: "Выписка Portal.edu.az",
+    adm_doc_7_d: "Документ о подтверждении регистрации из Централизованной информационной системы образования.",
+    adm_doc_8_t: "Документы о льготах",
+    adm_doc_8_d: "Документы о льготах по оплате обучения для детей шехидов, семей ветеранов и лиц с инвалидностью.",
+    adm_maj_badge: "🎓 14 ОФИЦИАЛЬНЫХ СПЕЦИАЛЬНОСТЕЙ",
+    adm_maj_title: "Специальности, преподаваемые в колледже",
+    adm_maj_desc: "14 государственных образовательных программ и коды групп ГЭЦ для очного и заочного отделений.",
+    adm_maj_cta: "Перейти к полному каталогу специальностей →",
+    adm_maj_1_t: "Компьютерные системы и комплексы",
+    adm_maj_1_m: "Код: 216 (9 кл.) / 266 (11 кл.) · Очное",
+    adm_maj_2_t: "Компьютерные сети и сетевое администрирование",
+    adm_maj_2_m: "Код: 1316 (9 кл.) / 1366 (11 кл.) · Очное",
+    adm_maj_3_t: "Ремонт и сервис компьютерного сетевого оборудования",
+    adm_maj_3_m: "Код: 516 (9 кл.) / 566 (11 кл.) · Очное",
+    adm_maj_4_t: "Мобильные сетевые системы и операторское дело",
+    adm_maj_4_m: "Код: 115 (9 кл.) / 166 (11 кл.) · Очное",
+    adm_maj_5_t: "Телекоммуникационные сети и линии",
+    adm_maj_5_m: "Код: 316 (9 кл.) / 366 (11 кл.) · Очное и Заочное",
+    adm_maj_6_t: "Эксплуатация многоканальных телекоммуникационных систем",
+    adm_maj_6_m: "Код: 416 (9 кл.) / 466 (11 кл.) · Очное",
+    adm_maj_7_t: "Средства и устройства радио и телевидения",
+    adm_maj_7_m: "Код: 916 (9 кл.) / 966 (11 кл.) · Очное",
+    adm_maj_8_t: "Почтовая связь",
+    adm_maj_8_m: "Код: 616 (9 кл.) / 666 (11 кл.) · Очное и Заочное",
+    adm_maj_9_t: "Вагонное и рефрижераторное хозяйство",
+    adm_maj_9_m: "Код: 1016 (9 кл.) / 1066 (11 кл.) · Очное",
+    adm_maj_10_t: "Логистика на транспорте",
+    adm_maj_10_m: "Код: 1116 (9 кл.) / 1166 (11 кл.) · Очное",
+    adm_maj_11_t: "Техническая эксплуатация транспортных средств",
+    adm_maj_11_m: "Код: 816 (9 кл.) / 866 (11 кл.) · Очное и Заочное",
+    adm_maj_12_t: "Охрана и восстановление окружающей среды",
+    adm_maj_12_m: "Код: 1416 (9 кл.) / 1466 (11 кл.) · Очное",
+    adm_maj_13_t: "Бухгалтерский учет",
+    adm_maj_13_m: "Код: 716 (9 кл.) / 766 (11 кл.) · Очное и Заочное",
+    adm_maj_14_t: "Маркетинг (по отраслям)",
+    adm_maj_14_m: "Код: 1216 (9 кл.) / 1266 (11 кл.) · Очное",
+    adm_com_badge: "📞 ПРИЕМНАЯ КОМИССИЯ",
+    adm_com_title: "Контакты и горячая линия",
+    adm_com_desc: "По вопросам правил приема, подачи документов и выбора специальности вы можете связаться с Приемной комиссией колледжа.",
+    adm_com_hotline: "Горячая линия",
+    adm_com_email: "Официальная почта",
+    adm_com_addr: "Адрес",
+    adm_com_addr_val: "г. Баку, ул. Шафаата Мехтиева, 538-й квартал",
+    adm_faq_badge: "❓ ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ (FAQ)",
+    adm_faq_1_q: "Как подаются документы для поступления в колледж?",
+    adm_faq_1_a: "Абитуриенты, успешно прошедшие конкурс ГЭЦ, сначала проходят онлайн-регистрацию на платформе portal.edu.az, а затем подают документы в Приемную комиссию колледжа.",
+    adm_faq_2_q: "Имеются ли бесплатные (бюджетные) учебные места?",
+    adm_faq_2_a: "Да, по всем 14 специальностям колледжа выделяются бюджетные места (бесплатное обучение со стипендией). Студенты с высокими баллами получают повышенную и поощрительную стипендию.",
+    adm_faq_3_q: "Предоставляется ли юношам отсрочка от воинской службы?",
+    adm_faq_3_a: "Да, студентам очной формы обучения предоставляется отсрочка от призыва на военную службу на весь период обучения в соответствии с законодательством.",
+    adm_modal_title: "Итоги приема студентов 2026/2027 — Официальная инфографика",
+    adm_modal_sub: "Бакинский государственный колледж связи и транспорта Публичное юридическое лицо",
+    ol_eyebrow: "СОВРЕМЕННАЯ ПЕДАГОГИЧЕСКАЯ МЕТОДИКА · ОБРАЗЦОВЫЕ ОТКРЫТЫЕ УРОКИ",
+    ol_title: "Официальные открытые уроки и видеопрезентации колледжа",
+    ol_desc: "Видеозаписи, пояснения тем и полные педагогические отчеты об открытых уроках, проведенных нашими преподавателями с использованием передовых методов обучения, наглядных пособий и интерактивных презентаций.",
+    ol_count_badge: "🎬 4 Открытых урока · 5 Офиц. видео",
+    sub_str_depts: "👥 Руководство и отделы",
+    sub_str_tree: "🏢 Институциональная схема",
+    sub_str_honored: "🎖️ Почетные сотрудники",
+    sub_maj_list: "🎓 14 официальных специальностей",
+    sub_maj_edu: "📚 Учебный процесс и программы",
+    sub_maj_roadmap: "🧭 Дорожная карта студента",
+    sub_maj_intern: "🚆 Производственная практика ↗",
+    sub_sci_articles: "📄 Научные статьи",
+    sub_sci_books: "📚 Публикации преподавателей",
+    sub_sci_conf: "🎤 Научные конференции",
+    sub_sci_sem: "💡 Семинары",
+    sub_sci_open: "👩‍🏫 Открытые уроки",
+    sub_lib_books: "📘 Учебники и пособия (80)",
+    sub_lib_lectures: "📖 Методические материалы и лекции (40)",
+    sub_lib_textbooks: "🔬 Реестр грифованных учебников (8) →",
+    sub_lec_open: "✨ Официальные открытые уроки (4)",
+    sub_lec_studio: "🎬 Студия видеолекций",
+    sub_lec_depts: "👩‍🏫 Предметные отделения (19)",
+    sub_lec_mat: "📖 Учебные материалы (40) →",
+    sub_intl_coop: "🌍 Международное сотрудничество",
+    sub_intl_memo: "🤝 Меморандумы",
+    sub_intl_conf: "🏛️ Международные конференции",
+    sub_intl_cert: "🎖️ Международные сертификаты",
+    sub_intl_portal: "Полный портал меморандумов ↗",
+    sub_stu_honor: "🌟 Почетные студенты (18)",
+    sub_stu_cert: "🎖️ Сертификаты студентов (78)",
+    sub_stu_proj: "🚀 Студенческие проекты",
+    sub_stu_ach: "🏆 Достижения студентов",
+    sub_stu_comp: "🥇 Конкурсы и олимпиады",
+    sub_cert_t: "🎖️ Международные сертификаты (Почетные педагоги)",
+    sub_cert_award: "🏆 Награды и дипломы (24 документа)",
+    sub_cert_pdf: "📥 PDF Архив",
+    sub_news_list: "📰 Официальные новости и объявления (118)",
+    sub_news_gal: "📸 Мероприятия · Фото и Видео галерея",
+    sub_cnt_form: "📩 Электронное обращение",
+    sub_cnt_map: "📞 Контакты и карта",
+    sub_cnt_faq: "❓ Прием и частые вопросы",
   },
 };
 
@@ -3704,21 +4241,32 @@ const openLessonsData = [
     teacher_ru: "Сусанна Алиева",
     teacher_role_az: "Riyaziyyat fənn müəllimi",
     date: "20 Noyabr 2026",
+    date_az: "20 Noyabr 2026",
+    date_en: "20 November 2026",
+    date_ru: "20 Ноября 2026",
     title_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində riyaziyyat fənni üzrə açıq dərs uğurla keçirildi",
     title_en: "Open Mathematics Lesson Successfully Held at Baku State Communications and Transport College",
     title_ru: "В Бакинском государственном колледже связи и транспорта успешно прошел открытый урок по математике",
     desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin riyaziyyat müəllimi Susanna Alıyevanın təqdimatında müasir təlim metodları, əyani vəsaitlər və interaktiv təqdimatlarla zəngin açıq dərs keçirilib.",
+    desc_en: "An engaging open mathematics lesson featuring modern teaching methods, visual aids, and interactive presentations was held by math instructor Susanna Aliyeva.",
+    desc_ru: "Преподавателем математики колледжа Сусанной Алиевой проведен открытый урок с применением современных методик обучения, наглядных пособий и интерактивных презентаций.",
     full_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində növbəti açıq dərs uğurla keçirildi!\n\nBakı Dövlət Rabitə və Nəqliyyat Kollecinin riyaziyyat müəllimi Susanna Alıyevanın təqdimatında riyaziyyat fənni üzrə açıq dərs keçirilib.\n\nAçıq dərs zamanı müəllim tərəfindən mövzunun izahına xüsusi diqqət yetirilmiş, müasir təlim metodlarından, əyani vəsaitlərdən və interaktiv təqdimatlardan istifadə olunmuşdur. Dərsin gedişində tələbələrin fəallığının təmin edilməsi, onların analitik düşünmə, məntiqi mühakimə və müstəqil qərarvermə bacarıqlarının inkişaf etdirilməsi istiqamətində səmərəli iş aparılmışdır.\n\nMüşahidə olunan dərs prosesi müəllimin pedaqoji ustalığını, fənn üzrə bilik və təcrübəsini, tədrisə yaradıcı yanaşmasını və tələbələrlə səmərəli ünsiyyət qurmaq bacarığını nümayiş etdirmişdir.\n\nSusanna Alıyevaya pedaqoji fəaliyyətində uğurlar, yeni nailiyyətlər və tələbələrinin qazandığı uğurlardan daim qürur duymağı arzulayırıq.\n\n#AçıqDərs #Riyaziyyat #SusannaAlıyeva #MüasirTəhsil #BakıDövlətRabitəVəNəqliyyatKolleci",
+    full_en: "Another open lesson was successfully held at Baku State Communications and Transport College!\n\nMathematics instructor Susanna Aliyeva delivered an open lesson utilizing modern teaching methods, visual aids, and interactive presentations.\n\nThroughout the session, special attention was given to developing students' active participation, analytical thinking, logical reasoning, and independent decision-making skills.\n\nWe wish Susanna Aliyeva continued pedagogical success and pride in her students' achievements.",
+    full_ru: "В Бакинском государственном колледже связи и транспорта успешно прошел очередной открытый урок!\n\nПреподаватель математики Сусанна Алиева провела открытый урок с использованием современных методик обучения, наглядных пособий и интерактивных презентаций.\n\nОсобое внимание в ходе занятия было уделено обеспечению активности студентов, развитию их аналитического мышления, логических рассуждений и навыков самостоятельного принятия решений.\n\nЖелаем Сусанне Алиевой дальнейших педагогических успехов и новых достижений!",
     videos: [
       {
         src: "susanna_riyaziyyat_aciq_ders.mp4",
         poster: "susanna_riyaziyyat_aciq_ders_poster.jpg",
-        title_az: "I Hissə: Mövzunun İnteraktiv İzahı və Metodika"
+        title_az: "I Hissə: Mövzunun İnteraktiv İzahı və Metodika",
+        title_en: "Part I: Interactive Topic Explanation & Methodology",
+        title_ru: "Часть I: Интерактивное объяснение и методика"
       },
       {
         src: "susanna_riyaziyyat_aciq_ders_2.mp4",
         poster: "susanna_riyaziyyat_aciq_ders_2_poster.jpg",
-        title_az: "II Hissə: Tələbələrin Fəal İştirakı və Məsələ Həlli"
+        title_az: "II Hissə: Tələbələrin Fəal İştirakı və Məsələ Həlli",
+        title_en: "Part II: Student Participation & Problem Solving",
+        title_ru: "Часть II: Активное участие и решение задач"
       }
     ],
     tags: ["Açıq Dərs", "Riyaziyyat", "Susanna Alıyeva", "Müasir Təhsil"]
@@ -3735,16 +4283,25 @@ const openLessonsData = [
     teacher_ru: "Хумар Джамилова, Гюляр Мустафаева, Джошгун Яхьяев",
     teacher_role_az: "Nəqliyyat fənn birləşməsinin müəllimləri",
     date: "17 Noyabr 2026",
+    date_az: "17 Noyabr 2026",
+    date_en: "17 November 2026",
+    date_ru: "17 Ноября 2026",
     title_az: "“Nəqliyyatda daşınmalar” mövzusu üzrə açıq dərs və tədris videomaterialları",
     title_en: "Open Lesson and Educational Video Materials on “Transport Shipping”",
     title_ru: "Открытый урок и учебные видеоматериалы по теме «Перевозки на транспорте»",
     desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimləri Xumar Cəmilova, Gülər Mustafayeva və Coşqun Yəhyayevin “Nəqliyyatda daşınmalar” mövzusunda apardıqları dərslərə dair təqdim olunan videomateriallar.",
+    desc_en: "Educational video materials from open lessons on 'Transport Shipping' delivered by instructors Khumar Jamilova, Gular Mustafayeva, and Joshgun Yahyayev.",
+    desc_ru: "Учебные видеоматериалы по открытым урокам на тему «Перевозки на транспорте», проведенным преподавателями Хумар Джамиловой, Гюляр Мустафаевой и Джошгуном Яхьяевым.",
     full_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin müəllimləri Xumar Cəmilova, Gülər Mustafayeva və Coşqun Yəhyayevin “Nəqliyyatda daşınmalar” mövzusunda apardıqları dərslərə dair videomateriallar təqdim olunmuşdur.\n\nVideolarda mövzunun tədrisi, dərsin təşkili, istifadə olunan təlim metodları və tələbələrin dərs prosesində fəal iştirakı nümayiş etdirilir.\n\nBu videomaterialların paylaşılmasında əsas məqsəd qabaqcıl pedaqoji təcrübənin öyrənilməsi, müəllimlər arasında təcrübə mübadiləsinin genişləndirilməsi və nəqliyyat sahəsi üzrə tədrisin keyfiyyətinin daha da artırılmasına töhfə verməkdir.",
+    full_en: "Video materials from classes conducted by Baku State Communications and Transport College instructors Khumar Jamilova, Gular Mustafayeva, and Joshgun Yahyayev on “Transport Shipping” have been presented.\n\nThe videos showcase lesson organization, modern teaching methodologies, and active student engagement, aiming to share advanced pedagogical practices and elevate transport education quality.",
+    full_ru: "Представлены видеоматериалы занятий по теме «Перевозки на транспорте», проведенных преподавателями колледжа Хумар Джамиловой, Гюляр Мустафаевой и Джошгуном Яхьяевым.\n\nВ материалах продемонстрированы организация урока, применяемые методики обучения и активное участие студентов с целью обмена передовым педагогическим опытом и повышения качества подготовки специалистов.",
     videos: [
       {
         src: "neqliyyat_dasinmalar_reel.mp4",
         poster: "college_bg.jpg",
-        title_az: "“Nəqliyyatda daşınmalar” dərsinin video icmalı"
+        title_az: "“Nəqliyyatda daşınmalar” dərsinin video icmalı",
+        title_en: "Video Review of 'Transport Shipping' Lesson",
+        title_ru: "Видеообзор урока «Перевозки на транспорте»"
       }
     ],
     tags: ["Açıq Dərs", "Nəqliyyat", "Daşınmalar", "Coşqun Yəhyayev"]
@@ -3761,16 +4318,25 @@ const openLessonsData = [
     teacher_ru: "Рейхан Шамсиева",
     teacher_role_az: "Rabitə müəllimi (III kurs, 365-ci qrup)",
     date: "17 Noyabr 2026",
+    date_az: "17 Noyabr 2026",
+    date_en: "17 November 2026",
+    date_ru: "17 Ноября 2026",
     title_az: "Şəmsiyeva Reyhan müəllimin “Naqilsiz rabitə texnologiyası” fənnindən açıq dərsi keçirildi",
     title_en: "Open Lesson by Teacher Shamsiyeva Reyhan on “Wireless Communication Technology” Held",
     title_ru: "Проведен открытый урок преподавателя Шамсиевой Рейхан по предмету «Беспроводные технологии связи»",
     desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində “Naqilsiz rabitə texnologiyası” fənnindən III kurs, 365-ci qrup tələbələri üçün açıq dərs keçirildi. Dərsin məqsədi tələbələrin nəzəri biliklərinin möhkəmləndirilməsi və praktiki bacarıqlarının inkişafıdır.",
+    desc_en: "An open lesson on 'Wireless Communication Technology' was conducted for 3rd-year group 365 students to strengthen theoretical knowledge and practical telecommunications skills.",
+    desc_ru: "Проведен открытый урок по предмету «Беспроводные технологии связи» для студентов III курса группы 365 с целью закрепления теоретических знаний и практических навыков.",
     full_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində fənn müəllimi Şəmsiyeva Reyhan tərəfindən “Naqilsiz rabitə texnologiyası” fənnindən III kurs, 365-ci qrup tələbələri üçün açıq dərs təşkil olundu.\n\nAçıq dərsin məqsədi tələbələrin nəzəri biliklərinin möhkəmləndirilməsi, praktiki bacarıqlarının inkişaf etdirilməsi və müasir rabitə texnologiyaları üzrə biliklərinin artırılmasıdır.\n\nDərs zamanı simsiz şəbəkə arxitekturası, siqnalların ötürülməsi prinsipləri və naqilsiz rabitənin müasir sənayedə tətbiqi interaktiv formada tələbələrin diqqətinə çatdırılmış, sual-cavab və əyani təqdimatlarla mövzu dərindən mənimsənilmişdir.",
+    full_en: "Instructor Reyhan Shamsiyeva organized an open lesson on “Wireless Communication Technology” for 3rd-year Group 365 students at Baku State Communications and Transport College.\n\nThe session covered wireless network architecture, signal transmission principles, and modern industrial applications through interactive Q&A and visual presentations.",
+    full_ru: "Преподавателем Рейхан Шамсиевой проведен открытый урок по дисциплине «Беспроводные технологии связи» для студентов III курса 365-й группы.\n\nВ ходе урока с использованием наглядных презентаций и интерактивного обсуждения были рассмотрены архитектура беспроводных сетей, принципы передачи сигналов и их применение в современной индустрии связи.",
     videos: [
       {
         src: "reyhan.mp4",
         poster: "college_bg.jpg",
-        title_az: "“Naqilsiz rabitə texnologiyası” açıq dərsi"
+        title_az: "“Naqilsiz rabitə texnologiyası” açıq dərsi",
+        title_en: "Open Lesson: 'Wireless Communication Technology'",
+        title_ru: "Открытый урок «Беспроводные технологии связи»"
       }
     ],
     tags: ["Açıq Dərs", "Naqilsiz Rabitə", "Reyhan Şəmsiyeva", "Telekommunikasiya"]
@@ -3787,16 +4353,25 @@ const openLessonsData = [
     teacher_ru: "Гюнель Мамедова",
     teacher_role_az: "Xarici dillər fənn müəllimi",
     date: "15 Noyabr 2026",
+    date_az: "15 Noyabr 2026",
+    date_en: "15 November 2026",
+    date_ru: "15 Ноября 2026",
     title_az: "İngilis dili fənni üzrə interaktiv açıq dərs və tələbələrin danışıq təcrübəsi",
     title_en: "Interactive English Language Open Lesson and Student Speaking Practice",
     title_ru: "Интерактивный открытый урок по английскому языку и разговорная практика студентов",
     desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin xarici dillər müəllimi Günel Məmmədovanın təqdimatında interaktiv tədris metodları ilə ingilis dili fənni üzrə nümunəvi açıq dərs keçirilmişdir.",
+    desc_en: "An interactive model open lesson in English was delivered by Foreign Languages instructor Gunel Mammadova using modern communicative teaching techniques.",
+    desc_ru: "Преподавателем иностранных языков Гюнель Мамедовой проведен показательный интерактивный открытый урок по английскому языку с применением современных методов обучения.",
     full_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində Günel Məmmədova tərəfindən ingilis dili fənnindən tələbələrin qrammatik və danışıq bacarıqlarının inkişaf etdirilməsi məqsədilə interaktiv açıq dərs keçirilmişdir.\n\nDərs zamanı qrup işləri, canlı dialoqlar və audio-vizual tədris materiallarından geniş istifadə olunmuşdur. Tələbələrin fəal iştirakı ilə xarici dildə sərbəst ünsiyyət mühiti formalaşdırılmış, müasir elektron lüğət və interaktiv platformalar tətbiq edilmişdir.",
+    full_en: "Instructor Gunel Mammadova delivered an interactive English open lesson focused on strengthening students' grammatical accuracy and speaking fluency.\n\nGroup activities, live dialogues, audio-visual resources, digital dictionaries, and interactive platforms fostered an engaging real-world communication environment.",
+    full_ru: "Преподаватель Гюнель Мамедова провела интерактивный открытый урок по английскому языку с целью развития грамматических и разговорных навыков студентов.\n\nНа занятии широко применялись групповая работа, живые диалоги, аудиовизуальные материалы, электронные словари и интерактивные образовательные платформы.",
     videos: [
       {
         src: "ingilis_dili_gunel_mammadova.mp4",
         poster: "ingilis_dili_gunel_mammadova_poster.jpg",
-        title_az: "İngilis dili interaktiv açıq dərsi"
+        title_az: "İngilis dili interaktiv açıq dərsi",
+        title_en: "Interactive English Language Open Lesson",
+        title_ru: "Интерактивный открытый урок английского языка"
       }
     ],
     tags: ["Açıq Dərs", "İngilis Dili", "Günel Məmmədova", "Canlı Dialoq"]
@@ -27944,35 +28519,46 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
      ══════════════════════════════════════════════════════════════════════ */
   (function initAdmissionResultsTable() {
     const admissionMajorsData = [
-      { id: 1, code: "331118", name_az: "Kompüter sistemlərində proqram təminatı", p9_state: 15, p9_paid: 20, a9_state: 15, a9_paid: 20, p11_state: 25, p11_paid: 45, a11_state: 25, a11_paid: 45 },
-      { id: 2, code: "331126", name_az: "Kompüter şəbəkələrinin avadanlıqlarının istismarı", p9_state: 12, p9_paid: 18, a9_state: 12, a9_paid: 18, p11_state: 20, p11_paid: 35, a11_state: 20, a11_paid: 35 },
-      { id: 3, code: "331134", name_az: "İnformasiya texnologiyaları sistemləri", p9_state: 10, p9_paid: 15, a9_state: 10, a9_paid: 15, p11_state: 22, p11_paid: 38, a11_state: 22, a11_paid: 38 },
-      { id: 4, code: "331142", name_az: "Rabitə qovşaqları və kommutasiya sistemləri", p9_state: 6, p9_paid: 9, a9_state: 6, a9_paid: 9, p11_state: 16, p11_paid: 24, a11_state: 16, a11_paid: 23 },
-      { id: 5, code: "331159", name_az: "Poçt rabitəsi xidməti", p9_state: 4, p9_paid: 6, a9_state: 4, a9_paid: 5, p11_state: 10, p11_paid: 15, a11_state: 10, a11_paid: 14 },
-      { id: 6, code: "331167", name_az: "Telekommunikasiya şəbəkələri və sistemləri", p9_state: 8, p9_paid: 12, a9_state: 8, a9_paid: 12, p11_state: 18, p11_paid: 27, a11_state: 18, a11_paid: 26 },
-      { id: 7, code: "331175", name_az: "Radioelektron avadanlıqların təmiri və xidməti", p9_state: 5, p9_paid: 8, a9_state: 5, a9_paid: 7, p11_state: 14, p11_paid: 21, a11_state: 14, a11_paid: 20 },
-      { id: 8, code: "331183", name_az: "Dəmir yolu nəqliyyatında hərəkətin idarə olunması", p9_state: 4, p9_paid: 6, a9_state: 4, a9_paid: 6, p11_state: 15, p11_paid: 25, a11_state: 15, a11_paid: 25 },
-      { id: 9, code: "331191", name_az: "Avtomobil nəqliyyatı ilə daşımaların təşkili", p9_state: 4, p9_paid: 7, a9_state: 4, a9_paid: 7, p11_state: 18, p11_paid: 32, a11_state: 18, a11_paid: 31 },
-      { id: 10, code: "331215", name_az: "Yol hərəkətinin təşkili", p9_state: 4, p9_paid: 6, a9_state: 4, a9_paid: 6, p11_state: 15, p11_paid: 25, a11_state: 15, a11_paid: 24 },
-      { id: 11, code: "331223", name_az: "Nəqliyyatda logistika", p9_state: 4, p9_paid: 7, a9_state: 4, a9_paid: 6, p11_state: 16, p11_paid: 30, a11_state: 16, a11_paid: 30 },
-      { id: 12, code: "331231", name_az: "Mühasibat uçotu", p9_state: 2, p9_paid: 3, a9_state: 2, a9_paid: 3, p11_state: 10, p11_paid: 18, a11_state: 9, a11_paid: 17 },
-      { id: 13, code: "331248", name_az: "Bank işi", p9_state: 2, p9_paid: 3, a9_state: 2, a9_paid: 3, p11_state: 8, p11_paid: 15, a11_state: 7, a11_paid: 15 },
-      { id: 14, code: "331256", name_az: "Marketinq", p9_state: 2, p9_paid: 3, a9_state: 2, a9_paid: 3, p11_state: 8, p11_paid: 16, a11_state: 7, a11_paid: 15 }
+      { id: 1, code: "331118", name_az: "Kompüter sistemlərində proqram təminatı", name_en: "Software in Computer Systems", name_ru: "Программное обеспечение компьютерных систем", p9_state: 15, p9_paid: 20, a9_state: 15, a9_paid: 20, p11_state: 25, p11_paid: 45, a11_state: 25, a11_paid: 45 },
+      { id: 2, code: "331126", name_az: "Kompüter şəbəkələrinin avadanlıqlarının istismarı", name_en: "Operation of Computer Network Equipment", name_ru: "Эксплуатация оборудования компьютерных сетей", p9_state: 12, p9_paid: 18, a9_state: 12, a9_paid: 18, p11_state: 20, p11_paid: 35, a11_state: 20, a11_paid: 35 },
+      { id: 3, code: "331134", name_az: "İnformasiya texnologiyaları sistemləri", name_en: "Information Technology Systems", name_ru: "Системы информационных технологий", p9_state: 10, p9_paid: 15, a9_state: 10, a9_paid: 15, p11_state: 22, p11_paid: 38, a11_state: 22, a11_paid: 38 },
+      { id: 4, code: "331142", name_az: "Rabitə qovşaqları və kommutasiya sistemləri", name_en: "Communication Hubs and Switching Systems", name_ru: "Узлы связи и системы коммутации", p9_state: 6, p9_paid: 9, a9_state: 6, a9_paid: 9, p11_state: 16, p11_paid: 24, a11_state: 16, a11_paid: 23 },
+      { id: 5, code: "331159", name_az: "Poçt rabitəsi xidməti", name_en: "Postal Communication Service", name_ru: "Служба почтовой связи", p9_state: 4, p9_paid: 6, a9_state: 4, a9_paid: 5, p11_state: 10, p11_paid: 15, a11_state: 10, a11_paid: 14 },
+      { id: 6, code: "331167", name_az: "Telekommunikasiya şəbəkələri və sistemləri", name_en: "Telecommunication Networks and Systems", name_ru: "Телекоммуникационные сети и системы", p9_state: 8, p9_paid: 12, a9_state: 8, a9_paid: 12, p11_state: 18, p11_paid: 27, a11_state: 18, a11_paid: 26 },
+      { id: 7, code: "331175", name_az: "Radioelektron avadanlıqların təmiri və xidməti", name_en: "Repair and Maintenance of Radioelectronic Equipment", name_ru: "Ремонт и обслуживание радиоэлектронного оборудования", p9_state: 5, p9_paid: 8, a9_state: 5, a9_paid: 7, p11_state: 14, p11_paid: 21, a11_state: 14, a11_paid: 20 },
+      { id: 8, code: "331183", name_az: "Dəmir yolu nəqliyyatında hərəkətin idarə olunması", name_en: "Traffic Management in Railway Transport", name_ru: "Управление движением на железнодорожном транспорте", p9_state: 4, p9_paid: 6, a9_state: 4, a9_paid: 6, p11_state: 15, p11_paid: 25, a11_state: 15, a11_paid: 25 },
+      { id: 9, code: "331191", name_az: "Avtomobil nəqliyyatı ilə daşımaların təşkili", name_en: "Organization of Road Transport Shipping", name_ru: "Организация перевозок автомобильным транспортом", p9_state: 4, p9_paid: 7, a9_state: 4, a9_paid: 7, p11_state: 18, p11_paid: 32, a11_state: 18, a11_paid: 31 },
+      { id: 10, code: "331215", name_az: "Yol hərəkətinin təşkili", name_en: "Road Traffic Organization", name_ru: "Организация дорожного движения", p9_state: 4, p9_paid: 6, a9_state: 4, a9_paid: 6, p11_state: 15, p11_paid: 25, a11_state: 15, a11_paid: 24 },
+      { id: 11, code: "331223", name_az: "Nəqliyyatda logistika", name_en: "Transport Logistics", name_ru: "Логистика на транспорте", p9_state: 4, p9_paid: 7, a9_state: 4, a9_paid: 6, p11_state: 16, p11_paid: 30, a11_state: 16, a11_paid: 30 },
+      { id: 12, code: "331231", name_az: "Mühasibat uçotu", name_en: "Accounting", name_ru: "Бухгалтерский учет", p9_state: 2, p9_paid: 3, a9_state: 2, a9_paid: 3, p11_state: 10, p11_paid: 18, a11_state: 9, a11_paid: 17 },
+      { id: 13, code: "331248", name_az: "Bank işi", name_en: "Banking", name_ru: "Банковское дело", p9_state: 2, p9_paid: 3, a9_state: 2, a9_paid: 3, p11_state: 8, p11_paid: 15, a11_state: 7, a11_paid: 15 },
+      { id: 14, code: "331256", name_az: "Marketinq", name_en: "Marketing", name_ru: "Маркетинг", p9_state: 2, p9_paid: 3, a9_state: 2, a9_paid: 3, p11_state: 8, p11_paid: 16, a11_state: 7, a11_paid: 15 }
     ];
 
+    let currentView = "basis9";
+
+    const admLabels = {
+      az: { num: "№", name: "İxtisasın Adı", code: "DİM Kodu", plan: "Plan Yeri", actual: "Faktiki Qəbul", fill: "Dolma (%)", state: "dövlət", paid: "ödənişli", total: "YEKUN CƏMİ", b9: "9-İllik Baza", b11: "11-İllik Baza", all: "Kollec Üzrə Cəmi" },
+      en: { num: "#", name: "Specialty Name", code: "SEC Code", plan: "Plan Quota", actual: "Actual Enrolled", fill: "Fill Rate (%)", state: "state", paid: "paid", total: "TOTAL", b9: "9-Year Basis", b11: "11-Year Basis", all: "College Total" },
+      ru: { num: "№", name: "Специальность", code: "Код ГЭЦ", plan: "План мест", actual: "Факт приема", fill: "Заполнение (%)", state: "гос.", paid: "платн.", total: "ИТОГО", b9: "На базе 9 классов", b11: "На базе 11 классов", all: "Всего по колледжу" }
+    };
+
     function renderAdmissionTable(view) {
+      currentView = view || currentView;
       const mount = document.getElementById("admission-table-mount");
       if (!mount) return;
+      const l = (typeof currentLang !== "undefined" && admLabels[currentLang]) ? currentLang : "az";
+      const t = admLabels[l];
 
       let rowsHtml = "";
       let totPlanState = 0, totPlanPaid = 0, totActState = 0, totActPaid = 0;
 
       admissionMajorsData.forEach((m, idx) => {
         let pState = 0, pPaid = 0, aState = 0, aPaid = 0;
-        if (view === "basis9") {
+        if (currentView === "basis9") {
           pState = m.p9_state; pPaid = m.p9_paid;
           aState = m.a9_state; aPaid = m.a9_paid;
-        } else if (view === "basis11") {
+        } else if (currentView === "basis11") {
           pState = m.p11_state; pPaid = m.p11_paid;
           aState = m.a11_state; aPaid = m.a11_paid;
         } else {
@@ -27990,17 +28576,18 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
         totActState += aState; totActPaid += aPaid;
 
         const isFull = pct >= 98.0;
+        const mName = m["name_" + l] || m.name_az;
 
         rowsHtml += `
           <tr class="border-b border-slate-900/[0.05] dark:border-white/[0.05] hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition-colors">
             <td class="px-3 py-2.5 text-xs text-slate-500 dark:text-slate-400 font-mono text-center">${idx + 1}</td>
             <td class="px-3 py-2.5 text-xs font-semibold text-slate-800 dark:text-slate-200">
-              ${m.name_az}
+              ${mName}
             </td>
             <td class="px-2.5 py-2.5 text-xs text-slate-500 dark:text-slate-400 font-mono text-center">${m.code}</td>
             <td class="px-3 py-2.5 text-xs text-slate-600 dark:text-slate-300 text-center">
               <span class="font-bold">${pTotal}</span>
-              <span class="text-[10px] text-slate-400">(${pState} dövlət / ${pPaid} ödənişli)</span>
+              <span class="text-[10px] text-slate-400">(${pState} ${t.state} / ${pPaid} ${t.paid})</span>
             </td>
             <td class="px-3 py-2.5 text-xs text-slate-900 dark:text-white text-center">
               <span class="font-bold text-emerald-600 dark:text-emerald-400">${aTotal}</span>
@@ -28022,17 +28609,18 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
       const grandPlan = totPlanState + totPlanPaid;
       const grandAct = totActState + totActPaid;
       const grandPct = grandPlan > 0 ? ((grandAct / grandPlan) * 100).toFixed(1) : "98.0";
+      const basisLabel = currentView === "basis9" ? t.b9 : currentView === "basis11" ? t.b11 : t.all;
 
       mount.innerHTML = `
         <table class="w-full text-left border-collapse min-w-[620px]">
           <thead>
             <tr class="bg-slate-100/80 dark:bg-slate-800/80 border-b border-slate-900/10 dark:border-white/10 text-[11px] uppercase tracking-wider text-slate-600 dark:text-slate-400">
-              <th class="px-3 py-2.5 text-center font-bold">№</th>
-              <th class="px-3 py-2.5 font-bold">İxtisasın Adı</th>
-              <th class="px-2.5 py-2.5 text-center font-bold">DİM Kodu</th>
-              <th class="px-3 py-2.5 text-center font-bold">Plan Yeri</th>
-              <th class="px-3 py-2.5 text-center font-bold">Faktiki Qəbul</th>
-              <th class="px-3 py-2.5 text-center font-bold">Dolma (%)</th>
+              <th class="px-3 py-2.5 text-center font-bold">${t.num}</th>
+              <th class="px-3 py-2.5 font-bold">${t.name}</th>
+              <th class="px-2.5 py-2.5 text-center font-bold">${t.code}</th>
+              <th class="px-3 py-2.5 text-center font-bold">${t.plan}</th>
+              <th class="px-3 py-2.5 text-center font-bold">${t.actual}</th>
+              <th class="px-3 py-2.5 text-center font-bold">${t.fill}</th>
             </tr>
           </thead>
           <tbody>
@@ -28042,13 +28630,13 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
             <tr class="bg-amber-500/[0.08] dark:bg-amber-500/[0.12] border-t-2 border-amber-500/30 font-bold text-xs">
               <td class="px-3 py-3 text-center text-amber-700 dark:text-amber-300">★</td>
               <td class="px-3 py-3 text-slate-900 dark:text-white" colspan="2">
-                YEKUN CƏMİ (${view === "basis9" ? "9-İllik Baza" : view === "basis11" ? "11-İllik Baza" : "Kollec Üzrə Cəmi"})
+                ${t.total} (${basisLabel})
               </td>
               <td class="px-3 py-3 text-center text-slate-900 dark:text-white">
-                ${grandPlan} <span class="text-[10px] font-normal text-slate-500">(${totPlanState} dövlət / ${totPlanPaid} ödənişli)</span>
+                ${grandPlan} <span class="text-[10px] font-normal text-slate-500">(${totPlanState} ${t.state} / ${totPlanPaid} ${t.paid})</span>
               </td>
               <td class="px-3 py-3 text-center text-emerald-600 dark:text-emerald-400">
-                ${grandAct} <span class="text-[10px] font-normal text-slate-500">(${totActState} dövlət / ${totActPaid} ödənişli)</span>
+                ${grandAct} <span class="text-[10px] font-normal text-slate-500">(${totActState} ${t.state} / ${totActPaid} ${t.paid})</span>
               </td>
               <td class="px-3 py-3 text-center">
                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-black bg-emerald-600 text-white shadow-sm">
@@ -28061,7 +28649,6 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
       `;
     }
 
-    // Tab buttons event listeners
     const tabBtns = document.querySelectorAll(".admission-table-tab-btn");
     tabBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -28072,7 +28659,6 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
       });
     });
 
-    // Poster Modal Trigger
     const zoomBtn = document.getElementById("btn-zoom-admission-poster");
     const modal = document.getElementById("admission-poster-modal");
     const closeBtn = document.getElementById("admission-poster-modal-close");
@@ -28108,7 +28694,7 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
       });
     }
 
-    // Initial render
+    document.addEventListener("languageChanged", () => renderAdmissionTable(currentView));
     renderAdmissionTable("basis9");
   })();
 
@@ -28124,6 +28710,48 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
 
     let currentLessonId = openLessonsData[0].id;
     let currentVideoIdx = 0;
+
+    const olUi = {
+      az: {
+        videoParts: "Dərsin Video Hissələri:",
+        part: "Hissə",
+        noSupport: "Brauzeriniz video oxutmağı dəstəkləmir.",
+        studioNote: "Rəsmi Dərs Qeydiyyatı · BDRNK Video Studiyası",
+        videoLesson: "Video Dərs",
+        videoPlural: "Video",
+        openLesson: "Açıq Dərs",
+        selected: "Seçilib ✓",
+        watchRead: "Bax & Oxu →"
+      },
+      en: {
+        videoParts: "Lesson Video Parts:",
+        part: "Part",
+        noSupport: "Your browser does not support video playback.",
+        studioNote: "Official Lesson Recording · BDRNK Video Studio",
+        videoLesson: "Video Lesson",
+        videoPlural: "Videos",
+        openLesson: "Open Lesson",
+        selected: "Selected ✓",
+        watchRead: "Watch & Read →"
+      },
+      ru: {
+        videoParts: "Видеочасти урока:",
+        part: "Часть",
+        noSupport: "Ваш браузер не поддерживает воспроизведение видео.",
+        studioNote: "Официальная запись урока · Видеостудия БДРНК",
+        videoLesson: "Видеоурок",
+        videoPlural: "видео",
+        openLesson: "Открытый урок",
+        selected: "Выбрано ✓",
+        watchRead: "Смотреть и читать →"
+      }
+    };
+
+    const getLangCode = () => (typeof currentLang !== "undefined" && olUi[currentLang]) ? currentLang : "az";
+    const getField = (obj, key) => {
+      const l = getLangCode();
+      return obj[key + "_" + l] || obj[key + "_az"] || obj[key] || "";
+    };
 
     function esc(str) {
       if (!str) return "";
@@ -28149,7 +28777,7 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
                     }" 
                     data-lesson-id="${item.id}">
               <span>${item.subject_icon}</span>
-              <span>${esc(item.subject_az)} (${esc(item.teacher_az)})</span>
+              <span>${esc(getField(item, "subject"))} (${esc(getField(item, "teacher"))})</span>
             </button>
           `;
         })
@@ -28170,8 +28798,10 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
     function renderFeaturedStage() {
       const lesson = openLessonsData.find((l) => l.id === currentLessonId) || openLessonsData[0];
       const video = lesson.videos[currentVideoIdx] || lesson.videos[0];
+      const t = olUi[getLangCode()];
+      const fullText = getField(lesson, "full");
 
-      const paragraphs = lesson.full_az
+      const paragraphs = fullText
         .split("\n\n")
         .map((p) => {
           const trimmed = p.trim();
@@ -28179,7 +28809,7 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
           if (trimmed.startsWith("#")) {
             const tags = trimmed
               .split(/\s+/)
-              .map((t) => `<span class="inline-block px-2.5 py-1 text-xs font-semibold rounded-lg bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20 mr-1.5 mb-1.5">${esc(t)}</span>`)
+              .map((tag) => `<span class="inline-block px-2.5 py-1 text-xs font-semibold rounded-lg bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20 mr-1.5 mb-1.5">${esc(tag)}</span>`)
               .join("");
             return `<div class="pt-2 flex flex-wrap">${tags}</div>`;
           }
@@ -28191,7 +28821,7 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
         lesson.videos.length > 1
           ? `
           <div class="mt-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-900/80 border border-slate-900/10 dark:border-white/10 flex flex-wrap items-center gap-2">
-            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Dərsin Video Hissələri:</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">${t.videoParts}</span>
             ${lesson.videos
               .map(
                 (v, idx) => `
@@ -28202,7 +28832,7 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
                             : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-900/10 dark:border-white/10 hover:bg-slate-200"
                         }" 
                         data-vid-idx="${idx}">
-                  📹 ${esc(v.title_az || `Hissə ${idx + 1}`)}
+                  📹 ${esc(getField(v, "title") || `${t.part} ${idx + 1}`)}
                 </button>
               `
               )
@@ -28213,7 +28843,6 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
 
       featuredStage.innerHTML = `
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-          <!-- Left Column: Video Player Showcase -->
           <div class="lg:col-span-7 space-y-3">
             <div class="open-lesson-player-box relative rounded-2xl overflow-hidden bg-slate-950 shadow-2xl border border-slate-900/20 dark:border-white/10 aspect-video flex items-center justify-center">
               <video id="open-lesson-active-video" 
@@ -28223,36 +28852,35 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
                      preload="metadata" 
                      poster="${video.poster || 'college_bg.jpg'}">
                 <source src="${video.src}" type="video/mp4">
-                Brauzeriniz video oxutmağı dəstəkləmir.
+                ${t.noSupport}
               </video>
             </div>
             ${videoSwitchButtons}
             <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 px-1">
-              <span>Rəsmi Dərs Qeydiyyatı · BDRNK Video Studiyası</span>
+              <span>${t.studioNote}</span>
               <span class="font-mono">${esc(video.src)}</span>
             </div>
           </div>
 
-          <!-- Right Column: Full Written Pedagogical Article -->
           <div class="lg:col-span-5 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
               <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-[#0a2240] text-white dark:bg-[#c8a45d] dark:text-slate-950">
-                ${lesson.subject_icon} ${esc(lesson.subject_az)}
+                ${lesson.subject_icon} ${esc(getField(lesson, "subject"))}
               </span>
               <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
-                👩‍🏫 ${esc(lesson.teacher_az)}
+                👩‍🏫 ${esc(getField(lesson, "teacher"))}
               </span>
               <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
-                📅 ${esc(lesson.date)}
+                📅 ${esc(getField(lesson, "date"))}
               </span>
             </div>
 
             <h4 class="font-display text-xl sm:text-2xl font-black text-slate-900 dark:text-white leading-snug">
-              ${esc(lesson.title_az)}
+              ${esc(getField(lesson, "title"))}
             </h4>
 
             <div class="p-3.5 rounded-xl bg-amber-500/[0.08] dark:bg-amber-500/[0.12] border-l-4 border-amber-500 text-xs sm:text-sm text-slate-800 dark:text-slate-200 italic font-medium leading-relaxed">
-              «${esc(lesson.desc_az)}»
+              «${esc(getField(lesson, "desc"))}»
             </div>
 
             <div class="open-lesson-full-text prose dark:prose-invert max-w-none max-h-[340px] overflow-y-auto pr-2 scrollbar-thin text-xs sm:text-sm text-slate-700 dark:text-slate-300">
@@ -28278,10 +28906,12 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
 
     function renderCardsGrid() {
       if (!cardsGrid) return;
+      const t = olUi[getLangCode()];
       cardsGrid.innerHTML = openLessonsData
         .map((item) => {
           const isSelected = item.id === currentLessonId;
           const mainVideo = item.videos[0];
+          const itemTitle = getField(item, "title");
           return `
             <div class="open-lesson-card group cursor-pointer p-4 rounded-2xl transition-all duration-300 border flex flex-col justify-between ${
               isSelected
@@ -28290,35 +28920,35 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
             }" data-card-lesson-id="${item.id}">
               <div class="space-y-3">
                 <div class="relative rounded-xl overflow-hidden bg-slate-950 aspect-video flex items-center justify-center">
-                  <img src="${mainVideo.poster || 'college_bg.jpg'}" alt="${esc(item.title_az)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                  <img src="${mainVideo.poster || 'college_bg.jpg'}" alt="${esc(itemTitle)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                   <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/25 transition-colors">
                     <span class="w-10 h-10 rounded-full bg-white/90 dark:bg-[#c8a45d] text-slate-900 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform font-bold text-sm">
                       ▶
                     </span>
                   </div>
                   <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-md text-[10px] font-bold bg-black/75 text-white backdrop-blur-sm">
-                    ${item.videos.length > 1 ? `${item.videos.length} Video` : "Video Dərs"}
+                    ${item.videos.length > 1 ? `${item.videos.length} ${t.videoPlural}` : t.videoLesson}
                   </span>
                 </div>
 
                 <div class="space-y-1">
                   <div class="flex items-center gap-1.5 text-[11px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
                     <span>${item.subject_icon}</span>
-                    <span>${esc(item.subject_az)}</span>
+                    <span>${esc(getField(item, "subject"))}</span>
                   </div>
                   <h5 class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2 leading-snug">
-                    ${esc(item.teacher_az)} — Açıq Dərs
+                    ${esc(getField(item, "teacher"))} — ${t.openLesson}
                   </h5>
                   <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">
-                    ${esc(item.desc_az)}
+                    ${esc(getField(item, "desc"))}
                   </p>
                 </div>
               </div>
 
               <div class="pt-3 mt-3 border-t border-slate-900/[0.06] dark:border-white/[0.06] flex items-center justify-between text-xs">
-                <span class="text-slate-400">${esc(item.date)}</span>
+                <span class="text-slate-400">${esc(getField(item, "date"))}</span>
                 <span class="font-bold text-[#0a2240] dark:text-[#c8a45d] group-hover:translate-x-0.5 transition-transform">
-                  ${isSelected ? "Seçilib ✓" : "Bax & Oxu →"}
+                  ${isSelected ? t.selected : t.watchRead}
                 </span>
               </div>
             </div>
@@ -28348,6 +28978,7 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
       renderCardsGrid();
     }
 
+    document.addEventListener("languageChanged", renderAll);
     renderAll();
   })();
 
