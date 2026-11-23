@@ -24511,7 +24511,7 @@ function initSceneTransition() {
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "№ 202",
-      name_az: "Ceyhun müəllim", name_en: "Faculty Office (Jeyhun M.)", name_ru: "Кабинет преподавателя (Джейхун м.)",
+      name_az: "Müəllim kabineti", name_en: "Faculty Office", name_ru: "Кабинет преподавателя",
       cat: "classroom",
       catLabel_az: "Müəllim Kabineti", catLabel_en: "Faculty Office", catLabel_ru: "Кабинет преподавателя",
       icon: "👨‍🏫",
@@ -24914,7 +24914,7 @@ function initSceneTransition() {
       countBadge_az: "11 Əsas Otaq və Mərkəz", countBadge_en: "11 Main Rooms & Hubs", countBadge_ru: "11 Основных Помещений",
       wings_az: [
         { label: "Mərkəzi Qanad", text: "Direktor otağı (Qəbul otağı)", icon: "🏛️" },
-        { label: "Qərb Qanadı", text: "205 (Tədris müavini), Həmkar otağı, Mühəndis (FBK 2 otaq), 201, 203 (Kompüter), 202 (Ceyhun m.)", icon: "⬅️" },
+        { label: "Qərb Qanadı", text: "205 (Tədris müavini), Həmkar otağı, Mühəndis (FBK 2 otaq), 201, 203 (Kompüter), 202 (Müəllim kabineti)", icon: "⬅️" },
         { label: "Şərq Qanadı", text: "214 (Qeydiyyat & Monitorinq), 217 (Metodiki kabinet), 211 (Kompüter otağı)", icon: "➡️" },
         { label: "Kitabxana", text: "206 - Kitabxana və Oxu Zalı (2 otaq daxilində)", icon: "📚" }
       ],
