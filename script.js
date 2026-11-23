@@ -3191,7 +3191,7 @@ const staffData = {
       name_az: "İsmayıl Səfiyev Allahverdi oğlu",
       name_en: "Ismayil Safiyev Allahverdi",
       name_ru: "Исмаил Сафиев Аллахверди оглы",
-      role_az: "Inzibati təsərüffat işləri üzrə direktor müavini",
+      role_az: "İnzibati təsərüffat işləri üzrə direktor müavini",
       role_en: "Deputy Director for Administrative & Economic Affairs",
       role_ru: "Заместитель директора по административно-хозяйственной части",
       img: "ismayilx.jpeg",
