@@ -12570,6 +12570,18 @@ document.addEventListener("DOMContentLoaded", () => {
               label: "BDRNK Kollektivi Cıdır Düzündə · Şuşa Zirvəsi",
               catTitle: "Qarabağ Zəfər Salnaməsi",
               type: "image"
+            },
+            {
+              src: "qarabag_foto_3.jpg",
+              label: "BDRNK Kollektivi Qarabağ Universitetində · Xankəndi",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "image"
+            },
+            {
+              src: "qarabag_foto_4.jpg",
+              label: "BDRNK Kollektivi Yuxarı Gövhər Ağa Məscidində · Şuşa",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "image"
             }
           ], 0, true);
         } else {
@@ -12593,6 +12605,18 @@ document.addEventListener("DOMContentLoaded", () => {
             {
               src: "qarabag_foto_2.jpg",
               label: "BDRNK Kollektivi Cıdır Düzündə · Şuşa Zirvəsi",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "image"
+            },
+            {
+              src: "qarabag_foto_3.jpg",
+              label: "BDRNK Kollektivi Qarabağ Universitetində · Xankəndi",
+              catTitle: "Qarabağ Zəfər Salnaməsi",
+              type: "image"
+            },
+            {
+              src: "qarabag_foto_4.jpg",
+              label: "BDRNK Kollektivi Yuxarı Gövhər Ağa Məscidində · Şuşa",
               catTitle: "Qarabağ Zəfər Salnaməsi",
               type: "image"
             },
@@ -12740,6 +12764,24 @@ function initGalleryModule() {
         label_en: "BDRNK Collective in Shusha · Jydyr Duzu",
         label_ru: "Коллектив БГКСТ в Шуше · Джидыр Дюзю",
         badge: "ŞUŞA · CIDIR DÜZÜ",
+      },
+      {
+        type: "image",
+        src: "qarabag_foto_3.jpg",
+        label: "BDRNK Kollektivi Qarabağ Universitetində · Xankəndi",
+        label_az: "BDRNK Kollektivi Qarabağ Universitetində · Xankəndi",
+        label_en: "BDRNK Collective at Karabakh University · Khankendi",
+        label_ru: "Коллектив БГКСТ в Карабахском университете · Ханкенди",
+        badge: "QARABAĞ UNİVERSİTETİ",
+      },
+      {
+        type: "image",
+        src: "qarabag_foto_4.jpg",
+        label: "BDRNK Kollektivi Yuxarı Gövhər Ağa Məscidində · Şuşa",
+        label_az: "BDRNK Kollektivi Yuxarı Gövhər Ağa Məscidində · Şuşa",
+        label_en: "BDRNK Collective at Upper Govhar Agha Mosque · Shusha",
+        label_ru: "Коллектив БГКСТ в мечети Юхары Гёвхар-ага · Шуша",
+        badge: "ŞUŞA · GÖVHƏR AĞA MƏSCİDİ",
       },
       {
         type: "youtube",
