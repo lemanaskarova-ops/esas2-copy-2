@@ -391,17 +391,66 @@
             <div id="desktop-nav"
                 class="workspace-nav-inner max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 flex items-center gap-1.5 overflow-x-auto"
                 role="tablist">
-                <a href="?tab=about" data-workspace-tab="about" role="tab" aria-selected="true"
-                    title="Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız"
-                    class="workspace-tab-btn is-active shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
-                    <span class="wtab-num" aria-hidden="true">1</span><span data-i18n="nav_s1">Haqqımızda</span><span
-                        class="sr-only" data-i18n="nav_s1_sub">Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız</span>
-                </a>
-                <a href="?tab=structure" data-workspace-tab="structure" role="tab" aria-selected="false"
-                    title="Rəhbərlik, şöbələr, bölmələr və əməkdaşlar"
+                <!-- 1. Haqqımızda (Hover Dropdown with Rəhbərlik və Struktur) -->
+                <div class="nav-tab-dropdown-wrapper relative group shrink-0">
+                    <a href="?tab=about" data-workspace-tab="about" role="tab" aria-selected="true"
+                        title="Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız"
+                        class="workspace-tab-btn is-active shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
+                        <span class="wtab-num" aria-hidden="true">1</span><span data-i18n="nav_s1">Haqqımızda</span>
+                        <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <span class="sr-only" data-i18n="nav_s1_sub">Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız</span>
+                    </a>
+                    <!-- Hover Dropdown Menu -->
+                    <div class="nav-tab-dropdown-menu">
+                        <div class="nav-tab-dropdown-panel">
+                            <a href="?tab=about" data-workspace-tab="about" class="nav-tab-dropdown-item">
+                                <span class="text-base" aria-hidden="true">🏛️</span>
+                                <div>
+                                    <div class="font-semibold text-xs text-slate-900 dark:text-white" data-i18n="nav_s1">Haqqımızda</div>
+                                    <div class="text-[10px] text-slate-500 dark:text-slate-400">Tarix, missiya və inkişaf yolu</div>
+                                </div>
+                            </a>
+                            <a href="?tab=structure" data-workspace-tab="structure" class="nav-tab-dropdown-item featured">
+                                <span class="text-base" aria-hidden="true">👥</span>
+                                <div>
+                                    <div class="font-semibold text-xs text-emerald-800 dark:text-emerald-300 flex items-center gap-1.5">
+                                        <span data-i18n="nav_structure">Rəhbərlik və struktur</span>
+                                        <span class="text-[9px] px-1.5 py-0.2 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 font-bold uppercase">Bölmə</span>
+                                    </div>
+                                    <div class="text-[10px] text-slate-500 dark:text-slate-400">Rəhbərlik, şöbələr, bölmələr və FBK-lar</div>
+                                </div>
+                            </a>
+                            <a href="?tab=structure#honored-staff-highlight" data-workspace-tab="structure" data-focus-anchor="honored-staff-highlight" class="nav-tab-dropdown-item">
+                                <span class="text-base" aria-hidden="true">🎖️</span>
+                                <div>
+                                    <div class="font-semibold text-xs text-slate-900 dark:text-white">Fəxri əməkdaşlar</div>
+                                    <div class="text-[10px] text-slate-500 dark:text-slate-400">Kollecin xidmətli pedaqoqları</div>
+                                </div>
+                            </a>
+                            <a href="?tab=about#campus-navigator" data-workspace-tab="about" data-focus-anchor="campus-navigator" class="nav-tab-dropdown-item">
+                                <span class="text-base" aria-hidden="true">🗺️</span>
+                                <div>
+                                    <div class="font-semibold text-xs text-slate-900 dark:text-white">Kampus & Otaqlar</div>
+                                    <div class="text-[10px] text-slate-500 dark:text-slate-400">5 mərtəbəli naviqator</div>
+                                </div>
+                            </a>
+                            <a href="?tab=about#qarabag" data-workspace-tab="about" data-focus-anchor="qarabag" class="nav-tab-dropdown-item">
+                                <span class="text-base" aria-hidden="true">🇦🇿</span>
+                                <div>
+                                    <div class="font-semibold text-xs text-slate-900 dark:text-white">Qarabağ Zəfər Salnaməsi</div>
+                                    <div class="text-[10px] text-slate-500 dark:text-slate-400">Qəhrəman məzunlarımız</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Tələbə qəbulu (Əsas kateqoriya) -->
+                <a href="?tab=admission" data-workspace-tab="admission" role="tab" aria-selected="false"
+                    title="2025/2026 qəbul qaydaları, tələb olunan sənədlər, keçid balları və bələdçi"
                     class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
-                    <span class="wtab-num" aria-hidden="true">2</span><span data-i18n="nav_s2">Rəhbərlik və struktur</span><span
-                        class="sr-only" data-i18n="nav_s2_sub">Rəhbərlik, şöbələr, bölmələr və əməkdaşlar</span>
+                    <span class="wtab-num" aria-hidden="true">2</span><span data-i18n="nav_s2">Tələbə qəbulu</span><span
+                        class="sr-only" data-i18n="nav_s2_sub">2025/2026 qəbul qaydaları, sənədlər, keçid balları və bələdçi</span>
                 </a>
                 <a href="?tab=majors" data-workspace-tab="majors" role="tab" aria-selected="false"
                     title="İxtisaslar, tədris prosesi, təhsil proqramları"
@@ -523,9 +572,17 @@
                     </svg>
                 </button>
                 <div class="mobile-nav-sub">
-                    <a href="#about" class="mobile-nav-sublink">
+                    <a href="?tab=about" class="mobile-nav-sublink" data-workspace-tab="about">
                         <span class="mobile-sub-bullet" aria-hidden="true">🏛️</span>
                         <span data-i18n="nav_s1">Haqqımızda</span>
+                    </a>
+                    <a href="?tab=structure" class="mobile-nav-sublink font-semibold text-emerald-600 dark:text-emerald-400" data-workspace-tab="structure">
+                        <span class="mobile-sub-bullet" aria-hidden="true">👥</span>
+                        <span data-i18n="nav_structure">Rəhbərlik və struktur</span>
+                    </a>
+                    <a href="?tab=structure#honored-staff-highlight" class="mobile-nav-sublink" data-workspace-tab="structure" data-focus-anchor="honored-staff-highlight">
+                        <span class="mobile-sub-bullet" aria-hidden="true">🎖️</span>
+                        <span>Fəxri əməkdaşlar</span>
                     </a>
                     <a href="#campus-navigator" class="mobile-nav-sublink">
                         <span class="mobile-sub-bullet" aria-hidden="true">🗺️</span>
@@ -542,12 +599,12 @@
                 </div>
             </div>
 
-            <!-- 2. Rəhbərlik və Təhsil Group -->
+            <!-- 2. Tələbə Qəbulu Group -->
             <div class="mobile-nav-group">
                 <button type="button" class="mobile-nav-header" aria-expanded="false">
                     <span class="mobile-nav-header-left">
-                        <span class="mobile-nav-icon" aria-hidden="true">2–3</span>
-                        <span>Rəhbərlik · Təhsil · İxtisaslar</span>
+                        <span class="mobile-nav-icon" aria-hidden="true">2</span>
+                        <span data-i18n="nav_s2">Tələbə qəbulu</span>
                     </span>
                     <svg class="mobile-group-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2.2" aria-hidden="true">
@@ -555,14 +612,46 @@
                     </svg>
                 </button>
                 <div class="mobile-nav-sub">
-                    <a href="#structure" class="mobile-nav-sublink" data-struct-cat="leadership">
-                        <span class="mobile-sub-bullet" aria-hidden="true">👥</span>
-                        <span data-i18n="nav_s2">Rəhbərlik və struktur</span>
+                    <a href="?tab=admission#admission-overview" class="mobile-nav-sublink" data-workspace-tab="admission">
+                        <span class="mobile-sub-bullet" aria-hidden="true">📢</span>
+                        <span>Qəbul Qaydaları & Şərtlər</span>
                     </a>
-                    <a href="#honored-staff-highlight" class="mobile-nav-sublink">
-                        <span class="mobile-sub-bullet" aria-hidden="true">🎖️</span>
-                        <span>Fəxri əməkdaşlar</span>
+                    <a href="?tab=admission#admission-roadmap" class="mobile-nav-sublink" data-workspace-tab="admission">
+                        <span class="mobile-sub-bullet" aria-hidden="true">🧭</span>
+                        <span>Tələbənin Yol Xəritəsi</span>
                     </a>
+                    <a href="?tab=admission#admission-docs" class="mobile-nav-sublink" data-workspace-tab="admission">
+                        <span class="mobile-sub-bullet" aria-hidden="true">📋</span>
+                        <span>Tələb Olunan Sənədlər</span>
+                    </a>
+                    <a href="?tab=admission#admission-majors" class="mobile-nav-sublink" data-workspace-tab="admission">
+                        <span class="mobile-sub-bullet" aria-hidden="true">🎓</span>
+                        <span>14 Rəsmi İxtisas</span>
+                    </a>
+                    <a href="?tab=admission#admission-calculator" class="mobile-nav-sublink" data-workspace-tab="admission">
+                        <span class="mobile-sub-bullet" aria-hidden="true">🧮</span>
+                        <span>Bal Kalkulyatoru</span>
+                    </a>
+                    <a href="?tab=admission#admission-faq" class="mobile-nav-sublink" data-workspace-tab="admission">
+                        <span class="mobile-sub-bullet" aria-hidden="true">❓</span>
+                        <span>Qəbul FAQ & Əlaqə</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. Təhsil və İxtisaslar Group -->
+            <div class="mobile-nav-group">
+                <button type="button" class="mobile-nav-header" aria-expanded="false">
+                    <span class="mobile-nav-header-left">
+                        <span class="mobile-nav-icon" aria-hidden="true">3</span>
+                        <span>Təhsil və İxtisaslar</span>
+                    </span>
+                    <svg class="mobile-group-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="mobile-nav-sub">
                     <a href="#majors-section" class="mobile-nav-sublink" data-struct-cat="majors">
                         <span class="mobile-sub-bullet" aria-hidden="true">🎓</span>
                         <span data-i18n="nav_s3">Təhsil və ixtisaslar (14 İxtisas)</span>
@@ -2596,15 +2685,376 @@
 
         </div>
 
-        <!-- ══ 2. RƏHBƏRLİK VƏ STRUKTUR ══ -->
-        <div id="panel-structure" class="tab-workspace-panel" data-tab-panel="structure" role="tabpanel" aria-hidden="true">
+        <!-- ══ 2. TƏLƏBƏ QƏBULU ══ -->
+        <div id="panel-admission" class="tab-workspace-panel" data-tab-panel="admission" role="tabpanel" aria-hidden="true">
             <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
                 <div class="section-subnav-inner max-w-7xl mx-auto">
                     <div class="subnav-header-row">
                         <span class="subnav-num-badge">02</span>
                         <div>
-                            <h2 class="subnav-title" data-i18n="nav_s2">Rəhbərlik və struktur</h2>
-                            <p class="subnav-sub" data-i18n="nav_s2_sub">Rəhbərlik, şöbələr, bölmələr və əməkdaşlar</p>
+                            <h2 class="subnav-title" data-i18n="nav_s2">Tələbə qəbulu</h2>
+                            <p class="subnav-sub" data-i18n="nav_s2_sub">2025/2026 qəbul qaydaları, tələb olunan sənədlər, keçid balları və bələdçi</p>
+                        </div>
+                    </div>
+                    <div class="subnav-pills-wrap">
+                        <a href="#admission-overview" class="subnav-pill">📢 Qəbul Elanı</a>
+                        <a href="#admission-roadmap" class="subnav-pill">🧭 Tələbənin Yol Xəritəsi</a>
+                        <a href="#admission-docs" class="subnav-pill">📋 Tələb Olunan Sənədlər</a>
+                        <a href="#admission-majors" class="subnav-pill">🎓 14 Rəsmi İxtisas</a>
+                        <a href="#admission-faq" class="subnav-pill">❓ Qəbul FAQ & Əlaqə</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Qəbul Overview Section -->
+            <section class="section relative py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-900/[0.06] dark:border-white/[0.06]" id="admission-overview">
+                <div class="max-w-7xl mx-auto space-y-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-7 space-y-5">
+                            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                                📢 2025/2026 TƏDRİS İLİ ÜÇÜN RƏSMİ QƏBUL ELANI
+                            </span>
+                            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+                                Bakı Dövlət Rabitə və Nəqliyyat Kollecinə <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-500 to-sky-500">Tələbə Qəbulu</span>
+                            </h2>
+                            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                                Kollecə tələbə qəbulu Azərbaycan Respublikası <strong>Dövlət İmtahan Mərkəzi (DİM)</strong> tərəfindən mərkəzləşdirilmiş qaydada ümumi orta (<strong>9 illik</strong>) və tam orta (<strong>11 illik</strong>) təhsil bazasında aparılır. Tədris dövlət sifarişi (təqaüdlü və ödənişsiz) və ödənişli əsaslarla əyani və qiyabi formalarda təşkil olunur.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-2">
+                                <a href="https://portal.edu.az" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm shadow-lg shadow-emerald-600/20 transition-all hover:-translate-y-0.5">
+                                    <span>🌐 Portal.edu.az Qeydiyyat</span>
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                                <a href="#admission-roadmap" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-sm transition-colors">
+                                    <span>🧭 Yol Xəritəsinə Bax</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 shadow-sm flex flex-col justify-between">
+                                <span class="text-3xl mb-2">🎓</span>
+                                <div class="text-2xl font-extrabold text-slate-900 dark:text-white">14</div>
+                                <div class="text-xs font-semibold text-slate-600 dark:text-slate-400">Rəsmi İxtisas (İKT, Nəqliyyat, Rabitə)</div>
+                            </div>
+                            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 shadow-sm flex flex-col justify-between">
+                                <span class="text-3xl mb-2">📑</span>
+                                <div class="text-2xl font-extrabold text-slate-900 dark:text-white">9 & 11</div>
+                                <div class="text-xs font-semibold text-slate-600 dark:text-slate-400">İllik Təhsil Bazasında Müsabiqə</div>
+                            </div>
+                            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 shadow-sm flex flex-col justify-between">
+                                <span class="text-3xl mb-2">💳</span>
+                                <div class="text-2xl font-extrabold text-slate-900 dark:text-white">Dövlət</div>
+                                <div class="text-xs font-semibold text-slate-600 dark:text-slate-400">Sifarişli & Ödənişsiz Təhsil Yerləri</div>
+                            </div>
+                            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 shadow-sm flex flex-col justify-between">
+                                <span class="text-3xl mb-2">🎖️</span>
+                                <div class="text-2xl font-extrabold text-slate-900 dark:text-white">Təqaüd</div>
+                                <div class="text-xs font-semibold text-slate-600 dark:text-slate-400">Əlaçı və Həvəsləndirici Təqaüdlər</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tələbənin Yol Xəritəsi (Roadmap) -->
+            <section class="section relative py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-900/[0.06] dark:border-white/[0.06]" id="admission-roadmap">
+                <div class="max-w-7xl mx-auto space-y-8">
+                    <div>
+                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-500/20">
+                            🧭 ADDIM-ADDIM BƏLƏDÇİ
+                        </span>
+                        <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-2">
+                            Abituriyentin Qəbul və Qeydiyyat Yol Xəritəsi
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-3xl">
+                            DİM imtahanından ilk dərs gününə qədər keçəcəyiniz bütün addımlar aydın şəkildə sıralanmışdır.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 relative">
+                            <span class="w-8 h-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm mb-3">1</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">İxtisas Seçimi</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">DİM müsabiqəsində BDRNK-nın 14 ixtisas kodunu qeyd edin.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 relative">
+                            <span class="w-8 h-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm mb-3">2</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Elektron Qeydiyyat</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">portal.edu.az platformasında onlayn qeydiyyatdan keçin.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 relative">
+                            <span class="w-8 h-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm mb-3">3</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Sənəd Təqdimatı</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Tələb olunan sənədlər paketini kollecin Qəbul Komissiyasına təqdim edin.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 relative">
+                            <span class="w-8 h-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm mb-3">4</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Tanışlıq & Qeydiyyat</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Tədris korpusları, laboratoriyalar və qrup rəhbərləri ilə tanışlıq günü.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 relative">
+                            <span class="w-8 h-8 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm mb-3">5</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">İlk Dərs Günü!</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Tələbə biletinin təqdim olunması və dərslərə rəsmi start verilməsi.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tələb Olunan Sənədlər Section -->
+            <section class="section relative py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-900/[0.06] dark:border-white/[0.06]" id="admission-docs">
+                <div class="max-w-7xl mx-auto space-y-8">
+                    <div>
+                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20">
+                            📋 SƏNƏDLƏR PAKETİ
+                        </span>
+                        <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-2">
+                            Qəbul Üçün Tələb Olunan Rəsmi Sənədlər
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-3xl">
+                            Qəbul Komissiyasına müraciət edərkən aşağıdakı sənədlərin əsli və nüsxələrini təqdim etməlisiniz.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 shadow-sm flex flex-col gap-2">
+                            <span class="text-2xl">📜</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Təhsil Sənədi</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Ümumi orta (şəhadətnamə) və ya tam orta təhsil haqqında sənədin (attestat) əsli.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 shadow-sm flex flex-col gap-2">
+                            <span class="text-2xl">🪪</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Şəxsiyyət Vəsiqəsi</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Şəxsiyyət vəsiqəsinin əsli və 3 ədəd aydın surəti (hər iki üzü).</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 shadow-sm flex flex-col gap-2">
+                            <span class="text-2xl">🎖️</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Hərbi Xidmət Vəsiqəsi</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">İlkin hərbi qeydiyyata alınma vəsiqəsi və ya hərbi biletin surəti (oğlanlar üçün).</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 shadow-sm flex flex-col gap-2">
+                            <span class="text-2xl">📷</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Fotoşəkillər (6 ədəd)</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">3x4 sm ölçüdə, eyni formatda, ağ arxa fonda 6 ədəd rəngli fotoşəkil.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 shadow-sm flex flex-col gap-2">
+                            <span class="text-2xl">🩺</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Tibbi Arayış</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Sağlamlıq vəziyyəti haqqında Forma № 086/U tibbi arayış.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 shadow-sm flex flex-col gap-2">
+                            <span class="text-2xl">📊</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">DİM İmtahan Nəticəsi</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">DİM-in elektron ərizəsinin və imtahan balının təsdiq çapı.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 shadow-sm flex flex-col gap-2">
+                            <span class="text-2xl">🌐</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Portal.edu.az Çıxarışı</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Təhsil Mərkəzləşdirilmiş İnformasiya Sistemindən qeydiyyat təsdiq sənədi.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 shadow-sm flex flex-col gap-2">
+                            <span class="text-2xl">⚖️</span>
+                            <h4 class="font-bold text-sm text-slate-900 dark:text-white">İmtiyaz Sənədləri</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">Şəhid övladı, qazi ailəsi, əlilliyi olan şəxslər üçün dövlət ödəniş güzəşti sənədi.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 14 İxtisas Kataloquna Keçid Section -->
+            <section class="section relative py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-900/[0.06] dark:border-white/[0.06]" id="admission-majors">
+                <div class="max-w-7xl mx-auto space-y-8">
+                    <div class="flex flex-wrap items-end justify-between gap-4">
+                        <div>
+                            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">
+                                🎓 14 RƏSMİ İXTİSAS
+                            </span>
+                            <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-2">
+                                Kollecdə Tədris Olunan İxtisaslar
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-3xl">
+                                Əyani və qiyabi bölmələr üzrə 14 rəsmi dövlət standartlı ixtisas proqramı.
+                            </p>
+                        </div>
+                        <a href="?tab=majors" data-workspace-tab="majors" class="subnav-pill subnav-pill-gold">
+                            <span>Bütün İxtisaslar Kataloquna Keçid →</span>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">💻</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Kompüter sistemlərinin təmiri və servisi</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani · 2 il / 3 il · İKT Şöbəsi</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">🌐</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Kompüter şəbəkələrinin proqram təminatı</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani · 2 il / 3 il · İKT Şöbəsi</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">📡</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Rabitə qovşaqları və kommutasiya sistemləri</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani & Qiyabi · Telekommunikasiya</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">📻</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Telekommunikasiya şəbəkələri</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani & Qiyabi · Telekommunikasiya</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">📮</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Poçt rabitəsi</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani & Qiyabi · Poçt və İqtisadiyyat</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">🚆</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Dəmir yolu nəqliyyatında hərəkətin idarə olunması</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani & Qiyabi · Nəqliyyat Şöbəsi</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">🚃</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Vaqon və refrijerator təsərrüfatı</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani · Nəqliyyat Şöbəsi</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">🚂</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Lokomotiv təsərrüfatı</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani & Qiyabi · Nəqliyyat Şöbəsi</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">🚦</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Yol hərəkətinin təşkili</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani · Nəqliyyat Şöbəsi</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">🚗</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Nəqliyyat vasitələrinin texniki istismarı (avtomobil)</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani & Qiyabi · Nəqliyyat Şöbəsi</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">📊</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Mühasibat uçotu</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani & Qiyabi · İqtisadiyyat</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">💰</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Maliyyə işi</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani & Qiyabi · İqtisadiyyat</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">📈</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Marketinq</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani · İqtisadiyyat</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-start gap-3">
+                            <span class="text-xl">👔</span>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-900 dark:text-white">Menecment</h4>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Əyani & Qiyabi · İqtisadiyyat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Qəbul Komissiyası & FAQ Section -->
+            <section class="section relative py-12 lg:py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-900/[0.06] dark:border-white/[0.06]" id="admission-faq">
+                <div class="max-w-7xl mx-auto space-y-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        <div class="lg:col-span-5 space-y-4">
+                            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                                📞 QƏBUL KOMİSSİYASI
+                            </span>
+                            <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                                Əlaqə və Qaynar Xətt
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Qəbul qaydaları, sənədlərin təqdimi və ixtisas seçimi ilə bağlı suallarınız üçün kollecin Qəbul Komissiyası ilə əlaqə saxlaya bilərsiniz.
+                            </p>
+                            <div class="space-y-3 pt-2">
+                                <div class="p-4 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-center gap-3">
+                                    <span class="text-2xl">📞</span>
+                                    <div>
+                                        <div class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold">Qaynar Xətt</div>
+                                        <div class="text-sm font-bold text-slate-900 dark:text-white">(012) 431-42-28 · (012) 431-20-21</div>
+                                    </div>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-center gap-3">
+                                    <span class="text-2xl">✉️</span>
+                                    <div>
+                                        <div class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold">Rəsmi E-poçt</div>
+                                        <div class="text-sm font-bold text-slate-900 dark:text-white">rabita-kolleci@mail.ru</div>
+                                    </div>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10 flex items-center gap-3">
+                                    <span class="text-2xl">🏛️</span>
+                                    <div>
+                                        <div class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold">Ünvan</div>
+                                        <div class="text-sm font-bold text-slate-900 dark:text-white">Bakı şəhəri, Şəfaət Mehdiyev küçəsi 538-ci məhəllə</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7 space-y-4">
+                            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-slate-500/10 text-slate-700 dark:text-slate-300 border border-slate-500/20">
+                                ❓ TEZ-TEZ VERİLƏN SUALLAR (FAQ)
+                            </span>
+                            <div class="space-y-3">
+                                <div class="p-4 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10">
+                                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Kollecə qəbul üçün sənədlər necə təqdim olunur?</h4>
+                                    <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">DİM müsabiqəsindən uğurla keçən abituriyentlər ilk olaraq portal.edu.az platformasında onlayn qeydiyyatdan keçir, daha sonra sənədlərini kollecin Qəbul Komissiyasına təqdim edirlər.</p>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10">
+                                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Ödənişsiz (dövlət sifarişli) təhsil yerləri mövcuddurmu?</h4>
+                                    <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Bəli, kollecin bütün 14 ixtisası üzrə dövlət sifarişli (ödənişsiz və təqaüdlü) təhsil yerləri ayrılır. Yüksək bal toplayan tələbələr əlavə olaraq əlaçı və həvəsləndirici təqaüdlər alırlar.</p>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-900/10 dark:border-white/10">
+                                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Oğlan tələbələrə hərbi xidmətdən möhlət verilirmi?</h4>
+                                    <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Bəli, əyani formada təhsil alan tələbələrə qanunvericiliyə uyğun olaraq təhsil müddətində hərbi xidmətdən möhlət hüququ şamil edilir.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ══ RƏHBƏRLİK VƏ STRUKTUR (Haqqımızda bölməsinə aid) ══ -->
+        <div id="panel-structure" class="tab-workspace-panel" data-tab-panel="structure" role="tabpanel" aria-hidden="true">
+            <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
+                <div class="section-subnav-inner max-w-7xl mx-auto">
+                    <div class="subnav-header-row">
+                        <span class="subnav-num-badge">👥</span>
+                        <div>
+                            <h2 class="subnav-title" data-i18n="nav_structure">Rəhbərlik və struktur</h2>
+                            <p class="subnav-sub" data-i18n="nav_structure_sub">Rəhbərlik, şöbələr, bölmələr və əməkdaşlar</p>
                         </div>
                     </div>
                     <div class="subnav-pills-wrap">

@@ -8,6 +8,7 @@
 
   const VALID_TABS = [
     "about",
+    "admission",
     "structure",
     "majors",
     "science",
@@ -24,6 +25,9 @@
   // Backward-compatible aliases so legacy ?tab=... links & search entries resolve cleanly
   const TAB_ALIASES = {
     home: { tab: "about" },
+    qebul: { tab: "admission" },
+    "telebe-qebulu": { tab: "admission" },
+    abituriyent: { tab: "admission" },
     "library-lectures": { tab: "library", libView: "lectures", anchor: "library-lectures-section" },
     "honor-students": { tab: "students", anchor: "honor-students" },
     "teacher-certificates": { tab: "certificates", anchor: "teacher-certificates" },
@@ -54,6 +58,13 @@
     qarabag: "about",
     memorial: "about",
     graduates: "about",
+
+    admission: "admission",
+    "admission-overview": "admission",
+    "admission-roadmap": "admission",
+    "admission-docs": "admission",
+    "admission-majors": "admission",
+    "admission-faq": "admission",
 
     structure: "structure",
     "struct-tree-view": "structure",
@@ -244,7 +255,7 @@
     // Update Workspace Tab Pills (roving tabindex for WAI-ARIA tablist)
     document.querySelectorAll("[data-workspace-tab]").forEach((btn) => {
       const btnTab = btn.getAttribute("data-workspace-tab");
-      const isMatch = btnTab === nextTab;
+      const isMatch = btnTab === nextTab || (nextTab === "structure" && btnTab === "about" && btn.classList.contains("workspace-tab-btn"));
       btn.classList.toggle("is-active", isMatch);
       btn.setAttribute("aria-selected", isMatch ? "true" : "false");
       if (btn.classList.contains("workspace-tab-btn")) {
