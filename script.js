@@ -22580,7 +22580,7 @@ function initSceneTransition() {
       cat: "admin",
       catLabel_az: "İnzibati Şöbə", catLabel_en: "Administrative Dept", catLabel_ru: "Административный отдел",
       icon: "👥",
-      desc_az: "Kollec əməkdaşlarının, professor-müəllim heyətinin şəxsi işləri, əmr layihələri və kadr qeydiyyatı.",
+      desc_az: "Kollec əməkdaşlarının, müəllim heyətinin şəxsi işləri, əmr layihələri və kadr qeydiyyatı.",
       desc_en: "Faculty and personnel records management, official staff decrees, and employment registry.",
       desc_ru: "Учет личных дел преподавателей и сотрудников, проекты кадровых приказов и трудовой реестр.",
       features_az: ["Şəxsi işlər arxivi","Kadr kargüzarlığı","Müqavilələr fondu"],
