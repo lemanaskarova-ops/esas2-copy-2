@@ -17,7 +17,7 @@ const i18n = {
   az: {
     hero_qarabag_cta: "Qarabağ Zəfəri",
     campus_nav_floor_1: "I Mərtəbə",
-    campus_nav_floor_1_sub: "İdman kompleksi, Kimya & Telekom",
+    campus_nav_floor_1_sub: "İdman kompleksi, Kimya & Telekommunikasiya",
     campus_nav_floor_2: "II Mərtəbə",
     campus_nav_floor_2_sub: "Rəhbərlik, Kitabxana & Optika",
     campus_nav_floor_3: "III Mərtəbə",
@@ -23191,7 +23191,7 @@ function initSceneTransition() {
       desc_ru: "На 1-м этаже расположен спортзал, актовый зал, 2 химические лаборатории, телекоммуникационная лаборатория и административные отделы.",
       countBadge_az: "13 Əsas Otaq və Məkan", countBadge_en: "13 Main Rooms & Spaces", countBadge_ru: "13 Основных Кабинетов",
       wings_az: [
-        { label: "Qərb Qanadı", text: "107 (Qiyabi), 106A (Hərbi), 106 (Kimya), 107A (Telekom), 103 (Kimya)", icon: "⬅️" },
+        { label: "Qərb Qanadı", text: "107 (Qiyabi), 106A (Hərbi), 106 (Kimya), 107A (Telekommunikasiya), 103 (Kimya)", icon: "⬅️" },
         { label: "Mərkəzi", text: "Kadrlar şöbəsi, Kompüter laboratoriyası", icon: "🏛️" },
         { label: "Şərq Qanadı", text: "113 (Mühasibat - 2 otaq), 114 (Təsərrüfat), 115 (Təcrübə), 116 (Tərbiyə), Akt zalı", icon: "➡️" },
         { label: "İdman", text: "İdman zalı (geyinmə otağı ilə)", icon: "⚽" }
@@ -23247,7 +23247,7 @@ function initSceneTransition() {
       desc_ru: "Ключевая лекционная зона: современная лаборатория физики, интерактивная аудитория со смарт-доской и всего 16 комнат.",
       countBadge_az: "Cəmi 16 Otaq Fondu", countBadge_en: "Total 16 Rooms Capacity", countBadge_ru: "Всего 16 Кабинетов",
       wings_az: [
-        { label: "Qərb Qanadı", text: "301 (Fizika lab), 306 (Elektron lövhə), 307 (Telekom şöbəsi), 309 (Mühəndis)", icon: "⬅️" },
+        { label: "Qərb Qanadı", text: "301 (Fizika lab), 306 (Elektron lövhə), 307 (Telekommunikasiya şöbəsi), 309 (Mühəndis)", icon: "⬅️" },
         { label: "Mərkəzi Korpus", text: "302 (Tədris şöbəsi), 303 (Müəllimlər otağı)", icon: "🏛️" },
         { label: "Tədris Fondu", text: "10 Mühazirə və Seminar Auditoriyası (Cəmi 16 otaq)", icon: "🎓" }
       ],
