@@ -3269,13 +3269,12 @@ html.dark-mode .portal-hub-link {
   z-index: 50;
 }
 
-@media (min-width: 1024px) {
-  .workspace-nav-inner,
-  #desktop-nav {
-    overflow: visible !important;
-    overflow-x: visible !important;
-    overflow-y: visible !important;
-  }
+.workspace-nav-inner,
+#desktop-nav {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
 }
 
 .nav-tab-dropdown-menu {

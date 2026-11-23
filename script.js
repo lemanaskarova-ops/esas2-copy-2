@@ -28340,6 +28340,11 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
       const desktopNav = document.getElementById("desktop-nav");
       if (!wrapper || !menu) return;
 
+      // Portal menu to document.body so overflow-x: auto on #desktop-nav never clips it
+      if (menu.parentElement !== document.body) {
+        document.body.appendChild(menu);
+      }
+
       let closeTimer = null;
       let lastOpenedAt = 0;
 
@@ -28396,15 +28401,14 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
       menu.addEventListener("mouseleave", () => {
         if (canHover()) scheduleClose(140);
       });
+      menu.addEventListener("click", (e) => {
+        if (e.target.closest(".nav-tab-dropdown-item")) {
+          closeNow();
+        }
+      });
 
       // Click / tap handling on wrapper or chevron
       wrapper.addEventListener("click", (e) => {
-        // If clicking on dropdown items, close menu and allow navigation
-        if (e.target.closest(".nav-tab-dropdown-item")) {
-          closeNow();
-          return;
-        }
-
         // Chevron tap/click always toggles dropdown without tab navigation
         if (e.target.closest("svg")) {
           e.preventDefault();
