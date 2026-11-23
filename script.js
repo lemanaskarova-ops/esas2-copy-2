@@ -4395,7 +4395,7 @@ const newsData = [
     "date_az": "23 Noyabr 2026",
     "date_en": "23 November 2026",
     "date_ru": "23 Ноября 2026",
-    "image": "WhatsApp Video 2026-11-23 at 10.06.03.mp4",
+    "image": "WhatsApp Video 2026-11-23 at 15.38.22.mp4",
     "tag_az": "Mədəniyyət / Tədbir",
     "tag_en": "Culture / Event",
     "tag_ru": "Культура / Мероприятие"
