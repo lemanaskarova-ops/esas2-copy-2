@@ -609,7 +609,7 @@ const i18n = {
     campus_stat_4_val: "206-cı Otaq",
     campus_stat_4_lbl: "22 000+ Kitab Fondu & Oxu Zalı",
     campus_fbtn_1_title: "1-ci Mərtəbə",
-    campus_fbtn_1_meta: "12 otaq · İdman & Lab",
+    campus_fbtn_1_meta: "13 otaq · İdman, Akt & Lab",
     campus_fbtn_2_title: "2-ci Mərtəbə",
     campus_fbtn_2_meta: "11 otaq · Rəhbərlik & Kitabxana",
     campus_fbtn_3_title: "3-cü Mərtəbə",
@@ -1624,7 +1624,7 @@ const i18n = {
     campus_stat_4_val: "Room 206",
     campus_stat_4_lbl: "22,000+ Book Fund & Reading Hall",
     campus_fbtn_1_title: "1st Floor",
-    campus_fbtn_1_meta: "12 rooms · Sports & Labs",
+    campus_fbtn_1_meta: "13 rooms · Sports, Hall & Labs",
     campus_fbtn_2_title: "2nd Floor",
     campus_fbtn_2_meta: "11 rooms · Leadership & Library",
     campus_fbtn_3_title: "3rd Floor",
@@ -2637,7 +2637,7 @@ const i18n = {
     campus_stat_4_val: "Кабинет 206",
     campus_stat_4_lbl: "Фонд 22 000+ книг и читальный зал",
     campus_fbtn_1_title: "1-й Этаж",
-    campus_fbtn_1_meta: "12 комнат · Спорт и Лаб",
+    campus_fbtn_1_meta: "13 комнат · Спорт, Зал и Лаб",
     campus_fbtn_2_title: "2-й Этаж",
     campus_fbtn_2_meta: "11 комнат · Руководство и Библиотека",
     campus_fbtn_3_title: "3-й Этаж",
@@ -24300,6 +24300,23 @@ function initSceneTransition() {
       features_ru: ["Раздевалки внутри", "Душевые и санузел", "Баскетбольная площадка", "Спортивный инвентарь"],
       wing_az: "İdman korpusu", wing_en: "Sports Wing", wing_ru: "Спортивное крыло"
     },
+    {
+      id: "f1_akt_zali",
+      floor: 1,
+      floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
+      no: "AKT ZALI",
+      name_az: "Akt zalı", name_en: "Assembly Hall", name_ru: "Актовый зал",
+      cat: "classroom",
+      catLabel_az: "Tədbirlər & Akt Zalı", catLabel_en: "Events & Assembly Hall", catLabel_ru: "Мероприятия и Актовый зал",
+      icon: "🎭",
+      desc_az: "Kollecin rəsmi tədbirləri, elmi konfranslar, mədəni-kütləvi proqramlar, tələbə yığıncaqları və bayram mərasimləri üçün geniş akt zalı.",
+      desc_en: "Spacious assembly hall for official college events, scientific conferences, cultural programs, student gatherings, and ceremonies.",
+      desc_ru: "Просторный актовый зал для официальных мероприятий колледжа, научных конференций, культурных программ и торжественных собраний.",
+      features_az: ["Səhnə və tribuna", "Səs və akustika sistemi", "Proyektor və ekran", "Geniş tamaşaçı zalı"],
+      features_en: ["Stage & podium", "Sound & acoustic system", "Projector & screen", "Spacious seating hall"],
+      features_ru: ["Сцена и трибуна", "Звуковая и акустическая система", "Проектор и экран", "Просторный зрительный зал"],
+      wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
+    },
 
     // ═════════════ II MƏRTƏBƏ (11 Otaq) ═════════════
     {
@@ -24779,26 +24796,26 @@ function initSceneTransition() {
       title_az: "I MƏRTƏBƏ — İdman Kompleksi, Kimya & Rabitə Laboratoriyaları",
       title_en: "1ST FLOOR — Sports Complex, Chemistry & Telecom Laboratories",
       title_ru: "1-Й ЭТАЖ — Спорткомплекс, Лаборатории Химии и Связи",
-      desc_az: "Kollecin 1-ci mərtəbəsində tələbələrin fiziki hazırlığı üçün idman zalı, 2 kimya laboratoriyası, telekommunikasiya laboratoriyası və inzibati şöbələr yerləşir.",
-      desc_en: "The 1st floor houses the gymnasium complex, 2 chemistry laboratories, a telecommunications lab, and administrative departments.",
-      desc_ru: "На 1-м этаже расположен спортзал, 2 химические лаборатории, телекоммуникационная лаборатория и административные отделы.",
-      countBadge_az: "12 Əsas Otaq və Məkan", countBadge_en: "12 Main Rooms & Spaces", countBadge_ru: "12 Основных Кабинетов",
+      desc_az: "Kollecin 1-ci mərtəbəsində tələbələrin fiziki hazırlığı üçün idman zalı, akt zalı, 2 kimya laboratoriyası, telekommunikasiya laboratoriyası və inzibati şöbələr yerləşir.",
+      desc_en: "The 1st floor houses the gymnasium complex, assembly hall, 2 chemistry laboratories, a telecommunications lab, and administrative departments.",
+      desc_ru: "На 1-м этаже расположен спортзал, актовый зал, 2 химические лаборатории, телекоммуникационная лаборатория и административные отделы.",
+      countBadge_az: "13 Əsas Otaq və Məkan", countBadge_en: "13 Main Rooms & Spaces", countBadge_ru: "13 Основных Кабинетов",
       wings_az: [
         { label: "Qərb Qanadı", text: "107 (Qiyabi), 106A (Hərbi), 106 (Kimya-1), 107A (Telekom), 103 (Kimya-2)", icon: "⬅️" },
         { label: "Mərkəzi", text: "Kadrlar şöbəsi, Kompüter laboratoriyası", icon: "🏛️" },
-        { label: "Şərq Qanadı", text: "113 (Mühasibat - 2 otaq), 114 (Təsərrüfat), 115 (Təcrübə), 116 (Tərbiyə)", icon: "➡️" },
+        { label: "Şərq Qanadı", text: "113 (Mühasibat - 2 otaq), 114 (Təsərrüfat), 115 (Təcrübə), 116 (Tərbiyə), Akt zalı", icon: "➡️" },
         { label: "İdman", text: "İdman zalı (geyinmə otağı ilə)", icon: "⚽" }
       ],
       wings_en: [
         { label: "West Wing", text: "107 (Distance), 106A (Military), 106 (Chem-1), 107A (Telecom), 103 (Chem-2)", icon: "⬅️" },
         { label: "Central", text: "Human Resources, Computer Laboratory", icon: "🏛️" },
-        { label: "East Wing", text: "113 (Accounting - 2 rooms), 114 (Economic), 115 (Internship), 116 (Student Affairs)", icon: "➡️" },
+        { label: "East Wing", text: "113 (Accounting - 2 rooms), 114 (Economic), 115 (Internship), 116 (Student Affairs), Assembly Hall", icon: "➡️" },
         { label: "Sports", text: "Sports gym (with locker rooms)", icon: "⚽" }
       ],
       wings_ru: [
         { label: "Западное крыло", text: "107 (Заочное), 106A (Военный), 106 (Химия-1), 107A (Связь), 103 (Химия-2)", icon: "⬅️" },
         { label: "Центральное", text: "Отдел кадров, Компьютерная лаборатория", icon: "🏛️" },
-        { label: "Восточное крыло", text: "113 (Бухгалтерия - 2 комнаты), 114 (Хозчасть), 115 (Практика), 116 (Воспитание)", icon: "➡️" },
+        { label: "Восточное крыло", text: "113 (Бухгалтерия - 2 комнаты), 114 (Хозчасть), 115 (Практика), 116 (Воспитание), Актовый зал", icon: "➡️" },
         { label: "Спорткомплекс", text: "Спортивный зал (с раздевалками)", icon: "⚽" }
       ]
     },
