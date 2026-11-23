@@ -185,7 +185,7 @@ const i18n = {
     struct_wing_academic: "Tədris, İKT və Sahə Şöbələri",
     struct_wing_admin: "İnzibati, Tələbə və Dəstək Xidmətləri",
     struct_majors_heading: "Kollecdə Tədris Olunan İxtisaslar",
-    struct_majors_desc: "Dövlət təhsil standartlarına uyğun əyani və qiyabi orta ixtisas təhsili proqramları (19 İxtisas)",
+    struct_majors_desc: "Dövlət təhsil standartlarına uyğun əyani və qiyabi orta ixtisas təhsili proqramları (14 İxtisas)",
     major_eyani_tab: "Əyani Təhsil (14 İxtisas)",
     major_qiyabi_tab: "Qiyabi Təhsil (9 İxtisas)",
     major_degree: "Orta İxtisas Təhsili",
@@ -609,7 +609,7 @@ const i18n = {
     campus_stat_4_val: "206-cı Otaq",
     campus_stat_4_lbl: "22 000+ Kitab Fondu & Oxu Zalı",
     campus_fbtn_1_title: "1-ci Mərtəbə",
-    campus_fbtn_1_meta: "12 otaq · İdman & Lab",
+    campus_fbtn_1_meta: "13 otaq · İdman, Akt & Lab",
     campus_fbtn_2_title: "2-ci Mərtəbə",
     campus_fbtn_2_meta: "11 otaq · Rəhbərlik & Kitabxana",
     campus_fbtn_3_title: "3-cü Mərtəbə",
@@ -865,7 +865,7 @@ const i18n = {
     nav_certificates_sub: "Respublika spartakiadası və rəsmi diplomlar",
     nav_fbk: "Fənn Birləşmə Komissiyaları",
     nav_fbk_sub: "9 tədris-metodiki fənn komissiyası",
-    majors_badge_count: "19 İxtisas",
+    majors_badge_count: "14 İxtisas",
     inst_full_name: "BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ PUBLİK HÜQUQİ ŞƏXSİ",
     hero_inst_ministry: "Azərbaycan Respublikası Elm və Təhsil Nazirliyi",
     hero_inst_agency: "Elm və Ali Təhsil üzrə Dövlət Agentliyi",
@@ -957,8 +957,10 @@ const i18n = {
     wtab_memo: "Memorandumlar ↗",
     nav_s1: "Haqqımızda",
     nav_s1_sub: "Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız",
-    nav_s2: "Rəhbərlik və struktur",
-    nav_s2_sub: "Rəhbərlik, şöbələr, bölmələr və əməkdaşlar",
+    nav_s2: "Tələbə qəbulu",
+    nav_s2_sub: "2025/2026 qəbul qaydaları, tələb olunan sənədlər, keçid balları və bələdçi",
+    nav_structure: "Rəhbərlik və struktur",
+    nav_structure_sub: "Rəhbərlik, şöbələr, bölmələr və əməkdaşlar",
     nav_s3: "Təhsil və ixtisaslar",
     nav_s3_sub: "İxtisaslar, tədris prosesi, təhsil proqramları",
     nav_s4: "Elmi və metodiki fəaliyyət",
@@ -985,7 +987,7 @@ const i18n = {
     hub_honored_cta: "Bütün Sertifikatlar Portfeli →",
     edu_proc_badge: "📚 TƏDRİS PROSESİ VƏ PROQRAMLAR",
     edu_proc_title: "Tədris prosesi, təhsil proqramları və istehsalat təcrübəsi",
-    edu_proc_desc: "19 dövlət standartlı ixtisas üzrə nəzəri tədris, rəqəmsal kitabxana resursları, video dərslər və real sənaye müəssisələrində istehsalat təcrübəsi.",
+    edu_proc_desc: "14 dövlət standartlı ixtisas üzrə nəzəri tədris, rəqəmsal kitabxana resursları, video dərslər və real sənaye müəssisələrində istehsalat təcrübəsi.",
     sci_conf_badge: "🎤 Akademik Forum və Konfranslar",
     sci_conf_title: "Elmi konfranslar",
     sci_sem_badge: "💡 Elmi-Pedaqoji Seminar və Təlimlər",
@@ -1206,7 +1208,7 @@ const i18n = {
     struct_wing_academic: "Academic, ICT & Field Departments",
     struct_wing_admin: "Administrative, Student & Support Services",
     struct_majors_heading: "Specialties Offered at the College",
-    struct_majors_desc: "State-standard full-time and part-time vocational programs (19 Majors)",
+    struct_majors_desc: "State-standard full-time and part-time vocational programs (14 Majors)",
     major_eyani_tab: "Full-time (14 Majors)",
     major_qiyabi_tab: "Part-time (9 Majors)",
     major_degree: "Vocational Secondary Degree",
@@ -1624,7 +1626,7 @@ const i18n = {
     campus_stat_4_val: "Room 206",
     campus_stat_4_lbl: "22,000+ Book Fund & Reading Hall",
     campus_fbtn_1_title: "1st Floor",
-    campus_fbtn_1_meta: "12 rooms · Sports & Labs",
+    campus_fbtn_1_meta: "13 rooms · Sports, Hall & Labs",
     campus_fbtn_2_title: "2nd Floor",
     campus_fbtn_2_meta: "11 rooms · Leadership & Library",
     campus_fbtn_3_title: "3rd Floor",
@@ -1879,7 +1881,7 @@ const i18n = {
     nav_certificates_sub: "National spartakiad and official diplomas",
     nav_fbk: "Subject Commissions",
     nav_fbk_sub: "9 specialized academic subject commissions",
-    majors_badge_count: "19 Majors",
+    majors_badge_count: "14 Majors",
     inst_full_name: "BAKU STATE COLLEGE OF COMMUNICATIONS AND TRANSPORT PUBLIC LEGAL ENTITY",
     hero_inst_ministry: "Ministry of Science and Education of the Republic of Azerbaijan",
     hero_inst_agency: "State Agency for Science and Higher Education",
@@ -1971,8 +1973,10 @@ const i18n = {
     wtab_memo: "Memorandums ↗",
     nav_s1: "About Us",
     nav_s1_sub: "History, mission, activities, development strategy",
-    nav_s2: "Leadership & Structure",
-    nav_s2_sub: "Leadership, departments, divisions and staff",
+    nav_s2: "Student Admission",
+    nav_s2_sub: "2025/2026 admission rules, required documents, passing scores and roadmap",
+    nav_structure: "Leadership & Structure",
+    nav_structure_sub: "Leadership, departments, divisions and staff",
     nav_s3: "Education & Specialties",
     nav_s3_sub: "Specialties, educational process, curricula",
     nav_s4: "Scientific & Methodical Activity",
@@ -1999,7 +2003,7 @@ const i18n = {
     hub_honored_cta: "Full Certificates Portfolio →",
     edu_proc_badge: "📚 ACADEMIC PROCESS & CURRICULA",
     edu_proc_title: "Academic process, study programs and industrial internships",
-    edu_proc_desc: "Theoretical instruction across 19 state-accredited majors, electronic library, video lessons, and industrial placements.",
+    edu_proc_desc: "Theoretical instruction across 14 state-accredited majors, electronic library, video lessons, and industrial placements.",
     sci_conf_badge: "🎤 Academic Forums & Conferences",
     sci_conf_title: "Scientific Conferences",
     sci_sem_badge: "💡 Scientific-Pedagogical Seminars & Training",
@@ -2215,7 +2219,7 @@ const i18n = {
     struct_wing_academic: "Учебные, ИКТ и отраслевые отделения",
     struct_wing_admin: "Административные, студенческие и сервисные службы",
     struct_majors_heading: "Специальности, Преподаваемые в Колледже",
-    struct_majors_desc: "Очные и заочные программы среднего специального образования (19 Специальностей)",
+    struct_majors_desc: "Очные и заочные программы среднего специального образования (14 Специальностей)",
     major_eyani_tab: "Очное Обучение (14 Специальностей)",
     major_qiyabi_tab: "Заочное Обучение (9 Специальностей)",
     major_degree: "Среднее Профессиональное Образование",
@@ -2637,7 +2641,7 @@ const i18n = {
     campus_stat_4_val: "Кабинет 206",
     campus_stat_4_lbl: "Фонд 22 000+ книг и читальный зал",
     campus_fbtn_1_title: "1-й Этаж",
-    campus_fbtn_1_meta: "12 комнат · Спорт и Лаб",
+    campus_fbtn_1_meta: "13 комнат · Спорт, Зал и Лаб",
     campus_fbtn_2_title: "2-й Этаж",
     campus_fbtn_2_meta: "11 комнат · Руководство и Библиотека",
     campus_fbtn_3_title: "3-й Этаж",
@@ -2892,7 +2896,7 @@ const i18n = {
     nav_certificates_sub: "Республиканская спартакиада и дипломы",
     nav_fbk: "Предметные комиссии",
     nav_fbk_sub: "9 предметно-цикловых комиссий (ПЦК)",
-    majors_badge_count: "19 Специальностей",
+    majors_badge_count: "14 Специальностей",
     inst_full_name: "БАКИНСКИЙ ГОСУДАРСТВЕННЫЙ КОЛЛЕДЖ СВЯЗИ И ТРАНСПОРТА ПУБЛИЧНОЕ ЮРИДИЧЕСКОЕ ЛИЦО",
     hero_inst_ministry: "Министерство науки и образования Азербайджанской Республики",
     hero_inst_agency: "Государственное агентство по науке и высшему образованию",
@@ -2984,8 +2988,10 @@ const i18n = {
     wtab_memo: "Меморандумы ↗",
     nav_s1: "О нас",
     nav_s1_sub: "История, миссия, деятельность, стратегия развития",
-    nav_s2: "Руководство и структура",
-    nav_s2_sub: "Руководство, отделы, подразделения и сотрудники",
+    nav_s2: "Прием студентов",
+    nav_s2_sub: "Правила приема 2025/2026, документы, проходные баллы и руководство",
+    nav_structure: "Руководство и структура",
+    nav_structure_sub: "Руководство, отделы, подразделения и сотрудники",
     nav_s3: "Образование и специальности",
     nav_s3_sub: "Специальности, учебный процесс, образовательные программы",
     nav_s4: "Научная и методическая деятельность",
@@ -3012,7 +3018,7 @@ const i18n = {
     hub_honored_cta: "Полное портфолио сертификатов →",
     edu_proc_badge: "📚 УЧЕБНЫЙ ПРОЦЕСС И ПРОГРАММЫ",
     edu_proc_title: "Учебный процесс, образовательные программы и практика",
-    edu_proc_desc: "Обучение по 19 государственным специальностям, электронная библиотека, видеоуроки и производственная практика.",
+    edu_proc_desc: "Обучение по 14 государственным специальностям, электронная библиотека, видеоуроки и производственная практика.",
     sci_conf_badge: "🎤 Академические форумы и конференции",
     sci_conf_title: "Научные конференции",
     sci_sem_badge: "💡 Научно-педагогические семинары",
@@ -3191,7 +3197,7 @@ const staffData = {
       name_az: "İsmayıl Səfiyev Allahverdi oğlu",
       name_en: "Ismayil Safiyev Allahverdi",
       name_ru: "Исмаил Сафиев Аллахверди оглы",
-      role_az: "Inzibati təsərüffat işləri üzrə direktor müavini",
+      role_az: "İnzibati təsərüffat işləri üzrə direktor müavini",
       role_en: "Deputy Director for Administrative & Economic Affairs",
       role_ru: "Заместитель директора по административно-хозяйственной части",
       img: "ismayilx.jpeg",
@@ -8075,7 +8081,7 @@ function initStructureModule() {
     }
   }
 
-  // Standalone Academic Majors Catalog (19 İxtisas)
+  // Standalone Academic Majors Catalog (14 İxtisas)
   function renderMajorsCatalog(mountEl) {
     const target = mountEl || document.getElementById("majors-tab-mount");
     if (!target) return;
@@ -8172,7 +8178,7 @@ function initStructureModule() {
             <span>🎓</span> <span>${gT("struct_majors_badge") || "DÖVLƏT STANDARTLI TƏDRİS PROQRAMLARI"}</span>
           </div>
           <h3 class="majors-catalog-title">${gT("struct_majors_heading") || "Kollecdə Tədris Olunan İxtisaslar"}</h3>
-          <p class="majors-catalog-desc">${gT("struct_majors_desc") || "Dövlət təhsil standartlarına uyğun əyani və qiyabi orta ixtisas təhsili proqramları (19 İxtisas)"}</p>
+          <p class="majors-catalog-desc">${gT("struct_majors_desc") || "Dövlət təhsil standartlarına uyğun əyani və qiyabi orta ixtisas təhsili proqramları (14 İxtisas)"}</p>
           <div class="majors-catalog-tabs" role="tablist">
             <button type="button" class="majors-tab-btn active" data-major-view="eyani">
               <span>📘 ${gT("major_eyani_tab") || "Əyani Təhsil"}</span>
@@ -9255,7 +9261,7 @@ function initStructureModule() {
       }
 
       if (cat === "majors") {
-        // Go directly to MAJORS (19 İxtisas)
+        // Go directly to MAJORS (14 İxtisas)
         switchView("majors");
       } else if (cat === "departments") {
         switchView("tree");
@@ -24300,6 +24306,23 @@ function initSceneTransition() {
       features_ru: ["Раздевалки внутри", "Душевые и санузел", "Баскетбольная площадка", "Спортивный инвентарь"],
       wing_az: "İdman korpusu", wing_en: "Sports Wing", wing_ru: "Спортивное крыло"
     },
+    {
+      id: "f1_akt_zali",
+      floor: 1,
+      floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
+      no: "AKT ZALI",
+      name_az: "Akt zalı", name_en: "Assembly Hall", name_ru: "Актовый зал",
+      cat: "classroom",
+      catLabel_az: "Tədbirlər & Akt Zalı", catLabel_en: "Events & Assembly Hall", catLabel_ru: "Мероприятия и Актовый зал",
+      icon: "🎭",
+      desc_az: "Kollecin rəsmi tədbirləri, elmi konfranslar, mədəni-kütləvi proqramlar, tələbə yığıncaqları və bayram mərasimləri üçün geniş akt zalı.",
+      desc_en: "Spacious assembly hall for official college events, scientific conferences, cultural programs, student gatherings, and ceremonies.",
+      desc_ru: "Просторный актовый зал для официальных мероприятий колледжа, научных конференций, культурных программ и торжественных собраний.",
+      features_az: ["Səhnə və tribuna", "Səs və akustika sistemi", "Proyektor və ekran", "Geniş tamaşaçı zalı"],
+      features_en: ["Stage & podium", "Sound & acoustic system", "Projector & screen", "Spacious seating hall"],
+      features_ru: ["Сцена и трибуна", "Звуковая и акустическая система", "Проектор и экран", "Просторный зрительный зал"],
+      wing_az: "Şərq qanadı", wing_en: "East Wing", wing_ru: "Восточное крыло"
+    },
 
     // ═════════════ II MƏRTƏBƏ (11 Otaq) ═════════════
     {
@@ -24779,26 +24802,26 @@ function initSceneTransition() {
       title_az: "I MƏRTƏBƏ — İdman Kompleksi, Kimya & Rabitə Laboratoriyaları",
       title_en: "1ST FLOOR — Sports Complex, Chemistry & Telecom Laboratories",
       title_ru: "1-Й ЭТАЖ — Спорткомплекс, Лаборатории Химии и Связи",
-      desc_az: "Kollecin 1-ci mərtəbəsində tələbələrin fiziki hazırlığı üçün idman zalı, 2 kimya laboratoriyası, telekommunikasiya laboratoriyası və inzibati şöbələr yerləşir.",
-      desc_en: "The 1st floor houses the gymnasium complex, 2 chemistry laboratories, a telecommunications lab, and administrative departments.",
-      desc_ru: "На 1-м этаже расположен спортзал, 2 химические лаборатории, телекоммуникационная лаборатория и административные отделы.",
-      countBadge_az: "12 Əsas Otaq və Məkan", countBadge_en: "12 Main Rooms & Spaces", countBadge_ru: "12 Основных Кабинетов",
+      desc_az: "Kollecin 1-ci mərtəbəsində tələbələrin fiziki hazırlığı üçün idman zalı, akt zalı, 2 kimya laboratoriyası, telekommunikasiya laboratoriyası və inzibati şöbələr yerləşir.",
+      desc_en: "The 1st floor houses the gymnasium complex, assembly hall, 2 chemistry laboratories, a telecommunications lab, and administrative departments.",
+      desc_ru: "На 1-м этаже расположен спортзал, актовый зал, 2 химические лаборатории, телекоммуникационная лаборатория и административные отделы.",
+      countBadge_az: "13 Əsas Otaq və Məkan", countBadge_en: "13 Main Rooms & Spaces", countBadge_ru: "13 Основных Кабинетов",
       wings_az: [
         { label: "Qərb Qanadı", text: "107 (Qiyabi), 106A (Hərbi), 106 (Kimya-1), 107A (Telekom), 103 (Kimya-2)", icon: "⬅️" },
         { label: "Mərkəzi", text: "Kadrlar şöbəsi, Kompüter laboratoriyası", icon: "🏛️" },
-        { label: "Şərq Qanadı", text: "113 (Mühasibat - 2 otaq), 114 (Təsərrüfat), 115 (Təcrübə), 116 (Tərbiyə)", icon: "➡️" },
+        { label: "Şərq Qanadı", text: "113 (Mühasibat - 2 otaq), 114 (Təsərrüfat), 115 (Təcrübə), 116 (Tərbiyə), Akt zalı", icon: "➡️" },
         { label: "İdman", text: "İdman zalı (geyinmə otağı ilə)", icon: "⚽" }
       ],
       wings_en: [
         { label: "West Wing", text: "107 (Distance), 106A (Military), 106 (Chem-1), 107A (Telecom), 103 (Chem-2)", icon: "⬅️" },
         { label: "Central", text: "Human Resources, Computer Laboratory", icon: "🏛️" },
-        { label: "East Wing", text: "113 (Accounting - 2 rooms), 114 (Economic), 115 (Internship), 116 (Student Affairs)", icon: "➡️" },
+        { label: "East Wing", text: "113 (Accounting - 2 rooms), 114 (Economic), 115 (Internship), 116 (Student Affairs), Assembly Hall", icon: "➡️" },
         { label: "Sports", text: "Sports gym (with locker rooms)", icon: "⚽" }
       ],
       wings_ru: [
         { label: "Западное крыло", text: "107 (Заочное), 106A (Военный), 106 (Химия-1), 107A (Связь), 103 (Химия-2)", icon: "⬅️" },
         { label: "Центральное", text: "Отдел кадров, Компьютерная лаборатория", icon: "🏛️" },
-        { label: "Восточное крыло", text: "113 (Бухгалтерия - 2 комнаты), 114 (Хозчасть), 115 (Практика), 116 (Воспитание)", icon: "➡️" },
+        { label: "Восточное крыло", text: "113 (Бухгалтерия - 2 комнаты), 114 (Хозчасть), 115 (Практика), 116 (Воспитание), Актовый зал", icon: "➡️" },
         { label: "Спорткомплекс", text: "Спортивный зал (с раздевалками)", icon: "⚽" }
       ]
     },
@@ -25367,7 +25390,7 @@ function initGlobalSearchModule() {
     const catalog = [];
     const l = currentLang || "az";
 
-    // 1. Majors (19 İxtisas - Əyani & Qiyabi)
+    // 1. Majors (14 İxtisas - Əyani & Qiyabi)
     if (typeof staffData !== "undefined" && staffData.majors) {
       const eyani = staffData.majors.eyani || [];
       const qiyabi = staffData.majors.qiyabi || [];
@@ -25948,7 +25971,7 @@ function initGlobalSearchModule() {
       icon: "🧮",
       badge: "İnteraktiv Alət",
       title: "Qəbul Şansı və Bal Kalkulyatoru",
-      desc: "Topladığınız imtahan balını daxil edərək kollecimizdəki 19 ixtisasa qəbul şansınızı dərhal hesablayın",
+      desc: "Topladığınız imtahan balını daxil edərək kollecimizdəki 14 ixtisasa qəbul şansınızı dərhal hesablayın",
       tokens: "bal kalkulyatoru qebul sansi hesablayici kecid bali ixtisas seximi imtahan neticesi",
       action: () => {
         const sec = document.getElementById("calculator-section") || document.getElementById("calculator") || document.getElementById("faq");
@@ -26115,8 +26138,9 @@ function initGlobalSearchModule() {
     // 7. Workspace Category Tabs (11 Rəsmi Bölmə + Tam Baxış) & Beynəlxalq Memorandumlar
     const workspaceTabEntries = [
       { tab: "about", categories: ["structure", "campus"], icon: "1", key: "nav_s1", desc: "Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız, kampus xəritəsi və Qarabağ salnaməsi", tokens: "haqqimizda tarix missiya strategiya kampus qarabag mezun hero" },
-      { tab: "structure", categories: ["structure"], icon: "2", key: "nav_s2", desc: "Rəhbərlik, şöbələr, bölmələr, FBK-lar və fəxri əməkdaşlar", tokens: "rehberlik struktur sobeler bolmeler fbk fexri emekdaslar" },
-      { tab: "majors", categories: ["majors", "structure"], icon: "3", key: "nav_s3", desc: "19 rəsmi ixtisas, tədris prosesi, təhsil proqramları və istehsalat təcrübəsi", tokens: "tehsil ixtisaslar tedris prosesi proqramlar tecrube yol xeritesi" },
+      { tab: "admission", categories: ["admission"], icon: "2", key: "nav_s2", desc: "Tələbə qəbulu, 2025/2026 qəbul qaydaları, tələb olunan sənədlər, keçid balları və bələdçi", tokens: "telebe qebulu qebul qaydalari senedler kecid ballari roadmap abituriyent dim portal edu az" },
+      { tab: "structure", categories: ["structure"], icon: "👥", key: "nav_structure", desc: "Rəhbərlik, şöbələr, bölmələr, FBK-lar və fəxri əməkdaşlar", tokens: "rehberlik struktur sobeler bolmeler fbk fexri emekdaslar" },
+      { tab: "majors", categories: ["majors", "structure"], icon: "3", key: "nav_s3", desc: "14 rəsmi ixtisas, tədris prosesi, təhsil proqramları və istehsalat təcrübəsi", tokens: "tehsil ixtisaslar tedris prosesi proqramlar tecrube yol xeritesi" },
       { tab: "science", categories: ["science"], icon: "4", key: "nav_s4", desc: "Elmi məqalələr (ORCID), müəllimlərin nəşrləri, dərsliklər, konfranslar, seminarlar və açıq dərslər", tokens: "elmi metodiki fealiyyet meqaleler nesrler orcid konfranslar seminarlar aciq dersler" },
       { tab: "library", categories: ["library"], icon: "5", key: "nav_s5", desc: "Dərsliklər, 80 dərs vəsaiti, 40 mühazirə və metodiki materiallar", tokens: "elektron kitabxana derslik ders vesaiti metodiki materiallar muhazire pdf" },
       { tab: "lectures", categories: ["lectures"], icon: "6", key: "nav_s6", desc: "Açıq dərslər, 19 video mühazirə və rəqəmsal təlim materialları", tokens: "video dersler reqemsal tehsil aciq dersler video muhazirələr telim" },
@@ -27789,4 +27813,178 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
   } else {
     renderAllHubs();
   }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     2026/2027 RƏSMİ TƏLƏBƏ QƏBULU NƏTİCƏLƏRİ & İNFOQRAFİKA POSTERİ
+     ══════════════════════════════════════════════════════════════════════ */
+  (function initAdmissionResultsTable() {
+    const admissionMajorsData = [
+      { id: 1, code: "331118", name_az: "Kompüter sistemlərində proqram təminatı", p9_state: 15, p9_paid: 20, a9_state: 15, a9_paid: 20, p11_state: 25, p11_paid: 45, a11_state: 25, a11_paid: 45 },
+      { id: 2, code: "331126", name_az: "Kompüter şəbəkələrinin avadanlıqlarının istismarı", p9_state: 12, p9_paid: 18, a9_state: 12, a9_paid: 18, p11_state: 20, p11_paid: 35, a11_state: 20, a11_paid: 35 },
+      { id: 3, code: "331134", name_az: "İnformasiya texnologiyaları sistemləri", p9_state: 10, p9_paid: 15, a9_state: 10, a9_paid: 15, p11_state: 22, p11_paid: 38, a11_state: 22, a11_paid: 38 },
+      { id: 4, code: "331142", name_az: "Rabitə qovşaqları və kommutasiya sistemləri", p9_state: 6, p9_paid: 9, a9_state: 6, a9_paid: 9, p11_state: 16, p11_paid: 24, a11_state: 16, a11_paid: 23 },
+      { id: 5, code: "331159", name_az: "Poçt rabitəsi xidməti", p9_state: 4, p9_paid: 6, a9_state: 4, a9_paid: 5, p11_state: 10, p11_paid: 15, a11_state: 10, a11_paid: 14 },
+      { id: 6, code: "331167", name_az: "Telekommunikasiya şəbəkələri və sistemləri", p9_state: 8, p9_paid: 12, a9_state: 8, a9_paid: 12, p11_state: 18, p11_paid: 27, a11_state: 18, a11_paid: 26 },
+      { id: 7, code: "331175", name_az: "Radioelektron avadanlıqların təmiri və xidməti", p9_state: 5, p9_paid: 8, a9_state: 5, a9_paid: 7, p11_state: 14, p11_paid: 21, a11_state: 14, a11_paid: 20 },
+      { id: 8, code: "331183", name_az: "Dəmir yolu nəqliyyatında hərəkətin idarə olunması", p9_state: 4, p9_paid: 6, a9_state: 4, a9_paid: 6, p11_state: 15, p11_paid: 25, a11_state: 15, a11_paid: 25 },
+      { id: 9, code: "331191", name_az: "Avtomobil nəqliyyatı ilə daşımaların təşkili", p9_state: 4, p9_paid: 7, a9_state: 4, a9_paid: 7, p11_state: 18, p11_paid: 32, a11_state: 18, a11_paid: 31 },
+      { id: 10, code: "331215", name_az: "Yol hərəkətinin təşkili", p9_state: 4, p9_paid: 6, a9_state: 4, a9_paid: 6, p11_state: 15, p11_paid: 25, a11_state: 15, a11_paid: 24 },
+      { id: 11, code: "331223", name_az: "Nəqliyyatda logistika", p9_state: 4, p9_paid: 7, a9_state: 4, a9_paid: 6, p11_state: 16, p11_paid: 30, a11_state: 16, a11_paid: 30 },
+      { id: 12, code: "331231", name_az: "Mühasibat uçotu", p9_state: 2, p9_paid: 3, a9_state: 2, a9_paid: 3, p11_state: 10, p11_paid: 18, a11_state: 9, a11_paid: 17 },
+      { id: 13, code: "331248", name_az: "Bank işi", p9_state: 2, p9_paid: 3, a9_state: 2, a9_paid: 3, p11_state: 8, p11_paid: 15, a11_state: 7, a11_paid: 15 },
+      { id: 14, code: "331256", name_az: "Marketinq", p9_state: 2, p9_paid: 3, a9_state: 2, a9_paid: 3, p11_state: 8, p11_paid: 16, a11_state: 7, a11_paid: 15 }
+    ];
+
+    function renderAdmissionTable(view) {
+      const mount = document.getElementById("admission-table-mount");
+      if (!mount) return;
+
+      let rowsHtml = "";
+      let totPlanState = 0, totPlanPaid = 0, totActState = 0, totActPaid = 0;
+
+      admissionMajorsData.forEach((m, idx) => {
+        let pState = 0, pPaid = 0, aState = 0, aPaid = 0;
+        if (view === "basis9") {
+          pState = m.p9_state; pPaid = m.p9_paid;
+          aState = m.a9_state; aPaid = m.a9_paid;
+        } else if (view === "basis11") {
+          pState = m.p11_state; pPaid = m.p11_paid;
+          aState = m.a11_state; aPaid = m.a11_paid;
+        } else {
+          pState = m.p9_state + m.p11_state;
+          pPaid = m.p9_paid + m.p11_paid;
+          aState = m.a9_state + m.a11_state;
+          aPaid = m.a9_paid + m.a11_paid;
+        }
+
+        const pTotal = pState + pPaid;
+        const aTotal = aState + aPaid;
+        const pct = pTotal > 0 ? ((aTotal / pTotal) * 100).toFixed(1) : "100.0";
+
+        totPlanState += pState; totPlanPaid += pPaid;
+        totActState += aState; totActPaid += aPaid;
+
+        const isFull = pct >= 98.0;
+
+        rowsHtml += `
+          <tr class="border-b border-slate-900/[0.05] dark:border-white/[0.05] hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition-colors">
+            <td class="px-3 py-2.5 text-xs text-slate-500 dark:text-slate-400 font-mono text-center">${idx + 1}</td>
+            <td class="px-3 py-2.5 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              ${m.name_az}
+            </td>
+            <td class="px-2.5 py-2.5 text-xs text-slate-500 dark:text-slate-400 font-mono text-center">${m.code}</td>
+            <td class="px-3 py-2.5 text-xs text-slate-600 dark:text-slate-300 text-center">
+              <span class="font-bold">${pTotal}</span>
+              <span class="text-[10px] text-slate-400">(${pState} dövlət / ${pPaid} ödənişli)</span>
+            </td>
+            <td class="px-3 py-2.5 text-xs text-slate-900 dark:text-white text-center">
+              <span class="font-bold text-emerald-600 dark:text-emerald-400">${aTotal}</span>
+              <span class="text-[10px] text-slate-400">(${aState} / ${aPaid})</span>
+            </td>
+            <td class="px-3 py-2.5 text-xs text-center">
+              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold ${
+                isFull
+                  ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20"
+                  : "bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20"
+              }">
+                ${pct}%
+              </span>
+            </td>
+          </tr>
+        `;
+      });
+
+      const grandPlan = totPlanState + totPlanPaid;
+      const grandAct = totActState + totActPaid;
+      const grandPct = grandPlan > 0 ? ((grandAct / grandPlan) * 100).toFixed(1) : "98.0";
+
+      mount.innerHTML = `
+        <table class="w-full text-left border-collapse min-w-[620px]">
+          <thead>
+            <tr class="bg-slate-100/80 dark:bg-slate-800/80 border-b border-slate-900/10 dark:border-white/10 text-[11px] uppercase tracking-wider text-slate-600 dark:text-slate-400">
+              <th class="px-3 py-2.5 text-center font-bold">№</th>
+              <th class="px-3 py-2.5 font-bold">İxtisasın Adı</th>
+              <th class="px-2.5 py-2.5 text-center font-bold">DİM Kodu</th>
+              <th class="px-3 py-2.5 text-center font-bold">Plan Yeri</th>
+              <th class="px-3 py-2.5 text-center font-bold">Faktiki Qəbul</th>
+              <th class="px-3 py-2.5 text-center font-bold">Dolma (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rowsHtml}
+          </tbody>
+          <tfoot>
+            <tr class="bg-amber-500/[0.08] dark:bg-amber-500/[0.12] border-t-2 border-amber-500/30 font-bold text-xs">
+              <td class="px-3 py-3 text-center text-amber-700 dark:text-amber-300">★</td>
+              <td class="px-3 py-3 text-slate-900 dark:text-white" colspan="2">
+                YEKUN CƏMİ (${view === "basis9" ? "9-İllik Baza" : view === "basis11" ? "11-İllik Baza" : "Kollec Üzrə Cəmi"})
+              </td>
+              <td class="px-3 py-3 text-center text-slate-900 dark:text-white">
+                ${grandPlan} <span class="text-[10px] font-normal text-slate-500">(${totPlanState} dövlət / ${totPlanPaid} ödənişli)</span>
+              </td>
+              <td class="px-3 py-3 text-center text-emerald-600 dark:text-emerald-400">
+                ${grandAct} <span class="text-[10px] font-normal text-slate-500">(${totActState} dövlət / ${totActPaid} ödənişli)</span>
+              </td>
+              <td class="px-3 py-3 text-center">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-black bg-emerald-600 text-white shadow-sm">
+                  ${grandPct}%
+                </span>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      `;
+    }
+
+    // Tab buttons event listeners
+    const tabBtns = document.querySelectorAll(".admission-table-tab-btn");
+    tabBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        tabBtns.forEach((b) => b.classList.remove("active", "bg-primary-600", "text-white", "shadow-sm"));
+        btn.classList.add("active", "bg-primary-600", "text-white", "shadow-sm");
+        const view = btn.getAttribute("data-adm-view") || "basis9";
+        renderAdmissionTable(view);
+      });
+    });
+
+    // Poster Modal Trigger
+    const zoomBtn = document.getElementById("btn-zoom-admission-poster");
+    const modal = document.getElementById("admission-poster-modal");
+    const closeBtn = document.getElementById("admission-poster-modal-close");
+
+    if (zoomBtn && modal) {
+      zoomBtn.addEventListener("click", () => {
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      });
+    }
+    if (closeBtn && modal) {
+      closeBtn.addEventListener("click", () => {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      });
+    }
+    if (modal) {
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.remove("active");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+          modal.classList.remove("active");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+      });
+    }
+
+    // Initial render
+    renderAdmissionTable("basis9");
+  })();
+
 })();
