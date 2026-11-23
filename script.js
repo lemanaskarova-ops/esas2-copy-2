@@ -185,7 +185,7 @@ const i18n = {
     struct_wing_academic: "Tədris, İKT və Sahə Şöbələri",
     struct_wing_admin: "İnzibati, Tələbə və Dəstək Xidmətləri",
     struct_majors_heading: "Kollecdə Tədris Olunan İxtisaslar",
-    struct_majors_desc: "Dövlət təhsil standartlarına uyğun əyani və qiyabi orta ixtisas təhsili proqramları (19 İxtisas)",
+    struct_majors_desc: "Dövlət təhsil standartlarına uyğun əyani və qiyabi orta ixtisas təhsili proqramları (14 İxtisas)",
     major_eyani_tab: "Əyani Təhsil (14 İxtisas)",
     major_qiyabi_tab: "Qiyabi Təhsil (9 İxtisas)",
     major_degree: "Orta İxtisas Təhsili",
@@ -865,7 +865,7 @@ const i18n = {
     nav_certificates_sub: "Respublika spartakiadası və rəsmi diplomlar",
     nav_fbk: "Fənn Birləşmə Komissiyaları",
     nav_fbk_sub: "9 tədris-metodiki fənn komissiyası",
-    majors_badge_count: "19 İxtisas",
+    majors_badge_count: "14 İxtisas",
     inst_full_name: "BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ PUBLİK HÜQUQİ ŞƏXSİ",
     hero_inst_ministry: "Azərbaycan Respublikası Elm və Təhsil Nazirliyi",
     hero_inst_agency: "Elm və Ali Təhsil üzrə Dövlət Agentliyi",
@@ -985,7 +985,7 @@ const i18n = {
     hub_honored_cta: "Bütün Sertifikatlar Portfeli →",
     edu_proc_badge: "📚 TƏDRİS PROSESİ VƏ PROQRAMLAR",
     edu_proc_title: "Tədris prosesi, təhsil proqramları və istehsalat təcrübəsi",
-    edu_proc_desc: "19 dövlət standartlı ixtisas üzrə nəzəri tədris, rəqəmsal kitabxana resursları, video dərslər və real sənaye müəssisələrində istehsalat təcrübəsi.",
+    edu_proc_desc: "14 dövlət standartlı ixtisas üzrə nəzəri tədris, rəqəmsal kitabxana resursları, video dərslər və real sənaye müəssisələrində istehsalat təcrübəsi.",
     sci_conf_badge: "🎤 Akademik Forum və Konfranslar",
     sci_conf_title: "Elmi konfranslar",
     sci_sem_badge: "💡 Elmi-Pedaqoji Seminar və Təlimlər",
@@ -1206,7 +1206,7 @@ const i18n = {
     struct_wing_academic: "Academic, ICT & Field Departments",
     struct_wing_admin: "Administrative, Student & Support Services",
     struct_majors_heading: "Specialties Offered at the College",
-    struct_majors_desc: "State-standard full-time and part-time vocational programs (19 Majors)",
+    struct_majors_desc: "State-standard full-time and part-time vocational programs (14 Majors)",
     major_eyani_tab: "Full-time (14 Majors)",
     major_qiyabi_tab: "Part-time (9 Majors)",
     major_degree: "Vocational Secondary Degree",
@@ -1879,7 +1879,7 @@ const i18n = {
     nav_certificates_sub: "National spartakiad and official diplomas",
     nav_fbk: "Subject Commissions",
     nav_fbk_sub: "9 specialized academic subject commissions",
-    majors_badge_count: "19 Majors",
+    majors_badge_count: "14 Majors",
     inst_full_name: "BAKU STATE COLLEGE OF COMMUNICATIONS AND TRANSPORT PUBLIC LEGAL ENTITY",
     hero_inst_ministry: "Ministry of Science and Education of the Republic of Azerbaijan",
     hero_inst_agency: "State Agency for Science and Higher Education",
@@ -1999,7 +1999,7 @@ const i18n = {
     hub_honored_cta: "Full Certificates Portfolio →",
     edu_proc_badge: "📚 ACADEMIC PROCESS & CURRICULA",
     edu_proc_title: "Academic process, study programs and industrial internships",
-    edu_proc_desc: "Theoretical instruction across 19 state-accredited majors, electronic library, video lessons, and industrial placements.",
+    edu_proc_desc: "Theoretical instruction across 14 state-accredited majors, electronic library, video lessons, and industrial placements.",
     sci_conf_badge: "🎤 Academic Forums & Conferences",
     sci_conf_title: "Scientific Conferences",
     sci_sem_badge: "💡 Scientific-Pedagogical Seminars & Training",
@@ -2215,7 +2215,7 @@ const i18n = {
     struct_wing_academic: "Учебные, ИКТ и отраслевые отделения",
     struct_wing_admin: "Административные, студенческие и сервисные службы",
     struct_majors_heading: "Специальности, Преподаваемые в Колледже",
-    struct_majors_desc: "Очные и заочные программы среднего специального образования (19 Специальностей)",
+    struct_majors_desc: "Очные и заочные программы среднего специального образования (14 Специальностей)",
     major_eyani_tab: "Очное Обучение (14 Специальностей)",
     major_qiyabi_tab: "Заочное Обучение (9 Специальностей)",
     major_degree: "Среднее Профессиональное Образование",
@@ -2892,7 +2892,7 @@ const i18n = {
     nav_certificates_sub: "Республиканская спартакиада и дипломы",
     nav_fbk: "Предметные комиссии",
     nav_fbk_sub: "9 предметно-цикловых комиссий (ПЦК)",
-    majors_badge_count: "19 Специальностей",
+    majors_badge_count: "14 Специальностей",
     inst_full_name: "БАКИНСКИЙ ГОСУДАРСТВЕННЫЙ КОЛЛЕДЖ СВЯЗИ И ТРАНСПОРТА ПУБЛИЧНОЕ ЮРИДИЧЕСКОЕ ЛИЦО",
     hero_inst_ministry: "Министерство науки и образования Азербайджанской Республики",
     hero_inst_agency: "Государственное агентство по науке и высшему образованию",
@@ -3012,7 +3012,7 @@ const i18n = {
     hub_honored_cta: "Полное портфолио сертификатов →",
     edu_proc_badge: "📚 УЧЕБНЫЙ ПРОЦЕСС И ПРОГРАММЫ",
     edu_proc_title: "Учебный процесс, образовательные программы и практика",
-    edu_proc_desc: "Обучение по 19 государственным специальностям, электронная библиотека, видеоуроки и производственная практика.",
+    edu_proc_desc: "Обучение по 14 государственным специальностям, электронная библиотека, видеоуроки и производственная практика.",
     sci_conf_badge: "🎤 Академические форумы и конференции",
     sci_conf_title: "Научные конференции",
     sci_sem_badge: "💡 Научно-педагогические семинары",
@@ -8075,7 +8075,7 @@ function initStructureModule() {
     }
   }
 
-  // Standalone Academic Majors Catalog (19 İxtisas)
+  // Standalone Academic Majors Catalog (14 İxtisas)
   function renderMajorsCatalog(mountEl) {
     const target = mountEl || document.getElementById("majors-tab-mount");
     if (!target) return;
@@ -8172,7 +8172,7 @@ function initStructureModule() {
             <span>🎓</span> <span>${gT("struct_majors_badge") || "DÖVLƏT STANDARTLI TƏDRİS PROQRAMLARI"}</span>
           </div>
           <h3 class="majors-catalog-title">${gT("struct_majors_heading") || "Kollecdə Tədris Olunan İxtisaslar"}</h3>
-          <p class="majors-catalog-desc">${gT("struct_majors_desc") || "Dövlət təhsil standartlarına uyğun əyani və qiyabi orta ixtisas təhsili proqramları (19 İxtisas)"}</p>
+          <p class="majors-catalog-desc">${gT("struct_majors_desc") || "Dövlət təhsil standartlarına uyğun əyani və qiyabi orta ixtisas təhsili proqramları (14 İxtisas)"}</p>
           <div class="majors-catalog-tabs" role="tablist">
             <button type="button" class="majors-tab-btn active" data-major-view="eyani">
               <span>📘 ${gT("major_eyani_tab") || "Əyani Təhsil"}</span>
@@ -9255,7 +9255,7 @@ function initStructureModule() {
       }
 
       if (cat === "majors") {
-        // Go directly to MAJORS (19 İxtisas)
+        // Go directly to MAJORS (14 İxtisas)
         switchView("majors");
       } else if (cat === "departments") {
         switchView("tree");
@@ -25384,7 +25384,7 @@ function initGlobalSearchModule() {
     const catalog = [];
     const l = currentLang || "az";
 
-    // 1. Majors (19 İxtisas - Əyani & Qiyabi)
+    // 1. Majors (14 İxtisas - Əyani & Qiyabi)
     if (typeof staffData !== "undefined" && staffData.majors) {
       const eyani = staffData.majors.eyani || [];
       const qiyabi = staffData.majors.qiyabi || [];
@@ -25965,7 +25965,7 @@ function initGlobalSearchModule() {
       icon: "🧮",
       badge: "İnteraktiv Alət",
       title: "Qəbul Şansı və Bal Kalkulyatoru",
-      desc: "Topladığınız imtahan balını daxil edərək kollecimizdəki 19 ixtisasa qəbul şansınızı dərhal hesablayın",
+      desc: "Topladığınız imtahan balını daxil edərək kollecimizdəki 14 ixtisasa qəbul şansınızı dərhal hesablayın",
       tokens: "bal kalkulyatoru qebul sansi hesablayici kecid bali ixtisas seximi imtahan neticesi",
       action: () => {
         const sec = document.getElementById("calculator-section") || document.getElementById("calculator") || document.getElementById("faq");
@@ -26133,7 +26133,7 @@ function initGlobalSearchModule() {
     const workspaceTabEntries = [
       { tab: "about", categories: ["structure", "campus"], icon: "1", key: "nav_s1", desc: "Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız, kampus xəritəsi və Qarabağ salnaməsi", tokens: "haqqimizda tarix missiya strategiya kampus qarabag mezun hero" },
       { tab: "structure", categories: ["structure"], icon: "2", key: "nav_s2", desc: "Rəhbərlik, şöbələr, bölmələr, FBK-lar və fəxri əməkdaşlar", tokens: "rehberlik struktur sobeler bolmeler fbk fexri emekdaslar" },
-      { tab: "majors", categories: ["majors", "structure"], icon: "3", key: "nav_s3", desc: "19 rəsmi ixtisas, tədris prosesi, təhsil proqramları və istehsalat təcrübəsi", tokens: "tehsil ixtisaslar tedris prosesi proqramlar tecrube yol xeritesi" },
+      { tab: "majors", categories: ["majors", "structure"], icon: "3", key: "nav_s3", desc: "14 rəsmi ixtisas, tədris prosesi, təhsil proqramları və istehsalat təcrübəsi", tokens: "tehsil ixtisaslar tedris prosesi proqramlar tecrube yol xeritesi" },
       { tab: "science", categories: ["science"], icon: "4", key: "nav_s4", desc: "Elmi məqalələr (ORCID), müəllimlərin nəşrləri, dərsliklər, konfranslar, seminarlar və açıq dərslər", tokens: "elmi metodiki fealiyyet meqaleler nesrler orcid konfranslar seminarlar aciq dersler" },
       { tab: "library", categories: ["library"], icon: "5", key: "nav_s5", desc: "Dərsliklər, 80 dərs vəsaiti, 40 mühazirə və metodiki materiallar", tokens: "elektron kitabxana derslik ders vesaiti metodiki materiallar muhazire pdf" },
       { tab: "lectures", categories: ["lectures"], icon: "6", key: "nav_s6", desc: "Açıq dərslər, 19 video mühazirə və rəqəmsal təlim materialları", tokens: "video dersler reqemsal tehsil aciq dersler video muhazirələr telim" },
