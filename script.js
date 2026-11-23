@@ -14651,4758 +14651,3606 @@ function initSceneTransition() {
 /* ═══════════════ HONORARY STUDENTS / FƏXRİ TƏLƏBƏLƏR MODULE ═══════════════ */
 (function initHonorStudentsModule() {
   const honorStudentsData = window.__bdrnkHonorStudents = [
-    {
-      "id": "senan-mirzezade",
-      "fullName": "Mirzəzadə Sənan Azər oğlu",
-      "fullName_az": "Mirzəzadə Sənan Azər oğlu",
-      "fullName_en": "Sanan Mirzazada Azer",
-      "fullName_ru": "Мирзазаде Санан Азер оглы",
-      "photo": "senan1.jpeg",
-      "fallbackPhoto": "logo.jpg",
-      "titleBadge": "“İlin Gənci” Mükafatçısı",
-      "titleBadge_az": "“İlin Gənci” Mükafatçısı",
-      "titleBadge_en": "“Youth of the Year” Laureate",
-      "titleBadge_ru": "Лауреат премии «Молодежь года»",
-      "role": "İnformasiya Texnologiyaları, Kibertəhlükəsizlik və Robototexnika Mütəxəssisi",
-      "role_az": "İnformasiya Texnologiyaları, Kibertəhlükəsizlik və Robototexnika Mütəxəssisi",
-      "role_en": "Information Technology, Cybersecurity & Robotics Specialist",
-      "role_ru": "Специалист по информационным технологиям, кибербезопасности и робототехнике",
-      "categories": [
-        "all",
-        "it-robotics",
-        "international",
-        "youth"
-      ],
-      "statusText": "Beynəlxalq Çempion & Tədqiqatçı",
-      "statusText_az": "Beynəlxalq Çempion & Tədqiqatçı",
-      "statusText_en": "International Champion & Researcher",
-      "statusText_ru": "Международный чемпион и исследователь",
-      "quote": "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
-      "quote_az": "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
-      "quote_en": "Sanan uses the knowledge and experience he has gained not only for personal advancement, but also to mentor children and young talents preparing for competitions, share his expertise, and contribute to social inclusivity in technology.",
-      "quote_ru": "Санан использует приобретенные знания и опыт не только для личного развития, но и для поддержки детей и молодежи при подготовке к соревнованиям, обмена опытом и содействия социальной инклюзивности в сфере технологий.",
-      "flags": [
-        {
-          "emoji": "🇦🇿",
-          "name": "Azərbaycan",
-          "name_az": "Azərbaycan",
-          "name_en": "Azerbaijan",
-          "name_ru": "Азербайджан",
-          "note": "Respublika Çempionu",
-          "note_az": "Respublika Çempionu",
-          "note_en": "National Champion",
-          "note_ru": "Чемпион Республики"
-        },
-        {
-          "emoji": "🇺🇸",
-          "name": "ABŞ",
-          "name_az": "ABŞ",
-          "name_en": "USA",
-          "name_ru": "США",
-          "note": "FIRST Robotics / NASA Layihəsi",
-          "note_az": "FIRST Robotics / NASA Layihəsi",
-          "note_en": "FIRST Robotics / NASA Project",
-          "note_ru": "FIRST Robotics / Проект NASA"
-        },
-        {
-          "emoji": "🇯🇵",
-          "name": "Yaponiya",
-          "name_az": "Yaponiya",
-          "name_en": "Japan",
-          "name_ru": "Япония",
-          "note": "Beynəlxalq Robototexnika 2026",
-          "note_az": "Beynəlxalq Robototexnika 2026",
-          "note_en": "International Robotics 2026",
-          "note_ru": "Международная Робототехника 2026"
-        },
-        {
-          "emoji": "🇫🇮",
-          "name": "Finlandiya",
-          "name_az": "Finlandiya",
-          "name_en": "Finland",
-          "name_ru": "Финляндия",
-          "note": "Beynəlxalq Abilimpiya 2027",
-          "note_az": "Beynəlxalq Abilimpiya 2027",
-          "note_en": "International Abilympics 2027",
-          "note_ru": "Международный Абилимпикс 2027"
-        },
-        {
-          "emoji": "🇹🇷",
-          "name": "Türkiyə",
-          "name_az": "Türkiyə",
-          "name_en": "Türkiye",
-          "name_ru": "Турция",
-          "note": "16-cı Beynəlxalq MEB Robot",
-          "note_az": "16-cı Beynəlxalq MEB Robot",
-          "note_en": "16th International MEB Robot",
-          "note_ru": "16-й Международный MEB Robot"
-        }
-      ],
-      "stats": [
-        {
-          "icon": "🥇",
-          "val": "I YER",
-          "val_az": "I YER",
-          "val_en": "1st PLACE",
-          "val_ru": "I МЕСТО",
-          "label": "Milli Abilimpiya 2026",
-          "label_az": "Milli Abilimpiya 2026",
-          "label_en": "National Abilympics 2026",
-          "label_ru": "Национальный Абилимпикс 2026",
-          "sub": "İT istiqaməti üzrə Qızıl Medal",
-          "sub_az": "İT istiqaməti üzrə Qızıl Medal",
-          "sub_en": "Gold Medal in IT Specialization",
-          "sub_ru": "Золотая Медаль по направлению ИТ"
-        },
-        {
-          "icon": "🤖",
-          "val": "ÇEMPİON",
-          "val_az": "ÇEMPİON",
-          "val_en": "CHAMPION",
-          "val_ru": "ЧЕМПИОН",
-          "label": "Mini Sumo Robototexnika",
-          "label_az": "Mini Sumo Robototexnika",
-          "label_en": "Mini Sumo Robotics",
-          "label_ru": "Мини-Сумо Робототехника",
-          "sub": "Azərbaycan Beynəlxalq Olimpiada",
-          "sub_az": "Azərbaycan Beynəlxalq Olimpiada",
-          "sub_en": "Azerbaijan Int. Olympiad",
-          "sub_ru": "Азербайджанская Межд. Олимпиада"
-        },
-        {
-          "icon": "🛡️",
-          "val": "LEVEL 1 & 2",
-          "val_az": "LEVEL 1 & 2",
-          "val_en": "LEVEL 1 & 2",
-          "val_ru": "LEVEL 1 & 2",
-          "label": "Ethical Hacker",
-          "label_az": "Ethical Hacker",
-          "label_en": "Ethical Hacker",
-          "label_ru": "Этичный Хакер (Ethical Hacker)",
-          "sub": "Beynəlxalq kiber sertifikatlar",
-          "sub_az": "Beynəlxalq kiber sertifikatlar",
-          "sub_en": "International cyber certifications",
-          "sub_ru": "Международные кибер-сертификаты"
-        },
-        {
-          "icon": "🌟",
-          "val": "İLİN GƏNCİ",
-          "val_az": "İLİN GƏNCİ",
-          "val_en": "YOUTH OF YEAR",
-          "val_ru": "МОЛОДЕЖЬ ГОДА",
-          "label": "Fəxri Dövlət Mükafatı",
-          "label_az": "Fəxri Dövlət Mükafatı",
-          "label_en": "Honorary State Award",
-          "label_ru": "Почетная Государственная Награда",
-          "sub": "İctimai fəallıq və nailiyyətlər",
-          "sub_az": "İctimai fəallıq və nailiyyətlər",
-          "sub_en": "Social engagement & achievements",
-          "sub_ru": "Общественная активность и успехи"
-        }
-      ],
-      "highlights": [
-        {
-          "year": "2027",
-          "flag": "🇫🇮",
-          "country": "Finlandiya",
-          "country_az": "Finlandiya",
-          "country_en": "Finland",
-          "country_ru": "Финляндия",
-          "title": "Beynəlxalq Abilimpiya Çempionatı",
-          "title_az": "Beynəlxalq Abilimpiya Çempionatı",
-          "title_en": "International Abilympics Championship",
-          "title_ru": "Международный Чемпионат Абилимпикс",
-          "text": "Azərbaycan Milli Komandasının tərkibində ölkəmizi təmsil etmək vəsiqəsi qazanmışdır.",
-          "text_az": "Azərbaycan Milli Komandasının tərkibində ölkəmizi təmsil etmək vəsiqəsi qazanmışdır.",
-          "text_en": "Earned the official right to represent Azerbaijan as a member of the National Team.",
-          "text_ru": "Завоевал право представлять Азербайджан в составе Национальной Сборной."
-        },
-        {
-          "year": "2026",
-          "flag": "🇯🇵",
-          "country": "Yaponiya",
-          "country_az": "Yaponiya",
-          "country_en": "Japan",
-          "country_ru": "Япония",
-          "title": "Beynəlxalq Robototexnika Yarışı",
-          "title_az": "Beynəlxalq Robototexnika Yarışı",
-          "title_en": "International Robotics Competition",
-          "title_ru": "Международные Соревнования по Робототехнике",
-          "text": "Azərbaycan Mini Sumo çempionu kimi Yaponiyada keçiriləcək beynəlxalq yarışda Azərbaycanı təmsil edəcək.",
-          "text_az": "Azərbaycan Mini Sumo çempionu kimi Yaponiyada keçiriləcək beynəlxalq yarışda Azərbaycanı təmsil edəcək.",
-          "text_en": "As the Azerbaijan Mini Sumo champion, will represent our country at the international contest in Japan.",
-          "text_ru": "В качестве чемпиона Азербайджана по Мини-Сумо представит страну на международном турнире в Японии."
-        },
-        {
-          "year": "2024",
-          "flag": "🇺🇸",
-          "country": "ABŞ",
-          "country_az": "ABŞ",
-          "country_en": "USA",
-          "country_ru": "США",
-          "title": "FIRST Robotics Competition & NASA Layihəsi",
-          "title_az": "FIRST Robotics Competition & NASA Layihəsi",
-          "title_en": "FIRST Robotics Competition & NASA Project",
-          "title_ru": "FIRST Robotics Competition и Проект NASA",
-          "text": "Amerika Birləşmiş Ştatlarında NASA layihəsi ilə əlaqəli FRC yarışında Azərbaycanı təmsil etmişdir.",
-          "text_az": "Amerika Birləşmiş Ştatlarında NASA layihəsi ilə əlaqəli FRC yarışında Azərbaycanı təmsil etmişdir.",
-          "text_en": "Represented Azerbaijan in the USA at the FIRST Robotics Competition associated with the NASA project.",
-          "text_ru": "Представлял Азербайджан в США на соревнованиях FIRST Robotics Competition в рамках проекта NASA."
-        }
-      ],
-      "tags": [
-        "#İnformasiyaTexnologiyaları",
-        "#Kibertəhlükəsizlik",
-        "#EthicalHacker_L1_L2",
-        "#Robototexnika",
-        "#MiniSumo_Çempionu",
-        "#FIRST_Robotics_NASA",
-        "#MilliAbilimpiya_I_Yer",
-        "#Finlandiya2027",
-        "#Yaponiya2026",
-        "#İlinGənci"
-      ],
-      "tags_az": [
-        "#İnformasiyaTexnologiyaları",
-        "#Kibertəhlükəsizlik",
-        "#EthicalHacker_L1_L2",
-        "#Robototexnika",
-        "#MiniSumo_Çempionu",
-        "#FIRST_Robotics_NASA",
-        "#MilliAbilimpiya_I_Yer",
-        "#Finlandiya2027",
-        "#Yaponiya2026",
-        "#İlinGənci"
-      ],
-      "tags_en": [
-        "#InformationTechnology",
-        "#Cybersecurity",
-        "#EthicalHacker_L1_L2",
-        "#Robotics",
-        "#MiniSumo_Champion",
-        "#FIRST_Robotics_NASA",
-        "#NationalAbilympics_1stPlace",
-        "#Finland2027",
-        "#Japan2026",
-        "#YouthOfTheYear"
-      ],
-      "tags_ru": [
-        "#ИнформационныеТехнологии",
-        "#Кибербезопасность",
-        "#EthicalHacker_L1_L2",
-        "#Робототехника",
-        "#Чемпион_МиниСумо",
-        "#FIRST_Robotics_NASA",
-        "#НациональныйАбилимпикс_1Место",
-        "#Финляндия2027",
-        "#Япония2026",
-        "#МолодежьГода"
-      ],
-      "timeline": [
-        {
-          "year": "2027",
-          "badge": "🇫🇮 Finlandiya · Qlobal Vəsiqə",
-          "badge_az": "🇫🇮 Finlandiya · Qlobal Vəsiqə",
-          "badge_en": "🇫🇮 Finland · Global Qualification",
-          "badge_ru": "🇫🇮 Финляндия · Международная Путевка",
-          "title": "Beynəlxalq Abilimpiya Çempionatı (Finlandiya)",
-          "title_az": "Beynəlxalq Abilimpiya Çempionatı (Finlandiya)",
-          "title_en": "International Abilympics Championship (Finland)",
-          "title_ru": "Международный Чемпионат Абилимпикс (Финляндия)",
-          "desc": "2026-cı il Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə qazanılmış I yer (qızıl medal) nəticəsinə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
-          "desc_az": "2026-cı il Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə qazanılmış I yer (qızıl medal) nəticəsinə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
-          "desc_en": "Based on achieving 1st place (Gold Medal) in Information Technology at the 2026 National Abilympics, earned the right to represent our country as part of the Azerbaijan National Team at the International Abilympics in Finland in 2027.",
-          "desc_ru": "По итогам 1-го места (золотая медаль) по направлению Информационные Технологии на Национальном Чемпионате Абилимпикс 2026 года, завоевал право представлять Азербайджан в составе национальной сборной на Международном Чемпионате Абилимпикс в Финляндии в 2027 году."
-        },
-        {
-          "year": "2026",
-          "badge": "🇯🇵 Yaponiya · Qlobal Vəsiqə & Çempionluq",
-          "badge_az": "🇯🇵 Yaponiya · Qlobal Vəsiqə & Çempionluq",
-          "badge_en": "🇯🇵 Japan · Global Ticket & Championship",
-          "badge_ru": "🇯🇵 Япония · Путевка и Чемпионский Титул",
-          "title": "Azərbaycan Beynəlxalq Robot Olimpiadası — Mini Sumo Çempionu",
-          "title_az": "Azərbaycan Beynəlxalq Robot Olimpiadası — Mini Sumo Çempionu",
-          "title_en": "Azerbaijan International Robot Olympiad — Mini Sumo Champion",
-          "title_ru": "Азербайджанская Международная Робот Олимпиада — Чемпион Мини-Сумо",
-          "desc": "Azərbaycan Beynəlxalq Robot Olimpiadasında yüksək nəticə göstərərək Mini Sumo robototexnika kateqoriyasında Respublika Çempionu olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
-          "desc_az": "Azərbaycan Beynəlxalq Robot Olimpiadasında yüksək nəticə göstərərək Mini Sumo robototexnika kateqoriyasında Respublika Çempionu olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
-          "desc_en": "Demonstrated top performance at the Azerbaijan International Robot Olympiad, becoming National Champion in the Mini Sumo robotics category. Based on these achievements, secured the right to represent Azerbaijan at the international robotics tournament in Japan.",
-          "desc_ru": "Продемонстрировал выдающиеся результаты на Азербайджанской Международной Робототехнической Олимпиаде, став Чемпионом Республики в категории робототехники «Мини-Сумо». Завоевал путевку на представление Азербайджана на международных соревнованиях в Японии."
-        },
-        {
-          "year": "2026",
-          "badge": "🥇 Qızıl Medal & Diplom",
-          "badge_az": "🥇 Qızıl Medal & Diplom",
-          "badge_en": "🥇 Gold Medal & Diploma",
-          "badge_ru": "🥇 Золотая Медаль и Диплом",
-          "title": "Milli Abilimpiya Çempionatı — I Yer Qalibi",
-          "title_az": "Milli Abilimpiya Çempionatı — I Yer Qalibi",
-          "title_en": "National Abilympics Championship — 1st Place Winner",
-          "title_ru": "Национальный Чемпионат Абилимпикс — Победитель I Места",
-          "desc": "İnformasiya Texnologiyaları istiqaməti üzrə bütün rəqiblərini qabaqlayaraq fəxri I yerin qalibi olmuş, qızıl medal və xüsusi diplomla təltif edilmişdir.",
-          "desc_az": "İnformasiya Texnologiyaları istiqaməti üzrə bütün rəqiblərini qabaqlayaraq fəxri I yerin qalibi olmuş, qızıl medal və xüsusi diplomla təltif edilmişdir.",
-          "desc_en": "Outperformed all competitors in Information Technology, winning honorary 1st place, awarded with a gold medal and special diploma.",
-          "desc_ru": "Опередил всех соперников по направлению Информационные Технологии, завоевав почетное I место, награжден золотой медалью и специальным дипломом."
-        },
-        {
-          "year": "2025",
-          "badge": "🤝 Könüllü Mentorluq & İnklüziv Dəstək",
-          "badge_az": "🤝 Könüllü Mentorluq & İnklüziv Dəstək",
-          "badge_en": "🤝 Voluntary Mentorship & Inclusive Support",
-          "badge_ru": "🤝 Волонтерское Наставничество и Инклюзивная Поддержка",
-          "title": "FIRST Robotics Komandasına Texniki Mentorluq və Sosial Maarifləndirmə",
-          "title_az": "FIRST Robotics Komandasına Texniki Mentorluq və Sosial Maarifləndirmə",
-          "title_en": "Technical Mentorship to FIRST Robotics Team & Social Advocacy",
-          "title_ru": "Техническое Менторство Команде FIRST Robotics и Социальное Просвещение",
-          "desc": "FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
-          "desc_az": "FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
-          "desc_en": "Voluntarily contributed knowledge and technical mentorship to the team traveling abroad for FIRST Robotics Competition, assisting team preparation and skill building. Participated actively in technology-driven social inclusivity projects, mentoring children and youth.",
-          "desc_ru": "На волонтерских началах делился опытом и знаниями с командой, выезжающей за рубеж для участия в FIRST Robotics Competition, внося вклад в их подготовку. Участвовал в инклюзивных технологических проектах, передавая навыки молодому поколению."
-        },
-        {
-          "year": "2024",
-          "badge": "🇺🇸 ABŞ & 🇹🇷 Türkiyə",
-          "badge_az": "🇺🇸 ABŞ & 🇹🇷 Türkiyə",
-          "badge_en": "🇺🇸 USA & 🇹🇷 Türkiye",
-          "badge_ru": "🇺🇸 США и 🇹🇷 Турция",
-          "title": "FIRST Robotics Competition (NASA Layihəsi) & 16-cı MEB Robot",
-          "title_az": "FIRST Robotics Competition (NASA Layihəsi) & 16-cı MEB Robot",
-          "title_en": "FIRST Robotics Competition (NASA Project) & 16th MEB Robot",
-          "title_ru": "FIRST Robotics Competition (Проект NASA) и 16-й MEB Robot",
-          "desc": "Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmiş, beynəlxalq robototexnika mühitində zəngin praktiki təcrübə qazanmışdır. Həmin il Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir.",
-          "desc_az": "Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmiş, beynəlxalq robototexnika mühitində zəngin praktiki təcrübə qazanmışdır. Həmin il Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir.",
-          "desc_en": "Represented Azerbaijan in the USA at the FIRST Robotics Competition associated with the NASA project, acquiring invaluable hands-on engineering experience. That same year participated in the 16th International MEB Robot Contest in Türkiye.",
-          "desc_ru": "Представлял Азербайджан в США на соревнованиях FIRST Robotics Competition в партнерстве с проектом NASA, получив ценнейший практический опыт. В том же году участвовал в 16-м Международном Конкурсе MEB Robot в Турции."
-        },
-        {
-          "year": "2023",
-          "badge": "🥉 Respublika Mükafatı & Kiber Məktəb",
-          "badge_az": "🥉 Respublika Mükafatı & Kiber Məktəb",
-          "badge_en": "🥉 National Award & Cyber School",
-          "badge_ru": "🥉 Республиканская Награда и Кибершкола",
-          "title": "Milli Abilimpiya Çempionatı III Yer & AKTA Cyber Summer School 2023",
-          "title_az": "Milli Abilimpiya Çempionatı III Yer & AKTA Cyber Summer School 2023",
-          "title_en": "National Abilympics 3rd Place & AKTA Cyber Summer School 2023",
-          "title_ru": "Национальный Абилимпикс III Место и AKTA Cyber Summer School 2023",
-          "desc": "Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
-          "desc_az": "Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
-          "desc_en": "Won 3rd place in Information Technology at the National Abilympics, awarded medal and diploma. Participated in the AKTA Cyber Summer School 2023, advancing knowledge and applied cybersecurity skills.",
-          "desc_ru": "Занял III место по направлению Информационные Технологии на Национальном Чемпионате Абилимпикс, награжден медалью и дипломом. Участвовал в программе AKTA Cyber Summer School 2023, развивая навыки кибербезопасности."
-        },
-        {
-          "year": "2019–2022",
-          "badge": "💻 Fundamental Təhsil",
-          "badge_az": "💻 Fundamental Təhsil",
-          "badge_en": "💻 Foundational Education",
-          "badge_ru": "💻 Фундаментальное Образование",
-          "title": "STEP IT Kids Academy — İT və Rəqəmsal Texnologiyalar",
-          "title_az": "STEP IT Kids Academy — İT və Rəqəmsal Texnologiyalar",
-          "title_en": "STEP IT Kids Academy — IT and Digital Technologies",
-          "title_ru": "STEP IT Kids Academy — ИТ и Цифровые Технологии",
-          "desc": "STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində dördillik peşəkar təhsil almışdır.",
-          "desc_az": "STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində dördillik peşəkar təhsil almışdır.",
-          "desc_en": "Completed a comprehensive four-year professional education in information technology and digital innovations at STEP IT Kids Academy.",
-          "desc_ru": "Прошел четырехлетнее профессиональное обучение по направлению информационных и цифровых технологий в STEP IT Kids Academy."
-        }
-      ],
-      "fullBio": [
-        "Mirzəzadə Sənan Azər oğlu informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində özünü inkişaf etdirən, müxtəlif yerli və beynəlxalq yarışlarda iştirak edərək yüksək nəticələr əldə edən gəncdir.",
-        "2019–2022-ci illərdə STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində təhsil almışdır.",
-        "2023-cü ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
-        "2024-cü ildə Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir. Həmin il Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmişdir. Bu yarış çərçivəsində beynəlxalq robototexnika mühitində praktiki təcrübə qazanmışdır.",
-        "2025-ci ildə FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
-        "2026-cı ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə I yerin qalibi olmuşdur. Bu nəticəyə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
-        "2026-cı ildə Azərbaycan Beynəlxalq Robot Olimpiadasında iştirak edərək yüksək nəticə göstərmiş, Mini Sumo robototexnika kateqoriyasında çempion olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
-        "Kibertəhlükəsizlik sahəsində Ethical Hacker Level 1 və Ethical Hacker Level 2 proqramlarını uğurla tamamlamışdır. İnformasiya texnologiyaları, kompüter şəbəkələri, kibertəhlükəsizlik və robototexnika üzrə müxtəlif seminar, təlim və praktiki proqramlarda iştirak edərək peşəkar bilik və bacarıqlarını davamlı şəkildə inkişaf etdirir.",
-        "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
-        "Gənclər və texnologiya sahəsində göstərdiyi fəallıq, əldə etdiyi nailiyyətlər və ictimai fəaliyyəti nəzərə alınaraq “İlin Gənci” mükafatına layiq görülmüşdür.",
-        "Sənanın əldə etdiyi nəticələr onun informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində ardıcıl inkişaf etdiyini, beynəlxalq səviyyədə Azərbaycanı təmsil etdiyini və öz bilik və təcrübəsini digər gənclərlə bölüşərək sosial fayda yaratdığını göstərir."
-      ],
-      "fullBio_az": [
-        "Mirzəzadə Sənan Azər oğlu informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində özünü inkişaf etdirən, müxtəlif yerli və beynəlxalq yarışlarda iştirak edərək yüksək nəticələr əldə edən gəncdir.",
-        "2019–2022-ci illərdə STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində təhsil almışdır.",
-        "2023-cü ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
-        "2024-cü ildə Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir. Həmin il Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmişdir. Bu yarış çərçivəsində beynəlxalq robototexnika mühitində praktiki təcrübə qazanmışdır.",
-        "2025-ci ildə FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
-        "2026-cı ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə I yerin qalibi olmuşdur. Bu nəticəyə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
-        "2026-cı ildə Azərbaycan Beynəlxalq Robot Olimpiadasında iştirak edərək yüksək nəticə göstərmiş, Mini Sumo robototexnika kateqoriyasında çempion olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
-        "Kibertəhlükəsizlik sahəsində Ethical Hacker Level 1 və Ethical Hacker Level 2 proqramlarını uğurla tamamlamışdır. İnformasiya texnologiyaları, kompüter şəbəkələri, kibertəhlükəsizlik və robototexnika üzrə müxtəlif seminar, təlim və praktiki proqramlarda iştirak edərək peşəkar bilik və bacarıqlarını davamlı şəkildə inkişaf etdirir.",
-        "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
-        "Gənclər və texnologiya sahəsində göstərdiyi fəallıq, əldə etdiyi nailiyyətlər və ictimai fəaliyyəti nəzərə alınaraq “İlin Gənci” mükafatına layiq görülmüşdür.",
-        "Sənanın əldə etdiyi nəticələr onun informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində ardıcıl inkişaf etdiyini, beynəlxalq səviyyədə Azərbaycanı təmsil etdiyini və öz bilik və təcrübəsini digər gənclərlə bölüşərək sosial fayda yaratdığını göstərir."
-      ],
-      "fullBio_en": [
-        "Mirzazada Sanan Azer is an accomplished young specialist who continually develops himself in the fields of information technology, cybersecurity, and robotics, achieving stellar results at numerous national and international competitions.",
-        "From 2019 to 2022, he studied information technology and digital innovations at the STEP IT Kids Academy, completing four years of foundational tech education.",
-        "In 2023, he won 3rd place in Information Technology at the National Abilympics Championship, being awarded a bronze medal and diploma. In that same year, he joined the AKTA Cyber Summer School 2023 program, enhancing his practical competencies in cybersecurity.",
-        "In 2024, he took part in the 16th International MEB Robot Competition in Türkiye. That year, he had the distinction of representing Azerbaijan in the United States at the prestigious FIRST Robotics Competition associated with the NASA project, gaining substantial international engineering experience.",
-        "In 2025, he volunteered as a technical mentor for the team traveling abroad for the FIRST Robotics Competition, helping train participants and boosting their technical skills. Concurrently, he engaged in various tech-driven social inclusivity initiatives, generously sharing his knowledge with other children and youth.",
-        "In 2026, he secured 1st place (Gold Medal) in Information Technology at the National Abilympics Championship. Through this victory, he earned the privilege of representing Azerbaijan at the International Abilympics Championship to be held in Finland in 2027.",
-        "In 2026, he achieved outstanding success at the Azerbaijan International Robot Olympiad, winning the National Championship in the Mini Sumo robotics category. Based on this feat, he secured the right to represent Azerbaijan at the international robotics competition in Japan.",
-        "In the domain of cybersecurity, he has successfully completed Ethical Hacker Level 1 and Ethical Hacker Level 2 certifications. He continuously enhances his qualifications through technical seminars, hands-on masterclasses, and specialized networking programs.",
-        "Sanan utilizes his accrued expertise not merely for personal achievement, but to guide youth entering robotics and tech competitions, share insights, and advocate for technological accessibility and social inclusion.",
-        "In recognition of his active community leadership, stellar technical achievements, and dedicated social service, he was honored with the prestigious “Youth of the Year” state award.",
-        "Sanan's achievements demonstrate his persistent dedication to IT, cybersecurity, and robotics, his proud international representation of Azerbaijan, and his commitment to generating positive social impact by empowering younger generations."
-      ],
-      "fullBio_ru": [
-        "Мирзазаде Санан Азер оглы — целеустремленный молодой специалист в сферах информационных технологий, кибербезопасности и робототехники, демонстрирующий высокие результаты на республиканских и международных соревнованиях.",
-        "В 2019–2022 годах получил углубленное четырехлетнее образование по направлению информационных и цифровых технологий в STEP IT Kids Academy.",
-        "В 2023 году завоевал III место по направлению «Информационные Технологии» на Национальном Чемпионате Абилимпикс, будучи награжден медалью и дипломом. В том же году успешно прошел программу AKTA Cyber Summer School 2023, расширив практические навыки в сфере кибербезопасности.",
-        "В 2024 году принял участие в 16-м Международном Конкурсе MEB Robot в Турции. В том же году представлял Азербайджан в США на престижных соревнованиях FIRST Robotics Competition в рамках проекта NASA, получив ценный международный опыт в сфере робототехники.",
-        "В 2025 году оказал добровольную менторскую поддержку национальной команде, направлявшейся за рубеж для участия в FIRST Robotics Competition, способствуя подготовке участников и повышению их технического уровня. Одновременно участвовал в социальных инклюзивных IT-проектах, обучая детей и молодежь.",
-        "В 2026 году завоевал I место (золотая медаль) по направлению «Информационные Технологии» на Национальном Чемпионате Абилимпикс. Благодаря этой победе он получил право представлять Азербайджан на Международном Чемпионате Абилимпикс в Финляндии в 2027 году.",
-        "В 2026 году добился триумфа на Азербайджанской Международной Робототехнической Олимпиаде, став чемпионом в категории «Мини-Сумо». По итогам соревнований он завоевал путевку на участие в международном турнире по робототехнике в Японии.",
-        "В сфере кибербезопасности успешно завершил сертификационные программы Ethical Hacker Level 1 и Ethical Hacker Level 2. Постоянно повышает уровень мастерства, участвуя в семинарах, тренингах и практических курсах по сетевой безопасности.",
-        "Санан применяет накопленные знания и опыт не только для индивидуального прогресса, но и для наставничества юных участников турниров, содействуя расширению социальной инклюзивности в технологическом сообществе.",
-        "За выдающиеся успехи, лидерские качества и активную общественную деятельность в молодежной среде был удостоен государственной премии «Молодежь года».",
-        "Достижения Санана наглядно свидетельствуют о его профессиональном росте в сфере ИКТ и кибербезопасности, достойном представлении Азербайджана на мировой арене и стремлении приносить реальную пользу обществу."
-      ],
-      "certificates": [
-        {
-          "icon": "🛡️",
-          "title": "Ethical Hacker Level 1",
-          "title_az": "Ethical Hacker Level 1",
-          "title_en": "Ethical Hacker Level 1",
-          "title_ru": "Ethical Hacker Level 1",
-          "sub": "Kibertəhlükəsizlik & Şəbəkə Müdafiəsi",
-          "sub_az": "Kibertəhlükəsizlik & Şəbəkə Müdafiəsi",
-          "sub_en": "Cybersecurity & Network Defense",
-          "sub_ru": "Кибербезопасность и Сетевая Защита"
-        },
-        {
-          "icon": "🔐",
-          "title": "Ethical Hacker Level 2",
-          "title_az": "Ethical Hacker Level 2",
-          "title_en": "Ethical Hacker Level 2",
-          "title_ru": "Ethical Hacker Level 2",
-          "sub": "Təkmil Penetrasiya & Təhlükə Analizi",
-          "sub_az": "Təkmil Penetrasiya & Təhlükə Analizi",
-          "sub_en": "Advanced Penetration & Threat Analysis",
-          "sub_ru": "Продвинутое Тестирование на Проникновение"
-        },
-        {
-          "icon": "🌐",
-          "title": "AKTA Cyber Summer School 2023",
-          "title_az": "AKTA Cyber Summer School 2023",
-          "title_en": "AKTA Cyber Summer School 2023",
-          "title_ru": "AKTA Cyber Summer School 2023",
-          "sub": "Azərbaycan Kibertəhlükəsizlik Təşkilatları Assosiasiyası",
-          "sub_az": "Azərbaycan Kibertəhlükəsizlik Təşkilatları Assosiasiyası",
-          "sub_en": "Association of Cybersecurity Organizations of Azerbaijan",
-          "sub_ru": "Ассоциация Организаций Кибербезопасности Азербайджана"
-        },
-        {
-          "icon": "🥇",
-          "title": "Milli Abilimpiya Qızıl Medal (2026)",
-          "title_az": "Milli Abilimpiya Qızıl Medal (2026)",
-          "title_en": "National Abilympics Gold Medal (2026)",
-          "title_ru": "Золотая Медаль Национального Абилимпикса (2026)",
-          "sub": "İnformasiya Texnologiyaları üzrə I Yer",
-          "sub_az": "İnformasiya Texnologiyaları üzrə I Yer",
-          "sub_en": "1st Place in Information Technology",
-          "sub_ru": "I Место по Информационным Технологиям"
-        },
-        {
-          "icon": "🤖",
-          "title": "Mini Sumo Robototexnika Çempionu",
-          "title_az": "Mini Sumo Robototexnika Çempionu",
-          "title_en": "Mini Sumo Robotics Champion",
-          "title_ru": "Чемпион по Робототехнике Мини-Сумо",
-          "sub": "Azərbaycan Beynəlxalq Robot Olimpiadası (2026)",
-          "sub_az": "Azərbaycan Beynəlxalq Robot Olimpiadası (2026)",
-          "sub_en": "Azerbaijan International Robot Olympiad (2026)",
-          "sub_ru": "Азербайджанская Межд. Робот Олимпиада (2026)"
-        },
-        {
-          "icon": "🚀",
-          "title": "FIRST Robotics & NASA Layihəsi",
-          "title_az": "FIRST Robotics & NASA Layihəsi",
-          "title_en": "FIRST Robotics & NASA Project",
-          "title_ru": "FIRST Robotics и Проект NASA",
-          "sub": "Beynəlxalq Mühəndislik və Robototexnika (ABŞ)",
-          "sub_az": "Beynəlxalq Mühəndislik və Robototexnika (ABŞ)",
-          "sub_en": "International Engineering & Robotics (USA)",
-          "sub_ru": "Международная Инженерия и Робототехника (США)"
-        },
-        {
-          "icon": "💻",
-          "title": "STEP IT Kids Academy Məzunu",
-          "title_az": "STEP IT Kids Academy Məzunu",
-          "title_en": "STEP IT Kids Academy Graduate",
-          "title_ru": "Выпускник STEP IT Kids Academy",
-          "sub": "İKT və Rəqəmsal Texnologiyalar (2019-2022)",
-          "sub_az": "İKT və Rəqəmsal Texnologiyalar (2019-2022)",
-          "sub_en": "ICT & Digital Technologies (2019-2022)",
-          "sub_ru": "ИКТ и Цифровые Технологии (2019-2022)"
-        },
-        {
-          "icon": "🌟",
-          "title": "“İlin Gənci” Fəxri Dövlət Mükafatı",
-          "title_az": "“İlin Gənci” Fəxri Dövlət Mükafatı",
-          "title_en": "“Youth of the Year” State Award",
-          "title_ru": "Почетная Госпремия «Молодежь года»",
-          "sub": "İctimai Fəallıq və İnklüziv Layihələrə Töhfə",
-          "sub_az": "İctimai Fəallıq və İnklüziv Layihələrə Töhfə",
-          "sub_en": "Social Engagement & Contribution to Inclusive Projects",
-          "sub_ru": "Общественная Активность и Вклад в Инклюзивные Проекты"
-        }
-      ],
-      "gallery": [
-        {
-          "type": "image",
-          "src": "senan1.jpeg",
-          "caption": "Mirzəzadə Sənan — Fəxri Tələbə Portreti",
-          "caption_az": "Mirzəzadə Sənan — Fəxri Tələbə Portreti",
-          "caption_en": "Sanan Mirzazada — Honor Student Portrait",
-          "caption_ru": "Мирзазаде Санан — Портрет Почетного Студента"
-        },
-        {
-          "type": "image",
-          "src": "senan2.jpeg",
-          "caption": "Milli Abilimpiya Mükafatlandırma Mərasimi",
-          "caption_az": "Milli Abilimpiya Mükafatlandırma Mərasimi",
-          "caption_en": "National Abilympics Awarding Ceremony",
-          "caption_ru": "Церемония Награждения Национального Абилимпикса"
-        },
-        {
-          "type": "image",
-          "src": "senan3.jpeg",
-          "caption": "Mini Sumo Robototexnika Çempionluğu",
-          "caption_az": "Mini Sumo Robototexnika Çempionluğu",
-          "caption_en": "Mini Sumo Robotics Championship",
-          "caption_ru": "Чемпионство по Робототехнике Мини-Сумо"
-        },
-        {
-          "type": "image",
-          "src": "senan4.jpeg",
-          "caption": "FIRST Robotics (NASA) Beynəlxalq Yarışı",
-          "caption_az": "FIRST Robotics (NASA) Beynəlxalq Yarışı",
-          "caption_en": "FIRST Robotics (NASA) International Competition",
-          "caption_ru": "FIRST Robotics (NASA) Международные Соревнования"
-        },
-        {
-          "type": "image",
-          "src": "senan5.jpeg",
-          "caption": "Kibertəhlükəsizlik & Ethical Hacker Proqramı",
-          "caption_az": "Kibertəhlükəsizlik & Ethical Hacker Proqramı",
-          "caption_en": "Cybersecurity & Ethical Hacker Program",
-          "caption_ru": "Кибербезопасность и Программа Ethical Hacker"
-        },
-        {
-          "type": "image",
-          "src": "senan6.jpeg",
-          "caption": "AKTA Cyber Summer School Praktiki Təlimi",
-          "caption_az": "AKTA Cyber Summer School Praktiki Təlimi",
-          "caption_en": "AKTA Cyber Summer School Hands-on Training",
-          "caption_ru": "Практический Тренинг AKTA Cyber Summer School"
-        },
-        {
-          "type": "image",
-          "src": "senan7.jpeg",
-          "caption": "16-cı Beynəlxalq MEB Robot Yarışı (Türkiyə)",
-          "caption_az": "16-cı Beynəlxalq MEB Robot Yarışı (Türkiyə)",
-          "caption_en": "16th International MEB Robot Contest (Türkiye)",
-          "caption_ru": "16-й Международный Конкурс MEB Robot (Турция)"
-        },
-        {
-          "type": "image",
-          "src": "senan8.jpeg",
-          "caption": "Sosial İnklüziv Layihələr & Könüllü Dəstək",
-          "caption_az": "Sosial İnklüziv Layihələr & Könüllü Dəstək",
-          "caption_en": "Social Inclusivity Projects & Volunteer Support",
-          "caption_ru": "Социальные Инклюзивные Проекты и Менторство"
-        },
-        {
-          "type": "image",
-          "src": "senan9.jpeg",
-          "caption": "“İlin Gənci” Mükafat Təqdimatı",
-          "caption_az": "“İlin Gənci” Mükafat Təqdimatı",
-          "caption_en": "“Youth of the Year” Award Presentation",
-          "caption_ru": "Вручение Награды «Молодежь года»"
-        },
-        {
-          "type": "video",
-          "src": "senan10.mp4",
-          "caption": "Robototexnika və Canlı Çıxış Video Xronikası",
-          "caption_az": "Robototexnika və Canlı Çıxış Video Xronikası",
-          "caption_en": "Robotics & Live Demonstration Video Chronicle",
-          "caption_ru": "Видеохроника Робототехники и Выступлений"
-        },
-        {
-          "type": "image",
-          "src": "senan11.jpeg",
-          "caption": "Beynəlxalq Robot Arena və Hazırlıq",
-          "caption_az": "Beynəlxalq Robot Arena və Hazırlıq",
-          "caption_en": "International Robot Arena & Preparation",
-          "caption_ru": "Международная Робот-Арена и Подготовка"
-        },
-        {
-          "type": "image",
-          "src": "senan12.jpeg",
-          "caption": "Diplomlar, Qızıl Medallar və Təltiflər",
-          "caption_az": "Diplomlar, Qızıl Medallar və Təltiflər",
-          "caption_en": "Diplomas, Gold Medals and Distinctions",
-          "caption_ru": "Дипломы, Золотые Медали и Награды"
-        }
-      ]
-    },
-    {
-        "id": "elvin-memmedov",
-      "fullName": "Məmmədov Elvin",
-      "fullName_az": "Məmmədov Elvin",
-      "fullName_en": "Elvin Mammadov",
-      "fullName_ru": "Мамедов Эльвин",
-      "photo": "certificates/thumbs/cert_elvin_1.jpg",
-      "fallbackPhoto": "certificates/cert_elvin_1.jpg",
-      "kickerIcon": "🥋",
-      "kicker": "Cüdo & Hərbi-Vətənpərvərlik İdmanı",
-      "kicker_az": "Cüdo & Hərbi-Vətənpərvərlik İdmanı",
-      "kicker_en": "Judo & Martial Athletics",
-      "kicker_ru": "Дзюдо и Боевой Спорт",
-      "highlightsHeading": "ƏSAS İDMAN NAİLİYYƏTLƏRİ VƏ DƏYƏRLƏR",
-      "highlightsHeading_az": "ƏSAS İDMAN NAİLİYYƏTLƏRİ VƏ DƏYƏRLƏR",
-      "highlightsHeading_en": "KEY SPORTS ACHIEVEMENTS & VALUES",
-      "highlightsHeading_ru": "ОСНОВНЫЕ СПОРТИВНЫЕ ДОСТИЖЕНИЯ И ЦЕННОСТИ",
-      "avatarYearTag": "🥋 BAKI 2026 · 73 kq",
-      "titleBadge": "🥇 Qızıl & 🥈 Gümüş Cüdo Çempionu",
-      "titleBadge_az": "🥇 Qızıl & 🥈 Gümüş Cüdo Çempionu",
-      "titleBadge_en": "🥇 Gold & 🥈 Silver Judo Champion",
-      "titleBadge_ru": "🥇 Золотой и 🥈 Серебряный Чемпион по дзюдо",
-      "role": "Cüdo İdmançısı · “Ağdama Qayıdış” Açıq Birinciliyinin Qalibi (I və II Yer)",
-      "role_az": "Cüdo İdmançısı · “Ağdama Qayıdış” Açıq Birinciliyinin Qalibi (I və II Yer)",
-      "role_en": "Judoka · Winner & Medalist of “Return to Agdam” Open Championship (1st & 2nd Place)",
-      "role_ru": "Дзюдоист · Победитель открытого первенства «Возвращение в Агдам» (I и II место)",
-      "categories": [
-            "sports"
-      ],
-      "statusText": "Qara Kəmər · 73 kq Çempion & Mükafatçı",
-      "statusText_az": "Qara Kəmər · 73 kq Çempion & Mükafatçı",
-      "statusText_en": "Black Belt · 73 kg Champion & Medalist",
-      "statusText_ru": "Черный пояс · 73 кг Чемпион и призер",
-      "quote": "Tatami yalnız güc deyil, həm də dəmir intizam, rəqibə hörmət və vətən sevgisidir. Hər qələbə kollecimizin və bayrağımızın şərəfidir.",
-      "quote_az": "Tatami yalnız güc deyil, həm də dəmir intizam, rəqibə hörmət və vətən sevgisidir. Hər qələbə kollecimizin və bayrağımızın şərəfidir.",
-      "quote_en": "The tatami is not just about strength; it is iron discipline, respect for opponents, and devotion to the nation.",
-      "quote_ru": "Татами — это не просто сила, это железная дисциплина, уважение к сопернику и любовь к Родине.",
-      "flags": [
-            {
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "emoji": "🇦🇿",
-                  "note": "Respublika & Şəhər Turnirləri",
-                  "note_az": "Respublika & Şəhər Turnirləri",
-                  "note_en": "National & City Tournaments",
-                  "note_ru": "Республиканские и городские турниры"
-            }
-      ],
-      "keyHighlights": [
-            {
-                  "year": "2026",
-                  "flag": "🥇",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — I YER (Qızıl Medal)",
-                  "title_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — I YER (Qızıl Medal)",
-                  "title_en": "“Return to Agdam” Open Judo Championship — 1st Place (Gold)",
-                  "title_ru": "Открытое первенство «Возвращение в Агдам» — I место (Золото)",
-                  "text": "8 Noyabr – Zəfər Gününə həsr olunmuş açıq cüdo birinciliyində 73 kq çəki dərəcəsində bütün rəqiblərini məğlub edərək I YERİ tutmuş, Qızıl medal və rəsmi diplomla təltif olunmuşdur.",
-                  "text_az": "8 Noyabr – Zəfər Gününə həsr olunmuş açıq cüdo birinciliyində 73 kq çəki dərəcəsində bütün rəqiblərini məğlub edərək I YERİ tutmuş, Qızıl medal və rəsmi diplomla təltif olunmuşdur.",
-                  "text_en": "Defeated all opponents in the 73 kg category at the Victory Day open championship to win 1st Place (Gold Medal) and official Diploma.",
-                  "text_ru": "Победил всех соперников в категории 73 кг на открытом первенстве ко Дню Победы, завоевав I место (Золотая медаль) и официальный диплом."
-            },
-            {
-                  "year": "2026",
-                  "flag": "🥈",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II YER (Gümüş Medal)",
-                  "title_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II YER (Gümüş Medal)",
-                  "title_en": "“Return to Agdam” Open Judo Championship — 2nd Place (Silver)",
-                  "title_ru": "Открытое первенство «Возвращение в Агдам» — II место (Серебро)",
-                  "text": "73 kq çəki dərəcəsində yüksək texniki ustalıq nümayiş etdirərək final mərhələsində II yerə yüksəlmiş və Gümüş medalla təltif edilmişdir.",
-                  "text_az": "73 kq çəki dərəcəsində yüksək texniki ustalıq nümayiş etdirərək final mərhələsində II yerə yüksəlmiş və Gümüş medalla təltif edilmişdir.",
-                  "text_en": "Demonstrated master-level judo technique in 73 kg division, reaching the finals to take 2nd Place and Silver medal.",
-                  "text_ru": "Продемонстрировал высокое техническое мастерство в категории 73 кг, заняв II место и завоевав серебряную медаль."
-            }
-      ],
-      "tags": [
-            "#MəmmədovElvin",
-            "#Cüdo",
-            "#QaraKəmər",
-            "#73kq",
-            "#QızılMedal_IYer",
-            "#GümüşMedal_IIYer",
-            "#AğdamaQayıdış",
-            "#ZəfərGünü2026",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#MəmmədovElvin",
-            "#Cüdo",
-            "#QaraKəmər",
-            "#73kq",
-            "#QızılMedal_IYer",
-            "#GümüşMedal_IIYer",
-            "#AğdamaQayıdış",
-            "#ZəfərGünü2026",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#ElvinMammadov",
-            "#Judo",
-            "#BlackBelt",
-            "#73kg",
-            "#GoldMedal_1stPlace",
-            "#SilverMedal_2ndPlace",
-            "#ReturnToAgdam",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#ЭльвинМамедов",
-            "#Дзюдо",
-            "#ЧерныйПояс",
-            "#73кг",
-            "#Золото_IМесто",
-            "#Серебро_IIМесто",
-            "#ВозвращениеВАгдам",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2026",
-                  "badge": "🥇 Bakı 2026 · Qızıl Medal & Diplom",
-                  "badge_az": "🥇 Bakı 2026 · Qızıl Medal & Diplom",
-                  "badge_en": "🥇 Baku 2026 · Gold Medal & Diploma",
-                  "badge_ru": "🥇 Баку 2026 · Золотая медаль и диплом",
-                  "title": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi — I Yer",
-                  "title_az": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi — I Yer",
-                  "title_en": "Victory Day “Return to Agdam” Open Judo Championship — 1st Place",
-                  "title_ru": "Открытое первенство «Возвращение в Агдам» ко Дню Победы — I место",
-                  "desc": "Gənclər və İdman Nazirliyi, Azərbaycan Cüdo Federasiyası və “Ağdama Qayıdış” İdman Klubunun təşkilatçılığı ilə 73 kq çəkidə I YER (Qızıl Medal).",
-                  "desc_az": "Gənclər və İdman Nazirliyi, Azərbaycan Cüdo Federasiyası və “Ağdama Qayıdış” İdman Klubunun təşkilatçılığı ilə 73 kq çəkidə I YER (Qızıl Medal).",
-                  "desc_en": "Awarded 1st place (Gold Medal) and official Diploma in 73 kg category organized by “Return to Agdam” Sports Club and Azerbaijan Judo Federation.",
-                  "desc_ru": "I место (Золотая медаль) и официальный диплом в категории 73 кг на открытом первенстве клуба «Возвращение в Агдам» и Федерации дзюдо Азербайджана."
-            },
-            {
-                  "year": "2026",
-                  "badge": "🥈 Bakı 2026 · Gümüş Medal & Diplom",
-                  "badge_az": "🥈 Bakı 2026 · Gümüş Medal & Diplom",
-                  "badge_en": "🥈 Baku 2026 · Silver Medal & Diploma",
-                  "badge_ru": "🥈 Баку 2026 · Серебряная медаль и диплом",
-                  "title": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi — II Yer",
-                  "title_az": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi — II Yer",
-                  "title_en": "Victory Day “Return to Agdam” Open Judo Championship — 2nd Place",
-                  "title_ru": "Открытое первенство «Возвращение в Агдам» ко Дню Победы — II место",
-                  "desc": "Açıq birincilikdə 73 kq çəki dərəcəsində finala yüksələrək II yeri tutmuş, Gümüş medal və rəsmi diplomla təltif edilmişdir.",
-                  "desc_az": "Açıq birincilikdə 73 kq çəki dərəcəsində finala yüksələrək II yeri tutmuş, Gümüş medal və rəsmi diplomla təltif edilmişdir.",
-                  "desc_en": "Reached finals in 73 kg class to take 2nd place and official Silver award.",
-                  "desc_ru": "Вышел в финал в весовой категории 73 кг, заняв II место и завоевав серебряную медаль."
-            }
-      ],
-      "fullBio": [
-            "Məmmədov Elvin Bakı Dövlət Rabitə və Nəqliyyat Kollecinin təhsil mühitində nizam-intizamı, fəallığı və tatamidə göstərdiyi yüksək mübarizə əzmi ilə seçilən fəxri tələbə-idmançılarımızdandır.",
-            "2026-cı ildə 8 Noyabr – Zəfər Gününə həsr olunmuş “Ağdama Qayıdış” cüdo açıq birinciliyində kollecimizi layiqincə təmsil edərək 73 kq çəki dərəcəsində həm I Yer (Qızıl Medal), həm də II Yer (Gümüş Medal) qazanmışdır.",
-            "Təhsili və peşəkar idman məşqlərini uğurla vəhdətləşdirən Elvin gənclər arasında sağlam həyat tərzinin və vətənpərvərlik ruhunun parlaq nümunəsidir."
-      ],
-      "fullBio_az": [
-            "Məmmədov Elvin Bakı Dövlət Rabitə və Nəqliyyat Kollecinin təhsil mühitində nizam-intizamı, fəallığı və tatamidə göstərdiyi yüksək mübarizə əzmi ilə seçilən fəxri tələbə-idmançılarımızdandır.",
-            "2026-cı ildə 8 Noyabr – Zəfər Gününə həsr olunmuş “Ağdama Qayıdış” cüdo açıq birinciliyində kollecimizi layiqincə təmsil edərək 73 kq çəki dərəcəsində həm I Yer (Qızıl Medal), həm də II Yer (Gümüş Medal) qazanmışdır.",
-            "Təhsili və peşəkar idman məşqlərini uğurla vəhdətləşdirən Elvin gənclər arasında sağlam həyat tərzinin və vətənpərvərlik ruhunun parlaq nümunəsidir."
-      ],
-      "fullBio_en": [
-            "Elvin Mammadov is an esteemed student-athlete at Baku State College of Communications and Transport, recognized for his discipline, determination, and excellence on the judo tatami.",
-            "At the 2026 “Return to Agdam” Open Judo Championship dedicated to Victory Day, he demonstrated supreme skill in the 73 kg division, claiming both 1st Place (Gold Medal) and 2nd Place (Silver Medal).",
-            "Balancing academic studies with elite athletics, Elvin stands as an inspiring role model of athletic dedication and patriotic values for college youth."
-      ],
-      "fullBio_ru": [
-            "Мамедов Эльвин — почетный студент-спортсмен Бакинского государственного колледжа связи и транспорта, отличающийся железной дисциплиной и выдающимися успехами в дзюдо.",
-            "На открытом первенстве «Возвращение в Агдам» 2026 года, посвященном Дню Победы, Эльвин блестяще выступил в категории 73 кг, завоевав как I место (Золотая медаль), так и II место (Серебряная медаль).",
-            "Успешно совмещая учебу со спортом, Эльвин является образцом здорового образа жизни и патриотизма для молодежи."
-      ],
-      "certificates": [
-            {
-                  "icon": "🥇",
-                  "title": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — I Yer (Qızıl)",
-                  "title_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — I Yer (Qızıl)",
-                  "title_en": "“Return to Agdam” Open Judo Championship — 1st Place (Gold)",
-                  "title_ru": "Открытое первенство «Возвращение в Агдам» — I место (Золото)",
-                  "sub": "73 kq çəki dərəcəsi · Zəfər Günü Açıq Birinciliyi",
-                  "sub_az": "73 kq çəki dərəcəsi · Zəfər Günü Açıq Birinciliyi",
-                  "sub_en": "73 kg weight division · Victory Day Championship",
-                  "sub_ru": "Весовая категория 73 кг · Первенство ко Дню Победы"
-            },
-            {
-                  "icon": "🥈",
-                  "title": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II Yer (Gümüş)",
-                  "title_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II Yer (Gümüş)",
-                  "title_en": "“Return to Agdam” Open Judo Championship — 2nd Place (Silver)",
-                  "title_ru": "Открытое первенство «Возвращение в Агдам» — II место (Серебро)",
-                  "sub": "73 kq çəki dərəcəsi · Rəsmi Təltif Diplomu",
-                  "sub_az": "73 kq çəki dərəcəsi · Rəsmi Təltif Diplomu",
-                  "sub_en": "73 kg weight division · Official Award Diploma",
-                  "sub_ru": "Весовая категория 73 кг · Официальный диплом"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_elvin_1.jpg",
-                  "caption": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi I Yer (Qızıl Medal) Rəsmi Diplomu",
-                  "caption_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi I Yer (Qızıl Medal) Rəsmi Diplomu",
-                  "caption_en": "Official Diploma — 1st Place (Gold Medal) “Return to Agdam” Judo Championship",
-                  "caption_ru": "Официальный диплом за I место (Золотая медаль) первенства «Возвращение в Агдам»"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_elvin_2.jpg",
-                  "caption": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi II Yer (Gümüş Medal) Rəsmi Diplomu",
-                  "caption_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi II Yer (Gümüş Medal) Rəsmi Diplomu",
-                  "caption_en": "Official Diploma — 2nd Place (Silver Medal) “Return to Agdam” Judo Championship",
-                  "caption_ru": "Официальный диплом за II место (Серебряная медаль) первенства «Возвращение в Агдам»"
-            },
-            {
-                  "type": "image",
-                  "src": "elvinx2.jpeg",
-                  "caption": "Məmmədov Elvin — Ağ kimonoda tatami portreti",
-                  "caption_az": "Məmmədov Elvin — Ağ kimonoda tatami portreti",
-                  "caption_en": "Elvin Mammadov — Tatami portrait in white judogi",
-                  "caption_ru": "Мамедов Эльвин — Портрет в белом кимоно на татами"
-            },
-            {
-                  "type": "image",
-                  "src": "elvinx1.jpeg",
-                  "caption": "Məmmədov Elvin — Göy kimonoda rəsmi idman zalı portreti",
-                  "caption_az": "Məmmədov Elvin — Göy kimonoda rəsmi idman zalı portreti",
-                  "caption_en": "Elvin Mammadov — Portrait in blue judogi at dojo",
-                  "caption_ru": "Мамедов Эльвин — Портрет в синем кимоно в зале"
-            }
-      ]
-    },
-    {
-        "id": "huseyn-huseynov",
-      "fullName": "Hüseynov Hüseyn",
-      "fullName_az": "Hüseynov Hüseyn",
-      "fullName_en": "Huseyn Huseynov",
-      "fullName_ru": "Гусейнов Гусейн",
-      "photo": "certificates/thumbs/cert_huseyn_1.jpg",
-      "fallbackPhoto": "certificates/cert_huseyn_1.jpg",
-      "kickerIcon": "🥊",
-      "kicker": "Kikboksinq & Boks · Döyüş Növləri",
-      "kicker_az": "Kikboksinq & Boks · Döyüş Növləri",
-      "kicker_en": "Kickboxing & Boxing · Combat Sports",
-      "kicker_ru": "Кикбоксинг и Бокс · Боевые Искусства",
-      "highlightsHeading": "DÖYÜŞ NÖVLƏRİ ÜZRƏ ÇEMPİONLUQLAR",
-      "highlightsHeading_az": "DÖYÜŞ NÖVLƏRİ ÜZRƏ ÇEMPİONLUQLAR",
-      "highlightsHeading_en": "COMBAT SPORTS CHAMPIONSHIPS",
-      "highlightsHeading_ru": "ЧЕМПИОНАТЫ ПО БОЕВЫМ ИСКУССТВАМ",
-      "avatarYearTag": "🥊 QIZIL ÇEMPİON · 65+ kq",
-      "titleBadge": "🥇 2 Qat Qızıl Çempion",
-      "titleBadge_az": "🥇 2 Qat Qızıl Çempion",
-      "titleBadge_en": "🥇 2x Gold Champion",
-      "titleBadge_ru": "🥇 2-кратный золотой чемпион",
-      "role": "BDRNK Tələbəsi · Kikboksinq və Boks üzrə Açıq Turnirlərin Qalibi",
-      "role_az": "BDRNK Tələbəsi · Kikboksinq və Boks üzrə Açıq Turnirlərin Qalibi",
-      "role_en": "BDRNK Student · Winner of Open Kickboxing & Boxing Tournaments",
-      "role_ru": "Студент БГКСТ · Победитель открытых турниров по кикбоксингу и боксу",
-      "categories": [
-            "sports"
-      ],
-      "statusText": "Kikboksinq və Boks Qızıl Medalçısı",
-      "statusText_az": "Kikboksinq və Boks Qızıl Medalçısı",
-      "statusText_en": "Kickboxing & Boxing Gold Medalist",
-      "statusText_ru": "Золотой медалист по кикбоксингу и боксу",
-      "quote": "Döyüş sənəti insana ilk növbədə özünə nəzarət etməyi, hər zərbə qarşısında möhkəm dayanmağı və həmişə irəli getməyi öyrədir.",
-      "quote_az": "Döyüş sənəti insana ilk növbədə özünə nəzarət etməyi, hər zərbə qarşısında möhkəm dayanmağı və həmişə irəli getməyi öyrədir.",
-      "quote_en": "Combat sports teach self-control, resilience against all strikes, and the constant will to move forward.",
-      "quote_ru": "Боевые искусства учат самоконтролю, стойкости перед любыми ударами и постоянному стремлению вперед.",
-      "flags": [
-            {
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "emoji": "🇦🇿",
-                  "note": "Federasiya & Klub Birincilikləri",
-                  "note_az": "Federasiya & Klub Birincilikləri",
-                  "note_en": "Federation & Club Championships",
-                  "note_ru": "Чемпионаты федераций и клубов"
-            }
-      ],
-      "keyHighlights": [
-            {
-                  "year": "2024",
-                  "flag": "🥇",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "Azərbaycan Kikboksinq Federasiyası Açıq Turniri — I Yer (Qızıl)",
-                  "title_az": "Azərbaycan Kikboksinq Federasiyası Açıq Turniri — I Yer (Qızıl)",
-                  "title_en": "Azerbaijan Kickboxing Federation Open Tournament — 1st Place (Gold)",
-                  "title_ru": "Открытый турнир Федерации кикбоксинга Азербайджана — I место (Золото)",
-                  "text": "AKF və “Uğur” İdman Klubunun birgə təşkilatçılığı ilə 15 yaş, 65+ kq çəki dərəcəsində bütün rəqiblərinə qalib gələrək I YERİ tutmuşdur.",
-                  "text_az": "AKF və “Uğur” İdman Klubunun birgə təşkilatçılığı ilə 15 yaş, 65+ kq çəki dərəcəsində bütün rəqiblərinə qalib gələrək I YERİ tutmuşdur.",
-                  "text_en": "Won 1st Place in the 15-year-old 65+ kg division organized by AKF & “Ugur” Sports Club.",
-                  "text_ru": "Занял I место в категории 15 лет 65+ кг на турнире АКФ и спортивного клуба «Угур»."
-            },
-            {
-                  "year": "2023",
-                  "flag": "🥇",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "“Adalet Fight Club” Boks üzrə Açıq Birincilik — I Yer (Qızıl)",
-                  "title_az": "“Adalet Fight Club” Boks üzrə Açıq Birincilik — I Yer (Qızıl)",
-                  "title_en": "“Adalet Fight Club” Open Boxing Championship — 1st Place (Gold)",
-                  "title_ru": "Открытое первенство по боксу «Adalet Fight Club» — I место (Золото)",
-                  "text": "Boks üzrə açıq birincilikdə qətiyyətli döyüş nümayiş etdirərək fəxri kürsünün ən yüksək pilləsinə — I Yerə qalxmışdır.",
-                  "text_az": "Boks üzrə açıq birincilikdə qətiyyətli döyüş nümayiş etdirərək fəxri kürsünün ən yüksək pilləsinə — I Yerə qalxmışdır.",
-                  "text_en": "Showcased powerful boxing performance to secure 1st Place at the Adalet Fight Club Open.",
-                  "text_ru": "Продемонстрировал решительный бой и поднялся на высшую ступень пьедестала (I место)."
-            }
-      ],
-      "tags": [
-            "#HüseynovHüseyn",
-            "#Kikboksinq",
-            "#Boks",
-            "#QızılMedal_IYer",
-            "#AKF",
-            "#UğurİdmanKlubu",
-            "#AdaletFightClub",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#HüseynovHüseyn",
-            "#Kikboksinq",
-            "#Boks",
-            "#QızılMedal_IYer",
-            "#AKF",
-            "#UğurİdmanKlubu",
-            "#AdaletFightClub",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#HuseynHuseynov",
-            "#Kickboxing",
-            "#Boxing",
-            "#GoldMedal_1stPlace",
-            "#AKF",
-            "#CombatSports",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#ГусейновГусейн",
-            "#Кикбоксинг",
-            "#Бокс",
-            "#Золото_IМесто",
-            "#АКФ",
-            "#БоевыеИскусства",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2024",
-                  "badge": "🥊 Kikboksinq · I Yer Qızıl Diplom",
-                  "badge_az": "🥊 Kikboksinq · I Yer Qızıl Diplom",
-                  "badge_en": "🥊 Kickboxing · 1st Place Gold Diploma",
-                  "badge_ru": "🥊 Кикбоксинг · I место Золотой диплом",
-                  "title": "Azərbaycan Kikboksinq Federasiyası & “Uğur” İK Açıq Turniri",
-                  "title_az": "Azərbaycan Kikboksinq Federasiyası & “Uğur” İK Açıq Turniri",
-                  "title_en": "Azerbaijan Kickboxing Federation & “Ugur” SC Open Tournament",
-                  "title_ru": "Открытый турнир Федерации кикбоксинга Азербайджана и СК «Угур»",
-                  "desc": "15 yaş, 65+ kq çəki dərəcəsində möhtəşəm döyüşlər nümayiş etdirərək I yeri qazanmış və rəsmi Diplomla təltif olunmuşdur.",
-                  "desc_az": "15 yaş, 65+ kq çəki dərəcəsində möhtəşəm döyüşlər nümayiş etdirərək I yeri qazanmış və rəsmi Diplomla təltif olunmuşdur.",
-                  "desc_en": "Earned 1st place in the 15-year-old 65+ kg division with dominant bouts, receiving the official championship diploma.",
-                  "desc_ru": "Занял I место в категории 15 лет 65+ кг, показав великолепную боевую технику и получив официальный диплом."
-            },
-            {
-                  "year": "2023",
-                  "badge": "🥊 Boks · I Yer Qızıl Təltif",
-                  "badge_az": "🥊 Boks · I Yer Qızıl Təltif",
-                  "badge_en": "🥊 Boxing · 1st Place Gold Award",
-                  "badge_ru": "🥊 Бокс · I место Золотая награда",
-                  "title": "“Adalet Fight Club” Boks üzrə Açıq Birincilik",
-                  "title_az": "“Adalet Fight Club” Boks üzrə Açıq Birincilik",
-                  "title_en": "“Adalet Fight Club” Open Boxing Championship",
-                  "title_ru": "Открытое первенство по боксу «Adalet Fight Club»",
-                  "desc": "Gənclər arasında keçirilən birincilikdə I yerə layiq görülmüş və Qızıl Diplom qazanmışdır.",
-                  "desc_az": "Gənclər arasında keçirilən birincilikdə I yerə layiq görülmüş və Qızıl Diplom qazanmışdır.",
-                  "desc_en": "Honored with 1st place and the Gold Award Diploma at the youth championship.",
-                  "desc_ru": "Удостоен I места и Золотого диплома на первенстве среди молодежи."
-            }
-      ],
-      "fullBio": [
-            "Hüseynov Hüseyn Bakı Dövlət Rabitə və Nəqliyyat Kollecinin idman şərəfini ringdə və tatamidə ucaldan istedadlı gənc idmançılarımızdandır.",
-            "Həm kikboksinq, həm də klassik boks üzrə respublika və şəhər miqyaslı açıq turnirlərdə iştirak edərək ardıcıl çempionluqlar (I Yerlər) qazanmış, kollecimizin idman ənənələrini zənginləşdirmişdir.",
-            "Dəqiq intizamı, fədakarlığı və döyüş əzmi ilə seçilən Hüseynov Hüseyn kollecimizin qürur mənbəyidir."
-      ],
-      "fullBio_az": [
-            "Hüseynov Hüseyn Bakı Dövlət Rabitə və Nəqliyyat Kollecinin idman şərəfini ringdə və tatamidə ucaldan istedadlı gənc idmançılarımızdandır.",
-            "Həm kikboksinq, həm də klassik boks üzrə respublika və şəhər miqyaslı açıq turnirlərdə iştirak edərək ardıcıl çempionluqlar (I Yerlər) qazanmış, kollecimizin idman ənənələrini zənginləşdirmişdir.",
-            "Dəqiq intizamı, fədakarlığı və döyüş əzmi ilə seçilən Hüseynov Hüseyn kollecimizin qürur mənbəyidir."
-      ],
-      "fullBio_en": [
-            "Huseyn Huseynov is a dedicated student-athlete at Baku State College of Communications and Transport, upholding college pride in the boxing ring and kickboxing arena.",
-            "Competing across national and city-level open competitions in both kickboxing and boxing, he has achieved consecutive 1st Place championship honors.",
-            "His sharp self-discipline, focus, and unwavering competitive spirit make him an inspiration to his peers."
-      ],
-      "fullBio_ru": [
-            "Гусейнов Гусейн — талантливый студент-спортсмен Бакинского государственного колледжа связи и транспорта, защищающий честь колледжа на боксерском ринге и татами.",
-            "Выступая на открытых турнирах республиканского и городского масштаба по кикбоксингу и боксу, он завоевал победные первые места (I Место).",
-            "Дисциплина, целеустремленность и бойцовский дух Гусейна делают его гордостью нашего колледжа."
-      ],
-      "certificates": [
-            {
-                  "icon": "🥊",
-                  "title": "Azərbaycan Kikboksinq Federasiyası Açıq Turniri — I Yer",
-                  "title_az": "Azərbaycan Kikboksinq Federasiyası Açıq Turniri — I Yer",
-                  "title_en": "Azerbaijan Kickboxing Federation Open Tournament — 1st Place",
-                  "title_ru": "Открытый турнир АКФ — I место",
-                  "sub": "AKF & “Uğur” İK · 15 yaş, 65+ kq",
-                  "sub_az": "AKF & “Uğur” İK · 15 yaş, 65+ kq",
-                  "sub_en": "AKF & “Ugur” SC · Age 15, 65+ kg",
-                  "sub_ru": "АКФ и СК «Угур» · 15 лет, 65+ кг"
-            },
-            {
-                  "icon": "🥊",
-                  "title": "“Adalet Fight Club” Boks üzrə Açıq Birincilik — I Yer",
-                  "title_az": "“Adalet Fight Club” Boks üzrə Açıq Birincilik — I Yer",
-                  "title_en": "“Adalet Fight Club” Open Boxing Championship — 1st Place",
-                  "title_ru": "Открытое первенство по боксу «Adalet Fight Club» — I место",
-                  "sub": "Boks Açıq Birinciliyi · Qızıl Medal",
-                  "sub_az": "Boks Açıq Birinciliyi · Qızıl Medal",
-                  "sub_en": "Boxing Open Championship · Gold Medal",
-                  "sub_ru": "Открытое первенство по боксу · Золотая медаль"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_huseyn_1.jpg",
-                  "caption": "Azərbaycan Kikboksinq Federasiyası Açıq Turniri I Yer Diplomu",
-                  "caption_az": "Azərbaycan Kikboksinq Federasiyası Açıq Turniri I Yer Diplomu",
-                  "caption_en": "Official Diploma — 1st Place Azerbaijan Kickboxing Federation Tournament",
-                  "caption_ru": "Официальный диплом за I место турнира Федерации кикбоксинга Азербайджана"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_huseyn_2.jpg",
-                  "caption": "“Adalet Fight Club” Boks üzrə Açıq Birincilik I Yer Diplomu",
-                  "caption_az": "“Adalet Fight Club” Boks üzrə Açıq Birincilik I Yer Diplomu",
-                  "caption_en": "Official Diploma — 1st Place “Adalet Fight Club” Boxing Championship",
-                  "caption_ru": "Официальный диплом за I место первенства по боксу «Adalet Fight Club»"
-            }
-      ]
-    },
-    {
-        "id": "aysel-eliyeva",
-      "fullName": "Əliyeva Aysel",
-      "fullName_az": "Əliyeva Aysel",
-      "fullName_en": "Aysel Aliyeva",
-      "fullName_ru": "Алиева Айсель",
-      "photo": "certificates/thumbs/cert_aysel_1.jpg",
-      "fallbackPhoto": "certificates/cert_aysel_1.jpg",
-      "kickerIcon": "💃",
-      "kicker": "İncəsənət & Rəqs · K-Pop, Modern & Hip-Hop",
-      "kicker_az": "İncəsənət & Rəqs · K-Pop, Modern & Hip-Hop",
-      "kicker_en": "Arts & Dance · K-Pop, Modern & Hip-Hop",
-      "kicker_ru": "Искусство и Танец · K-Pop, Модерн и Хип-Хоп",
-      "highlightsHeading": "RESPUBLİKA VƏ ŞƏHƏR RƏQS ÇEMPİONATLARI",
-      "highlightsHeading_az": "RESPUBLİKA VƏ ŞƏHƏR RƏQS ÇEMPİONATLARI",
-      "highlightsHeading_en": "NATIONAL & CITY DANCE CHAMPIONSHIPS",
-      "highlightsHeading_ru": "РЕСПУБЛИКАНСКИЕ И ГОРОДСКИЕ ЧЕМПИОНАТЫ ПО ТАНЦАМ",
-      "avatarYearTag": "🏆 7 QAT QIZIL ÇEMPİON",
-      "titleBadge": "🏆 7 Qat Qızıl Təltif & Çempion",
-      "titleBadge_az": "🏆 7 Qat Qızıl Təltif & Çempion",
-      "titleBadge_en": "🏆 7x Gold Awardee & Champion",
-      "titleBadge_ru": "🏆 7-кратная золотая медалистка и чемпионка",
-      "role": "BDRNK Tələbəsi · Respublika Rəqs Çempionatları və K-Pop Festivallarının Qalibi",
-      "role_az": "BDRNK Tələbəsi · Respublika Rəqs Çempionatları və K-Pop Festivallarının Qalibi",
-      "role_en": "BDRNK Student · Winner of National Dance Championships & K-Pop Festivals",
-      "role_ru": "Студентка БГКСТ · Победительница республиканских чемпионатов по танцам и фестивалей K-Pop",
-      "categories": [
-            "arts"
-      ],
-      "statusText": "7 Rəsmi Qızıl Diplom və Çempionluq Mükafatı",
-      "statusText_az": "7 Rəsmi Qızıl Diplom və Çempionluq Mükafatı",
-      "statusText_en": "7 Official Gold Diplomas & Championship Awards",
-      "statusText_ru": "7 официальных золотых дипломов и наград",
-      "quote": "Səhnə mənim üçün emosiyaları, zəhməti və sənət sevgisini tamaşaçı ilə bölüşməkdir. Hər ritm və hər hərəkət yeni bir zirvəyə addımdır.",
-      "quote_az": "Səhnə mənim üçün emosiyaları, zəhməti və sənət sevgisini tamaşaçı ilə bölüşməkdir. Hər ritm və hər hərəkət yeni bir zirvəyə addımdır.",
-      "quote_en": "The stage is sharing emotion, hard work, and artistic love with the audience. Every rhythm is a step toward a new summit.",
-      "quote_ru": "Сцена для меня — это возможность делиться эмоциями, трудом и любовью к искусству. Каждый ритм — шаг к новой вершине.",
-      "flags": [
-            {
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "emoji": "🇦🇿",
-                  "note": "ARA & AGİ Respublika Çempionatları",
-                  "note_az": "ARA & AGİ Respublika Çempionatları",
-                  "note_en": "ADA & AYU National Championships",
-                  "note_ru": "Чемпионаты АТА и САМ"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "🥇",
-                  "val": "7 QAT ÇEMPİON",
-                  "val_az": "7 QAT ÇEMPİON",
-                  "val_en": "7x CHAMPION",
-                  "val_ru": "7-КРАТНЫЙ ЧЕМПИОН",
-                  "label": "Respublika Çempionatı",
-                  "label_az": "Respublika Çempionatı",
-                  "label_en": "National Championship",
-                  "label_ru": "Чемпионат Республики",
-                  "sub": "Azərbaycan və Bakı birincilikləri",
-                  "sub_az": "Azərbaycan və Bakı birincilikləri",
-                  "sub_en": "Azerbaijan & Baku championships",
-                  "sub_ru": "Первенства Азербайджана и Баку"
-            },
-            {
-                  "icon": "🎵",
-                  "val": "K-POP FESTİVAL",
-                  "val_az": "K-POP FESTİVAL",
-                  "val_en": "K-POP FESTIVAL",
-                  "val_ru": "K-POP ФЕСТИВАЛЬ",
-                  "label": "I Yer Qalibi",
-                  "label_az": "I Yer Qalibi",
-                  "label_en": "1st Place Winner",
-                  "label_ru": "Победительница (I место)",
-                  "sub": "Gənclər Festivalı Qızıl Diplom",
-                  "sub_az": "Gənclər Festivalı Qızıl Diplom",
-                  "sub_en": "Youth Festival Gold Diploma",
-                  "sub_ru": "Золотой диплом молодежного фестиваля"
-            },
-            {
-                  "icon": "🏆",
-                  "val": "RESPUBLİKA KUBOKU",
-                  "val_az": "RESPUBLİKA KUBOKU",
-                  "val_en": "NATIONAL CUP",
-                  "val_ru": "КУБОК РЕСПУБЛИКИ",
-                  "label": "Rəqs Assosiasiyası",
-                  "label_az": "Rəqs Assosiasiyası",
-                  "label_en": "Dance Association",
-                  "label_ru": "Ассоциация Танца",
-                  "sub": "Xüsusi Səhnə Məharəti Diplomu",
-                  "sub_az": "Xüsusi Səhnə Məharəti Diplomu",
-                  "sub_en": "Special Stage Performance Diploma",
-                  "sub_ru": "Диплом за сценическое мастерство"
-            }
-      ],
-      "tags": [
-            "#İncəsənətVəRəqs",
-            "#AzərbaycanÇempionatı_I_Yer",
-            "#BakıÇempionatı",
-            "#KPOP_Talent_Festival",
-            "#ModernDance",
-            "#HipHop_Show",
-            "#QızılDiplom",
-            "#BDRNK_İstedadlıGənclər"
-      ],
-      "tags_az": [
-            "#İncəsənətVəRəqs",
-            "#AzərbaycanÇempionatı_I_Yer",
-            "#BakıÇempionatı",
-            "#KPOP_Talent_Festival",
-            "#ModernDance",
-            "#HipHop_Show",
-            "#QızılDiplom",
-            "#BDRNK_İstedadlıGənclər"
-      ],
-      "highlights": [
-            {
-                  "year": "2025",
-                  "flag": "🥇",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "Azərbaycan Rəqs Çempionatı 2025 — I Yer (Qızıl)",
-                  "title_az": "Azərbaycan Rəqs Çempionatı 2025 — I Yer (Qızıl)",
-                  "title_en": "Azerbaijan Dance Championship 2025 — 1st Place (Gold)",
-                  "title_ru": "Чемпионат Азербайджана по танцам 2025 — I место (Золото)",
-                  "text": "Azərbaycan Rəqs Assosiasiyası və Azərbaycan Gənclər İttifaqının rəsmi Respublika çempionatında ən yüksək bal toplayaraq I YERƏ layiq görülmüşdür.",
-                  "text_az": "Azərbaycan Rəqs Assosiasiyası və Azərbaycan Gənclər İttifaqının rəsmi Respublika çempionatında ən yüksək bal toplayaraq I YERƏ layiq görülmüşdür.",
-                  "text_en": "Earned top scores to win 1st Place at the official National Championship by Azerbaijan Dance Association and AYU.",
-                  "text_ru": "Набрала высший балл и завоевала I место на официальном чемпионате Ассоциации танца Азербайджана и САМ."
-            },
-            {
-                  "year": "2025",
-                  "flag": "🥇",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "Bakı Rəqs Çempionatı & K-POP Talent Festival — Çempion",
-                  "title_az": "Bakı Rəqs Çempionatı & K-POP Talent Festival — Çempion",
-                  "title_en": "Baku Dance Championship & K-POP Talent Festival — Champion",
-                  "title_ru": "Чемпионат Баку по танцам и фестиваль K-Pop — Чемпион",
-                  "text": "Paytaxt birinciliyində və K-Pop gənclər festivalında fərdi və komanda çıxışları ilə I Yer və xüsusi dərəcəli mükafatlar qazanmışdır.",
-                  "text_az": "Paytaxt birinciliyində və K-Pop gənclər festivalında fərdi və komanda çıxışları ilə I Yer və xüsusi dərəcəli mükafatlar qazanmışdır.",
-                  "text_en": "Claimed 1st place and special laureateships at the Baku City Championship and K-Pop Festival.",
-                  "text_ru": "Завоевала I место и специальные награды на первенстве столицы и молодежном фестивале K-Pop."
-            }
-      ],
-      "tags": [
-            "#ƏliyevaAysel",
-            "#Rəqs",
-            "#KPop",
-            "#ModernDance",
-            "#HipHop",
-            "#AzərbaycanRəqsÇempionatı",
-            "#BakıRəqsÇempionatı",
-            "#QızılMedal_7Qat",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#ƏliyevaAysel",
-            "#Rəqs",
-            "#KPop",
-            "#ModernDance",
-            "#HipHop",
-            "#AzərbaycanRəqsÇempionatı",
-            "#BakıRəqsÇempionatı",
-            "#QızılMedal_7Qat",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#AyselAliyeva",
-            "#Dance",
-            "#KPop",
-            "#ModernDance",
-            "#HipHop",
-            "#AzerbaijanDanceChampionship",
-            "#GoldMedalist_7x",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#АлиеваАйсель",
-            "#Танцы",
-            "#KPop",
-            "#Модерн",
-            "#ХипХоп",
-            "#ЧемпионатАзербайджанаПоТанцам",
-            "#7кратнаяЗолотаяМедалистка",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2025",
-                  "badge": "💃 Respublika Çempionatı · I Yer",
-                  "badge_az": "💃 Respublika Çempionatı · I Yer",
-                  "badge_en": "💃 National Championship · 1st Place",
-                  "badge_ru": "💃 Чемпионат Республики · I место",
-                  "title": "Azərbaycan Rəqs Çempionatı 2025 (ARA & AGİ)",
-                  "title_az": "Azərbaycan Rəqs Çempionatı 2025 (ARA & AGİ)",
-                  "title_en": "Azerbaijan Dance Championship 2025 (ADA & AYU)",
-                  "title_ru": "Чемпионат Азербайджана по танцам 2025 (АТА и САМ)",
-                  "desc": "Müasir xoreoqrafiya və səhnə məharəti üzrə I YER Qızıl Diplom və medalına layiq görülmüşdür.",
-                  "desc_az": "Müasir xoreoqrafiya və səhnə məharəti üzrə I YER Qızıl Diplom və medalına layiq görülmüşdür.",
-                  "desc_en": "Awarded 1st Place Gold Diploma and medal for modern choreography and stage art.",
-                  "desc_ru": "Удостоена I места, Золотого диплома и медали за современную хореографию."
-            },
-            {
-                  "year": "2025",
-                  "badge": "✨ Bakı Çempionatı · I Yer",
-                  "badge_az": "✨ Bakı Çempionatı · I Yer",
-                  "badge_en": "✨ Baku Championship · 1st Place",
-                  "badge_ru": "✨ Чемпионат Баку · I место",
-                  "title": "Bakı Şəhər Rəqs Çempionatı 2025",
-                  "title_az": "Bakı Şəhər Rəqs Çempionatı 2025",
-                  "title_en": "Baku City Dance Championship 2025",
-                  "title_ru": "Чемпионат города Баку по танцам 2025",
-                  "desc": "Şəhər birinciliyində solo və qrup nümayişlərində I Yer Çempionluğu.",
-                  "desc_az": "Şəhər birinciliyində solo və qrup nümayişlərində I Yer Çempionluğu.",
-                  "desc_en": "Championship 1st place in solo and group categories at Baku City event.",
-                  "desc_ru": "Чемпионство I место в сольных и групповых номерах на первенстве Баку."
-            },
-            {
-                  "year": "2025",
-                  "badge": "🎵 K-POP Festivalı · I Yer",
-                  "badge_az": "🎵 K-POP Festivalı · I Yer",
-                  "badge_en": "🎵 K-POP Festival · 1st Place",
-                  "badge_ru": "🎵 Фестиваль K-Pop · I место",
-                  "title": "K-POP Talent Festival 2025",
-                  "title_az": "K-POP Talent Festival 2025",
-                  "title_en": "K-POP Talent Festival 2025",
-                  "title_ru": "K-POP Talent Festival 2025",
-                  "desc": "Gənclər arasında keçirilən istedad festivalında I Yer Qızıl Diplomat.",
-                  "desc_az": "Gənclər arasında keçirilən istedad festivalında I Yer Qızıl Diplomat.",
-                  "desc_en": "1st place gold laureate at the youth talent festival.",
-                  "desc_ru": "Золотой дипломант I степени молодежного фестиваля талантов."
-            },
-            {
-                  "year": "2025",
-                  "badge": "🔥 Hip-Hop Show · I Dərəcə",
-                  "badge_az": "🔥 Hip-Hop Show · I Dərəcə",
-                  "badge_en": "🔥 Hip-Hop Show · 1st Degree",
-                  "badge_ru": "🔥 Хип-хоп шоу · I Степень",
-                  "title": "AGİ Hip-Hop & Modern Dance Show",
-                  "title_az": "AGİ Hip-Hop & Modern Dance Show",
-                  "title_en": "AYU Hip-Hop & Modern Dance Show",
-                  "title_ru": "Хип-хоп шоу САМ",
-                  "desc": "Küçə rəqsləri və müasir rəqs istiqamətində I Dərəcəli Diplomant.",
-                  "desc_az": "Küçə rəqsləri və müasir rəqs istiqamətində I Dərəcəli Diplomant.",
-                  "desc_en": "1st Degree Laureate in street dance and modern styles.",
-                  "desc_ru": "Дипломант I степени по уличным и современным танцам."
-            },
-            {
-                  "year": "2025",
-                  "badge": "🏆 Azərbaycan Kuboku · I Yer",
-                  "badge_az": "🏆 Azərbaycan Kuboku · I Yer",
-                  "badge_en": "🏆 Azerbaijan Cup · 1st Place",
-                  "badge_ru": "🏆 Кубок Азербайджана · I место",
-                  "title": "Azərbaycan Rəqs Kuboku Yarışması",
-                  "title_az": "Azərbaycan Rəqs Kuboku Yarışması",
-                  "title_en": "Azerbaijan Dance Cup Competition",
-                  "title_ru": "Кубок Азербайджана по танцам",
-                  "desc": "Respublika kuboku yarışmasında I Yer Qalibi.",
-                  "desc_az": "Respublika kuboku yarışmasında I Yer Qalibi.",
-                  "desc_en": "1st Place Winner at the National Cup event.",
-                  "desc_ru": "Победительница (I место) на Кубке Республики."
-            },
-            {
-                  "year": "2025",
-                  "badge": "🌟 İstedadlı Gənclər · I Yer",
-                  "badge_az": "🌟 İstedadlı Gənclər · I Yer",
-                  "badge_en": "🌟 Talented Youth · 1st Place",
-                  "badge_ru": "🌟 Талантливая молодежь · I место",
-                  "title": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi",
-                  "title_az": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi",
-                  "title_en": "National Talented Youth Dance Contest",
-                  "title_ru": "Республиканский конкурс талантливой молодежи",
-                  "desc": "İstedadlı gənclər rəqs yarışmasında I Yer.",
-                  "desc_az": "İstedadlı gənclər rəqs yarışmasında I Yer.",
-                  "desc_en": "1st place at the youth dance showcase.",
-                  "desc_ru": "I место на конкурсе танцевальной молодежи."
-            },
-            {
-                  "year": "2025",
-                  "badge": "🎖️ Xüsusi Nailiyyət · Qızıl Diplom",
-                  "badge_az": "🎖️ Xüsusi Nailiyyət · Qızıl Diplom",
-                  "badge_en": "🎖️ Special Achievement · Gold Diploma",
-                  "badge_ru": "🎖️ Особые достижения · Золотой диплом",
-                  "title": "Rəqs Sənəti üzrə Xüsusi Nailiyyət Sertifikatı",
-                  "title_az": "Rəqs Sənəti üzrə Xüsusi Nailiyyət Sertifikatı",
-                  "title_en": "Special Achievement Certificate in Dance Arts",
-                  "title_ru": "Сертификат за особые достижения в искусстве танца",
-                  "desc": "Xüsusi səhnə məharəti və uğurlu bədii çıxışa görə Fəxri Sertifikat.",
-                  "desc_az": "Xüsusi səhnə məharəti və uğurlu bədii çıxışa görə Fəxri Sertifikat.",
-                  "desc_en": "Honorary certificate for exceptional stage mastery and artistic performance.",
-                  "desc_ru": "Почетный сертификат за высокое сценическое мастерство."
-            }
-      ],
-      "fullBio": [
-            "Əliyeva Aysel Bakı Dövlət Rabitə və Nəqliyyat Kollecinin mədəni və ictimai həyatında fəal iştirak edən, səhnə mədəniyyəti və rəqs sənətində parlaq istedadı ilə seçilən fəxri tələbəmizdir.",
-            "2025-ci il ərzində Azərbaycan Rəqs Assosiasiyası və Azərbaycan Gənclər İttifaqının təşkil etdiyi Respublika və Bakı çempionatlarında, K-POP Talent Festivalında və müasir rəqs yarışmalarında ardıcıl 7 dəfə I Yerə və ali dərəcəli diplomant adlarına layiq görülmüşdür.",
-            "Kollecimizin tələbələri arasında incəsənətə, estetik zövqə və zəhmətkeşliyə ən gözəl örnək olan Aysel kollecimizi bütün səhnələrdə qürurla təmsil edir."
-      ],
-      "fullBio_az": [
-            "Əliyeva Aysel Bakı Dövlət Rabitə və Nəqliyyat Kollecinin mədəni və ictimai həyatında fəal iştirak edən, səhnə mədəniyyəti və rəqs sənətində parlaq istedadı ilə seçilən fəxri tələbəmizdir.",
-            "2025-ci il ərzində Azərbaycan Rəqs Assosiasiyası və Azərbaycan Gənclər İttifaqının təşkil etdiyi Respublika və Bakı çempionatlarında, K-POP Talent Festivalında və müasir rəqs yarışmalarında ardıcıl 7 dəfə I Yerə və ali dərəcəli diplomant adlarına layiq görülmüşdür.",
-            "Kollecimizin tələbələri arasında incəsənətə, estetik zövqə və zəhmətkeşliyə ən gözəl örnək olan Aysel kollecimizi bütün səhnələrdə qürurla təmsil edir."
-      ],
-      "fullBio_en": [
-            "Aysel Aliyeva is a distinguished student at Baku State College of Communications and Transport, renowned for her vibrant talent in dance arts and active involvement in cultural life.",
-            "Throughout 2025, she has garnered 7 consecutive 1st Place awards and elite laureateships at the Azerbaijan Dance Championship, Baku Dance Championship, K-POP Talent Festival, and street dance showcases.",
-            "Exemplifying artistic grace, dedication, and creative passion, Aysel proudly represents our college across leading cultural stages."
-      ],
-      "fullBio_ru": [
-            "Алиева Айсель — почетная студентка Бакинского государственного колледжа связи и транспорта, отличающаяся ярким талантом в танцевальном искусстве и активным участием в культурной жизни.",
-            "В течение 2025 года она завоевала 7 первых мест (I Место) и почетных дипломов на чемпионате Азербайджана по танцам, чемпионате Баку, K-POP фестивале и конкурсах современного танца.",
-            "Являясь образцом трудолюбия и эстетического вкуса, Айсель с гордостью представляет наш колледж на ведущих сценах республики."
-      ],
-      "certificates": [
-            {
-                  "icon": "🥇",
-                  "title": "Azərbaycan Rəqs Çempionatı 2025 — I Yer",
-                  "title_az": "Azərbaycan Rəqs Çempionatı 2025 — I Yer",
-                  "title_en": "Azerbaijan Dance Championship 2025 — 1st Place",
-                  "title_ru": "Чемпионат Азербайджана по танцам 2025 — I место",
-                  "sub": "Azərbaycan Rəqs Assosiasiyası & AGİ",
-                  "sub_az": "Azərbaycan Rəqs Assosiasiyası & AGİ",
-                  "sub_en": "Azerbaijan Dance Association & AYU",
-                  "sub_ru": "Ассоциация танца Азербайджана и САМ"
-            },
-            {
-                  "icon": "✨",
-                  "title": "Bakı Rəqs Çempionatı 2025 — I Yer",
-                  "title_az": "Bakı Rəqs Çempionatı 2025 — I Yer",
-                  "title_en": "Baku Dance Championship 2025 — 1st Place",
-                  "title_ru": "Чемпионат Баку по танцам 2025 — I место",
-                  "sub": "Şəhər Birinciliyi · Qızıl Medal",
-                  "sub_az": "Şəhər Birinciliyi · Qızıl Medal",
-                  "sub_en": "City Championship · Gold Medal",
-                  "sub_ru": "Первенство города · Золотая медаль"
-            },
-            {
-                  "icon": "🎵",
-                  "title": "K-POP Talent Festival 2025 — I Yer Çempionu",
-                  "title_az": "K-POP Talent Festival 2025 — I Yer Çempionu",
-                  "title_en": "K-POP Talent Festival 2025 — 1st Place Champion",
-                  "title_ru": "K-POP Talent Festival 2025 — Чемпион (I место)",
-                  "sub": "Gənclər Festivalı · Qızıl Diplom",
-                  "sub_az": "Gənclər Festivalı · Qızıl Diplom",
-                  "sub_en": "Youth Festival · Gold Diploma",
-                  "sub_ru": "Молодежный фестиваль · Золотой диплом"
-            },
-            {
-                  "icon": "🔥",
-                  "title": "AGİ Hip-Hop & Modern Dance Show — I Dərəcə",
-                  "title_az": "AGİ Hip-Hop & Modern Dance Show — I Dərəcə",
-                  "title_en": "AYU Hip-Hop & Modern Dance Show — 1st Degree",
-                  "title_ru": "Хип-хоп шоу САМ — Дипломант I Степени",
-                  "sub": "Müasir Küçə Rəqsləri Layihəsi",
-                  "sub_az": "Müasir Küçə Rəqsləri Layihəsi",
-                  "sub_en": "Modern Street Dance Project",
-                  "sub_ru": "Проект современного уличного танца"
-            },
-            {
-                  "icon": "🏆",
-                  "title": "Azərbaycan Rəqs Kuboku — I Yer",
-                  "title_az": "Azərbaycan Rəqs Kuboku — I Yer",
-                  "title_en": "Azerbaijan Dance Cup — 1st Place",
-                  "title_ru": "Кубок Азербайджана по танцам — I место",
-                  "sub": "Respublika Kuboku · Qızıl Mükafat",
-                  "sub_az": "Respublika Kuboku · Qızıl Mükafat",
-                  "sub_en": "National Cup · Gold Award",
-                  "sub_ru": "Кубок Республики · Золотая награда"
-            },
-            {
-                  "icon": "🌟",
-                  "title": "Respublika İstedadlı Gənclər Müsabiqəsi — I Yer",
-                  "title_az": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi — I Yer",
-                  "title_en": "National Talented Youth Dance Contest — 1st Place",
-                  "title_ru": "Республиканский конкурс талантливой молодежи — I место",
-                  "sub": "İstedadlı Gənclər Şousu",
-                  "sub_az": "İstedadlı Gənclər Şousu",
-                  "sub_en": "Talented Youth Showcase",
-                  "sub_ru": "Шоу талантливой молодежи"
-            },
-            {
-                  "icon": "🎖️",
-                  "title": "Rəqs Sənəti Xüsusi Nailiyyət Sertifikatı",
-                  "title_az": "Rəqs Sənəti Xüsusi Nailiyyət Sertifikatı",
-                  "title_en": "Dance Art Special Achievement Certificate",
-                  "title_ru": "Сертификат за особые достижения в танце",
-                  "sub": "Xüsusi Səhnə Məharəti Diplomu",
-                  "sub_az": "Xüsusi Səhnə Məharəti Diplomu",
-                  "sub_en": "Special Stage Performance Diploma",
-                  "sub_ru": "Диплом за сценическое мастерство"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysel_1.jpg",
-                  "caption": "Azərbaycan Rəqs Çempionatı 2025 I Yer (Qızıl Medal) Diplomu",
-                  "caption_az": "Azərbaycan Rəqs Çempionatı 2025 I Yer (Qızıl Medal) Diplomu",
-                  "caption_en": "Official Diploma — 1st Place Azerbaijan Dance Championship 2025",
-                  "caption_ru": "Официальный диплом за I место чемпионата Азербайджана по танцам 2025"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysel_2.jpg",
-                  "caption": "Bakı Rəqs Çempionatı 2025 I Yer Diplomu",
-                  "caption_az": "Bakı Rəqs Çempionatı 2025 I Yer Diplomu",
-                  "caption_en": "Official Diploma — 1st Place Baku Dance Championship 2025",
-                  "caption_ru": "Официальный диплом за I место чемпионата Баку по танцам 2025"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysel_3.jpg",
-                  "caption": "K-POP Talent Festival 2025 I Yer Çempionluq Diplomu",
-                  "caption_az": "K-POP Talent Festival 2025 I Yer Çempionluq Diplomu",
-                  "caption_en": "Official Diploma — 1st Place K-POP Talent Festival 2025",
-                  "caption_ru": "Официальный диплом за I место фестиваля K-POP 2025"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysel_4.jpg",
-                  "caption": "AGİ Hip-Hop Show I Dərəcəli Diplomant Təltifi",
-                  "caption_az": "AGİ Hip-Hop Show I Dərəcəli Diplomant Təltifi",
-                  "caption_en": "Official Award — 1st Degree Laureate AYU Hip-Hop Show",
-                  "caption_ru": "Официальная награда дипломанта I степени хип-хоп шоу САМ"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysel_5.jpg",
-                  "caption": "Azərbaycan Rəqs Kuboku I Yer Qalibi Diplomu",
-                  "caption_az": "Azərbaycan Rəqs Kuboku I Yer Qalibi Diplomu",
-                  "caption_en": "Official Diploma — 1st Place Winner Azerbaijan Dance Cup",
-                  "caption_ru": "Официальный диплом за I место Кубка Азербайджана по танцам"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysel_6.jpg",
-                  "caption": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi I Yer Diplomu",
-                  "caption_az": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi I Yer Diplomu",
-                  "caption_en": "Official Diploma — 1st Place National Talented Youth Dance Contest",
-                  "caption_ru": "Официальный диплом за I место конкурса талантливой молодежи"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysel_7.jpg",
-                  "caption": "Rəqs Sənəti üzrə Xüsusi Nailiyyət Sertifikatı & Qızıl Diplom",
-                  "caption_az": "Rəqs Sənəti üzrə Xüsusi Nailiyyət Sertifikatı & Qızıl Diplom",
-                  "caption_en": "Special Achievement Certificate & Gold Diploma in Dance Arts",
-                  "caption_ru": "Специальный сертификат достижений в танце и Золотой диплом"
-            }
-      ]
-}
-,
-{
-      "id": "aysu-soltanova",
-      "fullName": "Soltanova Aysu Ramil qızı",
-      "fullName_az": "Soltanova Aysu Ramil qızı",
-      "fullName_en": "Aysu Soltanova Ramil",
-      "fullName_ru": "Солтанова Айсу Рамиль гызы",
-      "photo": "certificates/thumbs/cert_aysu_astana_stars.jpg",
-      "fallbackPhoto": "certificates/cert_aysu_astana_stars.jpg",
-      "kickerIcon": "🎹",
-      "kicker": "Fortepiano İfaçılığı & Beynəlxalq Musiqi Müsabiqələri",
-      "kicker_az": "Fortepiano İfaçılığı & Beynəlxalq Musiqi Müsabiqələri",
-      "kicker_en": "Piano Performance & International Music Competitions",
-      "kicker_ru": "Фортепианное Исполнительство и Международные Конкурсы",
-      "highlightsHeading": "BEYNƏLXALQ VƏ RESPUBLİKA MUSİQİ NAİLİYYƏTLƏRİ",
-      "highlightsHeading_az": "BEYNƏLXALQ VƏ RESPUBLİKA MUSİQİ NAİLİYYƏTLƏRİ",
-      "highlightsHeading_en": "INTERNATIONAL & NATIONAL MUSIC ACHIEVEMENTS",
-      "highlightsHeading_ru": "МЕЖДУНАРОДНЫЕ И РЕСПУБЛИКАНСКИЕ МУЗЫКАЛЬНЫЕ ДОСТИЖЕНИЯ",
-      "avatarYearTag": "🎹 BEYNƏLXALQ LAUREAT · 9 TƏLTİF",
-      "titleBadge": "🥇 Beynəlxalq Laureat & 9 Rəsmi Diplom",
-      "titleBadge_az": "🥇 Beynəlxalq Laureat & 9 Rəsmi Diplom",
-      "titleBadge_en": "🥇 International Laureate & 9 Official Awards",
-      "titleBadge_ru": "🥇 Международный Лауреат и 9 Дипломов",
-      "role": "BDRNK Tələbəsi · “Astana Stars”, Bakı Musiqi Akademiyası və “Böyük Qafqaz” Kubokunun Laureatı",
-      "role_az": "BDRNK Tələbəsi · “Astana Stars”, Bakı Musiqi Akademiyası və “Böyük Qafqaz” Kubokunun Laureatı",
-      "role_en": "BDRNK Student · Laureate of “Astana Stars”, Baku Music Academy & “Greater Caucasus” Cup",
-      "role_ru": "Студентка БГКСТ · Лауреат «Astana Stars», Бакинской Музыкальной Академии и Кубка «Большой Кавказ»",
-      "categories": [
-            "arts"
-      ],
-      "statusText": "Fortepiano üzrə I Dərəcəli Beynəlxalq Laureat & Gümüş Medalçı",
-      "statusText_az": "Fortepiano üzrə I Dərəcəli Beynəlxalq Laureat & Gümüş Medalçı",
-      "statusText_en": "1st Degree International Piano Laureate & Silver Medalist",
-      "statusText_ru": "Лауреат I степени международных конкурсов и серебряная медалистка",
-      "quote": "Musiqi ruhun ən saf dilidir. Klassik və milli əsərləri fortepianoda səsləndirərək kollecimizi və mədəniyyətimizi beynəlxalq səhnələrdə təmsil etmək böyük qürurdur.",
-      "quote_az": "Musiqi ruhun ən saf dilidir. Klassik və milli əsərləri fortepianoda səsləndirərək kollecimizi və mədəniyyətimizi beynəlxalq səhnələrdə təmsil etmək böyük qürurdur.",
-      "quote_en": "Music is the purest language of the soul. Performing classical and national compositions on the piano to represent our college and culture on international stages is a great honor.",
-      "quote_ru": "Музыка — самый чистый язык души. Представлять наш колледж и культуру на международных сценах, исполняя классические произведения на фортепиано — огромная гордость.",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "BMA & Böyük Qafqaz Kuboku",
-                  "note_az": "BMA & Böyük Qafqaz Kuboku",
-                  "note_en": "BMA & Greater Caucasus Cup",
-                  "note_ru": "БМА и Кубок Большой Кавказ"
-            },
-            {
-                  "emoji": "🇰🇿",
-                  "name": "Qazaxıstan",
-                  "name_az": "Qazaxıstan",
-                  "name_en": "Kazakhstan",
-                  "name_ru": "Казахстан",
-                  "note": "Astana Stars — I Dərəcəli Laureat",
-                  "note_az": "Astana Stars — I Dərəcəli Laureat",
-                  "note_en": "Astana Stars — 1st Degree Laureate",
-                  "note_ru": "Astana Stars — Лауреат I степени"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "🥇",
-                  "val": "I DƏRƏCƏ",
-                  "val_az": "I DƏRƏCƏ",
-                  "val_en": "1st DEGREE",
-                  "val_ru": "I СТЕПЕНЬ",
-                  "label": "Astana Stars",
-                  "label_az": "Astana Stars",
-                  "label_en": "Astana Stars",
-                  "label_ru": "Astana Stars",
-                  "sub": "VII Beynəlxalq Müsabiqə Laureatı",
-                  "sub_az": "VII Beynəlxalq Müsabiqə Laureatı",
-                  "sub_en": "VII International Contest Laureate",
-                  "sub_ru": "Лауреат VII Международного конкурса"
-            },
-            {
-                  "icon": "🥈",
-                  "val": "II YER + MEDAL",
-                  "val_az": "II YER + MEDAL",
-                  "val_en": "2nd PLACE + MEDAL",
-                  "val_ru": "II МЕСТО + МЕДАЛЬ",
-                  "label": "Böyük Qafqaz Kuboku",
-                  "label_az": "Böyük Qafqaz Kuboku",
-                  "label_en": "Greater Caucasus Cup",
-                  "label_ru": "Кубок Большой Кавказ",
-                  "sub": "Fortepiano Solo · Şəki 2022",
-                  "sub_az": "Fortepiano Solo · Şəki 2022",
-                  "sub_en": "Piano Solo · Sheki 2022",
-                  "sub_ru": "Фортепиано соло · Шеки 2022"
-            },
-            {
-                  "icon": "🎹",
-                  "val": "2x BMA DİPLOMU",
-                  "val_az": "2x BMA DİPLOMU",
-                  "val_en": "2x BMA DIPLOMA",
-                  "val_ru": "2x ДИПЛОМА БМА",
-                  "label": "Bakı Musiqi Akademiyası",
-                  "label_az": "Bakı Musiqi Akademiyası",
-                  "label_en": "Baku Music Academy",
-                  "label_ru": "Бакинская Музыкальная Академия",
-                  "sub": "Beynəlxalq İfaçılar Müsabiqəsi",
-                  "sub_az": "Beynəlxalq İfaçılar Müsabiqəsi",
-                  "sub_en": "International Musicians Contest",
-                  "sub_ru": "Международный конкурс музыкантов"
-            },
-            {
-                  "icon": "📜",
-                  "val": "9 SƏNƏD",
-                  "val_az": "9 SƏNƏD",
-                  "val_en": "9 AWARDS",
-                  "val_ru": "9 НАГРАД",
-                  "label": "Rəsmi Portfel",
-                  "label_az": "Rəsmi Portfel",
-                  "label_en": "Official Portfolio",
-                  "label_ru": "Официальное портфолио",
-                  "sub": "Diplom, Fəxri Fərman və Tərifnamə",
-                  "sub_az": "Diplom, Fəxri Fərman və Tərifnamə",
-                  "sub_en": "Diplomas, Citations & Commendations",
-                  "sub_ru": "Дипломы и почетные грамоты"
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2022",
-                  "flag": "🥇",
-                  "country": "Qazaxıstan–Rusiya",
-                  "country_az": "Qazaxıstan–Rusiya",
-                  "country_en": "Kazakhstan–Russia",
-                  "country_ru": "Казахстан–Россия",
-                  "title": "“Astana Stars — Milad Ulduzları” VII Beynəlxalq Müsabiqəsi — I Dərəcəli Laureat",
-                  "title_az": "“Astana Stars — Milad Ulduzları” VII Beynəlxalq Müsabiqəsi — I Dərəcəli Laureat",
-                  "title_en": "“Astana Stars — Christmas Stars” VII International Contest — 1st Degree Laureate",
-                  "title_ru": "VII Международный конкурс «Рождественские звезды» (Astana Stars) — Лауреат I степени",
-                  "text": "Fortepiano nominasiyası üzrə beynəlxalq münsiflər heyətinin qərarı ilə I Dərəcəli Laureat diplomuna layiq görülmüşdür.",
-                  "text_az": "Fortepiano nominasiyası üzrə beynəlxalq münsiflər heyətinin qərarı ilə I Dərəcəli Laureat diplomuna layiq görülmüşdür.",
-                  "text_en": "Awarded 1st Degree Laureate Diploma in Piano by the international jury committee.",
-                  "text_ru": "Удостоена диплома Лауреата I степени в номинации «Фортепиано»."
-            },
-            {
-                  "year": "2022",
-                  "flag": "🥈",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "“Böyük Qafqaz” İncəsənət və Rəqs Kuboku (Şəki) — II Yer və Gümüş Medal",
-                  "title_az": "“Böyük Qafqaz” İncəsənət və Rəqs Kuboku (Şəki) — II Yer və Gümüş Medal",
-                  "title_en": "“Greater Caucasus” Art & Dance Cup (Sheki) — 2nd Place & Silver Medal",
-                  "title_ru": "Кубок искусств «Большой Кавказ» (Шеки) — II место и Серебряная медаль",
-                  "text": "AR Mədəniyyət Nazirliyi və Azərbaycan Gənclər İttifaqının təşkilatçılığı ilə Fortepiano (Solo, Yunior 1) üzrə II yer medalı və diplomu.",
-                  "text_az": "AR Mədəniyyət Nazirliyi və Azərbaycan Gənclər İttifaqının təşkilatçılığı ilə Fortepiano (Solo, Yunior 1) üzrə II yer medalı və diplomu.",
-                  "text_en": "2nd Place Silver Medal and Diploma in Piano Solo (Junior 1) under the Ministry of Culture.",
-                  "text_ru": "Серебряная медаль и диплом за II место по классу фортепиано (Соло, Юниор 1)."
-            },
-            {
-                  "year": "2020",
-                  "flag": "🎹",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "Üzeyir Hacıbəyli adına Bakı Musiqi Akademiyası — 2 Beynəlxalq Müsabiqə Diplomu",
-                  "title_az": "Üzeyir Hacıbəyli adına Bakı Musiqi Akademiyası — 2 Beynəlxalq Müsabiqə Diplomu",
-                  "title_en": "Uzeyir Hajibeyli Baku Music Academy — 2 International Competition Diplomas",
-                  "title_ru": "Бакинская Музыкальная Академия им. У. Гаджибейли — 2 Диплома международных конкурсов",
-                  "text": "BMA Məktəb-Studiyasının 40 illik yubileyinə həsr olunmuş iki beynəlxalq müsabiqədə Prof. Fərhad Bədəlbəyli və Prof. Tərlan Seyidov tərəfindən təltif olunmuşdur.",
-                  "text_az": "BMA Məktəb-Studiyasının 40 illik yubileyinə həsr olunmuş iki beynəlxalq müsabiqədə Prof. Fərhad Bədəlbəyli və Prof. Tərlan Seyidov tərəfindən təltif olunmuşdur.",
-                  "text_en": "Honored with two International Competition Incentive Diplomas signed by BMA Rector Prof. Farhad Badalbeyli and Prof. Tarlan Seyidov.",
-                  "text_ru": "Награждена двумя дипломами международных конкурсов БМА за подписью ректора проф. Фархада Бадалбейли и проф. Тарлана Сеидова."
-            }
-      ],
-      "tags": [
-            "#SoltanovaAysu",
-            "#Fortepiano",
-            "#AstanaStars_Laureat",
-            "#BakıMusiqiAkademiyası",
-            "#BöyükQafqazKuboku",
-            "#GümüşMedal",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#SoltanovaAysu",
-            "#Fortepiano",
-            "#AstanaStars_Laureat",
-            "#BakıMusiqiAkademiyası",
-            "#BöyükQafqazKuboku",
-            "#GümüşMedal",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#AysuSoltanova",
-            "#Piano",
-            "#AstanaStarsLaureate",
-            "#BakuMusicAcademy",
-            "#GreaterCaucasusCup",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#СолтановаАйсу",
-            "#Фортепиано",
-            "#AstanaStars",
-            "#БакинскаяМузыкальнаяАкадемия",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2022",
-                  "badge": "🥇 Beynəlxalq Laureat · I Dərəcə",
-                  "title": "“Astana Stars — Milad Ulduzları” VII Beynəlxalq Müsabiqə-Festivalı",
-                  "desc": "Fortepiano nominasiyası üzrə I Dərəcəli Laureat Diplomu (Rusiya–Qazaxıstan)."
-            },
-            {
-                  "year": "2022",
-                  "badge": "🥈 Gümüş Medal & II Yer",
-                  "title": "“Böyük Qafqaz” İncəsənət və Rəqs Kuboku (Şəki)",
-                  "desc": "Fortepiano Solo (Yunior 1) nominasiyası üzrə II Yer Gümüş Medalı və 2 rəsmi təltif sənədi."
-            },
-            {
-                  "year": "2022",
-                  "badge": "🎖️ Fəxri Fərman",
-                  "title": "Bərdə Regional Mədəniyyət İdarəsi · Divanlı Uşaq Musiqi Məktəbi",
-                  "desc": "2021/2022-ci tədris ilində əldə etdiyi yüksək nailiyyətlərə görə Fəxri Fərman."
-            },
-            {
-                  "year": "2020",
-                  "badge": "🎹 2x Beynəlxalq Diplom",
-                  "title": "Üzeyir Hacıbəyli adına Bakı Musiqi Akademiyası Beynəlxalq Müsabiqələri",
-                  "desc": "Akademik, Xalq və Caz Musiqisi İfaçılarının I Beynəlxalq Müsabiqəsi və “Studying of Musical Literature of Different Countries” üzrə 2 Beynəlxalq Diplom."
-            },
-            {
-                  "year": "2018–2019",
-                  "badge": "⭐ Təşəkkürnamə & 2x Tərifnamə",
-                  "title": "Təhsildə və Musiqi İfaçılığında Nümunəvi Nailiyyətlər",
-                  "desc": "Bərdə Regional Mədəniyyət İdarəsi Təşəkkürnaməsi və 104 saylı məktəbin 2 Tərifnaməsi."
-            }
-      ],
-      "fullBio": [
-            "Soltanova (Sultanova) Aysu Ramil qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin həm akademik göstəriciləri, həm də klassik fortepiano sənətindəki beynəlxalq uğurları ilə seçilən fəxri tələbələrindəndir.",
-            "Rusiya–Qazaxıstan “Astana Stars” Beynəlxalq Festival Hərəkatının VII Beynəlxalq müsabiqəsində I Dərəcəli Laureat adına, Üzeyir Hacıbəyli adına Bakı Musiqi Akademiyasının 2 beynəlxalq müsabiqə diplomuna və “Böyük Qafqaz” İncəsənət Kubokunun II Yer gümüş medalına layiq görülmüşdür.",
-            "9 rəsmi diplom, fəxri fərman, təşəkkürnamə və tərifnamədən ibarət zəngin portfelə malik olan Aysu kollecimizin mədəni həyatında fəal iştirak edir."
-      ],
-      "fullBio_az": [
-            "Soltanova (Sultanova) Aysu Ramil qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin həm akademik göstəriciləri, həm də klassik fortepiano sənətindəki beynəlxalq uğurları ilə seçilən fəxri tələbələrindəndir.",
-            "Rusiya–Qazaxıstan “Astana Stars” Beynəlxalq Festival Hərəkatının VII Beynəlxalq müsabiqəsində I Dərəcəli Laureat adına, Üzeyir Hacıbəyli adına Bakı Musiqi Akademiyasının 2 beynəlxalq müsabiqə diplomuna və “Böyük Qafqaz” İncəsənət Kubokunun II Yer gümüş medalına layiq görülmüşdür.",
-            "9 rəsmi diplom, fəxri fərman, təşəkkürnamə və tərifnamədən ibarət zəngin portfelə malik olan Aysu kollecimizin mədəni həyatında fəal iştirak edir."
-      ],
-      "fullBio_en": [
-            "Aysu Soltanova Ramil is an honored student of Baku State College of Communications and Transport, distinguished for her international accomplishments in classical piano performance and academic excellence.",
-            "She holds a 1st Degree Laureate Diploma from the VII International 'Astana Stars' Contest, two International Competition Diplomas from the Uzeyir Hajibeyli Baku Music Academy, and a 2nd Place Silver Medal from the 'Greater Caucasus' Art Cup.",
-            "With a portfolio of 9 official awards and citations, Aysu actively enriches the cultural life of our college."
-      ],
-      "fullBio_ru": [
-            "Солтанова Айсу Рамиль гызы — почетная студентка Бакинского государственного колледжа связи и транспорта, отличающаяся международными достижениями в фортепианном искусстве и отличной учебой.",
-            "Удостоена звания Лауреата I степени VII Международного конкурса «Astana Stars», двух дипломов международных конкурсов Бакинской Музыкальной Академии им. У. Гаджибейли и серебряной медали Кубка искусств «Большой Кавказ».",
-            "Обладая портфолио из 9 официальных дипломов и почетных грамот, Айсу активно участвует в культурной жизни колледжа."
-      ],
-      "certificates": [
-            {
-                  "icon": "🥇",
-                  "title": "“Astana Stars — Milad Ulduzları” VII Beynəlxalq Müsabiqəsi — I Dərəcəli Laureat",
-                  "sub": "Fortepiano · Rusiya–Qazaxıstan (2022)"
-            },
-            {
-                  "icon": "🥈",
-                  "title": "“Böyük Qafqaz” İncəsənət və Rəqs Kuboku (Şəki) — II Yer Gümüş Medalı və Diplomu",
-                  "sub": "AR Mədəniyyət Nazirliyi & AGİ · Fortepiano Solo (2022)"
-            },
-            {
-                  "icon": "🥈",
-                  "title": "“Böyük Qafqaz” İncəsənət və Rəqs Kuboku (Şəki) — II Yer Rəsmi Diplomu",
-                  "sub": "Fortepiano Solo · Yunior 1 (2022)"
-            },
-            {
-                  "icon": "🎖️",
-                  "title": "Bərdə Regional Mədəniyyət İdarəsi — Fəxri Fərman (2021/2022)",
-                  "sub": "Divanlı kənd Uşaq Musiqi Məktəbi · Yüksək nailiyyətlərə görə"
-            },
-            {
-                  "icon": "🎹",
-                  "title": "Bakı Musiqi Akademiyası — I Beynəlxalq Müsabiqəsi Diplomu (2020)",
-                  "sub": "Akademik, Xalq və Caz Musiqisi İfaçıları · Fortepiano"
-            },
-            {
-                  "icon": "🎼",
-                  "title": "Bakı Musiqi Akademiyası — Gənc Musiqiçilərin Beynəlxalq Müsabiqəsi Diplomu",
-                  "sub": "“Studying of Musical Literature of Different Countries” · BMA 40 il"
-            },
-            {
-                  "icon": "🎵",
-                  "title": "Bərdə Regional Mədəniyyət İdarəsi — Təşəkkürnamə (2018/2019)",
-                  "sub": "Fortepianoda nümunəvi ifalarına görə"
-            },
-            {
-                  "icon": "⭐",
-                  "title": "Təhsildə Nailiyyətlərə görə Tərifnamə (Dekabr 2018)",
-                  "sub": "104 saylı tam orta məktəb"
-            },
-            {
-                  "icon": "⭐",
-                  "title": "Təhsildə Nailiyyətlərə görə Tərifnamə (Mart 2018)",
-                  "sub": "104 saylı tam orta məktəb"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysu_astana_stars.jpg",
-                  "caption": "“Astana Stars” VII Beynəlxalq Müsabiqəsi — I Dərəcəli Laureat Diplomu"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysu_boyuk_qafqaz_medal.jpg",
-                  "caption": "“Böyük Qafqaz” İncəsənət Kuboku (Şəki 2022) — II Yer Gümüş Medalı və Diplomu"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysu_bma_2020.jpg",
-                  "caption": "Üzeyir Hacıbəyli adına Bakı Musiqi Akademiyası I Beynəlxalq Müsabiqəsi Diplomu"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysu_bma_lit.jpg",
-                  "caption": "BMA Gənc Musiqiçilərin Beynəlxalq Müsabiqəsi (“Studying of Musical Literature”) Diplomu"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysu_barda_fexri_2022.jpg",
-                  "caption": "Bərdə Regional Mədəniyyət İdarəsi — Fəxri Fərman (2021/2022)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysu_boyuk_qafqaz.jpg",
-                  "caption": "“Böyük Qafqaz” İncəsənət və Rəqs Kuboku — II Yer Diplomu"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysu_barda_music.jpg",
-                  "caption": "Bərdə Regional Mədəniyyət İdarəsi — Təşəkkürnamə (2018/2019)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysu_terifname_2018_2.jpg",
-                  "caption": "Təhsildə Nailiyyətlərə görə Tərifnamə (Dekabr 2018)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aysu_terifname_2018_1.jpg",
-                  "caption": "Təhsildə Nailiyyətlərə görə Tərifnamə (Mart 2018)"
-            }
-      ]
-},
-{
-      "id": "aydan-veliyeva",
-      "fullName": "Vəliyeva Aydan Eldos qızı",
-      "fullName_az": "Vəliyeva Aydan Eldos qızı",
-      "fullName_en": "Aydan Valiyeva Eldos",
-      "fullName_ru": "Велиева Айдан Эльдос гызы",
-      "photo": "certificates/thumbs/cert_aydan_hik_2026.jpg",
-      "fallbackPhoto": "certificates/cert_aydan_hik_2026.jpg",
-      "kickerIcon": "🏛️",
-      "kicker": "Milli-Mənəvi Dəyərlər, Vətənpərvərlik & Bədii Qiraət",
-      "kicker_az": "Milli-Mənəvi Dəyərlər, Vətənpərvərlik & Bədii Qiraət",
-      "kicker_en": "National Values, Patriotism & Literary Recitation",
-      "kicker_ru": "Национальные Ценности, Патриотизм и Художественное Чтение",
-      "highlightsHeading": "İCTİMAİ FƏALLIQ VƏ VƏTƏNPƏRVƏRLİK TƏLTİFLƏRİ",
-      "highlightsHeading_az": "İCTİMAİ FƏALLIQ VƏ VƏTƏNPƏRVƏRLİK TƏLTİFLƏRİ",
-      "highlightsHeading_en": "CIVIC ENGAGEMENT & PATRIOTIC HONORS",
-      "highlightsHeading_ru": "ОБЩЕСТВЕННАЯ АКТИВНОСТЬ И ПАТРИОТИЧЕСКИЕ НАГРАДЫ",
-      "avatarYearTag": "🏛️ BDRNK 2026 · 5 TƏLTİF",
-      "titleBadge": "🎖️ 5 Rəsmi Fəxri Fərman, Diplom və Təşəkkürnamə",
-      "titleBadge_az": "🎖️ 5 Rəsmi Fəxri Fərman, Diplom və Təşəkkürnamə",
-      "titleBadge_en": "🎖️ 5 Official Honorary Citations & Diplomas",
-      "titleBadge_ru": "🎖️ 5 Почетных Грамот, Дипломов и Благодарностей",
-      "role": "BDRNK Tələbəsi · Milli-Mənəvi Dəyərlərin Təbliği və Vətənpərvərlik Tədbirlərinin Fəal İştirakçısı",
-      "role_az": "BDRNK Tələbəsi · Milli-Mənəvi Dəyərlərin Təbliği və Vətənpərvərlik Tədbirlərinin Fəal İştirakçısı",
-      "role_en": "BDRNK Student · Active Participant in Patriotic & Cultural Initiatives",
-      "role_ru": "Студентка БГКСТ · Активная участница патриотических и культурных мероприятий",
-      "categories": [
-            "youth",
-            "arts"
-      ],
-      "statusText": "BDRNK HİK Təltifçisi & Vətənpərvər Gənc",
-      "statusText_az": "BDRNK HİK Təltifçisi & Vətənpərvər Gənc",
-      "statusText_en": "BDRNK Trade Union Honoree & Youth Activist",
-      "statusText_ru": "Лауреат Профсоюзного комитета БГКСТ и активистка",
-      "quote": "Azərbaycançılıq məfkurəsini, milli-mənəvi dəyərlərimizi və Zəfər ruhunu yaşatmaq hər bir gəncin vətəndaşlıq borcudur.",
-      "quote_az": "Azərbaycançılıq məfkurəsini, milli-mənəvi dəyərlərimizi və Zəfər ruhunu yaşatmaq hər bir gəncin vətəndaşlıq borcudur.",
-      "quote_en": "Upholding the ideology of Azerbaijanism, our national-moral heritage, and the spirit of Victory is the civic duty of every youth.",
-      "quote_ru": "Сохранять идеи азербайджанства, национально-духовные ценности и дух Победы — гражданский долг каждого молодого человека.",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "BDRNK HİK & BŞTİ Təltifləri",
-                  "note_az": "BDRNK HİK & BŞTİ Təltifləri",
-                  "note_en": "BDRNK & Baku Education Dept Awards",
-                  "note_ru": "Награды БГКСТ и УО г. Баку"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "🏛️",
-                  "val": "BDRNK 2026",
-                  "val_az": "BDRNK 2026",
-                  "val_en": "BDRNK 2026",
-                  "val_ru": "БГКСТ 2026",
-                  "label": "Təşəkkürnamə",
-                  "label_az": "Təşəkkürnamə",
-                  "label_en": "Appreciation",
-                  "label_ru": "Благодарность",
-                  "sub": "Həmkarlar İttifaqı Komitəsi",
-                  "sub_az": "Həmkarlar İttifaqı Komitəsi",
-                  "sub_en": "Trade Union Committee",
-                  "sub_ru": "Профсоюзный комитет"
-            },
-            {
-                  "icon": "🎖️",
-                  "val": "3x FƏXRİ FƏRMAN",
-                  "val_az": "3x FƏXRİ FƏRMAN",
-                  "val_en": "3x CITATIONS",
-                  "val_ru": "3x ГРАМОТЫ",
-                  "label": "Təhsil İdarəsi & Məktəb",
-                  "label_az": "Təhsil İdarəsi & Məktəb",
-                  "label_en": "Education Dept & School",
-                  "label_ru": "Управление образования",
-                  "sub": "Vətənpərvərlik və ictimai fəallıq",
-                  "sub_az": "Vətənpərvərlik və ictimai fəallıq",
-                  "sub_en": "Patriotism & civic activity",
-                  "sub_ru": "Патриотизм и активность"
-            },
-            {
-                  "icon": "🎭",
-                  "val": "ZƏFƏR DİPLOMU",
-                  "val_az": "ZƏFƏR DİPLOMU",
-                  "val_en": "VICTORY DIPLOMA",
-                  "val_ru": "ДИПЛОМ ПОБЕДЫ",
-                  "label": "Şeir Müsabiqəsi",
-                  "label_az": "Şeir Müsabiqəsi",
-                  "label_en": "Poetry Contest",
-                  "label_ru": "Конкурс поэзии",
-                  "sub": "Zəfər Bayramına həsr olunmuş müsabiqə",
-                  "sub_az": "Zəfər Bayramına həsr olunmuş müsabiqə",
-                  "sub_en": "Dedicated to Victory Day",
-                  "sub_ru": "Посвящено Дню Победы"
-            },
-            {
-                  "icon": "📜",
-                  "val": "5 SƏNƏD",
-                  "val_az": "5 SƏNƏD",
-                  "val_en": "5 AWARDS",
-                  "val_ru": "5 НАГРАД",
-                  "label": "Rəsmi Arxiv",
-                  "label_az": "Rəsmi Arxiv",
-                  "label_en": "Official Archive",
-                  "label_ru": "Официальный архив",
-                  "sub": "2019–2026-cı illər üzrə təltiflər",
-                  "sub_az": "2019–2026-cı illər üzrə təltiflər",
-                  "sub_en": "Awards from 2019–2026",
-                  "sub_ru": "Награды за 2019–2026 гг."
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2026",
-                  "flag": "🏛️",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "BDRNK Həmkarlar İttifaqı Komitəsi — Təşəkkürnamə",
-                  "title_az": "BDRNK Həmkarlar İttifaqı Komitəsi — Təşəkkürnamə",
-                  "title_en": "BDRNK Trade Union Committee — Certificate of Appreciation",
-                  "title_ru": "Профсоюзный комитет БГКСТ — Благодарственная грамота",
-                  "text": "Azərbaycançılıq ideyalarının, milli-mənəvi dəyərlərimizin və vətənpərvərlik ruhunun təbliği məqsədilə keçirilən tədbirdə fəal iştirakına və təşəbbüskarlığına görə təltif olunmuşdur.",
-                  "text_az": "Azərbaycançılıq ideyalarının, milli-mənəvi dəyərlərimizin və vətənpərvərlik ruhunun təbliği məqsədilə keçirilən tədbirdə fəal iştirakına və təşəbbüskarlığına görə təltif olunmuşdur.",
-                  "text_en": "Awarded for active participation and initiative in promoting Azerbaijanism ideas, national-moral values, and patriotism.",
-                  "text_ru": "Награждена за активное участие и инициативу в мероприятии по пропаганде идей азербайджанства и патриотизма."
-            },
-            {
-                  "year": "2023",
-                  "flag": "🎖️",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "5 nömrəli Uşaq-Gənclər İnkişaf Mərkəzi — Fəxri Fərman",
-                  "title_az": "5 nömrəli Uşaq-Gənclər İnkişaf Mərkəzi — Fəxri Fərman",
-                  "title_en": "Children-Youth Development Center No. 5 — Honorary Citation",
-                  "title_ru": "Центр развития детей и молодежи № 5 — Почетная грамота",
-                  "text": "Vətən müharibəsində əldə etdiyimiz uğurlara həsr olunmuş tədbirlərdə fəal iştirak edib yüksək vətənpərvərlik göstərdiyi üçün təltif olunmuşdur.",
-                  "text_az": "Vətən müharibəsində əldə etdiyimiz uğurlara həsr olunmuş tədbirlərdə fəal iştirak edib yüksək vətənpərvərlik göstərdiyi üçün təltif olunmuşdur.",
-                  "text_en": "Honored for high patriotism and active engagement in events dedicated to the Patriotic War victories.",
-                  "text_ru": "Награждена за высокий патриотизм и участие в мероприятиях, посвященных успехам в Отечественной войне."
-            }
-      ],
-      "tags": [
-            "#VəliyevaAydan",
-            "#BDRNK_HİK",
-            "#Vətənpərvərlik",
-            "#MilliMənəviDəyərlər",
-            "#ZəfərBayramı",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#VəliyevaAydan",
-            "#BDRNK_HİK",
-            "#Vətənpərvərlik",
-            "#MilliMənəviDəyərlər",
-            "#ZəfərBayramı",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#AydanValiyeva",
-            "#Patriotism",
-            "#CivicEngagement",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#ВелиеваАйдан",
-            "#Патриотизм",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2026",
-                  "badge": "🏛️ BDRNK HİK · Təşəkkürnamə",
-                  "title": "Milli-Mənəvi Dəyərlər və Vətənpərvərlik Tədbiri",
-                  "desc": "AzTU-nun nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin Həmkarlar İttifaqı Komitəsi tərəfindən Təşəkkürnamə."
-            },
-            {
-                  "year": "2023",
-                  "badge": "🎖️ UGİM №5 · Fəxri Fərman",
-                  "title": "Vətən Müharibəsi Uğurlarına Həsr Olunmuş Tədbirlər",
-                  "desc": "Bakı Şəhəri üzrə Təhsil İdarəsi 5 nömrəli Uşaq-Gənclər İnkişaf Mərkəzinin Fəxri Fərmanı."
-            },
-            {
-                  "year": "2023",
-                  "badge": "📜 178 №-li Məktəb · Fəxri Fərman",
-                  "title": "2022–2023-cü Tədris İli İctimai Fəallıq Təltifi",
-                  "desc": "Nərimanov rayonu D. Nəbiyev adına 178 №-li tam orta məktəbin Fəxri Fərmanı."
-            },
-            {
-                  "year": "2022",
-                  "badge": "🎭 Zəfər Bayramı · Diplom",
-                  "title": "«Zəfər Bayramı»na Həsr Olunmuş Şeir Müsabiqəsi",
-                  "desc": "Bədii qiraət və şeir müsabiqəsində fəal iştirakına görə Diplom."
-            },
-            {
-                  "year": "2019",
-                  "badge": "🏅 Fəxri Fərman",
-                  "title": "Məktəb və Məktəbdənkənar Tədbirlərdə Fəal İştirak",
-                  "desc": "D. Nəbiyev adına 178 nömrəli tam orta məktəbin Fəxri Fərmanı."
-            }
-      ],
-      "fullBio": [
-            "Vəliyeva Aydan Eldos qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin ictimai-mədəni həyatında, vətənpərvərlik ruhunun və milli-mənəvi dəyərlərin təbliği istiqamətində keçirilən tədbirlərdə fəallığı və təşəbbüskarlığı ilə seçilən tələbələrindəndir.",
-            "2026-cı ildə BDRNK Həmkarlar İttifaqı Komitəsi tərəfindən rəsmi Təşəkkürnamə ilə, həmçinin Bakı Şəhəri üzrə Təhsil İdarəsinin 5 nömrəli Uşaq-Gənclər İnkişaf Mərkəzi və təhsil müəssisələri tərəfindən Fəxri Fərman və Diplomlarla təltif olunmuşdur."
-      ],
-      "fullBio_az": [
-            "Vəliyeva Aydan Eldos qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin ictimai-mədəni həyatında, vətənpərvərlik ruhunun və milli-mənəvi dəyərlərin təbliği istiqamətində keçirilən tədbirlərdə fəallığı və təşəbbüskarlığı ilə seçilən tələbələrindəndir.",
-            "2026-cı ildə BDRNK Həmkarlar İttifaqı Komitəsi tərəfindən rəsmi Təşəkkürnamə ilə, həmçinin Bakı Şəhəri üzrə Təhsil İdarəsinin 5 nömrəli Uşaq-Gənclər İnkişaf Mərkəzi və təhsil müəssisələri tərəfindən Fəxri Fərman və Diplomlarla təltif olunmuşdur."
-      ],
-      "fullBio_en": [
-            "Aydan Valiyeva Eldos is an active student at Baku State College of Communications and Transport, recognized for her leadership and initiative in cultural and patriotic events.",
-            "In 2026, she was honored with a Certificate of Appreciation by the BDRNK Trade Union Committee, complementing her portfolio of Honorary Citations and Victory Day Poetry Competition Diploma."
-      ],
-      "fullBio_ru": [
-            "Велиева Айдан Эльдос гызы — активная студентка Бакинского государственного колледжа связи и транспорта, отличающаяся инициативностью в общественно-культурных и патриотических мероприятиях.",
-            "В 2026 году награждена Благодарственной грамотой Профсоюзного комитета БГКСТ, а также Почетными грамотами и Дипломом конкурса поэзии ко Дню Победы."
-      ],
-      "certificates": [
-            {
-                  "icon": "🏛️",
-                  "title": "BDRNK Həmkarlar İttifaqı Komitəsi — Təşəkkürnamə (2026)",
-                  "sub": "Milli-mənəvi dəyərlər və vətənpərvərlik tədbirində fəal iştirakına görə"
-            },
-            {
-                  "icon": "🎖️",
-                  "title": "5 nömrəli Uşaq-Gənclər İnkişaf Mərkəzi — Fəxri Fərman",
-                  "sub": "Vətən müharibəsi uğurlarına həsr olunmuş tədbirlər"
-            },
-            {
-                  "icon": "📜",
-                  "title": "178 №-li Tam Orta Məktəb — Fəxri Fərman (2022–2023)",
-                  "sub": "Məktəb tədbirlərində fəal iştirakına görə"
-            },
-            {
-                  "icon": "🎭",
-                  "title": "«Zəfər Bayramı» Şeir Müsabiqəsi — Diplom",
-                  "sub": "Bədii qiraət və şeir müsabiqəsi"
-            },
-            {
-                  "icon": "🏅",
-                  "title": "178 №-li Tam Orta Məktəb — Fəxri Fərman (2019)",
-                  "sub": "Məktəb və məktəbdənkənar tədbirlərdə fəal iştirakına görə"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aydan_hik_2026.jpg",
-                  "caption": "BDRNK Həmkarlar İttifaqı Komitəsi — Təşəkkürnamə (2026)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aydan_ugim5.jpg",
-                  "caption": "5 nömrəli Uşaq-Gənclər İnkişaf Mərkəzi — Fəxri Fərman"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aydan_178_2023.jpg",
-                  "caption": "178 №-li Tam Orta Məktəb — Fəxri Fərman (2022–2023)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aydan_zefer_seir.jpg",
-                  "caption": "«Zəfər Bayramı» Şeir Müsabiqəsi — Diplom"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aydan_178_2019.jpg",
-                  "caption": "178 №-li Tam Orta Məktəb — Fəxri Fərman (2019)"
-            }
-      ]
-},
-{
-      "id": "jale-teymurlu",
-      "fullName": "Teymurlu Jalə",
-      "fullName_az": "Teymurlu Jalə",
-      "fullName_en": "Jala Teymurlu",
-      "fullName_ru": "Теймурлу Жаля",
-      "photo": "certificates/thumbs/cert_jale_agf_1st.jpg",
-      "fallbackPhoto": "certificates/cert_jale_agf_1st.jpg",
-      "kickerIcon": "🤸‍♀️",
-      "kicker": "Akrobatika Gimnastikası · AGF & Olimpiya Ehtiyatları Məktəbi",
-      "kicker_az": "Akrobatika Gimnastikası · AGF & Olimpiya Ehtiyatları Məktəbi",
-      "kicker_en": "Acrobatic Gymnastics · AGF & Olympic Reserve School",
-      "kicker_ru": "Акробатическая Гимнастика · AGF и Школа Олимпийского Резерва",
-      "highlightsHeading": "AKROBATİKA GİMNASTİKASI ÜZRƏ ÇEMPİONAT NAİLİYYƏTLƏRİ",
-      "highlightsHeading_az": "AKROBATİKA GİMNASTİKASI ÜZRƏ ÇEMPİONAT NAİLİYYƏTLƏRİ",
-      "highlightsHeading_en": "ACROBATIC GYMNASTICS CHAMPIONSHIP ACHIEVEMENTS",
-      "highlightsHeading_ru": "ДОСТИЖЕНИЯ НА ПЕРВЕНСТВАХ ПО АКРОБАТИЧЕСКОЙ ГИМНАСТИКЕ",
-      "avatarYearTag": "🤸‍♀️ AGF ÇEMPİONU · 4 DİPLOM",
-      "titleBadge": "🥇 AGF I Yer Qızıl & 3x Bürünc Mükafatçı",
-      "titleBadge_az": "🥇 AGF I Yer Qızıl & 3x Bürünc Mükafatçı",
-      "titleBadge_en": "🥇 AGF 1st Place Gold & 3x Bronze Medalist",
-      "titleBadge_ru": "🥇 I место AGF (Золото) и 3-кратный бронзовый призер",
-      "role": "BDRNK Tələbəsi · Azərbaycan Gimnastika Federasiyası və RİOEUGGM Birinciliklərinin Qalibi və Mükafatçısı",
-      "role_az": "BDRNK Tələbəsi · Azərbaycan Gimnastika Federasiyası və RİOEUGGM Birinciliklərinin Qalibi və Mükafatçısı",
-      "role_en": "BDRNK Student · Winner & Medalist of Azerbaijan Gymnastics Federation & Olympic Reserve Championships",
-      "role_ru": "Студентка БГКСТ · Победительница и призер первенств Федерации гимнастики Азербайджана и РДЮСШОР",
-      "categories": [
-            "sports"
-      ],
-      "statusText": "Akrobatika Gimnastikası üzrə 4 Rəsmi Diplom",
-      "statusText_az": "Akrobatika Gimnastikası üzrə 4 Rəsmi Diplom",
-      "statusText_en": "4 Official Diplomas in Acrobatic Gymnastics",
-      "statusText_ru": "4 официальных диплома по акробатической гимнастике",
-      "quote": "Gimnastika yüksək koordinasiya, zəriflik və komanda etibarı tələb edir. İdman arenasında qazanılan hər bir medal illərlə çəkilən zəhmətin bəhrəsidir.",
-      "quote_az": "Gimnastika yüksək koordinasiya, zəriflik və komanda etibarı tələb edir. İdman arenasında qazanılan hər bir medal illərlə çəkilən zəhmətin bəhrəsidir.",
-      "quote_en": "Gymnastics demands supreme coordination, grace, and team trust. Every medal won in the arena is the fruit of years of dedication.",
-      "quote_ru": "Гимнастика требует высокой координации, грации и командного доверия. Каждая медаль на арене — результат многолетнего труда.",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "AGF & RİOEUGGM Birincilikləri",
-                  "note_az": "AGF & RİOEUGGM Birincilikləri",
-                  "note_en": "AGF & Olympic Reserve Championships",
-                  "note_ru": "Первенства AGF и РДЮСШОР"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "🥇",
-                  "val": "I YER (QIZIL)",
-                  "val_az": "I YER (QIZIL)",
-                  "val_en": "1st PLACE (GOLD)",
-                  "val_ru": "I МЕСТО (ЗОЛОТО)",
-                  "label": "AGF · 2-ci Ocaq Birinciliyi",
-                  "label_az": "AGF · 2-ci Ocaq Birinciliyi",
-                  "label_en": "AGF · 2nd Ojag Championship",
-                  "label_ru": "AGF · 2-е Первенство Оджаг",
-                  "sub": "Akrobatika Gimnastikası · Qadın qrupu",
-                  "sub_az": "Akrobatika Gimnastikası · Qadın qrupu",
-                  "sub_en": "Acrobatic Gymnastics · Women's Group",
-                  "sub_ru": "Акробатическая гимнастика"
-            },
-            {
-                  "icon": "🥉",
-                  "val": "3x III YER",
-                  "val_az": "3x III YER",
-                  "val_en": "3x 3rd PLACE",
-                  "val_ru": "3x III МЕСТО",
-                  "label": "AGF & RİOEUGGM",
-                  "label_az": "AGF & RİOEUGGM",
-                  "label_en": "AGF & Olympic Reserve",
-                  "label_ru": "AGF и РДЮСШОР",
-                  "sub": "Fərdi və Qadın qrupu proqramları",
-                  "sub_az": "Fərdi və Qadın qrupu proqramları",
-                  "sub_en": "Individual & Women's Group",
-                  "sub_ru": "Индивидуальная и групповая программа"
-            },
-            {
-                  "icon": "📜",
-                  "val": "4 DİPLOM",
-                  "val_az": "4 DİPLOM",
-                  "val_en": "4 DIPLOMAS",
-                  "val_ru": "4 ДИПЛОМА",
-                  "label": "Rəsmi İdman Arxivi",
-                  "label_az": "Rəsmi İdman Arxivi",
-                  "label_en": "Official Sports Archive",
-                  "label_ru": "Официальный спортивный архив",
-                  "sub": "Azərbaycan Gimnastika Federasiyası",
-                  "sub_az": "Azərbaycan Gimnastika Federasiyası",
-                  "sub_en": "Azerbaijan Gymnastics Federation",
-                  "sub_ru": "Федерация гимнастики Азербайджана"
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2019",
-                  "flag": "🥇",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "AGF · Akrobatika Gimnastikası üzrə 2-ci Ocaq Açıq Birinciliyi — I Yer",
-                  "title_az": "AGF · Akrobatika Gimnastikası üzrə 2-ci Ocaq Açıq Birinciliyi — I Yer",
-                  "title_en": "AGF · 2nd Ojag Open Championship in Acrobatic Gymnastics — 1st Place",
-                  "title_ru": "AGF · 2-е Открытое первенство «Оджаг» по акробатической гимнастике — I место",
-                  "text": "10 və yuxarı yaş qrupunda Qadın qrupu proqramında fəxri kürsünün ən yüksək pilləsinə — I yerə layiq görülmüşdür.",
-                  "text_az": "10 və yuxarı yaş qrupunda Qadın qrupu proqramında fəxri kürsünün ən yüksək pilləsinə — I yerə layiq görülmüşdür.",
-                  "text_en": "Won 1st Place Gold in the 10+ Women's Group division at the 2nd Ojag Open Championship.",
-                  "text_ru": "Заняла I место в женской группе (10+) на 2-м Открытом первенстве «Оджаг»."
-            },
-            {
-                  "year": "2016–2018",
-                  "flag": "🥉",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "AGF 1-ci Ocaq və Respublika Olimpiya Ehtiyatları Gimnastika Məktəbi — 3 Bürünc Diplom",
-                  "title_az": "AGF 1-ci Ocaq və Respublika Olimpiya Ehtiyatları Gimnastika Məktəbi — 3 Bürünc Diplom",
-                  "title_en": "AGF 1st Ojag & Republican Olympic Reserve Gymnastics School — 3 Bronze Diplomas",
-                  "title_ru": "1-е Первенство «Оджаг» и РДЮСШОР по гимнастике — 3 диплома за III место",
-                  "text": "2016, 2017 və 2018-ci illərdə keçirilən açıq birinciliklərdə ardıcıl 3 dəfə III yerə layiq görülmüşdür.",
-                  "text_az": "2016, 2017 və 2018-ci illərdə keçirilən açıq birinciliklərdə ardıcıl 3 dəfə III yerə layiq görülmüşdür.",
-                  "text_en": "Claimed three consecutive 3rd Place podium finishes across 2016, 2017, and 2018 open championships.",
-                  "text_ru": "Трижды поднималась на пьедестал почета (III место) на открытых первенствах 2016, 2017 и 2018 годов."
-            }
-      ],
-      "tags": [
-            "#TeymurluJalə",
-            "#AkrobatikaGimnastikası",
-            "#AGF",
-            "#OcaqSportKlubu",
-            "#RİOEUGGM",
-            "#QızılDiplom",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#TeymurluJalə",
-            "#AkrobatikaGimnastikası",
-            "#AGF",
-            "#OcaqSportKlubu",
-            "#RİOEUGGM",
-            "#QızılDiplom",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#JalaTeymurlu",
-            "#AcrobaticGymnastics",
-            "#AGF",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#ТеймурлуЖаля",
-            "#АкробатическаяГимнастика",
-            "#AGF",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2019",
-                  "badge": "🥇 I Yer · AGF Qızıl Diplom",
-                  "title": "Akrobatika Gimnastikası üzrə 2-ci Ocaq Açıq Birinciliyi",
-                  "desc": "10 və yuxarı yaş qrupunda Qadın qrupu üzrə I Yer (11 yanvar 2019)."
-            },
-            {
-                  "year": "2018",
-                  "badge": "🥉 III Yer · AGF Bürünc Diplom",
-                  "title": "Akrobatika Gimnastikası üzrə 1-ci Ocaq Açıq Birinciliyi",
-                  "desc": "Balacalar yaş qrupunda Qadın qrupu (19,66 xal) üzrə III Yer (28 yanvar 2018)."
-            },
-            {
-                  "year": "2017",
-                  "badge": "🥉 III Yer · RİOEUGGM Diplomu",
-                  "title": "Respublika İxtisaslaşdırılmış Olimpiya Ehtiyatları Gimnastika Məktəbi Birinciliyi",
-                  "desc": "Akrobatika gimnastikası üzrə Qadın qrupunda III Yer (26 dekabr 2017)."
-            },
-            {
-                  "year": "2016",
-                  "badge": "🥉 III Yer · İOEUGGM Diplomu",
-                  "title": "İOEUGGM Akrobatika Gimnastikası Fərdi Birinciliyi",
-                  "desc": "Fərdi proqramda III Yer (08 iyul 2016)."
-            }
-      ],
-      "fullBio": [
-            "Teymurlu (Teymurova) Jalə Bakı Dövlət Rabitə və Nəqliyyat Kollecinin akrobatika gimnastikası üzrə çoxsaylı çempionat mükafatçısı olan fəxri tələbə-idmançılarımızdandır.",
-            "Azərbaycan Gimnastika Federasiyası (AGF), “Ocaq” Sport Klubu və Respublika İxtisaslaşdırılmış Olimpiya Ehtiyatları Uşaq-Gənclər Gimnastika Məktəbi (RİOEUGGM) tərəfindən keçirilən birinciliklərdə 1 Qızıl (I Yer) və 3 Bürünc (III Yer) diplom qazanmışdır."
-      ],
-      "fullBio_az": [
-            "Teymurlu (Teymurova) Jalə Bakı Dövlət Rabitə və Nəqliyyat Kollecinin akrobatika gimnastikası üzrə çoxsaylı çempionat mükafatçısı olan fəxri tələbə-idmançılarımızdandır.",
-            "Azərbaycan Gimnastika Federasiyası (AGF), “Ocaq” Sport Klubu və Respublika İxtisaslaşdırılmış Olimpiya Ehtiyatları Uşaq-Gənclər Gimnastika Məktəbi (RİOEUGGM) tərəfindən keçirilən birinciliklərdə 1 Qızıl (I Yer) və 3 Bürünc (III Yer) diplom qazanmışdır."
-      ],
-      "fullBio_en": [
-            "Jala Teymurlu is an honored student-athlete at Baku State College of Communications and Transport with a distinguished competitive record in acrobatic gymnastics.",
-            "Competing in championships organized by the Azerbaijan Gymnastics Federation (AGF), Ojag Sport Club, and the Republican Olympic Reserve Gymnastics School, she has earned 1st Place Gold and three 3rd Place Bronze diplomas."
-      ],
-      "fullBio_ru": [
-            "Теймурлу (Теймурова) Жаля — почетная студентка-спортсменка Бакинского государственного колледжа связи и транспорта, многократный призер первенств по акробатической гимнастике.",
-            "На соревнованиях Федерации гимнастики Азербайджана (AGF), клуба «Оджаг» и Республиканской СДЮСШОР завоевала диплом I степени (Золото) и три диплома III степени (Бронза)."
-      ],
-      "certificates": [
-            {
-                  "icon": "🥇",
-                  "title": "AGF · 2-ci Ocaq Açıq Birinciliyi — I Yer (Qızıl)",
-                  "sub": "Akrobatika Gimnastikası · 11 yanvar 2019"
-            },
-            {
-                  "icon": "🥉",
-                  "title": "AGF · 1-ci Ocaq Açıq Birinciliyi — III Yer (Bürünc)",
-                  "sub": "Akrobatika Gimnastikası · 28 yanvar 2018"
-            },
-            {
-                  "icon": "🥉",
-                  "title": "RİOEUGGM Açıq Birinciliyi — III Yer (Bürünc)",
-                  "sub": "Akrobatika Gimnastikası Qadın qrupu · 26 dekabr 2017"
-            },
-            {
-                  "icon": "🥉",
-                  "title": "İOEUGGM Açıq Birinciliyi — III Yer (Bürünc)",
-                  "sub": "Akrobatika Gimnastikası Fərdi proqram · 08 iyul 2016"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_jale_agf_1st.jpg",
-                  "caption": "AGF · Akrobatika Gimnastikası üzrə 2-ci Ocaq Açıq Birinciliyi — I Yer Diplomu"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_jale_agf_3rd.jpg",
-                  "caption": "AGF · Akrobatika Gimnastikası üzrə 1-ci Ocaq Açıq Birinciliyi — III Yer Diplomu"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_jale_rioeuggm_2017.jpg",
-                  "caption": "RİOEUGGM Akrobatika Gimnastikası Açıq Birinciliyi — III Yer Diplomu"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_jale_ioeuggm_2016.jpg",
-                  "caption": "İOEUGGM Akrobatika Gimnastikası Fərdi Birinciliyi — III Yer Diplomu"
-            }
-      ]
-},
-{
-      "id": "aydin-orucov",
-      "fullName": "Orucov Aydın Nurəddin oğlu",
-      "fullName_az": "Orucov Aydın Nurəddin oğlu",
-      "fullName_en": "Aydin Orujov Nuraddin",
-      "fullName_ru": "Оруджев Айдын Нуреддин оглы",
-      "photo": "certificates/thumbs/cert_aydin_wushu_1.jpg",
-      "fallbackPhoto": "certificates/cert_aydin_wushu_1.jpg",
-      "kickerIcon": "🥋",
-      "kicker": "Uşu-Sanda · Bakı Şəhər Çempionu & 4 Qat Qızıl Mükafatçı",
-      "kicker_az": "Uşu-Sanda · Bakı Şəhər Çempionu & 4 Qat Qızıl Mükafatçı",
-      "kicker_en": "Wushu Sanda · Baku City Champion & 4x Gold Medalist",
-      "kicker_ru": "Ушу-Саньда · Чемпион г. Баку и 4-кратный Золотой Медалист",
-      "highlightsHeading": "UŞU-SANDA ÜZRƏ 4 QAT ÇEMPİONLUQ SERİYASI",
-      "highlightsHeading_az": "UŞU-SANDA ÜZRƏ 4 QAT ÇEMPİONLUQ SERİYASI",
-      "highlightsHeading_en": "4x GOLD CHAMPIONSHIP SERIES IN WUSHU SANDA",
-      "highlightsHeading_ru": "4-КРАТНАЯ ЧЕМПИОНСКАЯ СЕРИЯ ПО УШУ-САНЬДА",
-      "avatarYearTag": "🥇 4x QIZIL ÇEMPİON · 75–80 kq",
-      "titleBadge": "🥇 4 Qat Uşu-Sanda Çempionu (I Yer)",
-      "titleBadge_az": "🥇 4 Qat Uşu-Sanda Çempionu (I Yer)",
-      "titleBadge_en": "🥇 4x Wushu Sanda Gold Champion (1st Place)",
-      "titleBadge_ru": "🥇 4-кратный Чемпион по ушу-саньда (I место)",
-      "role": "BDRNK Tələbəsi · Azərbaycan Uşu Federasiyası və Bakı Şəhər Gənclər və İdman İdarəsi Çempionatlarının 4 Qat Qalibi",
-      "role_az": "BDRNK Tələbəsi · Azərbaycan Uşu Federasiyası və Bakı Şəhər Gənclər və İdman İdarəsi Çempionatlarının 4 Qat Qalibi",
-      "role_en": "BDRNK Student · 4-Time 1st Place Champion of Azerbaijan Wushu Federation & Baku Youth and Sports Championships",
-      "role_ru": "Студент БГКСТ · 4-кратный победитель чемпионатов Федерации ушу Азербайджана и Управления молодежи и спорта г. Баку",
-      "categories": [
-            "sports"
-      ],
-      "statusText": "75 kq və 80 kq Çəki Dərəcələrində 4x I Yer (Qızıl)",
-      "statusText_az": "75 kq və 80 kq Çəki Dərəcələrində 4x I Yer (Qızıl)",
-      "statusText_en": "4x 1st Place Gold in 75 kg & 80 kg Weight Divisions",
-      "statusText_ru": "4-кратное I место (Золото) в категориях 75 кг и 80 кг",
-      "quote": "Hər döyüşdə məqsədim kollecimizin adını və bayrağımızı fəxri kürsünün ən yüksək pilləsinə qaldırmaqdır.",
-      "quote_az": "Hər döyüşdə məqsədim kollecimizin adını və bayrağımızı fəxri kürsünün ən yüksək pilləsinə qaldırmaqdır.",
-      "quote_en": "In every match, my goal is to raise our college's name and flag to the highest step of the podium.",
-      "quote_ru": "В каждом поединке моя цель — поднять имя нашего колледжа на высшую ступень пьедестала почета.",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "AUF & BŞGİİ 4x I Yer Çempionu",
-                  "note_az": "AUF & BŞGİİ 4x I Yer Çempionu",
-                  "note_en": "4x 1st Place Wushu Champion",
-                  "note_ru": "4-кратный чемпион по ушу"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "🥇",
-                  "val": "4x I YER",
-                  "val_az": "4x I YER",
-                  "val_en": "4x 1st PLACE",
-                  "val_ru": "4x I МЕСТО",
-                  "label": "Qızıl Çempionluq",
-                  "label_az": "Qızıl Çempionluq",
-                  "label_en": "Gold Championships",
-                  "label_ru": "Золотые титулы",
-                  "sub": "2025-ci il ərzində 4 rəsmi qızıl diplom",
-                  "sub_az": "2025-ci il ərzində 4 rəsmi qızıl diplom",
-                  "sub_en": "4 official gold diplomas in 2025",
-                  "sub_ru": "4 официальных золотых диплома в 2025 г."
-            },
-            {
-                  "icon": "🏆",
-                  "val": "BAKI ÇEMPİONU",
-                  "val_az": "BAKI ÇEMPİONU",
-                  "val_en": "BAKU CHAMPION",
-                  "val_ru": "ЧЕМПИОН БАКУ",
-                  "label": "80 kq Çəki Dərəcəsi",
-                  "label_az": "80 kq Çəki Dərəcəsi",
-                  "label_en": "80 kg Division",
-                  "label_ru": "Категория 80 кг",
-                  "sub": "Konstitusiya və Suverenlik İli Çempionatı",
-                  "sub_az": "Konstitusiya və Suverenlik İli Çempionatı",
-                  "sub_en": "Constitution & Sovereignty Year Championship",
-                  "sub_ru": "Чемпионат Баку 2025"
-            },
-            {
-                  "icon": "🥋",
-                  "val": "75–80 KQ",
-                  "val_az": "75–80 KQ",
-                  "val_en": "75–80 KG",
-                  "val_ru": "75–80 КГ",
-                  "label": "Uşu-Sanda",
-                  "label_az": "Uşu-Sanda",
-                  "label_en": "Wushu Sanda",
-                  "label_ru": "Ушу-Саньда",
-                  "sub": "Azərbaycan Uşu Federasiyası",
-                  "sub_az": "Azərbaycan Uşu Federasiyası",
-                  "sub_en": "Azerbaijan Wushu Federation",
-                  "sub_ru": "Федерация ушу Азербайджана"
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2025",
-                  "flag": "🥇",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "«Konstitusiya və Suverenlik İli» Uşu üzrə Bakı Şəhər Çempionatı — I Yer (80 kq)",
-                  "title_az": "«Konstitusiya və Suverenlik İli» Uşu üzrə Bakı Şəhər Çempionatı — I Yer (80 kq)",
-                  "title_en": "“Year of Constitution and Sovereignty” Baku City Wushu Championship — 1st Place (80 kg)",
-                  "title_ru": "Чемпионат города Баку по ушу к «Году Конституции и Суверенитета» — I место (80 кг)",
-                  "text": "Bakı Şəhər Gənclər və İdman İdarəsi və Azərbaycan Uşu Federasiyasının rəsmi Bakı çempionatında 80 kq çəkidə I YER.",
-                  "text_az": "Bakı Şəhər Gənclər və İdman İdarəsi və Azərbaycan Uşu Federasiyasının rəsmi Bakı çempionatında 80 kq çəkidə I YER.",
-                  "text_en": "1st Place Gold in the 80 kg division at the official Baku City Wushu Championship.",
-                  "text_ru": "I место в весовой категории 80 кг на официальном чемпионате г. Баку по ушу."
-            },
-            {
-                  "year": "2025",
-                  "flag": "🥇",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "Zəfər Günü, Müstəqillik Günü və Binəqədi Şəhidləri Xatirə Turnirləri — 3x I Yer (75 kq)",
-                  "title_az": "Zəfər Günü, Müstəqillik Günü və Binəqədi Şəhidləri Xatirə Turnirləri — 3x I Yer (75 kq)",
-                  "title_en": "Victory Day, Independence Day & Binagadi Martyrs Memorial Wushu Tournaments — 3x 1st Place (75 kg)",
-                  "title_ru": "Турниры по ушу-саньда ко Дню Победы, Дню Независимости и памяти шехидов — 3x I место (75 кг)",
-                  "text": "75 kq çəki dərəcəsində keçirilən üç respublika və klublararası turnirdə bütün rəqiblərinə qalib gələrək 3 Qızıl Diplom qazanmışdır.",
-                  "text_az": "75 kq çəki dərəcəsində keçirilən üç respublika və klublararası turnirdə bütün rəqiblərinə qalib gələrək 3 Qızıl Diplom qazanmışdır.",
-                  "text_en": "Swept 1st Place Gold across three tournaments in the 75 kg division.",
-                  "text_ru": "Одержал победы во всех трех турнирах в категории 75 кг, завоевав 3 диплома за I место."
-            }
-      ],
-      "tags": [
-            "#OrucovAydın",
-            "#UşuSanda",
-            "#4xQızılÇempion",
-            "#BakıÇempionu",
-            "#AzərbaycanUşuFederasiyası",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#OrucovAydın",
-            "#UşuSanda",
-            "#4xQızılÇempion",
-            "#BakıÇempionu",
-            "#AzərbaycanUşuFederasiyası",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#AydinOrujov",
-            "#WushuSanda",
-            "#4xGoldChampion",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#ОруджевАйдын",
-            "#УшуСаньда",
-            "#4хЗолотойЧемпион",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2025",
-                  "badge": "🥇 I Yer · 80 kq",
-                  "title": "«Konstitusiya və Suverenlik İli» Uşu üzrə Bakı Şəhər Çempionatı",
-                  "desc": "Bakı Şəhər Gənclər və İdman İdarəsi və AUF tərəfindən 80 kq çəki dərəcəsində I Yer (18–20 aprel 2025)."
-            },
-            {
-                  "year": "2025",
-                  "badge": "🥇 I Yer · 75 kq",
-                  "title": "8 Noyabr – Zəfər Gününə Həsr Olunmuş Uşu-Sanda Turniri",
-                  "desc": "«Qobu» Gənclər İdman Klubunun təşkilatçılığı ilə 75 kq çəkidə I Yer (1–2 noyabr 2025)."
-            },
-            {
-                  "year": "2025",
-                  "badge": "🥇 I Yer · 75 kq",
-                  "title": "28 May – Müstəqillik Gününə Həsr Olunmuş Uşu-Sanda Turniri",
-                  "desc": "«Qobu» Gənclər İdman Klubunun təşkilatçılığı ilə 75 kq çəkidə I Yer (31 may – 1 iyun 2025)."
-            },
-            {
-                  "year": "2025",
-                  "badge": "🥇 I Yer · 75 kq",
-                  "title": "Binəqədi Rayon Şəhidlərinin Xatirəsinə Həsr Olunmuş Uşu Turniri",
-                  "desc": "Azərbaycan Uşu Federasiyası və «Çempion» İK tərəfindən 75 kq çəkidə I Yer (1–2 fevral 2025)."
-            }
-      ],
-      "fullBio": [
-            "Orucov Aydın Nurəddin oğlu Bakı Dövlət Rabitə və Nəqliyyat Kollecinin döyüş sənətləri üzrə ən parlaq çempion tələbələrindəndir.",
-            "2025-ci il ərzində Azərbaycan Uşu Federasiyası və Bakı Şəhər Gənclər və İdman İdarəsinin keçirdiyi 4 mötəbər yarışda — Bakı şəhər çempionatında (80 kq), Zəfər Günü, Müstəqillik Günü və Binəqədi Şəhidləri xatirə turnirlərində (75 kq) ardıcıl 4 dəfə I YERİ (Qızıl) qazanmışdır."
-      ],
-      "fullBio_az": [
-            "Orucov Aydın Nurəddin oğlu Bakı Dövlət Rabitə və Nəqliyyat Kollecinin döyüş sənətləri üzrə ən parlaq çempion tələbələrindəndir.",
-            "2025-ci il ərzində Azərbaycan Uşu Federasiyası və Bakı Şəhər Gənclər və İdman İdarəsinin keçirdiyi 4 mötəbər yarışda — Bakı şəhər çempionatında (80 kq), Zəfər Günü, Müstəqillik Günü və Binəqədi Şəhidləri xatirə turnirlərində (75 kq) ardıcıl 4 dəfə I YERİ (Qızıl) qazanmışdır."
-      ],
-      "fullBio_en": [
-            "Aydin Orujov Nuraddin is an undefeated 2025 Wushu Sanda champion representing Baku State College of Communications and Transport.",
-            "Across four major tournaments in 2025 organized by the Azerbaijan Wushu Federation and Baku City Youth and Sports Department, he won four consecutive 1st Place Gold Diplomas in the 75 kg and 80 kg divisions."
-      ],
-      "fullBio_ru": [
-            "Оруджев Айдын Нуреддин оглы — четырехкратный чемпион по ушу-саньда, представляющий Бакинский государственный колледж связи и транспорта.",
-            "В течение 2025 года на чемпионате города Баку (80 кг) и трех турнирах ко Дню Победы, Дню Независимости и памяти шехидов Бинагади (75 кг) завоевал 4 диплома за I место."
-      ],
-      "certificates": [
-            {
-                  "icon": "🥇",
-                  "title": "«Konstitusiya və Suverenlik İli» Uşu Bakı Çempionatı — I Yer",
-                  "sub": "80 kq · Bakı Şəhər Gənclər və İdman İdarəsi & AUF (2025)"
-            },
-            {
-                  "icon": "🥇",
-                  "title": "8 Noyabr Zəfər Günü Uşu-Sanda Turniri — I Yer",
-                  "sub": "75 kq · AUF & «Qobu» Gənclər İdman Klubu (2025)"
-            },
-            {
-                  "icon": "🥇",
-                  "title": "28 May Müstəqillik Günü Uşu-Sanda Turniri — I Yer",
-                  "sub": "75 kq · AUF & «Qobu» Gənclər İdman Klubu (2025)"
-            },
-            {
-                  "icon": "🥇",
-                  "title": "Binəqədi Şəhidləri Xatirə Uşu Turniri — I Yer",
-                  "sub": "75 kq · AUF & «Çempion» İdman Klubu (2025)"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aydin_wushu_1.jpg",
-                  "caption": "Binəqədi Şəhidləri Xatirə Uşu Turniri — I Yer Diplomu (75 kq)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aydin_wushu_2.jpg",
-                  "caption": "28 May Müstəqillik Günü Uşu-Sanda Turniri — I Yer Diplomu (75 kq)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aydin_wushu_3.jpg",
-                  "caption": "8 Noyabr Zəfər Günü Uşu-Sanda Turniri — I Yer Diplomu (75 kq)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aydin_wushu_4.jpg",
-                  "caption": "«Konstitusiya və Suverenlik İli» Uşu Bakı Çempionatı — I Yer Diplomu (80 kq)"
-            }
-      ]
-},
-{
-      "id": "ayan-qasimli",
-      "fullName": "Qasımlı Ayan",
-      "fullName_az": "Qasımlı Ayan",
-      "fullName_en": "Ayan Gasimli",
-      "fullName_ru": "Гасымлы Аян",
-      "photo": "certificates/thumbs/cert_ayan_frontend.jpg",
-      "fallbackPhoto": "certificates/cert_ayan_frontend.jpg",
-      "kickerIcon": "💻",
-      "kicker": "Frontend Proqramlaşdırma & Veb Texnologiyaları (HTML/CSS/JS)",
-      "kicker_az": "Frontend Proqramlaşdırma & Veb Texnologiyaları (HTML/CSS/JS)",
-      "kicker_en": "Frontend Programming & Web Technologies (HTML/CSS/JS)",
-      "kicker_ru": "Frontend-Программирование и Веб-Технологии (HTML/CSS/JS)",
-      "highlightsHeading": "İKT VƏ PROQRAMLAŞDIRMA ÜZRƏ FƏRQLƏNMƏ NAİLİYYƏTİ",
-      "highlightsHeading_az": "İKT VƏ PROQRAMLAŞDIRMA ÜZRƏ FƏRQLƏNMƏ NAİLİYYƏTİ",
-      "highlightsHeading_en": "ICT & FRONTEND DEVELOPMENT DISTINCTION",
-      "highlightsHeading_ru": "ДИПЛОМ С ОСОБЫМ ОТЛИЧИЕМ ПО FRONTEND-РАЗРАБОТКЕ",
-      "avatarYearTag": "💻 XÜSUSİ FƏRQLƏNMƏ · 2026",
-      "titleBadge": "🥇 Frontend Proqramlaşdırma üzrə Xüsusi Fərqlənmə Diplomu",
-      "titleBadge_az": "🥇 Frontend Proqramlaşdırma üzrə Xüsusi Fərqlənmə Diplomu",
-      "titleBadge_en": "🥇 Distinctive Degree Diploma in Frontend Programming",
-      "titleBadge_ru": "🥇 Диплом с особым отличием по Frontend-разработке",
-      "role": "BDRNK Tələbəsi · NovaTech Education Frontend Proqramları Kursunun Xüsusi Fərqlənmə Məzunu (AA № 744)",
-      "role_az": "BDRNK Tələbəsi · NovaTech Education Frontend Proqramları Kursunun Xüsusi Fərqlənmə Məzunu (AA № 744)",
-      "role_en": "BDRNK Student · Distinctive Degree Graduate in Frontend Programs at NovaTech Education (AA No. 744)",
-      "role_ru": "Студентка БГКСТ · Выпускница курса Frontend-программирования NovaTech Education с особым отличием (AA № 744)",
-      "categories": [
-            "it-robotics"
-      ],
-      "statusText": "HTML / CSS / JavaScript · Xüsusi Fərqlənmə Dərəcəsi",
-      "statusText_az": "HTML / CSS / JavaScript · Xüsusi Fərqlənmə Dərəcəsi",
-      "statusText_en": "HTML / CSS / JavaScript · Distinctive Degree",
-      "statusText_ru": "HTML / CSS / JavaScript · Особое отличие",
-      "quote": "Müasir veb texnologiyalarını və proqramlaşdırmanı dərindən öyrənmək rəqəmsal gələcəyi qurmağın ən güclü yoludur.",
-      "quote_az": "Müasir veb texnologiyalarını və proqramlaşdırmanı dərindən öyrənmək rəqəmsal gələcəyi qurmağın ən güclü yoludur.",
-      "quote_en": "Mastering modern web technologies and software development is the most powerful way to build the digital future.",
-      "quote_ru": "Глубокое изучение современных веб-технологий и программирования — лучший путь к созданию цифрового будущего.",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "NovaTech Education · AA № 744",
-                  "note_az": "NovaTech Education · AA № 744",
-                  "note_en": "NovaTech Education · AA No. 744",
-                  "note_ru": "NovaTech Education · AA № 744"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "💻",
-                  "val": "DISTINCTION",
-                  "val_az": "XÜSUSİ FƏRQLƏNMƏ",
-                  "val_en": "DISTINCTIVE",
-                  "val_ru": "ОСОБОЕ ОТЛИЧИЕ",
-                  "label": "Frontend Diplomu",
-                  "label_az": "Frontend Diplomu",
-                  "label_en": "Frontend Diploma",
-                  "label_ru": "Диплом Frontend",
-                  "sub": "HTML, CSS və JavaScript proqramları",
-                  "sub_az": "HTML, CSS və JavaScript proqramları",
-                  "sub_en": "HTML, CSS & JavaScript programs",
-                  "sub_ru": "Программы HTML, CSS и JavaScript"
-            },
-            {
-                  "icon": "⏱️",
-                  "val": "6 AYLIQ KURS",
-                  "val_az": "6 AYLIQ KURS",
-                  "val_en": "6-MONTH COURSE",
-                  "val_ru": "6-МЕСЯЧНЫЙ КУРС",
-                  "label": "NovaTech Education",
-                  "label_az": "NovaTech Education",
-                  "label_en": "NovaTech Education",
-                  "label_ru": "NovaTech Education",
-                  "sub": "Rəsmi Seriya AA № 744",
-                  "sub_az": "Rəsmi Seriya AA № 744",
-                  "sub_en": "Official Serial AA No. 744",
-                  "sub_ru": "Официальная серия AA № 744"
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2026",
-                  "flag": "💻",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "NovaTech Education — Frontend Proqramları (HTML/CSS/JavaScript) Xüsusi Fərqlənmə Diplomu",
-                  "title_az": "NovaTech Education — Frontend Proqramları (HTML/CSS/JavaScript) Xüsusi Fərqlənmə Diplomu",
-                  "title_en": "NovaTech Education — Frontend Programs (HTML/CSS/JavaScript) Distinctive Degree Diploma",
-                  "title_ru": "NovaTech Education — Диплом с особым отличием по Frontend-программированию (HTML/CSS/JS)",
-                  "text": "6 aylıq intensiv Frontend proqramlaşdırma tədris proqramını ən yüksək göstərici — Xüsusi fərqlənmə dərəcəsi ilə başa vurmuşdur.",
-                  "text_az": "6 aylıq intensiv Frontend proqramlaşdırma tədris proqramını ən yüksək göstərici — Xüsusi fərqlənmə dərəcəsi ilə başa vurmuşdur.",
-                  "text_en": "Graduated the intensive 6-month Frontend development program with Distinctive Degree honors.",
-                  "text_ru": "Успешно окончила 6-месячный курс Frontend-разработки со степенью особого отличия."
-            }
-      ],
-      "tags": [
-            "#QasımlıAyan",
-            "#Frontend",
-            "#JavaScript",
-            "#HTML_CSS",
-            "#NovaTech",
-            "#XüsusiFərqlənmə",
-            "#BDRNK_İKT"
-      ],
-      "tags_az": [
-            "#QasımlıAyan",
-            "#Frontend",
-            "#JavaScript",
-            "#HTML_CSS",
-            "#NovaTech",
-            "#XüsusiFərqlənmə",
-            "#BDRNK_İKT"
-      ],
-      "tags_en": [
-            "#AyanGasimli",
-            "#FrontendDevelopment",
-            "#JavaScript",
-            "#BDRNK_ICT"
-      ],
-      "tags_ru": [
-            "#ГасымлыАян",
-            "#Frontend",
-            "#JavaScript",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2026",
-                  "badge": "💻 Xüsusi Fərqlənmə · AA № 744",
-                  "title": "NovaTech Education — Frontend Proqramları Diplomu",
-                  "desc": "HTML, CSS və JavaScript üzrə 6 aylıq kursu Xüsusi fərqlənmə dərəcəsi ilə bitirmişdir (31 oktyabr 2026)."
-            }
-      ],
-      "fullBio": [
-            "Qasımlı Ayan Bakı Dövlət Rabitə və Nəqliyyat Kollecinin informasiya texnologiyaları və veb proqramlaşdırma sahəsində fərqlənən istedadlı tələbələrindəndir.",
-            "2026-cı ildə NovaTech Education tədris mərkəzində 6 aylıq Frontend proqramları (HTML/CSS/JavaScript) səviyyəsini Xüsusi fərqlənmə dərəcəsi ilə bitirərək rəsmi Diplomla (AA № 744) təltif olunmuşdur."
-      ],
-      "fullBio_az": [
-            "Qasımlı Ayan Bakı Dövlət Rabitə və Nəqliyyat Kollecinin informasiya texnologiyaları və veb proqramlaşdırma sahəsində fərqlənən istedadlı tələbələrindəndir.",
-            "2026-cı ildə NovaTech Education tədris mərkəzində 6 aylıq Frontend proqramları (HTML/CSS/JavaScript) səviyyəsini Xüsusi fərqlənmə dərəcəsi ilə bitirərək rəsmi Diplomla (AA № 744) təltif olunmuşdur."
-      ],
-      "fullBio_en": [
-            "Ayan Gasimli is a talented IT student at Baku State College of Communications and Transport specializing in modern frontend web engineering.",
-            "In 2026, she graduated from the 6-month Frontend Programs (HTML/CSS/JavaScript) track at NovaTech Education with a Distinctive Degree Diploma (AA No. 744)."
-      ],
-      "fullBio_ru": [
-            "Гасымлы Аян — талантливая студентка Бакинского государственного колледжа связи и транспорта в сфере информационных технологий и веб-разработки.",
-            "В 2026 году окончила 6-месячный курс Frontend-программирования (HTML/CSS/JavaScript) в NovaTech Education, получив диплом с особым отличием (AA № 744)."
-      ],
-      "certificates": [
-            {
-                  "icon": "💻",
-                  "title": "Frontend Proqramları (HTML/CSS/JS) — Xüsusi Fərqlənmə Diplomu",
-                  "sub": "NovaTech Education · AA № 744 (31 oktyabr 2026)"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_ayan_frontend.jpg",
-                  "caption": "NovaTech Education — Frontend Proqramları (HTML/CSS/JS) Xüsusi Fərqlənmə Diplomu"
-            }
-      ]
-},
-{
-      "id": "xatire-ceferzade",
-      "fullName": "Cəfərzadə Xatirə",
-      "fullName_az": "Cəfərzadə Xatirə",
-      "fullName_en": "Khatira Jafarzada",
-      "fullName_ru": "Джафарзаде Хатира",
-      "photo": "certificates/thumbs/cert_xatire_ai.jpg",
-      "fallbackPhoto": "certificates/cert_xatire_ai.jpg",
-      "kickerIcon": "🤖",
-      "kicker": "Süni İntellekt Dəstəkli Proqramlaşdırma & Gənclər Liderliyi",
-      "kicker_az": "Süni İntellekt Dəstəkli Proqramlaşdırma & Gənclər Liderliyi",
-      "kicker_en": "AI-Assisted Programming & Youth Leadership",
-      "kicker_ru": "Программирование с ИИ и Молодежное Лидерство",
-      "highlightsHeading": "SÜNİ İNTELLEKT VƏ SOSİAL TƏŞƏBBÜSLƏR",
-      "highlightsHeading_az": "SÜNİ İNTELLEKT VƏ SOSİAL TƏŞƏBBÜSLƏR",
-      "highlightsHeading_en": "ARTIFICIAL INTELLIGENCE & SOCIAL INITIATIVES",
-      "highlightsHeading_ru": "ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ И СОЦИАЛЬНЫЕ ИНИЦИАТИВЫ",
-      "avatarYearTag": "🤖 AI & SDG YOUTH · 2026",
-      "titleBadge": "🎖️ AI Proqramlaşdırma & “Taghiyev's Girls” Sertifikatçısı",
-      "titleBadge_az": "🎖️ AI Proqramlaşdırma & “Taghiyev's Girls” Sertifikatçısı",
-      "titleBadge_en": "🎖️ AI Programming & “Taghiyev's Girls” Certificate Holder",
-      "titleBadge_ru": "🎖️ Сертификаты по ИИ-программированию и «Taghiyev's Girls»",
-      "role": "BDRNK Tələbəsi · SDG Youth Community & Div Academy AI Master-Klass və “Taghiyev's Girls” Proqramlarının İştirakçısı",
-      "role_az": "BDRNK Tələbəsi · SDG Youth Community & Div Academy AI Master-Klass və “Taghiyev's Girls” Proqramlarının İştirakçısı",
-      "role_en": "BDRNK Student · Participant of SDG Youth Community & Div Academy AI Master-Class and “Taghiyev's Girls” Initiative",
-      "role_ru": "Студентка БГКСТ · Участница мастер-класса по ИИ SDG Youth Community & Div Academy и инициативы «Taghiyev's Girls»",
-      "categories": [
-            "it-robotics",
-            "youth"
-      ],
-      "statusText": "2 Rəsmi Sertifikat (AI & Qadın Liderliyi, 2026)",
-      "statusText_az": "2 Rəsmi Sertifikat (AI & Qadın Liderliyi, 2026)",
-      "statusText_en": "2 Official Certificates (AI & Women's Leadership, 2026)",
-      "statusText_ru": "2 официальных сертификата (ИИ и женское лидерство, 2026)",
-      "quote": "Süni intellekt texnologiyalarını öyrənmək və qızların təhsildə liderliyini dəstəkləmək gələcəyin innovativ cəmiyyətini formalaşdırır.",
-      "quote_az": "Süni intellekt texnologiyalarını öyrənmək və qızların təhsildə liderliyini dəstəkləmək gələcəyin innovativ cəmiyyətini formalaşdırır.",
-      "quote_en": "Learning AI technologies and championing girls' leadership in education shapes an innovative society for the future.",
-      "quote_ru": "Освоение технологий искусственного интеллекта и поддержка лидерства девушек в образовании формируют инновационное общество будущего.",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "SDG Youth & Div Academy 2026",
-                  "note_az": "SDG Youth & Div Academy 2026",
-                  "note_en": "SDG Youth & Div Academy 2026",
-                  "note_ru": "SDG Youth & Div Academy 2026"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "🤖",
-                  "val": "AI MASTER-CLASS",
-                  "val_az": "AI MASTER-CLASS",
-                  "val_en": "AI MASTER-CLASS",
-                  "val_ru": "ИИ МАСТЕР-КЛАСС",
-                  "label": "Div Academy & SDG",
-                  "label_az": "Div Academy & SDG",
-                  "label_en": "Div Academy & SDG",
-                  "label_ru": "Div Academy & SDG",
-                  "sub": "Süni İntellekt Dəstəkli Proqramlaşdırma",
-                  "sub_az": "Süni İntellekt Dəstəkli Proqramlaşdırma",
-                  "sub_en": "AI-Assisted Programming",
-                  "sub_ru": "Программирование с поддержкой ИИ"
-            },
-            {
-                  "icon": "🌟",
-                  "val": "TAGHIYEV'S GIRLS",
-                  "val_az": "TAGHIYEV'S GIRLS",
-                  "val_en": "TAGHIYEV'S GIRLS",
-                  "val_ru": "TAGHIYEV'S GIRLS",
-                  "label": "Sosial Təşəbbüs",
-                  "label_az": "Sosial Təşəbbüs",
-                  "label_en": "Social Initiative",
-                  "label_ru": "Социальная инициатива",
-                  "sub": "Not Too Early, Not Too Late – Just Her Time",
-                  "sub_az": "Not Too Early, Not Too Late – Just Her Time",
-                  "sub_en": "Not Too Early, Not Too Late – Just Her Time",
-                  "sub_ru": "Лидерство девушек в образовании"
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2026",
-                  "flag": "🤖",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "SDG Youth Community & Div Academy — «Süni İntellekt Dəstəkli Proqramlaşdırma» Sertifikatı",
-                  "title_az": "SDG Youth Community & Div Academy — «Süni İntellekt Dəstəkli Proqramlaşdırma» Sertifikatı",
-                  "title_en": "SDG Youth Community & Div Academy — “AI-Assisted Programming” Certificate",
-                  "title_ru": "SDG Youth Community & Div Academy — Сертификат «Программирование с поддержкой ИИ»",
-                  "text": "28 fevral 2026-cı il tarixində keçirilən Süni İntellekt Dəstəkli Proqramlaşdırma master-klassında uğurlu iştirakına görə təltif edilmişdir.",
-                  "text_az": "28 fevral 2026-cı il tarixində keçirilən Süni İntellekt Dəstəkli Proqramlaşdırma master-klassında uğurlu iştirakına görə təltif edilmişdir.",
-                  "text_en": "Awarded for successful participation in the AI-Assisted Programming master-class on February 28, 2026.",
-                  "text_ru": "Награждена за успешное участие в мастер-классе по программированию с искусственным интеллектом (28 февраля 2026 г.)."
-            },
-            {
-                  "year": "2026",
-                  "flag": "🌟",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "“Taghiyev's Girls: Not Too Early, Not Too Late – Just Her Time” Sertifikatı",
-                  "title_az": "“Taghiyev's Girls: Not Too Early, Not Too Late – Just Her Time” Sertifikatı",
-                  "title_en": "“Taghiyev's Girls: Not Too Early, Not Too Late – Just Her Time” Certificate",
-                  "title_ru": "Сертификат программы «Taghiyev's Girls: Not Too Early, Not Too Late – Just Her Time»",
-                  "text": "Qadınların təhsildə və cəmiyyətdə rolunun gücləndirilməsinə həsr olunmuş təşəbbüsdə fəal iştirakına görə təltif olunmuşdur.",
-                  "text_az": "Qadınların təhsildə və cəmiyyətdə rolunun gücləndirilməsinə həsr olunmuş təşəbbüsdə fəal iştirakına görə təltif olunmuşdur.",
-                  "text_en": "Honored for active engagement in the Taghiyev's Girls educational empowerment initiative.",
-                  "text_ru": "Награждена за активное участие в образовательной инициативе «Taghiyev's Girls»."
-            }
-      ],
-      "tags": [
-            "#CəfərzadəXatirə",
-            "#Süniİntellekt",
-            "#DivAcademy",
-            "#SDGYouthCommunity",
-            "#TaghiyevsGirls",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#CəfərzadəXatirə",
-            "#Süniİntellekt",
-            "#DivAcademy",
-            "#SDGYouthCommunity",
-            "#TaghiyevsGirls",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#KhatiraJafarzada",
-            "#AIProgramming",
-            "#SDGYouth",
-            "#TaghiyevsGirls",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#ДжафарзадеХатира",
-            "#ИИПрограммирование",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2026",
-                  "badge": "🤖 AI Master-Class",
-                  "title": "SDG Youth Community & Div Academy — Süni İntellekt Dəstəkli Proqramlaşdırma",
-                  "desc": "Rəsmi Sertifikat (28 fevral 2026)."
-            },
-            {
-                  "year": "2026",
-                  "badge": "🌟 Taghiyev's Girls",
-                  "title": "“Not Too Early, Not Too Late – Just Her Time” Təşəbbüsü",
-                  "desc": "Fəal iştirak və liderlik sertifikatı (2026)."
-            }
-      ],
-      "fullBio": [
-            "Cəfərzadə Xatirə Bakı Dövlət Rabitə və Nəqliyyat Kollecinin rəqəmsal texnologiyalar və gənclər təşəbbüslərində fəal iştirak edən tələbələrindəndir.",
-            "2026-cı ildə SDG Youth Community və Div Academy tərəfindən təşkil olunan «Süni İntellekt Dəstəkli Proqramlaşdırma» master-klassını və “Taghiyev's Girls” təhsil təşəbbüsünü uğurla tamamlayaraq rəsmi sertifikatlarla təltif olunmuşdur."
-      ],
-      "fullBio_az": [
-            "Cəfərzadə Xatirə Bakı Dövlət Rabitə və Nəqliyyat Kollecinin rəqəmsal texnologiyalar və gənclər təşəbbüslərində fəal iştirak edən tələbələrindəndir.",
-            "2026-cı ildə SDG Youth Community və Div Academy tərəfindən təşkil olunan «Süni İntellekt Dəstəkli Proqramlaşdırma» master-klassını və “Taghiyev's Girls” təhsil təşəbbüsünü uğurla tamamlayaraq rəsmi sertifikatlarla təltif olunmuşdur."
-      ],
-      "fullBio_en": [
-            "Khatira Jafarzada is an innovative student at Baku State College of Communications and Transport actively engaged in AI technology and youth leadership programs.",
-            "In 2026, she earned official certificates from the SDG Youth Community & Div Academy 'AI-Assisted Programming' Master-Class and the 'Taghiyev's Girls' educational initiative."
-      ],
-      "fullBio_ru": [
-            "Джафарзаде Хатира — активная студентка Бакинского государственного колледжа связи и транспорта в области цифровых технологий и молодежных инициатив.",
-            "В 2026 году удостоена сертификатов мастер-класса «Программирование с поддержкой ИИ» от SDG Youth Community и Div Academy, а также программы «Taghiyev's Girls»."
-      ],
-      "certificates": [
-            {
-                  "icon": "🤖",
-                  "title": "«Süni İntellekt Dəstəkli Proqramlaşdırma» Master-Klass Sertifikatı",
-                  "sub": "SDG Youth Community & Div Academy · 28 fevral 2026"
-            },
-            {
-                  "icon": "🌟",
-                  "title": "“Taghiyev's Girls: Not Too Early, Not Too Late – Just Her Time” Sertifikatı",
-                  "sub": "Qadınların təhsildə liderliyi təşəbbüsü · 2026"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_xatire_ai.jpg",
-                  "caption": "SDG Youth Community & Div Academy — «Süni İntellekt Dəstəkli Proqramlaşdırma» Sertifikatı"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_xatire_taghiyev.jpg",
-                  "caption": "“Taghiyev's Girls: Not Too Early, Not Too Late – Just Her Time” Sertifikatı"
-            }
-      ]
-},
-{
-      "id": "aygun-melikova",
-      "fullName": "Məlikova Aygün",
-      "fullName_az": "Məlikova Aygün",
-      "fullName_en": "Aygun Malikova",
-      "fullName_ru": "Меликова Айгюн",
-      "photo": "certificates/thumbs/cert_aygun_exhibition.jpg",
-      "fallbackPhoto": "certificates/cert_aygun_exhibition.jpg",
-      "kickerIcon": "🎨",
-      "kicker": "Təsviri İncəsənət & Beynəlxalq Yaradıcılıq Sərgiləri",
-      "kicker_az": "Təsviri İncəsənət & Beynəlxalq Yaradıcılıq Sərgiləri",
-      "kicker_en": "Fine Arts & International Creative Exhibitions",
-      "kicker_ru": "Изобразительное Искусство и Международные Выставки",
-      "highlightsHeading": "TƏSVİRİ İNCƏSƏNƏT VƏ SƏRGİ TƏLTİFLƏRİ",
-      "highlightsHeading_az": "TƏSVİRİ İNCƏSƏNƏT VƏ SƏRGİ TƏLTİFLƏRİ",
-      "highlightsHeading_en": "FINE ARTS & EXHIBITION AWARDS",
-      "highlightsHeading_ru": "НАГРАДЫ ХУДОЖЕСТВЕННЫХ ВЫСТАВОК И КОНКУРСОВ",
-      "avatarYearTag": "🎨 BEYNƏLXALQ SƏRGİ · 2025",
-      "titleBadge": "🎨 Beynəlxalq Rəsm Sərgisi Diplomantı",
-      "titleBadge_az": "🎨 Beynəlxalq Rəsm Sərgisi Diplomantı",
-      "titleBadge_en": "🎨 International Art Exhibition Laureate",
-      "titleBadge_ru": "🎨 Дипломант Международной Художественной Выставки",
-      "role": "BDRNK Tələbəsi · Beynəlxalq Rəsm Müsabiqəsi və «Zərif Əllərin Gücü» Yaradıcılıq Sərgisinin Təltifçisi",
-      "role_az": "BDRNK Tələbəsi · Beynəlxalq Rəsm Müsabiqəsi və «Zərif Əllərin Gücü» Yaradıcılıq Sərgisinin Təltifçisi",
-      "role_en": "BDRNK Student · Awardee of the International Art Exhibition & “Power of Gentle Hands” Creative Showcase",
-      "role_ru": "Студентка БГКСТ · Лауреат Международной выставки живописи и творческой выставки «Сила нежных рук»",
-      "categories": [
-            "arts"
-      ],
-      "statusText": "Təsviri İncəsənət üzrə Diplom və Təşəkkürnamə (2025)",
-      "statusText_az": "Təsviri İncəsənət üzrə Diplom və Təşəkkürnamə (2025)",
-      "statusText_en": "Fine Arts Diploma & Appreciation Certificate (2025)",
-      "statusText_ru": "Диплом и Благодарность в области изобразительного искусства (2025)",
-      "quote": "Rənglər və fırça vasitəsilə milli ruhumuzu və daxili dünyamızı kətan üzərində canlandırmaq ən böyük yaradıcılıq sevincidir.",
-      "quote_az": "Rənglər və fırça vasitəsilə milli ruhumuzu və daxili dünyamızı kətan üzərində canlandırmaq ən böyük yaradıcılıq sevincidir.",
-      "quote_en": "Bringing our national spirit and inner vision to life on canvas through colors and brushwork is the greatest joy of creation.",
-      "quote_ru": "Воплощать на холсте наш национальный дух и внутренний мир с помощью красок — величайшая радость творчества.",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "Beynəlxalq Rəsm Sərgisi 2025",
-                  "note_az": "Beynəlxalq Rəsm Sərgisi 2025",
-                  "note_en": "International Art Exhibition 2025",
-                  "note_ru": "Международная выставка 2025"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "🎨",
-                  "val": "BEYNƏLXALQ DİPLOM",
-                  "val_az": "BEYNƏLXALQ DİPLOM",
-                  "val_en": "INTL DIPLOMA",
-                  "val_ru": "МЕЖД. ДИПЛОМ",
-                  "label": "Rəsm Müsabiqəsi",
-                  "label_az": "Rəsm Müsabiqəsi",
-                  "label_en": "Art Competition",
-                  "label_ru": "Конкурс живописи",
-                  "sub": "Beynəlxalq Rəsm Sərgisi (2025)",
-                  "sub_az": "Beynəlxalq Rəsm Sərgisi (2025)",
-                  "sub_en": "International Art Exhibition (2025)",
-                  "sub_ru": "Международная выставка (2025)"
-            },
-            {
-                  "icon": "🌸",
-                  "val": "TƏŞƏKKÜRNAMƏ",
-                  "val_az": "TƏŞƏKKÜRNAMƏ",
-                  "val_en": "APPRECIATION",
-                  "val_ru": "БЛАГОДАРНОСТЬ",
-                  "label": "Zərif Əllərin Gücü",
-                  "label_az": "Zərif Əllərin Gücü",
-                  "label_en": "Power of Gentle Hands",
-                  "label_ru": "Сила нежных рук",
-                  "sub": "8 Mart Beynəlxalq Qadınlar Günü Sərgisi",
-                  "sub_az": "8 Mart Beynəlxalq Qadınlar Günü Sərgisi",
-                  "sub_en": "March 8 Women's Day Exhibition",
-                  "sub_ru": "Выставка к 8 Марта"
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2025",
-                  "flag": "🎨",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "Beynəlxalq Rəsm Müsabiqəsi və Sərgisi — Rəsmi Diplom",
-                  "title_az": "Beynəlxalq Rəsm Müsabiqəsi və Sərgisi — Rəsmi Diplom",
-                  "title_en": "International Painting Competition and Exhibition — Official Diploma",
-                  "title_ru": "Международный художественный конкурс и выставка — Официальный диплом",
-                  "text": "Təsviri sənət və rəssamlıq nominasiyasında nümayiş etdirdiyi yüksək bədii yaradıcılığa görə Diplomla təltif olunmuşdur.",
-                  "text_az": "Təsviri sənət və rəssamlıq nominasiyasında nümayiş etdirdiyi yüksək bədii yaradıcılığa görə Diplomla təltif olunmuşdur.",
-                  "text_en": "Awarded an official Diploma for artistic excellence at the International Painting Exhibition.",
-                  "text_ru": "Награждена официальным дипломом за художественное мастерство на Международной выставке."
-            },
-            {
-                  "year": "2025",
-                  "flag": "🌸",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "«Zərif Əllərin Gücü» Yaradıcılıq Sərgisi — Təşəkkürnamə",
-                  "title_az": "«Zərif Əllərin Gücü» Yaradıcılıq Sərgisi — Təşəkkürnamə",
-                  "title_en": "“Power of Gentle Hands” Creative Exhibition — Certificate of Appreciation",
-                  "title_ru": "Творческая выставка «Сила нежных рук» — Благодарственная грамота",
-                  "text": "Yeni Azərbaycan Partiyası Xətai rayon təşkilatı və «Mənim dünyam» Rəsm Qalereyasının birgə sərgisində fəal iştirakına görə təltif edilmişdir.",
-                  "text_az": "Yeni Azərbaycan Partiyası Xətai rayon təşkilatı və «Mənim dünyam» Rəsm Qalereyasının birgə sərgisində fəal iştirakına görə təltif edilmişdir.",
-                  "text_en": "Honored for her creative artwork at the exhibition jointly organized by YAP Khatai District and 'My World' Art Gallery.",
-                  "text_ru": "Отмечена благодарностью за участие в выставке Хатаинской районной организации ПЕА и галереи «Мой мир»."
-            }
-      ],
-      "tags": [
-            "#MəlikovaAygün",
-            "#Təsviriİncəsənət",
-            "#BeynəlxalqRəsmSərgisi",
-            "#ZərifƏllərinGücü",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#MəlikovaAygün",
-            "#Təsviriİncəsənət",
-            "#BeynəlxalqRəsmSərgisi",
-            "#ZərifƏllərinGücü",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#AygunMalikova",
-            "#FineArts",
-            "#ArtExhibition",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#МеликоваАйгюн",
-            "#ИзобразительноеИскусство",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2025",
-                  "badge": "🎨 Beynəlxalq Sərgi · Diplom",
-                  "title": "Beynəlxalq Rəsm Müsabiqəsi və Sərgisi",
-                  "desc": "Fəal və uğurlu iştirakına görə Rəsmi Diplom (2025)."
-            },
-            {
-                  "year": "2025",
-                  "badge": "🌸 Yaradıcılıq Sərgisi · Təşəkkürnamə",
-                  "title": "«Zərif Əllərin Gücü» Yaradıcılıq Sərgisi",
-                  "desc": "YAP Xətai rayon təşkilatı və «Mənim dünyam» Rəsm Qalereyasının Təşəkkürnaməsi (mart 2025)."
-            }
-      ],
-      "fullBio": [
-            "Məlikova Aygün Bakı Dövlət Rabitə və Nəqliyyat Kollecinin təsviri incəsənət və rəssamlıq sahəsində yaradıcı istedadı ilə seçilən tələbələrindəndir.",
-            "2025-ci ildə Beynəlxalq Rəsm Müsabiqəsi və Sərgisində rəsmi Diplomla, həmçinin 8 Mart – Beynəlxalq Qadınlar Gününə həsr olunmuş «Zərif Əllərin Gücü» yaradıcılıq sərgisində Təşəkkürnamə ilə təltif edilmişdir."
-      ],
-      "fullBio_az": [
-            "Məlikova Aygün Bakı Dövlət Rabitə və Nəqliyyat Kollecinin təsviri incəsənət və rəssamlıq sahəsində yaradıcı istedadı ilə seçilən tələbələrindəndir.",
-            "2025-ci ildə Beynəlxalq Rəsm Müsabiqəsi və Sərgisində rəsmi Diplomla, həmçinin 8 Mart – Beynəlxalq Qadınlar Gününə həsr olunmuş «Zərif Əllərin Gücü» yaradıcılıq sərgisində Təşəkkürnamə ilə təltif edilmişdir."
-      ],
-      "fullBio_en": [
-            "Aygun Malikova is a creative student at Baku State College of Communications and Transport distinguished in painting and fine arts.",
-            "In 2025, she was awarded an official Diploma at the International Painting Competition & Exhibition and a Certificate of Appreciation at the 'Power of Gentle Hands' creative exhibition."
-      ],
-      "fullBio_ru": [
-            "Меликова Айгюн — талантливая студентка Бакинского государственного колледжа связи и транспорта, проявляющая яркие способности в живописи и изобразительном искусстве.",
-            "В 2025 году награждена дипломом Международной художественной выставки и благодарственной грамотой выставки «Сила нежных рук»."
-      ],
-      "certificates": [
-            {
-                  "icon": "🎨",
-                  "title": "Beynəlxalq Rəsm Müsabiqəsi və Sərgisi — Diplom",
-                  "sub": "Təsviri incəsənət və yaradıcılıq sərgisi (2025)"
-            },
-            {
-                  "icon": "🌸",
-                  "title": "«Zərif Əllərin Gücü» Yaradıcılıq Sərgisi — Təşəkkürnamə",
-                  "sub": "YAP Xətai rayon təşkilatı & «Mənim dünyam» Rəsm Qalereyası (2025)"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aygun_exhibition.jpg",
-                  "caption": "Beynəlxalq Rəsm Müsabiqəsi və Sərgisi — Diplom"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aygun_zerif.jpg",
-                  "caption": "«Zərif Əllərin Gücü» Yaradıcılıq Sərgisi — Təşəkkürnamə"
-            }
-      ]
-},
-{
-      "id": "solmaz-hesenova",
-      "fullName": "Həsənova Solmaz",
-      "fullName_az": "Həsənova Solmaz",
-      "fullName_en": "Solmaz Hasanova",
-      "fullName_ru": "Гасанова Солмаз",
-      "photo": "certificates/thumbs/cert_solmaz_volleyball.jpg",
-      "fallbackPhoto": "certificates/cert_solmaz_volleyball.jpg",
-      "kickerIcon": "🏐",
-      "kicker": "Voleybol · Komanda İdmanı və Turnir Mükafatçısı",
-      "kicker_az": "Voleybol · Komanda İdmanı və Turnir Mükafatçısı",
-      "kicker_en": "Volleyball · Team Athletics & Tournament Awardee",
-      "kicker_ru": "Волейбол · Командный Спорт и Призер Турнира",
-      "highlightsHeading": "VOLEYBOL TURNİRİ NAİLİYYƏTİ",
-      "highlightsHeading_az": "VOLEYBOL TURNİRİ NAİLİYYƏTİ",
-      "highlightsHeading_en": "VOLLEYBALL TOURNAMENT ACHIEVEMENT",
-      "highlightsHeading_ru": "ДОСТИЖЕНИЯ В ВОЛЕЙБОЛЬНОМ ТУРНИРЕ",
-      "avatarYearTag": "🏐 VOLEYBOL · DİPLOM",
-      "titleBadge": "🏐 Voleybol Turnirinin Rəsmi Diplomantı",
-      "titleBadge_az": "🏐 Voleybol Turnirinin Rəsmi Diplomantı",
-      "titleBadge_en": "🏐 Official Volleyball Tournament Diploma Holder",
-      "titleBadge_ru": "🏐 Дипломант Волейбольного Турнира",
-      "role": "BDRNK Tələbəsi · Ulu Öndər Heydər Əliyevin 100 İllik Yubileyinə Həsr Olunmuş Voleybol Turnirinin Mükafatçısı",
-      "role_az": "BDRNK Tələbəsi · Ulu Öndər Heydər Əliyevin 100 İllik Yubileyinə Həsr Olunmuş Voleybol Turnirinin Mükafatçısı",
-      "role_en": "BDRNK Student · Awardee of the Girls' Volleyball Tournament Dedicated to the 100th Anniversary of Heydar Aliyev",
-      "role_ru": "Студентка БГКСТ · Призер турнира по волейболу среди девушек к 100-летию общенационального лидера Гейдара Алиева",
-      "categories": [
-            "sports"
-      ],
-      "statusText": "Qızlar arasında Voleybol Turniri Diplomu",
-      "statusText_az": "Qızlar arasında Voleybol Turniri Diplomu",
-      "statusText_en": "Girls' Volleyball Tournament Diploma",
-      "statusText_ru": "Диплом волейбольного турнира среди девушек",
-      "quote": "Komanda ruhu, qarşılıqlı dəstək və əzmkarlıq meydançada qələbənin əsas açarıdır.",
-      "quote_az": "Komanda ruhu, qarşılıqlı dəstək və əzmkarlıq meydançada qələbənin əsas açarıdır.",
-      "quote_en": "Team spirit, mutual support, and perseverance are the true keys to victory on the court.",
-      "quote_ru": "Командный дух, взаимная поддержка и упорство — главный ключ к победе на площадке.",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "Voleybol Turniri 2023",
-                  "note_az": "Voleybol Turniri 2023",
-                  "note_en": "Volleyball Tournament 2023",
-                  "note_ru": "Турнир по волейболу 2023"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "🏐",
-                  "val": "DİPLOM",
-                  "val_az": "DİPLOM",
-                  "val_en": "DIPLOMA",
-                  "val_ru": "ДИПЛОМ",
-                  "label": "Voleybol Turniri",
-                  "label_az": "Voleybol Turniri",
-                  "label_en": "Volleyball Tournament",
-                  "label_ru": "Турнир по волейболу",
-                  "sub": "Heydər Əliyevin 100 illik yubileyi (2023)",
-                  "sub_az": "Heydər Əliyevin 100 illik yubileyi (2023)",
-                  "sub_en": "100th Anniversary of Heydar Aliyev (2023)",
-                  "sub_ru": "100-летие Гейдара Алиева (2023)"
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2023",
-                  "flag": "🏐",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "Ulu Öndər Heydər Əliyevin 100 İllik Yubileyinə Həsr Olunmuş Voleybol Turniri — Diplom",
-                  "title_az": "Ulu Öndər Heydər Əliyevin 100 İllik Yubileyinə Həsr Olunmuş Voleybol Turniri — Diplom",
-                  "title_en": "Girls' Volleyball Tournament Dedicated to the 100th Anniversary of Heydar Aliyev — Diploma",
-                  "title_ru": "Турнир по волейболу к 100-летию Гейдара Алиева — Диплом",
-                  "text": "Qızlar arasında keçirilən voleybol yarışında fəal və məharətli çıxışına görə rəsmi Diplomla təltif edilmişdir.",
-                  "text_az": "Qızlar arasında keçirilən voleybol yarışında fəal və məharətli çıxışına görə rəsmi Diplomla təltif edilmişdir.",
-                  "text_en": "Awarded an official Diploma for standout performance in the girls' volleyball tournament.",
-                  "text_ru": "Награждена официальным дипломом за успешное выступление на турнире по волейболу среди девушек."
-            }
-      ],
-      "tags": [
-            "#HəsənovaSolmaz",
-            "#Voleybol",
-            "#İdman",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#HəsənovaSolmaz",
-            "#Voleybol",
-            "#İdman",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#SolmazHasanova",
-            "#Volleyball",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#ГасановаСолмаз",
-            "#Волейбол",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2023",
-                  "badge": "🏐 Voleybol · Rəsmi Diplom",
-                  "title": "Ulu Öndər Heydər Əliyevin 100 İlliyinə Həsr Olunmuş Voleybol Yarışı",
-                  "desc": "Qızlar arasında voleybol turnirində uğurlu çıxışına görə Diplom (05 may 2023)."
-            }
-      ],
-      "fullBio": [
-            "Həsənova Solmaz Bakı Dövlət Rabitə və Nəqliyyat Kollecinin idman yarışlarında və voleybol turnirlərində fəallığı ilə seçilən tələbələrindəndir.",
-            "Ümummilli Lider Heydər Əliyevin anadan olmasının 100-cü ildönümünə həsr olunmuş qızlar arasında voleybol yarışında uğurlu iştirakına görə rəsmi Diplomla təltif olunmuşdur."
-      ],
-      "fullBio_az": [
-            "Həsənova Solmaz Bakı Dövlət Rabitə və Nəqliyyat Kollecinin idman yarışlarında və voleybol turnirlərində fəallığı ilə seçilən tələbələrindəndir.",
-            "Ümummilli Lider Heydər Əliyevin anadan olmasının 100-cü ildönümünə həsr olunmuş qızlar arasında voleybol yarışında uğurlu iştirakına görə rəsmi Diplomla təltif olunmuşdur."
-      ],
-      "fullBio_en": [
-            "Solmaz Hasanova is an active student-athlete at Baku State College of Communications and Transport competing in volleyball.",
-            "She was awarded an official Diploma at the girls' volleyball competition dedicated to the 100th anniversary of National Leader Heydar Aliyev."
-      ],
-      "fullBio_ru": [
-            "Гасанова Солмаз — активная студентка-спортсменка Бакинского государственного колледжа связи и транспорта по волейболу.",
-            "Награждена официальным дипломом турнира по волейболу среди девушек, посвященного 100-летию общенационального лидера Гейдара Алиева."
-      ],
-      "certificates": [
-            {
-                  "icon": "🏐",
-                  "title": "Heydər Əliyevin 100 İlliyinə Həsr Olunmuş Voleybol Yarışı — Diplom",
-                  "sub": "Qızlar arasında Voleybol Turniri · 05 may 2023"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_solmaz_volleyball.jpg",
-                  "caption": "Ulu Öndər Heydər Əliyevin 100 İlliyinə Həsr Olunmuş Voleybol Turniri — Diplom"
-            }
-      ]
-}
-,
-{
-      "id": "fidan-ismayilzade",
-      "fullName": "İsmayılzadə Fidan Zaur qızı",
-      "fullName_az": "İsmayılzadə Fidan Zaur qızı",
-      "fullName_en": "Fidan Ismayilzada Zaur",
-      "fullName_ru": "Исмаилзаде Фидан Заур гызы",
-      "photo": "certificates/thumbs/cert_fidan_asan_1st_2026.jpg",
-      "fallbackPhoto": "certificates/cert_fidan_asan_1st_2026.jpg",
-      "kickerIcon": "🏛️",
-      "kicker": "ASAN Könüllüləri (I Dərəcə) & İKT Kompüter Proqramları",
-      "kicker_az": "ASAN Könüllüləri (I Dərəcə) & İKT Kompüter Proqramları",
-      "kicker_en": "ASAN Volunteers (1st Degree) & ICT Computer Programs",
-      "kicker_ru": "Волонтеры ASAN (I Степень) и Компьютерные Программы ИКТ",
-      "highlightsHeading": "DÖVLƏT XİDMƏTLƏRİ KÖNÜLLÜLÜYÜ VƏ İKT NAİLİYYƏTLƏRİ",
-      "highlightsHeading_az": "DÖVLƏT XİDMƏTLƏRİ KÖNÜLLÜLÜYÜ VƏ İKT NAİLİYYƏTLƏRİ",
-      "highlightsHeading_en": "PUBLIC SERVICE VOLUNTEERING & ICT ACHIEVEMENTS",
-      "highlightsHeading_ru": "ВОЛОНТЕРСТВО В ГОСУСЛУГАХ И ДОСТИЖЕНИЯ В ИКТ",
-      "avatarYearTag": "🏛️ ASAN I DƏRƏCƏ · 91.35/100",
-      "titleBadge": "🥇 ASAN Xidmət I Dərəcəli Sertifikat & İKT Diplomu",
-      "titleBadge_az": "🥇 ASAN Xidmət I Dərəcəli Sertifikat & İKT Diplomu",
-      "titleBadge_en": "🥇 ASAN Service 1st Degree Certificate & ICT Diploma",
-      "titleBadge_ru": "🥇 Сертификат I степени ASAN Xidmət и Диплом ИКТ",
-      "role": "BDRNK Tələbəsi · 1 saylı Sumqayıt Regional «ASAN xidmət» Mərkəzinin I Dərəcəli Könüllüsü və Heart Academy İKT Məzunu",
-      "role_az": "BDRNK Tələbəsi · 1 saylı Sumqayıt Regional «ASAN xidmət» Mərkəzinin I Dərəcəli Könüllüsü və Heart Academy İKT Məzunu",
-      "role_en": "BDRNK Student · 1st Degree Volunteer at Sumgayit Regional “ASAN service” Center No. 1 & Heart Academy ICT Graduate",
-      "role_ru": "Студентка БГКСТ · Волонтер I степени Сумгайытского регионального центра «ASAN xidmət» № 1 и выпускница Heart Academy",
-      "categories": [
-            "youth",
-            "it-robotics"
-      ],
-      "statusText": "ASAN Xidmət I Dərəcə (91.35/100) · 3 Rəsmi Sənəd",
-      "statusText_az": "ASAN Xidmət I Dərəcə (91.35/100) · 3 Rəsmi Sənəd",
-      "statusText_en": "ASAN Service 1st Degree (91.35/100) · 3 Official Awards",
-      "statusText_ru": "ASAN Xidmət I степень (91.35/100) · 3 документа",
-      "quote": "Vətəndaşlara dövlət xidmətlərinin göstərilməsində könüllü kimi iştirak etmək və rəqəmsal bacarıqları inkişaf etdirmək peşəkar gələcəyimizin təməlidir.",
-      "quote_az": "Vətəndaşlara dövlət xidmətlərinin göstərilməsində könüllü kimi iştirak etmək və rəqəmsal bacarıqları inkişaf etdirmək peşəkar gələcəyimizin təməlidir.",
-      "quote_en": "Volunteering in public service delivery and advancing digital skills form the foundation of our professional future.",
-      "quote_ru": "Участие в оказании государственных услуг гражданам и развитие цифровых навыков — основа нашего профессионального будущего.",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "ASAN Xidmət & Heart Academy",
-                  "note_az": "ASAN Xidmət & Heart Academy",
-                  "note_en": "ASAN Service & Heart Academy",
-                  "note_ru": "ASAN Xidmət и Heart Academy"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "🏛️",
-                  "val": "I DƏRƏCƏ",
-                  "val_az": "I DƏRƏCƏ",
-                  "val_en": "1st DEGREE",
-                  "val_ru": "I СТЕПЕНЬ",
-                  "label": "ASAN Xidmət",
-                  "label_az": "ASAN Xidmət",
-                  "label_en": "ASAN Service",
-                  "label_ru": "ASAN Xidmət",
-                  "sub": "91.35/100 bal · № 48367 (2026)",
-                  "sub_az": "91.35/100 bal · № 48367 (2026)",
-                  "sub_en": "Score: 91.35/100 · No. 48367",
-                  "sub_ru": "91.35/100 баллов · № 48367"
-            },
-            {
-                  "icon": "🎓",
-                  "val": "DİPLOM № 631",
-                  "val_az": "DİPLOM № 631",
-                  "val_en": "DIPLOMA No. 631",
-                  "val_ru": "ДИПЛОМ № 631",
-                  "label": "Heart Academy",
-                  "label_az": "Heart Academy",
-                  "label_en": "Heart Academy",
-                  "label_ru": "Heart Academy",
-                  "sub": "6 aylıq Kompüter hazırlıq kursu",
-                  "sub_az": "6 aylıq Kompüter hazırlıq kursu",
-                  "sub_en": "6-month Computer preparatory course",
-                  "sub_ru": "6-месячный компьютерный курс"
-            },
-            {
-                  "icon": "💻",
-                  "val": "MS OFFICE",
-                  "val_az": "MS OFFICE",
-                  "val_en": "MS OFFICE",
-                  "val_ru": "MS OFFICE",
-                  "label": "Rəsmi Sertifikat",
-                  "label_az": "Rəsmi Sertifikat",
-                  "label_en": "Official Certificate",
-                  "label_ru": "Официальный сертификат",
-                  "sub": "Windows, Word, Excel, PowerPoint",
-                  "sub_az": "Windows, Word, Excel, PowerPoint",
-                  "sub_en": "Windows, Word, Excel, PowerPoint",
-                  "sub_ru": "Windows, Word, Excel, PowerPoint"
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2026",
-                  "flag": "🏛️",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "1 saylı Sumqayıt Regional «ASAN xidmət» Mərkəzi — I Dərəcəli Sertifikat (91.35/100)",
-                  "title_az": "1 saylı Sumqayıt Regional «ASAN xidmət» Mərkəzi — I Dərəcəli Sertifikat (91.35/100)",
-                  "title_en": "Sumgayit Regional “ASAN service” Center No. 1 — 1st Degree Certificate (91.35/100)",
-                  "title_ru": "Сумгайытский региональный центр «ASAN xidmət» № 1 — Сертификат I степени (91.35/100)",
-                  "text": "15 avqust – 15 oktyabr 2026-cı il tarixlərində dövlət xidmətlərinin göstərilməsi və ictimai layihələrdə fəal iştirakına görə 91.35/100 balla I Dərəcəli Sertifikatla təltif olunmuşdur.",
-                  "text_az": "15 avqust – 15 oktyabr 2026-cı il tarixlərində dövlət xidmətlərinin göstərilməsi və ictimai layihələrdə fəal iştirakına görə 91.35/100 balla I Dərəcəli Sertifikatla təltif olunmuşdur.",
-                  "text_en": "Awarded a 1st Degree Certificate with a score of 91.35/100 for volunteer service and public projects from August 15 to October 15, 2026.",
-                  "text_ru": "Награждена Сертификатом I степени (91.35/100 баллов) за волонтерскую деятельность с 15 августа по 15 октября 2026 года."
-            },
-            {
-                  "year": "2025",
-                  "flag": "🎓",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "Heart Academy — 6 Aylıq Kompüter Proqramları Diplomu və Sertifikatı (№ 631)",
-                  "title_az": "Heart Academy — 6 Aylıq Kompüter Proqramları Diplomu və Sertifikatı (№ 631)",
-                  "title_en": "Heart Academy — 6-Month Computer Programs Diploma & Certificate (No. 631)",
-                  "title_ru": "Heart Academy — Диплом и Сертификат 6-месячного курса компьютерных программ (№ 631)",
-                  "text": "MS Windows, Word, Excel, PowerPoint və İKT proqramları üzrə 6 aylıq hazırlıq kursunu müvəffəqiyyətlə bitirərək həm Diplom, həm də Sertifikat qazanmışdır.",
-                  "text_az": "MS Windows, Word, Excel, PowerPoint və İKT proqramları üzrə 6 aylıq hazırlıq kursunu müvəffəqiyyətlə bitirərək həm Diplom, həm də Sertifikat qazanmışdır.",
-                  "text_en": "Earned both an official Diploma and Certificate after completing the 6-month computer programs course.",
-                  "text_ru": "Успешно окончила 6-месячный курс компьютерной подготовки, получив диплом и сертификат."
-            }
-      ],
-      "tags": [
-            "#İsmayılzadəFidan",
-            "#ASANKönüllüləri",
-            "#ASANXidmət_IDərəcə",
-            "#HeartAcademy",
-            "#İKT",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#İsmayılzadəFidan",
-            "#ASANKönüllüləri",
-            "#ASANXidmət_IDərəcə",
-            "#HeartAcademy",
-            "#İKT",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#FidanIsmayilzada",
-            "#ASANVolunteers",
-            "#ICT",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#ИсмаилзадеФидан",
-            "#ВолонтерыASAN",
-            "#ИКТ",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2026",
-                  "badge": "🏛️ ASAN Xidmət · I Dərəcə (91.35/100)",
-                  "title": "1 saylı Sumqayıt Regional «ASAN xidmət» Mərkəzi Könüllülük Proqramı",
-                  "desc": "I Dərəcəli Sertifikat, № 48367 (25 oktyabr 2026)."
-            },
-            {
-                  "year": "2025",
-                  "badge": "🎓 Diplom № 631",
-                  "title": "Heart Academy — 6 Aylıq Kompüter Hazırlıq Kursu Diplomu",
-                  "desc": "MS Windows, Word, Excel, PowerPoint üzrə rəsmi Diplom (30 yanvar 2025)."
-            },
-            {
-                  "year": "2025",
-                  "badge": "💻 Sertifikat",
-                  "title": "Heart Academy — Kompüter Kursları Sertifikatı",
-                  "desc": "6 aylıq İKT kursunu müvəffəqiyyətlə başa vurduğuna görə Sertifikat (30 yanvar 2025)."
-            }
-      ],
-      "fullBio": [
-            "İsmayılzadə Fidan Zaur qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin həm dövlət xidmətləri könüllülüyü, həm də informasiya texnologiyaları sahəsində fərqlənən fəal tələbələrindəndir.",
-            "2026-cı ildə 1 saylı Sumqayıt regional «ASAN xidmət» mərkəzində könüllülük fəaliyyətini 91.35/100 yüksək bal ilə başa vuraraq I Dərəcəli Sertifikata (№ 48367), həmçinin Heart Academy-də 6 aylıq kompüter proqramları kursu üzrə rəsmi Diplom (№ 631) və Sertifikata layiq görülmüşdür."
-      ],
-      "fullBio_az": [
-            "İsmayılzadə Fidan Zaur qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin həm dövlət xidmətləri könüllülüyü, həm də informasiya texnologiyaları sahəsində fərqlənən fəal tələbələrindəndir.",
-            "2026-cı ildə 1 saylı Sumqayıt regional «ASAN xidmət» mərkəzində könüllülük fəaliyyətini 91.35/100 yüksək bal ilə başa vuraraq I Dərəcəli Sertifikata (№ 48367), həmçinin Heart Academy-də 6 aylıq kompüter proqramları kursu üzrə rəsmi Diplom (№ 631) və Sertifikata layiq görülmüşdür."
-      ],
-      "fullBio_en": [
-            "Fidan Ismayilzada Zaur is an active student at Baku State College of Communications and Transport excelling in public service volunteering and ICT skills.",
-            "In 2026, she graduated from the volunteer program at Sumgayit Regional 'ASAN service' Center No. 1 with a 1st Degree Certificate (score: 91.35/100, No. 48367), alongside her Diploma and Certificate from Heart Academy."
-      ],
-      "fullBio_ru": [
-            "Исмаилзаде Фидан Заур гызы — активная студентка Бакинского государственного колледжа связи и транспорта, отличившаяся в волонтерской деятельности и сфере ИКТ.",
-            "В 2026 году получила Сертификат I степени (91.35/100 баллов, № 48367) в Сумгайытском региональном центре «ASAN xidmət» № 1, а также диплом и сертификат курса компьютерных технологий Heart Academy."
-      ],
-      "certificates": [
-            {
-                  "icon": "🏛️",
-                  "title": "«ASAN Xidmət» Könüllülük Fəaliyyəti — I Dərəcəli Sertifikat (91.35/100)",
-                  "sub": "1 saylı Sumqayıt regional «ASAN xidmət» mərkəzi · № 48367 (25.10.2026)"
-            },
-            {
-                  "icon": "🎓",
-                  "title": "Heart Academy — 6 Aylıq Kompüter Hazırlıq Kursu Diplomu",
-                  "sub": "Qeydiyyat № 631 · Sumqayıt (30.01.2025)"
-            },
-            {
-                  "icon": "💻",
-                  "title": "Heart Academy — Kompüter Proqramları Kursu Sertifikatı",
-                  "sub": "MS Windows, Word, Excel, PowerPoint · 30.01.2025"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_fidan_asan_1st_2026.jpg",
-                  "caption": "«ASAN Xidmət» Könüllülük Fəaliyyəti — I Dərəcəli Sertifikat (91.35/100)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_fidan_heart_diploma_2025.jpg",
-                  "caption": "Heart Academy — 6 Aylıq Kompüter Hazırlıq Kursu Diplomu (№ 631)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_fidan_heart_cert_2025.jpg",
-                  "caption": "Heart Academy — Kompüter Proqramları Kursu Sertifikatı"
-            }
-      ]
-},
-{
-      "id": "eli-quliyev",
-      "fullName": "Quliyev Əli",
-      "fullName_az": "Quliyev Əli",
-      "fullName_en": "Ali Guliyev",
-      "fullName_ru": "Гулиев Али",
-      "photo": "certificates/thumbs/cert_eli_cudo_3rd_2023.jpg",
-      "fallbackPhoto": "certificates/cert_eli_cudo_3rd_2023.jpg",
-      "kickerIcon": "🥋",
-      "kicker": "Cüdo & Kəmərlə Güləş · 2x Gümüş və Bürünc Mükafatçı",
-      "kicker_az": "Cüdo & Kəmərlə Güləş · 2x Gümüş və Bürünc Mükafatçı",
-      "kicker_en": "Judo & Belt Wrestling · 2x Silver & Bronze Medalist",
-      "kicker_ru": "Дзюдо и Борьба на поясах · 2x Серебряный и Бронзовый Призер",
-      "highlightsHeading": "CÜDO VƏ KƏMƏRLƏ GÜLƏŞ BİRİNCİLİKLƏRİ",
-      "highlightsHeading_az": "CÜDO VƏ KƏMƏRLƏ GÜLƏŞ BİRİNCİLİKLƏRİ",
-      "highlightsHeading_en": "JUDO & BELT WRESTLING CHAMPIONSHIPS",
-      "highlightsHeading_ru": "ПЕРВЕНСТВА ПО ДЗЮДО И БОРЬБЕ НА ПОЯСАХ",
-      "avatarYearTag": "🥋 3x MÜKAFATÇI · 50–66 kq",
-      "titleBadge": "🥈 2x Gümüş (II Yer) & 🥉 Bürünc (III Yer) Diplomant",
-      "titleBadge_az": "🥈 2x Gümüş (II Yer) & 🥉 Bürünc (III Yer) Diplomant",
-      "titleBadge_en": "🥈 2x Silver (2nd Place) & 🥉 Bronze (3rd Place) Medalist",
-      "titleBadge_ru": "🥈 2-кратный серебряный и 🥉 бронзовый призер",
-      "role": "BDRNK Tələbəsi · Azərbaycan Cüdo Federasiyası, «Çempion» İK və Azərbaycan Kəmərlə Güləş İK Birinciliklərinin Mükafatçısı",
-      "role_az": "BDRNK Tələbəsi · Azərbaycan Cüdo Federasiyası, «Çempion» İK və Azərbaycan Kəmərlə Güləş İK Birinciliklərinin Mükafatçısı",
-      "role_en": "BDRNK Student · Medalist of Azerbaijan Judo Federation, Champion SC & Azerbaijan Belt Wrestling SC Open Championships",
-      "role_ru": "Студент БГКСТ · Призер открытых первенств Федерации дзюдо Азербайджана, СК «Чемпион» и Клуба борьбы на поясах",
-      "categories": [
-            "sports"
-      ],
-      "statusText": "50 kq, 55 kq və 66 kq Çəki Dərəcələrində 3 Rəsmi Diplom",
-      "statusText_az": "50 kq, 55 kq və 66 kq Çəki Dərəcələrində 3 Rəsmi Diplom",
-      "statusText_en": "3 Official Podium Diplomas across 50 kg, 55 kg & 66 kg Divisions",
-      "statusText_ru": "3 официальных диплома в весовых категориях 50, 55 и 66 кг",
-      "quote": "Güləş və cüdo tatamisində qazanılan hər bir medal davamlı məşqin, dözümün və mübarizə əzminin nəticəsidir.",
-      "quote_az": "Güləş və cüdo tatamisində qazanılan hər bir medal davamlı məşqin, dözümün və mübarizə əzminin nəticəsidir.",
-      "quote_en": "Every medal won on the judo and wrestling mat is the result of relentless training, endurance, and fighting spirit.",
-      "quote_ru": "Каждая медаль на борцовском ковре и татами — результат упорных тренировок, выносливости и воли к победе.",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "Cüdo & Kəmərlə Güləş Birincilikləri",
-                  "note_az": "Cüdo & Kəmərlə Güləş Birincilikləri",
-                  "note_en": "Judo & Belt Wrestling Championships",
-                  "note_ru": "Первенства по дзюдо и борьбе на поясах"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "🥈",
-                  "val": "2x II YER",
-                  "val_az": "2x II YER",
-                  "val_en": "2x 2nd PLACE",
-                  "val_ru": "2x II МЕСТО",
-                  "label": "Gümüş Mükafat",
-                  "label_az": "Gümüş Mükafat",
-                  "label_en": "Silver Awards",
-                  "label_ru": "Серебряные награды",
-                  "sub": "Cüdo (50 kq) və Kəmərlə Güləş (66 kq)",
-                  "sub_az": "Cüdo (50 kq) və Kəmərlə Güləş (66 kq)",
-                  "sub_en": "Judo (50 kg) & Belt Wrestling (66 kg)",
-                  "sub_ru": "Дзюдо (50 кг) и Борьба на поясах (66 кг)"
-            },
-            {
-                  "icon": "🥉",
-                  "val": "III YER",
-                  "val_az": "III YER",
-                  "val_en": "3rd PLACE",
-                  "val_ru": "III МЕСТО",
-                  "label": "Bürünc Mükafat",
-                  "label_az": "Bürünc Mükafat",
-                  "label_en": "Bronze Award",
-                  "label_ru": "Бронзовая награда",
-                  "sub": "Çempion İK Cüdo Açıq Birinciliyi (55 kq)",
-                  "sub_az": "Çempion İK Cüdo Açıq Birinciliyi (55 kq)",
-                  "sub_en": "Champion SC Open Judo (55 kg)",
-                  "sub_ru": "Открытое первенство СК «Чемпион» (55 кг)"
-            },
-            {
-                  "icon": "🥋",
-                  "val": "3 DİPLOM",
-                  "val_az": "3 DİPLOM",
-                  "val_en": "3 DIPLOMAS",
-                  "val_ru": "3 ДИПЛОМА",
-                  "label": "Rəsmi İdman Portfeli",
-                  "label_az": "Rəsmi İdman Portfeli",
-                  "label_en": "Official Sports Portfolio",
-                  "label_ru": "Спортивное портфолио",
-                  "sub": "ACF & Kəmərlə Güləş İK",
-                  "sub_az": "ACF & Kəmərlə Güləş İK",
-                  "sub_en": "AJF & Belt Wrestling SC",
-                  "sub_ru": "ФДА и Клуб борьбы на поясах"
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2023",
-                  "flag": "🥈",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "Azərbaycan Kəmərlə Güləş İdman Klubunun Açıq Birinciliyi — II Yer (66 kq)",
-                  "title_az": "Azərbaycan Kəmərlə Güləş İdman Klubunun Açıq Birinciliyi — II Yer (66 kq)",
-                  "title_en": "Azerbaijan Belt Wrestling Sports Club Open Championship — 2nd Place (66 kg)",
-                  "title_ru": "Открытое первенство Клуба борьбы на поясах Азербайджана — II место (66 кг)",
-                  "text": "66 kq çəki dərəcəsində finala yüksələrək II yeri tutmuş və rəsmi Diplomla təltif olunmuşdur.",
-                  "text_az": "66 kq çəki dərəcəsində finala yüksələrək II yeri tutmuş və rəsmi Diplomla təltif olunmuşdur.",
-                  "text_en": "Advanced to the finals in the 66 kg division to secure 2nd Place Silver.",
-                  "text_ru": "Занял II место в весовой категории 66 кг на открытом первенстве Клуба борьбы на поясах Азербайджана."
-            },
-            {
-                  "year": "2022–2023",
-                  "flag": "🥋",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "«Çempion» İdman Klubunun Açıq Cüdo Birincilikləri — II Yer (50 kq) və III Yer (55 kq)",
-                  "title_az": "«Çempion» İdman Klubunun Açıq Cüdo Birincilikləri — II Yer (50 kq) və III Yer (55 kq)",
-                  "title_en": "“Champion” Sports Club Open Judo Championships — 2nd Place (50 kg) & 3rd Place (55 kg)",
-                  "title_ru": "Открытые первенства СК «Чемпион» по дзюдо — II место (50 кг) и III место (55 кг)",
-                  "text": "Yeniyetmə cüdoçular arasında keçirilən açıq birinciliklərdə 50 kq və 55 kq çəki dərəcələrində fəxri kürsüyə yüksəlmişdir.",
-                  "text_az": "Yeniyetmə cüdoçular arasında keçirilən açıq birinciliklərdə 50 kq və 55 kq çəki dərəcələrində fəxri kürsüyə yüksəlmişdir.",
-                  "text_en": "Earned consecutive podium finishes in the 50 kg and 55 kg weight divisions.",
-                  "text_ru": "Дважды поднимался на пьедестал почета в категориях 50 кг и 55 кг."
-            }
-      ],
-      "tags": [
-            "#QuliyevƏli",
-            "#Cüdo",
-            "#KəmərləGüləş",
-            "#ÇempionİdmanKlubu",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#QuliyevƏli",
-            "#Cüdo",
-            "#KəmərləGüləş",
-            "#ÇempionİdmanKlubu",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#AliGuliyev",
-            "#Judo",
-            "#BeltWrestling",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#ГулиевАли",
-            "#Дзюдо",
-            "#БорьбаНаПоясах",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2023",
-                  "badge": "🥉 III Yer · 55 kq",
-                  "title": "Çempion İdman Klubunun Cüdo üzrə Açıq Birinciliyi",
-                  "desc": "Yeniyetmələr arasında 55 kq çəki dərəcəsində III Yer (31.05.2023)."
-            },
-            {
-                  "year": "2023",
-                  "badge": "🥈 II Yer · 66 kq",
-                  "title": "Azərbaycan Kəmərlə Güləş İdman Klubunun Açıq Birinciliyi",
-                  "desc": "66 kq çəki dərəcəsində II Yer Diplomu."
-            },
-            {
-                  "year": "2022",
-                  "badge": "🥈 II Yer · 50 kq",
-                  "title": "Çempion İdman Klubunun Cüdo Güləşi üzrə Açıq Birinciliyi",
-                  "desc": "50 kq çəki dərəcəsində II Yer (09.10.2022)."
-            }
-      ],
-      "fullBio": [
-            "Quliyev Əli Bakı Dövlət Rabitə və Nəqliyyat Kollecinin cüdo və kəmərlə güləş idman növləri üzrə fərqlənən tələbə-idmançılarımızdandır.",
-            "Azərbaycan Cüdo Federasiyası, «Çempion» İdman Klubu və Azərbaycan Kəmərlə Güləş İdman Klubunun açıq birinciliklərində 50 kq, 55 kq və 66 kq çəki dərəcələrində 2 Gümüş (II Yer) və 1 Bürünc (III Yer) diplom qazanmışdır."
-      ],
-      "fullBio_az": [
-            "Quliyev Əli Bakı Dövlət Rabitə və Nəqliyyat Kollecinin cüdo və kəmərlə güləş idman növləri üzrə fərqlənən tələbə-idmançılarımızdandır.",
-            "Azərbaycan Cüdo Federasiyası, «Çempion» İdman Klubu və Azərbaycan Kəmərlə Güləş İdman Klubunun açıq birinciliklərində 50 kq, 55 kq və 66 kq çəki dərəcələrində 2 Gümüş (II Yer) və 1 Bürünc (III Yer) diplom qazanmışdır."
-      ],
-      "fullBio_en": [
-            "Ali Guliyev is a student-athlete at Baku State College of Communications and Transport competing in judo and belt wrestling.",
-            "He has earned two 2nd Place Silver Diplomas and one 3rd Place Bronze Diploma across the 50 kg, 55 kg, and 66 kg weight divisions at open championships."
-      ],
-      "fullBio_ru": [
-            "Гулиев Али — студент-спортсмен Бакинского государственного колледжа связи и транспорта, выступающий в соревнованиях по дзюдо и борьбе на поясах.",
-            "Завоевал два диплома II степени (Серебро) и диплом III степени (Бронза) в весовых категориях 50, 55 и 66 кг."
-      ],
-      "certificates": [
-            {
-                  "icon": "🥉",
-                  "title": "Çempion İdman Klubunun Açıq Cüdo Birinciliyi — III Yer (55 kq)",
-                  "sub": "Azərbaycan Cüdo Federasiyası & Çempion İK · 31.05.2023"
-            },
-            {
-                  "icon": "🥈",
-                  "title": "Azərbaycan Kəmərlə Güləş İdman Klubunun Açıq Birinciliyi — II Yer (66 kq)",
-                  "sub": "Kəmərlə Güləş · Açıq Birincilik"
-            },
-            {
-                  "icon": "🥈",
-                  "title": "Çempion İdman Klubunun Açıq Cüdo Birinciliyi — II Yer (50 kq)",
-                  "sub": "Cüdo güləşi · 09.10.2022"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_eli_cudo_3rd_2023.jpg",
-                  "caption": "Çempion İK Açıq Cüdo Birinciliyi — III Yer Diplomu (55 kq, 31.05.2023)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_eli_cudo_2nd_2022.jpg",
-                  "caption": "Çempion İK Açıq Cüdo Birinciliyi — II Yer Diplomu (50 kq, 09.10.2022)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_eli_kemerle_2nd.jpg",
-                  "caption": "Azərbaycan Kəmərlə Güləş İdman Klubunun Açıq Birinciliyi — II Yer Diplomu (66 kq)"
-            }
-      ]
-},
-{
-      "id": "cahangir-memmedli",
-      "fullName": "Məmmədli Cahangir Rəşad oğlu",
-      "fullName_az": "Məmmədli Cahangir Rəşad oğlu",
-      "fullName_en": "Jahangir Mammadli Rashad",
-      "fullName_ru": "Мамедли Джахангир Рашад оглы",
-      "photo": "certificates/thumbs/cert_cahangir_uzguculuk_2024.jpg",
-      "fallbackPhoto": "certificates/cert_cahangir_uzguculuk_2024.jpg",
-      "kickerIcon": "🏊‍♂️",
-      "kicker": "Üzgüçülük, Səhnə Sənəti & Vətənpərvərlik Layihələri",
-      "kicker_az": "Üzgüçülük, Səhnə Sənəti & Vətənpərvərlik Layihələri",
-      "kicker_en": "Swimming, Stage Arts & Patriotic Projects",
-      "kicker_ru": "Плавание, Театральное Искусство и Патриотические Проекты",
-      "highlightsHeading": "İDMAN, TEATR VƏ RESPUBLİKA LAYİHƏLƏRİNDƏ UĞURLAR",
-      "highlightsHeading_az": "İDMAN, TEATR VƏ RESPUBLİKA LAYİHƏLƏRİNDƏ UĞURLAR",
-      "highlightsHeading_en": "ACHIEVEMENTS IN SPORTS, THEATER & NATIONAL PROJECTS",
-      "highlightsHeading_ru": "ДОСТИЖЕНИЯ В СПОРТЕ, ТЕАТРЕ И РЕСПУБЛИКАНСКИХ ПРОЕКТАХ",
-      "avatarYearTag": "🏊‍♂️ GİN 2024 · 3 TƏLTİF",
-      "titleBadge": "🎖️ GİN Sertifikatçısı & «Dost məktəblər» Respublika Təltifçisi",
-      "titleBadge_az": "🎖️ GİN Sertifikatçısı & «Dost məktəblər» Respublika Təltifçisi",
-      "titleBadge_en": "🎖️ Ministry of Youth & Sports Certificate & “Friendly Schools” Honoree",
-      "titleBadge_ru": "🎖️ Сертификат Минмолодежи и спорта АР и лауреат проекта «Дружественные школы»",
-      "role": "BDRNK Tələbəsi · «Üzgüçülük hamı üçün» və «Dost məktəblər» Respublika Layihələrinin Fəal İştirakçısı",
-      "role_az": "BDRNK Tələbəsi · «Üzgüçülük hamı üçün» və «Dost məktəblər» Respublika Layihələrinin Fəal İştirakçısı",
-      "role_en": "BDRNK Student · Active Participant in “Swimming for All” & “Friendly Schools” National Projects",
-      "role_ru": "Студент БГКСТ · Активный участник республиканских проектов «Плавание для всех» и «Дружественные школы»",
-      "categories": [
-            "sports",
-            "arts",
-            "youth"
-      ],
-      "statusText": "Sertifikat, Fəxri Fərman və Təşəkkürnamə (3 Sənəd)",
-      "statusText_az": "Sertifikat, Fəxri Fərman və Təşəkkürnamə (3 Sənəd)",
-      "statusText_en": "Certificate, Honorary Citation & Appreciation (3 Awards)",
-      "statusText_ru": "Сертификат, Почетная грамота и Благодарность (3 документа)",
-      "quote": "Həm idman yarışlarında, həm də Qarabağ Zəfərinə həsr olunmuş səhnə əsərlərində çıxış etmək hər bir gənc üçün qürur mənbəyidir.",
-      "quote_az": "Həm idman yarışlarında, həm də Qarabağ Zəfərinə həsr olunmuş səhnə əsərlərində çıxış etmək hər bir gənc üçün qürur mənbəyidir.",
-      "quote_en": "Participating in both athletic events and theatrical productions dedicated to the Karabakh Victory is a source of pride for every youth.",
-      "quote_ru": "Участвовать как в спортивных проектах, так и в театральных постановках, посвященных Победе в Карабахе — огромная гордость.",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "Gənclər və İdman Nazirliyi & Təhsil Nazirliyi",
-                  "note_az": "Gənclər və İdman Nazirliyi & Təhsil Nazirliyi",
-                  "note_en": "Ministry of Youth & Sports and Ministry of Education",
-                  "note_ru": "Минмолодежи и спорта и Минобразования АР"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "🏊‍♂️",
-                  "val": "GİN SERTİFİKAT",
-                  "val_az": "GİN SERTİFİKAT",
-                  "val_en": "MYS CERTIFICATE",
-                  "val_ru": "СЕРТИФИКАТ ММС",
-                  "label": "Üzgüçülük hamı üçün",
-                  "label_az": "Üzgüçülük hamı üçün",
-                  "label_en": "Swimming for All",
-                  "label_ru": "Плавание для всех",
-                  "sub": "Nazir Fərid Qayıbovun imzası ilə (2024)",
-                  "sub_az": "Nazir Fərid Qayıbovun imzası ilə (2024)",
-                  "sub_en": "Signed by Minister Farid Gayibov (2024)",
-                  "sub_ru": "За подписью министра Ф. Гаибова (2024)"
-            },
-            {
-                  "icon": "🎖️",
-                  "val": "FƏXRİ FƏRMAN",
-                  "val_az": "FƏXRİ FƏRMAN",
-                  "val_en": "CITATION",
-                  "val_ru": "ГРАМОТА",
-                  "label": "Dost məktəblər",
-                  "label_az": "Dost məktəblər",
-                  "label_en": "Friendly Schools",
-                  "label_ru": "Дружественные школы",
-                  "sub": "Heydər Əliyev İli və Zəfər Günü (2023)",
-                  "sub_az": "Heydər Əliyev İli və Zəfər Günü (2023)",
-                  "sub_en": "Heydar Aliyev Year & Victory Day (2023)",
-                  "sub_ru": "Год Гейдара Алиева и День Победы (2023)"
-            },
-            {
-                  "icon": "🎭",
-                  "val": "TƏŞƏKKÜRNAMƏ",
-                  "val_az": "TƏŞƏKKÜRNAMƏ",
-                  "val_en": "APPRECIATION",
-                  "val_ru": "БЛАГОДАРНОСТЬ",
-                  "label": "Şuşa, sən azadsan!",
-                  "label_az": "Şuşa, sən azadsan!",
-                  "label_en": "Shusha, You Are Free!",
-                  "label_ru": "Шуша, ты свободна!",
-                  "sub": "Pyesdə rol və Respublika turu",
-                  "sub_az": "Pyesdə rol və Respublika turu",
-                  "sub_en": "Stage role & National tour",
-                  "sub_ru": "Роль в пьесе и республиканский тур"
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2024",
-                  "flag": "🏊‍♂️",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "AR Gənclər və İdman Nazirliyi — «Üzgüçülük hamı üçün» Layihəsi Sertifikatı",
-                  "title_az": "AR Gənclər və İdman Nazirliyi — «Üzgüçülük hamı üçün» Layihəsi Sertifikatı",
-                  "title_en": "Ministry of Youth and Sports — “Swimming for All” Project Certificate",
-                  "title_ru": "Министерство молодежи и спорта АР — Сертификат проекта «Плавание для всех»",
-                  "text": "01 dekabr 2024-cü il tarixində keçirilən layihədə fəal iştirakına görə gənclər və idman naziri Fərid Qayıbov tərəfindən təltif olunmuşdur.",
-                  "text_az": "01 dekabr 2024-cü il tarixində keçirilən layihədə fəal iştirakına görə gənclər və idman naziri Fərid Qayıbov tərəfindən təltif olunmuşdur.",
-                  "text_en": "Awarded by Minister of Youth and Sports Farid Gayibov on December 1, 2024.",
-                  "text_ru": "Награжден министром молодежи и спорта АР Фаридом Гаибовым (1 декабря 2024 г.)."
-            },
-            {
-                  "year": "2023",
-                  "flag": "🎭",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "«Şuşa, sən azadsan!» Pyesi və «Dost məktəblər» Layihəsinin Respublika Turu — Fəxri Fərman və Təşəkkürnamə",
-                  "title_az": "«Şuşa, sən azadsan!» Pyesi və «Dost məktəblər» Layihəsinin Respublika Turu — Fəxri Fərman və Təşəkkürnamə",
-                  "title_en": "“Shusha, You Are Free!” Play & “Friendly Schools” National Tour — Honorary Citation & Appreciation",
-                  "title_ru": "Пьеса «Шуша, ты свободна!» и республиканский тур проекта «Дружественные школы» — Почетная грамота и Благодарность",
-                  "text": "«Heydər Əliyev İli» və «Zəfər Günü» çərçivəsində səhnə çıxışına və fəal iştirakına görə Fəxri Fərman və Təşəkkürnamə ilə təltif edilmişdir.",
-                  "text_az": "«Heydər Əliyev İli» və «Zəfər Günü» çərçivəsində səhnə çıxışına və fəal iştirakına görə Fəxri Fərman və Təşəkkürnamə ilə təltif edilmişdir.",
-                  "text_en": "Honored with an Honorary Citation and Certificate of Appreciation for his theatrical performance and active project engagement.",
-                  "text_ru": "Отмечен Почетной грамотой и Благодарностью за сценическое выступление и участие в республиканском туре."
-            }
-      ],
-      "tags": [
-            "#MəmmədliCahangir",
-            "#ÜzgüçülükHamıÜçün",
-            "#GənclərVəİdmanNazirliyi",
-            "#ŞuşaSənAzadsan",
-            "#DostMəktəblər",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#MəmmədliCahangir",
-            "#ÜzgüçülükHamıÜçün",
-            "#GənclərVəİdmanNazirliyi",
-            "#ŞuşaSənAzadsan",
-            "#DostMəktəblər",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#JahangirMammadli",
-            "#SwimmingForAll",
-            "#FriendlySchools",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#МамедлиДжахангир",
-            "#ПлаваниеДляВсех",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2024",
-                  "badge": "🏊‍♂️ GİN · Rəsmi Sertifikat",
-                  "title": "«Üzgüçülük hamı üçün» Respublika İdman Layihəsi",
-                  "desc": "AR Gənclər və İdman Naziri Fərid Qayıbovun imzası ilə Sertifikat (01.12.2024)."
-            },
-            {
-                  "year": "2023",
-                  "badge": "🎖️ Fəxri Fərman",
-                  "title": "«Heydər Əliyev İli» və «Zəfər Günü» — «Dost məktəblər» Layihəsi",
-                  "desc": "BŞTİ 198 №-li tam orta məktəb tərəfindən Fəxri Fərman (06.11.2023)."
-            },
-            {
-                  "year": "2023",
-                  "badge": "🎭 Təşəkkürnamə",
-                  "title": "«Şuşa, sən azadsan!» Pyesi və Respublika Turu",
-                  "desc": "Beyləqan rayon Təhsil Sektoru tərəfindən Təşəkkürnamə."
-            }
-      ],
-      "fullBio": [
-            "Məmmədli Cahangir Rəşad oğlu Bakı Dövlət Rabitə və Nəqliyyat Kollecinin həm idman, həm də mədəni-vətənpərvərlik layihələrində fəal iştirak edən hərtərəfli tələbələrindəndir.",
-            "Azərbaycan Respublikası Gənclər və İdman Nazirliyinin «Üzgüçülük hamı üçün» layihəsində rəsmi Sertifikatla (nazir Fərid Qayıbovun imzası ilə), həmçinin «Şuşa, sən azadsan!» pyesində oynadığı rola və «Dost məktəblər» layihəsinin Respublika turunda fəal iştirakına görə Fəxri Fərman və Təşəkkürnamə ilə təltif edilmişdir."
-      ],
-      "fullBio_az": [
-            "Məmmədli Cahangir Rəşad oğlu Bakı Dövlət Rabitə və Nəqliyyat Kollecinin həm idman, həm də mədəni-vətənpərvərlik layihələrində fəal iştirak edən hərtərəfli tələbələrindəndir.",
-            "Azərbaycan Respublikası Gənclər və İdman Nazirliyinin «Üzgüçülük hamı üçün» layihəsində rəsmi Sertifikatla (nazir Fərid Qayıbovun imzası ilə), həmçinin «Şuşa, sən azadsan!» pyesində oynadığı rola və «Dost məktəblər» layihəsinin Respublika turunda fəal iştirakına görə Fəxri Fərman və Təşəkkürnamə ilə təltif edilmişdir."
-      ],
-      "fullBio_en": [
-            "Jahangir Mammadli Rashad is a versatile student at Baku State College of Communications and Transport active in sports and patriotic cultural projects.",
-            "He holds an official 'Swimming for All' Certificate signed by Minister of Youth and Sports Farid Gayibov, as well as an Honorary Citation and Certificate of Appreciation for his role in the play 'Shusha, You Are Free!' and the 'Friendly Schools' national project."
-      ],
-      "fullBio_ru": [
-            "Мамедли Джахангир Рашад оглы — разносторонний студент Бакинского государственного колледжа связи и транспорта, активно участвующий в спортивных и культурно-патриотических проектах.",
-            "Награжден сертификатом Министерства молодежи и спорта АР по проекту «Плавание для всех», а также Почетной грамотой и Благодарностью за роль в пьесе «Шуша, ты свободна!» и участие в республиканском туре «Дружественные школы»."
-      ],
-      "certificates": [
-            {
-                  "icon": "🏊‍♂️",
-                  "title": "«Üzgüçülük hamı üçün» Layihəsi — Rəsmi Sertifikat",
-                  "sub": "AR Gənclər və İdman Nazirliyi · Fərid Qayıbov (01.12.2024)"
-            },
-            {
-                  "icon": "🎖️",
-                  "title": "«Heydər Əliyev İli» və «Zəfər Günü» («Dost məktəblər») — Fəxri Fərman",
-                  "sub": "BŞTİ 198 №-li tam orta məktəb · 06.11.2023"
-            },
-            {
-                  "icon": "🎭",
-                  "title": "«Şuşa, sən azadsan!» Pyesi və Respublika Turu — Təşəkkürnamə",
-                  "sub": "Beyləqan rayon Təhsil Sektoru · Elvin Abbasov"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_cahangir_uzguculuk_2024.jpg",
-                  "caption": "AR Gənclər və İdman Nazirliyi — «Üzgüçülük hamı üçün» Sertifikatı (01.12.2024)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_cahangir_dost_mektebler_2023.jpg",
-                  "caption": "«Heydər Əliyev İli» və «Zəfər Günü» («Dost məktəblər») — Fəxri Fərman (06.11.2023)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_cahangir_susa_pyes.jpg",
-                  "caption": "«Şuşa, sən azadsan!» Pyesi və Respublika Turu — Təşəkkürnamə"
-            }
-      ]
-},
-{
-      "id": "ruqeyya-esedli",
-      "fullName": "Əsədli Rüqəyyə Samir qızı",
-      "fullName_az": "Əsədli Rüqəyyə Samir qızı",
-      "fullName_en": "Rugayya Asadli Samir",
-      "fullName_ru": "Асадли Ругайя Самир гызы",
-      "photo": "certificates/thumbs/cert_ruqeyya_steam_1st_2025.jpg",
-      "fallbackPhoto": "certificates/cert_ruqeyya_steam_1st_2025.jpg",
-      "kickerIcon": "🔬",
-      "kicker": "STEAM Yarışması Qalibi (I Yer) & Voleybol Mükafatçısı (II Yer)",
-      "kicker_az": "STEAM Yarışması Qalibi (I Yer) & Voleybol Mükafatçısı (II Yer)",
-      "kicker_en": "STEAM Competition Winner (1st Place) & Volleyball Medalist (2nd Place)",
-      "kicker_ru": "Победительница конкурса STEAM (I место) и призер по волейболу (II место)",
-      "highlightsHeading": "ELMİ-TEXNOLOJİ (STEAM) VƏ İDMAN NAİLİYYƏTLƏRİ",
-      "highlightsHeading_az": "ELMİ-TEXNOLOJİ (STEAM) VƏ İDMAN NAİLİYYƏTLƏRİ",
-      "highlightsHeading_en": "STEAM & ATHLETIC ACHIEVEMENTS",
-      "highlightsHeading_ru": "НАУЧНО-ТЕХНИЧЕСКИЕ (STEAM) И СПОРТИВНЫЕ ДОСТИЖЕНИЯ",
-      "avatarYearTag": "🥇 STEAM I YER · VOLEYBOL II YER",
-      "titleBadge": "🥇 STEAM Yarışması I Yer & 🥈 Voleybol II Yer Diplomantı",
-      "titleBadge_az": "🥇 STEAM Yarışması I Yer & 🥈 Voleybol II Yer Diplomantı",
-      "titleBadge_en": "🥇 STEAM 1st Place Winner & 🥈 Volleyball 2nd Place Medalist",
-      "titleBadge_ru": "🥇 I место по STEAM и 🥈 II место по волейболу",
-      "role": "BDRNK Tələbəsi · «Kiçik Akademiya» STEAM Yarışmasının Qalibi və Qızlar arasında Voleybol Turnirinin Gümüş Mükafatçısı",
-      "role_az": "BDRNK Tələbəsi · «Kiçik Akademiya» STEAM Yarışmasının Qalibi və Qızlar arasında Voleybol Turnirinin Gümüş Mükafatçısı",
-      "role_en": "BDRNK Student · Winner of “Junior Academy” STEAM Competition & Silver Medalist in Girls' Volleyball",
-      "role_ru": "Студентка БГКСТ · Победительница конкурса STEAM «Малой Академии» и серебряный призер по волейболу",
-      "categories": [
-            "it-robotics",
-            "sports"
-      ],
-      "statusText": "I Yer (STEAM, 2025) & II Yer (Voleybol, 2026)",
-      "statusText_az": "I Yer (STEAM, 2025) & II Yer (Voleybol, 2026)",
-      "statusText_en": "1st Place (STEAM, 2025) & 2nd Place (Volleyball, 2026)",
-      "statusText_ru": "I место (STEAM, 2025) и II место (Волейбол, 2026)",
-      "quote": "Elmi-texnoloji yenilikləri (STEAM) öyrənmək və komanda idmanında uğur qazanmaq gəncin hərtərəfli inkişafının əsasıdır.",
-      "quote_az": "Elmi-texnoloji yenilikləri (STEAM) öyrənmək və komanda idmanında uğur qazanmaq gəncin hərtərəfli inkişafının əsasıdır.",
-      "quote_en": "Exploring STEAM innovation while excelling in team athletics forms the core of well-rounded youth development.",
-      "quote_ru": "Изучение научно-технических инноваций (STEAM) и успехи в командном спорте — основа всестороннего развития.",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "Elm və Təhsil Nazirliyi · Kiçik Akademiya",
-                  "note_az": "Elm və Təhsil Nazirliyi · Kiçik Akademiya",
-                  "note_en": "Ministry of Science & Education · Junior Academy",
-                  "note_ru": "Министерство науки и образования АР"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "🥇",
-                  "val": "I YER (QIZIL)",
-                  "val_az": "I YER (QIZIL)",
-                  "val_en": "1st PLACE (GOLD)",
-                  "val_ru": "I МЕСТО (ЗОЛОТО)",
-                  "label": "STEAM Yarışması",
-                  "label_az": "STEAM Yarışması",
-                  "label_en": "STEAM Competition",
-                  "label_ru": "Конкурс STEAM",
-                  "sub": "«Kiçik Akademiya» · 05.06.2025",
-                  "sub_az": "«Kiçik Akademiya» · 05.06.2025",
-                  "sub_en": "“Junior Academy” · 05.06.2025",
-                  "sub_ru": "«Малая Академия» · 05.06.2025"
-            },
-            {
-                  "icon": "🥈",
-                  "val": "II YER (GÜMÜŞ)",
-                  "val_az": "II YER (GÜMÜŞ)",
-                  "val_en": "2nd PLACE (SILVER)",
-                  "val_ru": "II МЕСТО (СЕРЕБРО)",
-                  "label": "Voleybol Turniri",
-                  "label_az": "Voleybol Turniri",
-                  "label_en": "Volleyball Tournament",
-                  "label_ru": "Волейбольный турнир",
-                  "sub": "8 Mart Qadınlar Günü Yarışı (2026)",
-                  "sub_az": "8 Mart Qadınlar Günü Yarışı (2026)",
-                  "sub_en": "March 8 Women's Day Tournament (2026)",
-                  "sub_ru": "Турнир к 8 Марта (2026)"
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2025",
-                  "flag": "🥇",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "«Kiçik Akademiya» STEAM Yarışması — I Yer Diplomu",
-                  "title_az": "«Kiçik Akademiya» STEAM Yarışması — I Yer Diplomu",
-                  "title_en": "“Junior Academy” STEAM Competition — 1st Place Diploma",
-                  "title_ru": "Конкурс STEAM «Малой Академии» — Диплом за I место",
-                  "text": "AR Elm və Təhsil Nazirliyi Lənkəran şəhəri A. Məhərrəmov adına 7 №-li tam orta məktəbin «Kiçik Akademiyası» tərəfindən “STEAM”ə həsr olunmuş yarışmada I yerə layiq görülmüşdür.",
-                  "text_az": "AR Elm və Təhsil Nazirliyi Lənkəran şəhəri A. Məhərrəmov adına 7 №-li tam orta məktəbin «Kiçik Akademiyası» tərəfindən “STEAM”ə həsr olunmuş yarışmada I yerə layiq görülmüşdür.",
-                  "text_en": "Won 1st Place in the STEAM competition organized by the 'Junior Academy' on June 5, 2025.",
-                  "text_ru": "Заняла I место на конкурсе STEAM «Малой Академии» (5 июня 2025 г.)."
-            },
-            {
-                  "year": "2026",
-                  "flag": "🥈",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "8 Mart Beynəlxalq Qadınlar Günü Voleybol Yarışı — II Yer Diplomu",
-                  "title_az": "8 Mart Beynəlxalq Qadınlar Günü Voleybol Yarışı — II Yer Diplomu",
-                  "title_en": "March 8 International Women's Day Volleyball Competition — 2nd Place Diploma",
-                  "title_ru": "Соревнования по волейболу к 8 Марта — Диплом за II место",
-                  "text": "5–6 mart 2026-cı il tarixlərində qızlar arasında keçirilən voleybol yarışında II yeri tutaraq Diplomla təltif olunmuşdur.",
-                  "text_az": "5–6 mart 2026-cı il tarixlərində qızlar arasında keçirilən voleybol yarışında II yeri tutaraq Diplomla təltif olunmuşdur.",
-                  "text_en": "Secured 2nd Place Silver in the girls' volleyball competition on March 5–6, 2026.",
-                  "text_ru": "Заняла II место в турнире по волейболу среди девушек (5–6 марта 2026 г.)."
-            }
-      ],
-      "tags": [
-            "#ƏsədliRüqəyyə",
-            "#STEAM_IYer",
-            "#KiçikAkademiya",
-            "#Voleybol_IIYer",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#ƏsədliRüqəyyə",
-            "#STEAM_IYer",
-            "#KiçikAkademiya",
-            "#Voleybol_IIYer",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#RugayyaAsadli",
-            "#STEAM",
-            "#Volleyball",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#АсадлиРугайя",
-            "#STEAM",
-            "#Волейбол",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2026",
-                  "badge": "🥈 II Yer · Voleybol",
-                  "title": "8 Mart Beynəlxalq Qadınlar Günü Voleybol Yarışı",
-                  "desc": "Qızlar arasında voleybol yarışında II Yer Diplomu (5–6 mart 2026)."
-            },
-            {
-                  "year": "2025",
-                  "badge": "🥇 I Yer · STEAM",
-                  "title": "«Kiçik Akademiya» STEAM Yarışması",
-                  "desc": "“STEAM”ə həsr olunmuş yarışmada I Yer Diplomu (05.06.2025)."
-            }
-      ],
-      "fullBio": [
-            "Əsədli Rüqəyyə Samir qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin həm STEAM innovasiya müsabiqələrində, həm də idman yarışlarında uğur qazanan fəal tələbələrindəndir.",
-            "2025-ci ildə «Kiçik Akademiya» tərəfindən keçirilən “STEAM” yarışmasında I Yerə (Qızıl Diplom), 2026-cı ildə isə 8 Mart Beynəlxalq Qadınlar Gününə həsr olunmuş qızlar arasında voleybol yarışında II Yerə (Gümüş Diplom) layiq görülmüşdür."
-      ],
-      "fullBio_az": [
-            "Əsədli Rüqəyyə Samir qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin həm STEAM innovasiya müsabiqələrində, həm də idman yarışlarında uğur qazanan fəal tələbələrindəndir.",
-            "2025-ci ildə «Kiçik Akademiya» tərəfindən keçirilən “STEAM” yarışmasında I Yerə (Qızıl Diplom), 2026-cı ildə isə 8 Mart Beynəlxalq Qadınlar Gününə həsr olunmuş qızlar arasında voleybol yarışında II Yerə (Gümüş Diplom) layiq görülmüşdür."
-      ],
-      "fullBio_en": [
-            "Rugayya Asadli Samir is an accomplished student at Baku State College of Communications and Transport excelling in both STEAM and athletics.",
-            "She won 1st Place in the 2025 'Junior Academy' STEAM Competition and 2nd Place in the 2026 International Women's Day Girls' Volleyball Tournament."
-      ],
-      "fullBio_ru": [
-            "Асадли Ругайя Самир гызы — талантливая студентка Бакинского государственного колледжа связи и транспорта, успешно выступающая в конкурсах STEAM и спортивных турнирах.",
-            "В 2025 году заняла I место на конкурсе STEAM «Малой Академии», а в 2026 году — II место на турнире по волейболу среди девушек к 8 Марта."
-      ],
-      "certificates": [
-            {
-                  "icon": "🥇",
-                  "title": "«Kiçik Akademiya» STEAM Yarışması — I Yer Diplomu",
-                  "sub": "AR Elm və Təhsil Nazirliyi · 05.06.2025"
-            },
-            {
-                  "icon": "🥈",
-                  "title": "8 Mart Beynəlxalq Qadınlar Günü Voleybol Yarışı — II Yer Diplomu",
-                  "sub": "Lənkəran-Astara RTİ · 5–6 mart 2026"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_ruqeyya_steam_1st_2025.jpg",
-                  "caption": "«Kiçik Akademiya» STEAM Yarışması — I Yer Diplomu (05.06.2025)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_ruqeyya_voleybol_2nd_2026.jpg",
-                  "caption": "8 Mart Beynəlxalq Qadınlar Günü Voleybol Yarışı — II Yer Diplomu (5–6 mart 2026)"
-            }
-      ]
-},
-{
-      "id": "aynur-mirzagayeva",
-      "fullName": "Mirzağayeva Aynur Namiq qızı",
-      "fullName_az": "Mirzağayeva Aynur Namiq qızı",
-      "fullName_en": "Aynur Mirzaghayeva Namig",
-      "fullName_ru": "Мирзагаева Айнур Намиг гызы",
-      "photo": "certificates/thumbs/cert_aynur_cudo_baki_2nd_2025.jpg",
-      "fallbackPhoto": "certificates/cert_aynur_cudo_baki_2nd_2025.jpg",
-      "kickerIcon": "🥋",
-      "kicker": "Cüdo · Bakı Şəhər Çempionatının Gümüş Mükafatçısı (-70 kq)",
-      "kicker_az": "Cüdo · Bakı Şəhər Çempionatının Gümüş Mükafatçısı (-70 kq)",
-      "kicker_en": "Judo · Baku City Championship Silver Medalist (-70 kg)",
-      "kicker_ru": "Дзюдо · Серебряный Призер Чемпионата г. Баку (-70 кг)",
-      "highlightsHeading": "CÜDO ÜZRƏ BAKI ŞƏHƏR ÇEMPİONATI NAİLİYYƏTİ",
-      "highlightsHeading_az": "CÜDO ÜZRƏ BAKI ŞƏHƏR ÇEMPİONATI NAİLİYYƏTİ",
-      "highlightsHeading_en": "BAKU CITY JUDO CHAMPIONSHIP ACHIEVEMENT",
-      "highlightsHeading_ru": "ДОСТИЖЕНИЕ НА ЧЕМПИОНАТЕ ГОРОДА БАКУ ПО ДЗЮДО",
-      "avatarYearTag": "🥈 BAKI ÇEMPİONATI · -70 kq",
-      "titleBadge": "🥈 Cüdo üzrə Bakı Şəhər Çempionatı — II Yer (Gümüş)",
-      "titleBadge_az": "🥈 Cüdo üzrə Bakı Şəhər Çempionatı — II Yer (Gümüş)",
-      "titleBadge_en": "🥈 Baku City Judo Championship — 2nd Place (Silver)",
-      "titleBadge_ru": "🥈 Чемпионат г. Баку по дзюдо — II место (Серебро)",
-      "role": "BDRNK Tələbəsi · AR Gənclər və İdman Nazirliyi Bakı Şəhər Cüdo Çempionatının Gümüş Mükafatçısı (Neftçi İK, -70 kq)",
-      "role_az": "BDRNK Tələbəsi · AR Gənclər və İdman Nazirliyi Bakı Şəhər Cüdo Çempionatının Gümüş Mükafatçısı (Neftçi İK, -70 kq)",
-      "role_en": "BDRNK Student · Silver Medalist of the Baku City Judo Championship (Neftchi SC, -70 kg)",
-      "role_ru": "Студентка БГКСТ · Серебряный призер чемпионата города Баку по дзюдо (СК «Нефтчи», -70 кг)",
-      "categories": [
-            "sports"
-      ],
-      "statusText": "Bakı Şəhər Çempionatı II Yer (-70 kq · Neftçi İK)",
-      "statusText_az": "Bakı Şəhər Çempionatı II Yer (-70 kq · Neftçi İK)",
-      "statusText_en": "Baku City Championship 2nd Place (-70 kg · Neftchi SC)",
-      "statusText_ru": "II место Чемпионата г. Баку (-70 кг · СК «Нефтчи»)",
-      "quote": "Tatamidə əzmkarlıq və iradə nümayiş etdirərək Bakı şəhər çempionatında fəxri kürsüyə yüksəlmək böyük qürurdur.",
-      "quote_az": "Tatamidə əzmkarlıq və iradə nümayiş etdirərək Bakı şəhər çempionatında fəxri kürsüyə yüksəlmək böyük qürurdur.",
-      "quote_en": "Rising to the podium at the Baku City Championship through perseverance and willpower on the tatami is a great honor.",
-      "quote_ru": "Подняться на пьедестал почета чемпионата Баку благодаря упорству и воле на татами — большая честь.",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "Gənclər və İdman Nazirliyi · Neftçi İK",
-                  "note_az": "Gənclər və İdman Nazirliyi · Neftçi İK",
-                  "note_en": "Ministry of Youth & Sports · Neftchi SC",
-                  "note_ru": "Минмолодежи и спорта АР · СК «Нефтчи»"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "🥈",
-                  "val": "II YER (GÜMÜŞ)",
-                  "val_az": "II YER (GÜMÜŞ)",
-                  "val_en": "2nd PLACE (SILVER)",
-                  "val_ru": "II МЕСТО (СЕРЕБРО)",
-                  "label": "Bakı Şəhər Çempionatı",
-                  "label_az": "Bakı Şəhər Çempionatı",
-                  "label_en": "Baku City Championship",
-                  "label_ru": "Чемпионат г. Баку",
-                  "sub": "Qadınlar və kişilər arasında cüdo (14.11.2025)",
-                  "sub_az": "Qadınlar və kişilər arasında cüdo (14.11.2025)",
-                  "sub_en": "Men's & Women's Judo (14.11.2025)",
-                  "sub_ru": "Дзюдо среди мужчин и женщин (14.11.2025)"
-            },
-            {
-                  "icon": "🥋",
-                  "val": "-70 KQ · NEFTÇİ İK",
-                  "val_az": "-70 KQ · NEFTÇİ İK",
-                  "val_en": "-70 KG · NEFTCHI SC",
-                  "val_ru": "-70 КГ · СК НЕФТЧИ",
-                  "label": "Cüdo İdman Növü",
-                  "label_az": "Cüdo İdman Növü",
-                  "label_en": "Judo Division",
-                  "label_ru": "Весовая категория",
-                  "sub": "Bakı Şəhər Gənclər və İdman İdarəsi",
-                  "sub_az": "Bakı Şəhər Gənclər və İdman İdarəsi",
-                  "sub_en": "Baku City Youth & Sports Dept",
-                  "sub_ru": "Управление молодежи и спорта г. Баку"
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2025",
-                  "flag": "🥈",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "Cüdo üzrə Qadınlar və Kişilər arasında Bakı Şəhər Çempionatı — II Yer (-70 kq)",
-                  "title_az": "Cüdo üzrə Qadınlar və Kişilər arasında Bakı Şəhər Çempionatı — II Yer (-70 kq)",
-                  "title_en": "Baku City Men's and Women's Judo Championship — 2nd Place (-70 kg)",
-                  "title_ru": "Чемпионат города Баку по дзюдо среди мужчин и женщин — II место (-70 кг)",
-                  "text": "AR Gənclər və İdman Nazirliyi Bakı Şəhər Gənclər və İdman İdarəsinin keçirdiyi rəsmi Bakı çempionatında Neftçi İK təmsilçisi kimi -70 kq dərəcəsində II yerə layiq görülmüşdür.",
-                  "text_az": "AR Gənclər və İdman Nazirliyi Bakı Şəhər Gənclər və İdman İdarəsinin keçirdiyi rəsmi Bakı çempionatında Neftçi İK təmsilçisi kimi -70 kq dərəcəsində II yerə layiq görülmüşdür.",
-                  "text_en": "Won 2nd Place Silver in the -70 kg division representing Neftchi SC at the official Baku City Judo Championship on November 14, 2025.",
-                  "text_ru": "Завоевала II место в категории до 70 кг (СК «Нефтчи») на официальном чемпионате г. Баку по дзюдо (14 ноября 2025 г.)."
-            }
-      ],
-      "tags": [
-            "#MirzağayevaAynur",
-            "#Cüdo",
-            "#BakıÇempionatı_IIYer",
-            "#NeftçiİK",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#MirzağayevaAynur",
-            "#Cüdo",
-            "#BakıÇempionatı_IIYer",
-            "#NeftçiİK",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#AynurMirzaghayeva",
-            "#Judo",
-            "#BakuChampionship",
-            "#NeftchiSC",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#МирзагаеваАйнур",
-            "#Дзюдо",
-            "#ЧемпионатБаку",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2025",
-                  "badge": "🥈 II Yer · -70 kq",
-                  "title": "Cüdo üzrə Qadınlar və Kişilər arasında Bakı Şəhər Çempionatı",
-                  "desc": "AR Gənclər və İdman Nazirliyi · Neftçi İK, -70 kq çəki dərəcəsində II Yer Diplomu (14 noyabr 2025)."
-            }
-      ],
-      "fullBio": [
-            "Mirzağayeva Aynur Namiq qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin cüdo üzrə Bakı şəhər çempionatında fəxri kürsüyə yüksəlmiş istedadlı tələbə-idmançılarımızdandır.",
-            "14 noyabr 2025-ci il tarixində Azərbaycan Respublikası Gənclər və İdman Nazirliyi Bakı Şəhər Gənclər və İdman İdarəsinin təşkil etdiyi qadınlar və kişilər arasında Bakı şəhər çempionatında («Neftçi» İdman Klubu, -70 kq) II yerə layiq görülərək rəsmi Diplomla təltif olunmuşdur."
-      ],
-      "fullBio_az": [
-            "Mirzağayeva Aynur Namiq qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin cüdo üzrə Bakı şəhər çempionatında fəxri kürsüyə yüksəlmiş istedadlı tələbə-idmançılarımızdandır.",
-            "14 noyabr 2025-ci il tarixində Azərbaycan Respublikası Gənclər və İdman Nazirliyi Bakı Şəhər Gənclər və İdman İdarəsinin təşkil etdiyi qadınlar və kişilər arasında Bakı şəhər çempionatında («Neftçi» İdman Klubu, -70 kq) II yerə layiq görülərək rəsmi Diplomla təltif olunmuşdur."
-      ],
-      "fullBio_en": [
-            "Aynur Mirzaghayeva Namig is a standout student-judoka at Baku State College of Communications and Transport.",
-            "On November 14, 2025, representing Neftchi Sports Club in the -70 kg division, she won 2nd Place Silver at the official Baku City Men's and Women's Judo Championship under the Ministry of Youth and Sports."
-      ],
-      "fullBio_ru": [
-            "Мирзагаева Айнур Намиг гызы — талантливая студентка-дзюдоистка Бакинского государственного колледжа связи и транспорта.",
-            "14 ноября 2025 года, выступая за СК «Нефтчи» в весовой категории до 70 кг, заняла II место на чемпионате города Баку по дзюдо среди мужчин и женщин."
-      ],
-      "certificates": [
-            {
-                  "icon": "🥈",
-                  "title": "Cüdo üzrə Bakı Şəhər Çempionatı (-70 kq) — II Yer Diplomu",
-                  "sub": "AR Gənclər və İdman Nazirliyi · Neftçi İK (14.11.2025)"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_aynur_cudo_baki_2nd_2025.jpg",
-                  "caption": "Cüdo üzrə Bakı Şəhər Çempionatı (-70 kq, Neftçi İK) — II Yer Diplomu (14.11.2025)"
-            }
-      ]
-},
-{
-      "id": "bahar-bextiyarqizi",
-      "fullName": "Kərimova Bahar Bəxtiyar qızı (Bahar Bəxtiyarqızı)",
-      "fullName_az": "Kərimova Bahar Bəxtiyar qızı (Bahar Bəxtiyarqızı)",
-      "fullName_en": "Bahar Karimova Bakhtiyar (Bahar Bakhtiyargizi)",
-      "fullName_ru": "Керимова Бахар Бахтияр гызы (Бахар Бахтияргызы)",
-      "photo": "certificates/thumbs/cert_bahar_yazarlar_2026.jpg",
-      "fallbackPhoto": "certificates/cert_bahar_yazarlar_2026.jpg",
-      "kickerIcon": "✍️",
-      "kicker": "Gənc Yazıçı · 2 Kitab Müəllifi, «İlin Müəllifi» & «Ziyadar» Mükafatçısı",
-      "kicker_az": "Gənc Yazıçı · 2 Kitab Müəllifi, «İlin Müəllifi» & «Ziyadar» Mükafatçısı",
-      "kicker_en": "Young Author · Author of 2 Books, “Author of the Year” & “Ziyadar” Laureate",
-      "kicker_ru": "Молодая Писательница · Автор 2 Книг, «Автор Года» и Лауреат Премии «Зиядар»",
-      "highlightsHeading": "ƏDƏBİ YARADICILIQ, KİTAB NƏŞRLƏRİ VƏ RƏSMİ MÜKAFATLAR",
-      "highlightsHeading_az": "ƏDƏBİ YARADICILIQ, KİTAB NƏŞRLƏRİ VƏ RƏSMİ MÜKAFATLAR",
-      "highlightsHeading_en": "LITERARY CREATIVITY, PUBLISHED BOOKS & OFFICIAL AWARDS",
-      "highlightsHeading_ru": "ЛИТЕРАТУРНОЕ ТВОРЧЕСТВО, АВТОРСКИЕ КНИГИ И НАГРАДЫ",
-      "avatarYearTag": "✍️ İLİN MÜƏLLİFİ · 2 KİTAB",
-      "titleBadge": "🥇 «İlin Müəllifi», «Ziyadar» Mükafatçısı & 2 Kitab Müəllifi",
-      "titleBadge_az": "🥇 «İlin Müəllifi», «Ziyadar» Mükafatçısı & 2 Kitab Müəllifi",
-      "titleBadge_en": "🥇 “Author of the Year”, “Ziyadar” Laureate & Author of 2 Books",
-      "titleBadge_ru": "🥇 «Автор года», лауреат премии «Зиядар» и автор 2 книг",
-      "role": "BDRNK Tələbəsi · Gənc Yazıçı («Əslində mən kiməm?» və «Əlvida deməyə tələsmə» kitablarının müəllifi)",
-      "role_az": "BDRNK Tələbəsi · Gənc Yazıçı («Əslində mən kiməm?» və «Əlvida deməyə tələsmə» kitablarının müəllifi)",
-      "role_en": "BDRNK Student · Young Author of “Who Am I Really?” & “Don't Rush to Say Goodbye”",
-      "role_ru": "Студентка БГКСТ · Молодая писательница, автор книг «Кто я на самом деле?» и «Не спеши прощаться»",
-      "categories": [
-            "arts",
-            "youth"
-      ],
-      "statusText": "2 Müəllif Kitabı · «Yazarlar» Jurnalı Üz Qabığı · 9 Rəsmi Sənəd",
-      "statusText_az": "2 Müəllif Kitabı · «Yazarlar» Jurnalı Üz Qabığı · 9 Rəsmi Sənəd",
-      "statusText_en": "2 Published Books · “Yazarlar” Magazine Cover · 9 Official Records",
-      "statusText_ru": "2 авторские книги · Обложка журнала «Yazarlar» · 9 наград и изданий",
-      "quote": "Sən nə uşaqlığının kölgəsisən, nə də başqalarının gözündəki təcəssüm. Sən bütün parçalarının içində gizlənən əsl sənsən!",
-      "quote_az": "Sən nə uşaqlığının kölgəsisən, nə də başqalarının gözündəki təcəssüm. Sən bütün parçalarının içində gizlənən əsl sənsən!",
-      "quote_en": "You are neither the shadow of your childhood nor a reflection in others' eyes. You are the true self hidden within all your pieces!",
-      "quote_ru": "Ты не тень своего детства и не отражение в чужих глазах. Ты — настоящий ты, сокрытый во всех своих гранях!",
-      "flags": [
-            {
-                  "emoji": "🇦🇿",
-                  "name": "Azərbaycan",
-                  "name_az": "Azərbaycan",
-                  "name_en": "Azerbaijan",
-                  "name_ru": "Азербайджан",
-                  "note": "Milli Uğur Mükafatı & «Yazarlar» Jurnalı",
-                  "note_az": "Milli Uğur Mükafatı & «Yazarlar» Jurnalı",
-                  "note_en": "National Success Award & “Yazarlar” Journal",
-                  "note_ru": "Национальная премия успеха и журнал «Yazarlar»"
-            }
-      ],
-      "stats": [
-            {
-                  "icon": "✍️",
-                  "val": "İLİN MÜƏLLİFİ",
-                  "val_az": "İLİN MÜƏLLİFİ",
-                  "val_en": "AUTHOR OF THE YEAR",
-                  "val_ru": "АВТОР ГОДА",
-                  "label": "Milli Uğur Mükafatı",
-                  "label_az": "Milli Uğur Mükafatı",
-                  "label_en": "National Success Award",
-                  "label_ru": "Национальная премия успеха",
-                  "sub": "01 fevral 2026 · Rəsmi Təltif",
-                  "sub_az": "01 fevral 2026 · Rəsmi Təltif",
-                  "sub_en": "February 1, 2026 · Official Award",
-                  "sub_ru": "1 февраля 2026 г. · Награда"
-            },
-            {
-                  "icon": "🏆",
-                  "val": "«ZİYADAR»",
-                  "val_az": "«ZİYADAR»",
-                  "val_en": "“ZIYADAR”",
-                  "val_ru": "«ЗИЯДАР»",
-                  "label": "Ədəbi Mükafat № 187",
-                  "label_az": "Ədəbi Mükafat № 187",
-                  "label_en": "Literary Award No. 187",
-                  "label_ru": "Литературная премия № 187",
-                  "sub": "«Yazarlar» Jurnalı (04.10.2025)",
-                  "sub_az": "«Yazarlar» Jurnalı (04.10.2025)",
-                  "sub_en": "“Yazarlar” Magazine (04.10.2025)",
-                  "sub_ru": "Журнал «Yazarlar» (04.10.2025)"
-            },
-            {
-                  "icon": "📚",
-                  "val": "2 MÜƏLLİF KİTABI",
-                  "val_az": "2 MÜƏLLİF KİTABI",
-                  "val_en": "2 AUTHORED BOOKS",
-                  "val_ru": "2 АВТОРСКИЕ КНИГИ",
-                  "label": "Nəşr Olunmuş Əsərlər",
-                  "label_az": "Nəşr Olunmuş Əsərlər",
-                  "label_en": "Published Works",
-                  "label_ru": "Изданные книги",
-                  "sub": "«Əslində mən kiməm?» & «Əlvida deməyə tələsmə»",
-                  "sub_az": "«Əslində mən kiməm?» & «Əlvida deməyə tələsmə»",
-                  "sub_en": "“Who Am I Really?” & “Don't Rush to Say Goodbye”",
-                  "sub_ru": "«Кто я на самом деле?» и «Не спеши прощаться»"
-            },
-            {
-                  "icon": "📖",
-                  "val": "9 SƏNƏD & NƏŞR",
-                  "val_az": "9 SƏNƏD & NƏŞR",
-                  "val_en": "9 AWARDS & BOOKS",
-                  "val_ru": "9 НАГРАД И КНИГ",
-                  "label": "Yaradıcılıq Portfeli",
-                  "label_az": "Yaradıcılıq Portfeli",
-                  "label_en": "Creative Portfolio",
-                  "label_ru": "Творческое портфолио",
-                  "sub": "«Yazarlar» Aprel 2026 üz qabığı və sertifikatlar",
-                  "sub_az": "«Yazarlar» Aprel 2026 üz qabığı və sertifikatlar",
-                  "sub_en": "“Yazarlar” April 2026 cover & certificates",
-                  "sub_ru": "Обложка «Yazarlar» 2026 и сертификаты"
-            }
-      ],
-      "highlights": [
-            {
-                  "year": "2026",
-                  "flag": "✍️",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "Milli Uğur Mükafatı — «İlin Müəllifi» və «Yazarlar» Jurnalının Üz Qabığı (Aprel 2026 № 04)",
-                  "title_az": "Milli Uğur Mükafatı — «İlin Müəllifi» və «Yazarlar» Jurnalının Üz Qabığı (Aprel 2026 № 04)",
-                  "title_en": "National Success Award — “Author of the Year” & “Yazarlar” Magazine Cover Feature (April 2026 No. 04)",
-                  "title_ru": "Национальная премия успеха — «Автор года» и обложка журнала «Yazarlar» (Апрель 2026 № 04)",
-                  "text": "Milli Uğur Mükafatı layihəsində «İlin Müəllifi» adına layiq görülmüş və «Yazarlar» ədəbi jurnalının Aprel 2026 № 04 (64) sayının üz qabığında dərc olunmuşdur.",
-                  "text_az": "Milli Uğur Mükafatı layihəsində «İlin Müəllifi» adına layiq görülmüş və «Yazarlar» ədəbi jurnalının Aprel 2026 № 04 (64) sayının üz qabığında dərc olunmuşdur.",
-                  "text_en": "Named 'Author of the Year' by the National Success Award project and featured on the cover of 'Yazarlar' literary journal (April 2026 No. 04).",
-                  "text_ru": "Удостоена титула «Автор года» и представлена на обложке апрельского номера журнала «Yazarlar» за 2026 год."
-            },
-            {
-                  "year": "2025",
-                  "flag": "📚",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "«Əslində mən kiməm?» və «Əlvida deməyə tələsmə» Kitabları & «Ziyadar» Mükafatı (№ 187)",
-                  "title_az": "«Əslində mən kiməm?» və «Əlvida deməyə tələsmə» Kitabları & «Ziyadar» Mükafatı (№ 187)",
-                  "title_en": "Books “Who Am I Really?” & “Don't Rush to Say Goodbye” and “Ziyadar” Literary Award (No. 187)",
-                  "title_ru": "Книги «Кто я на самом деле?» и «Не спеши прощаться» и премия «Зиядар» (№ 187)",
-                  "text": "İki müəllif kitabı nəşr olunmuş, «Əslində mən kiməm?» kitabının işıq üzü görməsi münasibətilə «Ziyadar» mükafatı və Gənc Yazıçılar Mərkəzinin Fəxri Fərmanı ilə təltif edilmişdir.",
-                  "text_az": "İki müəllif kitabı nəşr olunmuş, «Əslində mən kiməm?» kitabının işıq üzü görməsi münasibətilə «Ziyadar» mükafatı və Gənc Yazıçılar Mərkəzinin Fəxri Fərmanı ilə təltif edilmişdir.",
-                  "text_en": "Published two books and received the 'Ziyadar' Literary Award (No. 187) and the Young Writers Center Honorary Citation.",
-                  "text_ru": "Издала две авторские книги, награждена премией «Зиядар» (№ 187) и Почетной грамотой Центра молодых писателей."
-            },
-            {
-                  "year": "2024–2025",
-                  "flag": "🎙️",
-                  "country": "Azərbaycan",
-                  "country_az": "Azərbaycan",
-                  "country_en": "Azerbaijan",
-                  "country_ru": "Азербайджан",
-                  "title": "Diksiya Akademiyası, SuccessX, GeniusMind və Beynəlxalq Karyera Akademiyası Sertifikatları",
-                  "title_az": "Diksiya Akademiyası, SuccessX, GeniusMind və Beynəlxalq Karyera Akademiyası Sertifikatları",
-                  "title_en": "Diction Academy, SuccessX, GeniusMind & International Career Academy Certificates",
-                  "title_ru": "Сертификаты Академии Дикции, SuccessX, GeniusMind и Международной Академии Карьеры",
-                  "text": "«Ürəkli danış, səhnə sənindir!», «Nitq Gücü» və «Hüdudsuz gücün sirri» seminar və təlimlərində fəal iştirakına görə rəsmi sertifikatlarla təltif olunmuşdur.",
-                  "text_az": "«Ürəkli danış, səhnə sənindir!», «Nitq Gücü» və «Hüdudsuz gücün sirri» seminar və təlimlərində fəal iştirakına görə rəsmi sertifikatlarla təltif olunmuşdur.",
-                  "text_en": "Earned official certificates in public speaking, diction, and personal leadership.",
-                  "text_ru": "Награждена сертификатами по ораторскому мастерству, дикции и лидерству."
-            }
-      ],
-      "tags": [
-            "#BaharBəxtiyarqızı",
-            "#BaharKərimova",
-            "#İlinMüəllifi",
-            "#ZiyadarMükafatı",
-            "#YazarlarJurnalı",
-            "#ƏslindəMənKiməm",
-            "#ƏlvidaDeməyəTələsmə",
-            "#GəncYazıçılar",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_az": [
-            "#BaharBəxtiyarqızı",
-            "#BaharKərimova",
-            "#İlinMüəllifi",
-            "#ZiyadarMükafatı",
-            "#YazarlarJurnalı",
-            "#ƏslindəMənKiməm",
-            "#ƏlvidaDeməyəTələsmə",
-            "#GəncYazıçılar",
-            "#BDRNK_FəxriTələbə"
-      ],
-      "tags_en": [
-            "#BaharBakhtiyargizi",
-            "#BaharKarimova",
-            "#AuthorOfTheYear",
-            "#ZiyadarAward",
-            "#YoungAuthor",
-            "#BDRNK_HonorStudent"
-      ],
-      "tags_ru": [
-            "#БахарБахтияргызы",
-            "#БахарКеримова",
-            "#АвторГода",
-            "#ПремияЗиядар",
-            "#ПочетныйСтудентБГКСТ"
-      ],
-      "timeline": [
-            {
-                  "year": "2026",
-                  "badge": "📖 Üz Qabığı · Aprel 2026 № 04",
-                  "title": "«Yazarlar» Ədəbiyyat Jurnalının Xüsusi Buraxılışı",
-                  "desc": "Aprel 2026 № 04 (64) sayının üz qabığında gənc yazar kimi təqdim olunmuşdur."
-            },
-            {
-                  "year": "2026",
-                  "badge": "✍️ İlin Müəllifi · 01.02.2026",
-                  "title": "Milli Uğur Mükafatı Layihəsi",
-                  "desc": "«İlin Müəllifi» fəxri adı və rəsmi Sertifikatı."
-            },
-            {
-                  "year": "2025",
-                  "badge": "🏆 «Ziyadar» Mükafatı · № 187",
-                  "title": "Azərbaycan «Yazarlar» Jurnalı — «Ziyadar» Mükafatı",
-                  "desc": "«Əslində mən kiməm?» kitabının işıq üzü görməsi münasibətilə təltif (04.10.2025)."
-            },
-            {
-                  "year": "2025",
-                  "badge": "🖋️ Fəxri Fərman · 16.10.2025",
-                  "title": "Gənc Yazıçılar Mərkəzi & İDEA Education Center MMC",
-                  "desc": "Ədəbiyyat sahəsində göstərdiyi fəaliyyətə görə Fəxri Fərman."
-            },
-            {
-                  "year": "2025",
-                  "badge": "📚 2 Müəllif Kitabı",
-                  "title": "«Əslində mən kiməm?» və «Əlvida deməyə tələsmə» Kitablarının Nəşri",
-                  "desc": "«Kitabçı» və «Mücrü» nəşriyyatlarında iki bədii kitabının çap olunması."
-            },
-            {
-                  "year": "2024–2025",
-                  "badge": "🎙️ 3 Rəsmi Sertifikat",
-                  "title": "Diksiya Akademiyası, SuccessX & Beynəlxalq Karyera Akademiyası",
-                  "desc": "«Ürəkli danış, səhnə sənindir!» (29.12.2024), «Nitq Gücü» (25.03.2025) və «Hüdudsuz gücün sirri» (19.10.2025) sertifikatları."
-            }
-      ],
-      "fullBio": [
-            "Kərimova Bahar Bəxtiyar qızı (ədəbi təxəllüsü: Bahar Bəxtiyarqızı) Bakı Dövlət Rabitə və Nəqliyyat Kollecinin bədii yaradıcılıq, ədəbiyyat və natiqlik sənəti sahəsində böyük uğurlar qazanmış gənc yazıçı tələbəmizdir.",
-            "«Əslində mən kiməm?» («Kitabçı» nəşriyyatı) və «Əlvida deməyə tələsmə» («Mücrü» nəşriyyatı) adlı iki kitabın müəllifidir. Kitabının nəşri münasibətilə «Yazarlar» jurnalının «Ziyadar» mükafatına (№ 187), Gənc Yazıçılar Mərkəzinin Fəxri Fərmanına və 2026-cı ildə Milli Uğur Mükafatı layihəsi çərçivəsində «İlin Müəllifi» fəxri adına layiq görülmüşdür.",
-            "2026-cı ilin aprel ayında «Yazarlar» ədəbiyyat jurnalının № 04 (64) buraxılışının üz qabığında yer almış, həmçinin Diksiya Akademiyası, SuccessX Academy, GeniusMind Academy və Beynəlxalq Karyera Akademiyasının rəsmi sertifikatlarını qazanmışdır."
-      ],
-      "fullBio_az": [
-            "Kərimova Bahar Bəxtiyar qızı (ədəbi təxəllüsü: Bahar Bəxtiyarqızı) Bakı Dövlət Rabitə və Nəqliyyat Kollecinin bədii yaradıcılıq, ədəbiyyat və natiqlik sənəti sahəsində böyük uğurlar qazanmış gənc yazıçı tələbəmizdir.",
-            "«Əslində mən kiməm?» («Kitabçı» nəşriyyatı) və «Əlvida deməyə tələsmə» («Mücrü» nəşriyyatı) adlı iki kitabın müəllifidir. Kitabının nəşri münasibətilə «Yazarlar» jurnalının «Ziyadar» mükafatına (№ 187), Gənc Yazıçılar Mərkəzinin Fəxri Fərmanına və 2026-cı ildə Milli Uğur Mükafatı layihəsi çərçivəsində «İlin Müəllifi» fəxri adına layiq görülmüşdür.",
-            "2026-cı ilin aprel ayında «Yazarlar» ədəbiyyat jurnalının № 04 (64) buraxılışının üz qabığında yer almış, həmçinin Diksiya Akademiyası, SuccessX Academy, GeniusMind Academy və Beynəlxalq Karyera Akademiyasının rəsmi sertifikatlarını qazanmışdır."
-      ],
-      "fullBio_en": [
-            "Bahar Karimova Bakhtiyar (pen name: Bahar Bakhtiyargizi) is an accomplished young writer and student at Baku State College of Communications and Transport.",
-            "She is the author of two published books — 'Who Am I Really?' ('Əslində mən kiməm?') and 'Don't Rush to Say Goodbye' ('Əlvida deməyə tələsmə'). Her literary work has earned the 'Ziyadar' Literary Award (No. 187), the Young Writers Center Honorary Citation, and the 2026 'Author of the Year' National Success Award.",
-            "In April 2026, she was featured on the front cover of 'Yazarlar' literary magazine (Issue No. 04/64), complementing her certificates from Diction Academy, SuccessX Academy, and the International Career Academy."
-      ],
-      "fullBio_ru": [
-            "Керимова Бахар Бахтияр гызы (литературный псевдоним: Бахар Бахтияргызы) — талантливая молодая писательница и студентка Бакинского государственного колледжа связи и транспорта.",
-            "Автор двух изданных книг — «Кто я на самом деле?» («Əslində mən kiməm?») и «Не спеши прощаться» («Əlvida deməyə tələsmə»). Удостоена литературной премии «Зиядар» (№ 187), Почетной грамоты Центра молодых писателей и звания «Автор года» (2026).",
-            "В апреле 2026 года стала героиней обложки литературного журнала «Yazarlar» (№ 04/64), а также награждена сертификатами Академии Дикции, SuccessX Academy и Международной Академии Карьеры."
-      ],
-      "certificates": [
-            {
-                  "icon": "✍️",
-                  "title": "Milli Uğur Mükafatı — «İlin Müəllifi» Sertifikatı",
-                  "sub": "01 fevral 2026 · Education Center"
-            },
-            {
-                  "icon": "🏆",
-                  "title": "«Yazarlar» Jurnalı — «Ziyadar» Ədəbi Mükafatı (№ 187)",
-                  "sub": "«Əslində mən kiməm?» kitabının işıq üzü görməsi münasibətilə · 04.10.2025"
-            },
-            {
-                  "icon": "🖋️",
-                  "title": "Gənc Yazıçılar Mərkəzi & İDEA Education Center — Fəxri Fərman",
-                  "sub": "Ədəbiyyat sahəsində göstərdiyi fəaliyyətə görə · 16.10.2025"
-            },
-            {
-                  "icon": "📖",
-                  "title": "«Yazarlar» Ədəbiyyat Jurnalı — Üz Qabığı Nəşri (Aprel 2026 № 04)",
-                  "sub": "Xüsusi buraxılış · № 04 (64)"
-            },
-            {
-                  "icon": "📚",
-                  "title": "Müəllif Kitabı: «Əslində mən kiməm?»",
-                  "sub": "«Kitabçı» Nəşriyyatı · Bədii-psixoloji əsər"
-            },
-            {
-                  "icon": "📕",
-                  "title": "Müəllif Kitabı: «Əlvida deməyə tələsmə»",
-                  "sub": "«Mücrü» Nəşriyyatı · Bədii nəsr"
-            },
-            {
-                  "icon": "🎙️",
-                  "title": "Diksiya Akademiyası — «Ürəkli danış, səhnə sənindir!» Sertifikatı",
-                  "sub": "Cəlalə Nəzəroğlu · 29.12.2024"
-            },
-            {
-                  "icon": "🗣️",
-                  "title": "SuccessX & GeniusMind Academy — «Nitq Gücü» Təlimi Sertifikatı",
-                  "sub": "İDEA Education Center MMC · 25.03.2025"
-            },
-            {
-                  "icon": "🌟",
-                  "title": "Beynəlxalq Karyera Akademiyası — «Hüdudsuz gücün sirri» Sertifikatı",
-                  "sub": "İDEA Education Center MMC · 19.10.2025"
-            }
-      ],
-      "gallery": [
-            {
-                  "type": "image",
-                  "src": "certificates/cert_bahar_yazarlar_2026.jpg",
-                  "caption": "«Yazarlar» Jurnalı (Aprel 2026 № 04/64) — Üz Qabığında Bahar Bəxtiyarqızı"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_bahar_ilin_muellifi_2026.jpg",
-                  "caption": "Milli Uğur Mükafatı — «İlin Müəllifi» Sertifikatı (01.02.2026)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_bahar_ziyadar_2025.jpg",
-                  "caption": "«Yazarlar» Jurnalı — «Ziyadar» Ədəbi Mükafatı (№ 187, 04.10.2025)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_bahar_genc_yazicilar_2025.jpg",
-                  "caption": "Gənc Yazıçılar Mərkəzi & İDEA Education Center — Fəxri Fərman (16.10.2025)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_bahar_kitab_eslinde.jpg",
-                  "caption": "Bahar Bəxtiyarqızı — «Əslində mən kiməm?» (Müəllif Kitabı, «Kitabçı» Nəşriyyatı)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_bahar_kitab_elvida.jpg",
-                  "caption": "Bahar Bəxtiyarqızı — «Əlvida deməyə tələsmə» (Müəllif Kitabı, «Mücrü» Nəşriyyatı)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_bahar_diksiya_2024.jpg",
-                  "caption": "Diksiya Akademiyası — «Ürəkli danış, səhnə sənindir!» Seminarı Sertifikatı (29.12.2024)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_bahar_nitq_gucu_2025.jpg",
-                  "caption": "SuccessX & GeniusMind Academy — «Nitq Gücü» Təlimi Sertifikatı (25.03.2025)"
-            },
-            {
-                  "type": "image",
-                  "src": "certificates/cert_bahar_karyera_2025.jpg",
-                  "caption": "Beynəlxalq Karyera Akademiyası — «Hüdudsuz gücün sirri» Təlimi Sertifikatı (19.10.2025)"
-            }
-      ]
-}
-  ];
+  {
+    "id": "senan-mirzezade",
+    "fullName": "Mirzəzadə Sənan Azər oğlu",
+    "fullName_az": "Mirzəzadə Sənan Azər oğlu",
+    "fullName_en": "Sanan Mirzazada Azer",
+    "fullName_ru": "Мирзазаде Санан Азер оглы",
+    "photo": "senan1.jpeg",
+    "fallbackPhoto": "logo.jpg",
+    "titleBadge": "“İlin Gənci” Mükafatçısı",
+    "titleBadge_az": "“İlin Gənci” Mükafatçısı",
+    "titleBadge_en": "“Youth of the Year” Laureate",
+    "titleBadge_ru": "Лауреат премии «Молодежь года»",
+    "role": "İnformasiya Texnologiyaları, Kibertəhlükəsizlik və Robototexnika Mütəxəssisi",
+    "role_az": "İnformasiya Texnologiyaları, Kibertəhlükəsizlik və Robototexnika Mütəxəssisi",
+    "role_en": "Information Technology, Cybersecurity & Robotics Specialist",
+    "role_ru": "Специалист по информационным технологиям, кибербезопасности и робототехнике",
+    "categories": [
+      "all",
+      "it-robotics",
+      "international",
+      "youth"
+    ],
+    "statusText": "Beynəlxalq Çempion & Tədqiqatçı",
+    "statusText_az": "Beynəlxalq Çempion & Tədqiqatçı",
+    "statusText_en": "International Champion & Researcher",
+    "statusText_ru": "Международный чемпион и исследователь",
+    "quote": "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
+    "quote_az": "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
+    "quote_en": "Sanan uses the knowledge and experience he has gained not only for personal advancement, but also to mentor children and young talents preparing for competitions, share his expertise, and contribute to social inclusivity in technology.",
+    "quote_ru": "Санан использует приобретенные знания и опыт не только для личного развития, но и для поддержки детей и молодежи при подготовке к соревнованиям, обмена опытом и содействия социальной инклюзивности в сфере технологий.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "name_az": "Azərbaycan",
+        "name_en": "Azerbaijan",
+        "name_ru": "Азербайджан",
+        "note": "Respublika Çempionu",
+        "note_az": "Respublika Çempionu",
+        "note_en": "National Champion",
+        "note_ru": "Чемпион Республики"
+      },
+      {
+        "emoji": "🇺🇸",
+        "name": "ABŞ",
+        "name_az": "ABŞ",
+        "name_en": "USA",
+        "name_ru": "США",
+        "note": "FIRST Robotics / NASA Layihəsi",
+        "note_az": "FIRST Robotics / NASA Layihəsi",
+        "note_en": "FIRST Robotics / NASA Project",
+        "note_ru": "FIRST Robotics / Проект NASA"
+      },
+      {
+        "emoji": "🇯🇵",
+        "name": "Yaponiya",
+        "name_az": "Yaponiya",
+        "name_en": "Japan",
+        "name_ru": "Япония",
+        "note": "Beynəlxalq Robototexnika 2026",
+        "note_az": "Beynəlxalq Robototexnika 2026",
+        "note_en": "International Robotics 2026",
+        "note_ru": "Международная Робототехника 2026"
+      },
+      {
+        "emoji": "🇫🇮",
+        "name": "Finlandiya",
+        "name_az": "Finlandiya",
+        "name_en": "Finland",
+        "name_ru": "Финляндия",
+        "note": "Beynəlxalq Abilimpiya 2027",
+        "note_az": "Beynəlxalq Abilimpiya 2027",
+        "note_en": "International Abilympics 2027",
+        "note_ru": "Международный Абилимпикс 2027"
+      },
+      {
+        "emoji": "🇹🇷",
+        "name": "Türkiyə",
+        "name_az": "Türkiyə",
+        "name_en": "Türkiye",
+        "name_ru": "Турция",
+        "note": "16-cı Beynəlxalq MEB Robot",
+        "note_az": "16-cı Beynəlxalq MEB Robot",
+        "note_en": "16th International MEB Robot",
+        "note_ru": "16-й Международный MEB Robot"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "🥇",
+        "val": "I YER",
+        "val_az": "I YER",
+        "val_en": "1st PLACE",
+        "val_ru": "I МЕСТО",
+        "label": "Milli Abilimpiya 2026",
+        "label_az": "Milli Abilimpiya 2026",
+        "label_en": "National Abilympics 2026",
+        "label_ru": "Национальный Абилимпикс 2026",
+        "sub": "İT istiqaməti üzrə Qızıl Medal",
+        "sub_az": "İT istiqaməti üzrə Qızıl Medal",
+        "sub_en": "Gold Medal in IT Specialization",
+        "sub_ru": "Золотая Медаль по направлению ИТ"
+      },
+      {
+        "icon": "🤖",
+        "val": "ÇEMPİON",
+        "val_az": "ÇEMPİON",
+        "val_en": "CHAMPION",
+        "val_ru": "ЧЕМПИОН",
+        "label": "Mini Sumo Robototexnika",
+        "label_az": "Mini Sumo Robototexnika",
+        "label_en": "Mini Sumo Robotics",
+        "label_ru": "Мини-Сумо Робототехника",
+        "sub": "Azərbaycan Beynəlxalq Olimpiada",
+        "sub_az": "Azərbaycan Beynəlxalq Olimpiada",
+        "sub_en": "Azerbaijan Int. Olympiad",
+        "sub_ru": "Азербайджанская Межд. Олимпиада"
+      },
+      {
+        "icon": "🛡️",
+        "val": "LEVEL 1 & 2",
+        "val_az": "LEVEL 1 & 2",
+        "val_en": "LEVEL 1 & 2",
+        "val_ru": "LEVEL 1 & 2",
+        "label": "Ethical Hacker",
+        "label_az": "Ethical Hacker",
+        "label_en": "Ethical Hacker",
+        "label_ru": "Этичный Хакер (Ethical Hacker)",
+        "sub": "Beynəlxalq kiber sertifikatlar",
+        "sub_az": "Beynəlxalq kiber sertifikatlar",
+        "sub_en": "International cyber certifications",
+        "sub_ru": "Международные кибер-сертификаты"
+      },
+      {
+        "icon": "🌟",
+        "val": "İLİN GƏNCİ",
+        "val_az": "İLİN GƏNCİ",
+        "val_en": "YOUTH OF YEAR",
+        "val_ru": "МОЛОДЕЖЬ ГОДА",
+        "label": "Fəxri Dövlət Mükafatı",
+        "label_az": "Fəxri Dövlət Mükafatı",
+        "label_en": "Honorary State Award",
+        "label_ru": "Почетная Государственная Награда",
+        "sub": "İctimai fəallıq və nailiyyətlər",
+        "sub_az": "İctimai fəallıq və nailiyyətlər",
+        "sub_en": "Social engagement & achievements",
+        "sub_ru": "Общественная активность и успехи"
+      }
+    ],
+    "highlights": [
+      {
+        "year": "2027",
+        "flag": "🇫🇮",
+        "country": "Finlandiya",
+        "country_az": "Finlandiya",
+        "country_en": "Finland",
+        "country_ru": "Финляндия",
+        "title": "Beynəlxalq Abilimpiya Çempionatı",
+        "title_az": "Beynəlxalq Abilimpiya Çempionatı",
+        "title_en": "International Abilympics Championship",
+        "title_ru": "Международный Чемпионат Абилимпикс",
+        "text": "Azərbaycan Milli Komandasının tərkibində ölkəmizi təmsil etmək vəsiqəsi qazanmışdır.",
+        "text_az": "Azərbaycan Milli Komandasının tərkibində ölkəmizi təmsil etmək vəsiqəsi qazanmışdır.",
+        "text_en": "Earned the official right to represent Azerbaijan as a member of the National Team.",
+        "text_ru": "Завоевал право представлять Азербайджан в составе Национальной Сборной."
+      },
+      {
+        "year": "2026",
+        "flag": "🇯🇵",
+        "country": "Yaponiya",
+        "country_az": "Yaponiya",
+        "country_en": "Japan",
+        "country_ru": "Япония",
+        "title": "Beynəlxalq Robototexnika Yarışı",
+        "title_az": "Beynəlxalq Robototexnika Yarışı",
+        "title_en": "International Robotics Competition",
+        "title_ru": "Международные Соревнования по Робототехнике",
+        "text": "Azərbaycan Mini Sumo çempionu kimi Yaponiyada keçiriləcək beynəlxalq yarışda Azərbaycanı təmsil edəcək.",
+        "text_az": "Azərbaycan Mini Sumo çempionu kimi Yaponiyada keçiriləcək beynəlxalq yarışda Azərbaycanı təmsil edəcək.",
+        "text_en": "As the Azerbaijan Mini Sumo champion, will represent our country at the international contest in Japan.",
+        "text_ru": "В качестве чемпиона Азербайджана по Мини-Сумо представит страну на международном турнире в Японии."
+      },
+      {
+        "year": "2024",
+        "flag": "🇺🇸",
+        "country": "ABŞ",
+        "country_az": "ABŞ",
+        "country_en": "USA",
+        "country_ru": "США",
+        "title": "FIRST Robotics Competition & NASA Layihəsi",
+        "title_az": "FIRST Robotics Competition & NASA Layihəsi",
+        "title_en": "FIRST Robotics Competition & NASA Project",
+        "title_ru": "FIRST Robotics Competition и Проект NASA",
+        "text": "Amerika Birləşmiş Ştatlarında NASA layihəsi ilə əlaqəli FRC yarışında Azərbaycanı təmsil etmişdir.",
+        "text_az": "Amerika Birləşmiş Ştatlarında NASA layihəsi ilə əlaqəli FRC yarışında Azərbaycanı təmsil etmişdir.",
+        "text_en": "Represented Azerbaijan in the USA at the FIRST Robotics Competition associated with the NASA project.",
+        "text_ru": "Представлял Азербайджан в США на соревнованиях FIRST Robotics Competition в рамках проекта NASA."
+      }
+    ],
+    "tags": [
+      "#İnformasiyaTexnologiyaları",
+      "#Kibertəhlükəsizlik",
+      "#EthicalHacker_L1_L2",
+      "#Robototexnika",
+      "#MiniSumo_Çempionu",
+      "#FIRST_Robotics_NASA",
+      "#MilliAbilimpiya_I_Yer",
+      "#Finlandiya2027",
+      "#Yaponiya2026",
+      "#İlinGənci"
+    ],
+    "tags_az": [
+      "#İnformasiyaTexnologiyaları",
+      "#Kibertəhlükəsizlik",
+      "#EthicalHacker_L1_L2",
+      "#Robototexnika",
+      "#MiniSumo_Çempionu",
+      "#FIRST_Robotics_NASA",
+      "#MilliAbilimpiya_I_Yer",
+      "#Finlandiya2027",
+      "#Yaponiya2026",
+      "#İlinGənci"
+    ],
+    "tags_en": [
+      "#InformationTechnology",
+      "#Cybersecurity",
+      "#EthicalHacker_L1_L2",
+      "#Robotics",
+      "#MiniSumo_Champion",
+      "#FIRST_Robotics_NASA",
+      "#NationalAbilympics_1stPlace",
+      "#Finland2027",
+      "#Japan2026",
+      "#YouthOfTheYear"
+    ],
+    "tags_ru": [
+      "#ИнформационныеТехнологии",
+      "#Кибербезопасность",
+      "#EthicalHacker_L1_L2",
+      "#Робототехника",
+      "#Чемпион_МиниСумо",
+      "#FIRST_Robotics_NASA",
+      "#НациональныйАбилимпикс_1Место",
+      "#Финляндия2027",
+      "#Япония2026",
+      "#МолодежьГода"
+    ],
+    "timeline": [
+      {
+        "year": "2026",
+        "badge": "🇯🇵 Yaponiya · Qlobal Vəsiqə & Çempionluq",
+        "badge_az": "🇯🇵 Yaponiya · Qlobal Vəsiqə & Çempionluq",
+        "badge_en": "🇯🇵 Japan · Global Ticket & Championship",
+        "badge_ru": "🇯🇵 Япония · Путевка и Чемпионский Титул",
+        "title": "Azərbaycan Beynəlxalq Robot Olimpiadası — Mini Sumo Çempionu",
+        "title_az": "Azərbaycan Beynəlxalq Robot Olimpiadası — Mini Sumo Çempionu",
+        "title_en": "Azerbaijan International Robot Olympiad — Mini Sumo Champion",
+        "title_ru": "Азербайджанская Международная Робот Олимпиада — Чемпион Мини-Сумо",
+        "desc": "Azərbaycan Beynəlxalq Robot Olimpiadasında yüksək nəticə göstərərək Mini Sumo robototexnika kateqoriyasında Respublika Çempionu olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
+        "desc_az": "Azərbaycan Beynəlxalq Robot Olimpiadasında yüksək nəticə göstərərək Mini Sumo robototexnika kateqoriyasında Respublika Çempionu olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
+        "desc_en": "Demonstrated top performance at the Azerbaijan International Robot Olympiad, becoming National Champion in the Mini Sumo robotics category. Based on these achievements, secured the right to represent Azerbaijan at the international robotics tournament in Japan.",
+        "desc_ru": "Продемонстрировал выдающиеся результаты на Азербайджанской Международной Робототехнической Олимпиаде, став Чемпионом Республики в категории робототехники «Мини-Сумо». Завоевал путевку на представление Азербайджана на международных соревнованиях в Японии."
+      },
+      {
+        "year": "2026",
+        "badge": "🥇 Qızıl Medal & Diplom",
+        "badge_az": "🥇 Qızıl Medal & Diplom",
+        "badge_en": "🥇 Gold Medal & Diploma",
+        "badge_ru": "🥇 Золотая Медаль и Диплом",
+        "title": "Milli Abilimpiya Çempionatı — I Yer Qalibi",
+        "title_az": "Milli Abilimpiya Çempionatı — I Yer Qalibi",
+        "title_en": "National Abilympics Championship — 1st Place Winner",
+        "title_ru": "Национальный Чемпионат Абилимпикс — Победитель I Места",
+        "desc": "İnformasiya Texnologiyaları istiqaməti üzrə bütün rəqiblərini qabaqlayaraq fəxri I yerin qalibi olmuş, qızıl medal və xüsusi diplomla təltif edilmişdir.",
+        "desc_az": "İnformasiya Texnologiyaları istiqaməti üzrə bütün rəqiblərini qabaqlayaraq fəxri I yerin qalibi olmuş, qızıl medal və xüsusi diplomla təltif edilmişdir.",
+        "desc_en": "Outperformed all competitors in Information Technology, winning honorary 1st place, awarded with a gold medal and special diploma.",
+        "desc_ru": "Опередил всех соперников по направлению Информационные Технологии, завоевав почетное I место, награжден золотой медалью и специальным дипломом."
+      },
+      {
+        "year": "2025",
+        "badge": "🤝 Könüllü Mentorluq & İnklüziv Dəstək",
+        "badge_az": "🤝 Könüllü Mentorluq & İnklüziv Dəstək",
+        "badge_en": "🤝 Voluntary Mentorship & Inclusive Support",
+        "badge_ru": "🤝 Волонтерское Наставничество и Инклюзивная Поддержка",
+        "title": "FIRST Robotics Komandasına Texniki Mentorluq və Sosial Maarifləndirmə",
+        "title_az": "FIRST Robotics Komandasına Texniki Mentorluq və Sosial Maarifləndirmə",
+        "title_en": "Technical Mentorship to FIRST Robotics Team & Social Advocacy",
+        "title_ru": "Техническое Менторство Команде FIRST Robotics и Социальное Просвещение",
+        "desc": "FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
+        "desc_az": "FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
+        "desc_en": "Voluntarily contributed knowledge and technical mentorship to the team traveling abroad for FIRST Robotics Competition, assisting team preparation and skill building. Participated actively in technology-driven social inclusivity projects, mentoring children and youth.",
+        "desc_ru": "На волонтерских началах делился опытом и знаниями с командой, выезжающей за рубеж для участия в FIRST Robotics Competition, внося вклад в их подготовку. Участвовал в инклюзивных технологических проектах, передавая навыки молодому поколению."
+      }
+    ],
+    "fullBio": [
+      "Mirzəzadə Sənan Azər oğlu informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində özünü inkişaf etdirən, müxtəlif yerli və beynəlxalq yarışlarda iştirak edərək yüksək nəticələr əldə edən gəncdir.",
+      "2019–2022-ci illərdə STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində təhsil almışdır.",
+      "2023-cü ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
+      "2024-cü ildə Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir. Həmin il Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmişdir. Bu yarış çərçivəsində beynəlxalq robototexnika mühitində praktiki təcrübə qazanmışdır.",
+      "2025-ci ildə FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
+      "2026-cı ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə I yerin qalibi olmuşdur. Bu nəticəyə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
+      "2026-cı ildə Azərbaycan Beynəlxalq Robot Olimpiadasında iştirak edərək yüksək nəticə göstərmiş, Mini Sumo robototexnika kateqoriyasında çempion olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
+      "Kibertəhlükəsizlik sahəsində Ethical Hacker Level 1 və Ethical Hacker Level 2 proqramlarını uğurla tamamlamışdır. İnformasiya texnologiyaları, kompüter şəbəkələri, kibertəhlükəsizlik və robototexnika üzrə müxtəlif seminar, təlim və praktiki proqramlarda iştirak edərək peşəkar bilik və bacarıqlarını davamlı şəkildə inkişaf etdirir.",
+      "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
+      "Gənclər və texnologiya sahəsində göstərdiyi fəallıq, əldə etdiyi nailiyyətlər və ictimai fəaliyyəti nəzərə alınaraq “İlin Gənci” mükafatına layiq görülmüşdür.",
+      "Sənanın əldə etdiyi nəticələr onun informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində ardıcıl inkişaf etdiyini, beynəlxalq səviyyədə Azərbaycanı təmsil etdiyini və öz bilik və təcrübəsini digər gənclərlə bölüşərək sosial fayda yaratdığını göstərir."
+    ],
+    "fullBio_az": [
+      "Mirzəzadə Sənan Azər oğlu informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində özünü inkişaf etdirən, müxtəlif yerli və beynəlxalq yarışlarda iştirak edərək yüksək nəticələr əldə edən gəncdir.",
+      "2019–2022-ci illərdə STEP IT Kids Academy-də informasiya texnologiyaları və rəqəmsal texnologiyalar istiqamətində təhsil almışdır.",
+      "2023-cü ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə III yerin qalibi olmuş, medal və diplomla təltif edilmişdir. Həmin il AKTA Cyber Summer School 2023 proqramında iştirak edərək kibertəhlükəsizlik sahəsində bilik və praktiki bacarıqlarını inkişaf etdirmişdir.",
+      "2024-cü ildə Türkiyədə keçirilən 16-cı Beynəlxalq MEB Robot Yarışında iştirak etmişdir. Həmin il Amerika Birləşmiş Ştatlarında keçirilən və NASA layihəsi ilə əlaqəli FIRST Robotics Competition yarışında Azərbaycanı təmsil etmişdir. Bu yarış çərçivəsində beynəlxalq robototexnika mühitində praktiki təcrübə qazanmışdır.",
+      "2025-ci ildə FIRST Robotics Competition yarışında iştirak etmək üçün xaricə gedən komandaya könüllü olaraq öz bilik və təcrübəsi ilə dəstək olmuş, komanda üzvlərinin hazırlanmasına və onların texniki biliklərinin inkişafına töhfə vermişdir. Eyni zamanda müxtəlif texnologiya ilə bağlı sosial inklüziv layihələrdə iştirak etmiş, əldə etdiyi bilik və bacarıqlarını digər uşaqlar və gənclərlə bölüşmüşdür.",
+      "2026-cı ildə Milli Abilimpiya Çempionatında İnformasiya Texnologiyaları istiqaməti üzrə I yerin qalibi olmuşdur. Bu nəticəyə əsasən, 2027-ci ildə Finlandiyada keçiriləcək Beynəlxalq Abilimpiya Çempionatında iştirak edəcək Azərbaycan milli komandasının tərkibində ölkəmizi təmsil etmək hüququ qazanmışdır.",
+      "2026-cı ildə Azərbaycan Beynəlxalq Robot Olimpiadasında iştirak edərək yüksək nəticə göstərmiş, Mini Sumo robototexnika kateqoriyasında çempion olmuşdur. Əldə etdiyi nəticələr əsasında Yaponiyada keçiriləcək beynəlxalq robototexnika yarışında Azərbaycanı təmsil etmək hüququ qazanmışdır.",
+      "Kibertəhlükəsizlik sahəsində Ethical Hacker Level 1 və Ethical Hacker Level 2 proqramlarını uğurla tamamlamışdır. İnformasiya texnologiyaları, kompüter şəbəkələri, kibertəhlükəsizlik və robototexnika üzrə müxtəlif seminar, təlim və praktiki proqramlarda iştirak edərək peşəkar bilik və bacarıqlarını davamlı şəkildə inkişaf etdirir.",
+      "Sənan əldə etdiyi bilik və təcrübəni yalnız şəxsi inkişafı üçün deyil, həmçinin yarışlara hazırlaşan uşaqların və gənclərin hazırlanmasına dəstək olmaq, öz təcrübəsini bölüşmək və texnologiya sahəsində sosial inklüzivliyin inkişafına töhfə vermək məqsədilə də istifadə edir.",
+      "Gənclər və texnologiya sahəsində göstərdiyi fəallıq, əldə etdiyi nailiyyətlər və ictimai fəaliyyəti nəzərə alınaraq “İlin Gənci” mükafatına layiq görülmüşdür.",
+      "Sənanın əldə etdiyi nəticələr onun informasiya texnologiyaları, kibertəhlükəsizlik və robototexnika sahələrində ardıcıl inkişaf etdiyini, beynəlxalq səviyyədə Azərbaycanı təmsil etdiyini və öz bilik və təcrübəsini digər gənclərlə bölüşərək sosial fayda yaratdığını göstərir."
+    ],
+    "fullBio_en": [
+      "Mirzazada Sanan Azer is an accomplished young specialist who continually develops himself in the fields of information technology, cybersecurity, and robotics, achieving stellar results at numerous national and international competitions.",
+      "From 2019 to 2022, he studied information technology and digital innovations at the STEP IT Kids Academy, completing four years of foundational tech education.",
+      "In 2023, he won 3rd place in Information Technology at the National Abilympics Championship, being awarded a bronze medal and diploma. In that same year, he joined the AKTA Cyber Summer School 2023 program, enhancing his practical competencies in cybersecurity.",
+      "In 2024, he took part in the 16th International MEB Robot Competition in Türkiye. That year, he had the distinction of representing Azerbaijan in the United States at the prestigious FIRST Robotics Competition associated with the NASA project, gaining substantial international engineering experience.",
+      "In 2025, he volunteered as a technical mentor for the team traveling abroad for the FIRST Robotics Competition, helping train participants and boosting their technical skills. Concurrently, he engaged in various tech-driven social inclusivity initiatives, generously sharing his knowledge with other children and youth.",
+      "In 2026, he secured 1st place (Gold Medal) in Information Technology at the National Abilympics Championship. Through this victory, he earned the privilege of representing Azerbaijan at the International Abilympics Championship to be held in Finland in 2027.",
+      "In 2026, he achieved outstanding success at the Azerbaijan International Robot Olympiad, winning the National Championship in the Mini Sumo robotics category. Based on this feat, he secured the right to represent Azerbaijan at the international robotics competition in Japan.",
+      "In the domain of cybersecurity, he has successfully completed Ethical Hacker Level 1 and Ethical Hacker Level 2 certifications. He continuously enhances his qualifications through technical seminars, hands-on masterclasses, and specialized networking programs.",
+      "Sanan utilizes his accrued expertise not merely for personal achievement, but to guide youth entering robotics and tech competitions, share insights, and advocate for technological accessibility and social inclusion.",
+      "In recognition of his active community leadership, stellar technical achievements, and dedicated social service, he was honored with the prestigious “Youth of the Year” state award.",
+      "Sanan's achievements demonstrate his persistent dedication to IT, cybersecurity, and robotics, his proud international representation of Azerbaijan, and his commitment to generating positive social impact by empowering younger generations."
+    ],
+    "fullBio_ru": [
+      "Мирзазаде Санан Азер оглы — целеустремленный молодой специалист в сферах информационных технологий, кибербезопасности и робототехники, демонстрирующий высокие результаты на республиканских и международных соревнованиях.",
+      "В 2019–2022 годах получил углубленное четырехлетнее образование по направлению информационных и цифровых технологий в STEP IT Kids Academy.",
+      "В 2023 году завоевал III место по направлению «Информационные Технологии» на Национальном Чемпионате Абилимпикс, будучи награжден медалью и дипломом. В том же году успешно прошел программу AKTA Cyber Summer School 2023, расширив практические навыки в сфере кибербезопасности.",
+      "В 2024 году принял участие в 16-м Международном Конкурсе MEB Robot в Турции. В том же году представлял Азербайджан в США на престижных соревнованиях FIRST Robotics Competition в рамках проекта NASA, получив ценный международный опыт в сфере робототехники.",
+      "В 2025 году оказал добровольную менторскую поддержку национальной команде, направлявшейся за рубеж для участия в FIRST Robotics Competition, способствуя подготовке участников и повышению их технического уровня. Одновременно участвовал в социальных инклюзивных IT-проектах, обучая детей и молодежь.",
+      "В 2026 году завоевал I место (золотая медаль) по направлению «Информационные Технологии» на Национальном Чемпионате Абилимпикс. Благодаря этой победе он получил право представлять Азербайджан на Международном Чемпионате Абилимпикс в Финляндии в 2027 году.",
+      "В 2026 году добился триумфа на Азербайджанской Международной Робототехнической Олимпиаде, став чемпионом в категории «Мини-Сумо». По итогам соревнований он завоевал путевку на участие в международном турнире по робототехнике в Японии.",
+      "В сфере кибербезопасности успешно завершил сертификационные программы Ethical Hacker Level 1 и Ethical Hacker Level 2. Постоянно повышает уровень мастерства, участвуя в семинарах, тренингах и практических курсах по сетевой безопасности.",
+      "Санан применяет накопленные знания и опыт не только для индивидуального прогресса, но и для наставничества юных участников турниров, содействуя расширению социальной инклюзивности в технологическом сообществе.",
+      "За выдающиеся успехи, лидерские качества и активную общественную деятельность в молодежной среде был удостоен государственной премии «Молодежь года».",
+      "Достижения Санана наглядно свидетельствуют о его профессиональном росте в сфере ИКТ и кибербезопасности, достойном представлении Азербайджана на мировой арене и стремлении приносить реальную пользу обществу."
+    ],
+    "certificates": [
+      {
+        "icon": "🛡️",
+        "title": "Ethical Hacker Level 1",
+        "title_az": "Ethical Hacker Level 1",
+        "title_en": "Ethical Hacker Level 1",
+        "title_ru": "Ethical Hacker Level 1",
+        "sub": "Kibertəhlükəsizlik & Şəbəkə Müdafiəsi",
+        "sub_az": "Kibertəhlükəsizlik & Şəbəkə Müdafiəsi",
+        "sub_en": "Cybersecurity & Network Defense",
+        "sub_ru": "Кибербезопасность и Сетевая Защита"
+      },
+      {
+        "icon": "🔐",
+        "title": "Ethical Hacker Level 2",
+        "title_az": "Ethical Hacker Level 2",
+        "title_en": "Ethical Hacker Level 2",
+        "title_ru": "Ethical Hacker Level 2",
+        "sub": "Təkmil Penetrasiya & Təhlükə Analizi",
+        "sub_az": "Təkmil Penetrasiya & Təhlükə Analizi",
+        "sub_en": "Advanced Penetration & Threat Analysis",
+        "sub_ru": "Продвинутое Тестирование на Проникновение"
+      },
+      {
+        "icon": "🥇",
+        "title": "Milli Abilimpiya Qızıl Medal (2026)",
+        "title_az": "Milli Abilimpiya Qızıl Medal (2026)",
+        "title_en": "National Abilympics Gold Medal (2026)",
+        "title_ru": "Золотая Медаль Национального Абилимпикса (2026)",
+        "sub": "İnformasiya Texnologiyaları üzrə I Yer",
+        "sub_az": "İnformasiya Texnologiyaları üzrə I Yer",
+        "sub_en": "1st Place in Information Technology",
+        "sub_ru": "I Место по Информационным Технологиям"
+      },
+      {
+        "icon": "🤖",
+        "title": "Mini Sumo Robototexnika Çempionu",
+        "title_az": "Mini Sumo Robototexnika Çempionu",
+        "title_en": "Mini Sumo Robotics Champion",
+        "title_ru": "Чемпион по Робототехнике Мини-Сумо",
+        "sub": "Azərbaycan Beynəlxalq Robot Olimpiadası (2026)",
+        "sub_az": "Azərbaycan Beynəlxalq Robot Olimpiadası (2026)",
+        "sub_en": "Azerbaijan International Robot Olympiad (2026)",
+        "sub_ru": "Азербайджанская Межд. Робот Олимпиада (2026)"
+      },
+      {
+        "icon": "🚀",
+        "title": "FIRST Robotics & NASA Layihəsi",
+        "title_az": "FIRST Robotics & NASA Layihəsi",
+        "title_en": "FIRST Robotics & NASA Project",
+        "title_ru": "FIRST Robotics и Проект NASA",
+        "sub": "Beynəlxalq Mühəndislik və Robototexnika (ABŞ)",
+        "sub_az": "Beynəlxalq Mühəndislik və Robototexnika (ABŞ)",
+        "sub_en": "International Engineering & Robotics (USA)",
+        "sub_ru": "Международная Инженерия и Робототехника (США)"
+      },
+      {
+        "icon": "🌟",
+        "title": "“İlin Gənci” Fəxri Dövlət Mükafatı",
+        "title_az": "“İlin Gənci” Fəxri Dövlət Mükafatı",
+        "title_en": "“Youth of the Year” State Award",
+        "title_ru": "Почетная Госпремия «Молодежь года»",
+        "sub": "İctimai Fəallıq və İnklüziv Layihələrə Töhfə",
+        "sub_az": "İctimai Fəallıq və İnklüziv Layihələrə Töhfə",
+        "sub_en": "Social Engagement & Contribution to Inclusive Projects",
+        "sub_ru": "Общественная Активность и Вклад в Инклюзивные Проекты"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "senan1.jpeg",
+        "caption": "Mirzəzadə Sənan — Fəxri Tələbə Portreti",
+        "caption_az": "Mirzəzadə Sənan — Fəxri Tələbə Portreti",
+        "caption_en": "Sanan Mirzazada — Honor Student Portrait",
+        "caption_ru": "Мирзазаде Санан — Портрет Почетного Студента"
+      },
+      {
+        "type": "image",
+        "src": "senan2.jpeg",
+        "caption": "Milli Abilimpiya Mükafatlandırma Mərasimi",
+        "caption_az": "Milli Abilimpiya Mükafatlandırma Mərasimi",
+        "caption_en": "National Abilympics Awarding Ceremony",
+        "caption_ru": "Церемония Награждения Национального Абилимпикса"
+      },
+      {
+        "type": "image",
+        "src": "senan3.jpeg",
+        "caption": "Mini Sumo Robototexnika Çempionluğu",
+        "caption_az": "Mini Sumo Robototexnika Çempionluğu",
+        "caption_en": "Mini Sumo Robotics Championship",
+        "caption_ru": "Чемпионство по Робототехнике Мини-Сумо"
+      },
+      {
+        "type": "image",
+        "src": "senan4.jpeg",
+        "caption": "FIRST Robotics (NASA) Beynəlxalq Yarışı",
+        "caption_az": "FIRST Robotics (NASA) Beynəlxalq Yarışı",
+        "caption_en": "FIRST Robotics (NASA) International Competition",
+        "caption_ru": "FIRST Robotics (NASA) Международные Соревнования"
+      },
+      {
+        "type": "image",
+        "src": "senan5.jpeg",
+        "caption": "Kibertəhlükəsizlik & Ethical Hacker Proqramı",
+        "caption_az": "Kibertəhlükəsizlik & Ethical Hacker Proqramı",
+        "caption_en": "Cybersecurity & Ethical Hacker Program",
+        "caption_ru": "Кибербезопасность и Программа Ethical Hacker"
+      },
+      {
+        "type": "image",
+        "src": "senan7.jpeg",
+        "caption": "16-cı Beynəlxalq MEB Robot Yarışı (Türkiyə)",
+        "caption_az": "16-cı Beynəlxalq MEB Robot Yarışı (Türkiyə)",
+        "caption_en": "16th International MEB Robot Contest (Türkiye)",
+        "caption_ru": "16-й Международный Конкурс MEB Robot (Турция)"
+      },
+      {
+        "type": "image",
+        "src": "senan8.jpeg",
+        "caption": "Sosial İnklüziv Layihələr & Könüllü Dəstək",
+        "caption_az": "Sosial İnklüziv Layihələr & Könüllü Dəstək",
+        "caption_en": "Social Inclusivity Projects & Volunteer Support",
+        "caption_ru": "Социальные Инклюзивные Проекты и Менторство"
+      },
+      {
+        "type": "image",
+        "src": "senan9.jpeg",
+        "caption": "“İlin Gənci” Mükafat Təqdimatı",
+        "caption_az": "“İlin Gənci” Mükafat Təqdimatı",
+        "caption_en": "“Youth of the Year” Award Presentation",
+        "caption_ru": "Вручение Награды «Молодежь года»"
+      },
+      {
+        "type": "video",
+        "src": "senan10.mp4",
+        "caption": "Robototexnika və Canlı Çıxış Video Xronikası",
+        "caption_az": "Robototexnika və Canlı Çıxış Video Xronikası",
+        "caption_en": "Robotics & Live Demonstration Video Chronicle",
+        "caption_ru": "Видеохроника Робототехники и Выступлений"
+      },
+      {
+        "type": "image",
+        "src": "senan11.jpeg",
+        "caption": "Beynəlxalq Robot Arena və Hazırlıq",
+        "caption_az": "Beynəlxalq Robot Arena və Hazırlıq",
+        "caption_en": "International Robot Arena & Preparation",
+        "caption_ru": "Международная Робот-Арена и Подготовка"
+      },
+      {
+        "type": "image",
+        "src": "senan12.jpeg",
+        "caption": "Diplomlar, Qızıl Medallar və Təltiflər",
+        "caption_az": "Diplomlar, Qızıl Medallar və Təltiflər",
+        "caption_en": "Diplomas, Gold Medals and Distinctions",
+        "caption_ru": "Дипломы, Золотые Медали и Награды"
+      }
+    ]
+  },
+  {
+    "id": "elvin-memmedov",
+    "fullName": "Məmmədov Elvin",
+    "fullName_az": "Məmmədov Elvin",
+    "fullName_en": "Elvin Mammadov",
+    "fullName_ru": "Мамедов Эльвин",
+    "photo": "certificates/thumbs/cert_elvin_1.jpg",
+    "fallbackPhoto": "certificates/cert_elvin_1.jpg",
+    "kickerIcon": "🥋",
+    "kicker": "Cüdo & Hərbi-Vətənpərvərlik İdmanı",
+    "kicker_az": "Cüdo & Hərbi-Vətənpərvərlik İdmanı",
+    "kicker_en": "Judo & Martial Athletics",
+    "kicker_ru": "Дзюдо и Боевой Спорт",
+    "highlightsHeading": "ƏSAS İDMAN NAİLİYYƏTLƏRİ VƏ DƏYƏRLƏR",
+    "highlightsHeading_az": "ƏSAS İDMAN NAİLİYYƏTLƏRİ VƏ DƏYƏRLƏR",
+    "highlightsHeading_en": "KEY SPORTS ACHIEVEMENTS & VALUES",
+    "highlightsHeading_ru": "ОСНОВНЫЕ СПОРТИВНЫЕ ДОСТИЖЕНИЯ И ЦЕННОСТИ",
+    "avatarYearTag": "🥋 BAKI 2026 · 73 kq",
+    "titleBadge": "🥇 Qızıl & 🥈 Gümüş Cüdo Çempionu",
+    "titleBadge_az": "🥇 Qızıl & 🥈 Gümüş Cüdo Çempionu",
+    "titleBadge_en": "🥇 Gold & 🥈 Silver Judo Champion",
+    "titleBadge_ru": "🥇 Золотой и 🥈 Серебряный Чемпион по дзюдо",
+    "role": "Cüdo İdmançısı · “Ağdama Qayıdış” Açıq Birinciliyinin Qalibi (I və II Yer)",
+    "role_az": "Cüdo İdmançısı · “Ağdama Qayıdış” Açıq Birinciliyinin Qalibi (I və II Yer)",
+    "role_en": "Judoka · Winner & Medalist of “Return to Agdam” Open Championship (1st & 2nd Place)",
+    "role_ru": "Дзюдоист · Победитель открытого первенства «Возвращение в Агдам» (I и II место)",
+    "categories": [
+      "sports"
+    ],
+    "statusText": "Qara Kəmər · 73 kq Çempion & Mükafatçı",
+    "statusText_az": "Qara Kəmər · 73 kq Çempion & Mükafatçı",
+    "statusText_en": "Black Belt · 73 kg Champion & Medalist",
+    "statusText_ru": "Черный пояс · 73 кг Чемпион и призер",
+    "quote": "Tatami yalnız güc deyil, həm də dəmir intizam, rəqibə hörmət və vətən sevgisidir. Hər qələbə kollecimizin və bayrağımızın şərəfidir.",
+    "quote_az": "Tatami yalnız güc deyil, həm də dəmir intizam, rəqibə hörmət və vətən sevgisidir. Hər qələbə kollecimizin və bayrağımızın şərəfidir.",
+    "quote_en": "The tatami is not just about strength; it is iron discipline, respect for opponents, and devotion to the nation.",
+    "quote_ru": "Татами — это не просто сила, это железная дисциплина, уважение к сопернику и любовь к Родине.",
+    "flags": [
+      {
+        "name": "Azərbaycan",
+        "name_az": "Azərbaycan",
+        "name_en": "Azerbaijan",
+        "name_ru": "Азербайджан",
+        "emoji": "🇦🇿",
+        "note": "Respublika & Şəhər Turnirləri",
+        "note_az": "Respublika & Şəhər Turnirləri",
+        "note_en": "National & City Tournaments",
+        "note_ru": "Республиканские и городские турниры"
+      }
+    ],
+    "keyHighlights": [
+      {
+        "year": "2026",
+        "flag": "🥇",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — I YER (Qızıl Medal)",
+        "title_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — I YER (Qızıl Medal)",
+        "title_en": "“Return to Agdam” Open Judo Championship — 1st Place (Gold)",
+        "title_ru": "Открытое первенство «Возвращение в Агдам» — I место (Золото)",
+        "text": "8 Noyabr – Zəfər Gününə həsr olunmuş açıq cüdo birinciliyində 73 kq çəki dərəcəsində bütün rəqiblərini məğlub edərək I YERİ tutmuş, Qızıl medal və rəsmi diplomla təltif olunmuşdur.",
+        "text_az": "8 Noyabr – Zəfər Gününə həsr olunmuş açıq cüdo birinciliyində 73 kq çəki dərəcəsində bütün rəqiblərini məğlub edərək I YERİ tutmuş, Qızıl medal və rəsmi diplomla təltif olunmuşdur.",
+        "text_en": "Defeated all opponents in the 73 kg category at the Victory Day open championship to win 1st Place (Gold Medal) and official Diploma.",
+        "text_ru": "Победил всех соперников в категории 73 кг на открытом первенстве ко Дню Победы, завоевав I место (Золотая медаль) и официальный диплом."
+      },
+      {
+        "year": "2026",
+        "flag": "🥈",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II YER (Gümüş Medal)",
+        "title_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II YER (Gümüş Medal)",
+        "title_en": "“Return to Agdam” Open Judo Championship — 2nd Place (Silver)",
+        "title_ru": "Открытое первенство «Возвращение в Агдам» — II место (Серебро)",
+        "text": "73 kq çəki dərəcəsində yüksək texniki ustalıq nümayiş etdirərək final mərhələsində II yerə yüksəlmiş və Gümüş medalla təltif edilmişdir.",
+        "text_az": "73 kq çəki dərəcəsində yüksək texniki ustalıq nümayiş etdirərək final mərhələsində II yerə yüksəlmiş və Gümüş medalla təltif edilmişdir.",
+        "text_en": "Demonstrated master-level judo technique in 73 kg division, reaching the finals to take 2nd Place and Silver medal.",
+        "text_ru": "Продемонстрировал высокое техническое мастерство в категории 73 кг, заняв II место и завоевав серебряную медаль."
+      }
+    ],
+    "tags": [
+      "#MəmmədovElvin",
+      "#Cüdo",
+      "#QaraKəmər",
+      "#73kq",
+      "#QızılMedal_IYer",
+      "#GümüşMedal_IIYer",
+      "#AğdamaQayıdış",
+      "#ZəfərGünü2026",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_az": [
+      "#MəmmədovElvin",
+      "#Cüdo",
+      "#QaraKəmər",
+      "#73kq",
+      "#QızılMedal_IYer",
+      "#GümüşMedal_IIYer",
+      "#AğdamaQayıdış",
+      "#ZəfərGünü2026",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_en": [
+      "#ElvinMammadov",
+      "#Judo",
+      "#BlackBelt",
+      "#73kg",
+      "#GoldMedal_1stPlace",
+      "#SilverMedal_2ndPlace",
+      "#ReturnToAgdam",
+      "#BDRNK_HonorStudent"
+    ],
+    "tags_ru": [
+      "#ЭльвинМамедов",
+      "#Дзюдо",
+      "#ЧерныйПояс",
+      "#73кг",
+      "#Золото_IМесто",
+      "#Серебро_IIМесто",
+      "#ВозвращениеВАгдам",
+      "#ПочетныйСтудентБГКСТ"
+    ],
+    "timeline": [
+      {
+        "year": "2026",
+        "badge": "🥇 Bakı 2026 · Qızıl Medal & Diplom",
+        "badge_az": "🥇 Bakı 2026 · Qızıl Medal & Diplom",
+        "badge_en": "🥇 Baku 2026 · Gold Medal & Diploma",
+        "badge_ru": "🥇 Баку 2026 · Золотая медаль и диплом",
+        "title": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi — I Yer",
+        "title_az": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi — I Yer",
+        "title_en": "Victory Day “Return to Agdam” Open Judo Championship — 1st Place",
+        "title_ru": "Открытое первенство «Возвращение в Агдам» ко Дню Победы — I место",
+        "desc": "Gənclər və İdman Nazirliyi, Azərbaycan Cüdo Federasiyası və “Ağdama Qayıdış” İdman Klubunun təşkilatçılığı ilə 73 kq çəkidə I YER (Qızıl Medal).",
+        "desc_az": "Gənclər və İdman Nazirliyi, Azərbaycan Cüdo Federasiyası və “Ağdama Qayıdış” İdman Klubunun təşkilatçılığı ilə 73 kq çəkidə I YER (Qızıl Medal).",
+        "desc_en": "Awarded 1st place (Gold Medal) and official Diploma in 73 kg category organized by “Return to Agdam” Sports Club and Azerbaijan Judo Federation.",
+        "desc_ru": "I место (Золотая медаль) и официальный диплом в категории 73 кг на открытом первенстве клуба «Возвращение в Агдам» и Федерации дзюдо Азербайджана."
+      },
+      {
+        "year": "2026",
+        "badge": "🥈 Bakı 2026 · Gümüş Medal & Diplom",
+        "badge_az": "🥈 Bakı 2026 · Gümüş Medal & Diplom",
+        "badge_en": "🥈 Baku 2026 · Silver Medal & Diploma",
+        "badge_ru": "🥈 Баку 2026 · Серебряная медаль и диплом",
+        "title": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi — II Yer",
+        "title_az": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi — II Yer",
+        "title_en": "Victory Day “Return to Agdam” Open Judo Championship — 2nd Place",
+        "title_ru": "Открытое первенство «Возвращение в Агдам» ко Дню Победы — II место",
+        "desc": "Açıq birincilikdə 73 kq çəki dərəcəsində finala yüksələrək II yeri tutmuş, Gümüş medal və rəsmi diplomla təltif edilmişdir.",
+        "desc_az": "Açıq birincilikdə 73 kq çəki dərəcəsində finala yüksələrək II yeri tutmuş, Gümüş medal və rəsmi diplomla təltif edilmişdir.",
+        "desc_en": "Reached finals in 73 kg class to take 2nd place and official Silver award.",
+        "desc_ru": "Вышел в финал в весовой категории 73 кг, заняв II место и завоевав серебряную медаль."
+      }
+    ],
+    "fullBio": [
+      "Məmmədov Elvin Bakı Dövlət Rabitə və Nəqliyyat Kollecinin təhsil mühitində nizam-intizamı, fəallığı və tatamidə göstərdiyi yüksək mübarizə əzmi ilə seçilən fəxri tələbə-idmançılarımızdandır.",
+      "2026-cı ildə 8 Noyabr – Zəfər Gününə həsr olunmuş “Ağdama Qayıdış” cüdo açıq birinciliyində kollecimizi layiqincə təmsil edərək 73 kq çəki dərəcəsində həm I Yer (Qızıl Medal), həm də II Yer (Gümüş Medal) qazanmışdır.",
+      "Təhsili və peşəkar idman məşqlərini uğurla vəhdətləşdirən Elvin gənclər arasında sağlam həyat tərzinin və vətənpərvərlik ruhunun parlaq nümunəsidir."
+    ],
+    "fullBio_az": [
+      "Məmmədov Elvin Bakı Dövlət Rabitə və Nəqliyyat Kollecinin təhsil mühitində nizam-intizamı, fəallığı və tatamidə göstərdiyi yüksək mübarizə əzmi ilə seçilən fəxri tələbə-idmançılarımızdandır.",
+      "2026-cı ildə 8 Noyabr – Zəfər Gününə həsr olunmuş “Ağdama Qayıdış” cüdo açıq birinciliyində kollecimizi layiqincə təmsil edərək 73 kq çəki dərəcəsində həm I Yer (Qızıl Medal), həm də II Yer (Gümüş Medal) qazanmışdır.",
+      "Təhsili və peşəkar idman məşqlərini uğurla vəhdətləşdirən Elvin gənclər arasında sağlam həyat tərzinin və vətənpərvərlik ruhunun parlaq nümunəsidir."
+    ],
+    "fullBio_en": [
+      "Elvin Mammadov is an esteemed student-athlete at Baku State College of Communications and Transport, recognized for his discipline, determination, and excellence on the judo tatami.",
+      "At the 2026 “Return to Agdam” Open Judo Championship dedicated to Victory Day, he demonstrated supreme skill in the 73 kg division, claiming both 1st Place (Gold Medal) and 2nd Place (Silver Medal).",
+      "Balancing academic studies with elite athletics, Elvin stands as an inspiring role model of athletic dedication and patriotic values for college youth."
+    ],
+    "fullBio_ru": [
+      "Мамедов Эльвин — почетный студент-спортсмен Бакинского государственного колледжа связи и транспорта, отличающийся железной дисциплиной и выдающимися успехами в дзюдо.",
+      "На открытом первенстве «Возвращение в Агдам» 2026 года, посвященном Дню Победы, Эльвин блестяще выступил в категории 73 кг, завоевав как I место (Золотая медаль), так и II место (Серебряная медаль).",
+      "Успешно совмещая учебу со спортом, Эльвин является образцом здорового образа жизни и патриотизма для молодежи."
+    ],
+    "certificates": [
+      {
+        "icon": "🥇",
+        "title": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — I Yer (Qızıl)",
+        "title_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — I Yer (Qızıl)",
+        "title_en": "“Return to Agdam” Open Judo Championship — 1st Place (Gold)",
+        "title_ru": "Открытое первенство «Возвращение в Агдам» — I место (Золото)",
+        "sub": "73 kq çəki dərəcəsi · Zəfər Günü Açıq Birinciliyi",
+        "sub_az": "73 kq çəki dərəcəsi · Zəfər Günü Açıq Birinciliyi",
+        "sub_en": "73 kg weight division · Victory Day Championship",
+        "sub_ru": "Весовая категория 73 кг · Первенство ко Дню Победы"
+      },
+      {
+        "icon": "🥈",
+        "title": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II Yer (Gümüş)",
+        "title_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II Yer (Gümüş)",
+        "title_en": "“Return to Agdam” Open Judo Championship — 2nd Place (Silver)",
+        "title_ru": "Открытое первенство «Возвращение в Агдам» — II место (Серебро)",
+        "sub": "73 kq çəki dərəcəsi · Rəsmi Təltif Diplomu",
+        "sub_az": "73 kq çəki dərəcəsi · Rəsmi Təltif Diplomu",
+        "sub_en": "73 kg weight division · Official Award Diploma",
+        "sub_ru": "Весовая категория 73 кг · Официальный диплом"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_elvin_1.jpg",
+        "caption": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi I Yer (Qızıl Medal) Rəsmi Diplomu",
+        "caption_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi I Yer (Qızıl Medal) Rəsmi Diplomu",
+        "caption_en": "Official Diploma — 1st Place (Gold Medal) “Return to Agdam” Judo Championship",
+        "caption_ru": "Официальный диплом за I место (Золотая медаль) первенства «Возвращение в Агдам»"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_elvin_2.jpg",
+        "caption": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi II Yer (Gümüş Medal) Rəsmi Diplomu",
+        "caption_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi II Yer (Gümüş Medal) Rəsmi Diplomu",
+        "caption_en": "Official Diploma — 2nd Place (Silver Medal) “Return to Agdam” Judo Championship",
+        "caption_ru": "Официальный диплом за II место (Серебряная медаль) первенства «Возвращение в Агдам»"
+      },
+      {
+        "type": "image",
+        "src": "elvinx2.jpeg",
+        "caption": "Məmmədov Elvin — Ağ kimonoda tatami portreti",
+        "caption_az": "Məmmədov Elvin — Ağ kimonoda tatami portreti",
+        "caption_en": "Elvin Mammadov — Tatami portrait in white judogi",
+        "caption_ru": "Мамедов Эльвин — Портрет в белом кимоно на татами"
+      },
+      {
+        "type": "image",
+        "src": "elvinx1.jpeg",
+        "caption": "Məmmədov Elvin — Göy kimonoda rəsmi idman zalı portreti",
+        "caption_az": "Məmmədov Elvin — Göy kimonoda rəsmi idman zalı portreti",
+        "caption_en": "Elvin Mammadov — Portrait in blue judogi at dojo",
+        "caption_ru": "Мамедов Эльвин — Портрет в синем кимоно в зале"
+      }
+    ]
+  },
+  {
+    "id": "aysel-eliyeva",
+    "fullName": "Əliyeva Aysel",
+    "fullName_az": "Əliyeva Aysel",
+    "fullName_en": "Aysel Aliyeva",
+    "fullName_ru": "Алиева Айсель",
+    "photo": "certificates/thumbs/cert_aysel_1.jpg",
+    "fallbackPhoto": "certificates/cert_aysel_1.jpg",
+    "kickerIcon": "💃",
+    "kicker": "İncəsənət & Rəqs · K-Pop, Modern & Hip-Hop",
+    "kicker_az": "İncəsənət & Rəqs · K-Pop, Modern & Hip-Hop",
+    "kicker_en": "Arts & Dance · K-Pop, Modern & Hip-Hop",
+    "kicker_ru": "Искусство и Танец · K-Pop, Модерн и Хип-Хоп",
+    "highlightsHeading": "RESPUBLİKA VƏ ŞƏHƏR RƏQS ÇEMPİONATLARI",
+    "highlightsHeading_az": "RESPUBLİKA VƏ ŞƏHƏR RƏQS ÇEMPİONATLARI",
+    "highlightsHeading_en": "NATIONAL & CITY DANCE CHAMPIONSHIPS",
+    "highlightsHeading_ru": "РЕСПУБЛИКАНСКИЕ И ГОРОДСКИЕ ЧЕМПИОНАТЫ ПО ТАНЦАМ",
+    "avatarYearTag": "🏆 7 QAT QIZIL ÇEMPİON",
+    "titleBadge": "🏆 7 Qat Qızıl Təltif & Çempion",
+    "titleBadge_az": "🏆 7 Qat Qızıl Təltif & Çempion",
+    "titleBadge_en": "🏆 7x Gold Awardee & Champion",
+    "titleBadge_ru": "🏆 7-кратная золотая медалистка и чемпионка",
+    "role": "BDRNK Tələbəsi · Respublika Rəqs Çempionatları və K-Pop Festivallarının Qalibi",
+    "role_az": "BDRNK Tələbəsi · Respublika Rəqs Çempionatları və K-Pop Festivallarının Qalibi",
+    "role_en": "BDRNK Student · Winner of National Dance Championships & K-Pop Festivals",
+    "role_ru": "Студентка БГКСТ · Победительница республиканских чемпионатов по танцам и фестивалей K-Pop",
+    "categories": [
+      "arts"
+    ],
+    "statusText": "7 Rəsmi Qızıl Diplom və Çempionluq Mükafatı",
+    "statusText_az": "7 Rəsmi Qızıl Diplom və Çempionluq Mükafatı",
+    "statusText_en": "7 Official Gold Diplomas & Championship Awards",
+    "statusText_ru": "7 официальных золотых дипломов и наград",
+    "quote": "Səhnə mənim üçün emosiyaları, zəhməti və sənət sevgisini tamaşaçı ilə bölüşməkdir. Hər ritm və hər hərəkət yeni bir zirvəyə addımdır.",
+    "quote_az": "Səhnə mənim üçün emosiyaları, zəhməti və sənət sevgisini tamaşaçı ilə bölüşməkdir. Hər ritm və hər hərəkət yeni bir zirvəyə addımdır.",
+    "quote_en": "The stage is sharing emotion, hard work, and artistic love with the audience. Every rhythm is a step toward a new summit.",
+    "quote_ru": "Сцена для меня — это возможность делиться эмоциями, трудом и любовью к искусству. Каждый ритм — шаг к новой вершине.",
+    "flags": [
+      {
+        "name": "Azərbaycan",
+        "name_az": "Azərbaycan",
+        "name_en": "Azerbaijan",
+        "name_ru": "Азербайджан",
+        "emoji": "🇦🇿",
+        "note": "ARA & AGİ Respublika Çempionatları",
+        "note_az": "ARA & AGİ Respublika Çempionatları",
+        "note_en": "ADA & AYU National Championships",
+        "note_ru": "Чемпионаты АТА и САМ"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "🥇",
+        "val": "7 QAT ÇEMPİON",
+        "val_az": "7 QAT ÇEMPİON",
+        "val_en": "7x CHAMPION",
+        "val_ru": "7-КРАТНЫЙ ЧЕМПИОН",
+        "label": "Respublika Çempionatı",
+        "label_az": "Respublika Çempionatı",
+        "label_en": "National Championship",
+        "label_ru": "Чемпионат Республики",
+        "sub": "Azərbaycan və Bakı birincilikləri",
+        "sub_az": "Azərbaycan və Bakı birincilikləri",
+        "sub_en": "Azerbaijan & Baku championships",
+        "sub_ru": "Первенства Азербайджана и Баку"
+      },
+      {
+        "icon": "🎵",
+        "val": "K-POP FESTİVAL",
+        "val_az": "K-POP FESTİVAL",
+        "val_en": "K-POP FESTIVAL",
+        "val_ru": "K-POP ФЕСТИВАЛЬ",
+        "label": "I Yer Qalibi",
+        "label_az": "I Yer Qalibi",
+        "label_en": "1st Place Winner",
+        "label_ru": "Победительница (I место)",
+        "sub": "Gənclər Festivalı Qızıl Diplom",
+        "sub_az": "Gənclər Festivalı Qızıl Diplom",
+        "sub_en": "Youth Festival Gold Diploma",
+        "sub_ru": "Золотой диплом молодежного фестиваля"
+      },
+      {
+        "icon": "🏆",
+        "val": "RESPUBLİKA KUBOKU",
+        "val_az": "RESPUBLİKA KUBOKU",
+        "val_en": "NATIONAL CUP",
+        "val_ru": "КУБОК РЕСПУБЛИКИ",
+        "label": "Rəqs Assosiasiyası",
+        "label_az": "Rəqs Assosiasiyası",
+        "label_en": "Dance Association",
+        "label_ru": "Ассоциация Танца",
+        "sub": "Xüsusi Səhnə Məharəti Diplomu",
+        "sub_az": "Xüsusi Səhnə Məharəti Diplomu",
+        "sub_en": "Special Stage Performance Diploma",
+        "sub_ru": "Диплом за сценическое мастерство"
+      }
+    ],
+    "tags": [
+      "#ƏliyevaAysel",
+      "#Rəqs",
+      "#KPop",
+      "#ModernDance",
+      "#HipHop",
+      "#AzərbaycanRəqsÇempionatı",
+      "#BakıRəqsÇempionatı",
+      "#QızılMedal_7Qat",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_az": [
+      "#ƏliyevaAysel",
+      "#Rəqs",
+      "#KPop",
+      "#ModernDance",
+      "#HipHop",
+      "#AzərbaycanRəqsÇempionatı",
+      "#BakıRəqsÇempionatı",
+      "#QızılMedal_7Qat",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "highlights": [
+      {
+        "year": "2025",
+        "flag": "🥇",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "Azərbaycan Rəqs Çempionatı 2025 — I Yer (Qızıl)",
+        "title_az": "Azərbaycan Rəqs Çempionatı 2025 — I Yer (Qızıl)",
+        "title_en": "Azerbaijan Dance Championship 2025 — 1st Place (Gold)",
+        "title_ru": "Чемпионат Азербайджана по танцам 2025 — I место (Золото)",
+        "text": "Azərbaycan Rəqs Assosiasiyası və Azərbaycan Gənclər İttifaqının rəsmi Respublika çempionatında ən yüksək bal toplayaraq I YERƏ layiq görülmüşdür.",
+        "text_az": "Azərbaycan Rəqs Assosiasiyası və Azərbaycan Gənclər İttifaqının rəsmi Respublika çempionatında ən yüksək bal toplayaraq I YERƏ layiq görülmüşdür.",
+        "text_en": "Earned top scores to win 1st Place at the official National Championship by Azerbaijan Dance Association and AYU.",
+        "text_ru": "Набрала высший балл и завоевала I место на официальном чемпионате Ассоциации танца Азербайджана и САМ."
+      },
+      {
+        "year": "2025",
+        "flag": "🥇",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "Bakı Rəqs Çempionatı & K-POP Talent Festival — Çempion",
+        "title_az": "Bakı Rəqs Çempionatı & K-POP Talent Festival — Çempion",
+        "title_en": "Baku Dance Championship & K-POP Talent Festival — Champion",
+        "title_ru": "Чемпионат Баку по танцам и фестиваль K-Pop — Чемпион",
+        "text": "Paytaxt birinciliyində və K-Pop gənclər festivalında fərdi və komanda çıxışları ilə I Yer və xüsusi dərəcəli mükafatlar qazanmışdır.",
+        "text_az": "Paytaxt birinciliyində və K-Pop gənclər festivalında fərdi və komanda çıxışları ilə I Yer və xüsusi dərəcəli mükafatlar qazanmışdır.",
+        "text_en": "Claimed 1st place and special laureateships at the Baku City Championship and K-Pop Festival.",
+        "text_ru": "Завоевала I место и специальные награды на первенстве столицы и молодежном фестивале K-Pop."
+      }
+    ],
+    "tags_en": [
+      "#AyselAliyeva",
+      "#Dance",
+      "#KPop",
+      "#ModernDance",
+      "#HipHop",
+      "#AzerbaijanDanceChampionship",
+      "#GoldMedalist_7x",
+      "#BDRNK_HonorStudent"
+    ],
+    "tags_ru": [
+      "#АлиеваАйсель",
+      "#Танцы",
+      "#KPop",
+      "#Модерн",
+      "#ХипХоп",
+      "#ЧемпионатАзербайджанаПоТанцам",
+      "#7кратнаяЗолотаяМедалистка",
+      "#ПочетныйСтудентБГКСТ"
+    ],
+    "timeline": [
+      {
+        "year": "2025",
+        "badge": "💃 Respublika Çempionatı · I Yer",
+        "badge_az": "💃 Respublika Çempionatı · I Yer",
+        "badge_en": "💃 National Championship · 1st Place",
+        "badge_ru": "💃 Чемпионат Республики · I место",
+        "title": "Azərbaycan Rəqs Çempionatı 2025 (ARA & AGİ)",
+        "title_az": "Azərbaycan Rəqs Çempionatı 2025 (ARA & AGİ)",
+        "title_en": "Azerbaijan Dance Championship 2025 (ADA & AYU)",
+        "title_ru": "Чемпионат Азербайджана по танцам 2025 (АТА и САМ)",
+        "desc": "Müasir xoreoqrafiya və səhnə məharəti üzrə I YER Qızıl Diplom və medalına layiq görülmüşdür.",
+        "desc_az": "Müasir xoreoqrafiya və səhnə məharəti üzrə I YER Qızıl Diplom və medalına layiq görülmüşdür.",
+        "desc_en": "Awarded 1st Place Gold Diploma and medal for modern choreography and stage art.",
+        "desc_ru": "Удостоена I места, Золотого диплома и медали за современную хореографию."
+      },
+      {
+        "year": "2025",
+        "badge": "✨ Bakı Çempionatı · I Yer",
+        "badge_az": "✨ Bakı Çempionatı · I Yer",
+        "badge_en": "✨ Baku Championship · 1st Place",
+        "badge_ru": "✨ Чемпионат Баку · I место",
+        "title": "Bakı Şəhər Rəqs Çempionatı 2025",
+        "title_az": "Bakı Şəhər Rəqs Çempionatı 2025",
+        "title_en": "Baku City Dance Championship 2025",
+        "title_ru": "Чемпионат города Баку по танцам 2025",
+        "desc": "Şəhər birinciliyində solo və qrup nümayişlərində I Yer Çempionluğu.",
+        "desc_az": "Şəhər birinciliyində solo və qrup nümayişlərində I Yer Çempionluğu.",
+        "desc_en": "Championship 1st place in solo and group categories at Baku City event.",
+        "desc_ru": "Чемпионство I место в сольных и групповых номерах на первенстве Баку."
+      },
+      {
+        "year": "2025",
+        "badge": "🎵 K-POP Festivalı · I Yer",
+        "badge_az": "🎵 K-POP Festivalı · I Yer",
+        "badge_en": "🎵 K-POP Festival · 1st Place",
+        "badge_ru": "🎵 Фестиваль K-Pop · I место",
+        "title": "K-POP Talent Festival 2025",
+        "title_az": "K-POP Talent Festival 2025",
+        "title_en": "K-POP Talent Festival 2025",
+        "title_ru": "K-POP Talent Festival 2025",
+        "desc": "Gənclər arasında keçirilən istedad festivalında I Yer Qızıl Diplomat.",
+        "desc_az": "Gənclər arasında keçirilən istedad festivalında I Yer Qızıl Diplomat.",
+        "desc_en": "1st place gold laureate at the youth talent festival.",
+        "desc_ru": "Золотой дипломант I степени молодежного фестиваля талантов."
+      },
+      {
+        "year": "2025",
+        "badge": "🔥 Hip-Hop Show · I Dərəcə",
+        "badge_az": "🔥 Hip-Hop Show · I Dərəcə",
+        "badge_en": "🔥 Hip-Hop Show · 1st Degree",
+        "badge_ru": "🔥 Хип-хоп шоу · I Степень",
+        "title": "AGİ Hip-Hop & Modern Dance Show",
+        "title_az": "AGİ Hip-Hop & Modern Dance Show",
+        "title_en": "AYU Hip-Hop & Modern Dance Show",
+        "title_ru": "Хип-хоп шоу САМ",
+        "desc": "Küçə rəqsləri və müasir rəqs istiqamətində I Dərəcəli Diplomant.",
+        "desc_az": "Küçə rəqsləri və müasir rəqs istiqamətində I Dərəcəli Diplomant.",
+        "desc_en": "1st Degree Laureate in street dance and modern styles.",
+        "desc_ru": "Дипломант I степени по уличным и современным танцам."
+      },
+      {
+        "year": "2025",
+        "badge": "🏆 Azərbaycan Kuboku · I Yer",
+        "badge_az": "🏆 Azərbaycan Kuboku · I Yer",
+        "badge_en": "🏆 Azerbaijan Cup · 1st Place",
+        "badge_ru": "🏆 Кубок Азербайджана · I место",
+        "title": "Azərbaycan Rəqs Kuboku Yarışması",
+        "title_az": "Azərbaycan Rəqs Kuboku Yarışması",
+        "title_en": "Azerbaijan Dance Cup Competition",
+        "title_ru": "Кубок Азербайджана по танцам",
+        "desc": "Respublika kuboku yarışmasında I Yer Qalibi.",
+        "desc_az": "Respublika kuboku yarışmasında I Yer Qalibi.",
+        "desc_en": "1st Place Winner at the National Cup event.",
+        "desc_ru": "Победительница (I место) на Кубке Республики."
+      },
+      {
+        "year": "2025",
+        "badge": "🌟 İstedadlı Gənclər · I Yer",
+        "badge_az": "🌟 İstedadlı Gənclər · I Yer",
+        "badge_en": "🌟 Talented Youth · 1st Place",
+        "badge_ru": "🌟 Талантливая молодежь · I место",
+        "title": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi",
+        "title_az": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi",
+        "title_en": "National Talented Youth Dance Contest",
+        "title_ru": "Республиканский конкурс талантливой молодежи",
+        "desc": "İstedadlı gənclər rəqs yarışmasında I Yer.",
+        "desc_az": "İstedadlı gənclər rəqs yarışmasında I Yer.",
+        "desc_en": "1st place at the youth dance showcase.",
+        "desc_ru": "I место на конкурсе танцевальной молодежи."
+      },
+      {
+        "year": "2025",
+        "badge": "🎖️ Xüsusi Nailiyyət · Qızıl Diplom",
+        "badge_az": "🎖️ Xüsusi Nailiyyət · Qızıl Diplom",
+        "badge_en": "🎖️ Special Achievement · Gold Diploma",
+        "badge_ru": "🎖️ Особые достижения · Золотой диплом",
+        "title": "Rəqs Sənəti üzrə Xüsusi Nailiyyət Sertifikatı",
+        "title_az": "Rəqs Sənəti üzrə Xüsusi Nailiyyət Sertifikatı",
+        "title_en": "Special Achievement Certificate in Dance Arts",
+        "title_ru": "Сертификат за особые достижения в искусстве танца",
+        "desc": "Xüsusi səhnə məharəti və uğurlu bədii çıxışa görə Fəxri Sertifikat.",
+        "desc_az": "Xüsusi səhnə məharəti və uğurlu bədii çıxışa görə Fəxri Sertifikat.",
+        "desc_en": "Honorary certificate for exceptional stage mastery and artistic performance.",
+        "desc_ru": "Почетный сертификат за высокое сценическое мастерство."
+      }
+    ],
+    "fullBio": [
+      "Əliyeva Aysel Bakı Dövlət Rabitə və Nəqliyyat Kollecinin mədəni və ictimai həyatında fəal iştirak edən, səhnə mədəniyyəti və rəqs sənətində parlaq istedadı ilə seçilən fəxri tələbəmizdir.",
+      "2025-ci il ərzində Azərbaycan Rəqs Assosiasiyası və Azərbaycan Gənclər İttifaqının təşkil etdiyi Respublika və Bakı çempionatlarında, K-POP Talent Festivalında və müasir rəqs yarışmalarında ardıcıl 7 dəfə I Yerə və ali dərəcəli diplomant adlarına layiq görülmüşdür.",
+      "Kollecimizin tələbələri arasında incəsənətə, estetik zövqə və zəhmətkeşliyə ən gözəl örnək olan Aysel kollecimizi bütün səhnələrdə qürurla təmsil edir."
+    ],
+    "fullBio_az": [
+      "Əliyeva Aysel Bakı Dövlət Rabitə və Nəqliyyat Kollecinin mədəni və ictimai həyatında fəal iştirak edən, səhnə mədəniyyəti və rəqs sənətində parlaq istedadı ilə seçilən fəxri tələbəmizdir.",
+      "2025-ci il ərzində Azərbaycan Rəqs Assosiasiyası və Azərbaycan Gənclər İttifaqının təşkil etdiyi Respublika və Bakı çempionatlarında, K-POP Talent Festivalında və müasir rəqs yarışmalarında ardıcıl 7 dəfə I Yerə və ali dərəcəli diplomant adlarına layiq görülmüşdür.",
+      "Kollecimizin tələbələri arasında incəsənətə, estetik zövqə və zəhmətkeşliyə ən gözəl örnək olan Aysel kollecimizi bütün səhnələrdə qürurla təmsil edir."
+    ],
+    "fullBio_en": [
+      "Aysel Aliyeva is a distinguished student at Baku State College of Communications and Transport, renowned for her vibrant talent in dance arts and active involvement in cultural life.",
+      "Throughout 2025, she has garnered 7 consecutive 1st Place awards and elite laureateships at the Azerbaijan Dance Championship, Baku Dance Championship, K-POP Talent Festival, and street dance showcases.",
+      "Exemplifying artistic grace, dedication, and creative passion, Aysel proudly represents our college across leading cultural stages."
+    ],
+    "fullBio_ru": [
+      "Алиева Айсель — почетная студентка Бакинского государственного колледжа связи и транспорта, отличающаяся ярким талантом в танцевальном искусстве и активным участием в культурной жизни.",
+      "В течение 2025 года она завоевала 7 первых мест (I Место) и почетных дипломов на чемпионате Азербайджана по танцам, чемпионате Баку, K-POP фестивале и конкурсах современного танца.",
+      "Являясь образцом трудолюбия и эстетического вкуса, Айсель с гордостью представляет наш колледж на ведущих сценах республики."
+    ],
+    "certificates": [
+      {
+        "icon": "🥇",
+        "title": "Azərbaycan Rəqs Çempionatı 2025 — I Yer",
+        "title_az": "Azərbaycan Rəqs Çempionatı 2025 — I Yer",
+        "title_en": "Azerbaijan Dance Championship 2025 — 1st Place",
+        "title_ru": "Чемпионат Азербайджана по танцам 2025 — I место",
+        "sub": "Azərbaycan Rəqs Assosiasiyası & AGİ",
+        "sub_az": "Azərbaycan Rəqs Assosiasiyası & AGİ",
+        "sub_en": "Azerbaijan Dance Association & AYU",
+        "sub_ru": "Ассоциация танца Азербайджана и САМ"
+      },
+      {
+        "icon": "✨",
+        "title": "Bakı Rəqs Çempionatı 2025 — I Yer",
+        "title_az": "Bakı Rəqs Çempionatı 2025 — I Yer",
+        "title_en": "Baku Dance Championship 2025 — 1st Place",
+        "title_ru": "Чемпионат Баку по танцам 2025 — I место",
+        "sub": "Şəhər Birinciliyi · Qızıl Medal",
+        "sub_az": "Şəhər Birinciliyi · Qızıl Medal",
+        "sub_en": "City Championship · Gold Medal",
+        "sub_ru": "Первенство города · Золотая медаль"
+      },
+      {
+        "icon": "🎵",
+        "title": "K-POP Talent Festival 2025 — I Yer Çempionu",
+        "title_az": "K-POP Talent Festival 2025 — I Yer Çempionu",
+        "title_en": "K-POP Talent Festival 2025 — 1st Place Champion",
+        "title_ru": "K-POP Talent Festival 2025 — Чемпион (I место)",
+        "sub": "Gənclər Festivalı · Qızıl Diplom",
+        "sub_az": "Gənclər Festivalı · Qızıl Diplom",
+        "sub_en": "Youth Festival · Gold Diploma",
+        "sub_ru": "Молодежный фестиваль · Золотой диплом"
+      },
+      {
+        "icon": "🔥",
+        "title": "AGİ Hip-Hop & Modern Dance Show — I Dərəcə",
+        "title_az": "AGİ Hip-Hop & Modern Dance Show — I Dərəcə",
+        "title_en": "AYU Hip-Hop & Modern Dance Show — 1st Degree",
+        "title_ru": "Хип-хоп шоу САМ — Дипломант I Степени",
+        "sub": "Müasir Küçə Rəqsləri Layihəsi",
+        "sub_az": "Müasir Küçə Rəqsləri Layihəsi",
+        "sub_en": "Modern Street Dance Project",
+        "sub_ru": "Проект современного уличного танца"
+      },
+      {
+        "icon": "🏆",
+        "title": "Azərbaycan Rəqs Kuboku — I Yer",
+        "title_az": "Azərbaycan Rəqs Kuboku — I Yer",
+        "title_en": "Azerbaijan Dance Cup — 1st Place",
+        "title_ru": "Кубок Азербайджана по танцам — I место",
+        "sub": "Respublika Kuboku · Qızıl Mükafat",
+        "sub_az": "Respublika Kuboku · Qızıl Mükafat",
+        "sub_en": "National Cup · Gold Award",
+        "sub_ru": "Кубок Республики · Золотая награда"
+      },
+      {
+        "icon": "🌟",
+        "title": "Respublika İstedadlı Gənclər Müsabiqəsi — I Yer",
+        "title_az": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi — I Yer",
+        "title_en": "National Talented Youth Dance Contest — 1st Place",
+        "title_ru": "Республиканский конкурс талантливой молодежи — I место",
+        "sub": "İstedadlı Gənclər Şousu",
+        "sub_az": "İstedadlı Gənclər Şousu",
+        "sub_en": "Talented Youth Showcase",
+        "sub_ru": "Шоу талантливой молодежи"
+      },
+      {
+        "icon": "🎖️",
+        "title": "Rəqs Sənəti Xüsusi Nailiyyət Sertifikatı",
+        "title_az": "Rəqs Sənəti Xüsusi Nailiyyət Sertifikatı",
+        "title_en": "Dance Art Special Achievement Certificate",
+        "title_ru": "Сертификат за особые достижения в танце",
+        "sub": "Xüsusi Səhnə Məharəti Diplomu",
+        "sub_az": "Xüsusi Səhnə Məharəti Diplomu",
+        "sub_en": "Special Stage Performance Diploma",
+        "sub_ru": "Диплом за сценическое мастерство"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_aysel_1.jpg",
+        "caption": "Azərbaycan Rəqs Çempionatı 2025 I Yer (Qızıl Medal) Diplomu",
+        "caption_az": "Azərbaycan Rəqs Çempionatı 2025 I Yer (Qızıl Medal) Diplomu",
+        "caption_en": "Official Diploma — 1st Place Azerbaijan Dance Championship 2025",
+        "caption_ru": "Официальный диплом за I место чемпионата Азербайджана по танцам 2025"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_aysel_2.jpg",
+        "caption": "Bakı Rəqs Çempionatı 2025 I Yer Diplomu",
+        "caption_az": "Bakı Rəqs Çempionatı 2025 I Yer Diplomu",
+        "caption_en": "Official Diploma — 1st Place Baku Dance Championship 2025",
+        "caption_ru": "Официальный диплом за I место чемпионата Баку по танцам 2025"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_aysel_3.jpg",
+        "caption": "K-POP Talent Festival 2025 I Yer Çempionluq Diplomu",
+        "caption_az": "K-POP Talent Festival 2025 I Yer Çempionluq Diplomu",
+        "caption_en": "Official Diploma — 1st Place K-POP Talent Festival 2025",
+        "caption_ru": "Официальный диплом за I место фестиваля K-POP 2025"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_aysel_4.jpg",
+        "caption": "AGİ Hip-Hop Show I Dərəcəli Diplomant Təltifi",
+        "caption_az": "AGİ Hip-Hop Show I Dərəcəli Diplomant Təltifi",
+        "caption_en": "Official Award — 1st Degree Laureate AYU Hip-Hop Show",
+        "caption_ru": "Официальная награда дипломанта I степени хип-хоп шоу САМ"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_aysel_5.jpg",
+        "caption": "Azərbaycan Rəqs Kuboku I Yer Qalibi Diplomu",
+        "caption_az": "Azərbaycan Rəqs Kuboku I Yer Qalibi Diplomu",
+        "caption_en": "Official Diploma — 1st Place Winner Azerbaijan Dance Cup",
+        "caption_ru": "Официальный диплом за I место Кубка Азербайджана по танцам"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_aysel_6.jpg",
+        "caption": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi I Yer Diplomu",
+        "caption_az": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi I Yer Diplomu",
+        "caption_en": "Official Diploma — 1st Place National Talented Youth Dance Contest",
+        "caption_ru": "Официальный диплом за I место конкурса талантливой молодежи"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_aysel_7.jpg",
+        "caption": "Rəqs Sənəti üzrə Xüsusi Nailiyyət Sertifikatı & Qızıl Diplom",
+        "caption_az": "Rəqs Sənəti üzrə Xüsusi Nailiyyət Sertifikatı & Qızıl Diplom",
+        "caption_en": "Special Achievement Certificate & Gold Diploma in Dance Arts",
+        "caption_ru": "Специальный сертификат достижений в танце и Золотой диплом"
+      }
+    ]
+  },
+  {
+    "id": "aydan-veliyeva",
+    "fullName": "Vəliyeva Aydan Eldos qızı",
+    "fullName_az": "Vəliyeva Aydan Eldos qızı",
+    "fullName_en": "Aydan Valiyeva Eldos",
+    "fullName_ru": "Велиева Айдан Эльдос гызы",
+    "photo": "certificates/thumbs/cert_aydan_hik_2026.jpg",
+    "fallbackPhoto": "certificates/cert_aydan_hik_2026.jpg",
+    "kickerIcon": "🏛️",
+    "kicker": "Milli-Mənəvi Dəyərlər, Vətənpərvərlik & Bədii Qiraət",
+    "kicker_az": "Milli-Mənəvi Dəyərlər, Vətənpərvərlik & Bədii Qiraət",
+    "kicker_en": "National Values, Patriotism & Literary Recitation",
+    "kicker_ru": "Национальные Ценности, Патриотизм и Художественное Чтение",
+    "highlightsHeading": "İCTİMAİ FƏALLIQ VƏ VƏTƏNPƏRVƏRLİK TƏLTİFLƏRİ",
+    "highlightsHeading_az": "İCTİMAİ FƏALLIQ VƏ VƏTƏNPƏRVƏRLİK TƏLTİFLƏRİ",
+    "highlightsHeading_en": "CIVIC ENGAGEMENT & PATRIOTIC HONORS",
+    "highlightsHeading_ru": "ОБЩЕСТВЕННАЯ АКТИВНОСТЬ И ПАТРИОТИЧЕСКИЕ НАГРАДЫ",
+    "avatarYearTag": "🏛️ BDRNK 2026 · 5 TƏLTİF",
+    "titleBadge": "🎖️ 5 Rəsmi Fəxri Fərman, Diplom və Təşəkkürnamə",
+    "titleBadge_az": "🎖️ 5 Rəsmi Fəxri Fərman, Diplom və Təşəkkürnamə",
+    "titleBadge_en": "🎖️ 5 Official Honorary Citations & Diplomas",
+    "titleBadge_ru": "🎖️ 5 Почетных Грамот, Дипломов и Благодарностей",
+    "role": "BDRNK Tələbəsi · Milli-Mənəvi Dəyərlərin Təbliği və Vətənpərvərlik Tədbirlərinin Fəal İştirakçısı",
+    "role_az": "BDRNK Tələbəsi · Milli-Mənəvi Dəyərlərin Təbliği və Vətənpərvərlik Tədbirlərinin Fəal İştirakçısı",
+    "role_en": "BDRNK Student · Active Participant in Patriotic & Cultural Initiatives",
+    "role_ru": "Студентка БГКСТ · Активная участница патриотических и культурных мероприятий",
+    "categories": [
+      "youth",
+      "arts"
+    ],
+    "statusText": "BDRNK HİK Təltifçisi & Vətənpərvər Gənc",
+    "statusText_az": "BDRNK HİK Təltifçisi & Vətənpərvər Gənc",
+    "statusText_en": "BDRNK Trade Union Honoree & Youth Activist",
+    "statusText_ru": "Лауреат Профсоюзного комитета БГКСТ и активистка",
+    "quote": "Azərbaycançılıq məfkurəsini, milli-mənəvi dəyərlərimizi və Zəfər ruhunu yaşatmaq hər bir gəncin vətəndaşlıq borcudur.",
+    "quote_az": "Azərbaycançılıq məfkurəsini, milli-mənəvi dəyərlərimizi və Zəfər ruhunu yaşatmaq hər bir gəncin vətəndaşlıq borcudur.",
+    "quote_en": "Upholding the ideology of Azerbaijanism, our national-moral heritage, and the spirit of Victory is the civic duty of every youth.",
+    "quote_ru": "Сохранять идеи азербайджанства, национально-духовные ценности и дух Победы — гражданский долг каждого молодого человека.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "name_az": "Azərbaycan",
+        "name_en": "Azerbaijan",
+        "name_ru": "Азербайджан",
+        "note": "BDRNK HİK & BŞTİ Təltifləri",
+        "note_az": "BDRNK HİK & BŞTİ Təltifləri",
+        "note_en": "BDRNK & Baku Education Dept Awards",
+        "note_ru": "Награды БГКСТ и УО г. Баку"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "🏛️",
+        "val": "BDRNK 2026",
+        "val_az": "BDRNK 2026",
+        "val_en": "BDRNK 2026",
+        "val_ru": "БГКСТ 2026",
+        "label": "Təşəkkürnamə",
+        "label_az": "Təşəkkürnamə",
+        "label_en": "Appreciation",
+        "label_ru": "Благодарность",
+        "sub": "Həmkarlar İttifaqı Komitəsi",
+        "sub_az": "Həmkarlar İttifaqı Komitəsi",
+        "sub_en": "Trade Union Committee",
+        "sub_ru": "Профсоюзный комитет"
+      },
+      {
+        "icon": "🎖️",
+        "val": "3x FƏXRİ FƏRMAN",
+        "val_az": "3x FƏXRİ FƏRMAN",
+        "val_en": "3x CITATIONS",
+        "val_ru": "3x ГРАМОТЫ",
+        "label": "Təhsil İdarəsi & Məktəb",
+        "label_az": "Təhsil İdarəsi & Məktəb",
+        "label_en": "Education Dept & School",
+        "label_ru": "Управление образования",
+        "sub": "Vətənpərvərlik və ictimai fəallıq",
+        "sub_az": "Vətənpərvərlik və ictimai fəallıq",
+        "sub_en": "Patriotism & civic activity",
+        "sub_ru": "Патриотизм и активность"
+      },
+      {
+        "icon": "🎭",
+        "val": "ZƏFƏR DİPLOMU",
+        "val_az": "ZƏFƏR DİPLOMU",
+        "val_en": "VICTORY DIPLOMA",
+        "val_ru": "ДИПЛОМ ПОБЕДЫ",
+        "label": "Şeir Müsabiqəsi",
+        "label_az": "Şeir Müsabiqəsi",
+        "label_en": "Poetry Contest",
+        "label_ru": "Конкурс поэзии",
+        "sub": "Zəfər Bayramına həsr olunmuş müsabiqə",
+        "sub_az": "Zəfər Bayramına həsr olunmuş müsabiqə",
+        "sub_en": "Dedicated to Victory Day",
+        "sub_ru": "Посвящено Дню Победы"
+      },
+      {
+        "icon": "📜",
+        "val": "5 SƏNƏD",
+        "val_az": "5 SƏNƏD",
+        "val_en": "5 AWARDS",
+        "val_ru": "5 НАГРАД",
+        "label": "Rəsmi Arxiv",
+        "label_az": "Rəsmi Arxiv",
+        "label_en": "Official Archive",
+        "label_ru": "Официальный архив",
+        "sub": "2019–2026-cı illər üzrə təltiflər",
+        "sub_az": "2019–2026-cı illər üzrə təltiflər",
+        "sub_en": "Awards from 2019–2026",
+        "sub_ru": "Награды за 2019–2026 гг."
+      }
+    ],
+    "highlights": [
+      {
+        "year": "2026",
+        "flag": "🏛️",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "BDRNK Həmkarlar İttifaqı Komitəsi — Təşəkkürnamə",
+        "title_az": "BDRNK Həmkarlar İttifaqı Komitəsi — Təşəkkürnamə",
+        "title_en": "BDRNK Trade Union Committee — Certificate of Appreciation",
+        "title_ru": "Профсоюзный комитет БГКСТ — Благодарственная грамота",
+        "text": "Azərbaycançılıq ideyalarının, milli-mənəvi dəyərlərimizin və vətənpərvərlik ruhunun təbliği məqsədilə keçirilən tədbirdə fəal iştirakına və təşəbbüskarlığına görə təltif olunmuşdur.",
+        "text_az": "Azərbaycançılıq ideyalarının, milli-mənəvi dəyərlərimizin və vətənpərvərlik ruhunun təbliği məqsədilə keçirilən tədbirdə fəal iştirakına və təşəbbüskarlığına görə təltif olunmuşdur.",
+        "text_en": "Awarded for active participation and initiative in promoting Azerbaijanism ideas, national-moral values, and patriotism.",
+        "text_ru": "Награждена за активное участие и инициативу в мероприятии по пропаганде идей азербайджанства и патриотизма."
+      },
+      {
+        "year": "2023",
+        "flag": "🎖️",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "5 nömrəli Uşaq-Gənclər İnkişaf Mərkəzi — Fəxri Fərman",
+        "title_az": "5 nömrəli Uşaq-Gənclər İnkişaf Mərkəzi — Fəxri Fərman",
+        "title_en": "Children-Youth Development Center No. 5 — Honorary Citation",
+        "title_ru": "Центр развития детей и молодежи № 5 — Почетная грамота",
+        "text": "Vətən müharibəsində əldə etdiyimiz uğurlara həsr olunmuş tədbirlərdə fəal iştirak edib yüksək vətənpərvərlik göstərdiyi üçün təltif olunmuşdur.",
+        "text_az": "Vətən müharibəsində əldə etdiyimiz uğurlara həsr olunmuş tədbirlərdə fəal iştirak edib yüksək vətənpərvərlik göstərdiyi üçün təltif olunmuşdur.",
+        "text_en": "Honored for high patriotism and active engagement in events dedicated to the Patriotic War victories.",
+        "text_ru": "Награждена за высокий патриотизм и участие в мероприятиях, посвященных успехам в Отечественной войне."
+      }
+    ],
+    "tags": [
+      "#VəliyevaAydan",
+      "#BDRNK_HİK",
+      "#Vətənpərvərlik",
+      "#MilliMənəviDəyərlər",
+      "#ZəfərBayramı",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_az": [
+      "#VəliyevaAydan",
+      "#BDRNK_HİK",
+      "#Vətənpərvərlik",
+      "#MilliMənəviDəyərlər",
+      "#ZəfərBayramı",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_en": [
+      "#AydanValiyeva",
+      "#Patriotism",
+      "#CivicEngagement",
+      "#BDRNK_HonorStudent"
+    ],
+    "tags_ru": [
+      "#ВелиеваАйдан",
+      "#Патриотизм",
+      "#ПочетныйСтудентБГКСТ"
+    ],
+    "timeline": [
+      {
+        "year": "2026",
+        "badge": "🏛️ BDRNK HİK · Təşəkkürnamə",
+        "title": "Milli-Mənəvi Dəyərlər və Vətənpərvərlik Tədbiri",
+        "desc": "AzTU-nun nəzdində Bakı Dövlət Rabitə və Nəqliyyat Kollecinin Həmkarlar İttifaqı Komitəsi tərəfindən Təşəkkürnamə."
+      }
+    ],
+    "fullBio": [
+      "Vəliyeva Aydan Eldos qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin ictimai-mədəni həyatında, vətənpərvərlik ruhunun və milli-mənəvi dəyərlərin təbliği istiqamətində keçirilən tədbirlərdə fəallığı və təşəbbüskarlığı ilə seçilən tələbələrindəndir.",
+      "2026-cı ildə BDRNK Həmkarlar İttifaqı Komitəsi tərəfindən rəsmi Təşəkkürnamə ilə, həmçinin Bakı Şəhəri üzrə Təhsil İdarəsinin 5 nömrəli Uşaq-Gənclər İnkişaf Mərkəzi və təhsil müəssisələri tərəfindən Fəxri Fərman və Diplomlarla təltif olunmuşdur."
+    ],
+    "fullBio_az": [
+      "Vəliyeva Aydan Eldos qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin ictimai-mədəni həyatında, vətənpərvərlik ruhunun və milli-mənəvi dəyərlərin təbliği istiqamətində keçirilən tədbirlərdə fəallığı və təşəbbüskarlığı ilə seçilən tələbələrindəndir.",
+      "2026-cı ildə BDRNK Həmkarlar İttifaqı Komitəsi tərəfindən rəsmi Təşəkkürnamə ilə, həmçinin Bakı Şəhəri üzrə Təhsil İdarəsinin 5 nömrəli Uşaq-Gənclər İnkişaf Mərkəzi və təhsil müəssisələri tərəfindən Fəxri Fərman və Diplomlarla təltif olunmuşdur."
+    ],
+    "fullBio_en": [
+      "Aydan Valiyeva Eldos is an active student at Baku State College of Communications and Transport, recognized for her leadership and initiative in cultural and patriotic events.",
+      "In 2026, she was honored with a Certificate of Appreciation by the BDRNK Trade Union Committee, complementing her portfolio of Honorary Citations and Victory Day Poetry Competition Diploma."
+    ],
+    "fullBio_ru": [
+      "Велиева Айдан Эльдос гызы — активная студентка Бакинского государственного колледжа связи и транспорта, отличающаяся инициативностью в общественно-культурных и патриотических мероприятиях.",
+      "В 2026 году награждена Благодарственной грамотой Профсоюзного комитета БГКСТ, а также Почетными грамотами и Дипломом конкурса поэзии ко Дню Победы."
+    ],
+    "certificates": [
+      {
+        "icon": "🏛️",
+        "title": "BDRNK Həmkarlar İttifaqı Komitəsi — Təşəkkürnamə (2026)",
+        "sub": "Milli-mənəvi dəyərlər və vətənpərvərlik tədbirində fəal iştirakına görə"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_aydan_hik_2026.jpg",
+        "caption": "BDRNK Həmkarlar İttifaqı Komitəsi — Təşəkkürnamə (2026)"
+      }
+    ]
+  },
+  {
+    "id": "aydin-orucov",
+    "fullName": "Orucov Aydın Nurəddin oğlu",
+    "fullName_az": "Orucov Aydın Nurəddin oğlu",
+    "fullName_en": "Aydin Orujov Nuraddin",
+    "fullName_ru": "Оруджев Айдын Нуреддин оглы",
+    "photo": "certificates/thumbs/cert_aydin_wushu_1.jpg",
+    "fallbackPhoto": "certificates/cert_aydin_wushu_1.jpg",
+    "kickerIcon": "🥋",
+    "kicker": "Uşu-Sanda · Bakı Şəhər Çempionu & 4 Qat Qızıl Mükafatçı",
+    "kicker_az": "Uşu-Sanda · Bakı Şəhər Çempionu & 4 Qat Qızıl Mükafatçı",
+    "kicker_en": "Wushu Sanda · Baku City Champion & 4x Gold Medalist",
+    "kicker_ru": "Ушу-Саньда · Чемпион г. Баку и 4-кратный Золотой Медалист",
+    "highlightsHeading": "UŞU-SANDA ÜZRƏ 4 QAT ÇEMPİONLUQ SERİYASI",
+    "highlightsHeading_az": "UŞU-SANDA ÜZRƏ 4 QAT ÇEMPİONLUQ SERİYASI",
+    "highlightsHeading_en": "4x GOLD CHAMPIONSHIP SERIES IN WUSHU SANDA",
+    "highlightsHeading_ru": "4-КРАТНАЯ ЧЕМПИОНСКАЯ СЕРИЯ ПО УШУ-САНЬДА",
+    "avatarYearTag": "🥇 4x QIZIL ÇEMPİON · 75–80 kq",
+    "titleBadge": "🥇 4 Qat Uşu-Sanda Çempionu (I Yer)",
+    "titleBadge_az": "🥇 4 Qat Uşu-Sanda Çempionu (I Yer)",
+    "titleBadge_en": "🥇 4x Wushu Sanda Gold Champion (1st Place)",
+    "titleBadge_ru": "🥇 4-кратный Чемпион по ушу-саньда (I место)",
+    "role": "BDRNK Tələbəsi · Azərbaycan Uşu Federasiyası və Bakı Şəhər Gənclər və İdman İdarəsi Çempionatlarının 4 Qat Qalibi",
+    "role_az": "BDRNK Tələbəsi · Azərbaycan Uşu Federasiyası və Bakı Şəhər Gənclər və İdman İdarəsi Çempionatlarının 4 Qat Qalibi",
+    "role_en": "BDRNK Student · 4-Time 1st Place Champion of Azerbaijan Wushu Federation & Baku Youth and Sports Championships",
+    "role_ru": "Студент БГКСТ · 4-кратный победитель чемпионатов Федерации ушу Азербайджана и Управления молодежи и спорта г. Баку",
+    "categories": [
+      "sports"
+    ],
+    "statusText": "75 kq və 80 kq Çəki Dərəcələrində 4x I Yer (Qızıl)",
+    "statusText_az": "75 kq və 80 kq Çəki Dərəcələrində 4x I Yer (Qızıl)",
+    "statusText_en": "4x 1st Place Gold in 75 kg & 80 kg Weight Divisions",
+    "statusText_ru": "4-кратное I место (Золото) в категориях 75 кг и 80 кг",
+    "quote": "Hər döyüşdə məqsədim kollecimizin adını və bayrağımızı fəxri kürsünün ən yüksək pilləsinə qaldırmaqdır.",
+    "quote_az": "Hər döyüşdə məqsədim kollecimizin adını və bayrağımızı fəxri kürsünün ən yüksək pilləsinə qaldırmaqdır.",
+    "quote_en": "In every match, my goal is to raise our college's name and flag to the highest step of the podium.",
+    "quote_ru": "В каждом поединке моя цель — поднять имя нашего колледжа на высшую ступень пьедестала почета.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "name_az": "Azərbaycan",
+        "name_en": "Azerbaijan",
+        "name_ru": "Азербайджан",
+        "note": "AUF & BŞGİİ 4x I Yer Çempionu",
+        "note_az": "AUF & BŞGİİ 4x I Yer Çempionu",
+        "note_en": "4x 1st Place Wushu Champion",
+        "note_ru": "4-кратный чемпион по ушу"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "🥇",
+        "val": "4x I YER",
+        "val_az": "4x I YER",
+        "val_en": "4x 1st PLACE",
+        "val_ru": "4x I МЕСТО",
+        "label": "Qızıl Çempionluq",
+        "label_az": "Qızıl Çempionluq",
+        "label_en": "Gold Championships",
+        "label_ru": "Золотые титулы",
+        "sub": "2025-ci il ərzində 4 rəsmi qızıl diplom",
+        "sub_az": "2025-ci il ərzində 4 rəsmi qızıl diplom",
+        "sub_en": "4 official gold diplomas in 2025",
+        "sub_ru": "4 официальных золотых диплома в 2025 г."
+      },
+      {
+        "icon": "🏆",
+        "val": "BAKI ÇEMPİONU",
+        "val_az": "BAKI ÇEMPİONU",
+        "val_en": "BAKU CHAMPION",
+        "val_ru": "ЧЕМПИОН БАКУ",
+        "label": "80 kq Çəki Dərəcəsi",
+        "label_az": "80 kq Çəki Dərəcəsi",
+        "label_en": "80 kg Division",
+        "label_ru": "Категория 80 кг",
+        "sub": "Konstitusiya və Suverenlik İli Çempionatı",
+        "sub_az": "Konstitusiya və Suverenlik İli Çempionatı",
+        "sub_en": "Constitution & Sovereignty Year Championship",
+        "sub_ru": "Чемпионат Баку 2025"
+      },
+      {
+        "icon": "🥋",
+        "val": "75–80 KQ",
+        "val_az": "75–80 KQ",
+        "val_en": "75–80 KG",
+        "val_ru": "75–80 КГ",
+        "label": "Uşu-Sanda",
+        "label_az": "Uşu-Sanda",
+        "label_en": "Wushu Sanda",
+        "label_ru": "Ушу-Саньда",
+        "sub": "Azərbaycan Uşu Federasiyası",
+        "sub_az": "Azərbaycan Uşu Federasiyası",
+        "sub_en": "Azerbaijan Wushu Federation",
+        "sub_ru": "Федерация ушу Азербайджана"
+      }
+    ],
+    "highlights": [
+      {
+        "year": "2025",
+        "flag": "🥇",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "«Konstitusiya və Suverenlik İli» Uşu üzrə Bakı Şəhər Çempionatı — I Yer (80 kq)",
+        "title_az": "«Konstitusiya və Suverenlik İli» Uşu üzrə Bakı Şəhər Çempionatı — I Yer (80 kq)",
+        "title_en": "“Year of Constitution and Sovereignty” Baku City Wushu Championship — 1st Place (80 kg)",
+        "title_ru": "Чемпионат города Баку по ушу к «Году Конституции и Суверенитета» — I место (80 кг)",
+        "text": "Bakı Şəhər Gənclər və İdman İdarəsi və Azərbaycan Uşu Federasiyasının rəsmi Bakı çempionatında 80 kq çəkidə I YER.",
+        "text_az": "Bakı Şəhər Gənclər və İdman İdarəsi və Azərbaycan Uşu Federasiyasının rəsmi Bakı çempionatında 80 kq çəkidə I YER.",
+        "text_en": "1st Place Gold in the 80 kg division at the official Baku City Wushu Championship.",
+        "text_ru": "I место в весовой категории 80 кг на официальном чемпионате г. Баку по ушу."
+      },
+      {
+        "year": "2025",
+        "flag": "🥇",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "Zəfər Günü, Müstəqillik Günü və Binəqədi Şəhidləri Xatirə Turnirləri — 3x I Yer (75 kq)",
+        "title_az": "Zəfər Günü, Müstəqillik Günü və Binəqədi Şəhidləri Xatirə Turnirləri — 3x I Yer (75 kq)",
+        "title_en": "Victory Day, Independence Day & Binagadi Martyrs Memorial Wushu Tournaments — 3x 1st Place (75 kg)",
+        "title_ru": "Турниры по ушу-саньда ко Дню Победы, Дню Независимости и памяти шехидов — 3x I место (75 кг)",
+        "text": "75 kq çəki dərəcəsində keçirilən üç respublika və klublararası turnirdə bütün rəqiblərinə qalib gələrək 3 Qızıl Diplom qazanmışdır.",
+        "text_az": "75 kq çəki dərəcəsində keçirilən üç respublika və klublararası turnirdə bütün rəqiblərinə qalib gələrək 3 Qızıl Diplom qazanmışdır.",
+        "text_en": "Swept 1st Place Gold across three tournaments in the 75 kg division.",
+        "text_ru": "Одержал победы во всех трех турнирах в категории 75 кг, завоевав 3 диплома за I место."
+      }
+    ],
+    "tags": [
+      "#OrucovAydın",
+      "#UşuSanda",
+      "#4xQızılÇempion",
+      "#BakıÇempionu",
+      "#AzərbaycanUşuFederasiyası",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_az": [
+      "#OrucovAydın",
+      "#UşuSanda",
+      "#4xQızılÇempion",
+      "#BakıÇempionu",
+      "#AzərbaycanUşuFederasiyası",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_en": [
+      "#AydinOrujov",
+      "#WushuSanda",
+      "#4xGoldChampion",
+      "#BDRNK_HonorStudent"
+    ],
+    "tags_ru": [
+      "#ОруджевАйдын",
+      "#УшуСаньда",
+      "#4хЗолотойЧемпион",
+      "#ПочетныйСтудентБГКСТ"
+    ],
+    "timeline": [
+      {
+        "year": "2025",
+        "badge": "🥇 I Yer · 80 kq",
+        "title": "«Konstitusiya və Suverenlik İli» Uşu üzrə Bakı Şəhər Çempionatı",
+        "desc": "Bakı Şəhər Gənclər və İdman İdarəsi və AUF tərəfindən 80 kq çəki dərəcəsində I Yer (18–20 aprel 2025)."
+      },
+      {
+        "year": "2025",
+        "badge": "🥇 I Yer · 75 kq",
+        "title": "8 Noyabr – Zəfər Gününə Həsr Olunmuş Uşu-Sanda Turniri",
+        "desc": "«Qobu» Gənclər İdman Klubunun təşkilatçılığı ilə 75 kq çəkidə I Yer (1–2 noyabr 2025)."
+      },
+      {
+        "year": "2025",
+        "badge": "🥇 I Yer · 75 kq",
+        "title": "28 May – Müstəqillik Gününə Həsr Olunmuş Uşu-Sanda Turniri",
+        "desc": "«Qobu» Gənclər İdman Klubunun təşkilatçılığı ilə 75 kq çəkidə I Yer (31 may – 1 iyun 2025)."
+      },
+      {
+        "year": "2025",
+        "badge": "🥇 I Yer · 75 kq",
+        "title": "Binəqədi Rayon Şəhidlərinin Xatirəsinə Həsr Olunmuş Uşu Turniri",
+        "desc": "Azərbaycan Uşu Federasiyası və «Çempion» İK tərəfindən 75 kq çəkidə I Yer (1–2 fevral 2025)."
+      }
+    ],
+    "fullBio": [
+      "Orucov Aydın Nurəddin oğlu Bakı Dövlət Rabitə və Nəqliyyat Kollecinin döyüş sənətləri üzrə ən parlaq çempion tələbələrindəndir.",
+      "2025-ci il ərzində Azərbaycan Uşu Federasiyası və Bakı Şəhər Gənclər və İdman İdarəsinin keçirdiyi 4 mötəbər yarışda — Bakı şəhər çempionatında (80 kq), Zəfər Günü, Müstəqillik Günü və Binəqədi Şəhidləri xatirə turnirlərində (75 kq) ardıcıl 4 dəfə I YERİ (Qızıl) qazanmışdır."
+    ],
+    "fullBio_az": [
+      "Orucov Aydın Nurəddin oğlu Bakı Dövlət Rabitə və Nəqliyyat Kollecinin döyüş sənətləri üzrə ən parlaq çempion tələbələrindəndir.",
+      "2025-ci il ərzində Azərbaycan Uşu Federasiyası və Bakı Şəhər Gənclər və İdman İdarəsinin keçirdiyi 4 mötəbər yarışda — Bakı şəhər çempionatında (80 kq), Zəfər Günü, Müstəqillik Günü və Binəqədi Şəhidləri xatirə turnirlərində (75 kq) ardıcıl 4 dəfə I YERİ (Qızıl) qazanmışdır."
+    ],
+    "fullBio_en": [
+      "Aydin Orujov Nuraddin is an undefeated 2025 Wushu Sanda champion representing Baku State College of Communications and Transport.",
+      "Across four major tournaments in 2025 organized by the Azerbaijan Wushu Federation and Baku City Youth and Sports Department, he won four consecutive 1st Place Gold Diplomas in the 75 kg and 80 kg divisions."
+    ],
+    "fullBio_ru": [
+      "Оруджев Айдын Нуреддин оглы — четырехкратный чемпион по ушу-саньда, представляющий Бакинский государственный колледж связи и транспорта.",
+      "В течение 2025 года на чемпионате города Баку (80 кг) и трех турнирах ко Дню Победы, Дню Независимости и памяти шехидов Бинагади (75 кг) завоевал 4 диплома за I место."
+    ],
+    "certificates": [
+      {
+        "icon": "🥇",
+        "title": "«Konstitusiya və Suverenlik İli» Uşu Bakı Çempionatı — I Yer",
+        "sub": "80 kq · Bakı Şəhər Gənclər və İdman İdarəsi & AUF (2025)"
+      },
+      {
+        "icon": "🥇",
+        "title": "8 Noyabr Zəfər Günü Uşu-Sanda Turniri — I Yer",
+        "sub": "75 kq · AUF & «Qobu» Gənclər İdman Klubu (2025)"
+      },
+      {
+        "icon": "🥇",
+        "title": "28 May Müstəqillik Günü Uşu-Sanda Turniri — I Yer",
+        "sub": "75 kq · AUF & «Qobu» Gənclər İdman Klubu (2025)"
+      },
+      {
+        "icon": "🥇",
+        "title": "Binəqədi Şəhidləri Xatirə Uşu Turniri — I Yer",
+        "sub": "75 kq · AUF & «Çempion» İdman Klubu (2025)"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_aydin_wushu_1.jpg",
+        "caption": "Binəqədi Şəhidləri Xatirə Uşu Turniri — I Yer Diplomu (75 kq)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_aydin_wushu_2.jpg",
+        "caption": "28 May Müstəqillik Günü Uşu-Sanda Turniri — I Yer Diplomu (75 kq)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_aydin_wushu_3.jpg",
+        "caption": "8 Noyabr Zəfər Günü Uşu-Sanda Turniri — I Yer Diplomu (75 kq)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_aydin_wushu_4.jpg",
+        "caption": "«Konstitusiya və Suverenlik İli» Uşu Bakı Çempionatı — I Yer Diplomu (80 kq)"
+      }
+    ]
+  },
+  {
+    "id": "ayan-qasimli",
+    "fullName": "Qasımlı Ayan",
+    "fullName_az": "Qasımlı Ayan",
+    "fullName_en": "Ayan Gasimli",
+    "fullName_ru": "Гасымлы Аян",
+    "photo": "certificates/thumbs/cert_ayan_frontend.jpg",
+    "fallbackPhoto": "certificates/cert_ayan_frontend.jpg",
+    "kickerIcon": "💻",
+    "kicker": "Frontend Proqramlaşdırma & Veb Texnologiyaları (HTML/CSS/JS)",
+    "kicker_az": "Frontend Proqramlaşdırma & Veb Texnologiyaları (HTML/CSS/JS)",
+    "kicker_en": "Frontend Programming & Web Technologies (HTML/CSS/JS)",
+    "kicker_ru": "Frontend-Программирование и Веб-Технологии (HTML/CSS/JS)",
+    "highlightsHeading": "İKT VƏ PROQRAMLAŞDIRMA ÜZRƏ FƏRQLƏNMƏ NAİLİYYƏTİ",
+    "highlightsHeading_az": "İKT VƏ PROQRAMLAŞDIRMA ÜZRƏ FƏRQLƏNMƏ NAİLİYYƏTİ",
+    "highlightsHeading_en": "ICT & FRONTEND DEVELOPMENT DISTINCTION",
+    "highlightsHeading_ru": "ДИПЛОМ С ОСОБЫМ ОТЛИЧИЕМ ПО FRONTEND-РАЗРАБОТКЕ",
+    "avatarYearTag": "💻 XÜSUSİ FƏRQLƏNMƏ · 2026",
+    "titleBadge": "🥇 Frontend Proqramlaşdırma üzrə Xüsusi Fərqlənmə Diplomu",
+    "titleBadge_az": "🥇 Frontend Proqramlaşdırma üzrə Xüsusi Fərqlənmə Diplomu",
+    "titleBadge_en": "🥇 Distinctive Degree Diploma in Frontend Programming",
+    "titleBadge_ru": "🥇 Диплом с особым отличием по Frontend-разработке",
+    "role": "BDRNK Tələbəsi · NovaTech Education Frontend Proqramları Kursunun Xüsusi Fərqlənmə Məzunu (AA № 744)",
+    "role_az": "BDRNK Tələbəsi · NovaTech Education Frontend Proqramları Kursunun Xüsusi Fərqlənmə Məzunu (AA № 744)",
+    "role_en": "BDRNK Student · Distinctive Degree Graduate in Frontend Programs at NovaTech Education (AA No. 744)",
+    "role_ru": "Студентка БГКСТ · Выпускница курса Frontend-программирования NovaTech Education с особым отличием (AA № 744)",
+    "categories": [
+      "it-robotics"
+    ],
+    "statusText": "HTML / CSS / JavaScript · Xüsusi Fərqlənmə Dərəcəsi",
+    "statusText_az": "HTML / CSS / JavaScript · Xüsusi Fərqlənmə Dərəcəsi",
+    "statusText_en": "HTML / CSS / JavaScript · Distinctive Degree",
+    "statusText_ru": "HTML / CSS / JavaScript · Особое отличие",
+    "quote": "Müasir veb texnologiyalarını və proqramlaşdırmanı dərindən öyrənmək rəqəmsal gələcəyi qurmağın ən güclü yoludur.",
+    "quote_az": "Müasir veb texnologiyalarını və proqramlaşdırmanı dərindən öyrənmək rəqəmsal gələcəyi qurmağın ən güclü yoludur.",
+    "quote_en": "Mastering modern web technologies and software development is the most powerful way to build the digital future.",
+    "quote_ru": "Глубокое изучение современных веб-технологий и программирования — лучший путь к созданию цифрового будущего.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "name_az": "Azərbaycan",
+        "name_en": "Azerbaijan",
+        "name_ru": "Азербайджан",
+        "note": "NovaTech Education · AA № 744",
+        "note_az": "NovaTech Education · AA № 744",
+        "note_en": "NovaTech Education · AA No. 744",
+        "note_ru": "NovaTech Education · AA № 744"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "💻",
+        "val": "DISTINCTION",
+        "val_az": "XÜSUSİ FƏRQLƏNMƏ",
+        "val_en": "DISTINCTIVE",
+        "val_ru": "ОСОБОЕ ОТЛИЧИЕ",
+        "label": "Frontend Diplomu",
+        "label_az": "Frontend Diplomu",
+        "label_en": "Frontend Diploma",
+        "label_ru": "Диплом Frontend",
+        "sub": "HTML, CSS və JavaScript proqramları",
+        "sub_az": "HTML, CSS və JavaScript proqramları",
+        "sub_en": "HTML, CSS & JavaScript programs",
+        "sub_ru": "Программы HTML, CSS и JavaScript"
+      },
+      {
+        "icon": "⏱️",
+        "val": "6 AYLIQ KURS",
+        "val_az": "6 AYLIQ KURS",
+        "val_en": "6-MONTH COURSE",
+        "val_ru": "6-МЕСЯЧНЫЙ КУРС",
+        "label": "NovaTech Education",
+        "label_az": "NovaTech Education",
+        "label_en": "NovaTech Education",
+        "label_ru": "NovaTech Education",
+        "sub": "Rəsmi Seriya AA № 744",
+        "sub_az": "Rəsmi Seriya AA № 744",
+        "sub_en": "Official Serial AA No. 744",
+        "sub_ru": "Официальная серия AA № 744"
+      }
+    ],
+    "highlights": [
+      {
+        "year": "2026",
+        "flag": "💻",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "NovaTech Education — Frontend Proqramları (HTML/CSS/JavaScript) Xüsusi Fərqlənmə Diplomu",
+        "title_az": "NovaTech Education — Frontend Proqramları (HTML/CSS/JavaScript) Xüsusi Fərqlənmə Diplomu",
+        "title_en": "NovaTech Education — Frontend Programs (HTML/CSS/JavaScript) Distinctive Degree Diploma",
+        "title_ru": "NovaTech Education — Диплом с особым отличием по Frontend-программированию (HTML/CSS/JS)",
+        "text": "6 aylıq intensiv Frontend proqramlaşdırma tədris proqramını ən yüksək göstərici — Xüsusi fərqlənmə dərəcəsi ilə başa vurmuşdur.",
+        "text_az": "6 aylıq intensiv Frontend proqramlaşdırma tədris proqramını ən yüksək göstərici — Xüsusi fərqlənmə dərəcəsi ilə başa vurmuşdur.",
+        "text_en": "Graduated the intensive 6-month Frontend development program with Distinctive Degree honors.",
+        "text_ru": "Успешно окончила 6-месячный курс Frontend-разработки со степенью особого отличия."
+      }
+    ],
+    "tags": [
+      "#QasımlıAyan",
+      "#Frontend",
+      "#JavaScript",
+      "#HTML_CSS",
+      "#NovaTech",
+      "#XüsusiFərqlənmə",
+      "#BDRNK_İKT"
+    ],
+    "tags_az": [
+      "#QasımlıAyan",
+      "#Frontend",
+      "#JavaScript",
+      "#HTML_CSS",
+      "#NovaTech",
+      "#XüsusiFərqlənmə",
+      "#BDRNK_İKT"
+    ],
+    "tags_en": [
+      "#AyanGasimli",
+      "#FrontendDevelopment",
+      "#JavaScript",
+      "#BDRNK_ICT"
+    ],
+    "tags_ru": [
+      "#ГасымлыАян",
+      "#Frontend",
+      "#JavaScript",
+      "#ПочетныйСтудентБГКСТ"
+    ],
+    "timeline": [
+      {
+        "year": "2026",
+        "badge": "💻 Xüsusi Fərqlənmə · AA № 744",
+        "title": "NovaTech Education — Frontend Proqramları Diplomu",
+        "desc": "HTML, CSS və JavaScript üzrə 6 aylıq kursu Xüsusi fərqlənmə dərəcəsi ilə bitirmişdir (31 oktyabr 2026)."
+      }
+    ],
+    "fullBio": [
+      "Qasımlı Ayan Bakı Dövlət Rabitə və Nəqliyyat Kollecinin informasiya texnologiyaları və veb proqramlaşdırma sahəsində fərqlənən istedadlı tələbələrindəndir.",
+      "2026-cı ildə NovaTech Education tədris mərkəzində 6 aylıq Frontend proqramları (HTML/CSS/JavaScript) səviyyəsini Xüsusi fərqlənmə dərəcəsi ilə bitirərək rəsmi Diplomla (AA № 744) təltif olunmuşdur."
+    ],
+    "fullBio_az": [
+      "Qasımlı Ayan Bakı Dövlət Rabitə və Nəqliyyat Kollecinin informasiya texnologiyaları və veb proqramlaşdırma sahəsində fərqlənən istedadlı tələbələrindəndir.",
+      "2026-cı ildə NovaTech Education tədris mərkəzində 6 aylıq Frontend proqramları (HTML/CSS/JavaScript) səviyyəsini Xüsusi fərqlənmə dərəcəsi ilə bitirərək rəsmi Diplomla (AA № 744) təltif olunmuşdur."
+    ],
+    "fullBio_en": [
+      "Ayan Gasimli is a talented IT student at Baku State College of Communications and Transport specializing in modern frontend web engineering.",
+      "In 2026, she graduated from the 6-month Frontend Programs (HTML/CSS/JavaScript) track at NovaTech Education with a Distinctive Degree Diploma (AA No. 744)."
+    ],
+    "fullBio_ru": [
+      "Гасымлы Аян — талантливая студентка Бакинского государственного колледжа связи и транспорта в сфере информационных технологий и веб-разработки.",
+      "В 2026 году окончила 6-месячный курс Frontend-программирования (HTML/CSS/JavaScript) в NovaTech Education, получив диплом с особым отличием (AA № 744)."
+    ],
+    "certificates": [
+      {
+        "icon": "💻",
+        "title": "Frontend Proqramları (HTML/CSS/JS) — Xüsusi Fərqlənmə Diplomu",
+        "sub": "NovaTech Education · AA № 744 (31 oktyabr 2026)"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_ayan_frontend.jpg",
+        "caption": "NovaTech Education — Frontend Proqramları (HTML/CSS/JS) Xüsusi Fərqlənmə Diplomu"
+      }
+    ]
+  },
+  {
+    "id": "xatire-ceferzade",
+    "fullName": "Cəfərzadə Xatirə",
+    "fullName_az": "Cəfərzadə Xatirə",
+    "fullName_en": "Khatira Jafarzada",
+    "fullName_ru": "Джафарзаде Хатира",
+    "photo": "certificates/thumbs/cert_xatire_ai.jpg",
+    "fallbackPhoto": "certificates/cert_xatire_ai.jpg",
+    "kickerIcon": "🤖",
+    "kicker": "Süni İntellekt Dəstəkli Proqramlaşdırma & Gənclər Liderliyi",
+    "kicker_az": "Süni İntellekt Dəstəkli Proqramlaşdırma & Gənclər Liderliyi",
+    "kicker_en": "AI-Assisted Programming & Youth Leadership",
+    "kicker_ru": "Программирование с ИИ и Молодежное Лидерство",
+    "highlightsHeading": "SÜNİ İNTELLEKT VƏ SOSİAL TƏŞƏBBÜSLƏR",
+    "highlightsHeading_az": "SÜNİ İNTELLEKT VƏ SOSİAL TƏŞƏBBÜSLƏR",
+    "highlightsHeading_en": "ARTIFICIAL INTELLIGENCE & SOCIAL INITIATIVES",
+    "highlightsHeading_ru": "ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ И СОЦИАЛЬНЫЕ ИНИЦИАТИВЫ",
+    "avatarYearTag": "🤖 AI & SDG YOUTH · 2026",
+    "titleBadge": "🎖️ AI Proqramlaşdırma & “Taghiyev's Girls” Sertifikatçısı",
+    "titleBadge_az": "🎖️ AI Proqramlaşdırma & “Taghiyev's Girls” Sertifikatçısı",
+    "titleBadge_en": "🎖️ AI Programming & “Taghiyev's Girls” Certificate Holder",
+    "titleBadge_ru": "🎖️ Сертификаты по ИИ-программированию и «Taghiyev's Girls»",
+    "role": "BDRNK Tələbəsi · SDG Youth Community & Div Academy AI Master-Klass və “Taghiyev's Girls” Proqramlarının İştirakçısı",
+    "role_az": "BDRNK Tələbəsi · SDG Youth Community & Div Academy AI Master-Klass və “Taghiyev's Girls” Proqramlarının İştirakçısı",
+    "role_en": "BDRNK Student · Participant of SDG Youth Community & Div Academy AI Master-Class and “Taghiyev's Girls” Initiative",
+    "role_ru": "Студентка БГКСТ · Участница мастер-класса по ИИ SDG Youth Community & Div Academy и инициативы «Taghiyev's Girls»",
+    "categories": [
+      "it-robotics",
+      "youth"
+    ],
+    "statusText": "2 Rəsmi Sertifikat (AI & Qadın Liderliyi, 2026)",
+    "statusText_az": "2 Rəsmi Sertifikat (AI & Qadın Liderliyi, 2026)",
+    "statusText_en": "2 Official Certificates (AI & Women's Leadership, 2026)",
+    "statusText_ru": "2 официальных сертификата (ИИ и женское лидерство, 2026)",
+    "quote": "Süni intellekt texnologiyalarını öyrənmək və qızların təhsildə liderliyini dəstəkləmək gələcəyin innovativ cəmiyyətini formalaşdırır.",
+    "quote_az": "Süni intellekt texnologiyalarını öyrənmək və qızların təhsildə liderliyini dəstəkləmək gələcəyin innovativ cəmiyyətini formalaşdırır.",
+    "quote_en": "Learning AI technologies and championing girls' leadership in education shapes an innovative society for the future.",
+    "quote_ru": "Освоение технологий искусственного интеллекта и поддержка лидерства девушек в образовании формируют инновационное общество будущего.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "name_az": "Azərbaycan",
+        "name_en": "Azerbaijan",
+        "name_ru": "Азербайджан",
+        "note": "SDG Youth & Div Academy 2026",
+        "note_az": "SDG Youth & Div Academy 2026",
+        "note_en": "SDG Youth & Div Academy 2026",
+        "note_ru": "SDG Youth & Div Academy 2026"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "🤖",
+        "val": "AI MASTER-CLASS",
+        "val_az": "AI MASTER-CLASS",
+        "val_en": "AI MASTER-CLASS",
+        "val_ru": "ИИ МАСТЕР-КЛАСС",
+        "label": "Div Academy & SDG",
+        "label_az": "Div Academy & SDG",
+        "label_en": "Div Academy & SDG",
+        "label_ru": "Div Academy & SDG",
+        "sub": "Süni İntellekt Dəstəkli Proqramlaşdırma",
+        "sub_az": "Süni İntellekt Dəstəkli Proqramlaşdırma",
+        "sub_en": "AI-Assisted Programming",
+        "sub_ru": "Программирование с поддержкой ИИ"
+      },
+      {
+        "icon": "🌟",
+        "val": "TAGHIYEV'S GIRLS",
+        "val_az": "TAGHIYEV'S GIRLS",
+        "val_en": "TAGHIYEV'S GIRLS",
+        "val_ru": "TAGHIYEV'S GIRLS",
+        "label": "Sosial Təşəbbüs",
+        "label_az": "Sosial Təşəbbüs",
+        "label_en": "Social Initiative",
+        "label_ru": "Социальная инициатива",
+        "sub": "Not Too Early, Not Too Late – Just Her Time",
+        "sub_az": "Not Too Early, Not Too Late – Just Her Time",
+        "sub_en": "Not Too Early, Not Too Late – Just Her Time",
+        "sub_ru": "Лидерство девушек в образовании"
+      }
+    ],
+    "highlights": [
+      {
+        "year": "2026",
+        "flag": "🤖",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "SDG Youth Community & Div Academy — «Süni İntellekt Dəstəkli Proqramlaşdırma» Sertifikatı",
+        "title_az": "SDG Youth Community & Div Academy — «Süni İntellekt Dəstəkli Proqramlaşdırma» Sertifikatı",
+        "title_en": "SDG Youth Community & Div Academy — “AI-Assisted Programming” Certificate",
+        "title_ru": "SDG Youth Community & Div Academy — Сертификат «Программирование с поддержкой ИИ»",
+        "text": "28 fevral 2026-cı il tarixində keçirilən Süni İntellekt Dəstəkli Proqramlaşdırma master-klassında uğurlu iştirakına görə təltif edilmişdir.",
+        "text_az": "28 fevral 2026-cı il tarixində keçirilən Süni İntellekt Dəstəkli Proqramlaşdırma master-klassında uğurlu iştirakına görə təltif edilmişdir.",
+        "text_en": "Awarded for successful participation in the AI-Assisted Programming master-class on February 28, 2026.",
+        "text_ru": "Награждена за успешное участие в мастер-классе по программированию с искусственным интеллектом (28 февраля 2026 г.)."
+      },
+      {
+        "year": "2026",
+        "flag": "🌟",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "“Taghiyev's Girls: Not Too Early, Not Too Late – Just Her Time” Sertifikatı",
+        "title_az": "“Taghiyev's Girls: Not Too Early, Not Too Late – Just Her Time” Sertifikatı",
+        "title_en": "“Taghiyev's Girls: Not Too Early, Not Too Late – Just Her Time” Certificate",
+        "title_ru": "Сертификат программы «Taghiyev's Girls: Not Too Early, Not Too Late – Just Her Time»",
+        "text": "Qadınların təhsildə və cəmiyyətdə rolunun gücləndirilməsinə həsr olunmuş təşəbbüsdə fəal iştirakına görə təltif olunmuşdur.",
+        "text_az": "Qadınların təhsildə və cəmiyyətdə rolunun gücləndirilməsinə həsr olunmuş təşəbbüsdə fəal iştirakına görə təltif olunmuşdur.",
+        "text_en": "Honored for active engagement in the Taghiyev's Girls educational empowerment initiative.",
+        "text_ru": "Награждена за активное участие в образовательной инициативе «Taghiyev's Girls»."
+      }
+    ],
+    "tags": [
+      "#CəfərzadəXatirə",
+      "#Süniİntellekt",
+      "#DivAcademy",
+      "#SDGYouthCommunity",
+      "#TaghiyevsGirls",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_az": [
+      "#CəfərzadəXatirə",
+      "#Süniİntellekt",
+      "#DivAcademy",
+      "#SDGYouthCommunity",
+      "#TaghiyevsGirls",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_en": [
+      "#KhatiraJafarzada",
+      "#AIProgramming",
+      "#SDGYouth",
+      "#TaghiyevsGirls",
+      "#BDRNK_HonorStudent"
+    ],
+    "tags_ru": [
+      "#ДжафарзадеХатира",
+      "#ИИПрограммирование",
+      "#ПочетныйСтудентБГКСТ"
+    ],
+    "timeline": [
+      {
+        "year": "2026",
+        "badge": "🤖 AI Master-Class",
+        "title": "SDG Youth Community & Div Academy — Süni İntellekt Dəstəkli Proqramlaşdırma",
+        "desc": "Rəsmi Sertifikat (28 fevral 2026)."
+      },
+      {
+        "year": "2026",
+        "badge": "🌟 Taghiyev's Girls",
+        "title": "“Not Too Early, Not Too Late – Just Her Time” Təşəbbüsü",
+        "desc": "Fəal iştirak və liderlik sertifikatı (2026)."
+      }
+    ],
+    "fullBio": [
+      "Cəfərzadə Xatirə Bakı Dövlət Rabitə və Nəqliyyat Kollecinin rəqəmsal texnologiyalar və gənclər təşəbbüslərində fəal iştirak edən tələbələrindəndir.",
+      "2026-cı ildə SDG Youth Community və Div Academy tərəfindən təşkil olunan «Süni İntellekt Dəstəkli Proqramlaşdırma» master-klassını və “Taghiyev's Girls” təhsil təşəbbüsünü uğurla tamamlayaraq rəsmi sertifikatlarla təltif olunmuşdur."
+    ],
+    "fullBio_az": [
+      "Cəfərzadə Xatirə Bakı Dövlət Rabitə və Nəqliyyat Kollecinin rəqəmsal texnologiyalar və gənclər təşəbbüslərində fəal iştirak edən tələbələrindəndir.",
+      "2026-cı ildə SDG Youth Community və Div Academy tərəfindən təşkil olunan «Süni İntellekt Dəstəkli Proqramlaşdırma» master-klassını və “Taghiyev's Girls” təhsil təşəbbüsünü uğurla tamamlayaraq rəsmi sertifikatlarla təltif olunmuşdur."
+    ],
+    "fullBio_en": [
+      "Khatira Jafarzada is an innovative student at Baku State College of Communications and Transport actively engaged in AI technology and youth leadership programs.",
+      "In 2026, she earned official certificates from the SDG Youth Community & Div Academy 'AI-Assisted Programming' Master-Class and the 'Taghiyev's Girls' educational initiative."
+    ],
+    "fullBio_ru": [
+      "Джафарзаде Хатира — активная студентка Бакинского государственного колледжа связи и транспорта в области цифровых технологий и молодежных инициатив.",
+      "В 2026 году удостоена сертификатов мастер-класса «Программирование с поддержкой ИИ» от SDG Youth Community и Div Academy, а также программы «Taghiyev's Girls»."
+    ],
+    "certificates": [
+      {
+        "icon": "🤖",
+        "title": "«Süni İntellekt Dəstəkli Proqramlaşdırma» Master-Klass Sertifikatı",
+        "sub": "SDG Youth Community & Div Academy · 28 fevral 2026"
+      },
+      {
+        "icon": "🌟",
+        "title": "“Taghiyev's Girls: Not Too Early, Not Too Late – Just Her Time” Sertifikatı",
+        "sub": "Qadınların təhsildə liderliyi təşəbbüsü · 2026"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_xatire_ai.jpg",
+        "caption": "SDG Youth Community & Div Academy — «Süni İntellekt Dəstəkli Proqramlaşdırma» Sertifikatı"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_xatire_taghiyev.jpg",
+        "caption": "“Taghiyev's Girls: Not Too Early, Not Too Late – Just Her Time” Sertifikatı"
+      }
+    ]
+  },
+  {
+    "id": "aygun-melikova",
+    "fullName": "Məlikova Aygün",
+    "fullName_az": "Məlikova Aygün",
+    "fullName_en": "Aygun Malikova",
+    "fullName_ru": "Меликова Айгюн",
+    "photo": "certificates/thumbs/cert_aygun_exhibition.jpg",
+    "fallbackPhoto": "certificates/cert_aygun_exhibition.jpg",
+    "kickerIcon": "🎨",
+    "kicker": "Təsviri İncəsənət & Beynəlxalq Yaradıcılıq Sərgiləri",
+    "kicker_az": "Təsviri İncəsənət & Beynəlxalq Yaradıcılıq Sərgiləri",
+    "kicker_en": "Fine Arts & International Creative Exhibitions",
+    "kicker_ru": "Изобразительное Искусство и Международные Выставки",
+    "highlightsHeading": "TƏSVİRİ İNCƏSƏNƏT VƏ SƏRGİ TƏLTİFLƏRİ",
+    "highlightsHeading_az": "TƏSVİRİ İNCƏSƏNƏT VƏ SƏRGİ TƏLTİFLƏRİ",
+    "highlightsHeading_en": "FINE ARTS & EXHIBITION AWARDS",
+    "highlightsHeading_ru": "НАГРАДЫ ХУДОЖЕСТВЕННЫХ ВЫСТАВОК И КОНКУРСОВ",
+    "avatarYearTag": "🎨 BEYNƏLXALQ SƏRGİ · 2025",
+    "titleBadge": "🎨 Beynəlxalq Rəsm Sərgisi Diplomantı",
+    "titleBadge_az": "🎨 Beynəlxalq Rəsm Sərgisi Diplomantı",
+    "titleBadge_en": "🎨 International Art Exhibition Laureate",
+    "titleBadge_ru": "🎨 Дипломант Международной Художественной Выставки",
+    "role": "BDRNK Tələbəsi · Beynəlxalq Rəsm Müsabiqəsi və «Zərif Əllərin Gücü» Yaradıcılıq Sərgisinin Təltifçisi",
+    "role_az": "BDRNK Tələbəsi · Beynəlxalq Rəsm Müsabiqəsi və «Zərif Əllərin Gücü» Yaradıcılıq Sərgisinin Təltifçisi",
+    "role_en": "BDRNK Student · Awardee of the International Art Exhibition & “Power of Gentle Hands” Creative Showcase",
+    "role_ru": "Студентка БГКСТ · Лауреат Международной выставки живописи и творческой выставки «Сила нежных рук»",
+    "categories": [
+      "arts"
+    ],
+    "statusText": "Təsviri İncəsənət üzrə Diplom və Təşəkkürnamə (2025)",
+    "statusText_az": "Təsviri İncəsənət üzrə Diplom və Təşəkkürnamə (2025)",
+    "statusText_en": "Fine Arts Diploma & Appreciation Certificate (2025)",
+    "statusText_ru": "Диплом и Благодарность в области изобразительного искусства (2025)",
+    "quote": "Rənglər və fırça vasitəsilə milli ruhumuzu və daxili dünyamızı kətan üzərində canlandırmaq ən böyük yaradıcılıq sevincidir.",
+    "quote_az": "Rənglər və fırça vasitəsilə milli ruhumuzu və daxili dünyamızı kətan üzərində canlandırmaq ən böyük yaradıcılıq sevincidir.",
+    "quote_en": "Bringing our national spirit and inner vision to life on canvas through colors and brushwork is the greatest joy of creation.",
+    "quote_ru": "Воплощать на холсте наш национальный дух и внутренний мир с помощью красок — величайшая радость творчества.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "name_az": "Azərbaycan",
+        "name_en": "Azerbaijan",
+        "name_ru": "Азербайджан",
+        "note": "Beynəlxalq Rəsm Sərgisi 2025",
+        "note_az": "Beynəlxalq Rəsm Sərgisi 2025",
+        "note_en": "International Art Exhibition 2025",
+        "note_ru": "Международная выставка 2025"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "🎨",
+        "val": "BEYNƏLXALQ DİPLOM",
+        "val_az": "BEYNƏLXALQ DİPLOM",
+        "val_en": "INTL DIPLOMA",
+        "val_ru": "МЕЖД. ДИПЛОМ",
+        "label": "Rəsm Müsabiqəsi",
+        "label_az": "Rəsm Müsabiqəsi",
+        "label_en": "Art Competition",
+        "label_ru": "Конкурс живописи",
+        "sub": "Beynəlxalq Rəsm Sərgisi (2025)",
+        "sub_az": "Beynəlxalq Rəsm Sərgisi (2025)",
+        "sub_en": "International Art Exhibition (2025)",
+        "sub_ru": "Международная выставка (2025)"
+      },
+      {
+        "icon": "🌸",
+        "val": "TƏŞƏKKÜRNAMƏ",
+        "val_az": "TƏŞƏKKÜRNAMƏ",
+        "val_en": "APPRECIATION",
+        "val_ru": "БЛАГОДАРНОСТЬ",
+        "label": "Zərif Əllərin Gücü",
+        "label_az": "Zərif Əllərin Gücü",
+        "label_en": "Power of Gentle Hands",
+        "label_ru": "Сила нежных рук",
+        "sub": "8 Mart Beynəlxalq Qadınlar Günü Sərgisi",
+        "sub_az": "8 Mart Beynəlxalq Qadınlar Günü Sərgisi",
+        "sub_en": "March 8 Women's Day Exhibition",
+        "sub_ru": "Выставка к 8 Марта"
+      }
+    ],
+    "highlights": [
+      {
+        "year": "2025",
+        "flag": "🎨",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "Beynəlxalq Rəsm Müsabiqəsi və Sərgisi — Rəsmi Diplom",
+        "title_az": "Beynəlxalq Rəsm Müsabiqəsi və Sərgisi — Rəsmi Diplom",
+        "title_en": "International Painting Competition and Exhibition — Official Diploma",
+        "title_ru": "Международный художественный конкурс и выставка — Официальный диплом",
+        "text": "Təsviri sənət və rəssamlıq nominasiyasında nümayiş etdirdiyi yüksək bədii yaradıcılığa görə Diplomla təltif olunmuşdur.",
+        "text_az": "Təsviri sənət və rəssamlıq nominasiyasında nümayiş etdirdiyi yüksək bədii yaradıcılığa görə Diplomla təltif olunmuşdur.",
+        "text_en": "Awarded an official Diploma for artistic excellence at the International Painting Exhibition.",
+        "text_ru": "Награждена официальным дипломом за художественное мастерство на Международной выставке."
+      },
+      {
+        "year": "2025",
+        "flag": "🌸",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "«Zərif Əllərin Gücü» Yaradıcılıq Sərgisi — Təşəkkürnamə",
+        "title_az": "«Zərif Əllərin Gücü» Yaradıcılıq Sərgisi — Təşəkkürnamə",
+        "title_en": "“Power of Gentle Hands” Creative Exhibition — Certificate of Appreciation",
+        "title_ru": "Творческая выставка «Сила нежных рук» — Благодарственная грамота",
+        "text": "Yeni Azərbaycan Partiyası Xətai rayon təşkilatı və «Mənim dünyam» Rəsm Qalereyasının birgə sərgisində fəal iştirakına görə təltif edilmişdir.",
+        "text_az": "Yeni Azərbaycan Partiyası Xətai rayon təşkilatı və «Mənim dünyam» Rəsm Qalereyasının birgə sərgisində fəal iştirakına görə təltif edilmişdir.",
+        "text_en": "Honored for her creative artwork at the exhibition jointly organized by YAP Khatai District and 'My World' Art Gallery.",
+        "text_ru": "Отмечена благодарностью за участие в выставке Хатаинской районной организации ПЕА и галереи «Мой мир»."
+      }
+    ],
+    "tags": [
+      "#MəlikovaAygün",
+      "#Təsviriİncəsənət",
+      "#BeynəlxalqRəsmSərgisi",
+      "#ZərifƏllərinGücü",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_az": [
+      "#MəlikovaAygün",
+      "#Təsviriİncəsənət",
+      "#BeynəlxalqRəsmSərgisi",
+      "#ZərifƏllərinGücü",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_en": [
+      "#AygunMalikova",
+      "#FineArts",
+      "#ArtExhibition",
+      "#BDRNK_HonorStudent"
+    ],
+    "tags_ru": [
+      "#МеликоваАйгюн",
+      "#ИзобразительноеИскусство",
+      "#ПочетныйСтудентБГКСТ"
+    ],
+    "timeline": [
+      {
+        "year": "2025",
+        "badge": "🎨 Beynəlxalq Sərgi · Diplom",
+        "title": "Beynəlxalq Rəsm Müsabiqəsi və Sərgisi",
+        "desc": "Fəal və uğurlu iştirakına görə Rəsmi Diplom (2025)."
+      },
+      {
+        "year": "2025",
+        "badge": "🌸 Yaradıcılıq Sərgisi · Təşəkkürnamə",
+        "title": "«Zərif Əllərin Gücü» Yaradıcılıq Sərgisi",
+        "desc": "YAP Xətai rayon təşkilatı və «Mənim dünyam» Rəsm Qalereyasının Təşəkkürnaməsi (mart 2025)."
+      }
+    ],
+    "fullBio": [
+      "Məlikova Aygün Bakı Dövlət Rabitə və Nəqliyyat Kollecinin təsviri incəsənət və rəssamlıq sahəsində yaradıcı istedadı ilə seçilən tələbələrindəndir.",
+      "2025-ci ildə Beynəlxalq Rəsm Müsabiqəsi və Sərgisində rəsmi Diplomla, həmçinin 8 Mart – Beynəlxalq Qadınlar Gününə həsr olunmuş «Zərif Əllərin Gücü» yaradıcılıq sərgisində Təşəkkürnamə ilə təltif edilmişdir."
+    ],
+    "fullBio_az": [
+      "Məlikova Aygün Bakı Dövlət Rabitə və Nəqliyyat Kollecinin təsviri incəsənət və rəssamlıq sahəsində yaradıcı istedadı ilə seçilən tələbələrindəndir.",
+      "2025-ci ildə Beynəlxalq Rəsm Müsabiqəsi və Sərgisində rəsmi Diplomla, həmçinin 8 Mart – Beynəlxalq Qadınlar Gününə həsr olunmuş «Zərif Əllərin Gücü» yaradıcılıq sərgisində Təşəkkürnamə ilə təltif edilmişdir."
+    ],
+    "fullBio_en": [
+      "Aygun Malikova is a creative student at Baku State College of Communications and Transport distinguished in painting and fine arts.",
+      "In 2025, she was awarded an official Diploma at the International Painting Competition & Exhibition and a Certificate of Appreciation at the 'Power of Gentle Hands' creative exhibition."
+    ],
+    "fullBio_ru": [
+      "Меликова Айгюн — талантливая студентка Бакинского государственного колледжа связи и транспорта, проявляющая яркие способности в живописи и изобразительном искусстве.",
+      "В 2025 году награждена дипломом Международной художественной выставки и благодарственной грамотой выставки «Сила нежных рук»."
+    ],
+    "certificates": [
+      {
+        "icon": "🎨",
+        "title": "Beynəlxalq Rəsm Müsabiqəsi və Sərgisi — Diplom",
+        "sub": "Təsviri incəsənət və yaradıcılıq sərgisi (2025)"
+      },
+      {
+        "icon": "🌸",
+        "title": "«Zərif Əllərin Gücü» Yaradıcılıq Sərgisi — Təşəkkürnamə",
+        "sub": "YAP Xətai rayon təşkilatı & «Mənim dünyam» Rəsm Qalereyası (2025)"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_aygun_exhibition.jpg",
+        "caption": "Beynəlxalq Rəsm Müsabiqəsi və Sərgisi — Diplom"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_aygun_zerif.jpg",
+        "caption": "«Zərif Əllərin Gücü» Yaradıcılıq Sərgisi — Təşəkkürnamə"
+      }
+    ]
+  },
+  {
+    "id": "fidan-ismayilzade",
+    "fullName": "İsmayılzadə Fidan Zaur qızı",
+    "fullName_az": "İsmayılzadə Fidan Zaur qızı",
+    "fullName_en": "Fidan Ismayilzada Zaur",
+    "fullName_ru": "Исмаилзаде Фидан Заур гызы",
+    "photo": "certificates/thumbs/cert_fidan_asan_1st_2026.jpg",
+    "fallbackPhoto": "certificates/cert_fidan_asan_1st_2026.jpg",
+    "kickerIcon": "🏛️",
+    "kicker": "ASAN Könüllüləri (I Dərəcə) & İKT Kompüter Proqramları",
+    "kicker_az": "ASAN Könüllüləri (I Dərəcə) & İKT Kompüter Proqramları",
+    "kicker_en": "ASAN Volunteers (1st Degree) & ICT Computer Programs",
+    "kicker_ru": "Волонтеры ASAN (I Степень) и Компьютерные Программы ИКТ",
+    "highlightsHeading": "DÖVLƏT XİDMƏTLƏRİ KÖNÜLLÜLÜYÜ VƏ İKT NAİLİYYƏTLƏRİ",
+    "highlightsHeading_az": "DÖVLƏT XİDMƏTLƏRİ KÖNÜLLÜLÜYÜ VƏ İKT NAİLİYYƏTLƏRİ",
+    "highlightsHeading_en": "PUBLIC SERVICE VOLUNTEERING & ICT ACHIEVEMENTS",
+    "highlightsHeading_ru": "ВОЛОНТЕРСТВО В ГОСУСЛУГАХ И ДОСТИЖЕНИЯ В ИКТ",
+    "avatarYearTag": "🏛️ ASAN I DƏRƏCƏ · 91.35/100",
+    "titleBadge": "🥇 ASAN Xidmət I Dərəcəli Sertifikat & İKT Diplomu",
+    "titleBadge_az": "🥇 ASAN Xidmət I Dərəcəli Sertifikat & İKT Diplomu",
+    "titleBadge_en": "🥇 ASAN Service 1st Degree Certificate & ICT Diploma",
+    "titleBadge_ru": "🥇 Сертификат I степени ASAN Xidmət и Диплом ИКТ",
+    "role": "BDRNK Tələbəsi · 1 saylı Sumqayıt Regional «ASAN xidmət» Mərkəzinin I Dərəcəli Könüllüsü və Heart Academy İKT Məzunu",
+    "role_az": "BDRNK Tələbəsi · 1 saylı Sumqayıt Regional «ASAN xidmət» Mərkəzinin I Dərəcəli Könüllüsü və Heart Academy İKT Məzunu",
+    "role_en": "BDRNK Student · 1st Degree Volunteer at Sumgayit Regional “ASAN service” Center No. 1 & Heart Academy ICT Graduate",
+    "role_ru": "Студентка БГКСТ · Волонтер I степени Сумгайытского регионального центра «ASAN xidmət» № 1 и выпускница Heart Academy",
+    "categories": [
+      "youth",
+      "it-robotics"
+    ],
+    "statusText": "ASAN Xidmət I Dərəcə (91.35/100) · 3 Rəsmi Sənəd",
+    "statusText_az": "ASAN Xidmət I Dərəcə (91.35/100) · 3 Rəsmi Sənəd",
+    "statusText_en": "ASAN Service 1st Degree (91.35/100) · 3 Official Awards",
+    "statusText_ru": "ASAN Xidmət I степень (91.35/100) · 3 документа",
+    "quote": "Vətəndaşlara dövlət xidmətlərinin göstərilməsində könüllü kimi iştirak etmək və rəqəmsal bacarıqları inkişaf etdirmək peşəkar gələcəyimizin təməlidir.",
+    "quote_az": "Vətəndaşlara dövlət xidmətlərinin göstərilməsində könüllü kimi iştirak etmək və rəqəmsal bacarıqları inkişaf etdirmək peşəkar gələcəyimizin təməlidir.",
+    "quote_en": "Volunteering in public service delivery and advancing digital skills form the foundation of our professional future.",
+    "quote_ru": "Участие в оказании государственных услуг гражданам и развитие цифровых навыков — основа нашего профессионального будущего.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "name_az": "Azərbaycan",
+        "name_en": "Azerbaijan",
+        "name_ru": "Азербайджан",
+        "note": "ASAN Xidmət & Heart Academy",
+        "note_az": "ASAN Xidmət & Heart Academy",
+        "note_en": "ASAN Service & Heart Academy",
+        "note_ru": "ASAN Xidmət и Heart Academy"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "🏛️",
+        "val": "I DƏRƏCƏ",
+        "val_az": "I DƏRƏCƏ",
+        "val_en": "1st DEGREE",
+        "val_ru": "I СТЕПЕНЬ",
+        "label": "ASAN Xidmət",
+        "label_az": "ASAN Xidmət",
+        "label_en": "ASAN Service",
+        "label_ru": "ASAN Xidmət",
+        "sub": "91.35/100 bal · № 48367 (2026)",
+        "sub_az": "91.35/100 bal · № 48367 (2026)",
+        "sub_en": "Score: 91.35/100 · No. 48367",
+        "sub_ru": "91.35/100 баллов · № 48367"
+      },
+      {
+        "icon": "🎓",
+        "val": "DİPLOM № 631",
+        "val_az": "DİPLOM № 631",
+        "val_en": "DIPLOMA No. 631",
+        "val_ru": "ДИПЛОМ № 631",
+        "label": "Heart Academy",
+        "label_az": "Heart Academy",
+        "label_en": "Heart Academy",
+        "label_ru": "Heart Academy",
+        "sub": "6 aylıq Kompüter hazırlıq kursu",
+        "sub_az": "6 aylıq Kompüter hazırlıq kursu",
+        "sub_en": "6-month Computer preparatory course",
+        "sub_ru": "6-месячный компьютерный курс"
+      },
+      {
+        "icon": "💻",
+        "val": "MS OFFICE",
+        "val_az": "MS OFFICE",
+        "val_en": "MS OFFICE",
+        "val_ru": "MS OFFICE",
+        "label": "Rəsmi Sertifikat",
+        "label_az": "Rəsmi Sertifikat",
+        "label_en": "Official Certificate",
+        "label_ru": "Официальный сертификат",
+        "sub": "Windows, Word, Excel, PowerPoint",
+        "sub_az": "Windows, Word, Excel, PowerPoint",
+        "sub_en": "Windows, Word, Excel, PowerPoint",
+        "sub_ru": "Windows, Word, Excel, PowerPoint"
+      }
+    ],
+    "highlights": [
+      {
+        "year": "2026",
+        "flag": "🏛️",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "1 saylı Sumqayıt Regional «ASAN xidmət» Mərkəzi — I Dərəcəli Sertifikat (91.35/100)",
+        "title_az": "1 saylı Sumqayıt Regional «ASAN xidmət» Mərkəzi — I Dərəcəli Sertifikat (91.35/100)",
+        "title_en": "Sumgayit Regional “ASAN service” Center No. 1 — 1st Degree Certificate (91.35/100)",
+        "title_ru": "Сумгайытский региональный центр «ASAN xidmət» № 1 — Сертификат I степени (91.35/100)",
+        "text": "15 avqust – 15 oktyabr 2026-cı il tarixlərində dövlət xidmətlərinin göstərilməsi və ictimai layihələrdə fəal iştirakına görə 91.35/100 balla I Dərəcəli Sertifikatla təltif olunmuşdur.",
+        "text_az": "15 avqust – 15 oktyabr 2026-cı il tarixlərində dövlət xidmətlərinin göstərilməsi və ictimai layihələrdə fəal iştirakına görə 91.35/100 balla I Dərəcəli Sertifikatla təltif olunmuşdur.",
+        "text_en": "Awarded a 1st Degree Certificate with a score of 91.35/100 for volunteer service and public projects from August 15 to October 15, 2026.",
+        "text_ru": "Награждена Сертификатом I степени (91.35/100 баллов) за волонтерскую деятельность с 15 августа по 15 октября 2026 года."
+      },
+      {
+        "year": "2025",
+        "flag": "🎓",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "Heart Academy — 6 Aylıq Kompüter Proqramları Diplomu və Sertifikatı (№ 631)",
+        "title_az": "Heart Academy — 6 Aylıq Kompüter Proqramları Diplomu və Sertifikatı (№ 631)",
+        "title_en": "Heart Academy — 6-Month Computer Programs Diploma & Certificate (No. 631)",
+        "title_ru": "Heart Academy — Диплом и Сертификат 6-месячного курса компьютерных программ (№ 631)",
+        "text": "MS Windows, Word, Excel, PowerPoint və İKT proqramları üzrə 6 aylıq hazırlıq kursunu müvəffəqiyyətlə bitirərək həm Diplom, həm də Sertifikat qazanmışdır.",
+        "text_az": "MS Windows, Word, Excel, PowerPoint və İKT proqramları üzrə 6 aylıq hazırlıq kursunu müvəffəqiyyətlə bitirərək həm Diplom, həm də Sertifikat qazanmışdır.",
+        "text_en": "Earned both an official Diploma and Certificate after completing the 6-month computer programs course.",
+        "text_ru": "Успешно окончила 6-месячный курс компьютерной подготовки, получив диплом и сертификат."
+      }
+    ],
+    "tags": [
+      "#İsmayılzadəFidan",
+      "#ASANKönüllüləri",
+      "#ASANXidmət_IDərəcə",
+      "#HeartAcademy",
+      "#İKT",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_az": [
+      "#İsmayılzadəFidan",
+      "#ASANKönüllüləri",
+      "#ASANXidmət_IDərəcə",
+      "#HeartAcademy",
+      "#İKT",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_en": [
+      "#FidanIsmayilzada",
+      "#ASANVolunteers",
+      "#ICT",
+      "#BDRNK_HonorStudent"
+    ],
+    "tags_ru": [
+      "#ИсмаилзадеФидан",
+      "#ВолонтерыASAN",
+      "#ИКТ",
+      "#ПочетныйСтудентБГКСТ"
+    ],
+    "timeline": [
+      {
+        "year": "2026",
+        "badge": "🏛️ ASAN Xidmət · I Dərəcə (91.35/100)",
+        "title": "1 saylı Sumqayıt Regional «ASAN xidmət» Mərkəzi Könüllülük Proqramı",
+        "desc": "I Dərəcəli Sertifikat, № 48367 (25 oktyabr 2026)."
+      },
+      {
+        "year": "2025",
+        "badge": "🎓 Diplom № 631",
+        "title": "Heart Academy — 6 Aylıq Kompüter Hazırlıq Kursu Diplomu",
+        "desc": "MS Windows, Word, Excel, PowerPoint üzrə rəsmi Diplom (30 yanvar 2025)."
+      },
+      {
+        "year": "2025",
+        "badge": "💻 Sertifikat",
+        "title": "Heart Academy — Kompüter Kursları Sertifikatı",
+        "desc": "6 aylıq İKT kursunu müvəffəqiyyətlə başa vurduğuna görə Sertifikat (30 yanvar 2025)."
+      }
+    ],
+    "fullBio": [
+      "İsmayılzadə Fidan Zaur qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin həm dövlət xidmətləri könüllülüyü, həm də informasiya texnologiyaları sahəsində fərqlənən fəal tələbələrindəndir.",
+      "2026-cı ildə 1 saylı Sumqayıt regional «ASAN xidmət» mərkəzində könüllülük fəaliyyətini 91.35/100 yüksək bal ilə başa vuraraq I Dərəcəli Sertifikata (№ 48367), həmçinin Heart Academy-də 6 aylıq kompüter proqramları kursu üzrə rəsmi Diplom (№ 631) və Sertifikata layiq görülmüşdür."
+    ],
+    "fullBio_az": [
+      "İsmayılzadə Fidan Zaur qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin həm dövlət xidmətləri könüllülüyü, həm də informasiya texnologiyaları sahəsində fərqlənən fəal tələbələrindəndir.",
+      "2026-cı ildə 1 saylı Sumqayıt regional «ASAN xidmət» mərkəzində könüllülük fəaliyyətini 91.35/100 yüksək bal ilə başa vuraraq I Dərəcəli Sertifikata (№ 48367), həmçinin Heart Academy-də 6 aylıq kompüter proqramları kursu üzrə rəsmi Diplom (№ 631) və Sertifikata layiq görülmüşdür."
+    ],
+    "fullBio_en": [
+      "Fidan Ismayilzada Zaur is an active student at Baku State College of Communications and Transport excelling in public service volunteering and ICT skills.",
+      "In 2026, she graduated from the volunteer program at Sumgayit Regional 'ASAN service' Center No. 1 with a 1st Degree Certificate (score: 91.35/100, No. 48367), alongside her Diploma and Certificate from Heart Academy."
+    ],
+    "fullBio_ru": [
+      "Исмаилзаде Фидан Заур гызы — активная студентка Бакинского государственного колледжа связи и транспорта, отличившаяся в волонтерской деятельности и сфере ИКТ.",
+      "В 2026 году получила Сертификат I степени (91.35/100 баллов, № 48367) в Сумгайытском региональном центре «ASAN xidmət» № 1, а также диплом и сертификат курса компьютерных технологий Heart Academy."
+    ],
+    "certificates": [
+      {
+        "icon": "🏛️",
+        "title": "«ASAN Xidmət» Könüllülük Fəaliyyəti — I Dərəcəli Sertifikat (91.35/100)",
+        "sub": "1 saylı Sumqayıt regional «ASAN xidmət» mərkəzi · № 48367 (25.10.2026)"
+      },
+      {
+        "icon": "🎓",
+        "title": "Heart Academy — 6 Aylıq Kompüter Hazırlıq Kursu Diplomu",
+        "sub": "Qeydiyyat № 631 · Sumqayıt (30.01.2025)"
+      },
+      {
+        "icon": "💻",
+        "title": "Heart Academy — Kompüter Proqramları Kursu Sertifikatı",
+        "sub": "MS Windows, Word, Excel, PowerPoint · 30.01.2025"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_fidan_asan_1st_2026.jpg",
+        "caption": "«ASAN Xidmət» Könüllülük Fəaliyyəti — I Dərəcəli Sertifikat (91.35/100)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_fidan_heart_diploma_2025.jpg",
+        "caption": "Heart Academy — 6 Aylıq Kompüter Hazırlıq Kursu Diplomu (№ 631)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_fidan_heart_cert_2025.jpg",
+        "caption": "Heart Academy — Kompüter Proqramları Kursu Sertifikatı"
+      }
+    ]
+  },
+  {
+    "id": "ruqeyya-esedli",
+    "fullName": "Əsədli Rüqəyyə Samir qızı",
+    "fullName_az": "Əsədli Rüqəyyə Samir qızı",
+    "fullName_en": "Rugayya Asadli Samir",
+    "fullName_ru": "Асадли Ругайя Самир гызы",
+    "photo": "certificates/thumbs/cert_ruqeyya_steam_1st_2025.jpg",
+    "fallbackPhoto": "certificates/cert_ruqeyya_steam_1st_2025.jpg",
+    "kickerIcon": "🔬",
+    "kicker": "STEAM Yarışması Qalibi (I Yer) & Voleybol Mükafatçısı (II Yer)",
+    "kicker_az": "STEAM Yarışması Qalibi (I Yer) & Voleybol Mükafatçısı (II Yer)",
+    "kicker_en": "STEAM Competition Winner (1st Place) & Volleyball Medalist (2nd Place)",
+    "kicker_ru": "Победительница конкурса STEAM (I место) и призер по волейболу (II место)",
+    "highlightsHeading": "ELMİ-TEXNOLOJİ (STEAM) VƏ İDMAN NAİLİYYƏTLƏRİ",
+    "highlightsHeading_az": "ELMİ-TEXNOLOJİ (STEAM) VƏ İDMAN NAİLİYYƏTLƏRİ",
+    "highlightsHeading_en": "STEAM & ATHLETIC ACHIEVEMENTS",
+    "highlightsHeading_ru": "НАУЧНО-ТЕХНИЧЕСКИЕ (STEAM) И СПОРТИВНЫЕ ДОСТИЖЕНИЯ",
+    "avatarYearTag": "🥇 STEAM I YER · VOLEYBOL II YER",
+    "titleBadge": "🥇 STEAM Yarışması I Yer & 🥈 Voleybol II Yer Diplomantı",
+    "titleBadge_az": "🥇 STEAM Yarışması I Yer & 🥈 Voleybol II Yer Diplomantı",
+    "titleBadge_en": "🥇 STEAM 1st Place Winner & 🥈 Volleyball 2nd Place Medalist",
+    "titleBadge_ru": "🥇 I место по STEAM и 🥈 II место по волейболу",
+    "role": "BDRNK Tələbəsi · «Kiçik Akademiya» STEAM Yarışmasının Qalibi və Qızlar arasında Voleybol Turnirinin Gümüş Mükafatçısı",
+    "role_az": "BDRNK Tələbəsi · «Kiçik Akademiya» STEAM Yarışmasının Qalibi və Qızlar arasında Voleybol Turnirinin Gümüş Mükafatçısı",
+    "role_en": "BDRNK Student · Winner of “Junior Academy” STEAM Competition & Silver Medalist in Girls' Volleyball",
+    "role_ru": "Студентка БГКСТ · Победительница конкурса STEAM «Малой Академии» и серебряный призер по волейболу",
+    "categories": [
+      "it-robotics",
+      "sports"
+    ],
+    "statusText": "I Yer (STEAM, 2025) & II Yer (Voleybol, 2026)",
+    "statusText_az": "I Yer (STEAM, 2025) & II Yer (Voleybol, 2026)",
+    "statusText_en": "1st Place (STEAM, 2025) & 2nd Place (Volleyball, 2026)",
+    "statusText_ru": "I место (STEAM, 2025) и II место (Волейбол, 2026)",
+    "quote": "Elmi-texnoloji yenilikləri (STEAM) öyrənmək və komanda idmanında uğur qazanmaq gəncin hərtərəfli inkişafının əsasıdır.",
+    "quote_az": "Elmi-texnoloji yenilikləri (STEAM) öyrənmək və komanda idmanında uğur qazanmaq gəncin hərtərəfli inkişafının əsasıdır.",
+    "quote_en": "Exploring STEAM innovation while excelling in team athletics forms the core of well-rounded youth development.",
+    "quote_ru": "Изучение научно-технических инноваций (STEAM) и успехи в командном спорте — основа всестороннего развития.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "name_az": "Azərbaycan",
+        "name_en": "Azerbaijan",
+        "name_ru": "Азербайджан",
+        "note": "Elm və Təhsil Nazirliyi · Kiçik Akademiya",
+        "note_az": "Elm və Təhsil Nazirliyi · Kiçik Akademiya",
+        "note_en": "Ministry of Science & Education · Junior Academy",
+        "note_ru": "Министерство науки и образования АР"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "🥇",
+        "val": "I YER (QIZIL)",
+        "val_az": "I YER (QIZIL)",
+        "val_en": "1st PLACE (GOLD)",
+        "val_ru": "I МЕСТО (ЗОЛОТО)",
+        "label": "STEAM Yarışması",
+        "label_az": "STEAM Yarışması",
+        "label_en": "STEAM Competition",
+        "label_ru": "Конкурс STEAM",
+        "sub": "«Kiçik Akademiya» · 05.06.2025",
+        "sub_az": "«Kiçik Akademiya» · 05.06.2025",
+        "sub_en": "“Junior Academy” · 05.06.2025",
+        "sub_ru": "«Малая Академия» · 05.06.2025"
+      },
+      {
+        "icon": "🥈",
+        "val": "II YER (GÜMÜŞ)",
+        "val_az": "II YER (GÜMÜŞ)",
+        "val_en": "2nd PLACE (SILVER)",
+        "val_ru": "II МЕСТО (СЕРЕБРО)",
+        "label": "Voleybol Turniri",
+        "label_az": "Voleybol Turniri",
+        "label_en": "Volleyball Tournament",
+        "label_ru": "Волейбольный турнир",
+        "sub": "8 Mart Qadınlar Günü Yarışı (2026)",
+        "sub_az": "8 Mart Qadınlar Günü Yarışı (2026)",
+        "sub_en": "March 8 Women's Day Tournament (2026)",
+        "sub_ru": "Турнир к 8 Марта (2026)"
+      }
+    ],
+    "highlights": [
+      {
+        "year": "2025",
+        "flag": "🥇",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "«Kiçik Akademiya» STEAM Yarışması — I Yer Diplomu",
+        "title_az": "«Kiçik Akademiya» STEAM Yarışması — I Yer Diplomu",
+        "title_en": "“Junior Academy” STEAM Competition — 1st Place Diploma",
+        "title_ru": "Конкурс STEAM «Малой Академии» — Диплом за I место",
+        "text": "AR Elm və Təhsil Nazirliyi Lənkəran şəhəri A. Məhərrəmov adına 7 №-li tam orta məktəbin «Kiçik Akademiyası» tərəfindən “STEAM”ə həsr olunmuş yarışmada I yerə layiq görülmüşdür.",
+        "text_az": "AR Elm və Təhsil Nazirliyi Lənkəran şəhəri A. Məhərrəmov adına 7 №-li tam orta məktəbin «Kiçik Akademiyası» tərəfindən “STEAM”ə həsr olunmuş yarışmada I yerə layiq görülmüşdür.",
+        "text_en": "Won 1st Place in the STEAM competition organized by the 'Junior Academy' on June 5, 2025.",
+        "text_ru": "Заняла I место на конкурсе STEAM «Малой Академии» (5 июня 2025 г.)."
+      },
+      {
+        "year": "2026",
+        "flag": "🥈",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "8 Mart Beynəlxalq Qadınlar Günü Voleybol Yarışı — II Yer Diplomu",
+        "title_az": "8 Mart Beynəlxalq Qadınlar Günü Voleybol Yarışı — II Yer Diplomu",
+        "title_en": "March 8 International Women's Day Volleyball Competition — 2nd Place Diploma",
+        "title_ru": "Соревнования по волейболу к 8 Марта — Диплом за II место",
+        "text": "5–6 mart 2026-cı il tarixlərində qızlar arasında keçirilən voleybol yarışında II yeri tutaraq Diplomla təltif olunmuşdur.",
+        "text_az": "5–6 mart 2026-cı il tarixlərində qızlar arasında keçirilən voleybol yarışında II yeri tutaraq Diplomla təltif olunmuşdur.",
+        "text_en": "Secured 2nd Place Silver in the girls' volleyball competition on March 5–6, 2026.",
+        "text_ru": "Заняла II место в турнире по волейболу среди девушек (5–6 марта 2026 г.)."
+      }
+    ],
+    "tags": [
+      "#ƏsədliRüqəyyə",
+      "#STEAM_IYer",
+      "#KiçikAkademiya",
+      "#Voleybol_IIYer",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_az": [
+      "#ƏsədliRüqəyyə",
+      "#STEAM_IYer",
+      "#KiçikAkademiya",
+      "#Voleybol_IIYer",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_en": [
+      "#RugayyaAsadli",
+      "#STEAM",
+      "#Volleyball",
+      "#BDRNK_HonorStudent"
+    ],
+    "tags_ru": [
+      "#АсадлиРугайя",
+      "#STEAM",
+      "#Волейбол",
+      "#ПочетныйСтудентБГКСТ"
+    ],
+    "timeline": [
+      {
+        "year": "2026",
+        "badge": "🥈 II Yer · Voleybol",
+        "title": "8 Mart Beynəlxalq Qadınlar Günü Voleybol Yarışı",
+        "desc": "Qızlar arasında voleybol yarışında II Yer Diplomu (5–6 mart 2026)."
+      },
+      {
+        "year": "2025",
+        "badge": "🥇 I Yer · STEAM",
+        "title": "«Kiçik Akademiya» STEAM Yarışması",
+        "desc": "“STEAM”ə həsr olunmuş yarışmada I Yer Diplomu (05.06.2025)."
+      }
+    ],
+    "fullBio": [
+      "Əsədli Rüqəyyə Samir qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin həm STEAM innovasiya müsabiqələrində, həm də idman yarışlarında uğur qazanan fəal tələbələrindəndir.",
+      "2025-ci ildə «Kiçik Akademiya» tərəfindən keçirilən “STEAM” yarışmasında I Yerə (Qızıl Diplom), 2026-cı ildə isə 8 Mart Beynəlxalq Qadınlar Gününə həsr olunmuş qızlar arasında voleybol yarışında II Yerə (Gümüş Diplom) layiq görülmüşdür."
+    ],
+    "fullBio_az": [
+      "Əsədli Rüqəyyə Samir qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin həm STEAM innovasiya müsabiqələrində, həm də idman yarışlarında uğur qazanan fəal tələbələrindəndir.",
+      "2025-ci ildə «Kiçik Akademiya» tərəfindən keçirilən “STEAM” yarışmasında I Yerə (Qızıl Diplom), 2026-cı ildə isə 8 Mart Beynəlxalq Qadınlar Gününə həsr olunmuş qızlar arasında voleybol yarışında II Yerə (Gümüş Diplom) layiq görülmüşdür."
+    ],
+    "fullBio_en": [
+      "Rugayya Asadli Samir is an accomplished student at Baku State College of Communications and Transport excelling in both STEAM and athletics.",
+      "She won 1st Place in the 2025 'Junior Academy' STEAM Competition and 2nd Place in the 2026 International Women's Day Girls' Volleyball Tournament."
+    ],
+    "fullBio_ru": [
+      "Асадли Ругайя Самир гызы — талантливая студентка Бакинского государственного колледжа связи и транспорта, успешно выступающая в конкурсах STEAM и спортивных турнирах.",
+      "В 2025 году заняла I место на конкурсе STEAM «Малой Академии», а в 2026 году — II место на турнире по волейболу среди девушек к 8 Марта."
+    ],
+    "certificates": [
+      {
+        "icon": "🥇",
+        "title": "«Kiçik Akademiya» STEAM Yarışması — I Yer Diplomu",
+        "sub": "AR Elm və Təhsil Nazirliyi · 05.06.2025"
+      },
+      {
+        "icon": "🥈",
+        "title": "8 Mart Beynəlxalq Qadınlar Günü Voleybol Yarışı — II Yer Diplomu",
+        "sub": "Lənkəran-Astara RTİ · 5–6 mart 2026"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_ruqeyya_steam_1st_2025.jpg",
+        "caption": "«Kiçik Akademiya» STEAM Yarışması — I Yer Diplomu (05.06.2025)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_ruqeyya_voleybol_2nd_2026.jpg",
+        "caption": "8 Mart Beynəlxalq Qadınlar Günü Voleybol Yarışı — II Yer Diplomu (5–6 mart 2026)"
+      }
+    ]
+  },
+  {
+    "id": "aynur-mirzagayeva",
+    "fullName": "Mirzağayeva Aynur Namiq qızı",
+    "fullName_az": "Mirzağayeva Aynur Namiq qızı",
+    "fullName_en": "Aynur Mirzaghayeva Namig",
+    "fullName_ru": "Мирзагаева Айнур Намиг гызы",
+    "photo": "certificates/thumbs/cert_aynur_cudo_baki_2nd_2025.jpg",
+    "fallbackPhoto": "certificates/cert_aynur_cudo_baki_2nd_2025.jpg",
+    "kickerIcon": "🥋",
+    "kicker": "Cüdo · Bakı Şəhər Çempionatının Gümüş Mükafatçısı (-70 kq)",
+    "kicker_az": "Cüdo · Bakı Şəhər Çempionatının Gümüş Mükafatçısı (-70 kq)",
+    "kicker_en": "Judo · Baku City Championship Silver Medalist (-70 kg)",
+    "kicker_ru": "Дзюдо · Серебряный Призер Чемпионата г. Баку (-70 кг)",
+    "highlightsHeading": "CÜDO ÜZRƏ BAKI ŞƏHƏR ÇEMPİONATI NAİLİYYƏTİ",
+    "highlightsHeading_az": "CÜDO ÜZRƏ BAKI ŞƏHƏR ÇEMPİONATI NAİLİYYƏTİ",
+    "highlightsHeading_en": "BAKU CITY JUDO CHAMPIONSHIP ACHIEVEMENT",
+    "highlightsHeading_ru": "ДОСТИЖЕНИЕ НА ЧЕМПИОНАТЕ ГОРОДА БАКУ ПО ДЗЮДО",
+    "avatarYearTag": "🥈 BAKI ÇEMPİONATI · -70 kq",
+    "titleBadge": "🥈 Cüdo üzrə Bakı Şəhər Çempionatı — II Yer (Gümüş)",
+    "titleBadge_az": "🥈 Cüdo üzrə Bakı Şəhər Çempionatı — II Yer (Gümüş)",
+    "titleBadge_en": "🥈 Baku City Judo Championship — 2nd Place (Silver)",
+    "titleBadge_ru": "🥈 Чемпионат г. Баку по дзюдо — II место (Серебро)",
+    "role": "BDRNK Tələbəsi · AR Gənclər və İdman Nazirliyi Bakı Şəhər Cüdo Çempionatının Gümüş Mükafatçısı (Neftçi İK, -70 kq)",
+    "role_az": "BDRNK Tələbəsi · AR Gənclər və İdman Nazirliyi Bakı Şəhər Cüdo Çempionatının Gümüş Mükafatçısı (Neftçi İK, -70 kq)",
+    "role_en": "BDRNK Student · Silver Medalist of the Baku City Judo Championship (Neftchi SC, -70 kg)",
+    "role_ru": "Студентка БГКСТ · Серебряный призер чемпионата города Баку по дзюдо (СК «Нефтчи», -70 кг)",
+    "categories": [
+      "sports"
+    ],
+    "statusText": "Bakı Şəhər Çempionatı II Yer (-70 kq · Neftçi İK)",
+    "statusText_az": "Bakı Şəhər Çempionatı II Yer (-70 kq · Neftçi İK)",
+    "statusText_en": "Baku City Championship 2nd Place (-70 kg · Neftchi SC)",
+    "statusText_ru": "II место Чемпионата г. Баку (-70 кг · СК «Нефтчи»)",
+    "quote": "Tatamidə əzmkarlıq və iradə nümayiş etdirərək Bakı şəhər çempionatında fəxri kürsüyə yüksəlmək böyük qürurdur.",
+    "quote_az": "Tatamidə əzmkarlıq və iradə nümayiş etdirərək Bakı şəhər çempionatında fəxri kürsüyə yüksəlmək böyük qürurdur.",
+    "quote_en": "Rising to the podium at the Baku City Championship through perseverance and willpower on the tatami is a great honor.",
+    "quote_ru": "Подняться на пьедестал почета чемпионата Баку благодаря упорству и воле на татами — большая честь.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "name_az": "Azərbaycan",
+        "name_en": "Azerbaijan",
+        "name_ru": "Азербайджан",
+        "note": "Gənclər və İdman Nazirliyi · Neftçi İK",
+        "note_az": "Gənclər və İdman Nazirliyi · Neftçi İK",
+        "note_en": "Ministry of Youth & Sports · Neftchi SC",
+        "note_ru": "Минмолодежи и спорта АР · СК «Нефтчи»"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "🥈",
+        "val": "II YER (GÜMÜŞ)",
+        "val_az": "II YER (GÜMÜŞ)",
+        "val_en": "2nd PLACE (SILVER)",
+        "val_ru": "II МЕСТО (СЕРЕБРО)",
+        "label": "Bakı Şəhər Çempionatı",
+        "label_az": "Bakı Şəhər Çempionatı",
+        "label_en": "Baku City Championship",
+        "label_ru": "Чемпионат г. Баку",
+        "sub": "Qadınlar və kişilər arasında cüdo (14.11.2025)",
+        "sub_az": "Qadınlar və kişilər arasında cüdo (14.11.2025)",
+        "sub_en": "Men's & Women's Judo (14.11.2025)",
+        "sub_ru": "Дзюдо среди мужчин и женщин (14.11.2025)"
+      },
+      {
+        "icon": "🥋",
+        "val": "-70 KQ · NEFTÇİ İK",
+        "val_az": "-70 KQ · NEFTÇİ İK",
+        "val_en": "-70 KG · NEFTCHI SC",
+        "val_ru": "-70 КГ · СК НЕФТЧИ",
+        "label": "Cüdo İdman Növü",
+        "label_az": "Cüdo İdman Növü",
+        "label_en": "Judo Division",
+        "label_ru": "Весовая категория",
+        "sub": "Bakı Şəhər Gənclər və İdman İdarəsi",
+        "sub_az": "Bakı Şəhər Gənclər və İdman İdarəsi",
+        "sub_en": "Baku City Youth & Sports Dept",
+        "sub_ru": "Управление молодежи и спорта г. Баку"
+      }
+    ],
+    "highlights": [
+      {
+        "year": "2025",
+        "flag": "🥈",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "Cüdo üzrə Qadınlar və Kişilər arasında Bakı Şəhər Çempionatı — II Yer (-70 kq)",
+        "title_az": "Cüdo üzrə Qadınlar və Kişilər arasında Bakı Şəhər Çempionatı — II Yer (-70 kq)",
+        "title_en": "Baku City Men's and Women's Judo Championship — 2nd Place (-70 kg)",
+        "title_ru": "Чемпионат города Баку по дзюдо среди мужчин и женщин — II место (-70 кг)",
+        "text": "AR Gənclər və İdman Nazirliyi Bakı Şəhər Gənclər və İdman İdarəsinin keçirdiyi rəsmi Bakı çempionatında Neftçi İK təmsilçisi kimi -70 kq dərəcəsində II yerə layiq görülmüşdür.",
+        "text_az": "AR Gənclər və İdman Nazirliyi Bakı Şəhər Gənclər və İdman İdarəsinin keçirdiyi rəsmi Bakı çempionatında Neftçi İK təmsilçisi kimi -70 kq dərəcəsində II yerə layiq görülmüşdür.",
+        "text_en": "Won 2nd Place Silver in the -70 kg division representing Neftchi SC at the official Baku City Judo Championship on November 14, 2025.",
+        "text_ru": "Завоевала II место в категории до 70 кг (СК «Нефтчи») на официальном чемпионате г. Баку по дзюдо (14 ноября 2025 г.)."
+      }
+    ],
+    "tags": [
+      "#MirzağayevaAynur",
+      "#Cüdo",
+      "#BakıÇempionatı_IIYer",
+      "#NeftçiİK",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_az": [
+      "#MirzağayevaAynur",
+      "#Cüdo",
+      "#BakıÇempionatı_IIYer",
+      "#NeftçiİK",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_en": [
+      "#AynurMirzaghayeva",
+      "#Judo",
+      "#BakuChampionship",
+      "#NeftchiSC",
+      "#BDRNK_HonorStudent"
+    ],
+    "tags_ru": [
+      "#МирзагаеваАйнур",
+      "#Дзюдо",
+      "#ЧемпионатБаку",
+      "#ПочетныйСтудентБГКСТ"
+    ],
+    "timeline": [
+      {
+        "year": "2025",
+        "badge": "🥈 II Yer · -70 kq",
+        "title": "Cüdo üzrə Qadınlar və Kişilər arasında Bakı Şəhər Çempionatı",
+        "desc": "AR Gənclər və İdman Nazirliyi · Neftçi İK, -70 kq çəki dərəcəsində II Yer Diplomu (14 noyabr 2025)."
+      }
+    ],
+    "fullBio": [
+      "Mirzağayeva Aynur Namiq qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin cüdo üzrə Bakı şəhər çempionatında fəxri kürsüyə yüksəlmiş istedadlı tələbə-idmançılarımızdandır.",
+      "14 noyabr 2025-ci il tarixində Azərbaycan Respublikası Gənclər və İdman Nazirliyi Bakı Şəhər Gənclər və İdman İdarəsinin təşkil etdiyi qadınlar və kişilər arasında Bakı şəhər çempionatında («Neftçi» İdman Klubu, -70 kq) II yerə layiq görülərək rəsmi Diplomla təltif olunmuşdur."
+    ],
+    "fullBio_az": [
+      "Mirzağayeva Aynur Namiq qızı Bakı Dövlət Rabitə və Nəqliyyat Kollecinin cüdo üzrə Bakı şəhər çempionatında fəxri kürsüyə yüksəlmiş istedadlı tələbə-idmançılarımızdandır.",
+      "14 noyabr 2025-ci il tarixində Azərbaycan Respublikası Gənclər və İdman Nazirliyi Bakı Şəhər Gənclər və İdman İdarəsinin təşkil etdiyi qadınlar və kişilər arasında Bakı şəhər çempionatında («Neftçi» İdman Klubu, -70 kq) II yerə layiq görülərək rəsmi Diplomla təltif olunmuşdur."
+    ],
+    "fullBio_en": [
+      "Aynur Mirzaghayeva Namig is a standout student-judoka at Baku State College of Communications and Transport.",
+      "On November 14, 2025, representing Neftchi Sports Club in the -70 kg division, she won 2nd Place Silver at the official Baku City Men's and Women's Judo Championship under the Ministry of Youth and Sports."
+    ],
+    "fullBio_ru": [
+      "Мирзагаева Айнур Намиг гызы — талантливая студентка-дзюдоистка Бакинского государственного колледжа связи и транспорта.",
+      "14 ноября 2025 года, выступая за СК «Нефтчи» в весовой категории до 70 кг, заняла II место на чемпионате города Баку по дзюдо среди мужчин и женщин."
+    ],
+    "certificates": [
+      {
+        "icon": "🥈",
+        "title": "Cüdo üzrə Bakı Şəhər Çempionatı (-70 kq) — II Yer Diplomu",
+        "sub": "AR Gənclər və İdman Nazirliyi · Neftçi İK (14.11.2025)"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_aynur_cudo_baki_2nd_2025.jpg",
+        "caption": "Cüdo üzrə Bakı Şəhər Çempionatı (-70 kq, Neftçi İK) — II Yer Diplomu (14.11.2025)"
+      }
+    ]
+  },
+  {
+    "id": "bahar-bextiyarqizi",
+    "fullName": "Kərimova Bahar Bəxtiyar qızı (Bahar Bəxtiyarqızı)",
+    "fullName_az": "Kərimova Bahar Bəxtiyar qızı (Bahar Bəxtiyarqızı)",
+    "fullName_en": "Bahar Karimova Bakhtiyar (Bahar Bakhtiyargizi)",
+    "fullName_ru": "Керимова Бахар Бахтияр гызы (Бахар Бахтияргызы)",
+    "photo": "certificates/thumbs/cert_bahar_yazarlar_2026.jpg",
+    "fallbackPhoto": "certificates/cert_bahar_yazarlar_2026.jpg",
+    "kickerIcon": "✍️",
+    "kicker": "Gənc Yazıçı · 2 Kitab Müəllifi, «İlin Müəllifi» & «Ziyadar» Mükafatçısı",
+    "kicker_az": "Gənc Yazıçı · 2 Kitab Müəllifi, «İlin Müəllifi» & «Ziyadar» Mükafatçısı",
+    "kicker_en": "Young Author · Author of 2 Books, “Author of the Year” & “Ziyadar” Laureate",
+    "kicker_ru": "Молодая Писательница · Автор 2 Книг, «Автор Года» и Лауреат Премии «Зиядар»",
+    "highlightsHeading": "ƏDƏBİ YARADICILIQ, KİTAB NƏŞRLƏRİ VƏ RƏSMİ MÜKAFATLAR",
+    "highlightsHeading_az": "ƏDƏBİ YARADICILIQ, KİTAB NƏŞRLƏRİ VƏ RƏSMİ MÜKAFATLAR",
+    "highlightsHeading_en": "LITERARY CREATIVITY, PUBLISHED BOOKS & OFFICIAL AWARDS",
+    "highlightsHeading_ru": "ЛИТЕРАТУРНОЕ ТВОРЧЕСТВО, АВТОРСКИЕ КНИГИ И НАГРАДЫ",
+    "avatarYearTag": "✍️ İLİN MÜƏLLİFİ · 2 KİTAB",
+    "titleBadge": "🥇 «İlin Müəllifi», «Ziyadar» Mükafatçısı & 2 Kitab Müəllifi",
+    "titleBadge_az": "🥇 «İlin Müəllifi», «Ziyadar» Mükafatçısı & 2 Kitab Müəllifi",
+    "titleBadge_en": "🥇 “Author of the Year”, “Ziyadar” Laureate & Author of 2 Books",
+    "titleBadge_ru": "🥇 «Автор года», лауреат премии «Зиядар» и автор 2 книг",
+    "role": "BDRNK Tələbəsi · Gənc Yazıçı («Əslində mən kiməm?» və «Əlvida deməyə tələsmə» kitablarının müəllifi)",
+    "role_az": "BDRNK Tələbəsi · Gənc Yazıçı («Əslində mən kiməm?» və «Əlvida deməyə tələsmə» kitablarının müəllifi)",
+    "role_en": "BDRNK Student · Young Author of “Who Am I Really?” & “Don't Rush to Say Goodbye”",
+    "role_ru": "Студентка БГКСТ · Молодая писательница, автор книг «Кто я на самом деле?» и «Не спеши прощаться»",
+    "categories": [
+      "arts",
+      "youth"
+    ],
+    "statusText": "2 Müəllif Kitabı · «Yazarlar» Jurnalı Üz Qabığı · 9 Rəsmi Sənəd",
+    "statusText_az": "2 Müəllif Kitabı · «Yazarlar» Jurnalı Üz Qabığı · 9 Rəsmi Sənəd",
+    "statusText_en": "2 Published Books · “Yazarlar” Magazine Cover · 9 Official Records",
+    "statusText_ru": "2 авторские книги · Обложка журнала «Yazarlar» · 9 наград и изданий",
+    "quote": "Sən nə uşaqlığının kölgəsisən, nə də başqalarının gözündəki təcəssüm. Sən bütün parçalarının içində gizlənən əsl sənsən!",
+    "quote_az": "Sən nə uşaqlığının kölgəsisən, nə də başqalarının gözündəki təcəssüm. Sən bütün parçalarının içində gizlənən əsl sənsən!",
+    "quote_en": "You are neither the shadow of your childhood nor a reflection in others' eyes. You are the true self hidden within all your pieces!",
+    "quote_ru": "Ты не тень своего детства и не отражение в чужих глазах. Ты — настоящий ты, сокрытый во всех своих гранях!",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "name_az": "Azərbaycan",
+        "name_en": "Azerbaijan",
+        "name_ru": "Азербайджан",
+        "note": "Milli Uğur Mükafatı & «Yazarlar» Jurnalı",
+        "note_az": "Milli Uğur Mükafatı & «Yazarlar» Jurnalı",
+        "note_en": "National Success Award & “Yazarlar” Journal",
+        "note_ru": "Национальная премия успеха и журнал «Yazarlar»"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "✍️",
+        "val": "İLİN MÜƏLLİFİ",
+        "val_az": "İLİN MÜƏLLİFİ",
+        "val_en": "AUTHOR OF THE YEAR",
+        "val_ru": "АВТОР ГОДА",
+        "label": "Milli Uğur Mükafatı",
+        "label_az": "Milli Uğur Mükafatı",
+        "label_en": "National Success Award",
+        "label_ru": "Национальная премия успеха",
+        "sub": "01 fevral 2026 · Rəsmi Təltif",
+        "sub_az": "01 fevral 2026 · Rəsmi Təltif",
+        "sub_en": "February 1, 2026 · Official Award",
+        "sub_ru": "1 февраля 2026 г. · Награда"
+      },
+      {
+        "icon": "🏆",
+        "val": "«ZİYADAR»",
+        "val_az": "«ZİYADAR»",
+        "val_en": "“ZIYADAR”",
+        "val_ru": "«ЗИЯДАР»",
+        "label": "Ədəbi Mükafat № 187",
+        "label_az": "Ədəbi Mükafat № 187",
+        "label_en": "Literary Award No. 187",
+        "label_ru": "Литературная премия № 187",
+        "sub": "«Yazarlar» Jurnalı (04.10.2025)",
+        "sub_az": "«Yazarlar» Jurnalı (04.10.2025)",
+        "sub_en": "“Yazarlar” Magazine (04.10.2025)",
+        "sub_ru": "Журнал «Yazarlar» (04.10.2025)"
+      },
+      {
+        "icon": "📚",
+        "val": "2 MÜƏLLİF KİTABI",
+        "val_az": "2 MÜƏLLİF KİTABI",
+        "val_en": "2 AUTHORED BOOKS",
+        "val_ru": "2 АВТОРСКИЕ КНИГИ",
+        "label": "Nəşr Olunmuş Əsərlər",
+        "label_az": "Nəşr Olunmuş Əsərlər",
+        "label_en": "Published Works",
+        "label_ru": "Изданные книги",
+        "sub": "«Əslində mən kiməm?» & «Əlvida deməyə tələsmə»",
+        "sub_az": "«Əslində mən kiməm?» & «Əlvida deməyə tələsmə»",
+        "sub_en": "“Who Am I Really?” & “Don't Rush to Say Goodbye”",
+        "sub_ru": "«Кто я на самом деле?» и «Не спеши прощаться»"
+      },
+      {
+        "icon": "📖",
+        "val": "9 SƏNƏD & NƏŞR",
+        "val_az": "9 SƏNƏD & NƏŞR",
+        "val_en": "9 AWARDS & BOOKS",
+        "val_ru": "9 НАГРАД И КНИГ",
+        "label": "Yaradıcılıq Portfeli",
+        "label_az": "Yaradıcılıq Portfeli",
+        "label_en": "Creative Portfolio",
+        "label_ru": "Творческое портфолио",
+        "sub": "«Yazarlar» Aprel 2026 üz qabığı və sertifikatlar",
+        "sub_az": "«Yazarlar» Aprel 2026 üz qabığı və sertifikatlar",
+        "sub_en": "“Yazarlar” April 2026 cover & certificates",
+        "sub_ru": "Обложка «Yazarlar» 2026 и сертификаты"
+      }
+    ],
+    "highlights": [
+      {
+        "year": "2026",
+        "flag": "✍️",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "Milli Uğur Mükafatı — «İlin Müəllifi» və «Yazarlar» Jurnalının Üz Qabığı (Aprel 2026 № 04)",
+        "title_az": "Milli Uğur Mükafatı — «İlin Müəllifi» və «Yazarlar» Jurnalının Üz Qabığı (Aprel 2026 № 04)",
+        "title_en": "National Success Award — “Author of the Year” & “Yazarlar” Magazine Cover Feature (April 2026 No. 04)",
+        "title_ru": "Национальная премия успеха — «Автор года» и обложка журнала «Yazarlar» (Апрель 2026 № 04)",
+        "text": "Milli Uğur Mükafatı layihəsində «İlin Müəllifi» adına layiq görülmüş və «Yazarlar» ədəbi jurnalının Aprel 2026 № 04 (64) sayının üz qabığında dərc olunmuşdur.",
+        "text_az": "Milli Uğur Mükafatı layihəsində «İlin Müəllifi» adına layiq görülmüş və «Yazarlar» ədəbi jurnalının Aprel 2026 № 04 (64) sayının üz qabığında dərc olunmuşdur.",
+        "text_en": "Named 'Author of the Year' by the National Success Award project and featured on the cover of 'Yazarlar' literary journal (April 2026 No. 04).",
+        "text_ru": "Удостоена титула «Автор года» и представлена на обложке апрельского номера журнала «Yazarlar» за 2026 год."
+      },
+      {
+        "year": "2025",
+        "flag": "📚",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "«Əslində mən kiməm?» və «Əlvida deməyə tələsmə» Kitabları & «Ziyadar» Mükafatı (№ 187)",
+        "title_az": "«Əslində mən kiməm?» və «Əlvida deməyə tələsmə» Kitabları & «Ziyadar» Mükafatı (№ 187)",
+        "title_en": "Books “Who Am I Really?” & “Don't Rush to Say Goodbye” and “Ziyadar” Literary Award (No. 187)",
+        "title_ru": "Книги «Кто я на самом деле?» и «Не спеши прощаться» и премия «Зиядар» (№ 187)",
+        "text": "İki müəllif kitabı nəşr olunmuş, «Əslində mən kiməm?» kitabının işıq üzü görməsi münasibətilə «Ziyadar» mükafatı və Gənc Yazıçılar Mərkəzinin Fəxri Fərmanı ilə təltif edilmişdir.",
+        "text_az": "İki müəllif kitabı nəşr olunmuş, «Əslində mən kiməm?» kitabının işıq üzü görməsi münasibətilə «Ziyadar» mükafatı və Gənc Yazıçılar Mərkəzinin Fəxri Fərmanı ilə təltif edilmişdir.",
+        "text_en": "Published two books and received the 'Ziyadar' Literary Award (No. 187) and the Young Writers Center Honorary Citation.",
+        "text_ru": "Издала две авторские книги, награждена премией «Зиядар» (№ 187) и Почетной грамотой Центра молодых писателей."
+      },
+      {
+        "year": "2024–2025",
+        "flag": "🎙️",
+        "country": "Azərbaycan",
+        "country_az": "Azərbaycan",
+        "country_en": "Azerbaijan",
+        "country_ru": "Азербайджан",
+        "title": "Diksiya Akademiyası, SuccessX, GeniusMind və Beynəlxalq Karyera Akademiyası Sertifikatları",
+        "title_az": "Diksiya Akademiyası, SuccessX, GeniusMind və Beynəlxalq Karyera Akademiyası Sertifikatları",
+        "title_en": "Diction Academy, SuccessX, GeniusMind & International Career Academy Certificates",
+        "title_ru": "Сертификаты Академии Дикции, SuccessX, GeniusMind и Международной Академии Карьеры",
+        "text": "«Ürəkli danış, səhnə sənindir!», «Nitq Gücü» və «Hüdudsuz gücün sirri» seminar və təlimlərində fəal iştirakına görə rəsmi sertifikatlarla təltif olunmuşdur.",
+        "text_az": "«Ürəkli danış, səhnə sənindir!», «Nitq Gücü» və «Hüdudsuz gücün sirri» seminar və təlimlərində fəal iştirakına görə rəsmi sertifikatlarla təltif olunmuşdur.",
+        "text_en": "Earned official certificates in public speaking, diction, and personal leadership.",
+        "text_ru": "Награждена сертификатами по ораторскому мастерству, дикции и лидерству."
+      }
+    ],
+    "tags": [
+      "#BaharBəxtiyarqızı",
+      "#BaharKərimova",
+      "#İlinMüəllifi",
+      "#ZiyadarMükafatı",
+      "#YazarlarJurnalı",
+      "#ƏslindəMənKiməm",
+      "#ƏlvidaDeməyəTələsmə",
+      "#GəncYazıçılar",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_az": [
+      "#BaharBəxtiyarqızı",
+      "#BaharKərimova",
+      "#İlinMüəllifi",
+      "#ZiyadarMükafatı",
+      "#YazarlarJurnalı",
+      "#ƏslindəMənKiməm",
+      "#ƏlvidaDeməyəTələsmə",
+      "#GəncYazıçılar",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "tags_en": [
+      "#BaharBakhtiyargizi",
+      "#BaharKarimova",
+      "#AuthorOfTheYear",
+      "#ZiyadarAward",
+      "#YoungAuthor",
+      "#BDRNK_HonorStudent"
+    ],
+    "tags_ru": [
+      "#БахарБахтияргызы",
+      "#БахарКеримова",
+      "#АвторГода",
+      "#ПремияЗиядар",
+      "#ПочетныйСтудентБГКСТ"
+    ],
+    "timeline": [
+      {
+        "year": "2026",
+        "badge": "📖 Üz Qabığı · Aprel 2026 № 04",
+        "title": "«Yazarlar» Ədəbiyyat Jurnalının Xüsusi Buraxılışı",
+        "desc": "Aprel 2026 № 04 (64) sayının üz qabığında gənc yazar kimi təqdim olunmuşdur."
+      },
+      {
+        "year": "2026",
+        "badge": "✍️ İlin Müəllifi · 01.02.2026",
+        "title": "Milli Uğur Mükafatı Layihəsi",
+        "desc": "«İlin Müəllifi» fəxri adı və rəsmi Sertifikatı."
+      },
+      {
+        "year": "2025",
+        "badge": "🏆 «Ziyadar» Mükafatı · № 187",
+        "title": "Azərbaycan «Yazarlar» Jurnalı — «Ziyadar» Mükafatı",
+        "desc": "«Əslində mən kiməm?» kitabının işıq üzü görməsi münasibətilə təltif (04.10.2025)."
+      },
+      {
+        "year": "2025",
+        "badge": "🖋️ Fəxri Fərman · 16.10.2025",
+        "title": "Gənc Yazıçılar Mərkəzi & İDEA Education Center MMC",
+        "desc": "Ədəbiyyat sahəsində göstərdiyi fəaliyyətə görə Fəxri Fərman."
+      },
+      {
+        "year": "2025",
+        "badge": "📚 2 Müəllif Kitabı",
+        "title": "«Əslində mən kiməm?» və «Əlvida deməyə tələsmə» Kitablarının Nəşri",
+        "desc": "«Kitabçı» və «Mücrü» nəşriyyatlarında iki bədii kitabının çap olunması."
+      }
+    ],
+    "fullBio": [
+      "Kərimova Bahar Bəxtiyar qızı (ədəbi təxəllüsü: Bahar Bəxtiyarqızı) Bakı Dövlət Rabitə və Nəqliyyat Kollecinin bədii yaradıcılıq, ədəbiyyat və natiqlik sənəti sahəsində böyük uğurlar qazanmış gənc yazıçı tələbəmizdir.",
+      "«Əslində mən kiməm?» («Kitabçı» nəşriyyatı) və «Əlvida deməyə tələsmə» («Mücrü» nəşriyyatı) adlı iki kitabın müəllifidir. Kitabının nəşri münasibətilə «Yazarlar» jurnalının «Ziyadar» mükafatına (№ 187), Gənc Yazıçılar Mərkəzinin Fəxri Fərmanına və 2026-cı ildə Milli Uğur Mükafatı layihəsi çərçivəsində «İlin Müəllifi» fəxri adına layiq görülmüşdür.",
+      "2026-cı ilin aprel ayında «Yazarlar» ədəbiyyat jurnalının № 04 (64) buraxılışının üz qabığında yer almış, həmçinin Diksiya Akademiyası, SuccessX Academy, GeniusMind Academy və Beynəlxalq Karyera Akademiyasının rəsmi sertifikatlarını qazanmışdır."
+    ],
+    "fullBio_az": [
+      "Kərimova Bahar Bəxtiyar qızı (ədəbi təxəllüsü: Bahar Bəxtiyarqızı) Bakı Dövlət Rabitə və Nəqliyyat Kollecinin bədii yaradıcılıq, ədəbiyyat və natiqlik sənəti sahəsində böyük uğurlar qazanmış gənc yazıçı tələbəmizdir.",
+      "«Əslində mən kiməm?» («Kitabçı» nəşriyyatı) və «Əlvida deməyə tələsmə» («Mücrü» nəşriyyatı) adlı iki kitabın müəllifidir. Kitabının nəşri münasibətilə «Yazarlar» jurnalının «Ziyadar» mükafatına (№ 187), Gənc Yazıçılar Mərkəzinin Fəxri Fərmanına və 2026-cı ildə Milli Uğur Mükafatı layihəsi çərçivəsində «İlin Müəllifi» fəxri adına layiq görülmüşdür.",
+      "2026-cı ilin aprel ayında «Yazarlar» ədəbiyyat jurnalının № 04 (64) buraxılışının üz qabığında yer almış, həmçinin Diksiya Akademiyası, SuccessX Academy, GeniusMind Academy və Beynəlxalq Karyera Akademiyasının rəsmi sertifikatlarını qazanmışdır."
+    ],
+    "fullBio_en": [
+      "Bahar Karimova Bakhtiyar (pen name: Bahar Bakhtiyargizi) is an accomplished young writer and student at Baku State College of Communications and Transport.",
+      "She is the author of two published books — 'Who Am I Really?' ('Əslində mən kiməm?') and 'Don't Rush to Say Goodbye' ('Əlvida deməyə tələsmə'). Her literary work has earned the 'Ziyadar' Literary Award (No. 187), the Young Writers Center Honorary Citation, and the 2026 'Author of the Year' National Success Award.",
+      "In April 2026, she was featured on the front cover of 'Yazarlar' literary magazine (Issue No. 04/64), complementing her certificates from Diction Academy, SuccessX Academy, and the International Career Academy."
+    ],
+    "fullBio_ru": [
+      "Керимова Бахар Бахтияр гызы (литературный псевдоним: Бахар Бахтияргызы) — талантливая молодая писательница и студентка Бакинского государственного колледжа связи и транспорта.",
+      "Автор двух изданных книг — «Кто я на самом деле?» («Əslində mən kiməm?») и «Не спеши прощаться» («Əlvida deməyə tələsmə»). Удостоена литературной премии «Зиядар» (№ 187), Почетной грамоты Центра молодых писателей и звания «Автор года» (2026).",
+      "В апреле 2026 года стала героиней обложки литературного журнала «Yazarlar» (№ 04/64), а также награждена сертификатами Академии Дикции, SuccessX Academy и Международной Академии Карьеры."
+    ],
+    "certificates": [
+      {
+        "icon": "✍️",
+        "title": "Milli Uğur Mükafatı — «İlin Müəllifi» Sertifikatı",
+        "sub": "01 fevral 2026 · Education Center"
+      },
+      {
+        "icon": "🏆",
+        "title": "«Yazarlar» Jurnalı — «Ziyadar» Ədəbi Mükafatı (№ 187)",
+        "sub": "«Əslində mən kiməm?» kitabının işıq üzü görməsi münasibətilə · 04.10.2025"
+      },
+      {
+        "icon": "🖋️",
+        "title": "Gənc Yazıçılar Mərkəzi & İDEA Education Center — Fəxri Fərman",
+        "sub": "Ədəbiyyat sahəsində göstərdiyi fəaliyyətə görə · 16.10.2025"
+      },
+      {
+        "icon": "📖",
+        "title": "«Yazarlar» Ədəbiyyat Jurnalı — Üz Qabığı Nəşri (Aprel 2026 № 04)",
+        "sub": "Xüsusi buraxılış · № 04 (64)"
+      },
+      {
+        "icon": "📚",
+        "title": "Müəllif Kitabı: «Əslində mən kiməm?»",
+        "sub": "«Kitabçı» Nəşriyyatı · Bədii-psixoloji əsər"
+      },
+      {
+        "icon": "📕",
+        "title": "Müəllif Kitabı: «Əlvida deməyə tələsmə»",
+        "sub": "«Mücrü» Nəşriyyatı · Bədii nəsr"
+      },
+      {
+        "icon": "🗣️",
+        "title": "SuccessX & GeniusMind Academy — «Nitq Gücü» Təlimi Sertifikatı",
+        "sub": "İDEA Education Center MMC · 25.03.2025"
+      },
+      {
+        "icon": "🌟",
+        "title": "Beynəlxalq Karyera Akademiyası — «Hüdudsuz gücün sirri» Sertifikatı",
+        "sub": "İDEA Education Center MMC · 19.10.2025"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_bahar_yazarlar_2026.jpg",
+        "caption": "«Yazarlar» Jurnalı (Aprel 2026 № 04/64) — Üz Qabığında Bahar Bəxtiyarqızı"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_bahar_ilin_muellifi_2026.jpg",
+        "caption": "Milli Uğur Mükafatı — «İlin Müəllifi» Sertifikatı (01.02.2026)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_bahar_ziyadar_2025.jpg",
+        "caption": "«Yazarlar» Jurnalı — «Ziyadar» Ədəbi Mükafatı (№ 187, 04.10.2025)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_bahar_genc_yazicilar_2025.jpg",
+        "caption": "Gənc Yazıçılar Mərkəzi & İDEA Education Center — Fəxri Fərman (16.10.2025)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_bahar_kitab_eslinde.jpg",
+        "caption": "Bahar Bəxtiyarqızı — «Əslində mən kiməm?» (Müəllif Kitabı, «Kitabçı» Nəşriyyatı)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_bahar_kitab_elvida.jpg",
+        "caption": "Bahar Bəxtiyarqızı — «Əlvida deməyə tələsmə» (Müəllif Kitabı, «Mücrü» Nəşriyyatı)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_bahar_nitq_gucu_2025.jpg",
+        "caption": "SuccessX & GeniusMind Academy — «Nitq Gücü» Təlimi Sertifikatı (25.03.2025)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_bahar_karyera_2025.jpg",
+        "caption": "Beynəlxalq Karyera Akademiyası — «Hüdudsuz gücün sirri» Təlimi Sertifikatı (19.10.2025)"
+      }
+    ]
+  },
+  {
+    "id": "rasim-mahmudov",
+    "fullName": "Mahmudov Rasim",
+    "fullName_az": "Mahmudov Rasim",
+    "fullName_en": "Rasim Mahmudov",
+    "fullName_ru": "Расим Махмудов",
+    "photo": "certificates/thumbs/cert_rasim_kunqfu_2025.jpg",
+    "fallbackPhoto": "certificates/cert_rasim_kunqfu_2025.jpg",
+    "titleBadge": "🥈 Azərbaycan Çempionatı Gümüş Mükafatçısı · 2025",
+    "titleBadge_az": "🥈 Azərbaycan Çempionatı Gümüş Mükafatçısı · 2025",
+    "titleBadge_en": "🥈 Azerbaijan Championship Silver Medalist · 2025",
+    "titleBadge_ru": "🥈 Серебряный призер Чемпионата Азербайджана · 2025",
+    "role": "BDRNK Tələbəsi · Kunq-fu Sanda üzrə Azərbaycan Çempionatının Gümüş Mükafatçısı",
+    "role_az": "BDRNK Tələbəsi · Kunq-fu Sanda üzrə Azərbaycan Çempionatının Gümüş Mükafatçısı",
+    "role_en": "BDRNK Student · Azerbaijan Kung-fu Sanda Championship Silver Medalist",
+    "role_ru": "Студент БГКСТ · Серебряный призер Чемпионата Азербайджана по Кунг-фу Санда",
+    "categories": [
+      "sports"
+    ],
+    "statusText": "Kunq-fu Sanda və Boks üzrə Respublika Mükafatçısı",
+    "statusText_az": "Kunq-fu Sanda və Boks üzrə Respublika Mükafatçısı",
+    "statusText_en": "National Medalist in Kung-fu Sanda and Boxing",
+    "statusText_ru": "Республиканский призер по Кунг-фу Санда и Боксу",
+    "quote": "İdmanda qələbə dözümlülük və nizam-intizam tələb edir. Kollecimizi idman arenalarında layiqincə təmsil etmək mənim ən böyük məqsədimdir.",
+    "quote_az": "İdmanda qələbə dözümlülük və nizam-intizam tələb edir. Kollecimizi idman arenalarında layiqincə təmsil etmək mənim ən böyük məqsədimdir.",
+    "quote_en": "Victory in sports requires perseverance and discipline. Representing our college on sports arenas is my ultimate goal.",
+    "quote_ru": "Победа в спорте требует стойкости и дисциплины. Достойно представлять наш колледж на аренах — моя главная цель.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "note": "AR Gənclər və İdman Nazirliyi"
+      }
+    ],
+    "stats": null,
+    "highlights": null,
+    "tags": [
+      "#MahmudovRasim",
+      "#KunqfuSanda",
+      "#Boks",
+      "#GümüşMedal",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "timeline": [
+      {
+        "year": "2026",
+        "badge": "🥇 Bakı 2026 · Qızıl Medal",
+        "title": "Boks üzrə Yoldaşlıq Turniri (64 kq) — I Yer",
+        "desc": "Açıq boks yoldaşlıq turnirində 64 kq çəki dərəcəsində I yerə layiq görülmüşdür."
+      },
+      {
+        "year": "2025",
+        "badge": "🥈 Bakı 2025 · Gümüş Medal",
+        "title": "Kunq-fu Sanda üzrə Azərbaycan Çempionatı (+18, 61 kq) — II Yer",
+        "desc": "Gənclər və İdman Nazirliyi tərəfindən təşkil olunan Azərbaycan Çempionatında II yer diplomu ilə təltif olunmuşdur."
+      }
+    ],
+    "fullBio": [
+      "Mahmudov Rasim Bakı Dövlət Rabitə və Nəqliyyat Kollecinin idman sahəsində yüksək nəticələr göstərən fəxri tələbələrindəndir."
+    ],
+    "certificates": [
+      {
+        "icon": "🥈",
+        "title": "Kunq-fu Sanda Azərbaycan Çempionatı — II Yer",
+        "sub": "Gənclər və İdman Nazirliyi & Şabanov fight · 23.11.2025"
+      },
+      {
+        "icon": "🥇",
+        "title": "Boks üzrə Yoldaşlıq Turniri (64 kq) — I Yer",
+        "sub": "Açıq Boks Birinciliyi · 2026"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_rasim_kunqfu_2025.jpg",
+        "caption": "Kunq-fu Sanda Azərbaycan Çempionatı II Yer Diplomu (2025)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_rasim_boks_2026.jpg",
+        "caption": "Boks üzrə Yoldaşlıq Turniri I Yer Diplomu (2026)"
+      }
+    ]
+  },
+  {
+    "id": "revan-panahiyev",
+    "fullName": "Pənahiyev Rəvan",
+    "fullName_az": "Pənahiyev Rəvan",
+    "fullName_en": "Ravan Panahiyev",
+    "fullName_ru": "Раван Панахиев",
+    "photo": "certificates/thumbs/cert_revan_dagli_cudo_2025.jpg",
+    "fallbackPhoto": "certificates/cert_revan_dagli_cudo_2025.jpg",
+    "titleBadge": "🥇 Cüdo üzrə İkiqat Çempion (55 kq) · 2025",
+    "titleBadge_az": "🥇 Cüdo üzrə İkiqat Çempion (55 kq) · 2025",
+    "titleBadge_en": "🥇 Two-time Judo Champion (55 kg) · 2025",
+    "titleBadge_ru": "🥇 Двукратный Чемпион по Дзюдо (55 кг) · 2025",
+    "role": "BDRNK Tələbəsi · Şəhid Nurağa Tağıyev adına Dağlı Cüdo və «Güvən» İdman Klublarının Çempionu",
+    "role_az": "BDRNK Tələbəsi · Şəhid Nurağa Tağıyev adına Dağlı Cüdo və «Güvən» İdman Klublarının Çempionu",
+    "role_en": "BDRNK Student · Champion of Dagli and Guven Judo Clubs",
+    "role_ru": "Студент БГКСТ · Чемпион клубов дзюдо «Даглы» и «Гювен»",
+    "categories": [
+      "sports"
+    ],
+    "statusText": "Cüdo üzrə I Dərəcəli Diplomant və İkiqat Qızıl Medalçı",
+    "statusText_az": "Cüdo üzrə I Dərəcəli Diplomant və İkiqat Qızıl Medalçı",
+    "statusText_en": "1st Degree Judo Laureate and Double Gold Medalist",
+    "statusText_ru": "Лауреат I степени по дзюдо и двукратный золотой медалист",
+    "quote": "Tatami üzərində hər qələbə zəhmətin və əzmin bəhrəsidir. Şəhidlərimizin xatirəsinə həsr olunan turnirlərdə qalib gəlmək xüsusi məsuliyyətdir.",
+    "quote_az": "Tatami üzərində hər qələbə zəhmətin və əzmin bəhrəsidir. Şəhidlərimizin xatirəsinə həsr olunan turnirlərdə qalib gəlmək xüsusi məsuliyyətdir.",
+    "quote_en": "Every victory on tatami is the result of hard work and determination. Winning tournaments dedicated to martyrs carries special honor.",
+    "quote_ru": "Каждая победа на татами — результат труда и воли. Побеждать на турнирах в честь шехидов — особая честь.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "note": "Dağlı & Güvən İK"
+      }
+    ],
+    "stats": null,
+    "highlights": null,
+    "tags": [
+      "#PənahiyevRəvan",
+      "#Cüdo",
+      "#55kq",
+      "#QızılMedal_IYer",
+      "#DağlıCüdo",
+      "#GüvənİK",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "timeline": [
+      {
+        "year": "2025",
+        "badge": "🥇 Bakı 2025 · Qızıl Medal",
+        "title": "Dağlı Cüdo İdman Klubu Birinciliyi (55 kq) — I Yer",
+        "desc": "Şəhid Nurağa Tağıyev adına Dağlı Cüdo Klubunun birinciliyində 55 kq çəki dərəcəsində I yer (13.04.2025)."
+      },
+      {
+        "year": "2025",
+        "badge": "🥇 Bakı 2025 · Qızıl Medal",
+        "title": "«Güvən» İdman Klubu Cüdo Birinciliyi (55 kq) — I Yer",
+        "desc": "Cüdo üzrə «Güvən» İdman Klubunun birinciliyində 55 kq çəkidə I yer (06.03.2025)."
+      }
+    ],
+    "fullBio": [
+      "Pənahiyev Rəvan Bakı Dövlət Rabitə və Nəqliyyat Kollecinin cüdo üzrə fəxri idmançı tələbələrindəndir."
+    ],
+    "certificates": [
+      {
+        "icon": "🥇",
+        "title": "Dağlı Cüdo İdman Klubu Birinciliyi — I Yer",
+        "sub": "Şəhid Nurağa Tağıyev adına Dağlı Cüdo İK · 13.04.2025"
+      },
+      {
+        "icon": "🥇",
+        "title": "«Güvən» İdman Klubu Cüdo Birinciliyi — I Yer",
+        "sub": "«Güvən» İdman Klubu · 06.03.2025"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_revan_dagli_cudo_2025.jpg",
+        "caption": "Dağlı Cüdo İdman Klubu I Yer Diplomu (13.04.2025)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_revan_guven_cudo_2025.jpg",
+        "caption": "«Güvən» İdman Klubu Cüdo I Yer Diplomu (06.03.2025)"
+      }
+    ]
+  },
+  {
+    "id": "sema-cabizada",
+    "fullName": "Cəbizadə Səma Nəriman qızı",
+    "fullName_az": "Cəbizadə Səma Nəriman qızı",
+    "fullName_en": "Sama Jabizada Nariman",
+    "fullName_ru": "Сама Джабизаде Нариман гызы",
+    "photo": "certificates/thumbs/cert_sema_ictimai_2025.jpg",
+    "fallbackPhoto": "certificates/cert_sema_ictimai_2025.jpg",
+    "titleBadge": "💻 İKT & Süni İntellekt Layihələri İştirakçısı · 2025–2026",
+    "titleBadge_az": "💻 İKT & Süni İntellekt Layihələri İştirakçısı · 2025–2026",
+    "titleBadge_en": "💻 ICT & AI Projects Participant · 2025–2026",
+    "titleBadge_ru": "💻 Участник проектов в сфере ИКТ и ИИ · 2025–2026",
+    "role": "BDRNK Tələbəsi · Kompüter Texnologiyaları və Süni İntellekt Təşəbbüslərinin Fəal İştirakçısı",
+    "role_az": "BDRNK Tələbəsi · Kompüter Texnologiyaları və Süni İntellekt Təşəbbüslərinin Fəal İştirakçısı",
+    "role_en": "BDRNK Student · Active Participant in Computer Technology & AI Initiatives",
+    "role_ru": "Студентка БГКСТ · Активный участник компьютерных и ИИ инициатив",
+    "categories": [
+      "it-robotics"
+    ],
+    "statusText": "Rəqəmsal Texnologiyalar və İctimai Fəallıq üzrə Sertifikatçı",
+    "statusText_az": "Rəqəmsal Texnologiyalar və İctimai Fəallıq üzrə Sertifikatçı",
+    "statusText_en": "Certified in Digital Technologies and Public Engagement",
+    "statusText_ru": "Сертифицирована в области цифровых технологий",
+    "quote": "Texnologiyanı cəmiyyətin rifahı üçün öyrənmək və inkişaf etdirmək gələcək mühəndis kimi ən əsas qayəmdir.",
+    "quote_az": "Texnologiyanı cəmiyyətin rifahı üçün öyrənmək və inkişaf etdirmək gələcək mühəndis kimi ən əsas qayəmdir.",
+    "quote_en": "Learning and advancing technology for the welfare of society is my primary goal as a future engineer.",
+    "quote_ru": "Изучение и развитие технологий во благо общества — моя главная цель как будущего инженера.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "note": "Gənclər Fondu & BDRNK İKT"
+      }
+    ],
+    "stats": null,
+    "highlights": null,
+    "tags": [
+      "#CəbizadəSəma",
+      "#İKT",
+      "#Süniİntellekt",
+      "#KompüterTexnologiyaları",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "timeline": [
+      {
+        "year": "2026",
+        "badge": "🤖 Bakı 2026 · AI Təşəbbüsü",
+        "title": "Gənclər arasında Süni İntellekt və Rəqəmsallaşma Layihəsi",
+        "desc": "Gənclər Fondu və tərəfdaş qurumların süni intellekt proqramlarında fəal iştirak sertifikatı (2026)."
+      },
+      {
+        "year": "2025",
+        "badge": "💡 Bakı 2025 · İctimai Fəallıq",
+        "title": "İctimai Fəallıq və İKT Təşəbbüsləri Sertifikatı",
+        "desc": "Kollecin ictimai və rəqəmsal layihələrində fərqləndiyinə görə təqdim edilmiş rəsmi sertifikat (2025)."
+      }
+    ],
+    "fullBio": [
+      "Cəbizadə Səma Bakı Dövlət Rabitə və Nəqliyyat Kollecinin informasiya texnologiyaları ixtisası üzrə fəal tələbəsidir."
+    ],
+    "certificates": [
+      {
+        "icon": "🤖",
+        "title": "Gənclər arasında Süni İntellekt və Rəqəmsallaşma Sertifikatı",
+        "sub": "Rəqəmsal Texnologiyalar və İnnovasiya Mərkəzi · 2026"
+      },
+      {
+        "icon": "💻",
+        "title": "İctimai Fəallıq və İKT Təşəbbüsləri Sertifikatı",
+        "sub": "BDRNK Tələbə Təşkilatı · 2025"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_sema_ai_gencler_2026.jpg",
+        "caption": "Süni İntellekt və Gənclər İnnovasiya Sertifikatı (2026)"
+      },
+      {
+        "type": "image",
+        "src": "certificates/cert_sema_ictimai_2025.jpg",
+        "caption": "İctimai Fəallıq və Rəqəmsal Layihələr Sertifikatı (2025)"
+      }
+    ]
+  },
+  {
+    "id": "teyyub-eliquliyev",
+    "fullName": "Əli-Quliyev Teyyub Asəddin oğlu",
+    "fullName_az": "Əli-Quliyev Teyyub Asəddin oğlu",
+    "fullName_en": "Teyyub Ali-Guliyev",
+    "fullName_ru": "Тейюб Али-Кулиев",
+    "photo": "certificates/thumbs/cert_teyyub_sahin_herbi_2025.jpg",
+    "fallbackPhoto": "certificates/cert_teyyub_sahin_herbi_2025.jpg",
+    "titleBadge": "🎖️ «Şahin» Hərbi-İdman Oyunu Fəxri Fərmanı · 2025",
+    "titleBadge_az": "🎖️ «Şahin» Hərbi-İdman Oyunu Fəxri Fərmanı · 2025",
+    "titleBadge_en": "🎖️ Shahin Military-Sports Game Certificate of Honor · 2025",
+    "titleBadge_ru": "🎖️ Почетная Грамота игры «Шахин» · 2025",
+    "role": "BDRNK Tələbəsi · «Şahin» Hərbi-İdman Oyunu Rayon Birinciliyinin Fəal İştirakçısı",
+    "role_az": "BDRNK Tələbəsi · «Şahin» Hərbi-İdman Oyunu Rayon Birinciliyinin Fəal İştirakçısı",
+    "role_en": "BDRNK Student · Active Participant in Shahin Military-Sports Game",
+    "role_ru": "Студент БГКСТ · Активный участник игры «Шахин»",
+    "categories": [
+      "youth"
+    ],
+    "statusText": "Vətənpərvərlik və Hərbi-İdman Hazırlığı üzrə Təltifçi",
+    "statusText_az": "Vətənpərvərlik və Hərbi-İdman Hazırlığı üzrə Təltifçi",
+    "statusText_en": "Honored in Patriotic and Military-Sports Readiness",
+    "statusText_ru": "Награжден за военно-спортивную подготовку",
+    "quote": "Vətənə layiqli övlad olmaq, fiziki və hərbi hazırlığımızı yüksək tutmaq hər bir azərbaycanlı gəncin şərəf borcudur.",
+    "quote_az": "Vətənə layiqli övlad olmaq, fiziki və hərbi hazırlığımızı yüksək tutmaq hər bir azərbaycanlı gəncin şərəf borcudur.",
+    "quote_en": "Being worthy of our motherland and maintaining high physical and military readiness is the honor of every youth.",
+    "quote_ru": "Быть достойным гражданином Родины — долг чести каждого молодого человека.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "note": "Bakı Şəhər Gİİ"
+      }
+    ],
+    "stats": null,
+    "highlights": null,
+    "tags": [
+      "#ƏliQuliyevTeyyub",
+      "#ŞahinHərbiİdman",
+      "#FəxriFərman",
+      "#Vətənpərvərlik",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "timeline": [
+      {
+        "year": "2025",
+        "badge": "🎖️ Bakı 2025 · Fəxri Fərman",
+        "title": "«Şahin» Hərbi-İdman Oyunu Rayon Birinciliyi — Fəxri Fərman",
+        "desc": "Bakı Şəhər Gənclər və İdman İdarəsi tərəfindən «Şahin» hərbi-idman oyununda fəal iştirakına görə təltif (2025)."
+      }
+    ],
+    "fullBio": [
+      "Əli-Quliyev Teyyub Bakı Dövlət Rabitə və Nəqliyyat Kollecinin vətənpərvərlik tədbirlərində fərqlənən tələbəsidir."
+    ],
+    "certificates": [
+      {
+        "icon": "🎖️",
+        "title": "«Şahin» Hərbi-İdman Oyunu Rayon Birinciliyi — Fəxri Fərman",
+        "sub": "Bakı Şəhər Gənclər və İdman İdarəsi · Dənyar Teymurlu · 2025"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_teyyub_sahin_herbi_2025.jpg",
+        "caption": "«Şahin» Hərbi-İdman Oyunu Fəxri Fərmanı (Bakı 2025)"
+      }
+    ]
+  },
+  {
+    "id": "fatime-muradova",
+    "fullName": "Fatimə Muradova",
+    "fullName_az": "Fatimə Muradova",
+    "fullName_en": "Fatima Muradova",
+    "fullName_ru": "Фатима Мурадова",
+    "photo": "certificates/thumbs/cert_fatime_sim_academy_2025.jpg",
+    "fallbackPhoto": "certificates/cert_fatime_sim_academy_2025.jpg",
+    "titleBadge": "🎨 SİM ACADEMY Rəsm Müsabiqəsi Mükafatçısı · 2025",
+    "titleBadge_az": "🎨 SİM ACADEMY Rəsm Müsabiqəsi Mükafatçısı · 2025",
+    "titleBadge_en": "🎨 SIM ACADEMY Art Competition Awardee · 2025",
+    "titleBadge_ru": "🎨 Призер Конкурса Живописи SIM ACADEMY · 2025",
+    "role": "BDRNK Tələbəsi · Təsviri İncəsənət və Rəsm Müsabiqələrinin İstedadlı Qalibi",
+    "role_az": "BDRNK Tələbəsi · Təsviri İncəsənət və Rəsm Müsabiqələrinin İstedadlı Qalibi",
+    "role_en": "BDRNK Student · Talented Winner of Fine Art & Painting Competitions",
+    "role_ru": "Студентка БГКСТ · Победитель художественных конкурсов",
+    "categories": [
+      "arts"
+    ],
+    "statusText": "Rəsm Sənəti və Yaradıcılıq üzrə Sertifikatçı",
+    "statusText_az": "Rəsm Sənəti və Yaradıcılıq üzrə Sertifikatçı",
+    "statusText_en": "Certified in Fine Arts and Creative Painting",
+    "statusText_ru": "Сертифицирована в области изобразительного искусства",
+    "quote": "Rənglərlə daxili dünyamı və vətənimizin gözəlliklərini kətana köçürmək mənim üçün ən böyük yaradıcılıq ilhamıdır.",
+    "quote_az": "Rənglərlə daxili dünyamı və vətənimizin gözəlliklərini kətana köçürmək mənim üçün ən böyük yaradıcılıq ilhamıdır.",
+    "quote_en": "Expressing my inner world and the beauties of our homeland through colors on canvas is my greatest inspiration.",
+    "quote_ru": "Отражать внутренний мир и красоту родины на холсте — мое главное вдохновение.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "note": "SİM Academy"
+      }
+    ],
+    "stats": null,
+    "highlights": null,
+    "tags": [
+      "#MuradovaFatimə",
+      "#Rəsm",
+      "#İncəsənət",
+      "#SİM_Academy",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "timeline": [
+      {
+        "year": "2025",
+        "badge": "🎨 Bakı 2025 · Rəsmi Sertifikat",
+        "title": "SİM ACADEMY Rəsm Müsabiqəsi Sertifikatı",
+        "desc": "SİM Academy tərəfindən təşkil olunmuş Rəsm Müsabiqəsində uğurlu nəticə göstərdiyinə görə təltif (26.01.2025)."
+      }
+    ],
+    "fullBio": [
+      "Fatimə Muradova Bakı Dövlət Rabitə və Nəqliyyat Kollecinin incəsənət və rəsm sahəsində seçilən tələbələrindəndir."
+    ],
+    "certificates": [
+      {
+        "icon": "🎨",
+        "title": "SİM ACADEMY Rəsm Müsabiqəsi Sertifikatı",
+        "sub": "SİM Academy · Nigar Orucova · 26.01.2025"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_fatime_sim_academy_2025.jpg",
+        "caption": "SİM ACADEMY Rəsm Müsabiqəsi Sertifikatı (26.01.2025)"
+      }
+    ]
+  },
+  {
+    "id": "aysu-hesenli",
+    "fullName": "Həsənli Aysu",
+    "fullName_az": "Həsənli Aysu",
+    "fullName_en": "Aysu Hasanli",
+    "fullName_ru": "Айсу Гасанли",
+    "photo": "certificates/thumbs/cert_aysu_hesenli_voleybol_2025.jpg",
+    "fallbackPhoto": "certificates/cert_aysu_hesenli_voleybol_2025.jpg",
+    "titleBadge": "🏐 Voleybol üzrə Kollec Çempionu · 2025",
+    "titleBadge_az": "🏐 Voleybol üzrə Kollec Çempionu · 2025",
+    "titleBadge_en": "🏐 College Volleyball Champion · 2025",
+    "titleBadge_ru": "🏐 Чемпионка колледжа по волейболу · 2025",
+    "role": "BDRNK Tələbəsi · Orta İxtisas Təhsili Müəssisələri Arasında Voleybol Birinciliyinin Qalibi",
+    "role_az": "BDRNK Tələbəsi · Orta İxtisas Təhsili Müəssisələri Arasında Voleybol Birinciliyinin Qalibi",
+    "role_en": "BDRNK Student · Vocational Colleges Volleyball Championship Winner",
+    "role_ru": "Студентка БГКСТ · Победитель первенства по волейболу среди колледжей",
+    "categories": [
+      "sports"
+    ],
+    "statusText": "Voleybol Komandasının Əsas Oyunçusu & Çempionat Qalibi",
+    "statusText_az": "Voleybol Komandasının Əsas Oyunçusu & Çempionat Qalibi",
+    "statusText_en": "Key Volleyball Player & Championship Winner",
+    "statusText_ru": "Ключевой игрок волейбольной команды и победитель чемпионата",
+    "quote": "Komanda oyunu və qarşılıqlı inam hər zaman qələbə gətirir. Kollecimizin şərəfini qorumaqdan qürur duyuruq.",
+    "quote_az": "Komanda oyunu və qarşılıqlı inam hər zaman qələbə gətirir. Kollecimizin şərəfini qorumaqdan qürur duyuruq.",
+    "quote_en": "Teamwork and mutual trust always bring victory. We take pride in defending our college honor.",
+    "quote_ru": "Командная игра и взаимное доверие всегда приводят к победе.",
+    "flags": [
+      {
+        "emoji": "🇦🇿",
+        "name": "Azərbaycan",
+        "note": "BDRNK İdman Klubu"
+      }
+    ],
+    "stats": null,
+    "highlights": null,
+    "tags": [
+      "#HəsənliAysu",
+      "#Voleybol",
+      "#Çempion",
+      "#BDRNK_FəxriTələbə"
+    ],
+    "timeline": [
+      {
+        "year": "2025",
+        "badge": "🏐 Bakı 2025 · Qələbə Diplomu",
+        "title": "Orta İxtisas Təhsili Müəssisələri Voleybol Birinciliyi",
+        "desc": "Kolleclərarası voleybol yarışında fəal və nümunəvi oyununa görə təltif edilmişdir (2025)."
+      }
+    ],
+    "fullBio": [
+      "Həsənli Aysu Bakı Dövlət Rabitə və Nəqliyyat Kollecinin voleybol komandasının aparıcı üzvlərindəndir."
+    ],
+    "certificates": [
+      {
+        "icon": "🏐",
+        "title": "Voleybol üzrə Kollec Birinciliyi Diplomu",
+        "sub": "BDRNK & Rayon İdman Klubu · 2025"
+      }
+    ],
+    "gallery": [
+      {
+        "type": "image",
+        "src": "certificates/cert_aysu_hesenli_voleybol_2025.jpg",
+        "caption": "Voleybol Çempionatı Qalibi Diplomu (2025)"
+      }
+    ]
+  }
+];
 
   function renderHonorCard(student) {
     const mediaCount = Array.isArray(student.gallery) ? student.gallery.length : 0;
