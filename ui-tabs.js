@@ -207,6 +207,9 @@
     if (TAB_ALIASES[rawTabId]) {
       return TAB_ALIASES[rawTabId];
     }
+    if (TARGET_TO_TAB[rawTabId]) {
+      return { tab: TARGET_TO_TAB[rawTabId], anchor: rawTabId };
+    }
     return { tab: rawTabId };
   }
 
@@ -261,7 +264,7 @@
     // Update Workspace Tab Pills (roving tabindex for WAI-ARIA tablist)
     document.querySelectorAll("[data-workspace-tab]").forEach((btn) => {
       const btnTab = btn.getAttribute("data-workspace-tab");
-      const isMatch = btnTab === nextTab;
+      const isMatch = btnTab === nextTab || (nextTab === "structure" && btnTab === "about" && btn.classList.contains("workspace-tab-btn"));
       btn.classList.toggle("is-active", isMatch);
       btn.setAttribute("aria-selected", isMatch ? "true" : "false");
       if (btn.classList.contains("workspace-tab-btn")) {
@@ -346,17 +349,41 @@
       revealActiveElements();
       setTimeout(revealActiveElements, 120);
 
-      if (focusAnchor) {
-        const target = document.getElementById(focusAnchor);
-        if (target) {
+      const topLevelTargets = [
+        nextTab,
+        "hero",
+        "about",
+        "structure",
+        "admission",
+        "majors",
+        "majors-section",
+        "science",
+        "library",
+        "lectures",
+        "international",
+        "students",
+        "certificates",
+        "news",
+        "contact",
+        "panel-" + nextTab,
+        "about-overview"
+      ];
+
+      const isTopLevel = !focusAnchor || topLevelTargets.includes(focusAnchor);
+
+      if (isTopLevel || scrollToTop || prevTab !== nextTab) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      const target = document.getElementById(focusAnchor);
+      if (target) {
+        setTimeout(() => {
           const headerH = (document.getElementById("site-header")?.offsetHeight || 72) + 24;
           const y = target.getBoundingClientRect().top + window.scrollY - headerH;
           window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
-          return;
-        }
-      }
-
-      if (scrollToTop) {
+        }, 80);
+      } else {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
     });
@@ -417,6 +444,7 @@
       // Allow Ctrl/Cmd/Shift/Middle-click to open as a new browser tab natively
       if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1) return;
       e.preventDefault();
+      e.stopPropagation();
       const targetTab = tabTrigger.getAttribute("data-workspace-tab");
       const focusAnchor = tabTrigger.getAttribute("data-focus-anchor") || null;
       closeMobileDrawerIfOpen();
