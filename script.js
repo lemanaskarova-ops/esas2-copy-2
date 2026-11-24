@@ -866,7 +866,7 @@ const i18n = {
     nav_fbk: "Fənn Birləşmə Komissiyaları",
     nav_fbk_sub: "9 tədris-metodiki fənn komissiyası",
     majors_badge_count: "14 İxtisas",
-    inst_full_name: "BAKI DÖVLƏT RABİTƏ VƏ NƏQLİYYAT KOLLECİ Publik hüquqi şəxsi",
+    inst_full_name: "Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik hüquqi şəxsi",
     hero_inst_ministry: "Azərbaycan Respublikası Elm və Təhsil Nazirliyi",
     hero_inst_agency: "Elm və Ali Təhsil üzrə Dövlət Agentliyi",
     hero_inst_sub: "AzTU-nun nəzdində BDRNK Publik hüquqi şəxsi",
