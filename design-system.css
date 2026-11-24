@@ -3278,8 +3278,8 @@ html.dark-mode .portal-hub-link {
 }
 
 .nav-tab-dropdown-menu {
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 0;
   left: 0;
   padding-top: 8px;
   min-width: 290px;
