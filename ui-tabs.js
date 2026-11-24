@@ -25,9 +25,6 @@
   // Backward-compatible aliases so legacy ?tab=... links & search entries resolve cleanly
   const TAB_ALIASES = {
     home: { tab: "about" },
-    rehberlik: { tab: "structure" },
-    struktur: { tab: "structure" },
-    fbk: { tab: "structure", anchor: "struct-fbk-view" },
     qebul: { tab: "admission" },
     "telebe-qebulu": { tab: "admission" },
     abituriyent: { tab: "admission" },
@@ -71,11 +68,8 @@
 
     structure: "structure",
     "struct-tree-view": "structure",
-    "struct-fbk-view": "structure",
-    "struct-commissions-view": "structure",
     "struct-cards-view": "structure",
     "honored-staff-highlight": "structure",
-    "fbk-grid": "structure",
 
     majors: "majors",
     "majors-section": "majors",
@@ -335,16 +329,6 @@
     window.syncMajorsMount = syncMajorsMount;
     syncMajorsMount();
 
-    // Ensure Structure tree & commissions are rendered
-    if (nextTab === "structure" || nextTab === "all") {
-      if (typeof window.renderStructureTree === "function") {
-        try { window.renderStructureTree(); } catch (e) { }
-      }
-      if (typeof window.renderStructureCommissions === "function") {
-        try { window.renderStructureCommissions(); } catch (e) { }
-      }
-    }
-
     requestAnimationFrame(() => {
       revealActiveElements();
       setTimeout(revealActiveElements, 120);
@@ -448,7 +432,7 @@
       const targetTab = tabTrigger.getAttribute("data-workspace-tab");
       const focusAnchor = tabTrigger.getAttribute("data-focus-anchor") || null;
       closeMobileDrawerIfOpen();
-      setActiveTab(targetTab, { scrollToTop: !focusAnchor, updateUrl: true, pushHistory: true, focusAnchor });
+      setActiveTab(targetTab, { scrollToTop: true, updateUrl: true, pushHistory: true, focusAnchor });
       return;
     }
 
@@ -486,8 +470,11 @@
 
     if (ownerTab && activeTab !== "all" && activeTab !== ownerTab) {
       e.preventDefault();
+      e.stopPropagation();
       closeMobileDrawerIfOpen();
-      setActiveTab(ownerTab, { scrollToTop: false, updateUrl: true, pushHistory: true, focusAnchor: targetId });
+      const isSectionLevel = targetId === ownerTab || targetId === "structure" || targetId === "admission" || targetId === "about" || targetId === "majors-section";
+      setActiveTab(ownerTab, { scrollToTop: isSectionLevel, updateUrl: true, pushHistory: true, focusAnchor: isSectionLevel ? null : targetId });
+      return;
     } else if (ownerTab && (activeTab === ownerTab || activeTab === "all")) {
       const targetEl = document.getElementById(targetId);
       if (targetEl) {
