@@ -104,7 +104,7 @@ const i18n = {
     hero_title:
       '<span class="hero-inst-name">Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik hüquqi şəxsi</span><span class="hero-main-slogan">«Müasir təhsil, mehriban mühit, rəqəmsal gələcək!»</span>',
     hero_desc:
-      "Gələcəyin rabitə və nəqliyyat mütəxəssislərini yetişdirən müasir təhsil mərkəzi.",
+      "Rabitə, nəqliyyat, kompüter elmləri və müasir texnologiyalar üzrə bilik və bacarıqların formalaşdığı, mehriban və sağlam təhsil mühitinin yaradıldığı məkan.",
     hero_cta_portal: "Tələbə Portalı",
     hero_cta_about: "Kollecimizlə Tanışlıq",
     stat_students: "Tələbə",
@@ -1426,7 +1426,7 @@ const i18n = {
     hero_title:
       '<span class="hero-inst-name">Baku State Communications and Transport College Public Legal Entity</span><span class="hero-main-slogan">“Modern Education, Friendly Environment, Digital Future!”</span>',
     hero_desc:
-      "A modern educational center training future experts in communications and transport.",
+      "A space where knowledge and skills in communications, transport, computer science, and modern technologies are cultivated within a welcoming and healthy educational environment.",
     hero_cta_portal: "Student Portal",
     hero_cta_about: "Explore Our College",
     stat_students: "Students",
@@ -2736,7 +2736,7 @@ const i18n = {
     hero_title:
       '<span class="hero-inst-name">Бакинский Государственный Колледж Связи и Транспорта Публичное Юридическое Лицо</span><span class="hero-main-slogan">«Современное образование, доброжелательная среда, цифровое будущее!»</span>',
     hero_desc:
-      "Современный центр, готовящий специалистов будущего в области связи и транспорта.",
+      "Пространство, где формируются знания и навыки в области связи, транспорта, компьютерных наук и современных технологий, создающее дружелюбную и здоровую образовательную среду.",
     hero_cta_portal: "Портал Студента",
     hero_cta_about: "Знакомство с колледжем",
     stat_students: "Студентов",
