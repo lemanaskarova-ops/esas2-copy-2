@@ -398,91 +398,99 @@
             <div id="desktop-nav"
                 class="workspace-nav-inner max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 flex items-center gap-1.5 overflow-x-auto"
                 role="tablist">
-                <!-- 1. Haqqımızda (Hover Dropdown with Rəhbərlik və Struktur) -->
-                <div class="nav-tab-dropdown-wrapper relative group shrink-0" id="nav-about-dropdown-wrapper">
-                    <a href="?tab=about" data-workspace-tab="about" role="tab" aria-selected="true"
-                        title="Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız"
-                        class="workspace-tab-btn is-active shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
-                        <span class="wtab-num" aria-hidden="true">1</span><span data-i18n="nav_s1">Haqqımızda</span>
-                        <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180 opacity-75 cursor-pointer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        <span class="sr-only" data-i18n="nav_s1_sub">Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız</span>
-                    </a>
-                    <!-- Hover Dropdown Menu -->
-                    <div class="nav-tab-dropdown-menu" id="nav-about-dropdown-menu">
-                        <div class="nav-tab-dropdown-panel">
-                            <a href="?tab=structure" data-workspace-tab="structure" class="nav-tab-dropdown-item featured">
-                                <span class="text-base" aria-hidden="true">👥</span>
-                                <div>
-                                    <div class="font-semibold text-xs text-emerald-800 dark:text-emerald-300 flex items-center gap-1.5">
-                                        <span data-i18n="nav_structure">Rəhbərlik və struktur</span>
-                                        <span class="text-[9px] px-1.5 py-0.2 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 font-bold uppercase" data-i18n="dd_badge_section">Bölmə</span>
-                                    </div>
-                                    <div class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="dd_structure_desc">Rəhbərlik, şöbələr, bölmələr və FBK-lar</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. Tələbə qəbulu (Əsas kateqoriya) -->
-                <a href="?tab=admission" data-workspace-tab="admission" role="tab" aria-selected="false"
-                    title="2025/2026 qəbul qaydaları, tələb olunan sənədlər, keçid balları və bələdçi"
-                    class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
-                    <span class="wtab-num" aria-hidden="true">2</span><span data-i18n="nav_s2">Tələbə qəbulu</span><span
-                        class="sr-only" data-i18n="nav_s2_sub">2025/2026 qəbul qaydaları, sənədlər, keçid balları və bələdçi</span>
+                <!-- 1. Haqqımızda -->
+                <a href="?tab=about" data-workspace-tab="about" role="tab" aria-selected="true"
+                    title="Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız"
+                    class="workspace-tab-btn is-active shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
+                    <span class="wtab-num" aria-hidden="true">1</span><span data-i18n="nav_s1">Haqqımızda</span><span
+                        class="sr-only" data-i18n="nav_s1_sub">Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız</span>
                 </a>
+
+                <!-- 2. Rəhbərlik və struktur -->
+                <a href="?tab=structure" data-workspace-tab="structure" role="tab" aria-selected="false"
+                    title="Rəhbərlik, şöbələr, bölmələr, FBK-lar və əməkdaşlar"
+                    class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
+                    <span class="wtab-num" aria-hidden="true">2</span><span data-i18n="nav_structure">Rəhbərlik və struktur</span><span
+                        class="sr-only" data-i18n="nav_structure_sub">Rəhbərlik, şöbələr, bölmələr və əməkdaşlar</span>
+                </a>
+
+                <!-- 3. Tələbə qəbulu -->
+                <a href="?tab=admission" data-workspace-tab="admission" role="tab" aria-selected="false"
+                    title="2026/2027 qəbul qaydaları, tələb olunan sənədlər, keçid balları və bələdçi"
+                    class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
+                    <span class="wtab-num" aria-hidden="true">3</span><span data-i18n="nav_admission">Tələbə qəbulu</span><span
+                        class="sr-only" data-i18n="nav_admission_sub">2026/2027 qəbul qaydaları, sənədlər, keçid balları və bələdçi</span>
+                </a>
+
+                <!-- 4. Təhsil və ixtisaslar -->
                 <a href="?tab=majors" data-workspace-tab="majors" role="tab" aria-selected="false"
                     title="İxtisaslar, tədris prosesi, təhsil proqramları"
                     class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
-                    <span class="wtab-num" aria-hidden="true">3</span><span data-i18n="nav_s3">Təhsil və ixtisaslar</span><span
+                    <span class="wtab-num" aria-hidden="true">4</span><span data-i18n="nav_s3">Təhsil və ixtisaslar</span><span
                         class="sr-only" data-i18n="nav_s3_sub">İxtisaslar, tədris prosesi, təhsil proqramları</span>
                 </a>
+
+                <!-- 5. Elmi və metodiki fəaliyyət -->
                 <a href="?tab=science" data-workspace-tab="science" role="tab" aria-selected="false"
                     title="Elmi məqalələr, nəşrlər, konfranslar, seminarlar"
                     class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
-                    <span class="wtab-num" aria-hidden="true">4</span><span data-i18n="nav_s4">Elmi və metodiki fəaliyyət</span><span
+                    <span class="wtab-num" aria-hidden="true">5</span><span data-i18n="nav_s4">Elmi və metodiki fəaliyyət</span><span
                         class="sr-only" data-i18n="nav_s4_sub">Elmi məqalələr, nəşrlər, konfranslar, seminarlar</span>
                 </a>
+
+                <!-- 6. Elektron kitabxana -->
                 <a href="?tab=library" data-workspace-tab="library" role="tab" aria-selected="false"
                     title="Dərsliklər, dərs vəsaitləri, metodiki materiallar"
                     class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
-                    <span class="wtab-num" aria-hidden="true">5</span><span data-i18n="nav_s5">Elektron kitabxana</span><span
+                    <span class="wtab-num" aria-hidden="true">6</span><span data-i18n="nav_s5">Elektron kitabxana</span><span
                         class="sr-only" data-i18n="nav_s5_sub">Dərsliklər, dərs vəsaitləri, metodiki materiallar</span>
                 </a>
+
+                <!-- 7. Video dərslər və rəqəmsal təhsil -->
                 <a href="?tab=lectures" data-workspace-tab="lectures" role="tab" aria-selected="false"
                     title="Açıq dərslər, video mühazirələr, təlim materialları"
                     class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
-                    <span class="wtab-num" aria-hidden="true">6</span><span data-i18n="nav_s6">Video dərslər və rəqəmsal təhsil</span><span
+                    <span class="wtab-num" aria-hidden="true">7</span><span data-i18n="nav_s6">Video dərslər və rəqəmsal təhsil</span><span
                         class="sr-only" data-i18n="nav_s6_sub">Açıq dərslər, video mühazirələr, təlim materialları</span>
                 </a>
+
+                <!-- 8. Beynəlxalq əlaqələr -->
                 <a href="?tab=international" data-workspace-tab="international" role="tab" aria-selected="false"
                     title="Əməkdaşlıq, memorandumlar, beynəlxalq layihələr"
                     class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
-                    <span class="wtab-num" aria-hidden="true">7</span><span data-i18n="nav_s7">Beynəlxalq əlaqələr</span><span
+                    <span class="wtab-num" aria-hidden="true">8</span><span data-i18n="nav_s7">Beynəlxalq əlaqələr</span><span
                         class="sr-only" data-i18n="nav_s7_sub">Əməkdaşlıq, memorandumlar, beynəlxalq layihələr</span>
                 </a>
+
+                <!-- 9. Tələbə həyatı və nailiyyətlər -->
                 <a href="?tab=students" data-workspace-tab="students" role="tab" aria-selected="false"
                     title="Tələbə tədbirləri, fəxri tələbələr, uğurlar"
                     class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
-                    <span class="wtab-num" aria-hidden="true">8</span><span data-i18n="nav_s8">Tələbə həyatı və nailiyyətlər</span><span
+                    <span class="wtab-num" aria-hidden="true">9</span><span data-i18n="nav_s8">Tələbə həyatı və nailiyyətlər</span><span
                         class="sr-only" data-i18n="nav_s8_sub">Tələbə tədbirləri, fəxri tələbələr, uğurlar</span>
                 </a>
+
+                <!-- 10. Sertifikatlar və təltiflər -->
                 <a href="?tab=certificates" data-workspace-tab="certificates" role="tab" aria-selected="false"
                     title="Beynəlxalq sertifikatlar, mükafatlar və diplomlar"
                     class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
-                    <span class="wtab-num" aria-hidden="true">9</span><span data-i18n="nav_s9">Sertifikatlar və təltiflər</span><span
+                    <span class="wtab-num" aria-hidden="true">10</span><span data-i18n="nav_s9">Sertifikatlar və təltiflər</span><span
                         class="sr-only" data-i18n="nav_s9_sub">Beynəlxalq sertifikatlar, mükafatlar və diplomlar</span>
                 </a>
+
+                <!-- 11. Elanlar və xəbərlər -->
                 <a href="?tab=news" data-workspace-tab="news" role="tab" aria-selected="false"
                     title="Rəsmi xəbərlər, tədbirlər, elanlar"
                     class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
-                    <span class="wtab-num" aria-hidden="true">10</span><span data-i18n="nav_s10">Elanlar və xəbərlər</span><span
+                    <span class="wtab-num" aria-hidden="true">11</span><span data-i18n="nav_s10">Elanlar və xəbərlər</span><span
                         class="sr-only" data-i18n="nav_s10_sub">Rəsmi xəbərlər, tədbirlər, elanlar</span>
                 </a>
+
+                <!-- 12. Müraciətlər -->
                 <a href="?tab=contact" data-workspace-tab="contact" role="tab" aria-selected="false"
                     title="Elektron müraciət, əlaqə və qəbul"
                     class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
-                    <span class="wtab-num" aria-hidden="true">11</span><span data-i18n="nav_s11">Müraciətlər</span><span
+                    <span class="wtab-num" aria-hidden="true">12</span><span data-i18n="nav_s11">Müraciətlər</span><span
                         class="sr-only" data-i18n="nav_s11_sub">Elektron müraciət, əlaqə və qəbul</span>
                 </a>
                 <a href="?tab=all" data-workspace-tab="all" role="tab" aria-selected="false"
@@ -555,19 +563,55 @@
                         <span class="mobile-sub-bullet" aria-hidden="true">🏛️</span>
                         <span data-i18n="nav_s1">Haqqımızda</span>
                     </a>
-                    <a href="?tab=structure" class="mobile-nav-sublink font-semibold text-emerald-600 dark:text-emerald-400" data-workspace-tab="structure">
-                        <span class="mobile-sub-bullet" aria-hidden="true">👥</span>
-                        <span data-i18n="nav_structure">Rəhbərlik və struktur</span>
+                    <a href="?tab=about#about-mvv-anchor" class="mobile-nav-sublink" data-workspace-tab="about">
+                        <span class="mobile-sub-bullet" aria-hidden="true">🎯</span>
+                        <span>Missiya, Baxış & Dəyərlər</span>
+                    </a>
+                    <a href="?tab=about#campus-navigator" class="mobile-nav-sublink" data-workspace-tab="about">
+                        <span class="mobile-sub-bullet" aria-hidden="true">🏢</span>
+                        <span>Kampus Bələdçisi (5 Mərtəbə)</span>
                     </a>
                 </div>
             </div>
 
-            <!-- 2. Tələbə Qəbulu Group -->
+            <!-- 2. Rəhbərlik və Struktur Group -->
             <div class="mobile-nav-group">
                 <button type="button" class="mobile-nav-header" aria-expanded="false">
                     <span class="mobile-nav-header-left">
                         <span class="mobile-nav-icon" aria-hidden="true">2</span>
-                        <span data-i18n="nav_s2">Tələbə qəbulu</span>
+                        <span data-i18n="nav_structure">Rəhbərlik və struktur</span>
+                    </span>
+                    <svg class="mobile-group-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="mobile-nav-sub">
+                    <a href="?tab=structure" class="mobile-nav-sublink font-semibold text-emerald-600 dark:text-emerald-400" data-workspace-tab="structure">
+                        <span class="mobile-sub-bullet" aria-hidden="true">👥</span>
+                        <span data-i18n="nav_structure">Rəhbərlik və struktur</span>
+                    </a>
+                    <a href="?tab=structure#structure" class="mobile-nav-sublink" data-workspace-tab="structure">
+                        <span class="mobile-sub-bullet" aria-hidden="true">🏛️</span>
+                        <span>Kollec İdarə Heyəti</span>
+                    </a>
+                    <a href="?tab=structure#struct-fbk-view" class="mobile-nav-sublink" data-workspace-tab="structure">
+                        <span class="mobile-sub-bullet" aria-hidden="true">📚</span>
+                        <span data-i18n="sub_str_fbk">9 FBK Komissiyaları</span>
+                    </a>
+                    <a href="?tab=structure#honored-staff-highlight" class="mobile-nav-sublink" data-workspace-tab="structure">
+                        <span class="mobile-sub-bullet" aria-hidden="true">🎖️</span>
+                        <span data-i18n="sub_str_honored">Fəxri Əməkdaşlar</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. Tələbə Qəbulu Group -->
+            <div class="mobile-nav-group">
+                <button type="button" class="mobile-nav-header" aria-expanded="false">
+                    <span class="mobile-nav-header-left">
+                        <span class="mobile-nav-icon" aria-hidden="true">3</span>
+                        <span data-i18n="nav_admission">Tələbə qəbulu</span>
                     </span>
                     <svg class="mobile-group-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2.2" aria-hidden="true">
@@ -602,11 +646,11 @@
                 </div>
             </div>
 
-            <!-- 3. Təhsil və İxtisaslar Group -->
+            <!-- 4. Təhsil və İxtisaslar Group -->
             <div class="mobile-nav-group">
                 <button type="button" class="mobile-nav-header" aria-expanded="false">
                     <span class="mobile-nav-header-left">
-                        <span class="mobile-nav-icon" aria-hidden="true">3</span>
+                        <span class="mobile-nav-icon" aria-hidden="true">4</span>
                         <span data-i18n="nav_s3">Təhsil və İxtisaslar</span>
                     </span>
                     <svg class="mobile-group-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -615,7 +659,7 @@
                     </svg>
                 </button>
                 <div class="mobile-nav-sub">
-                    <a href="#majors-section" class="mobile-nav-sublink" data-struct-cat="majors">
+                    <a href="?tab=majors#majors-section" class="mobile-nav-sublink" data-workspace-tab="majors">
                         <span class="mobile-sub-bullet" aria-hidden="true">🎓</span>
                         <span data-i18n="nav_s3">Təhsil və ixtisaslar (14 İxtisas)</span>
                     </a>
@@ -626,11 +670,11 @@
                 </div>
             </div>
 
-            <!-- 3. Elmi, Kitabxana & Video Dərslər Group -->
+            <!-- 5–7. Elmi, Kitabxana & Video Dərslər Group -->
             <div class="mobile-nav-group">
                 <button type="button" class="mobile-nav-header" aria-expanded="false">
                     <span class="mobile-nav-header-left">
-                        <span class="mobile-nav-icon" aria-hidden="true">4–6</span>
+                        <span class="mobile-nav-icon" aria-hidden="true">5–7</span>
                         <span>Elm · Kitabxana · Video Dərslər</span>
                     </span>
                     <svg class="mobile-group-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -1050,13 +1094,21 @@
                         <button type="button" class="portal-dir-card" data-workspace-tab="structure">
                             <span class="portal-dir-num">2</span>
                             <span class="portal-dir-body">
-                                <strong data-i18n="nav_s2">Rəhbərlik və struktur</strong>
-                                <span data-i18n="nav_s2_sub">Rəhbərlik, şöbələr, bölmələr və əməkdaşlar</span>
+                                <strong data-i18n="nav_structure">Rəhbərlik və struktur</strong>
+                                <span data-i18n="nav_structure_sub">Rəhbərlik, şöbələr, bölmələr və əməkdaşlar</span>
+                            </span>
+                            <span class="portal-dir-arrow" aria-hidden="true">→</span>
+                        </button>
+                        <button type="button" class="portal-dir-card" data-workspace-tab="admission">
+                            <span class="portal-dir-num">3</span>
+                            <span class="portal-dir-body">
+                                <strong data-i18n="nav_admission">Tələbə qəbulu</strong>
+                                <span data-i18n="nav_admission_sub">2026/2027 qəbul qaydaları, sənədlər, keçid balları və bələdçi</span>
                             </span>
                             <span class="portal-dir-arrow" aria-hidden="true">→</span>
                         </button>
                         <button type="button" class="portal-dir-card" data-workspace-tab="majors">
-                            <span class="portal-dir-num">3</span>
+                            <span class="portal-dir-num">4</span>
                             <span class="portal-dir-body">
                                 <strong data-i18n="nav_s3">Təhsil və ixtisaslar</strong>
                                 <span data-i18n="nav_s3_sub">İxtisaslar, tədris prosesi, təhsil proqramları</span>
@@ -1064,7 +1116,7 @@
                             <span class="portal-dir-arrow" aria-hidden="true">→</span>
                         </button>
                         <button type="button" class="portal-dir-card" data-workspace-tab="science">
-                            <span class="portal-dir-num">4</span>
+                            <span class="portal-dir-num">5</span>
                             <span class="portal-dir-body">
                                 <strong data-i18n="nav_s4">Elmi və metodiki fəaliyyət</strong>
                                 <span data-i18n="nav_s4_sub">Elmi məqalələr, nəşrlər, konfranslar, seminarlar</span>
@@ -1072,7 +1124,7 @@
                             <span class="portal-dir-arrow" aria-hidden="true">→</span>
                         </button>
                         <button type="button" class="portal-dir-card" data-workspace-tab="library">
-                            <span class="portal-dir-num">5</span>
+                            <span class="portal-dir-num">6</span>
                             <span class="portal-dir-body">
                                 <strong data-i18n="nav_s5">Elektron kitabxana</strong>
                                 <span data-i18n="nav_s5_sub">Dərsliklər, dərs vəsaitləri, metodiki materiallar</span>
@@ -1080,7 +1132,7 @@
                             <span class="portal-dir-arrow" aria-hidden="true">→</span>
                         </button>
                         <button type="button" class="portal-dir-card" data-workspace-tab="lectures">
-                            <span class="portal-dir-num">6</span>
+                            <span class="portal-dir-num">7</span>
                             <span class="portal-dir-body">
                                 <strong data-i18n="nav_s6">Video dərslər və rəqəmsal təhsil</strong>
                                 <span data-i18n="nav_s6_sub">Açıq dərslər, video mühazirələr, təlim materialları</span>
@@ -1088,7 +1140,7 @@
                             <span class="portal-dir-arrow" aria-hidden="true">→</span>
                         </button>
                         <button type="button" class="portal-dir-card" data-workspace-tab="international">
-                            <span class="portal-dir-num">7</span>
+                            <span class="portal-dir-num">8</span>
                             <span class="portal-dir-body">
                                 <strong data-i18n="nav_s7">Beynəlxalq əlaqələr</strong>
                                 <span data-i18n="nav_s7_sub">Əməkdaşlıq, memorandumlar, beynəlxalq layihələr</span>
@@ -1096,7 +1148,7 @@
                             <span class="portal-dir-arrow" aria-hidden="true">→</span>
                         </button>
                         <button type="button" class="portal-dir-card" data-workspace-tab="students">
-                            <span class="portal-dir-num">8</span>
+                            <span class="portal-dir-num">9</span>
                             <span class="portal-dir-body">
                                 <strong data-i18n="nav_s8">Tələbə həyatı və nailiyyətlər</strong>
                                 <span data-i18n="nav_s8_sub">Tələbə tədbirləri, fəxri tələbələr, uğurlar</span>
@@ -1104,7 +1156,7 @@
                             <span class="portal-dir-arrow" aria-hidden="true">→</span>
                         </button>
                         <button type="button" class="portal-dir-card" data-workspace-tab="certificates">
-                            <span class="portal-dir-num">9</span>
+                            <span class="portal-dir-num">10</span>
                             <span class="portal-dir-body">
                                 <strong data-i18n="nav_s9">Sertifikatlar və təltiflər</strong>
                                 <span data-i18n="nav_s9_sub">Beynəlxalq sertifikatlar, mükafatlar və diplomlar</span>
@@ -1112,7 +1164,7 @@
                             <span class="portal-dir-arrow" aria-hidden="true">→</span>
                         </button>
                         <button type="button" class="portal-dir-card" data-workspace-tab="news">
-                            <span class="portal-dir-num">10</span>
+                            <span class="portal-dir-num">11</span>
                             <span class="portal-dir-body">
                                 <strong data-i18n="nav_s10">Elanlar və xəbərlər</strong>
                                 <span data-i18n="nav_s10_sub">Rəsmi xəbərlər, tədbirlər, elanlar</span>
@@ -1120,7 +1172,7 @@
                             <span class="portal-dir-arrow" aria-hidden="true">→</span>
                         </button>
                         <button type="button" class="portal-dir-card" data-workspace-tab="contact">
-                            <span class="portal-dir-num">11</span>
+                            <span class="portal-dir-num">12</span>
                             <span class="portal-dir-body">
                                 <strong data-i18n="nav_s11">Müraciətlər</strong>
                                 <span data-i18n="nav_s11_sub">Elektron müraciət, əlaqə və qəbul</span>
@@ -2100,7 +2152,7 @@
                             <span class="why-card-cta" data-i18n="why_lec_cta">Videodərsləri izlə →</span>
                         </a>
 
-                        <a href="#structure" class="about-why-card">
+                        <a href="?tab=structure" data-workspace-tab="structure" class="about-why-card">
                             <div class="why-card-top">
                                 <span class="why-icon">🏛️</span>
                                 <span class="why-arrow">↗</span>
@@ -2211,7 +2263,7 @@
                                 aria-selected="false" aria-controls="campus-rooms-grid">
                                 <span class="floor-num-badge">II</span>
                                 <span class="floor-title-text" data-i18n="campus_fbtn_2_title">2-ci Mərtəbə</span>
-                                <span class="floor-meta-count" data-i18n="campus_fbtn_2_meta">11 otaq · Rəhbərlik &
+                                <span class="floor-meta-count" data-i18n="campus_fbtn_2_meta">11 otaq · İnzibati &
                                     Kitabxana</span>
                             </button>
                             <button type="button" class="campus-floor-btn" data-floor="3" id="campus-floor-3" role="tab"
@@ -2304,8 +2356,8 @@
                                 İKT</button>
                             <button type="button"
                                 class="campus-chip px-3 py-1.5 rounded-full text-xs font-semibold border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 hover:border-[#0a2240] dark:hover:border-[#c8a45d] transition cursor-pointer"
-                                data-cat="admin" data-i18n="campus_filter_admin">🏛️
-                                Rəhbərlik & İnzibati</button>
+                                data-cat="admin" data-i18n="campus_filter_admin">🏢
+                                İnzibati Otaqlar</button>
                             <button type="button"
                                 class="campus-chip px-3 py-1.5 rounded-full text-xs font-semibold border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 hover:border-[#0a2240] dark:hover:border-[#c8a45d] transition cursor-pointer"
                                 data-cat="library" data-i18n="campus_filter_library">📚
@@ -2654,15 +2706,100 @@
 
         </div>
 
-        <!-- ══ 2. TƏLƏBƏ QƏBULU ══ -->
-        <div id="panel-admission" class="tab-workspace-panel" data-tab-panel="admission" role="tabpanel" aria-hidden="true">
+        <!-- ══ 2. RƏHBƏRLİK VƏ STRUKTUR ══ -->
+        <div id="panel-structure" class="tab-workspace-panel" data-tab-panel="structure" role="tabpanel" aria-hidden="true">
             <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
                 <div class="section-subnav-inner max-w-7xl mx-auto">
                     <div class="subnav-header-row">
                         <span class="subnav-num-badge">02</span>
                         <div>
-                            <h2 class="subnav-title" data-i18n="nav_s2">Tələbə qəbulu</h2>
-                            <p class="subnav-sub" data-i18n="nav_s2_sub">2026/2027-ci tədris ili üzrə kollecə qəbul qaydaları, rəsmi nəticələr, tələb olunan sənədlər və abituriyent bələdçisi</p>
+                            <h2 class="subnav-title" data-i18n="nav_structure">Rəhbərlik və struktur</h2>
+                            <p class="subnav-sub" data-i18n="nav_structure_sub">Rəhbərlik, şöbələr, bölmələr, FBK-lar və əməkdaşlar</p>
+                        </div>
+                    </div>
+                    <div class="subnav-pills-wrap">
+                        <a href="#structure" class="subnav-pill" data-i18n="sub_str_depts">👥 Rəhbərlik və İdarə Heyəti</a>
+                        <a href="#struct-tree-view" class="subnav-pill" data-i18n="sub_str_tree">🏢 İnstitusional Sxem</a>
+                        <a href="#struct-fbk-view" class="subnav-pill" data-i18n="sub_str_fbk">📚 9 FBK Komissiyaları</a>
+                        <a href="#honored-staff-highlight" class="subnav-pill" data-i18n="sub_str_honored">🎖️ Fəxri Əməkdaşlar</a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="section section-dark" id="structure">
+                <div class="section-inner reveal">
+                    <span class="section-badge" data-i18n="structure_badge">Təşkilat</span>
+                    <h2 class="section-title" data-i18n="structure_title">
+                        Rəhbərlik və struktur
+                    </h2>
+                    <p class="section-desc" data-i18n="structure_desc">
+                        Rəhbərlik, şöbələr, bölmələr və əməkdaşlar — institusional struktur bir baxışda.
+                    </p>
+
+                    <!-- ── PANE 1: ORGANIZATIONAL HIERARCHY TREE ── -->
+                    <div class="struct-view-pane struct-tree-view active" id="struct-tree-view" role="tabpanel">
+                        <div class="struct-tree-canvas" id="struct-tree-canvas">
+                            <!-- Dynamic Tree Hierarchy rendered by JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── PANE 2: 9 FƏNN BİRLƏŞMƏ KOMİSSİYALARI (FBK) ── -->
+            <section class="section section-dark relative py-14 lg:py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-900/[0.06] dark:border-white/[0.06]" id="struct-fbk-view">
+                <div class="max-w-7xl mx-auto space-y-6">
+                    <div class="space-y-2">
+                        <span class="section-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#0a2240]/[0.06] text-[#0a2240] dark:bg-[#c8a45d]/15 dark:text-[#dfc07f] border border-[#0a2240]/15 dark:border-[#c8a45d]/30" data-i18n="struct_fbk_badge">
+                            📚 Kafedralar & FBK
+                        </span>
+                        <h2 class="section-title font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white" data-i18n="struct_fbk_title">
+                            Fənn Birləşmə Komissiyaları (FBK)
+                        </h2>
+                        <p class="section-desc text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-3xl" data-i18n="struct_fbk_desc">
+                            Kollecin 9 ixtisaslaşmış fənn birləşmə komissiyası, kafedra sədrləri və tədris olunan əsas fənlər.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="fbk-grid">
+                        <!-- Populated by renderCommissionsGrid() in script.js -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════ FƏXRİ ƏMƏKDAŞLAR (REHBERLIK VƏ STRUKTUR DAXİLİNDƏ) ═══════════════ -->
+            <section class="section relative py-14 lg:py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-900/[0.06] dark:border-white/[0.06]" id="honored-staff-highlight">
+                <div class="max-w-7xl mx-auto space-y-6">
+                    <div class="flex flex-wrap items-end justify-between gap-4">
+                        <div class="space-y-2">
+                            <span class="section-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#0a2240]/[0.06] text-[#0a2240] dark:bg-[#c8a45d]/15 dark:text-[#dfc07f] border border-[#0a2240]/15 dark:border-[#c8a45d]/30" data-i18n="hub_honored_badge">
+                                🎖️ Kollecin İnkişafında Xidmətləri Olan Əməkdaşlar
+                            </span>
+                            <h2 class="section-title font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white" data-i18n="hub_honored_title">
+                                Fəxri əməkdaşlar
+                            </h2>
+                            <p class="section-desc text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-3xl" data-i18n="hub_honored_desc">
+                                Beynəlxalq akkreditasiya, pedaqoji ustalıq və tədris-metodiki fəaliyyəti ilə fərqlənən kollec əməkdaşlarımız.
+                            </p>
+                        </div>
+                        <button type="button" class="subnav-pill subnav-pill-gold" data-workspace-tab="certificates" data-focus-anchor="teacher-certificates">
+                            <span data-i18n="hub_honored_cta">Bütün Sertifikatlar Portfeli →</span>
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="honored-staff-highlight-grid">
+                        <!-- Dynamically populated from teacherCertificatesData via script.js -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ══ 3. TƏLƏBƏ QƏBULU ══ -->
+        <div id="panel-admission" class="tab-workspace-panel" data-tab-panel="admission" role="tabpanel" aria-hidden="true">
+            <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
+                <div class="section-subnav-inner max-w-7xl mx-auto">
+                    <div class="subnav-header-row">
+                        <span class="subnav-num-badge">03</span>
+                        <div>
+                            <h2 class="subnav-title" data-i18n="nav_admission">Tələbə qəbulu</h2>
+                            <p class="subnav-sub" data-i18n="nav_admission_sub">2026/2027-ci tədris ili üzrə kollecə qəbul qaydaları, rəsmi nəticələr, tələb olunan sənədlər və abituriyent bələdçisi</p>
                         </div>
                     </div>
                     <div class="subnav-pills-wrap">
@@ -3233,78 +3370,12 @@
             </section>
         </div>
 
-        <!-- ══ RƏHBƏRLİK VƏ STRUKTUR (Haqqımızda bölməsinə aid) ══ -->
-        <div id="panel-structure" class="tab-workspace-panel" data-tab-panel="structure" role="tabpanel" aria-hidden="true">
-            <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
-                <div class="section-subnav-inner max-w-7xl mx-auto">
-                    <div class="subnav-header-row">
-                        <span class="subnav-num-badge">👥</span>
-                        <div>
-                            <h2 class="subnav-title" data-i18n="nav_structure">Rəhbərlik və struktur</h2>
-                            <p class="subnav-sub" data-i18n="nav_structure_sub">Rəhbərlik, şöbələr, bölmələr və əməkdaşlar</p>
-                        </div>
-                    </div>
-                    <div class="subnav-pills-wrap">
-                        <a href="#structure" class="subnav-pill" data-i18n="sub_str_depts">👥 Rəhbərlik və Bölmələr</a><a href="#struct-tree-view" class="subnav-pill" data-i18n="sub_str_tree">🏢 İnstitusional Sxem</a><a href="#honored-staff-highlight" class="subnav-pill" data-i18n="sub_str_honored">🎖️ Fəxri Əməkdaşlar</a>
-                    </div>
-                </div>
-            </div>
-
-            <section class="section section-dark" id="structure">
-                <div class="section-inner reveal">
-                    <span class="section-badge" data-i18n="structure_badge">Təşkilat</span>
-                    <h2 class="section-title" data-i18n="structure_title">
-                        Rəhbərlik və struktur
-                    </h2>
-                    <p class="section-desc" data-i18n="structure_desc">
-                        Rəhbərlik, şöbələr, bölmələr və əməkdaşlar — institusional struktur bir baxışda.
-                    </p>
-
-
-
-                    <!-- ── PANE 1: ORGANIZATIONAL HIERARCHY TREE ── -->
-                    <div class="struct-view-pane struct-tree-view active" id="struct-tree-view" role="tabpanel">
-                        <div class="struct-tree-canvas" id="struct-tree-canvas">
-                            <!-- Dynamic Tree Hierarchy rendered by JS -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- ═══════════════ FƏXRİ ƏMƏKDAŞLAR (REHBERLIK VƏ STRUKTUR DAXİLİNDƏ) ═══════════════ -->
-            <section class="section relative py-14 lg:py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-900/[0.06] dark:border-white/[0.06]" id="honored-staff-highlight">
-                <div class="max-w-7xl mx-auto space-y-6">
-                    <div class="flex flex-wrap items-end justify-between gap-4">
-                        <div class="space-y-2">
-                            <span class="section-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#0a2240]/[0.06] text-[#0a2240] dark:bg-[#c8a45d]/15 dark:text-[#dfc07f] border border-[#0a2240]/15 dark:border-[#c8a45d]/30" data-i18n="hub_honored_badge">
-                                🎖️ Kollecin İnkişafında Xidmətləri Olan Əməkdaşlar
-                            </span>
-                            <h2 class="section-title font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white" data-i18n="hub_honored_title">
-                                Fəxri əməkdaşlar
-                            </h2>
-                            <p class="section-desc text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-3xl" data-i18n="hub_honored_desc">
-                                Beynəlxalq akkreditasiya, pedaqoji ustalıq və tədris-metodiki fəaliyyəti ilə fərqlənən kollec əməkdaşlarımız.
-                            </p>
-                        </div>
-                        <button type="button" class="subnav-pill subnav-pill-gold" data-workspace-tab="certificates" data-focus-anchor="teacher-certificates">
-                            <span data-i18n="hub_honored_cta">Bütün Sertifikatlar Portfeli →</span>
-                        </button>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="honored-staff-highlight-grid">
-                        <!-- Dynamically populated from teacherCertificatesData via script.js -->
-                    </div>
-                </div>
-            </section>
-
-        </div>
-
-        <!-- ══ 3. TƏHSİL VƏ İXTİSASLAR ══ -->
+        <!-- ══ 4. TƏHSİL VƏ İXTİSASLAR ══ -->
         <div id="panel-majors" class="tab-workspace-panel" data-tab-panel="majors" role="tabpanel" aria-hidden="true">
             <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
                 <div class="section-subnav-inner max-w-7xl mx-auto">
                     <div class="subnav-header-row">
-                        <span class="subnav-num-badge">03</span>
+                        <span class="subnav-num-badge">04</span>
                         <div>
                             <h2 class="subnav-title" data-i18n="nav_s3">Təhsil və ixtisaslar</h2>
                             <p class="subnav-sub" data-i18n="nav_s3_sub">İxtisaslar, tədris prosesi, təhsil proqramları</p>
@@ -3435,7 +3506,7 @@
             <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
                 <div class="section-subnav-inner max-w-7xl mx-auto">
                     <div class="subnav-header-row">
-                        <span class="subnav-num-badge">04</span>
+                        <span class="subnav-num-badge">05</span>
                         <div>
                             <h2 class="subnav-title" data-i18n="nav_s4">Elmi və metodiki fəaliyyət</h2>
                             <p class="subnav-sub" data-i18n="nav_s4_sub">Elmi məqalələr, nəşrlər, konfranslar, seminarlar</p>
@@ -3818,7 +3889,7 @@
             <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
                 <div class="section-subnav-inner max-w-7xl mx-auto">
                     <div class="subnav-header-row">
-                        <span class="subnav-num-badge">05</span>
+                        <span class="subnav-num-badge">06</span>
                         <div>
                             <h2 class="subnav-title" data-i18n="nav_s5">Elektron kitabxana</h2>
                             <p class="subnav-sub" data-i18n="nav_s5_sub">Dərsliklər, dərs vəsaitləri, metodiki materiallar</p>
@@ -4149,7 +4220,7 @@
             <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
                 <div class="section-subnav-inner max-w-7xl mx-auto">
                     <div class="subnav-header-row">
-                        <span class="subnav-num-badge">06</span>
+                        <span class="subnav-num-badge">07</span>
                         <div>
                             <h2 class="subnav-title" data-i18n="nav_s6">Video dərslər və rəqəmsal təhsil</h2>
                             <p class="subnav-sub" data-i18n="nav_s6_sub">Açıq dərslər, video mühazirələr, təlim materialları</p>
@@ -4496,7 +4567,7 @@
             <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
                 <div class="section-subnav-inner max-w-7xl mx-auto">
                     <div class="subnav-header-row">
-                        <span class="subnav-num-badge">07</span>
+                        <span class="subnav-num-badge">08</span>
                         <div>
                             <h2 class="subnav-title" data-i18n="nav_s7">Beynəlxalq əlaqələr</h2>
                             <p class="subnav-sub" data-i18n="nav_s7_sub">Əməkdaşlıq, memorandumlar, beynəlxalq layihələr</p>
@@ -4632,7 +4703,7 @@
             <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
                 <div class="section-subnav-inner max-w-7xl mx-auto">
                     <div class="subnav-header-row">
-                        <span class="subnav-num-badge">08</span>
+                        <span class="subnav-num-badge">09</span>
                         <div>
                             <h2 class="subnav-title" data-i18n="nav_s8">Tələbə həyatı və nailiyyətlər</h2>
                             <p class="subnav-sub" data-i18n="nav_s8_sub">Tələbə tədbirləri, fəxri tələbələr, uğurlar</p>
@@ -4966,7 +5037,7 @@
             <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
                 <div class="section-subnav-inner max-w-7xl mx-auto">
                     <div class="subnav-header-row">
-                        <span class="subnav-num-badge">09</span>
+                        <span class="subnav-num-badge">10</span>
                         <div>
                             <h2 class="subnav-title" data-i18n="nav_s9">Sertifikatlar və təltiflər</h2>
                             <p class="subnav-sub" data-i18n="nav_s9_sub">Beynəlxalq sertifikatlar, mükafatlar və diplomlar</p>
@@ -5274,7 +5345,7 @@
             <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
                 <div class="section-subnav-inner max-w-7xl mx-auto">
                     <div class="subnav-header-row">
-                        <span class="subnav-num-badge">10</span>
+                        <span class="subnav-num-badge">11</span>
                         <div>
                             <h2 class="subnav-title" data-i18n="nav_s10">Elanlar və xəbərlər</h2>
                             <p class="subnav-sub" data-i18n="nav_s10_sub">Rəsmi xəbərlər, tədbirlər, elanlar</p>
@@ -5576,7 +5647,7 @@
             <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
                 <div class="section-subnav-inner max-w-7xl mx-auto">
                     <div class="subnav-header-row">
-                        <span class="subnav-num-badge">11</span>
+                        <span class="subnav-num-badge">12</span>
                         <div>
                             <h2 class="subnav-title" data-i18n="nav_s11">Müraciətlər</h2>
                             <p class="subnav-sub" data-i18n="nav_s11_sub">Elektron müraciət, əlaqə və qəbul</p>
@@ -6049,7 +6120,8 @@
                 <div class="footer-links">
                     <h4 data-i18n="footer_quick">Sürətli Keçidlər</h4>
                     <a href="#about" data-i18n="nav_s1">Haqqımızda</a>
-                    <a href="#structure" data-i18n="nav_s2">Rəhbərlik və struktur</a>
+                    <a href="#structure" data-i18n="nav_structure">Rəhbərlik və struktur</a>
+                    <a href="#admission" data-i18n="nav_admission">Tələbə qəbulu</a>
                     <a href="#majors-section" data-i18n="nav_s3">Təhsil və ixtisaslar</a>
                     <a href="#science" data-i18n="nav_s4">Elmi və metodiki fəaliyyət</a>
                     <a href="#library" data-i18n="nav_s5">Elektron kitabxana</a>
