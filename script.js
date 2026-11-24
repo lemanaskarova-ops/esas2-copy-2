@@ -14612,58 +14612,8 @@ function initFluxEngine() {
  * 22. SCENE TRANSITION LOGIC
  */
 function initSceneTransition() {
-  const overlay = document.getElementById("scene-transition");
-  if (!overlay) return;
-
-  const triggerTransition = (targetId) => {
-    overlay.classList.add("active");
-
-    setTimeout(() => {
-      if (targetId === "#") {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
-        const target = document.querySelector(targetId);
-        if (target) {
-          const headerOffset = document.getElementById("site-header")?.offsetHeight || 112;
-          const elementPosition = target.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-          });
-        }
-      }
-
-      setTimeout(() => {
-        overlay.classList.remove("active");
-      }, 600);
-    }, 400);
-  };
-
-  // Intercept all hash links for the transition effect
-  document.addEventListener("click", (e) => {
-    const link = e.target.closest('a[href^="#"]');
-    if (link) {
-      const href = link.getAttribute("href");
-
-      // Ignore if it's a functional link like lightbox/panel triggers without actual hash targets
-      if (href.length > 1 || href === "#") {
-        e.preventDefault();
-
-        // Close mobile nav if open
-        const mobileToggle = document.getElementById("mobile-toggle");
-        const mobileNav = document.getElementById("mobile-nav");
-        if (mobileToggle && mobileNav && mobileNav.classList.contains("active")) {
-          mobileToggle.classList.remove("active");
-          mobileNav.classList.remove("active");
-          document.documentElement.classList.remove("scroll-locked");
-        }
-
-        triggerTransition(href);
-      }
-    }
-  });
+  // Navigation transitions and workspace tab routing are managed directly and reliably by ui-tabs.js
+  return;
 }
 
 /* ══════════════════════════════════════════════════════════════
