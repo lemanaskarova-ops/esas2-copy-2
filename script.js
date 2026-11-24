@@ -240,7 +240,7 @@ const i18n = {
     cf_message: "Mesaj",
     cf_send: "Göndər",
     cf_success: "Müraciətiniz göndərildi! 1–3 iş günü ərzində cavablandırılacaqdır.",
-    marquee1: "📢 2025/2026 tədris ili üçün qəbul elan olunub!",
+    marquee1: "📢 2026/2027 tədris ili qəbul qaydaları və rəsmi nəticələr təqdim olunur!",
     marquee2: "🏆 Tələbələrimiz respublika olimpiadasında 1-ci yeri qazandı!",
     marquee3: "📚 Yeni elektron kitabxana xidməti istifadəyə verildi.",
     marquee4: "🎓 Məzunlarımızın 92%-i ilk il ərzində iş tapır.",
@@ -483,10 +483,10 @@ const i18n = {
     tl_1931_title: "Mərkəzi Teleqraf Nəzdində İlk Rabitə Təhsili Ocağı",
     tl_1931_desc: "Kollecin əsası 1931-ci ildə Bakı Mərkəzi Teleqrafının nəzdində fabrik-zavod təhsili bazasında təşkil olunmuşdur. Bu tarixi addım Azərbaycanda peşəkar rabitəçi və teleqraf-telefon mütəxəssislərinin sistemli hazırlanmasının başlanğıcı olmuşdur.",
     why_lib_title: "Rəqəmsal Kitabxana və Oxu Zalı",
-    why_lib_desc: "Müəllimlərimizin müəllifi olduğu 40+ ixtisas dərsliyi, PDF vəsaitlər və sayt daxilində birbaşa onlayn oxu zalı.",
+    why_lib_desc: "Müəllimlərimizin müəllifi olduğu 50 ixtisas dərsliyi və dərs vəsaiti, akademik mühazirələr və sayt daxilində onlayn oxu zalı.",
     why_lib_cta: "Kitabxanaya keç →",
     why_lec_title: "Videodərslər və Media Studiya",
-    why_lec_desc: "İnformatika, Tarix, Ədəbiyyat və Hüquq fənləri üzrə 16 açıq videodərs və interaktiv kino-rejimli pleyer.",
+    why_lec_desc: "İnformatika, Nəqliyyat, Tarix, Rabitə və Humanitar fənlər üzrə 19 açıq videodərs və interaktiv media studiya.",
     why_lec_cta: "Videodərsləri izlə →",
     why_struct_title: "Struktur və Müasir İxtisaslar",
     why_struct_desc: "Rəhbərlik, İnzibati İdarə Heyəti, Şöbələr və rabitə-nəqliyyat sektorunun ən tələbatlı ixtisas proqramları.",
@@ -958,7 +958,20 @@ const i18n = {
     nav_s1: "Haqqımızda",
     nav_s1_sub: "Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız",
     nav_s2: "Tələbə qəbulu",
-    nav_s2_sub: "2025/2026 qəbul qaydaları, tələb olunan sənədlər, keçid balları və bələdçi",
+    nav_s2_sub: "2026/2027-ci tədris ili üzrə kollecə qəbul qaydaları, rəsmi nəticələr, tələb olunan sənədlər və bələdçi",
+    aud_access_title: "Hədəf Qrupları Üzrə Sürətli Keçid",
+    aud_access_sub: "Məqsədinizə uyğun rəsmi məlumat və xidmətlərə bir toxunuşla birbaşa keçid edin",
+    aud_role_applicant: "Abituriyent",
+    aud_desc_applicant: "2026/2027 qəbul qaydaları, 14 ixtisas, sənədlər, keçid balları və rəsmi nəticələr.",
+    aud_role_student: "Tələbə",
+    aud_desc_student: "Tədris prosesi, rəqəmsal dərsliklər, mühazirələr, video dərslər və tələbə həyatı.",
+    aud_role_teacher: "Müəllim",
+    aud_desc_teacher: "Elmi-metodiki fəaliyyət, dərslik və vəsait nəşrləri, açıq dərslər və monitorinq.",
+    aud_role_grad_partner: "Məzun & İşəgötürən",
+    aud_desc_grad_partner: "İstehsalat təcrübəsi bazaları, tərəfdaş şirkətlər, kadr hazırlığı və əməkdaşlıq.",
+    adm_pill_archive: "📁 Qəbul Arxivi (2025/2026)",
+    adm_archive_title: "Əvvəlki Tədris İllərinin Qəbul Arxivi (2025/2026)",
+    adm_archive_desc: "DİM tərəfindən təsdiqlənmiş əvvəlki tədris illərinin keçid balları, qəbul statistikası və sənədlərin arxivi.",
     nav_structure: "Rəhbərlik və struktur",
     nav_structure_sub: "Rəhbərlik, şöbələr, bölmələr və əməkdaşlar",
     nav_s3: "Təhsil və ixtisaslar",
@@ -1441,7 +1454,7 @@ const i18n = {
     cf_message: "Message",
     cf_send: "Send",
     cf_success: "Your inquiry has been sent! It will be answered within 1–3 business days.",
-    marquee1: "📢 Admissions open for the 2025/2026 academic year!",
+    marquee1: "📢 Admissions and official results presented for the 2026/2027 academic year!",
     marquee2: "🏆 Our students won 1st place in the national olympiad!",
     marquee3: "📚 The new digital library service is now live.",
     marquee4: "🎓 92% of our graduates find a job within the first year.",
@@ -1679,10 +1692,10 @@ const i18n = {
     tl_1931_title: "First Communications Training School Under the Central Telegraph",
     tl_1931_desc: "Founded in 1931 on the basis of factory-plant education under the Baku Central Telegraph, marking the beginning of systematic training of professional communications and telegraph-telephone specialists in Azerbaijan.",
     why_lib_title: "Digital Library & Reading Room",
-    why_lib_desc: "40+ specialized textbooks authored by our faculty, PDF manuals, and a built-in online reading room.",
+    why_lib_desc: "50 specialized textbooks and study manuals authored by our faculty, academic lectures, and online reading room.",
     why_lib_cta: "Go to Library →",
     why_lec_title: "Video Lectures & Media Studio",
-    why_lec_desc: "16 open video lessons in Informatics, History, Literature, and Law with an interactive cinema player.",
+    why_lec_desc: "19 open video lessons in Informatics, Transport, History, Communications, and Humanities with an interactive media studio.",
     why_lec_cta: "Watch Video Lectures →",
     why_struct_title: "Structure & Modern Majors",
     why_struct_desc: "Leadership, Administrative Board, Departments, and the most in-demand programs in telecom and transport.",
@@ -2153,7 +2166,20 @@ const i18n = {
     nav_s1: "About Us",
     nav_s1_sub: "History, mission, activities, development strategy",
     nav_s2: "Student Admission",
-    nav_s2_sub: "2025/2026 admission rules, required documents, passing scores and roadmap",
+    nav_s2_sub: "2026/2027 admission rules, required documents, official results and roadmap",
+    aud_access_title: "Quick Navigation by Target Audience",
+    aud_access_sub: "Direct access to official information tailored to your specific goals",
+    aud_role_applicant: "Applicant",
+    aud_desc_applicant: "2026/2027 admission regulations, 14 majors, documents, scores and results.",
+    aud_role_student: "Student",
+    aud_desc_student: "Curriculum, digital textbooks, lecture notes, video lessons and campus life.",
+    aud_role_teacher: "Faculty & Staff",
+    aud_desc_teacher: "Research activity, textbook publications, open lessons and monitoring.",
+    aud_role_grad_partner: "Graduates & Employers",
+    aud_desc_grad_partner: "Internship bases, partner enterprises, career development and collaboration.",
+    adm_pill_archive: "📁 Admission Archive (2025/2026)",
+    adm_archive_title: "Previous Academic Years Admission Archive (2025/2026)",
+    adm_archive_desc: "State Examination Center approved passing scores, admission statistics and archived guidelines.",
     nav_structure: "Leadership & Structure",
     nav_structure_sub: "Leadership, departments, divisions and staff",
     nav_s3: "Education & Specialties",
@@ -2630,7 +2656,7 @@ const i18n = {
     cf_message: "Сообщение",
     cf_send: "Отправить",
     cf_success: "Ваше обращение отправлено! Ответ будет предоставлен в течение 1–3 рабочих дней.",
-    marquee1: "📢 Открыт прием на 2025/2026 учебный год!",
+    marquee1: "📢 Представлены правила приема и официальные результаты на 2026/2027 учебный год!",
     marquee2: "🏆 Наши студенты заняли 1-е место на олимпиаде!",
     marquee3: "📚 Запущена новая электронная библиотека.",
     marquee4: "🎓 92% выпускников находят работу в первый год.",
@@ -2873,10 +2899,10 @@ const i18n = {
     tl_1931_title: "Первое учебное заведение связи при Центральном телеграфе",
     tl_1931_desc: "Основан в 1931 году на базе фабрично-заводского обучения при Бакинском центральном телеграфе, положив начало системной подготовке профессиональных специалистов связи в Азербайджане.",
     why_lib_title: "Цифровая библиотека и читальный зал",
-    why_lib_desc: "40+ профильных учебников наших преподавателей, PDF-пособия и встроенный онлайн-читальный зал.",
+    why_lib_desc: "50 профильных учебников и учебных пособий наших преподавателей, академические лекции и онлайн-читальный зал.",
     why_lib_cta: "Перейти в библиотеку →",
     why_lec_title: "Видеоуроки и медиа-студия",
-    why_lec_desc: "16 открытых видеоуроков по информатике, истории, литературе и праву с интерактивным кино-плеером.",
+    why_lec_desc: "19 открытых видеоуроков по информатике, транспорту, истории, связи и гуманитарным дисциплинам с интерактивной медиа-студией.",
     why_lec_cta: "Смотреть видеоуроки →",
     why_struct_title: "Структура и специальности",
     why_struct_desc: "Руководство, административный совет, отделения и самые востребованные специальности связи и транспорта.",
@@ -3347,7 +3373,20 @@ const i18n = {
     nav_s1: "О нас",
     nav_s1_sub: "История, миссия, деятельность, стратегия развития",
     nav_s2: "Прием студентов",
-    nav_s2_sub: "Правила приема 2025/2026, документы, проходные баллы и руководство",
+    nav_s2_sub: "Правила приема на 2026/2027 учебный год, документы, официальные результаты и руководство",
+    aud_access_title: "Быстрый переход по целевым группам",
+    aud_access_sub: "Прямой доступ к официальной информации с учетом ваших целей",
+    aud_role_applicant: "Абитуриент",
+    aud_desc_applicant: "Правила приема 2026/2027, 14 специальностей, документы, баллы и результаты.",
+    aud_role_student: "Студент",
+    aud_desc_student: "Учебный процесс, цифровые учебники, конспекты лекций, видеоуроки и студенческая жизнь.",
+    aud_role_teacher: "Преподаватель",
+    aud_desc_teacher: "Научно-методическая работа, публикации учебников, открытые уроки и мониторинг.",
+    aud_role_grad_partner: "Выпускник и работодатель",
+    aud_desc_grad_partner: "Базы производственной практики, предприятия-партнеры и трудоустройство.",
+    adm_pill_archive: "📁 Архив приема (2025/2026)",
+    adm_archive_title: "Архив приема за предыдущие учебные годы (2025/2026)",
+    adm_archive_desc: "Утвержденные ГЭЦ проходные баллы, статистика приема и архивные документы.",
     nav_structure: "Руководство и структура",
     nav_structure_sub: "Руководство, отделы, подразделения и сотрудники",
     nav_s3: "Образование и специальности",
@@ -11595,6 +11634,17 @@ function initLecturesModule() {
         </div>
         <div class="lecture-info">
           <h4 class="lecture-title">${title}</h4>
+          <div class="lecture-audit-meta flex flex-wrap items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400 my-1.5">
+            <span class="inline-flex items-center gap-1 font-medium text-slate-700 dark:text-slate-300">
+              <span>👨‍🏫</span> ${lec.teacher || "BDRNK Fənn Müəllimi"}
+            </span>
+            <span class="inline-flex items-center gap-1">
+              <span>📅</span> ${lec.year || "2025/2026"}
+            </span>
+            <span class="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-semibold">
+              <span>✓</span> Rəsmi Tədris
+            </span>
+          </div>
           <div class="lecture-actions">
             <button type="button" class="lecture-watch-btn">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
@@ -13989,25 +14039,28 @@ function initVideoCarousel() {
 
 function initStatsCounter() {
   const stats = document.querySelectorAll(".stat-number");
-  const observerOptions = { threshold: 0.5 };
+  const observerOptions = { threshold: 0.3 };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const target = entry.target;
-        const countTo = parseInt(target.getAttribute("data-target"));
-        const duration = 2000; // 2 seconds
+        const countTo = parseInt(target.getAttribute("data-target"), 10);
+        if (isNaN(countTo)) return;
+        const suffix = target.getAttribute("data-suffix") || "";
+        const duration = 1800; // 1.8 seconds
         let startTime = null;
 
         const step = (timestamp) => {
           if (!startTime) startTime = timestamp;
           const progress = Math.min((timestamp - startTime) / duration, 1);
           const easeOut = 1 - Math.pow(1 - progress, 3);
-          target.innerText = Math.floor(easeOut * countTo);
+          const currentVal = Math.floor(easeOut * countTo);
+          target.innerText = currentVal + (progress >= 1 ? suffix : "");
           if (progress < 1) {
             window.requestAnimationFrame(step);
           } else {
-            target.innerText = countTo;
+            target.innerText = countTo + suffix;
           }
         };
 
