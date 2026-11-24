@@ -426,10 +426,10 @@
 
                 <!-- 2. Tələbə qəbulu (Əsas kateqoriya) -->
                 <a href="?tab=admission" data-workspace-tab="admission" role="tab" aria-selected="false"
-                    title="2026/2027 qəbul qaydaları, tələb olunan sənədlər, keçid balları və bələdçi"
+                    title="2025/2026 qəbul qaydaları, tələb olunan sənədlər, keçid balları və bələdçi"
                     class="workspace-tab-btn shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap border border-transparent transition-all duration-200">
                     <span class="wtab-num" aria-hidden="true">2</span><span data-i18n="nav_s2">Tələbə qəbulu</span><span
-                        class="sr-only" data-i18n="nav_s2_sub">2026/2027 qəbul qaydaları, sənədlər, keçid balları və bələdçi</span>
+                        class="sr-only" data-i18n="nav_s2_sub">2025/2026 qəbul qaydaları, sənədlər, keçid balları və bələdçi</span>
                 </a>
                 <a href="?tab=majors" data-workspace-tab="majors" role="tab" aria-selected="false"
                     title="İxtisaslar, tədris prosesi, təhsil proqramları"
@@ -811,6 +811,7 @@
                         </a>
                         <a href="#qarabag" class="btn btn-qarabag-hero" id="hero-qarabag-cta-btn"
                             aria-label="Qarabağ Zəfəri bölməsinə keç">
+                            
                             <span data-i18n="hero_qarabag_cta">Qarabağ Zəfəri</span>
                             <span class="btn-play-icon" aria-hidden="true">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -2210,7 +2211,7 @@
                                 aria-selected="false" aria-controls="campus-rooms-grid">
                                 <span class="floor-num-badge">II</span>
                                 <span class="floor-title-text" data-i18n="campus_fbtn_2_title">2-ci Mərtəbə</span>
-                                <span class="floor-meta-count" data-i18n="campus_fbtn_2_meta">11 otaq · İnzibati &
+                                <span class="floor-meta-count" data-i18n="campus_fbtn_2_meta">11 otaq · Rəhbərlik &
                                     Kitabxana</span>
                             </button>
                             <button type="button" class="campus-floor-btn" data-floor="3" id="campus-floor-3" role="tab"
@@ -2303,8 +2304,8 @@
                                 İKT</button>
                             <button type="button"
                                 class="campus-chip px-3 py-1.5 rounded-full text-xs font-semibold border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 hover:border-[#0a2240] dark:hover:border-[#c8a45d] transition cursor-pointer"
-                                data-cat="admin" data-i18n="campus_filter_admin">🏢
-                                İnzibati Otaqlar</button>
+                                data-cat="admin" data-i18n="campus_filter_admin">🏛️
+                                Rəhbərlik & İnzibati</button>
                             <button type="button"
                                 class="campus-chip px-3 py-1.5 rounded-full text-xs font-semibold border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-950/60 hover:border-[#0a2240] dark:hover:border-[#c8a45d] transition cursor-pointer"
                                 data-cat="library" data-i18n="campus_filter_library">📚
@@ -2653,100 +2654,15 @@
 
         </div>
 
-        <!-- ══ 2. RƏHBƏRLİK VƏ STRUKTUR ══ -->
-        <div id="panel-structure" class="tab-workspace-panel" data-tab-panel="structure" role="tabpanel" aria-hidden="true">
-            <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
-                <div class="section-subnav-inner max-w-7xl mx-auto">
-                    <div class="subnav-header-row">
-                        <span class="subnav-num-badge">👥</span>
-                        <div>
-                            <h2 class="subnav-title" data-i18n="nav_structure">Rəhbərlik və struktur</h2>
-                            <p class="subnav-sub" data-i18n="nav_structure_sub">Rəhbərlik, şöbələr, bölmələr, FBK-lar və əməkdaşlar</p>
-                        </div>
-                    </div>
-                    <div class="subnav-pills-wrap">
-                        <a href="#structure" class="subnav-pill" data-i18n="sub_str_depts">👥 Rəhbərlik və İdarə Heyəti</a>
-                        <a href="#struct-tree-view" class="subnav-pill" data-i18n="sub_str_tree">🏢 İnstitusional Sxem</a>
-                        <a href="#struct-fbk-view" class="subnav-pill" data-i18n="sub_str_fbk">📚 9 FBK Komissiyaları</a>
-                        <a href="#honored-staff-highlight" class="subnav-pill" data-i18n="sub_str_honored">🎖️ Fəxri Əməkdaşlar</a>
-                    </div>
-                </div>
-            </div>
-
-            <section class="section section-dark" id="structure">
-                <div class="section-inner reveal">
-                    <span class="section-badge" data-i18n="structure_badge">Təşkilat</span>
-                    <h2 class="section-title" data-i18n="structure_title">
-                        Rəhbərlik və struktur
-                    </h2>
-                    <p class="section-desc" data-i18n="structure_desc">
-                        Rəhbərlik, şöbələr, bölmələr və əməkdaşlar — institusional struktur bir baxışda.
-                    </p>
-
-                    <!-- ── PANE 1: ORGANIZATIONAL HIERARCHY TREE ── -->
-                    <div class="struct-view-pane struct-tree-view active" id="struct-tree-view" role="tabpanel">
-                        <div class="struct-tree-canvas" id="struct-tree-canvas">
-                            <!-- Dynamic Tree Hierarchy rendered by JS -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ── PANE 2: 9 FƏNN BİRLƏŞMƏ KOMİSSİYALARI (FBK) ── -->
-            <section class="section section-dark relative py-14 lg:py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-900/[0.06] dark:border-white/[0.06]" id="struct-fbk-view">
-                <div class="max-w-7xl mx-auto space-y-6">
-                    <div class="space-y-2">
-                        <span class="section-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#0a2240]/[0.06] text-[#0a2240] dark:bg-[#c8a45d]/15 dark:text-[#dfc07f] border border-[#0a2240]/15 dark:border-[#c8a45d]/30" data-i18n="struct_fbk_badge">
-                            📚 Kafedralar & FBK
-                        </span>
-                        <h2 class="section-title font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white" data-i18n="struct_fbk_title">
-                            Fənn Birləşmə Komissiyaları (FBK)
-                        </h2>
-                        <p class="section-desc text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-3xl" data-i18n="struct_fbk_desc">
-                            Kollecin 9 ixtisaslaşmış fənn birləşmə komissiyası, kafedra sədrləri və tədris olunan əsas fənlər.
-                        </p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="fbk-grid">
-                        <!-- Populated by renderCommissionsGrid() in script.js -->
-                    </div>
-                </div>
-            </section>
-
-            <!-- ═══════════════ FƏXRİ ƏMƏKDAŞLAR (REHBERLIK VƏ STRUKTUR DAXİLİNDƏ) ═══════════════ -->
-            <section class="section relative py-14 lg:py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-900/[0.06] dark:border-white/[0.06]" id="honored-staff-highlight">
-                <div class="max-w-7xl mx-auto space-y-6">
-                    <div class="flex flex-wrap items-end justify-between gap-4">
-                        <div class="space-y-2">
-                            <span class="section-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#0a2240]/[0.06] text-[#0a2240] dark:bg-[#c8a45d]/15 dark:text-[#dfc07f] border border-[#0a2240]/15 dark:border-[#c8a45d]/30" data-i18n="hub_honored_badge">
-                                🎖️ Kollecin İnkişafında Xidmətləri Olan Əməkdaşlar
-                            </span>
-                            <h2 class="section-title font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white" data-i18n="hub_honored_title">
-                                Fəxri əməkdaşlar
-                            </h2>
-                            <p class="section-desc text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-3xl" data-i18n="hub_honored_desc">
-                                Beynəlxalq akkreditasiya, pedaqoji ustalıq və tədris-metodiki fəaliyyəti ilə fərqlənən kollec əməkdaşlarımız.
-                            </p>
-                        </div>
-                        <button type="button" class="subnav-pill subnav-pill-gold" data-workspace-tab="certificates" data-focus-anchor="teacher-certificates">
-                            <span data-i18n="hub_honored_cta">Bütün Sertifikatlar Portfeli →</span>
-                        </button>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="honored-staff-highlight-grid">
-                        <!-- Dynamically populated from teacherCertificatesData via script.js -->
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- ══ 3. TƏLƏBƏ QƏBULU ══ -->
+        <!-- ══ 2. TƏLƏBƏ QƏBULU ══ -->
         <div id="panel-admission" class="tab-workspace-panel" data-tab-panel="admission" role="tabpanel" aria-hidden="true">
             <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
                 <div class="section-subnav-inner max-w-7xl mx-auto">
                     <div class="subnav-header-row">
                         <span class="subnav-num-badge">02</span>
                         <div>
-                            <h2 class="subnav-title" data-i18n="nav_admission">Tələbə qəbulu</h2>
-                            <p class="subnav-sub" data-i18n="nav_admission_sub">2026/2027-ci tədris ili üzrə kollecə qəbul qaydaları, rəsmi nəticələr, tələb olunan sənədlər və abituriyent bələdçisi</p>
+                            <h2 class="subnav-title" data-i18n="nav_s2">Tələbə qəbulu</h2>
+                            <p class="subnav-sub" data-i18n="nav_s2_sub">2026/2027-ci tədris ili üzrə kollecə qəbul qaydaları, rəsmi nəticələr, tələb olunan sənədlər və abituriyent bələdçisi</p>
                         </div>
                     </div>
                     <div class="subnav-pills-wrap">
@@ -3317,7 +3233,73 @@
             </section>
         </div>
 
-        <!-- ══ 4. TƏHSİL VƏ İXTİSASLAR ══ -->
+        <!-- ══ RƏHBƏRLİK VƏ STRUKTUR (Haqqımızda bölməsinə aid) ══ -->
+        <div id="panel-structure" class="tab-workspace-panel" data-tab-panel="structure" role="tabpanel" aria-hidden="true">
+            <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
+                <div class="section-subnav-inner max-w-7xl mx-auto">
+                    <div class="subnav-header-row">
+                        <span class="subnav-num-badge">👥</span>
+                        <div>
+                            <h2 class="subnav-title" data-i18n="nav_structure">Rəhbərlik və struktur</h2>
+                            <p class="subnav-sub" data-i18n="nav_structure_sub">Rəhbərlik, şöbələr, bölmələr və əməkdaşlar</p>
+                        </div>
+                    </div>
+                    <div class="subnav-pills-wrap">
+                        <a href="#structure" class="subnav-pill" data-i18n="sub_str_depts">👥 Rəhbərlik və Bölmələr</a><a href="#struct-tree-view" class="subnav-pill" data-i18n="sub_str_tree">🏢 İnstitusional Sxem</a><a href="#honored-staff-highlight" class="subnav-pill" data-i18n="sub_str_honored">🎖️ Fəxri Əməkdaşlar</a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="section section-dark" id="structure">
+                <div class="section-inner reveal">
+                    <span class="section-badge" data-i18n="structure_badge">Təşkilat</span>
+                    <h2 class="section-title" data-i18n="structure_title">
+                        Rəhbərlik və struktur
+                    </h2>
+                    <p class="section-desc" data-i18n="structure_desc">
+                        Rəhbərlik, şöbələr, bölmələr və əməkdaşlar — institusional struktur bir baxışda.
+                    </p>
+
+
+
+                    <!-- ── PANE 1: ORGANIZATIONAL HIERARCHY TREE ── -->
+                    <div class="struct-view-pane struct-tree-view active" id="struct-tree-view" role="tabpanel">
+                        <div class="struct-tree-canvas" id="struct-tree-canvas">
+                            <!-- Dynamic Tree Hierarchy rendered by JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ═══════════════ FƏXRİ ƏMƏKDAŞLAR (REHBERLIK VƏ STRUKTUR DAXİLİNDƏ) ═══════════════ -->
+            <section class="section relative py-14 lg:py-20 px-4 sm:px-6 lg:px-8 border-b border-slate-900/[0.06] dark:border-white/[0.06]" id="honored-staff-highlight">
+                <div class="max-w-7xl mx-auto space-y-6">
+                    <div class="flex flex-wrap items-end justify-between gap-4">
+                        <div class="space-y-2">
+                            <span class="section-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#0a2240]/[0.06] text-[#0a2240] dark:bg-[#c8a45d]/15 dark:text-[#dfc07f] border border-[#0a2240]/15 dark:border-[#c8a45d]/30" data-i18n="hub_honored_badge">
+                                🎖️ Kollecin İnkişafında Xidmətləri Olan Əməkdaşlar
+                            </span>
+                            <h2 class="section-title font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white" data-i18n="hub_honored_title">
+                                Fəxri əməkdaşlar
+                            </h2>
+                            <p class="section-desc text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-3xl" data-i18n="hub_honored_desc">
+                                Beynəlxalq akkreditasiya, pedaqoji ustalıq və tədris-metodiki fəaliyyəti ilə fərqlənən kollec əməkdaşlarımız.
+                            </p>
+                        </div>
+                        <button type="button" class="subnav-pill subnav-pill-gold" data-workspace-tab="certificates" data-focus-anchor="teacher-certificates">
+                            <span data-i18n="hub_honored_cta">Bütün Sertifikatlar Portfeli →</span>
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="honored-staff-highlight-grid">
+                        <!-- Dynamically populated from teacherCertificatesData via script.js -->
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- ══ 3. TƏHSİL VƏ İXTİSASLAR ══ -->
         <div id="panel-majors" class="tab-workspace-panel" data-tab-panel="majors" role="tabpanel" aria-hidden="true">
             <div class="section-subnav-ribbon px-4 sm:px-6 lg:px-8 pt-6">
                 <div class="section-subnav-inner max-w-7xl mx-auto">
