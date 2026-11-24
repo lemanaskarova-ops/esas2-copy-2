@@ -4738,6 +4738,7 @@ const newsData = [
     "date_en": "23 November 2026",
     "date_ru": "23 Ноября 2026",
     "image": "WhatsApp Video 2026-11-23 at 15.38.22.mp4",
+    "extra_image": "muqam_konsert_poster.jpg",
     "tag_az": "Mədəniyyət / Tədbir",
     "tag_en": "Culture / Event",
     "tag_ru": "Культура / Мероприятие"
@@ -4801,8 +4802,7 @@ const newsData = [
     "full_ru": "🇦🇿 ОТ ИДЕИ К ИЗОБРЕТЕНИЮ, ОТ ЗНАНИЙ К ИННОВАЦИЯМ – МОЛОДЕЖЬ, СОЗДАЮЩАЯ ТЕХНОЛОГИИ БУДУЩЕГО!\n\n4 ноября 2026 года учащиеся и преподаватели STEAM-центра Бакинского европейского лицея посетили Бакинский государственный колледж связи и транспорта.\n\nВ современную эпоху ключевой задачей образовательных учреждений является не только подготовка теоретически подкованных специалистов, но и воспитание творческой, инициативной молодежи, способной практически реализовывать инновационные идеи. В этом контексте образовательная модель STEAM, робототехника и искусственный интеллект стали приоритетными направлениями современного образования.\n\nВизит представителей STEAM-центра способствовал расширению обмена опытом и развитию технологического сотрудничества между молодежью разных уровней образования.\n\nВ рамках встречи гости продемонстрировали технологические устройства и прототипы собственной разработки, наглядно показав умение применять теорию на практике. Для студентов колледжа это стало прекрасной возможностью ознакомиться с передовыми решениями в области робототехники и ИИ.\n\nБакинский государственный колледж связи и транспорта уделяет приоритетное внимание внедрению инноваций в обучение и расширению научно-технического кругозора студентов.\n\n🚀 Путь, начинающийся с идеи, ведет к изобретениям, а мышление, обогащенное знаниями — к инновациям!",
     "date": "04 Noyabr 2026",
     "image": "texno1.mp4",
-    "extra_image": "steam_innovasiya.jpg",
-    "fb_reel_embed": "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2199906070964272%2F&show_text=false",
+    "extra_image": "texno1_poster.jpg",
     "url": "https://www.facebook.com/share/r/1A21Gubpra/?mibextid=wwXIfr",
     "tag_az": "STEAM / İnnovasiya",
     "tag_en": "STEAM / Innovation",
@@ -4935,6 +4935,7 @@ const newsData = [
     "full_ru": "7 Октября — Всемирный день достойного труда\n\nВ Бакинском государственном колледже связи и транспорта состоялось просветительское мероприятие по случаю 7 Октября — Всемирного дня достойного труда.\n\nНа мероприятии выступили директор колледжа Сабухи Гурбанов, заместитель директора по воспитательной работе Шахмурад Мамедов, преподаватель истории Саида Гулиева и юрист колледжа Вафа Гаджиева.\n\nВ ходе выступлений было подчеркнуто значение достойного труда, защиты трудовых прав, справедливых трудовых отношений, равных возможностей, а также безопасных и здоровых условий труда.\n\nСтудентам также была предоставлена подробная информация о важности знания своих прав и обязанностей в будущей трудовой деятельности.\n\nПросветительское мероприятие продолжилось ответами на вопросы студентов и обменом мнениями.",
     "date": "07 Oktyabr 2026",
     "image": "muellimler.mp4",
+    "extra_image": "muellimler_poster.jpg",
     "url": "",
     "tag_az": "Maarifləndirmə / Tədbir",
     "tag_en": "Awareness / Event",
@@ -4957,6 +4958,15 @@ const newsData = [
     "full_ru": "По случаю 5 Октября — Дня учителя преподаватели Бакинского государственного колледжа связи и транспорта, отличившиеся эффективной деятельностью в сфере образования, ценным вкладом в развитие студентов и высоким профессионализмом, были награждены почетными грамотами.\n\nЭта высокая оценка труда наших преподавателей является поводом для гордости для всего нашего коллектива.\n\nМы искренне поздравляем всех награжденных педагогов, желаем им крепкого здоровья, неизменных успехов в педагогической деятельности и новых достижений.\n\nПочетные грамоты, врученные директором Бакинского государственного колледжа связи и транспорта Сабухи Гурбановым и председателем профсоюзного комитета Айгюн Мусаевой, являются выражением внимания и глубокого уважения к труду наших учителей.",
     "date": "05 Oktyabr 2026",
     "image": "muellimler_gunu_2026.jpg",
+    "extra_videos": [
+      {
+        "src": "muellimler.mp4",
+        "poster": "muellimler_poster.jpg",
+        "label_az": "Müəllimlər Gününə həsr olunmuş videoçarx",
+        "label_en": "Teachers' Day Video",
+        "label_ru": "Видео ко Дню Учителя"
+      }
+    ],
     "url": "https://www.instagram.com/reel/DeOJGyjMEJ_/",
     "tag_az": "Təltif / Müəllimlər Günü",
     "tag_en": "Award / Teachers' Day",
@@ -7223,6 +7233,15 @@ const newsData = [
     "full_ru": "07 Ноября 2023 в Бакинском государственном колледже связи и транспорта при Азербайджанском техническом университете состоялось мероприятие «Торжественное мероприятие, посвященное Дню Победы».\n\nВ мероприятии приняли участие руководство колледжа, преподавательский состав, приглашенные эксперты и студенты. Выступающие подробно рассказали об актуальности темы, её образовательном и общественном значении, а также ответили на вопросы участников.\n\nВстреча прошла в атмосфере активного диалога и способствовала повышению правовой, профессиональной и гражданской грамотности студенческой молодежи.",
     "date": "07 Noyabr 2023",
     "image": "news_proper_851.jpeg",
+    "extra_videos": [
+      {
+        "src": "8noyabr.mp4",
+        "poster": "8noyabr_poster.jpg",
+        "label_az": "44 Günlük Vətən Müharibəsinə həsr olunmuş videoçarx",
+        "label_en": "Victory Day Commemoration Video",
+        "label_ru": "Видео ко Дню Победы"
+      }
+    ],
     "url": "https://www.rabitankolleci.edu.az/news/851",
     "tag_az": "Təyinat",
     "tag_en": "Appointment",
@@ -12483,25 +12502,44 @@ document.addEventListener("DOMContentLoaded", () => {
       if (nrTitle) nrTitle.textContent = title;
       if (nrImg) {
         let nrVideo = document.getElementById("nr-video");
+        const mediaContainer = nrImg.parentElement;
         if (isVideoMedia(item.image)) {
-          if (!nrVideo && nrImg.parentElement) {
+          if (!nrVideo && mediaContainer) {
             nrVideo = document.createElement("video");
             nrVideo.id = "nr-video";
-            nrVideo.className = "nr-hero-img";
+            nrVideo.className = "nr-hero-img nr-hero-video";
             nrVideo.controls = true;
             nrVideo.playsInline = true;
-            nrVideo.preload = "metadata";
-            nrImg.parentElement.insertBefore(nrVideo, nrImg);
+            nrVideo.preload = "auto";
+            mediaContainer.insertBefore(nrVideo, nrImg);
+          }
+          if (mediaContainer) {
+            mediaContainer.classList.add("has-video");
+            mediaContainer.style.maxHeight = "540px";
+            mediaContainer.style.background = "#040d1a";
           }
           nrImg.style.display = "none";
           if (nrImgZoomBtn) nrImgZoomBtn.style.display = "none";
           if (nrVideo) {
+            nrVideo.style.display = "block";
+            nrVideo.style.width = "100%";
+            nrVideo.style.maxHeight = "540px";
+            nrVideo.style.objectFit = "contain";
+            nrVideo.style.background = "#020710";
             if (item.extra_image) nrVideo.poster = item.extra_image;
             else nrVideo.removeAttribute("poster");
-            nrVideo.src = item.image;
-            nrVideo.style.display = "block";
+            const encSrc = encodeURI(item.image);
+            if (nrVideo.src !== encSrc && !nrVideo.src.endsWith(encSrc)) {
+              nrVideo.src = encSrc;
+            }
+            try { nrVideo.load(); } catch (e) {}
           }
         } else {
+          if (mediaContainer) {
+            mediaContainer.classList.remove("has-video");
+            mediaContainer.style.maxHeight = "";
+            mediaContainer.style.background = "";
+          }
           if (nrVideo) {
             nrVideo.pause();
             nrVideo.style.display = "none";
@@ -12571,14 +12609,14 @@ document.addEventListener("DOMContentLoaded", () => {
           : "";
 
         const extraVideosHtml = Array.isArray(item.extra_videos) && item.extra_videos.length
-          ? `<div class="nr-gallery-title" style="font-weight:700;font-size:0.92rem;color:var(--text,#0a2240);">🎬 ${currentLang === "en" ? "Additional Video from the Open Lesson" : currentLang === "ru" ? "Дополнительное видео с открытого урока" : "Açıq Dərsdən Əlavə Videomaterial"} (${item.extra_videos.length})</div>
-             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;">
+          ? `<div class="nr-gallery-title" style="font-weight:700;font-size:0.92rem;color:var(--text,#0a2240);margin-top:6px;">🎬 ${currentLang === "en" ? "Official Event Video" : currentLang === "ru" ? "Официальное видео мероприятия" : "Rəsmi Tədbir Videoçarxı"} (${item.extra_videos.length})</div>
+             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;">
                ${item.extra_videos.map((vObj) => {
                  const vSrc = typeof vObj === "string" ? vObj : vObj.src;
                  const vPoster = typeof vObj === "object" && vObj.poster ? vObj.poster : "";
                  const vLabel = typeof vObj === "object" ? (vObj[`label_${currentLang}`] || vObj.label_az || "") : "";
                  return `<div style="display:flex;flex-direction:column;gap:8px;">
-                   <video src="${vSrc}" ${vPoster ? `poster="${vPoster}"` : ""} controls playsinline preload="metadata" style="width:100%;max-height:460px;border-radius:12px;background:#040d1a;border:1px solid rgba(184,147,74,0.35);box-shadow:0 6px 16px rgba(10,34,64,0.12);"></video>
+                   <video src="${encodeURI(vSrc)}" ${vPoster ? `poster="${vPoster}"` : ""} controls playsinline preload="metadata" style="width:100%;max-height:460px;object-fit:contain;border-radius:12px;background:#040d1a;border:1px solid rgba(184,147,74,0.35);box-shadow:0 6px 16px rgba(10,34,64,0.12);"></video>
                    ${vLabel ? `<span style="font-size:0.8rem;font-weight:600;opacity:0.85;">${vLabel}</span>` : ""}
                  </div>`;
                }).join("")}
@@ -12626,8 +12664,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const nTitle = n[`title_${currentLang}`] || n.title_az;
             const nTag = n[`tag_${currentLang}`] || n.tag_az;
             const nDate = getNewsDate(n);
-            const relMedia = isVideoMedia(n.image)
-              ? `<video src="${n.image}#t=0.5" ${n.extra_image ? `poster="${n.extra_image}"` : ""} muted playsinline preload="metadata" style="width:68px;height:52px;object-fit:cover;border-radius:8px;flex-shrink:0;"></video>`
+            const isRelVid = isVideoMedia(n.image);
+            const relMedia = isRelVid
+              ? `<video src="${encodeURI(n.image)}#t=0.5" ${n.extra_image ? `poster="${n.extra_image}"` : ""} muted playsinline preload="metadata" style="width:68px;height:52px;object-fit:cover;border-radius:8px;flex-shrink:0;background:#040d1a;"></video>`
               : `<img src="${n.image}" alt="" loading="lazy" onerror="this.onerror=null;this.src='news1.webp';" />`;
             return `
               <button type="button" class="nr-related-card" data-news-idx="${idx}">
@@ -12703,11 +12742,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const card = document.createElement("div");
         card.className = "news-card";
         card.style.cursor = "pointer";
-        const cardMediaHtml = isVideoMedia(item.image)
-          ? `<video class="news-card-img" src="${item.image}#t=0.5" ${item.extra_image ? `poster="${item.extra_image}"` : ""} muted playsinline preload="metadata" loop onmouseenter="this.play().catch(()=>{})" onmouseleave="this.pause()"></video>`
+        const isVid = isVideoMedia(item.image);
+        const cardMediaHtml = isVid
+          ? `<div style="position:relative;width:100%;height:100%;background:#020710;">
+              <video class="news-card-img" src="${encodeURI(item.image)}#t=0.5" ${item.extra_image ? `poster="${item.extra_image}"` : ""} muted playsinline preload="metadata" loop onmouseenter="this.play().catch(()=>{})" onmouseleave="this.pause()" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+              <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:rgba(10,34,64,0.78);border:2px solid rgba(243,210,132,0.92);display:flex;align-items:center;justify-content:center;color:#f3d284;box-shadow:0 6px 18px rgba(0,0,0,0.45);pointer-events:none;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>
+            </div>`
           : `<img class="news-card-img" src="${item.image}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='news1.webp';" />`;
-        const videoCountBadge = Array.isArray(item.extra_videos) && item.extra_videos.length
-          ? `<span class="news-card-video-count" style="position:absolute;bottom:10px;right:10px;z-index:2;background:rgba(7,25,48,0.88);color:#f3d284;border:1px solid rgba(207,169,94,0.55);padding:3px 10px;border-radius:999px;font-size:0.72rem;font-weight:700;backdrop-filter:blur(6px);">🎬 ${1 + item.extra_videos.length} Video</span>`
+        const totalVids = (isVid ? 1 : 0) + (Array.isArray(item.extra_videos) ? item.extra_videos.length : 0);
+        const videoCountBadge = totalVids > 0
+          ? `<span class="news-card-video-count" style="position:absolute;bottom:10px;right:10px;z-index:2;background:rgba(7,25,48,0.92);color:#f3d284;border:1px solid rgba(207,169,94,0.55);padding:3px 10px;border-radius:999px;font-size:0.72rem;font-weight:700;backdrop-filter:blur(6px);display:inline-flex;align-items:center;gap:4px;">▶ ${totalVids > 1 ? `${totalVids} Video` : "Video"}</span>`
           : "";
         card.innerHTML = `
           <div class="news-card-media">
