@@ -23370,7 +23370,7 @@ function initSceneTransition() {
       floor: 1,
       floorText_az: "I Mərtəbə", floorText_en: "1st Floor", floorText_ru: "1-й Этаж",
       no: "№ 116",
-      name_az: "Tərbiyə işləri üzrə direktor müavini", name_en: "Deputy Director for Student Affairs", name_ru: "Замдиректора по воспитательной работе",
+      name_az: "Tərbiyə işləri üzrə direktor müavini otağı", name_en: "Office of Deputy Director for Student Affairs", name_ru: "Кабинет замдиректора по воспитательной работе",
       cat: "admin",
       catLabel_az: "Rəhbərlik & İnzibati", catLabel_en: "Leadership & Admin", catLabel_ru: "Руководство и Администрация",
       icon: "🎗️",
@@ -23999,7 +23999,7 @@ function initSceneTransition() {
       wings_az: [
         { label: "Qərb Qanadı", text: "107 (Qiyabi), 106A (Hərbi), 106 (Kimya), 107A (Telekommunikasiya), 103 (Kimya)", icon: "⬅️" },
         { label: "Mərkəzi", text: "Kadrlar şöbəsi, Kompüter laboratoriyası", icon: "🏛️" },
-        { label: "Şərq Qanadı", text: "113 (Mühasibat - 2 otaq), 114 (Təsərrüfat), 115 (Təcrübə), 116 (Tərbiyə), Akt zalı", icon: "➡️" },
+        { label: "Şərq Qanadı", text: "113 (Mühasibat - 2 otaq), 114 (Təsərrüfat), 115 (Təcrübə), 116 (Tərbiyə işləri üzrə direktor müavini), Akt zalı", icon: "➡️" },
         { label: "İdman", text: "İdman zalı (geyinmə otağı ilə)", icon: "⚽" }
       ],
       wings_en: [
