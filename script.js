@@ -611,7 +611,7 @@ const i18n = {
     campus_fbtn_1_title: "1-ci Mərtəbə",
     campus_fbtn_1_meta: "13 otaq · İdman, Akt & Lab",
     campus_fbtn_2_title: "2-ci Mərtəbə",
-    campus_fbtn_2_meta: "11 otaq · Rəhbərlik & Kitabxana",
+    campus_fbtn_2_meta: "11 otaq · İnzibati & Kitabxana",
     campus_fbtn_3_title: "3-cü Mərtəbə",
     campus_fbtn_3_meta: "16 otaq · Fizika Lab & Tədris",
     campus_fbtn_4_title: "4-cü Mərtəbə",
@@ -624,7 +624,7 @@ const i18n = {
     campus_filter_all: "Hamısı",
     campus_filter_lab: "🔬 Laboratoriyalar",
     campus_filter_it: "💻 Kompüter və İKT",
-    campus_filter_admin: "🏛️ Rəhbərlik & İnzibati",
+    campus_filter_admin: "🏢 İnzibati Otaqlar",
     campus_filter_library: "📚 Kitabxana & Oxu Zalı",
     campus_filter_sport: "⚽ İdman & Hərbi",
     campus_filter_classroom: "🎓 Auditoriyalar",
@@ -974,6 +974,12 @@ const i18n = {
     adm_archive_desc: "DİM tərəfindən təsdiqlənmiş əvvəlki tədris illərinin keçid balları, qəbul statistikası və sənədlərin arxivi.",
     nav_structure: "Rəhbərlik və struktur",
     nav_structure_sub: "Rəhbərlik, şöbələr, bölmələr və əməkdaşlar",
+    nav_admission: "Tələbə qəbulu",
+    nav_admission_sub: "2026/2027-ci tədris ili üzrə kollecə qəbul qaydaları, rəsmi nəticələr, tələb olunan sənədlər və bələdçi",
+    sub_str_fbk: "📚 9 FBK Komissiyaları",
+    struct_fbk_badge: "Kafedralar & FBK",
+    struct_fbk_title: "Fənn Birləşmə Komissiyaları (FBK)",
+    struct_fbk_desc: "Kollecin 9 ixtisaslaşmış fənn birləşmə komissiyası, kafedra rəhbərləri və tədris olunan fənlər.",
     nav_s3: "Təhsil və ixtisaslar",
     nav_s3_sub: "İxtisaslar, tədris prosesi, təhsil proqramları",
     nav_s4: "Elmi və metodiki fəaliyyət",
@@ -1921,7 +1927,7 @@ const i18n = {
     campus_fbtn_1_title: "1st Floor",
     campus_fbtn_1_meta: "13 rooms · Sports, Hall & Labs",
     campus_fbtn_2_title: "2nd Floor",
-    campus_fbtn_2_meta: "11 rooms · Leadership & Library",
+    campus_fbtn_2_meta: "11 rooms · Admin & Library",
     campus_fbtn_3_title: "3rd Floor",
     campus_fbtn_3_meta: "16 rooms · Physics Lab & Study",
     campus_fbtn_4_title: "4th Floor",
@@ -1934,7 +1940,7 @@ const i18n = {
     campus_filter_all: "All",
     campus_filter_lab: "🔬 Laboratories",
     campus_filter_it: "💻 Computer & IT",
-    campus_filter_admin: "🏛️ Leadership & Admin",
+    campus_filter_admin: "🏢 Administrative Offices",
     campus_filter_library: "📚 Library & Reading Room",
     campus_filter_sport: "⚽ Sports & Military",
     campus_filter_classroom: "🎓 Classrooms",
@@ -2283,6 +2289,12 @@ const i18n = {
     adm_archive_desc: "State Examination Center approved passing scores, admission statistics and archived guidelines.",
     nav_structure: "Leadership & Structure",
     nav_structure_sub: "Leadership, departments, divisions and staff",
+    nav_admission: "Student Admission",
+    nav_admission_sub: "2026/2027 admission rules, documents, passing scores and roadmap",
+    sub_str_fbk: "📚 9 Subject Commissions",
+    struct_fbk_badge: "Departments & FBK",
+    struct_fbk_title: "Subject Commission Boards (FBK)",
+    struct_fbk_desc: "9 specialized subject commissions of the college, department chairs, and curriculum disciplines.",
     nav_s3: "Education & Specialties",
     nav_s3_sub: "Specialties, educational process, curricula",
     nav_s4: "Scientific & Methodical Activity",
@@ -3229,7 +3241,7 @@ const i18n = {
     campus_fbtn_1_title: "1-й Этаж",
     campus_fbtn_1_meta: "13 комнат · Спорт, Зал и Лаб",
     campus_fbtn_2_title: "2-й Этаж",
-    campus_fbtn_2_meta: "11 комнат · Руководство и Библиотека",
+    campus_fbtn_2_meta: "11 комнат · Администрация и Библиотека",
     campus_fbtn_3_title: "3-й Этаж",
     campus_fbtn_3_meta: "16 комнат · Лаб физики и Учеба",
     campus_fbtn_4_title: "4-й Этаж",
@@ -3242,7 +3254,7 @@ const i18n = {
     campus_filter_all: "Все",
     campus_filter_lab: "🔬 Лаборатории",
     campus_filter_it: "💻 Компьютеры и ИКТ",
-    campus_filter_admin: "🏛️ Руководство и Администрация",
+    campus_filter_admin: "🏢 Административные кабинеты",
     campus_filter_library: "📚 Библиотека и Читальный Зал",
     campus_filter_sport: "⚽ Спорт и Военное дело",
     campus_filter_classroom: "🎓 Аудитории",
@@ -3591,6 +3603,12 @@ const i18n = {
     adm_archive_desc: "Утвержденные ГЭЦ проходные баллы, статистика приема и архивные документы.",
     nav_structure: "Руководство и структура",
     nav_structure_sub: "Руководство, отделы, подразделения и сотрудники",
+    nav_admission: "Прием студентов",
+    nav_admission_sub: "Правила приема на 2026/2027 учебный год, документы, проходные баллы и руководство",
+    sub_str_fbk: "📚 9 ПЦК Комиссий",
+    struct_fbk_badge: "Кафедры и ПЦК",
+    struct_fbk_title: "Предметно-цикловые комиссии (ПЦК)",
+    struct_fbk_desc: "9 специализированных предметно-цикловых комиссий колледжа, председатели и учебные дисциплины.",
     nav_s3: "Образование и специальности",
     nav_s3_sub: "Специальности, учебный процесс, образовательные программы",
     nav_s4: "Научная и методическая деятельность",
@@ -10275,14 +10293,19 @@ function initStructureModule() {
     });
   });
 
+  window.renderStructureTree = renderTree;
+  window.renderStructureCommissions = renderCommissionsGrid;
+
   // ─── 8. LANGUAGE CHANGE RE-RENDER ──────────────────────────────────
   document.addEventListener("languageChanged", () => {
     renderCategoriesCount();
     renderTree();
+    renderCommissionsGrid();
   });
 
-  // Initial Tree render
+  // Initial Tree and FBK Commissions render
   renderTree();
+  renderCommissionsGrid();
 }
 
 /**
@@ -24700,9 +24723,13 @@ function initGlobalSearchModule() {
           desc: roleName + " · " + descSuffix,
           tokens: [(lead.name_az || ""), (lead.name_en || ""), (lead.name_ru || ""), (lead.role_az || ""), "rehberlik", "direktor", "bextiyarov", "salehzade", "memmedov", "muavin", "idare"].join(" ").toLowerCase(),
           action: () => {
-            if (window.switchStructureView) window.switchStructureView("tree");
-            const sec = document.getElementById("structure");
-            sec?.scrollIntoView({ behavior: "smooth" });
+            if (window.switchWorkspaceTab) {
+              window.switchWorkspaceTab("structure", { scrollToTop: true, updateUrl: true, pushHistory: true });
+            } else if (window.switchStructureView) {
+              window.switchStructureView("tree");
+              const sec = document.getElementById("structure");
+              sec?.scrollIntoView({ behavior: "smooth" });
+            }
           }
         });
       });
@@ -24722,9 +24749,13 @@ function initGlobalSearchModule() {
           desc: roleName,
           tokens: [(dept.name_az || ""), (dept.name_en || ""), (dept.name_ru || ""), (dept.role_az || ""), (dept.role_en || ""), (dept.role_ru || ""), (dept.head_az || ""), "sobe", "sobesi", "struktur", "emalatxana", "workshop", "muhasibatliq", "kadrlar", "tedris"].join(" ").toLowerCase(),
           action: () => {
-            if (window.switchStructureView) window.switchStructureView("tree");
-            const sec = document.getElementById("structure");
-            sec?.scrollIntoView({ behavior: "smooth" });
+            if (window.switchWorkspaceTab) {
+              window.switchWorkspaceTab("structure", { scrollToTop: true, updateUrl: true, pushHistory: true });
+            } else if (window.switchStructureView) {
+              window.switchStructureView("tree");
+              const sec = document.getElementById("structure");
+              sec?.scrollIntoView({ behavior: "smooth" });
+            }
           }
         });
       });
@@ -25375,21 +25406,21 @@ function initGlobalSearchModule() {
       });
     }
 
-    // 7. Workspace Category Tabs (11 Rəsmi Bölmə + Tam Baxış) & Beynəlxalq Memorandumlar
+    // 7. Workspace Category Tabs (12 Rəsmi Bölmə + Tam Baxış) & Beynəlxalq Memorandumlar
     const workspaceTabEntries = [
       { tab: "about", categories: ["structure", "campus"], icon: "1", key: "nav_s1", desc: "Tariximiz, missiyamız, fəaliyyətimiz, inkişaf strategiyamız, kampus xəritəsi və Qarabağ salnaməsi", tokens: "haqqimizda tarix missiya strategiya kampus qarabag mezun hero" },
-      { tab: "admission", categories: ["admission"], icon: "2", key: "nav_s2", desc: "Tələbə qəbulu, 2025/2026 qəbul qaydaları, tələb olunan sənədlər, keçid balları və bələdçi", tokens: "telebe qebulu qebul qaydalari senedler kecid ballari roadmap abituriyent dim portal edu az" },
-      { tab: "structure", categories: ["structure"], icon: "👥", key: "nav_structure", desc: "Rəhbərlik, şöbələr, bölmələr, FBK-lar və fəxri əməkdaşlar", tokens: "rehberlik struktur sobeler bolmeler fbk fexri emekdaslar" },
-      { tab: "majors", categories: ["majors", "structure"], icon: "3", key: "nav_s3", desc: "14 rəsmi ixtisas, tədris prosesi, təhsil proqramları və istehsalat təcrübəsi", tokens: "tehsil ixtisaslar tedris prosesi proqramlar tecrube yol xeritesi" },
-      { tab: "science", categories: ["science"], icon: "4", key: "nav_s4", desc: "Elmi məqalələr (ORCID), müəllimlərin nəşrləri, dərsliklər, konfranslar, seminarlar və açıq dərslər", tokens: "elmi metodiki fealiyyet meqaleler nesrler orcid konfranslar seminarlar aciq dersler" },
-      { tab: "library", categories: ["library"], icon: "5", key: "nav_s5", desc: "Dərsliklər, 80 dərs vəsaiti, 40 mühazirə və metodiki materiallar", tokens: "elektron kitabxana derslik ders vesaiti metodiki materiallar muhazire pdf" },
-      { tab: "lectures", categories: ["lectures"], icon: "6", key: "nav_s6", desc: "Açıq dərslər, 19 video mühazirə və rəqəmsal təlim materialları", tokens: "video dersler reqemsal tehsil aciq dersler video muhazirələr telim" },
-      { tab: "international", categories: ["structure", "science"], icon: "7", key: "nav_s7", desc: "Beynəlxalq əməkdaşlıq, Qazaxıstan ALT və Özbəkistan Daşkənd memorandumları, konfranslar və sertifikatlar", tokens: "beynelxalq elaqeler emekdasliq memorandumlar qazaxistan daskend layiheler" },
-      { tab: "students", categories: ["achieve"], icon: "8", key: "nav_s8", desc: "Fəxri tələbələr, tələbə layihələri, nailiyyətlər, idman kubokları, müsabiqələr və olimpiadalar", tokens: "telebe heyati nailiyyetler fexri telebeler layiheler musabiqeler olimpiadalar kubok" },
-      { tab: "certificates", categories: ["achieve"], icon: "9", key: "nav_s9", desc: "Beynəlxalq sertifikatlar, mükafatlar və 24 rəsmi diplom", tokens: "sertifikatlar teltifler mukafatlar diplomlar beynelxalq fexri ferman" },
-      { tab: "news", categories: ["news"], icon: "10", key: "nav_s10", desc: "116+ rəsmi xəbər, tədbirlər, elanlar və foto-video qalereya", tokens: "elanlar xeberler tedbirler qalereya foto video" },
-      { tab: "contact", categories: ["contact", "faq"], icon: "11", key: "nav_s11", desc: "Elektron müraciət, əlaqə, xəritə, qəbul və tez-tez verilən suallar", tokens: "muracietler elektron muraciet elaqe qebul unvan faq" },
-      { tab: "all", categories: ["structure", "campus", "library", "science", "achieve", "lectures", "news", "faq", "contact"], icon: "⊞", key: "wtab_all", desc: "Bütün 11 bölməni eyni səhifədə tam şəkildə görüntüləyin", tokens: "tam baxis hamisi butun bolmeler" },
+      { tab: "structure", categories: ["structure"], icon: "2", key: "nav_structure", desc: "Rəhbərlik, şöbələr, bölmələr, FBK-lar və fəxri əməkdaşlar", tokens: "rehberlik struktur sobeler bolmeler fbk fexri emekdaslar direktor muavin idare" },
+      { tab: "admission", categories: ["admission"], icon: "3", key: "nav_admission", desc: "Tələbə qəbulu, 2026/2027 qəbul qaydaları, tələb olunan sənədlər, keçid balları və bələdçi", tokens: "telebe qebulu qebul qaydalari senedler kecid ballari roadmap abituriyent dim portal edu az" },
+      { tab: "majors", categories: ["majors", "structure"], icon: "4", key: "nav_s3", desc: "14 rəsmi ixtisas, tədris prosesi, təhsil proqramları və istehsalat təcrübəsi", tokens: "tehsil ixtisaslar tedris prosesi proqramlar tecrube yol xeritesi" },
+      { tab: "science", categories: ["science"], icon: "5", key: "nav_s4", desc: "Elmi məqalələr (ORCID), müəllimlərin nəşrləri, dərsliklər, konfranslar, seminarlar və açıq dərslər", tokens: "elmi metodiki fealiyyet meqaleler nesrler orcid konfranslar seminarlar aciq dersler" },
+      { tab: "library", categories: ["library"], icon: "6", key: "nav_s5", desc: "Dərsliklər, 80 dərs vəsaiti, 40 mühazirə və metodiki materiallar", tokens: "elektron kitabxana derslik ders vesaiti metodiki materiallar muhazire pdf" },
+      { tab: "lectures", categories: ["lectures"], icon: "7", key: "nav_s6", desc: "Açıq dərslər, 19 video mühazirə və rəqəmsal təlim materialları", tokens: "video dersler reqemsal tehsil aciq dersler video muhazirələr telim" },
+      { tab: "international", categories: ["structure", "science"], icon: "8", key: "nav_s7", desc: "Beynəlxalq əməkdaşlıq, Qazaxıstan ALT və Özbəkistan Daşkənd memorandumları, konfranslar və sertifikatlar", tokens: "beynelxalq elaqeler emekdasliq memorandumlar qazaxistan daskend layiheler" },
+      { tab: "students", categories: ["achieve"], icon: "9", key: "nav_s8", desc: "Fəxri tələbələr, tələbə layihələri, nailiyyətlər, idman kubokları, müsabiqələr və olimpiadalar", tokens: "telebe heyati nailiyyetler fexri telebeler layiheler musabiqeler olimpiadalar kubok" },
+      { tab: "certificates", categories: ["achieve"], icon: "10", key: "nav_s9", desc: "Müəllimlərin və fəxri tələbələrin 2025/2026 beynəlxalq sertifikatları və təltifləri", tokens: "sertifikatlar teltifler mukafatlar diplomlar beynelxalq fexri ferman" },
+      { tab: "news", categories: ["news"], icon: "11", key: "nav_s10", desc: "116+ rəsmi xəbər, tədbirlər, elanlar və foto-video qalereya", tokens: "elanlar xeberler tedbirler qalereya foto video" },
+      { tab: "contact", categories: ["contact", "faq"], icon: "12", key: "nav_s11", desc: "Elektron müraciət, əlaqə, xəritə, qəbul və tez-tez verilən suallar", tokens: "muracietler elektron muraciet elaqe qebul unvan faq" },
+      { tab: "all", categories: ["structure", "campus", "library", "science", "achieve", "lectures", "news", "faq", "contact"], icon: "⊞", key: "wtab_all", desc: "Bütün 12 bölməni eyni səhifədə tam şəkildə görüntüləyin", tokens: "tam baxis hamisi butun bolmeler" },
     ];
 
     workspaceTabEntries.forEach((wt) => {

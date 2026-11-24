@@ -25,6 +25,9 @@
   // Backward-compatible aliases so legacy ?tab=... links & search entries resolve cleanly
   const TAB_ALIASES = {
     home: { tab: "about" },
+    rehberlik: { tab: "structure" },
+    struktur: { tab: "structure" },
+    fbk: { tab: "structure", anchor: "struct-fbk-view" },
     qebul: { tab: "admission" },
     "telebe-qebulu": { tab: "admission" },
     abituriyent: { tab: "admission" },
@@ -68,8 +71,11 @@
 
     structure: "structure",
     "struct-tree-view": "structure",
+    "struct-fbk-view": "structure",
+    "struct-commissions-view": "structure",
     "struct-cards-view": "structure",
     "honored-staff-highlight": "structure",
+    "fbk-grid": "structure",
 
     majors: "majors",
     "majors-section": "majors",
@@ -255,7 +261,7 @@
     // Update Workspace Tab Pills (roving tabindex for WAI-ARIA tablist)
     document.querySelectorAll("[data-workspace-tab]").forEach((btn) => {
       const btnTab = btn.getAttribute("data-workspace-tab");
-      const isMatch = btnTab === nextTab || (nextTab === "structure" && btnTab === "about" && btn.classList.contains("workspace-tab-btn"));
+      const isMatch = btnTab === nextTab;
       btn.classList.toggle("is-active", isMatch);
       btn.setAttribute("aria-selected", isMatch ? "true" : "false");
       if (btn.classList.contains("workspace-tab-btn")) {
@@ -325,6 +331,16 @@
     }
     window.syncMajorsMount = syncMajorsMount;
     syncMajorsMount();
+
+    // Ensure Structure tree & commissions are rendered
+    if (nextTab === "structure" || nextTab === "all") {
+      if (typeof window.renderStructureTree === "function") {
+        try { window.renderStructureTree(); } catch (e) { }
+      }
+      if (typeof window.renderStructureCommissions === "function") {
+        try { window.renderStructureCommissions(); } catch (e) { }
+      }
+    }
 
     requestAnimationFrame(() => {
       revealActiveElements();
