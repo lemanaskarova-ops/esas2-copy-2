@@ -23497,7 +23497,7 @@ function initSceneTransition() {
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "Direktor",
-      name_az: "Direktor otağı (qəbul otağı ilə)", name_en: "Director's Office (Reception)", name_ru: "Кабинет директора (Приемная)",
+      name_az: "Direktor kabineti (İnzibati Heyət)", name_en: "Director's Office (Reception)", name_ru: "Кабинет директора (Приемная)",
       cat: "admin",
       catLabel_az: "Rəhbərlik", catLabel_en: "Leadership", catLabel_ru: "Руководство",
       icon: "🏛️",
