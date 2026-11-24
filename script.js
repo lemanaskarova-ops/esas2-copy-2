@@ -27021,7 +27021,10 @@ window.switchLaborConfMedia = function(src, caption, badgeText, catTitle, btn) {
     // 7. Tab 8: Tələbə layihələri (#student-projects-grid)
     const stuProjGrid = document.getElementById("student-projects-grid");
     if (stuProjGrid) {
-      const projNews = matchNews(/steam|layihə|qanad|robot|ixtira/i, 5);
+      // 23 Noyabr rəhbərlik / konsert tədbiri tələbə layihəsi deyil, yalnız rəsmi xəbərlərdə qalmalıdır
+      const projNews = matchNews(/steam|layihə|qanad|robot|ixtira/i, 10)
+        .filter(({ item }) => item.id !== 119 && item.official_id !== "zefer_dastani_mugam_2026" && !item.date_az?.includes("23 Noyabr 2026") && !item.title_az?.includes("Muğam Mərkəzi"))
+        .slice(0, 5);
       renderNewsCardsInto(stuProjGrid, projNews, "Tələbə Layihəsi");
       if (hStudents.length) {
         const senan = hStudents[0];
