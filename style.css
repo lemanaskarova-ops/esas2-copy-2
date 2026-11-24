@@ -8295,6 +8295,23 @@ body.dark-mode .sun-and-moon>.moon>circle {
     background: #0b2545;
   }
 
+  .nr-hero-media.has-video {
+    max-height: 560px;
+    background: #020710;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nr-hero-media.has-video video,
+  .nr-hero-media video.nr-hero-video {
+    max-height: 540px;
+    width: 100%;
+    object-fit: contain;
+    background: #020710;
+  }
+
   .nr-hero-img {
     width: 100%;
     max-height: 420px;
