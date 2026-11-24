@@ -102,7 +102,7 @@ const i18n = {
     nav_register: "Qeydiyyat",
     hero_badge: "Rəsmi Təhsil Portalı",
     hero_title:
-      '<span class="hero-inst-name">Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik hüquqi şəxsi</span><span class="hero-main-slogan">"Dövlət Standartı ilə Rəqəmsal Gələcəyə Doğru"</span>',
+      '<span class="hero-inst-name">Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik hüquqi şəxsi</span><span class="hero-main-slogan">«Müasir təhsil, mehriban mühit, rəqəmsal gələcək!»</span>',
     hero_desc:
       "Gələcəyin rabitə və nəqliyyat mütəxəssislərini yetişdirən müasir təhsil mərkəzi.",
     hero_cta_portal: "Tələbə Portalı",
@@ -676,7 +676,7 @@ const i18n = {
     bio_director_role: "Bakı Dövlət Rabitə və Nəqliyyat Kollecinin Direktoru",
 
     page_title: "BDRNK — Bakı Dövlət Rabitə və Nəqliyyat Kolleci Publik hüquqi şəxsi",
-    hero_aura_tagline: "Dövlət Standartı ilə Rəqəmsal Gələcəyə Doğru",
+    hero_aura_tagline: "«Müasir təhsil, mehriban mühit, rəqəmsal gələcək!»",
     about_director_bio_btn: "Rəsmi Bioqrafiya",
     honors_sub_badge: "Qlobal Nailiyyətlər & Beynəlxalq Təmsilçilik",
     fame_tab_all: "Hamısı",
@@ -1418,7 +1418,7 @@ const i18n = {
     nav_register: "Registration",
     hero_badge: "Official Educational Portal",
     hero_title:
-      '<span class="hero-inst-name">Baku State Communications and Transport College Public Legal Entity</span><span class="hero-main-slogan">"Towards the Digital Future with State Standards"</span>',
+      '<span class="hero-inst-name">Baku State Communications and Transport College Public Legal Entity</span><span class="hero-main-slogan">“Modern Education, Friendly Environment, Digital Future!”</span>',
     hero_desc:
       "A modern educational center training future experts in communications and transport.",
     hero_cta_portal: "Student Portal",
@@ -1986,7 +1986,7 @@ const i18n = {
     bio_director_role: "Director of Baku State Communications and Transport College",
 
     page_title: "BDRNK — Baku State Communications and Transport College Public Legal Entity",
-    hero_aura_tagline: "Towards a Digital Future with State Educational Standards",
+    hero_aura_tagline: "Modern Education, Friendly Environment, Digital Future!",
     about_director_bio_btn: "Official Biography",
     honors_sub_badge: "Global Achievements & International Representation",
     fame_tab_all: "All",
@@ -2722,7 +2722,7 @@ const i18n = {
     nav_register: "Регистрация",
     hero_badge: "Официальный Портал",
     hero_title:
-      '<span class="hero-inst-name">Бакинский Государственный Колледж Связи и Транспорта Публичное Юридическое Лицо</span><span class="hero-main-slogan">«К цифровому будущему по государственному стандарту»</span>',
+      '<span class="hero-inst-name">Бакинский Государственный Колледж Связи и Транспорта Публичное Юридическое Лицо</span><span class="hero-main-slogan">«Современное образование, доброжелательная среда, цифровое будущее!»</span>',
     hero_desc:
       "Современный центр, готовящий специалистов будущего в области связи и транспорта.",
     hero_cta_portal: "Портал Студента",
@@ -3294,7 +3294,7 @@ const i18n = {
     bio_director_role: "Директор Бакинского Государственного Колледжа Связи и Транспорта",
 
     page_title: "БГКСТ — Бакинский Государственный Колледж Связи и Транспорта Публичное Юридическое Лицо",
-    hero_aura_tagline: "К цифровому будущему по государственным образовательным стандартам",
+    hero_aura_tagline: "Современное образование, доброжелательная среда, цифровое будущее!",
     about_director_bio_btn: "Официальная биография",
     honors_sub_badge: "Глобальные достижения и международное представительство",
     fame_tab_all: "Все",
