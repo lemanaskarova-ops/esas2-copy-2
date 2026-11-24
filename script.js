@@ -23533,7 +23533,7 @@ function initSceneTransition() {
       floor: 2,
       floorText_az: "II Mərtəbə", floorText_en: "2nd Floor", floorText_ru: "2-й Этаж",
       no: "№ 214",
-      name_az: "Qeydiyyat, qiymətləndirmə və Monitorinq şöbəsi", name_en: "Registration, Assessment & Monitoring", name_ru: "Отдел регистрации, оценивания и мониторинга",
+      name_az: "Qeydiyyat, qiymətləndirmə və Monitorinq otağı", name_en: "Registration, Assessment & Monitoring Room", name_ru: "Кабинет регистрации, оценивания и мониторинга",
       cat: "admin",
       catLabel_az: "Akademik Qeydiyyat", catLabel_en: "Academic Registry", catLabel_ru: "Академический реестр",
       icon: "📊",
