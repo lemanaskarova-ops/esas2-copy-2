@@ -5099,6 +5099,8 @@ const newsData = [
     "full_ru": "В Бакинском государственном колледже связи и транспорта в атмосфере высокого патриотического подъема состоялось торжественное мероприятие, посвященное 28 Мая — Дню независимости.\n\nС вступительным словом выступил заместитель директора по учебно-воспитательной работе Шахмурад Мамедов, отметивший историческую роль Азербайджанской Демократической Республики, провозглашенной в 1918 году, как первой демократической республики на мусульманском Востоке.\n\nПреподаватель истории колледжа Саида Гулиева подробно рассказала об эпохальном значении Дня независимости, подчеркнув, что современный суверенный Азербайджан является достойным преемником первой республики и сегодня под руководством Победоносного Верховного Главнокомандующего полностью восстановил свою территориальную целостность.\n\nПрограмма мероприятия включала патриотические стихи студентов, исторические видеохроники и доклады, завершившись в атмосфере неподдельной национальной гордости.",
     "date": "28 May 2026",
     "image": "musteqillik_gunu.jpg",
+    "extra_image": "musteqillik_gunu_poster.jpg",
+    "fb_reel_embed": "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F1DDw8E4K9b%2F&show_text=0",
     "url": "https://www.facebook.com/share/r/1DDw8E4K9b/",
     "tag_az": "Müstəqillik Günü / Tədbir",
     "tag_en": "Independence Day / Event",
@@ -12747,13 +12749,17 @@ document.addEventListener("DOMContentLoaded", () => {
         card.className = "news-card";
         card.style.cursor = "pointer";
         const isVid = isVideoMedia(item.image);
+        const hasExternalVid = Boolean(item.fb_reel_embed) || (item.url && (item.url.includes("/r/") || item.url.includes("/reel/")));
         const cardMediaHtml = isVid
           ? `<div style="position:relative;width:100%;height:100%;background:#020710;">
               <video class="news-card-img" src="${encodeURI(item.image)}#t=0.5" ${item.extra_image ? `poster="${item.extra_image}"` : ""} muted playsinline preload="metadata" loop onmouseenter="this.play().catch(()=>{})" onmouseleave="this.pause()" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
               <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:rgba(10,34,64,0.78);border:2px solid rgba(243,210,132,0.92);display:flex;align-items:center;justify-content:center;color:#f3d284;box-shadow:0 6px 18px rgba(0,0,0,0.45);pointer-events:none;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>
             </div>`
-          : `<img class="news-card-img" src="${item.image}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='news1.webp';" />`;
-        const totalVids = (isVid ? 1 : 0) + (Array.isArray(item.extra_videos) ? item.extra_videos.length : 0);
+          : `<div style="position:relative;width:100%;height:100%;">
+              <img class="news-card-img" src="${item.image}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='news1.webp';" />
+              ${hasExternalVid ? `<span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(10,34,64,0.85);border:2px solid rgba(243,210,132,0.95);display:flex;align-items:center;justify-content:center;color:#f3d284;box-shadow:0 8px 22px rgba(0,0,0,0.55);pointer-events:none;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>` : ""}
+            </div>`;
+        const totalVids = (isVid ? 1 : 0) + (hasExternalVid ? 1 : 0) + (Array.isArray(item.extra_videos) ? item.extra_videos.length : 0);
         const videoCountBadge = totalVids > 0
           ? `<span class="news-card-video-count" style="position:absolute;bottom:10px;right:10px;z-index:2;background:rgba(7,25,48,0.92);color:#f3d284;border:1px solid rgba(207,169,94,0.55);padding:3px 10px;border-radius:999px;font-size:0.72rem;font-weight:700;backdrop-filter:blur(6px);display:inline-flex;align-items:center;gap:4px;">▶ ${totalVids > 1 ? `${totalVids} Video` : "Video"}</span>`
           : "";
