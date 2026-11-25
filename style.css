@@ -3268,6 +3268,14 @@ body.dark-mode .sun-and-moon>.moon>circle {
   transform-origin: 44% 35%;
 }
 
+.tree-card-grid-block[data-person-id="9"] .tree-grid-avatar-wrap img,
+.tree-dept-card[data-person-id="9"] .tree-dept-avatar img,
+.tree-member-row[data-person-id="9"] .tree-member-avatar img {
+  object-position: 44% 38% !important;
+  transform: scale(1.18);
+  transform-origin: 44% 36%;
+}
+
 .tree-dept-info {
   display: flex;
   flex-direction: column;
@@ -4381,7 +4389,12 @@ body.dark-mode .sun-and-moon>.moon>circle {
 }
 
 .person-detail-photo-frame.sekine-photo img {
-  object-position: center 15%;
+  object-position: 44% 38%;
+  transform: scale(1.05);
+}
+
+.person-detail-photo-frame.sekine-photo:hover img {
+  transform: scale(1.1);
 }
 
 .person-detail-photo-frame.vefa-photo img {
