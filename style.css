@@ -3200,9 +3200,11 @@ body.dark-mode .sun-and-moon>.moon>circle {
 }
 
 .tree-card-grid-block[data-person-id="16"] .tree-grid-avatar-wrap img,
-.tree-dept-card[data-person-id="16"] .tree-dept-avatar img {
-  object-position: center 38%;
-  transform: scale(1.08);
+.tree-dept-card[data-person-id="16"] .tree-dept-avatar img,
+.tree-member-row[data-person-id="16"] .tree-member-avatar img {
+  object-position: 52% 34% !important;
+  transform: scale(1.22);
+  transform-origin: 52% 32%;
 }
 
 .tree-card-grid-block[data-person-id="14"] .tree-grid-avatar-wrap img,
@@ -4399,7 +4401,7 @@ body.dark-mode .sun-and-moon>.moon>circle {
 
 .person-detail-photo-frame.vefa-photo img {
   transform: scale(1.05);
-  object-position: center 38%;
+  object-position: 52% 32%;
 }
 
 .person-detail-photo-frame.vefa-photo:hover img {
@@ -4883,8 +4885,8 @@ body.dark-mode .sun-and-moon>.moon>circle {
 
   /* Vefa's official photo */
   .vefa-card .card-img-wrap img {
-    transform: scale(1.05);
-    object-position: center 38%;
+    transform: scale(1.08);
+    object-position: 52% 32%;
   }
 
   /* Gunay's photo needs a bit of zoom */
