@@ -4045,7 +4045,7 @@ const staffData = {
       role_az: "Direktor",
       role_en: "Director",
       role_ru: "Директор",
-      img: "sebuhin.jpeg",
+      img: "IMG_6726.JPEG",
     },
     {
       id: "vacant-deputy",

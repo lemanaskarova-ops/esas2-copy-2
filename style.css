@@ -3169,9 +3169,9 @@ body.dark-mode .sun-and-moon>.moon>circle {
 .tree-card-director .tree-director-avatar img,
 .tree-dept-card[data-person-id="1"] .tree-dept-avatar img,
 .tree-member-row[data-person-id="1"] .tree-member-avatar img {
-  object-position: 49% 82% !important;
-  transform: scale(1.7);
-  transform-origin: 49% 50%;
+  object-position: 49% 54% !important;
+  transform: scale(1.42);
+  transform-origin: 49% 54%;
 }
 
 .tree-card-grid-block[data-person-id="20"] .tree-grid-avatar-wrap img,
@@ -4337,7 +4337,7 @@ body.dark-mode .sun-and-moon>.moon>circle {
 
 /* Specific framing adjustments for staff members */
 .person-detail-photo-frame.director-photo img {
-  object-position: center 45%;
+  object-position: center 52%;
   transform: scale(1.02);
 }
 
