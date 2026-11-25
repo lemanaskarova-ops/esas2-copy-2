@@ -517,38 +517,7 @@
     }
   });
 
-  // Wrap cross-section global functions exposed by script.js
   document.addEventListener("DOMContentLoaded", () => {
-    if (typeof window.switchStructureView === "function") {
-      const origStruct = window.switchStructureView;
-      window.switchStructureView = function wrappedSwitchStructureView(view) {
-        if (activeTab !== "all" && activeTab !== "structure") {
-          setActiveTab("structure", { scrollToTop: false, updateUrl: true });
-        }
-        return origStruct.apply(this, arguments);
-      };
-    }
-
-    if (typeof window.switchCampusFloor === "function") {
-      const origCampus = window.switchCampusFloor;
-      window.switchCampusFloor = function wrappedSwitchCampusFloor(floor) {
-        if (activeTab !== "all" && activeTab !== "about") {
-          setActiveTab("about", { scrollToTop: false, updateUrl: true, focusAnchor: "campus-navigator" });
-        }
-        return origCampus.apply(this, arguments);
-      };
-    }
-
-    if (typeof window.openLibraryLecturesView === "function") {
-      const origLib = window.openLibraryLecturesView;
-      window.openLibraryLecturesView = function wrappedOpenLibLectures(fbkFilter) {
-        if (activeTab !== "all" && activeTab !== "library") {
-          setActiveTab("library", { scrollToTop: false, updateUrl: true, libView: "lectures", focusAnchor: "library-lectures-section" });
-        }
-        return origLib.apply(this, arguments);
-      };
-    }
-
     // Trigger tab activation on initial URL query (?tab=...) or #hash (supporting aliases)
     let initialTab = "about";
     let initialAnchor = null;
@@ -609,55 +578,8 @@
     setActiveTab(popTab, { scrollToTop: false, updateUrl: false, pushHistory: false, focusAnchor: popAnchor });
   });
 
-  // Horizontal wheel glide + fixed dropdown alignment for scrollable #workspace-tabs-bar
+  // Horizontal wheel glide for scrollable #desktop-nav
   document.addEventListener("DOMContentLoaded", () => {
-    const ddWrapper = document.getElementById("nav-about-dropdown-wrapper");
-    const ddMenu = document.getElementById("nav-about-dropdown-menu");
-    if (ddWrapper && ddMenu) {
-      let closeTimer = null;
-      const positionDropdown = () => {
-        const rect = ddWrapper.getBoundingClientRect();
-        const menuW = Math.min(Math.max(ddMenu.offsetWidth || 290, 290), window.innerWidth - 20);
-        const left = Math.max(10, Math.min(rect.left, window.innerWidth - menuW - 10));
-        ddMenu.style.top = `${Math.round(rect.bottom)}px`;
-        ddMenu.style.left = `${Math.round(left)}px`;
-      };
-      const openDropdown = () => {
-        if (closeTimer) {
-          clearTimeout(closeTimer);
-          closeTimer = null;
-        }
-        positionDropdown();
-        ddWrapper.classList.add("is-open");
-        ddMenu.classList.add("is-open");
-      };
-      const scheduleClose = () => {
-        if (closeTimer) clearTimeout(closeTimer);
-        closeTimer = setTimeout(() => {
-          ddWrapper.classList.remove("is-open");
-          ddMenu.classList.remove("is-open");
-        }, 120);
-      };
-      ddWrapper.addEventListener("mouseenter", openDropdown);
-      ddWrapper.addEventListener("mouseleave", scheduleClose);
-      ddWrapper.addEventListener("focusin", openDropdown);
-      ddWrapper.addEventListener("focusout", scheduleClose);
-      ddMenu.addEventListener("mouseenter", openDropdown);
-      ddMenu.addEventListener("mouseleave", scheduleClose);
-      ddMenu.querySelectorAll("a, button").forEach((item) => {
-        item.addEventListener("click", () => {
-          ddWrapper.classList.remove("is-open");
-          ddMenu.classList.remove("is-open");
-        });
-      });
-      window.addEventListener("scroll", () => {
-        if (ddWrapper.classList.contains("is-open")) positionDropdown();
-      }, { passive: true });
-      window.addEventListener("resize", () => {
-        if (ddWrapper.classList.contains("is-open")) positionDropdown();
-      }, { passive: true });
-    }
-
     const navStrip = document.getElementById("desktop-nav");
     if (navStrip) {
       navStrip.addEventListener(
