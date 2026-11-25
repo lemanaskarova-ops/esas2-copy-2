@@ -4141,7 +4141,7 @@ const staffData = {
       role_az: '"Poçt rabitəsi və mühasibat uçotu şöbəsi"-Şöbə müdiri',
       role_en: 'Head of "Postal Communication and Accounting" Dept',
       role_ru: 'Заведующий отделом "Почтовая связь и бухгалтерский учет"',
-      img: "natiqx3.jpeg",
+      img: "natiq_yeni.jpeg",
     },
     {
       id: "11",

@@ -3182,7 +3182,9 @@ body.dark-mode .sun-and-moon>.moon>circle {
   transform-origin: 49% 24%;
 }
 
-.tree-dept-card[data-person-id="24"] .tree-dept-avatar img {
+.tree-card-grid-block[data-person-id="24"] .tree-grid-avatar-wrap img,
+.tree-dept-card[data-person-id="24"] .tree-dept-avatar img,
+.tree-member-row[data-person-id="24"] .tree-member-avatar img {
   object-position: center 25%;
   transform: scale(1.15);
 }
