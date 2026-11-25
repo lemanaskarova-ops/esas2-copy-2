@@ -4221,7 +4221,7 @@ const staffData = {
       role_az: "Metodist",
       role_en: "Methodist",
       role_ru: "Методист",
-      img: "selale.jpeg",
+      img: "selale_yeni.jpeg",
     },
     {
       id: "25",
