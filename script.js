@@ -7810,6 +7810,18 @@ const libraryData = [
     url: "Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf",
   },
   {
+    id: 95,
+    title_az: "Mühəndis qrafikası (Elektron mühazirə, 98 səh.)",
+    title_en: "Engineering Graphics (Electronic Lecture, 98 p.)",
+    title_ru: "Инженерная графика (Электронная лекция, 98 с.)",
+    author_az: "Müəllif: Alidə Mahmudova (FBK-05)",
+    author_en: "Author: Alida Mahmudova (FBK-05)",
+    author_ru: "Автор: Алида Махмудова (ФБК-05)",
+    category: "umumtexniki",
+    icon: "📐",
+    url: "MÜHƏNDİS QRAFİKASI-ELEKTRON MÜHAZİRƏ.M.ALİDƏ.pdf",
+  },
+  {
     id: 56,
     title_az: "Vahid Nəqliyyat Sistemi (Dərs vəsaiti, 63 səh.)",
     title_en: "Unified Transport System (Textbook, 63 p.)",
@@ -8770,7 +8782,7 @@ function initStructureModule() {
       desc_az: "Avtomobil və dəmiryol nəqliyyatının istismarı, yol hərəkətinin təşkili və texniki diaqnostika.",
       desc_en: "Operation of transport vehicles, traffic coordination, diagnostic testing, and technical safety.",
       desc_ru: "Эксплуатация транспорта, организация дорожного движения, диагностика и техническая безопасность.",
-      disciplines_az: ["Nəqliyyat Diaqnostikası", "Yol Hərəkəti Qaydaları və Təhlükəsizliyi", "Avtomobil Daşımaları", "Vahid Nəqliyyat Sistemi", "Materialşünaslıq (15 mövzu)", "Yağlar və Sürtkü Materialları (15 mövzu)", "Konstruksiya Materiallarının Texnologiyası", "Texniki Mexanika", "Logistika"],
+      disciplines_az: ["Nəqliyyat Diaqnostikası", "Yol Hərəkəti Qaydaları və Təhlükəsizliyi", "Avtomobil Daşımaları", "Vahid Nəqliyyat Sistemi", "Materialşünaslıq (15 mövzu)", "Yağlar və Sürtkü Materialları (15 mövzu)", "Konstruksiya Materiallarının Texnologiyası", "Mühəndis Qrafikası", "Texniki Mexanika", "Logistika"],
       chair_az: "Babək Quliyev",
       chair_en: "Babak Guliyev",
       chair_ru: "Бабек Гулиев"
@@ -9332,6 +9344,9 @@ function initStructureModule() {
         if (fbk.id === "fbk-5" && (d.includes("Material") || d.includes("Konstruksiya"))) {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">🔩</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
+        if (fbk.id === "fbk-5" && (d.includes("Mühəndis Qrafikası") || d.includes("Qrafika"))) {
+          return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('MÜHƏNDİS QRAFİKASI-ELEKTRON MÜHAZİRƏ.M.ALİDƏ.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">📐</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
+        }
         if (fbk.id === "fbk-6" && (d === "Azərbaycan Dili" || d.includes("Azərbaycan Dili"))) {
           return `<button type="button" class="fbk-chip fbk-chip-has-doc" title="${d} — Oxu Zalında Aç" onclick="event.stopPropagation(); window.openDocumentReader('azdilifb.pdf', '${d}', 'FBK Tədris Vəsaiti');"><span class="chip-doc-icon">📖</span> <span>${d}</span> <span class="fbk-chip-doc-badge">📖 Oxu Zalı</span></button>`;
         }
@@ -9445,6 +9460,9 @@ function initStructureModule() {
             }
             if (fbk.id === "fbk-5" && (d.includes("Material") || d.includes("Konstruksiya"))) {
               return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf', '🔩 ${d}', 'FBK Tədris Vəsaiti');"><span>🔩 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
+            }
+            if (fbk.id === "fbk-5" && (d.includes("Mühəndis Qrafikası") || d.includes("Qrafika"))) {
+              return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('MÜHƏNDİS QRAFİKASI-ELEKTRON MÜHAZİRƏ.M.ALİDƏ.pdf', '📐 ${d}', 'FBK Tədris Vəsaiti');"><span>📐 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
             }
             if (fbk.id === "fbk-6" && (d === "Azərbaycan Dili" || d.includes("Azərbaycan Dili"))) {
               return `<button type="button" class="fbk-chip fbk-chip-has-doc" style="display:inline-flex; align-items:center; gap:6px; background:rgba(184,147,74,0.18); border:1px solid var(--gold); color:var(--text); text-decoration:none; padding:6px 14px; border-radius:12px; font-weight:700; cursor:pointer;" onclick="event.stopPropagation(); window.openDocumentReader('azdilifb.pdf', '📖 ${d}', 'FBK Tədris Vəsaiti');"><span>📖 ${d}</span><span style="font-size:0.75rem; background:var(--gold); color:#111; padding:2px 6px; border-radius:6px; font-weight:800;">📖 Oxu Zalı</span></button>`;
@@ -10892,6 +10910,22 @@ function initLibraryModule() {
       desc_az: "Metallar və ərintilərin mexaniki, fiziki və kimyəvi xassələri, polad və çuqun istehsalı, əlvan metallar, termiki emal texnologiyaları və müasir konstruksiya materiallarının sənayedə tətbiqi üzrə 28 səhifəlik rəsmi dərs vəsaiti.",
       topics_az: ["Fiziki-Mexaniki Xassələr", "Polad İstehsalı", "Termiki Emal", "Konstruksiya Materialları"],
       url: "Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf"
+    },
+    {
+      id: "fbk-lec-muhendis-qrafikasi",
+      fbkId: "fbk-5",
+      fieldBadge: "MÜHƏNDİS QRAFİKASI",
+      fieldName_az: "Ümumtexniki və Nəqliyyat",
+      subject_az: "Mühəndis Qrafikası",
+      title_az: "Mühəndis Qrafikası — Elektron Mühazirələr Toplusu",
+      author_az: "Müəllif: Alidə Mahmudova",
+      format: "pdf",
+      icon: "📐",
+      volume: "98 Səhifə · Elektron Mühazirə",
+      fileSize: "PDF Vəsait",
+      desc_az: "Çertyojun tərtib edilmə standartları və qaydaları, formatlar, miqyaslar, xətlər, şriftlər, həndəsi qurmalaşdırmalar, proyeksiyalama metodları, kəsiklər və kəsilişlər, maşınqayırma çertyojları üzrə 98 səhifəlik fundamental elektron mühazirələr toplusu.",
+      topics_az: ["Çertyoj Standartları", "Həndəsi Qurmalar", "Proyeksiyalama", "Kəsiklər və Kəsilişlər"],
+      url: "MÜHƏNDİS QRAFİKASI-ELEKTRON MÜHAZİRƏ.M.ALİDƏ.pdf"
     },
     {
       id: "fbk-lec-neqliyyat-siqorta",
@@ -24838,6 +24872,23 @@ function initGlobalSearchModule() {
       tokens: "konstruksiya materiallarinin texnologiyasi alide alidə mahmudova materialşünaslıq materialsunasliq fbk 05 umumtexnika neqliyyat pdf derslik vesait",
       action: () => {
         window.openDocumentReader("Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf", "Konstruksiya-materiallarinin-texnologiyasi.-Alidə-Mahmudova.pdf", "FBK Mühazirələr Fondu");
+        const sec = document.getElementById("library");
+        sec?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    // 4i-2. MÜHƏNDİS QRAFİKASI — ALİDƏ MAHMUDOVA (PDF - 98 Səhifə)
+    catalog.push({
+      type: "structure",
+      category: "structure",
+      categories: ["structure", "library"],
+      icon: "📐",
+      badge: "PDF • 98 Səh.",
+      title: "Mühəndis Qrafikası — Alidə Mahmudova",
+      desc: "Ümumtexnika və Nəqliyyat FBK (FBK-05) · Müəllif: Alidə Mahmudova · Çertyoj qaydaları, miqyaslar, həndəsi qurmalar, proyeksiyalar və maşınqayırma çertyojları üzrə 98 səhifəlik rəsmi elektron mühazirə vəsaiti",
+      tokens: "muhendis mühəndis qrafikasi qrafikası alide alidə mahmudova certyoj çertyoj fbk 05 umumtexnika neqliyyat pdf muhazire mühazirə derslik vesait",
+      action: () => {
+        window.openDocumentReader("MÜHƏNDİS QRAFİKASI-ELEKTRON MÜHAZİRƏ.M.ALİDƏ.pdf", "Mühəndis Qrafikası — Alidə Mahmudova", "FBK Mühazirələr Fondu");
         const sec = document.getElementById("library");
         sec?.scrollIntoView({ behavior: "smooth" });
       }
