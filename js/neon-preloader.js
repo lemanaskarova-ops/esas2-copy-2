@@ -193,18 +193,14 @@
       var pct = Math.min(100, Math.round(eased * 100));
 
       if (statusTextEl) {
-        if (pct >= 100) {
-          statusTextEl.textContent = "NETWORK CONNECTED \u00b7 100%";
-        } else {
-          statusTextEl.textContent = "CONNECTING NODE \u00b7 " + pct + "%";
-        }
+        statusTextEl.textContent = pct + "%";
       }
 
       if (ratio < 1) {
         rafId = window.requestAnimationFrame(step);
       } else {
         if (statusEl) statusEl.classList.add("is-connected");
-        if (statusTextEl) statusTextEl.textContent = "NETWORK CONNECTED \u00b7 100%";
+        if (statusTextEl) statusTextEl.textContent = "100%";
       }
     }
 
@@ -229,7 +225,7 @@
       preloader.classList.remove("is-hidden", "is-exiting", "is-flying", "is-preparing-exit");
       preloader.classList.add("nn-reduced-replay");
       if (statusEl) statusEl.classList.add("is-connected");
-      if (statusTextEl) statusTextEl.textContent = "NETWORK CONNECTED \u00b7 100%";
+      if (statusTextEl) statusTextEl.textContent = "100%";
 
       schedule(function () {
         preloader.classList.add("is-exiting");
@@ -260,7 +256,7 @@
     flyingLogo.style.opacity = "1";
 
     if (statusEl) statusEl.classList.remove("is-connected");
-    if (statusTextEl) statusTextEl.textContent = "CONNECTING NODE \u00b7 0%";
+    if (statusTextEl) statusTextEl.textContent = "0%";
 
     // Force reflow so all SVG & word animations restart from t=0 cleanly
     void preloader.offsetWidth;
@@ -295,7 +291,7 @@
     }
     if (!isExiting) {
       if (statusEl) statusEl.classList.add("is-connected");
-      if (statusTextEl) statusTextEl.textContent = "NETWORK CONNECTED \u00b7 100%";
+      if (statusTextEl) statusTextEl.textContent = "100%";
       performFlyToNavbar();
     } else {
       instantCleanFinish(false);
