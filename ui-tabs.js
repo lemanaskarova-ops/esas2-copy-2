@@ -100,7 +100,7 @@
     "intl-cooperation": "international",
     "intl-memorandums": "international",
     "intl-conferences": "international",
-    "intl-certificates": "international",
+    "intl-certificates": "certificates",
 
     "honor-students": "students",
     "student-projects-section": "students",
