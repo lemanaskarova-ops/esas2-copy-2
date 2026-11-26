@@ -4572,6 +4572,41 @@ const staffData = {
    ══════════════════════════════════════════════════════════════════════ */
 const openLessonsData = [
   {
+    id: "pervane_namazova_yukleme",
+    official_id: "open_lesson_pervane_namazova_yukleme_2026",
+    subject_az: "Nəqliyyatda yükləmə-boşaltma işləri",
+    subject_en: "Loading and Unloading Operations in Transport",
+    subject_ru: "Погрузочно-разгрузочные работы на транспорте",
+    subject_icon: "🚜",
+    teacher_az: "Pərvanə Namazova",
+    teacher_en: "Parvana Namazova",
+    teacher_ru: "Парвана Намазова",
+    teacher_role_az: "Nəqliyyat fənn müəllimi",
+    date: "26 Noyabr 2026",
+    date_az: "26 Noyabr 2026",
+    date_en: "26 November 2026",
+    date_ru: "26 Ноября 2026",
+    title_az: "III kurs 1114A qrupunda Pərvanə Namazovanın “Avtoyükləyicilər, daxili yanma mühərrikli yükləyicilər, çəngəlli və teleskopik yükləyicilər” mövzusunda açıq dərsi",
+    title_en: "Open Lesson by Parvana Namazova on “Forklifts, Internal Combustion Loaders, Telescopic Loaders” in Group 1114A",
+    title_ru: "Открытый урок Парваны Намазовой на тему «Автопогрузчики, погрузчики с ДВС, вилочные и телескопические погрузчики» в группе 1114А",
+    desc_az: "26 noyabr 2026-cı il tarixində Bakı Dövlət Rabitə və Nəqliyyat Kollecində III kurs, 1114A qrupunda “Nəqliyyatda yükləmə-boşaltma işləri” fənni üzrə müəllim Pərvanə Namazovanın açıq dərsi keçirilmişdir.",
+    desc_en: "On November 26, 2026, an open lesson on “Loading and Unloading Operations in Transport” was held by instructor Parvana Namazova for 3rd-year group 1114A at BDRNK.",
+    desc_ru: "26 ноября 2026 года в Бакинском государственном колледже связи и транспорта в группе 1114А III курса преподавателем Парваной Намазовой проведен открытый урок по предмету «Погрузочно-разгрузочные работы на транспорте».",
+    full_az: "26 noyabr 2026-cı il tarixində Bakı Dövlət Rabitə və Nəqliyyat Kollecində III kurs, 1114A qrupunda “Nəqliyyatda yükləmə-boşaltma işləri” fənni üzrə müəllim Pərvanə Namazovanın açıq dərsi keçirilmişdir.\n\nAçıq dərsin mövzusu “Avtoyükləyicilər, daxili yanma mühərrikli yükləyicilər, çəngəlli və teleskopik yükləyicilər” olmuşdur.\n\nDərs zamanı yükləmə-boşaltma prosesində istifadə olunan texniki vasitələrin təyinatı, xüsusiyyətləri və tətbiq sahələri haqqında tələbələrə ətraflı məlumat verilmişdir.\n\nDərsin gedişində nəzəri biliklərin praktik nümunələrlə əlaqələndirilməsinə, tələbələrin mövzu üzrə bilik və peşə bacarıqlarının inkişafına xüsusi diqqət yetirilmişdir.\n\nBelə açıq dərslər tədrisin keyfiyyətinin yüksəldilməsinə, müəllimlərin pedaqoji təcrübə mübadiləsinə və tələbələrin peşə hazırlığının gücləndirilməsinə xidmət edir.\n\n#AçıqDərs #Nəqliyyat #YükləməBoşaltma #PərvanəNamazova #1114AQrupu #BakıDövlətRabitəVəNəqliyyatKolleci",
+    full_en: "On November 26, 2026, an open lesson was held by instructor Parvana Namazova in 3rd-year group 1114A on the subject “Loading and Unloading Operations in Transport” at Baku State Communications and Transport College.\n\nThe topic of the open lesson was “Forklifts, Internal Combustion Engine Loaders, Fork and Telescopic Loaders”.\n\nDuring the session, students received detailed information on the operational purpose, specifications, and applications of technical equipment utilized in loading and unloading processes.\n\nThroughout the lesson, special attention was devoted to bridging theoretical knowledge with practical engineering examples, strengthening students' subject competence and vocational skills.\n\nSuch open sessions directly serve to enhance instructional quality, promote pedagogical exchange among educators, and solidify students' technical readiness.",
+    full_ru: "26 ноября 2026 года в Бакинском государственном колледже связи и транспорта в группе 1114А III курса преподавателем Парваной Намазовой был проведен открытый урок по предмету «Погрузочно-разгрузочные работы на транспорте».\n\nТемой открытого урока была «Автопогрузчики, погрузчики с двигателем внутреннего сгорания, вилочные и телескопические погрузчики».\n\nВ ходе занятия студентам была предоставлена подробная информация о назначении, технических характеристиках и сферах применения подъемно-транспортного оборудования.\n\nОсобое внимание уделялось увязке теоретических знаний с практическими примерами и развитию профессиональных навыков учащихся.\n\nПодобные открытые уроки способствуют повышению качества обучения, обмену педагогическим опытом и совершенствованию профессиональной подготовки будущих специалистов.",
+    videos: [
+      {
+        src: "pervane_namazova_aciq_ders.mp4",
+        poster: "pervane_namazova_aciq_ders_poster.jpg",
+        title_az: "“Avtoyükləyicilər və texniki vasitələr” açıq dərsi (1114A qrupu)",
+        title_en: "Open Lesson “Forklifts & Technical Equipment” (Group 1114A)",
+        title_ru: "Открытый урок «Автопогрузчики и технические средства» (группа 1114А)"
+      }
+    ],
+    tags: ["Açıq Dərs", "Nəqliyyat", "Yükləmə-Boşaltma", "Pərvanə Namazova", "1114A Qrupu"]
+  },
+  {
     id: "alida_lekal_eyrileri",
     official_id: "open_lesson_alida_mahmudova_lekal_2026",
     subject_az: "Mühəndis qrafikası",
@@ -4756,6 +4791,28 @@ const openLessonsData = [
 ];
 
 const newsData = [
+  {
+    "id": 122,
+    "official_id": "pervane_namazova_aciq_ders_2026",
+    "title_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində açıq dərs keçirilib — Pərvanə Namazova (1114A qrupu)",
+    "title_en": "Open Lesson Held at Baku State Communications and Transport College — Parvana Namazova (Group 1114A)",
+    "title_ru": "В Бакинском государственном колледже связи и транспорта проведен открытый урок — Парвана Намазова (группа 1114А)",
+    "desc_az": "26 noyabr 2026-cı il tarixində BDRNK-də III kurs, 1114A qrupunda “Nəqliyyatda yükləmə-boşaltma işləri” fənni üzrə müəllim Pərvanə Namazovanın açıq dərsi keçirilmişdir...",
+    "desc_en": "On November 26, 2026, an open lesson on “Loading and Unloading Operations in Transport” was held by instructor Parvana Namazova for group 1114A...",
+    "desc_ru": "26 ноября 2026 года в колледже преподавателем Парваной Намазовой проведен открытый урок по предмету «Погрузочно-разгрузочные работы на транспорте»...",
+    "full_az": "26 noyabr 2026-cı il tarixində Bakı Dövlət Rabitə və Nəqliyyat Kollecində III kurs, 1114A qrupunda “Nəqliyyatda yükləmə-boşaltma işləri” fənni üzrə müəllim Pərvanə Namazovanın açıq dərsi keçirilmişdir.\n\nAçıq dərsin mövzusu “Avtoyükləyicilər, daxili yanma mühərrikli yükləyicilər, çəngəlli və teleskopik yükləyicilər” olmuşdur.\n\nDərs zamanı yükləmə-boşaltma prosesində istifadə olunan texniki vasitələrin təyinatı, xüsusiyyətləri və tətbiq sahələri haqqında tələbələrə ətraflı məlumat verilmişdir.\n\nDərsin gedişində nəzəri biliklərin praktik nümunələrlə əlaqələndirilməsinə, tələbələrin mövzu üzrə bilik və peşə bacarıqlarının inkişafına xüsusi diqqət yetirilmişdir.\n\nBelə açıq dərslər tədrisin keyfiyyətinin yüksəldilməsinə, müəllimlərin pedaqoji təcrübə mübadiləsinə və tələbələrin peşə hazırlığının gücləndirilməsinə xidmət edir.\n\n#AçıqDərs #Nəqliyyat #YükləməBoşaltma #PərvanəNamazova #1114AQrupu #BakıDövlətRabitəVəNəqliyyatKolleci",
+    "full_en": "On November 26, 2026, an open lesson was held by instructor Parvana Namazova in 3rd-year group 1114A on the subject “Loading and Unloading Operations in Transport” at Baku State Communications and Transport College.\n\nThe topic of the open lesson was “Forklifts, Internal Combustion Engine Loaders, Fork and Telescopic Loaders”.\n\nDuring the session, students received detailed information on the operational purpose, specifications, and applications of technical equipment utilized in loading and unloading processes.\n\nThroughout the lesson, special attention was devoted to bridging theoretical knowledge with practical engineering examples, strengthening students' subject competence and vocational skills.\n\nSuch open sessions directly serve to enhance instructional quality, promote pedagogical exchange among educators, and solidify students' technical readiness.",
+    "full_ru": "26 ноября 2026 года в Бакинском государственном колледже связи и транспорта в группе 1114А III курса преподавателем Парваной Намазовой был проведен открытый урок по предмету «Погрузочно-разгрузочные работы на транспорте».\n\nТемой открытого урока была «Автопогрузчики, погрузчики с двигателем внутреннего сгорания, вилочные и телескопические погрузчики».\n\nВ ходе занятия студентам была предоставлена подробная информация о назначении, технических характеристиках и сферах применения подъемно-транспортного оборудования.\n\nОсобое внимание уделялось увязке теоретических знаний с практическими примерами и развитию профессиональных навыков учащихся.\n\nПодобные открытые уроки способствуют повышению качества обучения, обмену педагогическим опытом и совершенствованию профессиональной подготовки будущих специалистов.",
+    "date": "26 Noyabr 2026",
+    "date_az": "26 Noyabr 2026",
+    "date_en": "26 November 2026",
+    "date_ru": "26 Ноября 2026",
+    "image": "pervane_namazova_aciq_ders.mp4",
+    "extra_image": "pervane_namazova_aciq_ders_poster.jpg",
+    "tag_az": "Açıq Dərs / Nəqliyyat",
+    "tag_en": "Open Lesson / Transport",
+    "tag_ru": "Открытый урок / Транспорт"
+  },
   {
     "id": 121,
     "official_id": "alida_mahmudova_aciq_ders_2026",
@@ -13463,6 +13520,19 @@ function initGalleryModule() {
       }
     ],
     study: [
+      {
+        type: "video",
+        src: "pervane_namazova_aciq_ders.mp4",
+        poster: "pervane_namazova_aciq_ders_poster.jpg",
+        tall: true,
+        label: "Nəqliyyatda yükləmə-boşaltma işləri · Açıq Dərs (Pərvanə Namazova, 1114A qrupu)",
+        label_az: "Nəqliyyatda yükləmə-boşaltma işləri · Açıq Dərs (Pərvanə Namazova, 1114A qrupu)",
+        label_en: "Loading Operations in Transport · Open Lesson (Parvana Namazova, Group 1114A)",
+        label_ru: "Погрузочно-разгрузочные работы на транспорте · Открытый урок (Парвана Намазова, группа 1114А)",
+        badge: "AÇIQ DƏRS · NƏQLİYYAT",
+        catTitle: "Dərs Mühiti · Açıq Dərs",
+        i18n: "gallery_cat_study",
+      },
       {
         type: "video",
         src: "alida_mahmudova_aciq_ders.mp4",
