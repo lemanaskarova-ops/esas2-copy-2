@@ -27091,11 +27091,6 @@ window.switchLaborConfMedia = function (src, caption, badgeText, catTitle, btn) 
         });
     }
 
-    // 6. Tab 7: Beynəlxalq sertifikatlar (#intl-certificates-grid)
-    const intlCertGrid = document.getElementById("intl-certificates-grid");
-    if (intlCertGrid && tCerts.length) {
-      renderCertCardsInto(intlCertGrid, tCerts.slice(0, 6));
-    }
 
     // 7. Tab 8: Tələbə layihələri (#student-projects-grid)
     const stuProjGrid = document.getElementById("student-projects-grid");
