@@ -1,0 +1,489 @@
+import re
+import json
+
+# ========================================================
+# 1. READ SCRIPT.JS
+# ========================================================
+with open("script.js", "r", encoding="utf-8") as f:
+    script_js = f.read()
+
+# Update id 14
+id14_old_block = '''    {
+      id: 14,
+      title_az: "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II Yer",
+      title_en: "“Return to Agdam” Open Judo Championship — 2nd Place",
+      title_ru: "Открытое первенство по дзюдо «Возвращение в Агдам» — II место",
+      subtitle_az: "8 Noyabr – Zəfər Gününə həsr olunmuş açıq birincilik (73 kq çəki dərəcəsi)",
+      subtitle_en: "Open championship dedicated to November 8 – Victory Day (73 kg weight class)",
+      subtitle_ru: "Открытое первенство, посвященное 8 Ноября — Дню Победы (весовая категория 73 кг)",
+      recipient_az: "Məmmədov Elvin (BDRNK tələbəsi)",
+      recipient_en: "Elvin Mammadov (BDRNK student)",
+      recipient_ru: "Мамедов Эльвин (студент БГКСТ)",
+      place_az: "II YER (Gümüş)",
+      place_en: "2nd PLACE (Silver)",
+      place_ru: "II МЕСТО (Серебро)",
+      placeType: "silver",
+      sport_az: "Cüdo (73 kq)",
+      sport_en: "Judo (73 kg)",
+      sport_ru: "Дзюдо (73 кг)",
+      sportIcon: "🥋",
+      category: "turnir",
+      year: "2026",
+      date_az: "2026-cı il",
+      date_en: "Year 2026",
+      date_ru: "2026 год",
+      org_az: "Gənclər və İdman Nazirliyi · Azərbaycan Cüdo Federasiyası · “Ağdama Qayıdış” İK",
+      org_en: "Ministry of Youth & Sports · Azerbaijan Judo Federation · “Return to Agdam” Sports Club",
+      org_ru: "Министерство молодежи и спорта · Федерация дзюдо Азербайджана · СК «Возвращение в Агдам»",
+      signer_az: "Ağayev S. (“Ağdama Qayıdış” İdman Klubunun direktoru)",
+      signer_en: "S. Aghayev (Director of “Return to Agdam” Sports Club)",
+      signer_ru: "С. Агаев (Директор спортивного клуба «Возвращение в Агдам»)",
+      img: "elvinx.jpeg",
+      thumb: "elvinx.jpeg"
+    },'''
+
+id14_new_block = '''    {
+      id: 14,
+      title_az: "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II Yer",
+      title_en: "“Return to Agdam” Open Judo Championship — 2nd Place",
+      title_ru: "Открытое первенство по дзюдо «Возвращение в Агдам» — II место",
+      subtitle_az: "8 Noyabr – Zəfər Gününə həsr olunmuş açıq birincilik (73 kq çəki dərəcəsi)",
+      subtitle_en: "Open championship dedicated to November 8 – Victory Day (73 kg weight class)",
+      subtitle_ru: "Открытое первенство, посвященное 8 Ноября — Дню Победы (весовая категория 73 кг)",
+      recipient_az: "Məmmədov Elvin (BDRNK tələbəsi)",
+      recipient_en: "Elvin Mammadov (BDRNK student)",
+      recipient_ru: "Мамедов Эльвин (студент БГКСТ)",
+      place_az: "II YER (Gümüş)",
+      place_en: "2nd PLACE (Silver)",
+      place_ru: "II МЕСТО (Серебро)",
+      placeType: "silver",
+      sport_az: "Cüdo (73 kq)",
+      sport_en: "Judo (73 kg)",
+      sport_ru: "Дзюдо (73 кг)",
+      sportIcon: "🥋",
+      category: "turnir",
+      year: "2026",
+      date_az: "2026-cı il",
+      date_en: "Year 2026",
+      date_ru: "2026 год",
+      org_az: "Gənclər və İdman Nazirliyi · Azərbaycan Cüdo Federasiyası · “Ağdama Qayıdış” İK",
+      org_en: "Ministry of Youth & Sports · Azerbaijan Judo Federation · “Return to Agdam” Sports Club",
+      org_ru: "Министерство молодежи и спорта · Федерация дзюдо Азербайджана · СК «Возвращение в Агдам»",
+      signer_az: "Ağayev S. (“Ağdama Qayıdış” İdman Klubunun direktoru)",
+      signer_en: "S. Aghayev (Director of “Return to Agdam” Sports Club)",
+      signer_ru: "С. Агаев (Директор спортивного клуба «Возвращение в Агдам»)",
+      img: "certificates/cert_elvin_2.jpg",
+      thumb: "certificates/thumbs/cert_elvin_2.jpg"
+    },'''
+
+assert id14_old_block in script_js, "id14_old_block not found in script.js"
+script_js = script_js.replace(id14_old_block, id14_new_block, 1)
+
+# Append ids 15 to 24 to certificatesData
+certs_add = ''',
+    {
+      id: 15,
+      title_az: "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — I Yer",
+      title_en: "“Return to Agdam” Open Judo Championship — 1st Place",
+      title_ru: "Открытое первенство по дзюдо «Возвращение в Агдам» — I место",
+      subtitle_az: "8 Noyabr – Zəfər Gününə həsr olunmuş açıq birincilik (73 kq çəki dərəcəsi)",
+      subtitle_en: "Open championship dedicated to November 8 – Victory Day (73 kg weight class)",
+      subtitle_ru: "Открытое первенство, посвященное 8 Ноября — Дню Победы (весовая категория 73 кг)",
+      recipient_az: "Məmmədov Elvin (BDRNK tələbəsi)",
+      recipient_en: "Elvin Mammadov (BDRNK student)",
+      recipient_ru: "Мамедов Эльвин (студент БГКСТ)",
+      place_az: "I YER (Qızıl)",
+      place_en: "1st PLACE (Gold)",
+      place_ru: "I МЕСТО (Золото)",
+      placeType: "gold",
+      sport_az: "Cüdo (73 kq)",
+      sport_en: "Judo (73 kg)",
+      sport_ru: "Дзюдо (73 кг)",
+      sportIcon: "🥋",
+      category: "turnir",
+      year: "2026",
+      date_az: "2026-cı il",
+      date_en: "Year 2026",
+      date_ru: "2026 год",
+      org_az: "Gənclər və İdman Nazirliyi · Azərbaycan Cüdo Federasiyası · “Ağdama Qayıdış” İK",
+      org_en: "Ministry of Youth & Sports · Azerbaijan Judo Federation · “Return to Agdam” Sports Club",
+      org_ru: "Министерство молодежи и спорта · Федерация дзюдо Азербайджана · СК «Возвращение в Агдам»",
+      signer_az: "Ağayev S. (“Ağdama Qayıdış” İdman Klubunun direktoru)",
+      signer_en: "S. Aghayev (Director of “Return to Agdam” Sports Club)",
+      signer_ru: "С. Агаев (Директор спортивного клуба «Возвращение в Агдам»)",
+      img: "certificates/cert_elvin_1.jpg",
+      thumb: "certificates/thumbs/cert_elvin_1.jpg"
+    },
+    {
+      id: 16,
+      title_az: "Azərbaycan Kikboksinq Federasiyası Açıq Turniri — I Yer",
+      title_en: "Azerbaijan Kickboxing Federation Open Tournament — 1st Place",
+      title_ru: "Открытый турнир Федерации кикбоксинга Азербайджана — I место",
+      subtitle_az: "AKF və “Uğur” İdman Klubunun təşkilatçılığı ilə açıq turnir (15 yaş, 65+ kq)",
+      subtitle_en: "Open tournament organized by AKF & “Ugur” Sports Club (Age 15, 65+ kg)",
+      subtitle_ru: "Открытый турнир АКФ и СК «Угур» (15 лет, 65+ кг)",
+      recipient_az: "Hüseynov Hüseyn (BDRNK tələbəsi)",
+      recipient_en: "Huseyn Huseynov (BDRNK student)",
+      recipient_ru: "Гусейнов Гусейн (студент БГКСТ)",
+      place_az: "I YER (Qızıl)",
+      place_en: "1st PLACE (Gold)",
+      place_ru: "I МЕСТО (Золото)",
+      placeType: "gold",
+      sport_az: "Kikboksinq (65+ kq)",
+      sport_en: "Kickboxing (65+ kg)",
+      sport_ru: "Кикбоксинг (65+ кг)",
+      sportIcon: "🥊",
+      category: "turnir",
+      year: "2024",
+      date_az: "2024-cü il",
+      date_en: "Year 2024",
+      date_ru: "2024 год",
+      org_az: "Azərbaycan Kikboksinq Federasiyası · “Uğur” İdman Klubu",
+      org_en: "Azerbaijan Kickboxing Federation · “Ugur” Sports Club",
+      org_ru: "Федерация кикбоксинга Азербайджана · Спортивный клуб «Угур»",
+      signer_az: "Orxan Əliyev (AKF Vitse-prezidenti)",
+      signer_en: "Orkhan Aliyev (AKF Vice President)",
+      signer_ru: "Орхан Алиев (Вице-президент АКФ)",
+      img: "certificates/cert_huseyn_1.jpg",
+      thumb: "certificates/thumbs/cert_huseyn_1.jpg"
+    },
+    {
+      id: 17,
+      title_az: "“Adalet Fight Club” Boks üzrə Açıq Birincilik — I Yer",
+      title_en: "“Adalet Fight Club” Open Boxing Championship — 1st Place",
+      title_ru: "Открытое первенство по боксу «Adalet Fight Club» — I место",
+      subtitle_az: "Boks üzrə yeniyetmələr və gənclər arasında açıq birincilik — Qızıl Medal",
+      subtitle_en: "Open boxing championship among juniors and youth — Gold Medal",
+      subtitle_ru: "Открытое первенство по боксу среди юниоров и молодежи — Золотая медаль",
+      recipient_az: "Hüseynov Hüseyn (BDRNK tələbəsi)",
+      recipient_en: "Huseyn Huseynov (BDRNK student)",
+      recipient_ru: "Гусейнов Гусейн (студент БГКСТ)",
+      place_az: "I YER (Qızıl)",
+      place_en: "1st PLACE (Gold)",
+      place_ru: "I МЕСТО (Золото)",
+      placeType: "gold",
+      sport_az: "Boks",
+      sport_en: "Boxing",
+      sport_ru: "Бокс",
+      sportIcon: "🥊",
+      category: "turnir",
+      year: "2023",
+      date_az: "2023-cü il",
+      date_en: "Year 2023",
+      date_ru: "2023 год",
+      org_az: "“Adalet Fight Club” İdman Təşkilatı",
+      org_en: "“Adalet Fight Club” Sports Organization",
+      org_ru: "Спортивная организация «Adalet Fight Club»",
+      signer_az: "Ədalət Məmmədov (Baş məşqçi)",
+      signer_en: "Adalat Mammadov (Head Coach)",
+      signer_ru: "Адалят Мамедов (Главный тренер)",
+      img: "certificates/cert_huseyn_2.jpg",
+      thumb: "certificates/thumbs/cert_huseyn_2.jpg"
+    },
+    {
+      id: 18,
+      title_az: "Azərbaycan Rəqs Çempionatı 2025 — I Yer (Qızıl)",
+      title_en: "Azerbaijan Dance Championship 2025 — 1st Place (Gold)",
+      title_ru: "Чемпионат Азербайджана по танцам 2025 — I место (Золото)",
+      subtitle_az: "Azərbaycan Rəqs Assosiasiyası və AGİ rəsmi Respublika Çempionatı",
+      subtitle_en: "Official National Championship by Azerbaijan Dance Association & AYU",
+      subtitle_ru: "Официальный чемпионат Республики Ассоциации танца Азербайджана и САМ",
+      recipient_az: "Əliyeva Aysel (BDRNK tələbəsi)",
+      recipient_en: "Aysel Aliyeva (BDRNK student)",
+      recipient_ru: "Алиева Айсель (студентка БГКСТ)",
+      place_az: "I YER (Qızıl)",
+      place_en: "1st PLACE (Gold)",
+      place_ru: "I МЕСТО (Золото)",
+      placeType: "gold",
+      sport_az: "Müasir Rəqs & K-Pop",
+      sport_en: "Modern Dance & K-Pop",
+      sport_ru: "Современные танцы и K-Pop",
+      sportIcon: "💃",
+      category: "respublika",
+      year: "2025",
+      date_az: "2025-ci il",
+      date_en: "Year 2025",
+      date_ru: "2025 год",
+      org_az: "Azərbaycan Rəqs Assosiasiyası · Azərbaycan Gənclər İttifaqı",
+      org_en: "Azerbaijan Dance Association · Azerbaijan Youth Union",
+      org_ru: "Ассоциация танца Азербайджана · Союз молодежи Азербайджана",
+      signer_az: "Əziz Əzizov (ARA Prezidenti)",
+      signer_en: "Aziz Azizov (President of ADA)",
+      signer_ru: "Азиз Азизов (Президент АТА)",
+      img: "certificates/cert_aysel_1.jpg",
+      thumb: "certificates/thumbs/cert_aysel_1.jpg"
+    },
+    {
+      id: 19,
+      title_az: "Bakı Rəqs Çempionatı 2025 — I Yer",
+      title_en: "Baku Dance Championship 2025 — 1st Place",
+      title_ru: "Чемпионат Баку по танцам 2025 — I место",
+      subtitle_az: "Şəhər birinciliyi üzrə solo / qrup nümayişi — Qızıl Medal",
+      subtitle_en: "City championship solo/group performance — Gold Medal",
+      subtitle_ru: "Городское первенство, соло/групповое выступление — Золотая медаль",
+      recipient_az: "Əliyeva Aysel (BDRNK tələbəsi)",
+      recipient_en: "Aysel Aliyeva (BDRNK student)",
+      recipient_ru: "Алиева Айсель (студентка БГКСТ)",
+      place_az: "I YER (Qızıl)",
+      place_en: "1st PLACE (Gold)",
+      place_ru: "I МЕСТО (Золото)",
+      placeType: "gold",
+      sport_az: "K-Pop Cover Dance",
+      sport_en: "K-Pop Cover Dance",
+      sport_ru: "K-Pop Cover Dance",
+      sportIcon: "✨",
+      category: "respublika",
+      year: "2025",
+      date_az: "2025-ci il",
+      date_en: "Year 2025",
+      date_ru: "2025 год",
+      org_az: "Bakı Şəhər Rəqs Assosiasiyası · AGİ",
+      org_en: "Baku City Dance Association · AYU",
+      org_ru: "Бакинская танцевальная ассоциация · САМ",
+      signer_az: "Təşkilat Komitəsi",
+      signer_en: "Organizing Committee",
+      signer_ru: "Оргкомитет",
+      img: "certificates/cert_aysel_2.jpg",
+      thumb: "certificates/thumbs/cert_aysel_2.jpg"
+    },
+    {
+      id: 20,
+      title_az: "K-POP Talent Festival 2025 — I Yer Çempionu",
+      title_en: "K-POP Talent Festival 2025 — 1st Place Champion",
+      title_ru: "K-POP Talent Festival 2025 — Чемпион (I место)",
+      subtitle_az: "Gənclər arasında keçirilən istedad festivalı — Qızıl Diplom",
+      subtitle_en: "Youth talent festival — Gold Diploma",
+      subtitle_ru: "Молодежный фестиваль талантов — Золотой диплом",
+      recipient_az: "Əliyeva Aysel (BDRNK tələbəsi)",
+      recipient_en: "Aysel Aliyeva (BDRNK student)",
+      recipient_ru: "Алиева Айсель (студентка БГКСТ)",
+      place_az: "I YER (Qızıl)",
+      place_en: "1st PLACE (Gold)",
+      place_ru: "I МЕСТО (Золото)",
+      placeType: "gold",
+      sport_az: "K-Pop İstedad Festivalı",
+      sport_en: "K-Pop Talent Festival",
+      sport_ru: "Фестиваль талантов K-Pop",
+      sportIcon: "🎵",
+      category: "turnir",
+      year: "2025",
+      date_az: "2025-ci il",
+      date_en: "Year 2025",
+      date_ru: "2025 год",
+      org_az: "K-Pop Azerbaijan & Mədəniyyət Mərkəzi",
+      org_en: "K-Pop Azerbaijan & Cultural Center",
+      org_ru: "K-Pop Азербайджан и Культурный центр",
+      signer_az: "Münsiflər Heyəti",
+      signer_en: "Jury Panel",
+      signer_ru: "Жюри конкурса",
+      img: "certificates/cert_aysel_3.jpg",
+      thumb: "certificates/thumbs/cert_aysel_3.jpg"
+    },
+    {
+      id: 21,
+      title_az: "AGİ Hip-Hop & Street Dance Show — I Dərəcəli Diplomant",
+      title_en: "AYU Hip-Hop & Street Dance Show — 1st Degree Laureate",
+      title_ru: "Хип-хоп шоу САМ — Дипломант I Степени",
+      subtitle_az: "Müasir küçə rəqsləri layihəsi çərçivəsində yüksək dərəcəli təltif",
+      subtitle_en: "High achievement award within modern street dance showcase",
+      subtitle_ru: "Награда высокой степени в рамках проекта современных уличных танцев",
+      recipient_az: "Əliyeva Aysel (BDRNK tələbəsi)",
+      recipient_en: "Aysel Aliyeva (BDRNK student)",
+      recipient_ru: "Алиева Айсель (студентка БГКСТ)",
+      place_az: "I DƏRƏCƏ (Xüsusi Mükafat)",
+      place_en: "1st DEGREE (Special Award)",
+      place_ru: "I СТЕПЕНЬ (Специальный приз)",
+      placeType: "gold",
+      sport_az: "Hip-Hop & Street Dance",
+      sport_en: "Hip-Hop & Street Dance",
+      sport_ru: "Хип-хоп и уличные танцы",
+      sportIcon: "🔥",
+      category: "respublika",
+      year: "2025",
+      date_az: "2025-ci il",
+      date_en: "Year 2025",
+      date_ru: "2025 год",
+      org_az: "Azərbaycan Gənclər İttifaqı",
+      org_en: "Azerbaijan Youth Union",
+      org_ru: "Союз молодежи Азербайджана",
+      signer_az: "Zakir Əliyev (Sədr)",
+      signer_en: "Zakir Aliyev (Chairman)",
+      signer_ru: "Закир Алиев (Председатель)",
+      img: "certificates/cert_aysel_4.jpg",
+      thumb: "certificates/thumbs/cert_aysel_4.jpg"
+    },
+    {
+      id: 22,
+      title_az: "Azərbaycan Rəqs Kuboku — I Yer Qalibi",
+      title_en: "Azerbaijan Dance Cup — 1st Place Winner",
+      title_ru: "Кубок Азербайджана по танцам — Победитель (I место)",
+      subtitle_az: "Respublika kuboku yarışmasında yüksək səhnə performansı",
+      subtitle_en: "High stage performance at the National Cup competition",
+      subtitle_ru: "Высокое сценическое мастерство на Кубке Республики",
+      recipient_az: "Əliyeva Aysel (BDRNK tələbəsi)",
+      recipient_en: "Aysel Aliyeva (BDRNK student)",
+      recipient_ru: "Алиева Айсель (студентка БГКСТ)",
+      place_az: "I YER (Qızıl)",
+      place_en: "1st PLACE (Gold)",
+      place_ru: "I МЕСТО (Золото)",
+      placeType: "gold",
+      sport_az: "Müasir Səhnə Rəqsi",
+      sport_en: "Modern Stage Dance",
+      sport_ru: "Современный сценический танец",
+      sportIcon: "🏆",
+      category: "respublika",
+      year: "2025",
+      date_az: "2025-ci il",
+      date_en: "Year 2025",
+      date_ru: "2025 год",
+      org_az: "Azərbaycan Rəqs Assosiasiyası",
+      org_en: "Azerbaijan Dance Association",
+      org_ru: "Ассоциация танца Азербайджана",
+      signer_az: "Baş Katiblik",
+      signer_en: "General Secretariat",
+      signer_ru: "Генеральный секретариат",
+      img: "certificates/cert_aysel_5.jpg",
+      thumb: "certificates/thumbs/cert_aysel_5.jpg"
+    },
+    {
+      id: 23,
+      title_az: "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi — I Yer",
+      title_en: "National Talented Youth Dance Competition — 1st Place",
+      title_ru: "Республиканский танцевальный конкурс талантливой молодежи — I место",
+      subtitle_az: "Gənclər arasında keçirilən respublika rəqs müsabiqəsi",
+      subtitle_en: "National dance contest organized among young talents",
+      subtitle_ru: "Республиканский танцевальный конкурс среди молодежи",
+      recipient_az: "Əliyeva Aysel (BDRNK tələbəsi)",
+      recipient_en: "Aysel Aliyeva (BDRNK student)",
+      recipient_ru: "Алиева Айсель (студентка БГКСТ)",
+      place_az: "I YER (Qızıl)",
+      place_en: "1st PLACE (Gold)",
+      place_ru: "I МЕСТО (Золото)",
+      placeType: "gold",
+      sport_az: "Estrada & K-Pop",
+      sport_en: "Pop & K-Pop Dance",
+      sport_ru: "Эстрадные танцы и K-Pop",
+      sportIcon: "🌟",
+      category: "respublika",
+      year: "2025",
+      date_az: "2025-ci il",
+      date_en: "Year 2025",
+      date_ru: "2025 год",
+      org_az: "Gənclər Təşkilatları Milli Şurası & ARA",
+      org_en: "National Council of Youth Organizations & ADA",
+      org_ru: "Национальный совет молодежных организаций и АТА",
+      signer_az: "Münsiflər Kollegiyası",
+      signer_en: "Board of Adjudicators",
+      signer_ru: "Коллегия жюри",
+      img: "certificates/cert_aysel_6.jpg",
+      thumb: "certificates/thumbs/cert_aysel_6.jpg"
+    },
+    {
+      id: 24,
+      title_az: "Rəqs Sənəti üzrə Xüsusi Nailiyyət Sertifikatı & Qızıl Diplom",
+      title_en: "Dance Art Special Achievement Certificate & Gold Diploma",
+      title_ru: "Специальный сертификат достижений в области танца и Золотой диплом",
+      subtitle_az: "Uğurlu çıxış və xüsusi səhnə məharətinə görə fəxri sertifikat",
+      subtitle_en: "Honorary certificate for exceptional performance and stage mastery",
+      subtitle_ru: "Почетный сертификат за выдающееся выступление и мастерство",
+      recipient_az: "Əliyeva Aysel (BDRNK tələbəsi)",
+      recipient_en: "Aysel Aliyeva (BDRNK student)",
+      recipient_ru: "Алиева Айсель (студентка БГКСТ)",
+      place_az: "FƏXRİ MÜKAFAT",
+      place_en: "HONORARY AWARD",
+      place_ru: "ПОЧЕТНАЯ НАГРАДА",
+      placeType: "gold",
+      sport_az: "Xoreoqrafiya & Səhnə İfaçılığı",
+      sport_en: "Choreography & Stage Performance",
+      sport_ru: "Хореография и сценическое мастерство",
+      sportIcon: "🎖️",
+      category: "respublika",
+      year: "2025",
+      date_az: "2025-ci il",
+      date_en: "Year 2025",
+      date_ru: "2025 год",
+      org_az: "Azərbaycan Rəqs Assosiasiyası",
+      org_en: "Azerbaijan Dance Association",
+      org_ru: "Ассоциация танца Азербайджана",
+      signer_az: "Prezidium Heyəti",
+      signer_en: "Presidium Board",
+      signer_ru: "Президиум",
+      img: "certificates/cert_aysel_7.jpg",
+      thumb: "certificates/thumbs/cert_aysel_7.jpg"
+    }'''
+
+cert_old_end = '''      img: "certificates/cert_5.jpg",
+      thumb: "certificates/thumbs/cert_5.jpg"
+    }
+  ];'''
+
+cert_new_end = '''      img: "certificates/cert_5.jpg",
+      thumb: "certificates/thumbs/cert_5.jpg"
+    }''' + certs_add + '''
+  ];'''
+
+assert cert_old_end in script_js, "cert_old_end not found in script.js"
+script_js = script_js.replace(cert_old_end, cert_new_end, 1)
+
+# Dynamic category count update inside initCertificatesModule
+init_cert_target = '''    // Category filter buttons
+    const catBtns = document.querySelectorAll(".cert-filter-btn[data-cert-cat]");'''
+
+init_cert_replacement = '''    // Update dynamic certificate category counts on filter buttons
+    const catCountBtns = document.querySelectorAll(".cert-filter-btn[data-cert-cat]");
+    catCountBtns.forEach((btn) => {
+      const cat = btn.getAttribute("data-cert-cat");
+      const countSpan = btn.querySelector(".cert-btn-count");
+      if (countSpan) {
+        const cnt = cat === "all" ? certificatesData.length : certificatesData.filter((c) => c.category === cat).length;
+        countSpan.textContent = String(cnt);
+      }
+    });
+
+    // Category filter buttons
+    const catBtns = document.querySelectorAll(".cert-filter-btn[data-cert-cat]");'''
+
+assert init_cert_target in script_js, "init_cert_target not found in script.js"
+script_js = script_js.replace(init_cert_target, init_cert_replacement, 1)
+
+# Now update honorStudentsData:
+# We will locate the elvin block start and end in script_js
+elvin_start_marker = '      "id": "elvin-memmedov",'
+assert elvin_start_marker in script_js, "elvin_start_marker not found"
+
+# Find end of honorStudentsData array
+honor_end_marker = '''      ]
+    }
+  ];
+
+  function renderHonorCard(student) {'''
+
+assert honor_end_marker in script_js, "honor_end_marker not found"
+
+# Read students json blocks
+with open("scratch/students_data.json", "r", encoding="utf-8") as sf:
+    students_json_list = json.load(sf)
+
+# Format the 3 student objects nicely as JS objects:
+# students_json_list[0] = Elvin
+# students_json_list[1] = Huseyn
+# students_json_list[2] = Aysel
+formatted_students = []
+for s in students_json_list:
+    formatted_students.append("    " + json.dumps(s, ensure_ascii=False, indent=6)[4:])
+
+new_students_block = ",\n".join(formatted_students) + "\n  ];\n\n  function renderHonorCard(student) {"
+
+# Find the slice starting from the '{' right before "id": "elvin-memmedov" to honor_end_marker
+idx_elvin = script_js.find(elvin_start_marker)
+# Find the preceding "{\n"
+idx_brace = script_js.rfind("    {", 0, idx_elvin)
+
+target_slice = script_js[idx_brace : script_js.find(honor_end_marker) + len(honor_end_marker)]
+
+script_js = script_js[:idx_brace] + "    " + json.dumps(students_json_list[0], ensure_ascii=False, indent=6)[4:] + ",\n    " + json.dumps(students_json_list[1], ensure_ascii=False, indent=6)[4:] + ",\n    " + json.dumps(students_json_list[2], ensure_ascii=False, indent=6)[4:] + "\n  ];\n\n  function renderHonorCard(student) {" + script_js[idx_brace + len(target_slice):]
+
+with open("script.js", "w", encoding="utf-8") as f:
+    f.write(script_js)
+
+print("script.js updated successfully!")

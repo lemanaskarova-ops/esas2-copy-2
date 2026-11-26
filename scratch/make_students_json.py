@@ -1,0 +1,854 @@
+import json
+
+elvin = {
+  "id": "elvin-memmedov",
+  "fullName": "Məmmədov Elvin",
+  "fullName_az": "Məmmədov Elvin",
+  "fullName_en": "Elvin Mammadov",
+  "fullName_ru": "Мамедов Эльвин",
+  "photo": "certificates/thumbs/cert_elvin_1.jpg",
+  "fallbackPhoto": "certificates/cert_elvin_1.jpg",
+  "kickerIcon": "🥋",
+  "kicker": "Cüdo & Hərbi-Vətənpərvərlik İdmanı",
+  "kicker_az": "Cüdo & Hərbi-Vətənpərvərlik İdmanı",
+  "kicker_en": "Judo & Martial Athletics",
+  "kicker_ru": "Дзюдо и Боевой Спорт",
+  "highlightsHeading": "ƏSAS İDMAN NAİLİYYƏTLƏRİ VƏ DƏYƏRLƏR",
+  "highlightsHeading_az": "ƏSAS İDMAN NAİLİYYƏTLƏRİ VƏ DƏYƏRLƏR",
+  "highlightsHeading_en": "KEY SPORTS ACHIEVEMENTS & VALUES",
+  "highlightsHeading_ru": "ОСНОВНЫЕ СПОРТИВНЫЕ ДОСТИЖЕНИЯ И ЦЕННОСТИ",
+  "avatarYearTag": "🥋 BAKI 2026 · 73 kq",
+  "titleBadge": "🥇 Qızıl & 🥈 Gümüş Cüdo Çempionu",
+  "titleBadge_az": "🥇 Qızıl & 🥈 Gümüş Cüdo Çempionu",
+  "titleBadge_en": "🥇 Gold & 🥈 Silver Judo Champion",
+  "titleBadge_ru": "🥇 Золотой и 🥈 Серебряный Чемпион по дзюдо",
+  "role": "Cüdo İdmançısı · “Ağdama Qayıdış” Açıq Birinciliyinin Qalibi (I və II Yer)",
+  "role_az": "Cüdo İdmançısı · “Ağdama Qayıdış” Açıq Birinciliyinin Qalibi (I və II Yer)",
+  "role_en": "Judoka · Winner & Medalist of “Return to Agdam” Open Championship (1st & 2nd Place)",
+  "role_ru": "Дзюдоист · Победитель открытого первенства «Возвращение в Агдам» (I и II место)",
+  "categories": [
+    "sports"
+  ],
+  "statusText": "Qara Kəmər · 73 kq Çempion & Mükafatçı",
+  "statusText_az": "Qara Kəmər · 73 kq Çempion & Mükafatçı",
+  "statusText_en": "Black Belt · 73 kg Champion & Medalist",
+  "statusText_ru": "Черный пояс · 73 кг Чемпион и призер",
+  "quote": "Tatami yalnız güc deyil, həm də dəmir intizam, rəqibə hörmət və vətən sevgisidir. Hər qələbə kollecimizin və bayrağımızın şərəfidir.",
+  "quote_az": "Tatami yalnız güc deyil, həm də dəmir intizam, rəqibə hörmət və vətən sevgisidir. Hər qələbə kollecimizin və bayrağımızın şərəfidir.",
+  "quote_en": "The tatami is not just about strength; it is iron discipline, respect for opponents, and devotion to the nation.",
+  "quote_ru": "Татами — это не просто сила, это железная дисциплина, уважение к сопернику и любовь к Родине.",
+  "flags": [
+    {
+      "name": "Azərbaycan",
+      "name_az": "Azərbaycan",
+      "name_en": "Azerbaijan",
+      "name_ru": "Азербайджан",
+      "emoji": "🇦🇿",
+      "note": "Respublika & Şəhər Turnirləri",
+      "note_az": "Respublika & Şəhər Turnirləri",
+      "note_en": "National & City Tournaments",
+      "note_ru": "Республиканские и городские турниры"
+    }
+  ],
+  "keyHighlights": [
+    {
+      "year": "2026",
+      "flag": "🥇",
+      "country": "Azərbaycan",
+      "country_az": "Azərbaycan",
+      "country_en": "Azerbaijan",
+      "country_ru": "Азербайджан",
+      "title": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — I YER (Qızıl Medal)",
+      "title_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — I YER (Qızıl Medal)",
+      "title_en": "“Return to Agdam” Open Judo Championship — 1st Place (Gold)",
+      "title_ru": "Открытое первенство «Возвращение в Агдам» — I место (Золото)",
+      "text": "8 Noyabr – Zəfər Gününə həsr olunmuş açıq cüdo birinciliyində 73 kq çəki dərəcəsində bütün rəqiblərini məğlub edərək I YERİ tutmuş, Qızıl medal və rəsmi diplomla təltif olunmuşdur.",
+      "text_az": "8 Noyabr – Zəfər Gününə həsr olunmuş açıq cüdo birinciliyində 73 kq çəki dərəcəsində bütün rəqiblərini məğlub edərək I YERİ tutmuş, Qızıl medal və rəsmi diplomla təltif olunmuşdur.",
+      "text_en": "Defeated all opponents in the 73 kg category at the Victory Day open championship to win 1st Place (Gold Medal) and official Diploma.",
+      "text_ru": "Победил всех соперников в категории 73 кг на открытом первенстве ко Дню Победы, завоевав I место (Золотая медаль) и официальный диплом."
+    },
+    {
+      "year": "2026",
+      "flag": "🥈",
+      "country": "Azərbaycan",
+      "country_az": "Azərbaycan",
+      "country_en": "Azerbaijan",
+      "country_ru": "Азербайджан",
+      "title": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II YER (Gümüş Medal)",
+      "title_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II YER (Gümüş Medal)",
+      "title_en": "“Return to Agdam” Open Judo Championship — 2nd Place (Silver)",
+      "title_ru": "Открытое первенство «Возвращение в Агдам» — II место (Серебро)",
+      "text": "73 kq çəki dərəcəsində yüksək texniki ustalıq nümayiş etdirərək final mərhələsində II yerə yüksəlmiş və Gümüş medalla təltif edilmişdir.",
+      "text_az": "73 kq çəki dərəcəsində yüksək texniki ustalıq nümayiş etdirərək final mərhələsində II yerə yüksəlmiş və Gümüş medalla təltif edilmişdir.",
+      "text_en": "Demonstrated master-level judo technique in 73 kg division, reaching the finals to take 2nd Place and Silver medal.",
+      "text_ru": "Продемонстрировал высокое техническое мастерство в категории 73 кг, заняв II место и завоевав серебряную медаль."
+    }
+  ],
+  "tags": [
+    "#MəmmədovElvin",
+    "#Cüdo",
+    "#QaraKəmər",
+    "#73kq",
+    "#QızılMedal_IYer",
+    "#GümüşMedal_IIYer",
+    "#AğdamaQayıdış",
+    "#ZəfərGünü2026",
+    "#BDRNK_FəxriTələbə"
+  ],
+  "tags_az": [
+    "#MəmmədovElvin",
+    "#Cüdo",
+    "#QaraKəmər",
+    "#73kq",
+    "#QızılMedal_IYer",
+    "#GümüşMedal_IIYer",
+    "#AğdamaQayıdış",
+    "#ZəfərGünü2026",
+    "#BDRNK_FəxriTələbə"
+  ],
+  "tags_en": [
+    "#ElvinMammadov",
+    "#Judo",
+    "#BlackBelt",
+    "#73kg",
+    "#GoldMedal_1stPlace",
+    "#SilverMedal_2ndPlace",
+    "#ReturnToAgdam",
+    "#BDRNK_HonorStudent"
+  ],
+  "tags_ru": [
+    "#ЭльвинМамедов",
+    "#Дзюдо",
+    "#ЧерныйПояс",
+    "#73кг",
+    "#Золото_IМесто",
+    "#Серебро_IIМесто",
+    "#ВозвращениеВАгдам",
+    "#ПочетныйСтудентБГКСТ"
+  ],
+  "timeline": [
+    {
+      "year": "2026",
+      "badge": "🥇 Bakı 2026 · Qızıl Medal & Diplom",
+      "badge_az": "🥇 Bakı 2026 · Qızıl Medal & Diplom",
+      "badge_en": "🥇 Baku 2026 · Gold Medal & Diploma",
+      "badge_ru": "🥇 Баку 2026 · Золотая медаль и диплом",
+      "title": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi — I Yer",
+      "title_az": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi — I Yer",
+      "title_en": "Victory Day “Return to Agdam” Open Judo Championship — 1st Place",
+      "title_ru": "Открытое первенство «Возвращение в Агдам» ко Дню Победы — I место",
+      "desc": "Gənclər və İdman Nazirliyi, Azərbaycan Cüdo Federasiyası və “Ağdama Qayıdış” İdman Klubunun təşkilatçılığı ilə 73 kq çəkidə I YER (Qızıl Medal).",
+      "desc_az": "Gənclər və İdman Nazirliyi, Azərbaycan Cüdo Federasiyası və “Ağdama Qayıdış” İdman Klubunun təşkilatçılığı ilə 73 kq çəkidə I YER (Qızıl Medal).",
+      "desc_en": "Awarded 1st place (Gold Medal) and official Diploma in 73 kg category organized by “Return to Agdam” Sports Club and Azerbaijan Judo Federation.",
+      "desc_ru": "I место (Золотая медаль) и официальный диплом в категории 73 кг на открытом первенстве клуба «Возвращение в Агдам» и Федерации дзюдо Азербайджана."
+    },
+    {
+      "year": "2026",
+      "badge": "🥈 Bakı 2026 · Gümüş Medal & Diplom",
+      "badge_az": "🥈 Bakı 2026 · Gümüş Medal & Diplom",
+      "badge_en": "🥈 Baku 2026 · Silver Medal & Diploma",
+      "badge_ru": "🥈 Баку 2026 · Серебряная медаль и диплом",
+      "title": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi — II Yer",
+      "title_az": "Zəfər Gününə Həsr Olunmuş “Ağdama Qayıdış” Cüdo Birinciliyi — II Yer",
+      "title_en": "Victory Day “Return to Agdam” Open Judo Championship — 2nd Place",
+      "title_ru": "Открытое первенство «Возвращение в Агдам» ко Дню Победы — II место",
+      "desc": "Açıq birincilikdə 73 kq çəki dərəcəsində finala yüksələrək II yeri tutmuş, Gümüş medal və rəsmi diplomla təltif edilmişdir.",
+      "desc_az": "Açıq birincilikdə 73 kq çəki dərəcəsində finala yüksələrək II yeri tutmuş, Gümüş medal və rəsmi diplomla təltif edilmişdir.",
+      "desc_en": "Reached finals in 73 kg class to take 2nd place and official Silver award.",
+      "desc_ru": "Вышел в финал в весовой категории 73 кг, заняв II место и завоевав серебряную медаль."
+    }
+  ],
+  "fullBio": [
+    "Məmmədov Elvin Bakı Dövlət Rabitə və Nəqliyyat Kollecinin təhsil mühitində nizam-intizamı, fəallığı və tatamidə göstərdiyi yüksək mübarizə əzmi ilə seçilən fəxri tələbə-idmançılarımızdandır.",
+    "2026-cı ildə 8 Noyabr – Zəfər Gününə həsr olunmuş “Ağdama Qayıdış” cüdo açıq birinciliyində kollecimizi layiqincə təmsil edərək 73 kq çəki dərəcəsində həm I Yer (Qızıl Medal), həm də II Yer (Gümüş Medal) qazanmışdır.",
+    "Təhsili və peşəkar idman məşqlərini uğurla vəhdətləşdirən Elvin gənclər arasında sağlam həyat tərzinin və vətənpərvərlik ruhunun parlaq nümunəsidir."
+  ],
+  "fullBio_az": [
+    "Məmmədov Elvin Bakı Dövlət Rabitə və Nəqliyyat Kollecinin təhsil mühitində nizam-intizamı, fəallığı və tatamidə göstərdiyi yüksək mübarizə əzmi ilə seçilən fəxri tələbə-idmançılarımızdandır.",
+    "2026-cı ildə 8 Noyabr – Zəfər Gününə həsr olunmuş “Ağdama Qayıdış” cüdo açıq birinciliyində kollecimizi layiqincə təmsil edərək 73 kq çəki dərəcəsində həm I Yer (Qızıl Medal), həm də II Yer (Gümüş Medal) qazanmışdır.",
+    "Təhsili və peşəkar idman məşqlərini uğurla vəhdətləşdirən Elvin gənclər arasında sağlam həyat tərzinin və vətənpərvərlik ruhunun parlaq nümunəsidir."
+  ],
+  "fullBio_en": [
+    "Elvin Mammadov is an esteemed student-athlete at Baku State College of Communications and Transport, recognized for his discipline, determination, and excellence on the judo tatami.",
+    "At the 2026 “Return to Agdam” Open Judo Championship dedicated to Victory Day, he demonstrated supreme skill in the 73 kg division, claiming both 1st Place (Gold Medal) and 2nd Place (Silver Medal).",
+    "Balancing academic studies with elite athletics, Elvin stands as an inspiring role model of athletic dedication and patriotic values for college youth."
+  ],
+  "fullBio_ru": [
+    "Мамедов Эльвин — почетный студент-спортсмен Бакинского государственного колледжа связи и транспорта, отличающийся железной дисциплиной и выдающимися успехами в дзюдо.",
+    "На открытом первенстве «Возвращение в Агдам» 2026 года, посвященном Дню Победы, Эльвин блестяще выступил в категории 73 кг, завоевав как I место (Золотая медаль), так и II место (Серебряная медаль).",
+    "Успешно совмещая учебу со спортом, Эльвин является образцом здорового образа жизни и патриотизма для молодежи."
+  ],
+  "certificates": [
+    {
+      "icon": "🥇",
+      "title": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — I Yer (Qızıl)",
+      "title_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — I Yer (Qızıl)",
+      "title_en": "“Return to Agdam” Open Judo Championship — 1st Place (Gold)",
+      "title_ru": "Открытое первенство «Возвращение в Агдам» — I место (Золото)",
+      "sub": "73 kq çəki dərəcəsi · Zəfər Günü Açıq Birinciliyi",
+      "sub_az": "73 kq çəki dərəcəsi · Zəfər Günü Açıq Birinciliyi",
+      "sub_en": "73 kg weight division · Victory Day Championship",
+      "sub_ru": "Весовая категория 73 кг · Первенство ко Дню Победы"
+    },
+    {
+      "icon": "🥈",
+      "title": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II Yer (Gümüş)",
+      "title_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi — II Yer (Gümüş)",
+      "title_en": "“Return to Agdam” Open Judo Championship — 2nd Place (Silver)",
+      "title_ru": "Открытое первенство «Возвращение в Агдам» — II место (Серебро)",
+      "sub": "73 kq çəki dərəcəsi · Rəsmi Təltif Diplomu",
+      "sub_az": "73 kq çəki dərəcəsi · Rəsmi Təltif Diplomu",
+      "sub_en": "73 kg weight division · Official Award Diploma",
+      "sub_ru": "Весовая категория 73 кг · Официальный диплом"
+    }
+  ],
+  "gallery": [
+    {
+      "type": "image",
+      "src": "certificates/cert_elvin_1.jpg",
+      "caption": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi I Yer (Qızıl Medal) Rəsmi Diplomu",
+      "caption_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi I Yer (Qızıl Medal) Rəsmi Diplomu",
+      "caption_en": "Official Diploma — 1st Place (Gold Medal) “Return to Agdam” Judo Championship",
+      "caption_ru": "Официальный диплом за I место (Золотая медаль) первенства «Возвращение в Агдам»"
+    },
+    {
+      "type": "image",
+      "src": "certificates/cert_elvin_2.jpg",
+      "caption": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi II Yer (Gümüş Medal) Rəsmi Diplomu",
+      "caption_az": "“Ağdama Qayıdış” Açıq Cüdo Birinciliyi II Yer (Gümüş Medal) Rəsmi Diplomu",
+      "caption_en": "Official Diploma — 2nd Place (Silver Medal) “Return to Agdam” Judo Championship",
+      "caption_ru": "Официальный диплом за II место (Серебряная медаль) первенства «Возвращение в Агдам»"
+    },
+    {
+      "type": "image",
+      "src": "elvinx2.jpeg",
+      "caption": "Məmmədov Elvin — Ağ kimonoda tatami portreti",
+      "caption_az": "Məmmədov Elvin — Ağ kimonoda tatami portreti",
+      "caption_en": "Elvin Mammadov — Tatami portrait in white judogi",
+      "caption_ru": "Мамедов Эльвин — Портрет в белом кимоно на татами"
+    },
+    {
+      "type": "image",
+      "src": "elvinx1.jpeg",
+      "caption": "Məmmədov Elvin — Göy kimonoda rəsmi idman zalı portreti",
+      "caption_az": "Məmmədov Elvin — Göy kimonoda rəsmi idman zalı portreti",
+      "caption_en": "Elvin Mammadov — Portrait in blue judogi at dojo",
+      "caption_ru": "Мамедов Эльвин — Портрет в синем кимоно в зале"
+    }
+  ]
+}
+
+huseyn = {
+  "id": "huseyn-huseynov",
+  "fullName": "Hüseynov Hüseyn",
+  "fullName_az": "Hüseynov Hüseyn",
+  "fullName_en": "Huseyn Huseynov",
+  "fullName_ru": "Гусейнов Гусейн",
+  "photo": "certificates/thumbs/cert_huseyn_1.jpg",
+  "fallbackPhoto": "certificates/cert_huseyn_1.jpg",
+  "kickerIcon": "🥊",
+  "kicker": "Kikboksinq & Boks · Döyüş Növləri",
+  "kicker_az": "Kikboksinq & Boks · Döyüş Növləri",
+  "kicker_en": "Kickboxing & Boxing · Combat Sports",
+  "kicker_ru": "Кикбоксинг и Бокс · Боевые Искусства",
+  "highlightsHeading": "DÖYÜŞ NÖVLƏRİ ÜZRƏ ÇEMPİONLUQLAR",
+  "highlightsHeading_az": "DÖYÜŞ NÖVLƏRİ ÜZRƏ ÇEMPİONLUQLAR",
+  "highlightsHeading_en": "COMBAT SPORTS CHAMPIONSHIPS",
+  "highlightsHeading_ru": "ЧЕМПИОНАТЫ ПО БОЕВЫМ ИСКУССТВАМ",
+  "avatarYearTag": "🥊 QIZIL ÇEMPİON · 65+ kq",
+  "titleBadge": "🥇 2 Qat Qızıl Çempion",
+  "titleBadge_az": "🥇 2 Qat Qızıl Çempion",
+  "titleBadge_en": "🥇 2x Gold Champion",
+  "titleBadge_ru": "🥇 2-кратный золотой чемпион",
+  "role": "BDRNK Tələbəsi · Kikboksinq və Boks üzrə Açıq Turnirlərin Qalibi",
+  "role_az": "BDRNK Tələbəsi · Kikboksinq və Boks üzrə Açıq Turnirlərin Qalibi",
+  "role_en": "BDRNK Student · Winner of Open Kickboxing & Boxing Tournaments",
+  "role_ru": "Студент БГКСТ · Победитель открытых турниров по кикбоксингу и боксу",
+  "categories": [
+    "sports"
+  ],
+  "statusText": "Kikboksinq və Boks Qızıl Medalçısı",
+  "statusText_az": "Kikboksinq və Boks Qızıl Medalçısı",
+  "statusText_en": "Kickboxing & Boxing Gold Medalist",
+  "statusText_ru": "Золотой медалист по кикбоксингу и боксу",
+  "quote": "Döyüş sənəti insana ilk növbədə özünə nəzarət etməyi, hər zərbə qarşısında möhkəm dayanmağı və həmişə irəli getməyi öyrədir.",
+  "quote_az": "Döyüş sənəti insana ilk növbədə özünə nəzarət etməyi, hər zərbə qarşısında möhkəm dayanmağı və həmişə irəli getməyi öyrədir.",
+  "quote_en": "Combat sports teach self-control, resilience against all strikes, and the constant will to move forward.",
+  "quote_ru": "Боевые искусства учат самоконтролю, стойкости перед любыми ударами и постоянному стремлению вперед.",
+  "flags": [
+    {
+      "name": "Azərbaycan",
+      "name_az": "Azərbaycan",
+      "name_en": "Azerbaijan",
+      "name_ru": "Азербайджан",
+      "emoji": "🇦🇿",
+      "note": "Federasiya & Klub Birincilikləri",
+      "note_az": "Federasiya & Klub Birincilikləri",
+      "note_en": "Federation & Club Championships",
+      "note_ru": "Чемпионаты федераций и клубов"
+    }
+  ],
+  "keyHighlights": [
+    {
+      "year": "2024",
+      "flag": "🥇",
+      "country": "Azərbaycan",
+      "country_az": "Azərbaycan",
+      "country_en": "Azerbaijan",
+      "country_ru": "Азербайджан",
+      "title": "Azərbaycan Kikboksinq Federasiyası Açıq Turniri — I Yer (Qızıl)",
+      "title_az": "Azərbaycan Kikboksinq Federasiyası Açıq Turniri — I Yer (Qızıl)",
+      "title_en": "Azerbaijan Kickboxing Federation Open Tournament — 1st Place (Gold)",
+      "title_ru": "Открытый турнир Федерации кикбоксинга Азербайджана — I место (Золото)",
+      "text": "AKF və “Uğur” İdman Klubunun birgə təşkilatçılığı ilə 15 yaş, 65+ kq çəki dərəcəsində bütün rəqiblərinə qalib gələrək I YERİ tutmuşdur.",
+      "text_az": "AKF və “Uğur” İdman Klubunun birgə təşkilatçılığı ilə 15 yaş, 65+ kq çəki dərəcəsində bütün rəqiblərinə qalib gələrək I YERİ tutmuşdur.",
+      "text_en": "Won 1st Place in the 15-year-old 65+ kg division organized by AKF & “Ugur” Sports Club.",
+      "text_ru": "Занял I место в категории 15 лет 65+ кг на турнире АКФ и спортивного клуба «Угур»."
+    },
+    {
+      "year": "2023",
+      "flag": "🥇",
+      "country": "Azərbaycan",
+      "country_az": "Azərbaycan",
+      "country_en": "Azerbaijan",
+      "country_ru": "Азербайджан",
+      "title": "“Adalet Fight Club” Boks üzrə Açıq Birincilik — I Yer (Qızıl)",
+      "title_az": "“Adalet Fight Club” Boks üzrə Açıq Birincilik — I Yer (Qızıl)",
+      "title_en": "“Adalet Fight Club” Open Boxing Championship — 1st Place (Gold)",
+      "title_ru": "Открытое первенство по боксу «Adalet Fight Club» — I место (Золото)",
+      "text": "Boks üzrə açıq birincilikdə qətiyyətli döyüş nümayiş etdirərək fəxri kürsünün ən yüksək pilləsinə — I Yerə qalxmışdır.",
+      "text_az": "Boks üzrə açıq birincilikdə qətiyyətli döyüş nümayiş etdirərək fəxri kürsünün ən yüksək pilləsinə — I Yerə qalxmışdır.",
+      "text_en": "Showcased powerful boxing performance to secure 1st Place at the Adalet Fight Club Open.",
+      "text_ru": "Продемонстрировал решительный бой и поднялся на высшую ступень пьедестала (I место)."
+    }
+  ],
+  "tags": [
+    "#HüseynovHüseyn",
+    "#Kikboksinq",
+    "#Boks",
+    "#QızılMedal_IYer",
+    "#AKF",
+    "#UğurİdmanKlubu",
+    "#AdaletFightClub",
+    "#BDRNK_FəxriTələbə"
+  ],
+  "tags_az": [
+    "#HüseynovHüseyn",
+    "#Kikboksinq",
+    "#Boks",
+    "#QızılMedal_IYer",
+    "#AKF",
+    "#UğurİdmanKlubu",
+    "#AdaletFightClub",
+    "#BDRNK_FəxriTələbə"
+  ],
+  "tags_en": [
+    "#HuseynHuseynov",
+    "#Kickboxing",
+    "#Boxing",
+    "#GoldMedal_1stPlace",
+    "#AKF",
+    "#CombatSports",
+    "#BDRNK_HonorStudent"
+  ],
+  "tags_ru": [
+    "#ГусейновГусейн",
+    "#Кикбоксинг",
+    "#Бокс",
+    "#Золото_IМесто",
+    "#АКФ",
+    "#БоевыеИскусства",
+    "#ПочетныйСтудентБГКСТ"
+  ],
+  "timeline": [
+    {
+      "year": "2024",
+      "badge": "🥊 Kikboksinq · I Yer Qızıl Diplom",
+      "badge_az": "🥊 Kikboksinq · I Yer Qızıl Diplom",
+      "badge_en": "🥊 Kickboxing · 1st Place Gold Diploma",
+      "badge_ru": "🥊 Кикбоксинг · I место Золотой диплом",
+      "title": "Azərbaycan Kikboksinq Federasiyası & “Uğur” İK Açıq Turniri",
+      "title_az": "Azərbaycan Kikboksinq Federasiyası & “Uğur” İK Açıq Turniri",
+      "title_en": "Azerbaijan Kickboxing Federation & “Ugur” SC Open Tournament",
+      "title_ru": "Открытый турнир Федерации кикбоксинга Азербайджана и СК «Угур»",
+      "desc": "15 yaş, 65+ kq çəki dərəcəsində möhtəşəm döyüşlər nümayiş etdirərək I yeri qazanmış və rəsmi Diplomla təltif olunmuşdur.",
+      "desc_az": "15 yaş, 65+ kq çəki dərəcəsində möhtəşəm döyüşlər nümayiş etdirərək I yeri qazanmış və rəsmi Diplomla təltif olunmuşdur.",
+      "desc_en": "Earned 1st place in the 15-year-old 65+ kg division with dominant bouts, receiving the official championship diploma.",
+      "desc_ru": "Занял I место в категории 15 лет 65+ кг, показав великолепную боевую технику и получив официальный диплом."
+    },
+    {
+      "year": "2023",
+      "badge": "🥊 Boks · I Yer Qızıl Təltif",
+      "badge_az": "🥊 Boks · I Yer Qızıl Təltif",
+      "badge_en": "🥊 Boxing · 1st Place Gold Award",
+      "badge_ru": "🥊 Бокс · I место Золотая награда",
+      "title": "“Adalet Fight Club” Boks üzrə Açıq Birincilik",
+      "title_az": "“Adalet Fight Club” Boks üzrə Açıq Birincilik",
+      "title_en": "“Adalet Fight Club” Open Boxing Championship",
+      "title_ru": "Открытое первенство по боксу «Adalet Fight Club»",
+      "desc": "Gənclər arasında keçirilən birincilikdə I yerə layiq görülmüş və Qızıl Diplom qazanmışdır.",
+      "desc_az": "Gənclər arasında keçirilən birincilikdə I yerə layiq görülmüş və Qızıl Diplom qazanmışdır.",
+      "desc_en": "Honored with 1st place and the Gold Award Diploma at the youth championship.",
+      "desc_ru": "Удостоен I места и Золотого диплома на первенстве среди молодежи."
+    }
+  ],
+  "fullBio": [
+    "Hüseynov Hüseyn Bakı Dövlət Rabitə və Nəqliyyat Kollecinin idman şərəfini ringdə və tatamidə ucaldan istedadlı gənc idmançılarımızdandır.",
+    "Həm kikboksinq, həm də klassik boks üzrə respublika və şəhər miqyaslı açıq turnirlərdə iştirak edərək ardıcıl çempionluqlar (I Yerlər) qazanmış, kollecimizin idman ənənələrini zənginləşdirmişdir.",
+    "Dəqiq intizamı, fədakarlığı və döyüş əzmi ilə seçilən Hüseynov Hüseyn kollecimizin qürur mənbəyidir."
+  ],
+  "fullBio_az": [
+    "Hüseynov Hüseyn Bakı Dövlət Rabitə və Nəqliyyat Kollecinin idman şərəfini ringdə və tatamidə ucaldan istedadlı gənc idmançılarımızdandır.",
+    "Həm kikboksinq, həm də klassik boks üzrə respublika və şəhər miqyaslı açıq turnirlərdə iştirak edərək ardıcıl çempionluqlar (I Yerlər) qazanmış, kollecimizin idman ənənələrini zənginləşdirmişdir.",
+    "Dəqiq intizamı, fədakarlığı və döyüş əzmi ilə seçilən Hüseynov Hüseyn kollecimizin qürur mənbəyidir."
+  ],
+  "fullBio_en": [
+    "Huseyn Huseynov is a dedicated student-athlete at Baku State College of Communications and Transport, upholding college pride in the boxing ring and kickboxing arena.",
+    "Competing across national and city-level open competitions in both kickboxing and boxing, he has achieved consecutive 1st Place championship honors.",
+    "His sharp self-discipline, focus, and unwavering competitive spirit make him an inspiration to his peers."
+  ],
+  "fullBio_ru": [
+    "Гусейнов Гусейн — талантливый студент-спортсмен Бакинского государственного колледжа связи и транспорта, защищающий честь колледжа на боксерском ринге и татами.",
+    "Выступая на открытых турнирах республиканского и городского масштаба по кикбоксингу и боксу, он завоевал победные первые места (I Место).",
+    "Дисциплина, целеустремленность и бойцовский дух Гусейна делают его гордостью нашего колледжа."
+  ],
+  "certificates": [
+    {
+      "icon": "🥊",
+      "title": "Azərbaycan Kikboksinq Federasiyası Açıq Turniri — I Yer",
+      "title_az": "Azərbaycan Kikboksinq Federasiyası Açıq Turniri — I Yer",
+      "title_en": "Azerbaijan Kickboxing Federation Open Tournament — 1st Place",
+      "title_ru": "Открытый турнир АКФ — I место",
+      "sub": "AKF & “Uğur” İK · 15 yaş, 65+ kq",
+      "sub_az": "AKF & “Uğur” İK · 15 yaş, 65+ kq",
+      "sub_en": "AKF & “Ugur” SC · Age 15, 65+ kg",
+      "sub_ru": "АКФ и СК «Угур» · 15 лет, 65+ кг"
+    },
+    {
+      "icon": "🥊",
+      "title": "“Adalet Fight Club” Boks üzrə Açıq Birincilik — I Yer",
+      "title_az": "“Adalet Fight Club” Boks üzrə Açıq Birincilik — I Yer",
+      "title_en": "“Adalet Fight Club” Open Boxing Championship — 1st Place",
+      "title_ru": "Открытое первенство по боксу «Adalet Fight Club» — I место",
+      "sub": "Boks Açıq Birinciliyi · Qızıl Medal",
+      "sub_az": "Boks Açıq Birinciliyi · Qızıl Medal",
+      "sub_en": "Boxing Open Championship · Gold Medal",
+      "sub_ru": "Открытое первенство по боксу · Золотая медаль"
+    }
+  ],
+  "gallery": [
+    {
+      "type": "image",
+      "src": "certificates/cert_huseyn_1.jpg",
+      "caption": "Azərbaycan Kikboksinq Federasiyası Açıq Turniri I Yer Diplomu",
+      "caption_az": "Azərbaycan Kikboksinq Federasiyası Açıq Turniri I Yer Diplomu",
+      "caption_en": "Official Diploma — 1st Place Azerbaijan Kickboxing Federation Tournament",
+      "caption_ru": "Официальный диплом за I место турнира Федерации кикбоксинга Азербайджана"
+    },
+    {
+      "type": "image",
+      "src": "certificates/cert_huseyn_2.jpg",
+      "caption": "“Adalet Fight Club” Boks üzrə Açıq Birincilik I Yer Diplomu",
+      "caption_az": "“Adalet Fight Club” Boks üzrə Açıq Birincilik I Yer Diplomu",
+      "caption_en": "Official Diploma — 1st Place “Adalet Fight Club” Boxing Championship",
+      "caption_ru": "Официальный диплом за I место первенства по боксу «Adalet Fight Club»"
+    }
+  ]
+}
+
+aysel = {
+  "id": "aysel-eliyeva",
+  "fullName": "Əliyeva Aysel",
+  "fullName_az": "Əliyeva Aysel",
+  "fullName_en": "Aysel Aliyeva",
+  "fullName_ru": "Алиева Айсель",
+  "photo": "certificates/thumbs/cert_aysel_1.jpg",
+  "fallbackPhoto": "certificates/cert_aysel_1.jpg",
+  "kickerIcon": "💃",
+  "kicker": "İncəsənət & Rəqs · K-Pop, Modern & Hip-Hop",
+  "kicker_az": "İncəsənət & Rəqs · K-Pop, Modern & Hip-Hop",
+  "kicker_en": "Arts & Dance · K-Pop, Modern & Hip-Hop",
+  "kicker_ru": "Искусство и Танец · K-Pop, Модерн и Хип-Хоп",
+  "highlightsHeading": "RESPUBLİKA VƏ ŞƏHƏR RƏQS ÇEMPİONATLARI",
+  "highlightsHeading_az": "RESPUBLİKA VƏ ŞƏHƏR RƏQS ÇEMPİONATLARI",
+  "highlightsHeading_en": "NATIONAL & CITY DANCE CHAMPIONSHIPS",
+  "highlightsHeading_ru": "РЕСПУБЛИКАНСКИЕ И ГОРОДСКИЕ ЧЕМПИОНАТЫ ПО ТАНЦАМ",
+  "avatarYearTag": "🏆 7 QAT QIZIL ÇEMPİON",
+  "titleBadge": "🏆 7 Qat Qızıl Təltif & Çempion",
+  "titleBadge_az": "🏆 7 Qat Qızıl Təltif & Çempion",
+  "titleBadge_en": "🏆 7x Gold Awardee & Champion",
+  "titleBadge_ru": "🏆 7-кратная золотая медалистка и чемпионка",
+  "role": "BDRNK Tələbəsi · Respublika Rəqs Çempionatları və K-Pop Festivallarının Qalibi",
+  "role_az": "BDRNK Tələbəsi · Respublika Rəqs Çempionatları və K-Pop Festivallarının Qalibi",
+  "role_en": "BDRNK Student · Winner of National Dance Championships & K-Pop Festivals",
+  "role_ru": "Студентка БГКСТ · Победительница республиканских чемпионатов по танцам и фестивалей K-Pop",
+  "categories": [
+    "arts"
+  ],
+  "statusText": "7 Rəsmi Qızıl Diplom və Çempionluq Mükafatı",
+  "statusText_az": "7 Rəsmi Qızıl Diplom və Çempionluq Mükafatı",
+  "statusText_en": "7 Official Gold Diplomas & Championship Awards",
+  "statusText_ru": "7 официальных золотых дипломов и наград",
+  "quote": "Səhnə mənim üçün emosiyaları, zəhməti və sənət sevgisini tamaşaçı ilə bölüşməkdir. Hər ritm və hər hərəkət yeni bir zirvəyə addımdır.",
+  "quote_az": "Səhnə mənim üçün emosiyaları, zəhməti və sənət sevgisini tamaşaçı ilə bölüşməkdir. Hər ritm və hər hərəkət yeni bir zirvəyə addımdır.",
+  "quote_en": "The stage is sharing emotion, hard work, and artistic love with the audience. Every rhythm is a step toward a new summit.",
+  "quote_ru": "Сцена для меня — это возможность делиться эмоциями, трудом и любовью к искусству. Каждый ритм — шаг к новой вершине.",
+  "flags": [
+    {
+      "name": "Azərbaycan",
+      "name_az": "Azərbaycan",
+      "name_en": "Azerbaijan",
+      "name_ru": "Азербайджан",
+      "emoji": "🇦🇿",
+      "note": "ARA & AGİ Respublika Çempionatları",
+      "note_az": "ARA & AGİ Respublika Çempionatları",
+      "note_en": "ADA & AYU National Championships",
+      "note_ru": "Чемпионаты АТА и САМ"
+    }
+  ],
+  "keyHighlights": [
+    {
+      "year": "2025",
+      "flag": "🥇",
+      "country": "Azərbaycan",
+      "country_az": "Azərbaycan",
+      "country_en": "Azerbaijan",
+      "country_ru": "Азербайджан",
+      "title": "Azərbaycan Rəqs Çempionatı 2025 — I Yer (Qızıl)",
+      "title_az": "Azərbaycan Rəqs Çempionatı 2025 — I Yer (Qızıl)",
+      "title_en": "Azerbaijan Dance Championship 2025 — 1st Place (Gold)",
+      "title_ru": "Чемпионат Азербайджана по танцам 2025 — I место (Золото)",
+      "text": "Azərbaycan Rəqs Assosiasiyası və Azərbaycan Gənclər İttifaqının rəsmi Respublika çempionatında ən yüksək bal toplayaraq I YERƏ layiq görülmüşdür.",
+      "text_az": "Azərbaycan Rəqs Assosiasiyası və Azərbaycan Gənclər İttifaqının rəsmi Respublika çempionatında ən yüksək bal toplayaraq I YERƏ layiq görülmüşdür.",
+      "text_en": "Earned top scores to win 1st Place at the official National Championship by Azerbaijan Dance Association and AYU.",
+      "text_ru": "Набрала высший балл и завоевала I место на официальном чемпионате Ассоциации танца Азербайджана и САМ."
+    },
+    {
+      "year": "2025",
+      "flag": "🥇",
+      "country": "Azərbaycan",
+      "country_az": "Azərbaycan",
+      "country_en": "Azerbaijan",
+      "country_ru": "Азербайджан",
+      "title": "Bakı Rəqs Çempionatı & K-POP Talent Festival — Çempion",
+      "title_az": "Bakı Rəqs Çempionatı & K-POP Talent Festival — Çempion",
+      "title_en": "Baku Dance Championship & K-POP Talent Festival — Champion",
+      "title_ru": "Чемпионат Баку по танцам и фестиваль K-Pop — Чемпион",
+      "text": "Paytaxt birinciliyində və K-Pop gənclər festivalında fərdi və komanda çıxışları ilə I Yer və xüsusi dərəcəli mükafatlar qazanmışdır.",
+      "text_az": "Paytaxt birinciliyində və K-Pop gənclər festivalında fərdi və komanda çıxışları ilə I Yer və xüsusi dərəcəli mükafatlar qazanmışdır.",
+      "text_en": "Claimed 1st place and special laureateships at the Baku City Championship and K-Pop Festival.",
+      "text_ru": "Завоевала I место и специальные награды на первенстве столицы и молодежном фестивале K-Pop."
+    }
+  ],
+  "tags": [
+    "#ƏliyevaAysel",
+    "#Rəqs",
+    "#KPop",
+    "#ModernDance",
+    "#HipHop",
+    "#AzərbaycanRəqsÇempionatı",
+    "#BakıRəqsÇempionatı",
+    "#QızılMedal_7Qat",
+    "#BDRNK_FəxriTələbə"
+  ],
+  "tags_az": [
+    "#ƏliyevaAysel",
+    "#Rəqs",
+    "#KPop",
+    "#ModernDance",
+    "#HipHop",
+    "#AzərbaycanRəqsÇempionatı",
+    "#BakıRəqsÇempionatı",
+    "#QızılMedal_7Qat",
+    "#BDRNK_FəxriTələbə"
+  ],
+  "tags_en": [
+    "#AyselAliyeva",
+    "#Dance",
+    "#KPop",
+    "#ModernDance",
+    "#HipHop",
+    "#AzerbaijanDanceChampionship",
+    "#GoldMedalist_7x",
+    "#BDRNK_HonorStudent"
+  ],
+  "tags_ru": [
+    "#АлиеваАйсель",
+    "#Танцы",
+    "#KPop",
+    "#Модерн",
+    "#ХипХоп",
+    "#ЧемпионатАзербайджанаПоТанцам",
+    "#7кратнаяЗолотаяМедалистка",
+    "#ПочетныйСтудентБГКСТ"
+  ],
+  "timeline": [
+    {
+      "year": "2025",
+      "badge": "💃 Respublika Çempionatı · I Yer",
+      "badge_az": "💃 Respublika Çempionatı · I Yer",
+      "badge_en": "💃 National Championship · 1st Place",
+      "badge_ru": "💃 Чемпионат Республики · I место",
+      "title": "Azərbaycan Rəqs Çempionatı 2025 (ARA & AGİ)",
+      "title_az": "Azərbaycan Rəqs Çempionatı 2025 (ARA & AGİ)",
+      "title_en": "Azerbaijan Dance Championship 2025 (ADA & AYU)",
+      "title_ru": "Чемпионат Азербайджана по танцам 2025 (АТА и САМ)",
+      "desc": "Müasir xoreoqrafiya və səhnə məharəti üzrə I YER Qızıl Diplom və medalına layiq görülmüşdür.",
+      "desc_az": "Müasir xoreoqrafiya və səhnə məharəti üzrə I YER Qızıl Diplom və medalına layiq görülmüşdür.",
+      "desc_en": "Awarded 1st Place Gold Diploma and medal for modern choreography and stage art.",
+      "desc_ru": "Удостоена I места, Золотого диплома и медали за современную хореографию."
+    },
+    {
+      "year": "2025",
+      "badge": "✨ Bakı Çempionatı · I Yer",
+      "badge_az": "✨ Bakı Çempionatı · I Yer",
+      "badge_en": "✨ Baku Championship · 1st Place",
+      "badge_ru": "✨ Чемпионат Баку · I место",
+      "title": "Bakı Şəhər Rəqs Çempionatı 2025",
+      "title_az": "Bakı Şəhər Rəqs Çempionatı 2025",
+      "title_en": "Baku City Dance Championship 2025",
+      "title_ru": "Чемпионат города Баку по танцам 2025",
+      "desc": "Şəhər birinciliyində solo və qrup nümayişlərində I Yer Çempionluğu.",
+      "desc_az": "Şəhər birinciliyində solo və qrup nümayişlərində I Yer Çempionluğu.",
+      "desc_en": "Championship 1st place in solo and group categories at Baku City event.",
+      "desc_ru": "Чемпионство I место в сольных и групповых номерах на первенстве Баку."
+    },
+    {
+      "year": "2025",
+      "badge": "🎵 K-POP Festivalı · I Yer",
+      "badge_az": "🎵 K-POP Festivalı · I Yer",
+      "badge_en": "🎵 K-POP Festival · 1st Place",
+      "badge_ru": "🎵 Фестиваль K-Pop · I место",
+      "title": "K-POP Talent Festival 2025",
+      "title_az": "K-POP Talent Festival 2025",
+      "title_en": "K-POP Talent Festival 2025",
+      "title_ru": "K-POP Talent Festival 2025",
+      "desc": "Gənclər arasında keçirilən istedad festivalında I Yer Qızıl Diplomat.",
+      "desc_az": "Gənclər arasında keçirilən istedad festivalında I Yer Qızıl Diplomat.",
+      "desc_en": "1st place gold laureate at the youth talent festival.",
+      "desc_ru": "Золотой дипломант I степени молодежного фестиваля талантов."
+    },
+    {
+      "year": "2025",
+      "badge": "🔥 Hip-Hop Show · I Dərəcə",
+      "badge_az": "🔥 Hip-Hop Show · I Dərəcə",
+      "badge_en": "🔥 Hip-Hop Show · 1st Degree",
+      "badge_ru": "🔥 Хип-хоп шоу · I Степень",
+      "title": "AGİ Hip-Hop & Modern Dance Show",
+      "title_az": "AGİ Hip-Hop & Modern Dance Show",
+      "title_en": "AYU Hip-Hop & Modern Dance Show",
+      "title_ru": "Хип-хоп шоу САМ",
+      "desc": "Küçə rəqsləri və müasir rəqs istiqamətində I Dərəcəli Diplomant.",
+      "desc_az": "Küçə rəqsləri və müasir rəqs istiqamətində I Dərəcəli Diplomant.",
+      "desc_en": "1st Degree Laureate in street dance and modern styles.",
+      "desc_ru": "Дипломант I степени по уличным и современным танцам."
+    },
+    {
+      "year": "2025",
+      "badge": "🏆 Azərbaycan Kuboku · I Yer",
+      "badge_az": "🏆 Azərbaycan Kuboku · I Yer",
+      "badge_en": "🏆 Azerbaijan Cup · 1st Place",
+      "badge_ru": "🏆 Кубок Азербайджана · I место",
+      "title": "Azərbaycan Rəqs Kuboku Yarışması",
+      "title_az": "Azərbaycan Rəqs Kuboku Yarışması",
+      "title_en": "Azerbaijan Dance Cup Competition",
+      "title_ru": "Кубок Азербайджана по танцам",
+      "desc": "Respublika kuboku yarışmasında I Yer Qalibi.",
+      "desc_az": "Respublika kuboku yarışmasında I Yer Qalibi.",
+      "desc_en": "1st Place Winner at the National Cup event.",
+      "desc_ru": "Победительница (I место) на Кубке Республики."
+    },
+    {
+      "year": "2025",
+      "badge": "🌟 İstedadlı Gənclər · I Yer",
+      "badge_az": "🌟 İstedadlı Gənclər · I Yer",
+      "badge_en": "🌟 Talented Youth · 1st Place",
+      "badge_ru": "🌟 Талантливая молодежь · I место",
+      "title": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi",
+      "title_az": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi",
+      "title_en": "National Talented Youth Dance Contest",
+      "title_ru": "Республиканский конкурс талантливой молодежи",
+      "desc": "İstedadlı gənclər rəqs yarışmasında I Yer.",
+      "desc_az": "İstedadlı gənclər rəqs yarışmasında I Yer.",
+      "desc_en": "1st place at the youth dance showcase.",
+      "desc_ru": "I место на конкурсе танцевальной молодежи."
+    },
+    {
+      "year": "2025",
+      "badge": "🎖️ Xüsusi Nailiyyət · Qızıl Diplom",
+      "badge_az": "🎖️ Xüsusi Nailiyyət · Qızıl Diplom",
+      "badge_en": "🎖️ Special Achievement · Gold Diploma",
+      "badge_ru": "🎖️ Особые достижения · Золотой диплом",
+      "title": "Rəqs Sənəti üzrə Xüsusi Nailiyyət Sertifikatı",
+      "title_az": "Rəqs Sənəti üzrə Xüsusi Nailiyyət Sertifikatı",
+      "title_en": "Special Achievement Certificate in Dance Arts",
+      "title_ru": "Сертификат за особые достижения в искусстве танца",
+      "desc": "Xüsusi səhnə məharəti və uğurlu bədii çıxışa görə Fəxri Sertifikat.",
+      "desc_az": "Xüsusi səhnə məharəti və uğurlu bədii çıxışa görə Fəxri Sertifikat.",
+      "desc_en": "Honorary certificate for exceptional stage mastery and artistic performance.",
+      "desc_ru": "Почетный сертификат за высокое сценическое мастерство."
+    }
+  ],
+  "fullBio": [
+    "Əliyeva Aysel Bakı Dövlət Rabitə və Nəqliyyat Kollecinin mədəni və ictimai həyatında fəal iştirak edən, səhnə mədəniyyəti və rəqs sənətində parlaq istedadı ilə seçilən fəxri tələbəmizdir.",
+    "2025-ci il ərzində Azərbaycan Rəqs Assosiasiyası və Azərbaycan Gənclər İttifaqının təşkil etdiyi Respublika və Bakı çempionatlarında, K-POP Talent Festivalında və müasir rəqs yarışmalarında ardıcıl 7 dəfə I Yerə və ali dərəcəli diplomant adlarına layiq görülmüşdür.",
+    "Kollecimizin tələbələri arasında incəsənətə, estetik zövqə və zəhmətkeşliyə ən gözəl örnək olan Aysel kollecimizi bütün səhnələrdə qürurla təmsil edir."
+  ],
+  "fullBio_az": [
+    "Əliyeva Aysel Bakı Dövlət Rabitə və Nəqliyyat Kollecinin mədəni və ictimai həyatında fəal iştirak edən, səhnə mədəniyyəti və rəqs sənətində parlaq istedadı ilə seçilən fəxri tələbəmizdir.",
+    "2025-ci il ərzində Azərbaycan Rəqs Assosiasiyası və Azərbaycan Gənclər İttifaqının təşkil etdiyi Respublika və Bakı çempionatlarında, K-POP Talent Festivalında və müasir rəqs yarışmalarında ardıcıl 7 dəfə I Yerə və ali dərəcəli diplomant adlarına layiq görülmüşdür.",
+    "Kollecimizin tələbələri arasında incəsənətə, estetik zövqə və zəhmətkeşliyə ən gözəl örnək olan Aysel kollecimizi bütün səhnələrdə qürurla təmsil edir."
+  ],
+  "fullBio_en": [
+    "Aysel Aliyeva is a distinguished student at Baku State College of Communications and Transport, renowned for her vibrant talent in dance arts and active involvement in cultural life.",
+    "Throughout 2025, she has garnered 7 consecutive 1st Place awards and elite laureateships at the Azerbaijan Dance Championship, Baku Dance Championship, K-POP Talent Festival, and street dance showcases.",
+    "Exemplifying artistic grace, dedication, and creative passion, Aysel proudly represents our college across leading cultural stages."
+  ],
+  "fullBio_ru": [
+    "Алиева Айсель — почетная студентка Бакинского государственного колледжа связи и транспорта, отличающаяся ярким талантом в танцевальном искусстве и активным участием в культурной жизни.",
+    "В течение 2025 года она завоевала 7 первых мест (I Место) и почетных дипломов на чемпионате Азербайджана по танцам, чемпионате Баку, K-POP фестивале и конкурсах современного танца.",
+    "Являясь образцом трудолюбия и эстетического вкуса, Айсель с гордостью представляет наш колледж на ведущих сценах республики."
+  ],
+  "certificates": [
+    {
+      "icon": "🥇",
+      "title": "Azərbaycan Rəqs Çempionatı 2025 — I Yer",
+      "title_az": "Azərbaycan Rəqs Çempionatı 2025 — I Yer",
+      "title_en": "Azerbaijan Dance Championship 2025 — 1st Place",
+      "title_ru": "Чемпионат Азербайджана по танцам 2025 — I место",
+      "sub": "Azərbaycan Rəqs Assosiasiyası & AGİ",
+      "sub_az": "Azərbaycan Rəqs Assosiasiyası & AGİ",
+      "sub_en": "Azerbaijan Dance Association & AYU",
+      "sub_ru": "Ассоциация танца Азербайджана и САМ"
+    },
+    {
+      "icon": "✨",
+      "title": "Bakı Rəqs Çempionatı 2025 — I Yer",
+      "title_az": "Bakı Rəqs Çempionatı 2025 — I Yer",
+      "title_en": "Baku Dance Championship 2025 — 1st Place",
+      "title_ru": "Чемпионат Баку по танцам 2025 — I место",
+      "sub": "Şəhər Birinciliyi · Qızıl Medal",
+      "sub_az": "Şəhər Birinciliyi · Qızıl Medal",
+      "sub_en": "City Championship · Gold Medal",
+      "sub_ru": "Первенство города · Золотая медаль"
+    },
+    {
+      "icon": "🎵",
+      "title": "K-POP Talent Festival 2025 — I Yer Çempionu",
+      "title_az": "K-POP Talent Festival 2025 — I Yer Çempionu",
+      "title_en": "K-POP Talent Festival 2025 — 1st Place Champion",
+      "title_ru": "K-POP Talent Festival 2025 — Чемпион (I место)",
+      "sub": "Gənclər Festivalı · Qızıl Diplom",
+      "sub_az": "Gənclər Festivalı · Qızıl Diplom",
+      "sub_en": "Youth Festival · Gold Diploma",
+      "sub_ru": "Молодежный фестиваль · Золотой диплом"
+    },
+    {
+      "icon": "🔥",
+      "title": "AGİ Hip-Hop & Modern Dance Show — I Dərəcə",
+      "title_az": "AGİ Hip-Hop & Modern Dance Show — I Dərəcə",
+      "title_en": "AYU Hip-Hop & Modern Dance Show — 1st Degree",
+      "title_ru": "Хип-хоп шоу САМ — Дипломант I Степени",
+      "sub": "Müasir Küçə Rəqsləri Layihəsi",
+      "sub_az": "Müasir Küçə Rəqsləri Layihəsi",
+      "sub_en": "Modern Street Dance Project",
+      "sub_ru": "Проект современного уличного танца"
+    },
+    {
+      "icon": "🏆",
+      "title": "Azərbaycan Rəqs Kuboku — I Yer",
+      "title_az": "Azərbaycan Rəqs Kuboku — I Yer",
+      "title_en": "Azerbaijan Dance Cup — 1st Place",
+      "title_ru": "Кубок Азербайджана по танцам — I место",
+      "sub": "Respublika Kuboku · Qızıl Mükafat",
+      "sub_az": "Respublika Kuboku · Qızıl Mükafat",
+      "sub_en": "National Cup · Gold Award",
+      "sub_ru": "Кубок Республики · Золотая награда"
+    },
+    {
+      "icon": "🌟",
+      "title": "Respublika İstedadlı Gənclər Müsabiqəsi — I Yer",
+      "title_az": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi — I Yer",
+      "title_en": "National Talented Youth Dance Contest — 1st Place",
+      "title_ru": "Республиканский конкурс талантливой молодежи — I место",
+      "sub": "İstedadlı Gənclər Şousu",
+      "sub_az": "İstedadlı Gənclər Şousu",
+      "sub_en": "Talented Youth Showcase",
+      "sub_ru": "Шоу талантливой молодежи"
+    },
+    {
+      "icon": "🎖️",
+      "title": "Rəqs Sənəti Xüsusi Nailiyyət Sertifikatı",
+      "title_az": "Rəqs Sənəti Xüsusi Nailiyyət Sertifikatı",
+      "title_en": "Dance Art Special Achievement Certificate",
+      "title_ru": "Сертификат за особые достижения в танце",
+      "sub": "Xüsusi Səhnə Məharəti Diplomu",
+      "sub_az": "Xüsusi Səhnə Məharəti Diplomu",
+      "sub_en": "Special Stage Performance Diploma",
+      "sub_ru": "Диплом за сценическое мастерство"
+    }
+  ],
+  "gallery": [
+    {
+      "type": "image",
+      "src": "certificates/cert_aysel_1.jpg",
+      "caption": "Azərbaycan Rəqs Çempionatı 2025 I Yer (Qızıl Medal) Diplomu",
+      "caption_az": "Azərbaycan Rəqs Çempionatı 2025 I Yer (Qızıl Medal) Diplomu",
+      "caption_en": "Official Diploma — 1st Place Azerbaijan Dance Championship 2025",
+      "caption_ru": "Официальный диплом за I место чемпионата Азербайджана по танцам 2025"
+    },
+    {
+      "type": "image",
+      "src": "certificates/cert_aysel_2.jpg",
+      "caption": "Bakı Rəqs Çempionatı 2025 I Yer Diplomu",
+      "caption_az": "Bakı Rəqs Çempionatı 2025 I Yer Diplomu",
+      "caption_en": "Official Diploma — 1st Place Baku Dance Championship 2025",
+      "caption_ru": "Официальный диплом за I место чемпионата Баку по танцам 2025"
+    },
+    {
+      "type": "image",
+      "src": "certificates/cert_aysel_3.jpg",
+      "caption": "K-POP Talent Festival 2025 I Yer Çempionluq Diplomu",
+      "caption_az": "K-POP Talent Festival 2025 I Yer Çempionluq Diplomu",
+      "caption_en": "Official Diploma — 1st Place K-POP Talent Festival 2025",
+      "caption_ru": "Официальный диплом за I место фестиваля K-POP 2025"
+    },
+    {
+      "type": "image",
+      "src": "certificates/cert_aysel_4.jpg",
+      "caption": "AGİ Hip-Hop Show I Dərəcəli Diplomant Təltifi",
+      "caption_az": "AGİ Hip-Hop Show I Dərəcəli Diplomant Təltifi",
+      "caption_en": "Official Award — 1st Degree Laureate AYU Hip-Hop Show",
+      "caption_ru": "Официальная награда дипломанта I степени хип-хоп шоу САМ"
+    },
+    {
+      "type": "image",
+      "src": "certificates/cert_aysel_5.jpg",
+      "caption": "Azərbaycan Rəqs Kuboku I Yer Qalibi Diplomu",
+      "caption_az": "Azərbaycan Rəqs Kuboku I Yer Qalibi Diplomu",
+      "caption_en": "Official Diploma — 1st Place Winner Azerbaijan Dance Cup",
+      "caption_ru": "Официальный диплом за I место Кубка Азербайджана по танцам"
+    },
+    {
+      "type": "image",
+      "src": "certificates/cert_aysel_6.jpg",
+      "caption": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi I Yer Diplomu",
+      "caption_az": "Respublika İstedadlı Gənclər Rəqs Müsabiqəsi I Yer Diplomu",
+      "caption_en": "Official Diploma — 1st Place National Talented Youth Dance Contest",
+      "caption_ru": "Официальный диплом за I место конкурса талантливой молодежи"
+    },
+    {
+      "type": "image",
+      "src": "certificates/cert_aysel_7.jpg",
+      "caption": "Rəqs Sənəti üzrə Xüsusi Nailiyyət Sertifikatı & Qızıl Diplom",
+      "caption_az": "Rəqs Sənəti üzrə Xüsusi Nailiyyət Sertifikatı & Qızıl Diplom",
+      "caption_en": "Special Achievement Certificate & Gold Diploma in Dance Arts",
+      "caption_ru": "Специальный сертификат достижений в танце и Золотой диплом"
+    }
+  ]
+}
+
+with open("scratch/students_data.json", "w", encoding="utf-8") as f:
+    json.dump([elvin, huseyn, aysel], f, ensure_ascii=False, indent=2)
+
+print("scratch/students_data.json generated successfully!")
