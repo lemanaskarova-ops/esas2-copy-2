@@ -4572,6 +4572,41 @@ const staffData = {
    ══════════════════════════════════════════════════════════════════════ */
 const openLessonsData = [
   {
+    id: "alida_lekal_eyrileri",
+    official_id: "open_lesson_alida_mahmudova_lekal_2026",
+    subject_az: "Mühəndis qrafikası",
+    subject_en: "Engineering Graphics",
+    subject_ru: "Инженерная графика",
+    subject_icon: "📐",
+    teacher_az: "Alidə Mahmudova",
+    teacher_en: "Alida Mahmudova",
+    teacher_ru: "Алида Махмудова",
+    teacher_role_az: "Mühəndis qrafikası fənn müəllimi",
+    date: "26 Noyabr 2026",
+    date_az: "26 Noyabr 2026",
+    date_en: "26 November 2026",
+    date_ru: "26 Ноября 2026",
+    title_az: "Nəqliyyat şöbəsinin 815-ci qrupunda müəllim Alidə Mahmudovanın “Lekal əyriləri. Ellips, Arximed” mövzusunda açıq dərsi",
+    title_en: "Open Lesson on “Lekal Curves. Ellipse, Archimedes” by Instructor Alida Mahmudova in Group 815 of Transport Department",
+    title_ru: "Открытый урок на тему «Лекальные кривые. Эллипс, Архимед» преподавателя Алиды Махмудовой в группе 815 транспортного отделения",
+    desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində Nəqliyyat şöbəsinin 815-ci qrupunda müəllim Alidə Mahmudovanın iştirakı ilə “Lekal əyriləri. Ellips, Arximed” mövzusunda açıq dərs təşkil olundu.",
+    desc_en: "An engaging open lesson titled “Lekal Curves. Ellipse, Archimedes” was organized by instructor Alida Mahmudova for group 815 of the Transport Department at BDRNK.",
+    desc_ru: "В группе 815 транспортного отделения колледжа преподавателем Алидой Махмудовой организован открытый урок по теме «Лекальные кривые. Эллипс, Архимед».",
+    full_az: "Bu gün Bakı Dövlət Rabitə və Nəqliyyat Kollecində Nəqliyyat şöbəsinin 815-ci qrupunda müəllim Alidə Mahmudovanın iştirakı ilə “Lekal əyriləri. Ellips, Arximed” mövzusunda açıq dərs təşkil olundu.\n\nDərs zamanı mövzunun tədrisinə, nəzəri biliklərin möhkəmləndirilməsinə və tələbələrin fəallığının artırılmasına xüsusi diqqət yetirildi.\n\nAçıq dərsin keçirilməsində əsas məqsəd tədrisin keyfiyyətinin yüksəldilməsi, müasir təlim metodlarının tətbiqi və pedaqoji təcrübənin təkmilləşdirilməsidir.\n\nAlidə Mahmudovaya pedaqoji fəaliyyətində uğurlar və yeni nailiyyətlər arzulayırıq!\n\n#AçıqDərs #Təhsil #NəqliyyatŞöbəsi #BakıDövlətRabitəVəNəqliyyatKolleci #MühəndisQrafikası #AlidəMahmudova",
+    full_en: "Today, an open lesson on the topic “Lekal Curves. Ellipse, Archimedes” was organized at Baku State Communications and Transport College with the participation of instructor Alida Mahmudova in group 815 of the Transport Department.\n\nDuring the lesson, special attention was paid to topic instruction, consolidating theoretical knowledge, and enhancing student engagement.\n\nThe main objective of holding the open lesson is improving education quality, applying modern pedagogical methods, and upgrading instructional expertise.\n\nWe wish Alida Mahmudova continuous success and new milestones in her pedagogical journey!",
+    full_ru: "Сегодня в Бакинском государственном колледже связи и транспорта в группе 815 транспортного отделения преподавателем Алидой Махмудовой был организован открытый урок на тему «Лекальные кривые. Эллипс, Архимед».\n\nВ ходе занятия особое внимание уделялось методике преподавания предмета, закреплению теоретических знаний и повышению активности студентов.\n\nОсновная цель проведения открытого урока — повышение качества образования, применение современных методов обучения и совершенствование педагогического опыта.\n\nЖелаем Алиде Махмудовой успехов в педагогической деятельности и новых достижений!",
+    videos: [
+      {
+        src: "alida_mahmudova_aciq_ders.mp4",
+        poster: "alida_mahmudova_aciq_ders_poster.jpg",
+        title_az: "“Lekal əyriləri. Ellips, Arximed” açıq dərsi (815-ci qrup)",
+        title_en: "Open Lesson “Lekal Curves. Ellipse, Archimedes” (Group 815)",
+        title_ru: "Открытый урок «Лекальные кривые. Эллипс, Архимед» (группа 815)"
+      }
+    ],
+    tags: ["Açıq Dərs", "Mühəndis Qrafikası", "Alidə Mahmudova", "Nəqliyyat Şöbəsi", "815-ci Qrup"]
+  },
+  {
     id: "susanna_riyaziyyat",
     official_id: "susanna_riyaziyyat_aciq_ders_2026",
     subject_az: "Riyaziyyat",
@@ -4721,6 +4756,28 @@ const openLessonsData = [
 ];
 
 const newsData = [
+  {
+    "id": 121,
+    "official_id": "alida_mahmudova_aciq_ders_2026",
+    "title_az": "Nəqliyyat şöbəsində Alidə Mahmudovanın “Lekal əyriləri. Ellips, Arximed” mövzusunda açıq dərsi keçirildi",
+    "title_en": "Open Lesson by Alida Mahmudova on “Lekal Curves. Ellipse, Archimedes” Held in Transport Department",
+    "title_ru": "В транспортном отделении прошел открытый урок Алиды Махмудовой по теме «Лекальные кривые. Эллипс, Архимед»",
+    "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində Nəqliyyat şöbəsinin 815-ci qrupunda müəllim Alidə Mahmudovanın iştirakı ilə “Lekal əyriləri. Ellips, Arximed” mövzusunda açıq dərs təşkil olundu...",
+    "desc_en": "An open lesson on “Lekal Curves. Ellipse, Archimedes” was organized by instructor Alida Mahmudova for group 815 of the Transport Department at BDRNK...",
+    "desc_ru": "В группе 815 транспортного отделения колледжа преподавателем Алидой Махмудовой проведен открытый урок по теме «Лекальные кривые. Эллипс, Архимед»...",
+    "full_az": "Bu gün Bakı Dövlət Rabitə və Nəqliyyat Kollecində Nəqliyyat şöbəsinin 815-ci qrupunda müəllim Alidə Mahmudovanın iştirakı ilə “Lekal əyriləri. Ellips, Arximed” mövzusunda açıq dərs təşkil olundu.\n\nDərs zamanı mövzunun tədrisinə, nəzəri biliklərin möhkəmləndirilməsinə və tələbələrin fəallığının artırılmasına xüsusi diqqət yetirildi.\n\nAçıq dərsin keçirilməsində əsas məqsəd tədrisin keyfiyyətinin yüksəldilməsi, müasir təlim metodlarının tətbiqi və pedaqoji təcrübənin təkmilləşdirilməsidir.\n\nAlidə Mahmudovaya pedaqoji fəaliyyətində uğurlar və yeni nailiyyətlər arzulayırıq!\n\n#AçıqDərs #Təhsil #NəqliyyatŞöbəsi #BakıDövlətRabitəVəNəqliyyatKolleci #MühəndisQrafikası #AlidəMahmudova",
+    "full_en": "Today, an open lesson on the topic “Lekal Curves. Ellipse, Archimedes” was organized at Baku State Communications and Transport College with the participation of instructor Alida Mahmudova in group 815 of the Transport Department.\n\nDuring the lesson, special attention was paid to topic instruction, consolidating theoretical knowledge, and enhancing student engagement.\n\nThe main objective of holding the open lesson is improving education quality, applying modern pedagogical methods, and upgrading instructional expertise.\n\nWe wish Alida Mahmudova continuous success and new milestones in her pedagogical journey!",
+    "full_ru": "Сегодня в Бакинском государственном колледже связи и транспорта в группе 815 транспортного отделения преподавателем Алидой Махмудовой был организован открытый урок на тему «Лекальные кривые. Эллипс, Архимед».\n\nВ ходе занятия особое внимание уделялось методике преподавания предмета, закреплению теоретических знаний и повышению активности студентов.\n\nОсновная цель проведения открытого урока — повышение качества образования, применение современных методов обучения и совершенствование педагогического опыта.\n\nЖелаем Алиде Махмудовой успехов в педагогической деятельности и новых достижений!",
+    "date": "26 Noyabr 2026",
+    "date_az": "26 Noyabr 2026",
+    "date_en": "26 November 2026",
+    "date_ru": "26 Ноября 2026",
+    "image": "alida_mahmudova_aciq_ders.mp4",
+    "extra_image": "alida_mahmudova_aciq_ders_poster.jpg",
+    "tag_az": "Açıq Dərs / Mühəndis Qrafikası",
+    "tag_en": "Open Lesson / Engineering Graphics",
+    "tag_ru": "Открытый урок / Инженерная графика"
+  },
   {
     "id": 120,
     "official_id": "kitabcilar_hekaye_musabiqesi_2026",
@@ -13406,6 +13463,19 @@ function initGalleryModule() {
       }
     ],
     study: [
+      {
+        type: "video",
+        src: "alida_mahmudova_aciq_ders.mp4",
+        poster: "alida_mahmudova_aciq_ders_poster.jpg",
+        tall: true,
+        label: "Mühəndis qrafikası · “Lekal əyriləri. Ellips, Arximed” Açıq Dərsi (Alidə Mahmudova)",
+        label_az: "Mühəndis qrafikası · “Lekal əyriləri. Ellips, Arximed” Açıq Dərsi (Alidə Mahmudova)",
+        label_en: "Engineering Graphics · “Lekal Curves. Ellipse, Archimedes” Open Lesson (Alida Mahmudova)",
+        label_ru: "Инженерная графика · Открытый урок «Лекальные кривые. Эллипс, Архимед» (Алида Махмудова)",
+        badge: "AÇIQ DƏRS · MÜHƏNDİS QRAFİKASI",
+        catTitle: "Dərs Mühiti · Açıq Dərs",
+        i18n: "gallery_cat_study",
+      },
       {
         type: "video",
         src: "susanna_riyaziyyat_aciq_ders.mp4",
