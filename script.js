@@ -4722,6 +4722,28 @@ const openLessonsData = [
 
 const newsData = [
   {
+    "id": 120,
+    "official_id": "kitabcilar_hekaye_musabiqesi_2026",
+    "title_az": "Kitabçılar Birliyində hekayələr müsabiqəsinin qalibləri mükafatlandırılıb",
+    "title_en": "Winners of the Short Story Competition Awarded at the Union of Bookmakers",
+    "title_ru": "В Союзе книгоиздателей награждены победители конкурса рассказов",
+    "desc_az": "Kitabçılar Birliyində “Sözə həyat ver, hekayəni yaz!” şüarı altında keçirilən hekayələr müsabiqəsinin yekunlarına həsr olunmuş mükafatlandırma mərasimi təşkil olunub. Tədbirdə BDRNK-nın tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov da iştirak edib...",
+    "desc_en": "An award ceremony dedicated to the results of the short story competition held under the slogan “Give Life to Words, Write Your Story!” was held at the Union of Bookmakers, attended by BDRNK Deputy Director Shahmurad Mammadov...",
+    "desc_ru": "В Союзе книгоиздателей состоялась церемония награждения по итогам конкурса рассказов под девизом «Вдохни жизнь в слово, напиши свою историю!», в которой принял участие заместитель директора БДРНК Шахмурад Мамедов...",
+    "full_az": "Kitabçılar Birliyində “Sözə həyat ver, hekayəni yaz!” şüarı altında keçirilən hekayələr müsabiqəsinin yekunlarına həsr olunmuş mükafatlandırma mərasimi təşkil olunub.\n\nTədbirdə Bakı Dövlət Rabitə və Nəqliyyat Kollecinin tərbiyə işləri üzrə direktor müavini Şahmurad Məmmədov da iştirak edib.\n\nMüsabiqəyə təqdim olunan 23 namizədin əsərləri peşəkar münsiflər heyəti tərəfindən qiymətləndirilib, fərqlənən müəlliflər müxtəlif nominasiyalar üzrə müəyyən edilərək mükafatlandırılıblar.\n\nMüsabiqənin əsas məqsədi bədii yaradıcılığın inkişafına dəstək vermək, istedadlı müəllifləri üzə çıxarmaq, müasir Azərbaycan ədəbiyyatının zənginləşməsinə töhfə vermək və hekayə janrına marağı artırmaqdır.\n\n“Biz söz və qələm sahiblərinə körpü oluruq” devizini rəhbər tutan təşkilat bu təşəbbüslə yaradıcı insanları bir araya gətirməyi, onların ədəbi potensialının üzə çıxarılmasını və söz sənətinin inkişafını təşviq etməyi hədəfləyir.\n\nBelə ədəbi təşəbbüslər milli ədəbiyyatımızın inkişafına, yeni müəlliflərin tanınmasına və yaradıcı mühitin genişlənməsinə mühüm töhfə verir.\n\n#KitabçılarBirliyi #HekayələrMüsabiqəsi #ŞahmuradMəmmədov #BədiiYaradıcılıq #BakıDövlətRabitəVəNəqliyyatKolleci #Ədəbiyyat #MilliƏdəbiyyat",
+    "full_en": "An award ceremony dedicated to the results of the short story competition held under the slogan “Give Life to Words, Write Your Story!” was organized at the Union of Bookmakers.\n\nShahmurad Mammadov, Deputy Director for Student Affairs of Baku State Communications and Transport College, also took part in the prestigious ceremony.\n\nThe works submitted by 23 candidates were evaluated by a professional jury panel, and distinguished authors were recognized and awarded across various literary categories.\n\nThe primary objective of the competition is to foster creative writing, discover talented new authors, enrich modern Azerbaijani literature, and enhance public interest in the short story genre.\n\nGuided by the motto “We serve as a bridge for wordsmiths and writers,” the organization aims to unite creative minds, unleash their literary potential, and promote the art of expression. Such literary initiatives make a significant contribution to national cultural enrichment and expanding creative horizons.",
+    "full_ru": "В Союзе книгоиздателей состоялась торжественная церемония награждения по итогам конкурса рассказов, прошедшего под девизом «Вдохни жизнь в слово, напиши свою историю!».\n\nВ мероприятии также принял участие заместитель директора Бакинского государственного колледжа связи и транспорта по воспитательной работе Шахмурад Мамедов.\n\nРаботы 23 участников, представленные на конкурс, были всесторонне оценены профессиональным жюри, а отличившиеся авторы были отмечены дипломами и памятными наградами в различных номинациях.\n\nГлавная цель конкурса — поддержка художественного творчества, выявление талантливых писателей, обогащение современной азербайджанской литературы и популяризация жанра короткого рассказа.\n\nРуководствуясь девизом «Мы становимся мостом для мастеров слова и пера», организация стремится объединить творческих людей, раскрыть их литературный потенциал и содействовать развитию искусства слова. Подобные литературные инициативы вносят весомый вклад в укрепление национального культурного наследия.",
+    "date": "25 Noyabr 2026",
+    "date_az": "25 Noyabr 2026",
+    "date_en": "25 November 2026",
+    "date_ru": "25 Ноября 2026",
+    "image": "WhatsApp Video 2026-11-25 at 21.13.47.mp4",
+    "extra_image": "kitabcilar_hekaye_musabiqesi_poster.jpg",
+    "tag_az": "Ədəbiyyat / Müsabiqə",
+    "tag_en": "Literature / Contest",
+    "tag_ru": "Литература / Конкурс"
+  },
+  {
     "id": 119,
     "official_id": "zefer_dastani_mugam_2026",
     "title_az": "BDRNK rəhbərliyi Beynəlxalq Muğam Mərkəzində “Zəfər dastanı – Sazın, sözün qüdrətində” konsert proqramında iştirak edib",
