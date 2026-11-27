@@ -4611,6 +4611,41 @@ const staffData = {
    ══════════════════════════════════════════════════════════════════════ */
 const openLessonsData = [
   {
+    id: "gunel_tarverdiyeva_fizika",
+    official_id: "open_lesson_gunel_tarverdiyeva_fizika_2026",
+    subject_az: "Fizika",
+    subject_en: "Physics",
+    subject_ru: "Физика",
+    subject_icon: "⚛️",
+    teacher_az: "Günel Tarverdiyeva",
+    teacher_en: "Gunel Tarverdiyeva",
+    teacher_ru: "Гюнель Тарвердиева",
+    teacher_role_az: "Fizika fənn müəllimi",
+    date: "26 Noyabr 2026",
+    date_az: "26 Noyabr 2026",
+    date_en: "26 November 2026",
+    date_ru: "26 Ноября 2026",
+    title_az: "Müəllim Günel Tarverdiyevanın fizika fənni üzrə açıq dərsi",
+    title_en: "Open Lesson in Physics by Instructor Gunel Tarverdiyeva",
+    title_ru: "Открытый урок по физике преподавателя Гюнель Тарвердиевой",
+    desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində müəllim Günel Tarverdiyevanın fizika fənni üzrə açıq dərsi keçirilmişdir. Dərs prosesində nəzəri biliklərin praktik nümunələrlə əlaqələndirilməsinə, müasir interaktiv təlim metodlarının tətbiqinə xüsusi diqqət yetirilmişdir.",
+    desc_en: "An open lesson in physics was conducted by instructor Gunel Tarverdiyeva at Baku State Communications and Transport College, linking theoretical principles with real-world applications through modern instructional methods.",
+    desc_ru: "В Бакинском государственном колледже связи и транспорта преподавателем Гюнель Тарвердиевой проведен открытый урок по физике с акцентом на связь теории с практическими примерами и интерактивные методы обучения.",
+    full_az: "Fizika yalnız nəzəri biliklər toplusu deyil, ətrafımızda baş verən təbiət hadisələrinin mahiyyətini anlamağa və elmi düşüncə tərzini formalaşdırmağa kömək edən mühüm elmdir.\n\nGünel Tarverdiyevanın fizika fənni üzrə keçirdiyi açıq dərs müasir təlim metodlarının, əyani və interaktiv materialların tətbiqi, tələbələrin fəallığının artırılması baxımından diqqətəlayiq olmuşdur.\n\nDərs prosesində nəzəri biliklərin praktik nümunələrlə əlaqələndirilməsi tədrisin daha maraqlı və səmərəli təşkilinə şərait yaratmışdır.\n\nBelə təşəbbüslər müəllimlərin peşəkar inkişafına və təhsilin keyfiyyətinin yüksəldilməsinə xidmət edir.\n\nBilik elmlə, elm isə təcrübə ilə daha da dəyər qazanır!\n\n#AçıqDərs #Fizika #GünelTarverdiyeva #TəbiətElmləri #Təhsil #BakıDövlətRabitəVəNəqliyyatKolleci",
+    full_en: "Physics is not merely a collection of theoretical postulates, but a vital science that unlocks the essence of natural phenomena and cultivates scientific reasoning.\n\nThe open lesson conducted by instructor Gunel Tarverdiyeva in physics distinguished itself through modern instructional methodologies, dynamic visual and interactive resources, and high student engagement.\n\nLinking fundamental theories with real-world empirical examples created an inspiring, highly effective learning environment.\n\nSuch pedagogical initiatives advance faculty professional mastery and elevate overall academic excellence.\n\nKnowledge gains value through science, and science shines through practical experience!",
+    full_ru: "Физика — это не просто совокупность теоретических знаний, а фундаментальная наука, помогающая постичь суть природных явлений и сформировать научный образ мышления.\n\nОткрытый урок по физике, проведенный преподавателем Гюнель Тарвердиевой, стал образцом применения передовых методик обучения, наглядных и интерактивных материалов, а также высокой вовлеченности учащихся.\n\nСвязывание теоретических законов с практическими примерами и экспериментами сделало процесс обучения увлекательным и результативным.\n\nПодобные начинания способствуют непрерывному профессиональному росту преподавателей и повышению качества образования в колледже.\n\nЗнания обогащаются наукой, а наука обретает истинную силу на практике!",
+    videos: [
+      {
+        src: "gunel_tarverdiyeva_fizika_aciq_ders.mp4",
+        poster: "gunel_tarverdiyeva_fizika_aciq_ders_poster.jpg",
+        title_az: "Fizika fənni üzrə açıq dərs — Günel Tarverdiyeva",
+        title_en: "Open Lesson in Physics — Gunel Tarverdiyeva",
+        title_ru: "Открытый урок по физике — Гюнель Тарвердиева"
+      }
+    ],
+    tags: ["Açıq Dərs", "Fizika", "Günel Tarverdiyeva", "Təbiət Elmləri", "BDRNK"]
+  },
+  {
     id: "pervane_namazova_yukleme",
     official_id: "open_lesson_pervane_namazova_yukleme_2026",
     subject_az: "Nəqliyyatda yükləmə-boşaltma işləri",
