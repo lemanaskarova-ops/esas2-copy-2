@@ -13313,6 +13313,15 @@ function initGalleryModule() {
   const galleryData = {
     exam: [
       {
+        type: "image",
+        src: "imtahan_telimati.jpg",
+        label: "Kollokvium və Semestr İmtahanlarında İştirak Edən Tələbələr Üçün Rəsmi Təlimat",
+        label_az: "Kollokvium və Semestr İmtahanlarında İştirak Edən Tələbələr Üçün Rəsmi Təlimat",
+        label_en: "Official Instructions for Students Participating in Colloquiums and Semester Exams",
+        label_ru: "Официальная инструкция для студентов, участвующих в коллоквиумах и семестровых экзаменах",
+        badge: "RƏSMİ TƏLİMAT",
+      },
+      {
         type: "instagram",
         id: "DTPdz9wCPRi",
         postType: "reel",
