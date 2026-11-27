@@ -4572,6 +4572,41 @@ const staffData = {
    ══════════════════════════════════════════════════════════════════════ */
 const openLessonsData = [
   {
+    id: "saglam_heyat_terzi",
+    official_id: "open_lesson_saglam_heyat_terzi_2026",
+    subject_az: "Ümumtəhsil və Maarifləndirmə",
+    subject_en: "General Education & Awareness",
+    subject_ru: "Общее образование и просвещение",
+    subject_icon: "🍏",
+    teacher_az: "Könül Mahmudova, İlahə Qaraxanova",
+    teacher_en: "Konul Mahmudova, Ilaha Garakhanova",
+    teacher_ru: "Кёнуль Махмудова, Илаха Караханова",
+    teacher_role_az: "Kollec müəllimləri və layihə müəllifləri",
+    date: "27 Noyabr 2026",
+    date_az: "27 Noyabr 2026",
+    date_en: "27 November 2026",
+    date_ru: "27 Ноября 2026",
+    title_az: "Könül Mahmudova və İlahə Qaraxanovanın təşəbbüsü ilə “Sağlam həyat tərzi” mövzusunda açıq dərs və maarifləndirici layihə",
+    title_en: "Open Lesson and Educational Project on “Healthy Lifestyle” Initiated by Konul Mahmudova and Ilaha Garakhanova",
+    title_ru: "Открытый урок и просветительский проект на тему «Здоровый образ жизни» по инициативе Кёнуль Махмудовой и Илахи Карахановой",
+    desc_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində müəllimlər Könül Mahmudova və İlahə Qaraxanovanın təşəbbüsü və müəllifliyi ilə “Sağlam həyat tərzi” mövzusunda maarifləndirici layihə hazırlanaraq həyata keçirilib.",
+    desc_en: "An educational open lesson project on “Healthy Lifestyle” was carried out at Baku State Communications and Transport College, authored by instructors Konul Mahmudova and Ilaha Garakhanova.",
+    desc_ru: "В Бакинском государственном колледже связи и транспорта по инициативе и авторству преподавателей Кёнуль Махмудовой и Илахи Карахановой реализован открытый урок-проект на тему «Здоровый образ жизни».",
+    full_az: "Bakı Dövlət Rabitə və Nəqliyyat Kollecində müəllimlər Könül Mahmudova və İlahə Qaraxanovanın təşəbbüsü və müəllifliyi ilə “Sağlam həyat tərzi” mövzusunda maarifləndirici layihə hazırlanaraq həyata keçirilib.\n\nLayihənin əsas məqsədi tələbələr arasında sağlam həyat tərzinin təbliği, düzgün qidalanma vərdişlərinin formalaşdırılması, sağlamlığın qorunması və müxtəlif xəstəliklər barədə məlumatlılığın artırılmasıdır.\n\nTədbir çərçivəsində tələbələrə sağlam həyat tərzinin əsas prinsipləri, şəkərli diabet, insulin hormonunun orqanizmdə rolu, qanda şəkərin səviyyəsinə nəzarətin əhəmiyyəti və sağlamlığın qorunması istiqamətində vacib tövsiyələr təqdim olunub.\n\nLayihənin fərqləndirici cəhəti mövzunun yalnız nəzəri məlumatlarla məhdudlaşmaması, vizual təqdimatlar və interaktiv müzakirələr vasitəsilə tələbələrə çatdırılmasıdır.\n\nKönül Mahmudova və İlahə Qaraxanovanın hazırladığı bu layihə təhsilin yalnız akademik biliklərin ötürülməsindən ibarət olmadığını, eyni zamanda gənclərin sağlam, məsuliyyətli və cəmiyyətə faydalı şəxsiyyət kimi formalaşmasına xidmət etdiyini nümayiş etdirir.\n\n“Sağlam gələcək maarifləndirilmiş gənclərdən başlayır. Sağlamlığın dəyərini bilən, onu qorumağı bacaran gənclər cəmiyyətin ən böyük sərvətidir!”\n\n#AçıqDərs #SağlamHəyatTərzi #KönülMahmudova #İlahəQaraxanova #Maarifləndirmə #BakıDövlətRabitəVəNəqliyyatKolleci",
+    full_en: "An educational project and open lesson on the theme “Healthy Lifestyle” was organized and conducted at Baku State Communications and Transport College under the authorship and initiative of instructors Konul Mahmudova and Ilaha Garakhanova.\n\nThe primary objective of the initiative is promoting healthy living standards among students, establishing proper nutritional habits, safeguarding personal wellness, and elevating disease awareness.\n\nDuring the session, students were provided comprehensive guidance on fundamental principles of health, diabetes mellitus, the biological role of insulin, the critical need for glycemic monitoring, and practical preventive healthcare advice.\n\nA distinctive feature of the project was its interactive format, combining visual presentations, dynamic demonstrations, and peer discussions.\n\nThis project by Konul Mahmudova and Ilaha Garakhanova exemplifies that modern education transcends textbook lectures, nurturing healthy, civic-minded, and responsible future professionals.\n\n“A healthy future begins with educated youth. Youth who cherish and preserve their health are the greatest wealth of our society!”",
+    full_ru: "В Бакинском государственном колледже связи и транспорта по инициативе и авторству преподавателей Кёнуль Махмудовой и Илахи Карахановой был подготовлен и успешно проведен открытый урок и просветительский проект на тему «Здоровый образ жизни».\n\nГлавная цель проекта — популяризация здорового образа жизни среди студенческой молодежи, формирование культуры правильного питания, сохранение здоровья и повышение осведомленности о профилактике различных заболеваний.\n\nВ ходе мероприятия студентам были подробно разъяснены ключевые принципы здорового образа жизни, сущность сахарного диабета, роль гормона инсулина в организме, важность регулярного контроля уровня сахара в крови и даны практические рекомендации.\n\nОтличительной чертой открытого урока стало использование интерактивных визуальных презентаций, наглядных материалов и активных дискуссий со студентами.\n\nПроект преподавателей Кёнуль Махмудовой и Илахи Карахановой наглядно демонстрирует, что образовательный процесс формирует всесторонне развитую, физически здоровую и ответственную личность.\n\n«Здоровое будущее начинается с просвещенной молодежи. Молодые люди, умеющие беречь свое здоровье — главное богатство общества!»",
+    videos: [
+      {
+        src: "saglam_heyat_terzi_aciq_ders.mp4",
+        poster: "saglam_heyat_terzi_aciq_ders_poster.jpg",
+        title_az: "“Sağlam həyat tərzi” maarifləndirici açıq dərsi",
+        title_en: "Open Lesson & Educational Project “Healthy Lifestyle”",
+        title_ru: "Открытый урок и проект «Здоровый образ жизни»"
+      }
+    ],
+    tags: ["Açıq Dərs", "Sağlam Həyat Tərzi", "Könül Mahmudova", "İlahə Qaraxanova", "Maarifləndirmə"]
+  },
+  {
     id: "pervane_namazova_yukleme",
     official_id: "open_lesson_pervane_namazova_yukleme_2026",
     subject_az: "Nəqliyyatda yükləmə-boşaltma işləri",
@@ -4791,6 +4826,28 @@ const openLessonsData = [
 ];
 
 const newsData = [
+  {
+    "id": 123,
+    "official_id": "saglam_heyat_terzi_aciq_ders_2026",
+    "title_az": "Könül Mahmudova və İlahə Qaraxanovanın təşəbbüsü ilə “Sağlam həyat tərzi” mövzusunda maarifləndirici layihə həyata keçirilib",
+    "title_en": "Educational Project on “Healthy Lifestyle” Implemented by Konul Mahmudova and Ilaha Garakhanova",
+    "title_ru": "По инициативе Кёнуль Махмудовой и Илахи Карахановой реализован просветительский проект «Здоровый образ жизни»",
+    "desc_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində müəllimlər Könül Mahmudova və İlahə Qaraxanovanın təşəbbüsü və müəllifliyi ilə “Sağlam həyat tərzi” mövzusunda maarifləndirici layihə hazırlanaraq həyata keçirilib...",
+    "desc_en": "An educational awareness project on “Healthy Lifestyle” was carried out at BDRNK, authored by instructors Konul Mahmudova and Ilaha Garakhanova...",
+    "desc_ru": "В колледже по инициативе и авторству преподавателей Кёнуль Махмудовой и Илахи Карахановой реализован проект «Здоровый образ жизни»...",
+    "full_az": "Bakı Dövlət Rabitə və Nəqliyyat Kollecində müəllimlər Könül Mahmudova və İlahə Qaraxanovanın təşəbbüsü və müəllifliyi ilə “Sağlam həyat tərzi” mövzusunda maarifləndirici layihə hazırlanaraq həyata keçirilib.\n\nLayihənin əsas məqsədi tələbələr arasında sağlam həyat tərzinin təbliği, düzgün qidalanma vərdişlərinin formalaşdırılması, sağlamlığın qorunması və müxtəlif xəstəliklər barədə məlumatlılığın artırılmasıdır.\n\nTədbir çərçivəsində tələbələrə sağlam həyat tərzinin əsas prinsipləri, şəkərli diabet, insulin hormonunun orqanizmdə rolu, qanda şəkərin səviyyəsinə nəzarətin əhəmiyyəti və sağlamlığın qorunması istiqamətində vacib tövsiyələr təqdim olunub.\n\nLayihənin fərqləndirici cəhəti mövzunun yalnız nəzəri məlumatlarla məhdudlaşmaması, vizual təqdimatlar və interaktiv müzakirələr vasitəsilə tələbələrə çatdırılmasıdır.\n\nKönül Mahmudova və İlahə Qaraxanovanın hazırladığı bu layihə təhsilin yalnız akademik biliklərin ötürülməsindən ibarət olmadığını, eyni zamanda gənclərin sağlam, məsuliyyətli və cəmiyyətə faydalı şəxsiyyət kimi formalaşmasına xidmət etdiyini nümayiş etdirir.\n\n“Sağlam gələcək maarifləndirilmiş gənclərdən başlayır. Sağlamlığın dəyərini bilən, onu qorumağı bacaran gənclər cəmiyyətin ən böyük sərvətidir!”\n\n#AçıqDərs #SağlamHəyatTərzi #KönülMahmudova #İlahəQaraxanova #Maarifləndirmə #BakıDövlətRabitəVəNəqliyyatKolleci",
+    "full_en": "An educational project and open lesson on the theme “Healthy Lifestyle” was organized and conducted at Baku State Communications and Transport College under the authorship and initiative of instructors Konul Mahmudova and Ilaha Garakhanova.\n\nThe primary objective of the initiative is promoting healthy living standards among students, establishing proper nutritional habits, safeguarding personal wellness, and elevating disease awareness.\n\nDuring the session, students were provided comprehensive guidance on fundamental principles of health, diabetes mellitus, the biological role of insulin, the critical need for glycemic monitoring, and practical preventive healthcare advice.\n\nA distinctive feature of the project was its interactive format, combining visual presentations, dynamic demonstrations, and peer discussions.\n\nThis project by Konul Mahmudova and Ilaha Garakhanova exemplifies that modern education transcends textbook lectures, nurturing healthy, civic-minded, and responsible future professionals.\n\n“A healthy future begins with educated youth. Youth who cherish and preserve their health are the greatest wealth of our society!”",
+    "full_ru": "В Бакинском государственном колледже связи и транспорта по инициативе и авторству преподавателей Кёнуль Махмудовой и Илахи Карахановой был подготовлен и успешно проведен открытый урок и просветительский проект на тему «Здоровый образ жизни».\n\nГлавная цель проекта — популяризация здорового образа жизни среди студенческой молодежи, формирование культуры правильного питания, сохранение здоровья и повышение осведомленности о профилактике различных заболеваний.\n\nВ ходе мероприятия студентам были подробно разъяснены ключевые принципы здорового образа жизни, сущность сахарного диабета, роль гормона инсулина в организме, важность регулярного контроля уровня сахара в крови и даны практические рекомендации.\n\nОтличительной чертой открытого урока стало использование интерактивных визуальных презентаций, наглядных материалов и активных дискуссий со студентами.\n\nПроект преподавателей Кёнуль Махмудовой и Илахи Карахановой наглядно демонстрирует, что образовательный процесс формирует всесторонне развитую, физически здоровую и ответственную личность.\n\n«Здоровое будущее начинается с просвещенной молодежи. Молодые люди, умеющие беречь свое здоровье — главное богатство общества!»",
+    "date": "27 Noyabr 2026",
+    "date_az": "27 Noyabr 2026",
+    "date_en": "27 November 2026",
+    "date_ru": "27 Ноября 2026",
+    "image": "saglam_heyat_terzi_aciq_ders.mp4",
+    "extra_image": "saglam_heyat_terzi_aciq_ders_poster.jpg",
+    "tag_az": "Açıq Dərs / Maarifləndirmə",
+    "tag_en": "Open Lesson / Awareness",
+    "tag_ru": "Открытый урок / Просвещение"
+  },
   {
     "id": 122,
     "official_id": "pervane_namazova_aciq_ders_2026",
@@ -13520,6 +13577,19 @@ function initGalleryModule() {
       }
     ],
     study: [
+      {
+        type: "video",
+        src: "saglam_heyat_terzi_aciq_ders.mp4",
+        poster: "saglam_heyat_terzi_aciq_ders_poster.jpg",
+        tall: true,
+        label: "Maarifləndirmə · “Sağlam həyat tərzi” Açıq Dərsi (Könül Mahmudova, İlahə Qaraxanova)",
+        label_az: "Maarifləndirmə · “Sağlam həyat tərzi” Açıq Dərsi (Könül Mahmudova, İlahə Qaraxanova)",
+        label_en: "Awareness · “Healthy Lifestyle” Open Lesson (Konul Mahmudova, Ilaha Garakhanova)",
+        label_ru: "Просвещение · Открытый урок «Здоровый образ жизни» (Кёнуль Махмудова, Илаха Караханова)",
+        badge: "AÇIQ DƏRS · MAARİFLƏNDİRMƏ",
+        catTitle: "Dərs Mühiti · Açıq Dərs",
+        i18n: "gallery_cat_study",
+      },
       {
         type: "video",
         src: "pervane_namazova_aciq_ders.mp4",
