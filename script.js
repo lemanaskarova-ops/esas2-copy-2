@@ -1014,6 +1014,18 @@ const i18n = {
     intl_memo_title: "🤝 Memorandumlar",
     intl_memo_cta: "Tam Memorandum Portalını Aç (PDF & Cədvəl) ↗",
     intl_conf_title: "🏛️ Beynəlxalq konfranslar və beynəlxalq görüşlər",
+    intl_conf_card1_tag: "🇺🇿 Daşkənd · İkitərəfli Əməkdaşlıq",
+    intl_conf_card1_title: "Daşkənd Nəqliyyat Texnikumu ilə Onlayn Görüş və Təcrübə Mübadiləsi",
+    intl_conf_card1_desc: "Özbəkistan təhsil müəssisəsi ilə rabitə, logistika və nəqliyyat sahəsində kadr hazırlığı, tədris planlarının inteqrasiyası və qarşılıqlı təcrübə mübadiləsi dialoqu.",
+    intl_conf_card1_link: "Memoranduma Bax ↗",
+    intl_conf_card2_tag: "🇰🇿 Aktau · Üçtərəfli Tədbirlər Planı",
+    intl_conf_card2_title: "ALT Universiteti və Daşkənd ilə Beynəlxalq Əməkdaşlıq Forumu",
+    intl_conf_card2_desc: "Qazaxıstanın ALT Universiteti və Özbəkistanın Daşkənd Nəqliyyat Texnikumu ilə imzalanmış 21 bəndlik icra planı çərçivəsində beynəlxalq tədbirlər və tələbə mobilliyi.",
+    intl_conf_card2_link: "21 Bəndlik Planı İzlə ↗",
+    intl_conf_card3_tag: "🌍 Qlobal İndekslər · Elmi Məruzələr",
+    intl_conf_card3_title: "Xarici İndeksli Elmi Konfranslar və Beynəlxalq Nəşrlər",
+    intl_conf_card3_desc: "Kollec müəllimlərinin xarici impakt faktorlu jurnallarda (Index Copernicus, ERIH PLUS və s.) və beynəlxalq elmi simpoziumlarda dərc edilmiş məruzə və araşdırmaları.",
+    intl_conf_card3_link: "Elmi Fəaliyyətə Keç →",
     intl_cert_title: "🎖️ Beynəlxalq sertifikatlar",
     intl_cert_cta: "Bütün Sertifikatlara Bax (10+) →",
     stu_proj_badge: "🚀 İNNOVASİYA, STEAM VƏ İSTEHSALAT TƏCRÜBƏSİ",
@@ -2323,6 +2335,18 @@ const i18n = {
     intl_memo_title: "🤝 Memorandums",
     intl_memo_cta: "Open Full Memorandum Portal (PDF & Table) ↗",
     intl_conf_title: "🏛️ International Conferences & Official Meetings",
+    intl_conf_card1_tag: "🇺🇿 Tashkent · Bilateral Cooperation",
+    intl_conf_card1_title: "Online Meeting & Experience Exchange with Tashkent Transport Technical School",
+    intl_conf_card1_desc: "Bilateral academic partnership, curriculum alignment, and technical training exchange with Uzbekistan education institution.",
+    intl_conf_card1_link: "View Memorandum ↗",
+    intl_conf_card2_tag: "🇰🇿 Aktau · Trilateral Action Plan",
+    intl_conf_card2_title: "International Cooperation Forum with ALT University & Tashkent",
+    intl_conf_card2_desc: "21-point international roadmap covering student mobility, joint events, and digital curriculum integration.",
+    intl_conf_card2_link: "Track 21-Point Plan ↗",
+    intl_conf_card3_tag: "🌍 Global Indices · Scientific Reports",
+    intl_conf_card3_title: "Internationally Indexed Conferences & Global Publications",
+    intl_conf_card3_desc: "Faculty research publications in leading foreign journals (Index Copernicus, ERIH PLUS) and international symposiums.",
+    intl_conf_card3_link: "Go to Scientific Activity →",
     intl_cert_title: "🎖️ International Certificates",
     intl_cert_cta: "View All Certificates (10+) →",
     stu_proj_badge: "🚀 INNOVATION, STEAM & INDUSTRIAL INTERNSHIP",
@@ -3631,6 +3655,18 @@ const i18n = {
     intl_memo_title: "🤝 Меморандумы",
     intl_memo_cta: "Открыть портал меморандумов (PDF и Таблица) ↗",
     intl_conf_title: "🏛️ Международные конференции и встречи",
+    intl_conf_card1_tag: "🇺🇿 Ташкент · Двустороннее сотрудничество",
+    intl_conf_card1_title: "Онлайн-встреча и обмен опытом с Ташкентским транспортным техникумом",
+    intl_conf_card1_desc: "Двустороннее академическое партнерство, интеграция учебных планов и обмен опытом в сфере транспорта и связи.",
+    intl_conf_card1_link: "Смотреть меморандум ↗",
+    intl_conf_card2_tag: "🇰🇿 Актау · Трехсторонний план действий",
+    intl_conf_card2_title: "Форум международного сотрудничества с Университетом ALT и Ташкентом",
+    intl_conf_card2_desc: "Международный план из 21 пункта по академической мобильности, совместным мероприятиям и цифровым технологиям.",
+    intl_conf_card2_link: "Следить за планом ↗",
+    intl_conf_card3_tag: "🌍 Международные индексы · Научные доклады",
+    intl_conf_card3_title: "Международные индексированные конференции и зарубежные публикации",
+    intl_conf_card3_desc: "Научные публикации преподавателей в зарубежных журналах (Index Copernicus, ERIH PLUS) и на международных симпозиумах.",
+    intl_conf_card3_link: "Перейти к научной деятельности →",
     intl_cert_title: "🎖️ Международные сертификаты",
     intl_cert_cta: "Смотреть все сертификаты (10+) →",
     stu_proj_badge: "🚀 ИННОВАЦИИ, STEAM И ПРАКТИКА",
@@ -27271,40 +27307,15 @@ window.switchLaborConfMedia = function (src, caption, badgeText, catTitle, btn) 
     // 5. Tab 7: Beynəlxalq konfranslar & nəşrlər (#intl-conferences-grid)
     const intlConfGrid = document.getElementById("intl-conferences-grid");
     if (intlConfGrid) {
-      const intlNews = matchNews(/daşkənd|qazaxıstan|aktau|memorandum|beynəlxalq əməkdaşlıq|wuf13|marafon/i, 4);
-      renderNewsCardsInto(intlConfGrid, intlNews, "Beynəlxalq Görüş");
-      // Add top foreign indexed journal authors summary cards
-      sAuthors
-        .filter((a) => a.scope_type === "xarici" || a.scope_type === "both")
-        .slice(0, 3)
-        .forEach((auth) => {
-          const w = auth.works && auth.works[0];
-          if (!w) return;
-          const card = document.createElement("article");
-          card.className = "portal-hub-card";
-          card.style.cursor = "pointer";
-          const authName = auth["author_" + lang] || auth.author_az;
-          const wTitle = w["title_" + lang] || w.title_az || w.title;
-          const wJournal = w["journal_" + lang] || w.journal_az || w.journal;
-          card.innerHTML = `
-            <span class="portal-hub-tag">🌍 Xarici Nəşr · ${safeEsc(w["country_" + lang] || w.country_az || "")}</span>
-            <h4 class="portal-hub-title">${safeEsc(authName)}</h4>
-            <p class="portal-hub-desc">${safeEsc(wTitle)} — <strong>${safeEsc(wJournal)}</strong></p>
-            <button type="button" class="portal-hub-link">Elmi Fəaliyyət Bölməsində Bax →</button>
-          `;
-          card.addEventListener("click", () => {
-            if (typeof window.switchWorkspaceTab === "function") {
-              window.switchWorkspaceTab("science", { focusAnchor: "science-articles-anchor", updateUrl: true });
-            }
-          });
-          intlConfGrid.appendChild(card);
-        });
-    }
-
-    // 6. Tab 7: Beynəlxalq sertifikatlar (#intl-certificates-grid)
-    const intlCertGrid = document.getElementById("intl-certificates-grid");
-    if (intlCertGrid && tCerts.length) {
-      renderCertCardsInto(intlCertGrid, tCerts.slice(0, 6));
+      const sciBtns = intlConfGrid.querySelectorAll('[data-workspace-tab="science"]');
+      sciBtns.forEach((btn) => {
+        btn.onclick = (e) => {
+          e.preventDefault();
+          if (typeof window.switchWorkspaceTab === "function") {
+            window.switchWorkspaceTab("science", { focusAnchor: "science-articles-anchor", updateUrl: true });
+          }
+        };
+      });
     }
 
     // 7. Tab 8: Tələbə layihələri (#student-projects-grid)
