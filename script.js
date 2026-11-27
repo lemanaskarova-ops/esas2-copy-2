@@ -23216,7 +23216,7 @@ function initSceneTransition() {
       "department_en": "Transport & Communications",
       "department_ru": "Транспорт и связь",
       "dept_slug": "neqliyyat",
-      "avatar": "babeky.jpeg",
+
       "works": [
         {
           "title": "Taksimotor daşımalarına tələbatın öyrənilməsi və keyfiyyətin idarə olunması",
@@ -23355,23 +23355,21 @@ function initSceneTransition() {
         const wTitle = getLocalizedText(w, 'title');
         const wJournal = getLocalizedText(w, 'journal');
         const wCountry = getLocalizedText(w, 'country');
-        const doiLink = w.doi ? `
-          <div class="science-work-doi-tag" style="margin-top: 6px;">
-            <a href="${w.doi.startsWith('http') ? w.doi : 'https://doi.org/' + w.doi}" target="_blank" rel="noopener noreferrer" class="science-doi-btn" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.75rem; font-weight: 700; color: #0284c7; text-decoration: none; padding: 2px 8px; border-radius: 6px; background: rgba(2, 132, 199, 0.08); border: 1px solid rgba(2, 132, 199, 0.2);" title="DOI: ${escapeHTML(w.doi)}">
-              <span style="background: #0284c7; color: #ffffff; padding: 1px 4px; border-radius: 3px; font-size: 0.65rem; font-weight: 800; letter-spacing: 0.5px;">DOI</span>
-              <span>${escapeHTML(w.doi_num || w.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//i, ''))}</span>
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            </a>
-          </div>
-        ` : '';
+        const doiPart = w.doi ? `
+          <a href="${w.doi.startsWith('http') ? w.doi : 'https://doi.org/' + w.doi}" target="_blank" rel="noopener noreferrer" class="science-work-journal-tag" style="text-decoration: none; font-weight: 700; color: #0284c7;" title="DOI: ${escapeHTML(w.doi)}">
+            <span style="background: #0284c7; color: #fff; padding: 1px 4px; border-radius: 3px; font-size: 0.62rem; font-weight: 800;">DOI</span>
+            <span>${escapeHTML(w.doi_num || w.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//i, ''))} ↗</span>
+          </a>` : '';
         return `
           <div class="science-card-work-block">
             <h4 class="science-article-title"><span class="science-work-num">${idx + 1}.</span>${escapeHTML(wTitle)}</h4>
-            <div class="science-work-journal-tag">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-              <span><strong>${escapeHTML(wJournal)}</strong> (${escapeHTML(wCountry)})</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 6px;">
+              <div class="science-work-journal-tag" style="margin-top: 0;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span><strong>${escapeHTML(wJournal)}</strong> (${escapeHTML(wCountry)})</span>
+              </div>
+              ${doiPart}
             </div>
-            ${doiLink}
           </div>
         `;
       }).join('');
@@ -23383,15 +23381,11 @@ function initSceneTransition() {
         </a>
       ` : '';
 
-      const avatarHtml = author.avatar
-        ? `<img src="${author.avatar}" alt="${escapeHTML(authorName)}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />`
-        : `<div class="science-author-avatar">${initials}</div>`;
-
       return `
         <div class="science-author-card mouse-glow-card">
           <div class="science-card-header">
             <div class="science-author-avatar-wrap">
-              ${avatarHtml}
+              <div class="science-author-avatar">${initials}</div>
             </div>
             <div class="science-author-info">
               <h3 class="science-author-name">${escapeHTML(authorName)}</h3>
