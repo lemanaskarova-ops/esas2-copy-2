@@ -55,7 +55,8 @@ const i18n = {
     science_stat_articles: "Məqalə və Tezis",
     science_stat_countries: "Xarici və Yerli Ölkə",
     science_stat_indexed: "Xarici & Respublika",
-    science_tab_all: "Bütün Nəşrlər (23)",
+    science_tab_all: "Bütün Nəşrlər (25)",
+    dept_neqliyyat: "Nəqliyyat və rabitə",
     science_tab_textbooks: "📚 Dərslik və Dərs Vəsaitləri (8)",
     science_tb_kicker: "🏛️ RƏSMİ QEYDİYYAT REYESTRİ · 2025/2026 – 2026/2027",
     science_tb_title: "Kollec Əməkdaşlarının Nəşr Olunan Dərslik və Dərs Vəsaitləri",
@@ -69,7 +70,7 @@ const i18n = {
     science_tb_stat3: "Rəhbərlik & Müəllimlər",
     science_tb_stat4: "Tədris İlləri Nəşri",
     science_tab_foreign: "Xarici Jurnallar (17)",
-    science_tab_local: "Yerli Jurnallar (6)",
+    science_tab_local: "Yerli Jurnallar (7)",
     science_tab_copernicus: "Copernicus & ERIH (2)",
     dept_humanitar: "Humanitar elmlər",
     dept_dil: "Dil və ədəbiyyat",
@@ -1383,7 +1384,8 @@ const i18n = {
     science_stat_articles: "Articles & Theses",
     science_stat_countries: "Target Countries",
     science_stat_indexed: "International & National",
-    science_tab_all: "All Publications (23)",
+    science_tab_all: "All Publications (25)",
+    dept_neqliyyat: "Transport & Communications",
     science_tab_textbooks: "📚 Textbooks & Study Guides (8)",
     science_tb_kicker: "🏛️ OFFICIAL REGISTRY · 2025/2026 – 2026/2027",
     science_tb_title: "Textbooks and Study Guides Published by College Faculty",
@@ -1397,7 +1399,7 @@ const i18n = {
     science_tb_stat3: "Leadership & Faculty",
     science_tb_stat4: "Academic Years",
     science_tab_foreign: "International Journals (17)",
-    science_tab_local: "Domestic Journals (6)",
+    science_tab_local: "Domestic Journals (7)",
     science_tab_copernicus: "Copernicus & ERIH (2)",
     dept_humanitar: "Humanities",
     dept_dil: "Language & Literature",
@@ -2699,7 +2701,8 @@ const i18n = {
     science_stat_articles: "Статей и тезисов",
     science_stat_countries: "Стран публикации",
     science_stat_indexed: "Международные и Респ.",
-    science_tab_all: "Все публикации (23)",
+    science_tab_all: "Все публикации (25)",
+    dept_neqliyyat: "Транспорт и связь",
     science_tab_textbooks: "📚 Учебники и Учебные Пособия (8)",
     science_tb_kicker: "🏛️ ОФИЦИАЛЬНЫЙ РЕЕСТР · 2025/2026 – 2026/2027",
     science_tb_title: "Учебники и учебные пособия, изданные сотрудниками колледжа",
@@ -2713,7 +2716,7 @@ const i18n = {
     science_tb_stat3: "Руководство и преподаватели",
     science_tb_stat4: "Учебные годы издания",
     science_tab_foreign: "Зарубежные журналы (17)",
-    science_tab_local: "Отечественные журналы (6)",
+    science_tab_local: "Отечественные журналы (7)",
     science_tab_copernicus: "Copernicus и ERIH (2)",
     dept_humanitar: "Гуманитарные науки",
     dept_dil: "Язык и литература",
@@ -23198,6 +23201,57 @@ function initSceneTransition() {
       "scopus": false,
       "copernicus": false,
       "erih": false
+    },
+    {
+      "id": 13,
+      "no": "13",
+      "author_az": "Babək Əhmədli Yasin oğlu",
+      "author_en": "Babak Ahmadli Yasin",
+      "author_ru": "Бабек Ахмедли Ясин оглы",
+      "role_az": "Şöbə müdiri / Nəqliyyat və telekommunikasiya",
+      "role_en": "Department Head / Transport & Telecommunications",
+      "role_ru": "Заведующий отделом / Транспорт и телекоммуникации",
+      "department": "Nəqliyyat və rabitə",
+      "department_az": "Nəqliyyat və rabitə",
+      "department_en": "Transport & Communications",
+      "department_ru": "Транспорт и связь",
+      "dept_slug": "neqliyyat",
+      "avatar": "babeky.jpeg",
+      "works": [
+        {
+          "title": "Taksimotor daşımalarına tələbatın öyrənilməsi və keyfiyyətin idarə olunması",
+          "title_az": "Taksimotor daşımalarına tələbatın öyrənilməsi və keyfiyyətin idarə olunması",
+          "title_en": "Study of Demand for Taxi Transportation and Quality Management",
+          "title_ru": "Изучение спроса на таксомоторные перевозки и управление качеством",
+          "journal": "Scientific Research (Elmi Araşdırmalar)",
+          "journal_az": "Scientific Research (Elmi Araşdırmalar)",
+          "journal_en": "Scientific Research",
+          "journal_ru": "Scientific Research (Научные исследования)",
+          "country": "Azərbaycan",
+          "country_az": "Azərbaycan",
+          "country_en": "Azerbaijan",
+          "country_ru": "Азербайджан",
+          "country_code": "AZ",
+          "doi": "https://doi.org/10.36719/2789-6919/08/216-222",
+          "doi_num": "10.36719/2789-6919/08/216-222",
+          "volume": "08",
+          "issue": "4",
+          "pages": "216-222",
+          "issn": "2789-6919",
+          "url": "https://aem.az/index.php?newsid=2090"
+        }
+      ],
+      "year": "2022",
+      "scope": "Yerli",
+      "scope_az": "Yerli",
+      "scope_en": "Domestic",
+      "scope_ru": "Республиканский",
+      "scope_type": "yerli",
+      "orcid": null,
+      "orcid_id": null,
+      "scopus": false,
+      "copernicus": false,
+      "erih": false
     }
   ];
 
@@ -23244,7 +23298,8 @@ function initSceneTransition() {
           const t = ((w.title_az || w.title || '') + ' ' + (w.title_en || '') + ' ' + (w.title_ru || '')).toLowerCase();
           const j = ((w.journal_az || w.journal || '') + ' ' + (w.journal_en || '') + ' ' + (w.journal_ru || '')).toLowerCase();
           const c = ((w.country_az || w.country || '') + ' ' + (w.country_en || '') + ' ' + (w.country_ru || '')).toLowerCase();
-          return t.includes(query) || j.includes(query) || c.includes(query);
+          const d = ((w.doi || '') + ' ' + (w.doi_num || '')).toLowerCase();
+          return t.includes(query) || j.includes(query) || c.includes(query) || d.includes(query);
         });
         const roleMatch = ((item.role_az || '') + ' ' + (item.role_en || '') + ' ' + (item.role_ru || '')).toLowerCase().includes(query);
         if (!nameMatch && !worksMatch && !roleMatch) return false;
@@ -23300,6 +23355,15 @@ function initSceneTransition() {
         const wTitle = getLocalizedText(w, 'title');
         const wJournal = getLocalizedText(w, 'journal');
         const wCountry = getLocalizedText(w, 'country');
+        const doiLink = w.doi ? `
+          <div class="science-work-doi-tag" style="margin-top: 6px;">
+            <a href="${w.doi.startsWith('http') ? w.doi : 'https://doi.org/' + w.doi}" target="_blank" rel="noopener noreferrer" class="science-doi-btn" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.75rem; font-weight: 700; color: #0284c7; text-decoration: none; padding: 2px 8px; border-radius: 6px; background: rgba(2, 132, 199, 0.08); border: 1px solid rgba(2, 132, 199, 0.2);" title="DOI: ${escapeHTML(w.doi)}">
+              <span style="background: #0284c7; color: #ffffff; padding: 1px 4px; border-radius: 3px; font-size: 0.65rem; font-weight: 800; letter-spacing: 0.5px;">DOI</span>
+              <span>${escapeHTML(w.doi_num || w.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//i, ''))}</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        ` : '';
         return `
           <div class="science-card-work-block">
             <h4 class="science-article-title"><span class="science-work-num">${idx + 1}.</span>${escapeHTML(wTitle)}</h4>
@@ -23307,6 +23371,7 @@ function initSceneTransition() {
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
               <span><strong>${escapeHTML(wJournal)}</strong> (${escapeHTML(wCountry)})</span>
             </div>
+            ${doiLink}
           </div>
         `;
       }).join('');
@@ -23318,11 +23383,15 @@ function initSceneTransition() {
         </a>
       ` : '';
 
+      const avatarHtml = author.avatar
+        ? `<img src="${author.avatar}" alt="${escapeHTML(authorName)}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />`
+        : `<div class="science-author-avatar">${initials}</div>`;
+
       return `
         <div class="science-author-card mouse-glow-card">
           <div class="science-card-header">
             <div class="science-author-avatar-wrap">
-              <div class="science-author-avatar">${initials}</div>
+              ${avatarHtml}
             </div>
             <div class="science-author-info">
               <h3 class="science-author-name">${escapeHTML(authorName)}</h3>
@@ -23385,9 +23454,10 @@ function initSceneTransition() {
 
       const journalsList = item.works.length > 1
         ? `<ol class="science-table-list">${item.works.map(w => {
-          return `<li>${escapeHTML(getLocalizedText(w, 'journal'))} (${escapeHTML(getLocalizedText(w, 'country'))})</li>`;
+          const doiPart = w.doi ? `<br><a href="${w.doi.startsWith('http') ? w.doi : 'https://doi.org/' + w.doi}" target="_blank" rel="noopener noreferrer" style="color: #0284c7; font-weight: 600; font-size: 0.75rem;">DOI: ${escapeHTML(w.doi_num || w.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//i, ''))} ↗</a>` : '';
+          return `<li>${escapeHTML(getLocalizedText(w, 'journal'))} (${escapeHTML(getLocalizedText(w, 'country'))})${doiPart}</li>`;
         }).join('')}</ol>`
-        : `${escapeHTML(getLocalizedText(item.works[0], 'journal'))} (${escapeHTML(getLocalizedText(item.works[0], 'country'))})`;
+        : `${escapeHTML(getLocalizedText(item.works[0], 'journal'))} (${escapeHTML(getLocalizedText(item.works[0], 'country'))})${item.works[0].doi ? `<br><a href="${item.works[0].doi.startsWith('http') ? item.works[0].doi : 'https://doi.org/' + item.works[0].doi}" target="_blank" rel="noopener noreferrer" style="color: #0284c7; font-weight: 600; font-size: 0.75rem;">DOI: ${escapeHTML(item.works[0].doi_num || item.works[0].doi.replace(/^https?:\/\/(dx\.)?doi\.org\//i, ''))} ↗</a>` : ''}`;
 
       const orcidCell = item.orcid
         ? `<a href="${item.orcid}" target="_blank" rel="noopener noreferrer" class="science-table-orcid-link" title="ORCID: ${item.orcid_id}">
