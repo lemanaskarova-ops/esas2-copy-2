@@ -25612,7 +25612,7 @@ function initGlobalSearchModule() {
       icon: "🎉",
       badge: l === "en" ? "Event Video" : l === "ru" ? "Видео мероприятия" : "Tədbir Video",
       title: l === "en" ? "November 8 Victory Day Commemoration Event (Video)" : l === "ru" ? "Торжественное мероприятие ко Дню Победы 8 Ноября (Видео)" : "8 Noyabr Zəfər Günü Təntənəli Tədbiri (Video)",
-      desc: l === "en" ? "Official college commemoration event dedicated to November 8 Victory Day (8noyabr.mp4)" : l === "ru" ? "Торжественное видеомероприятие колледжа ко Дню Победы 8 Ноября (8noyabr.mp4)" : "Kollecimizdə 8 Noyabr Zəfər Gününə həsr olunmuş təntənəli tədbir videoçarxı (8noyabr.mp4)",
+      desc: l === "en" ? "Official college commemoration event dedicated to November 8 Victory Day" : l === "ru" ? "Торжественное видеомероприятие колледжа ко Дню Победы 8 Ноября" : "Kollecimizdə 8 Noyabr Zəfər Gününə həsr olunmuş təntənəli tədbir videoçarxı",
       tokens: "8noyabr 8 noyabr zefer gunu tedbiri tedbir video videocharx qelebe tedbirler qalereya bayram november victory commemoration",
       action: () => {
         const sec = document.getElementById("gallery");
@@ -27742,7 +27742,6 @@ window.switchLaborConfMedia = function (src, caption, badgeText, catTitle, btn) 
             ${videoSwitchButtons}
             <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 px-1">
               <span>${t.studioNote}</span>
-              <span class="font-mono">${esc(video.src)}</span>
             </div>
           </div>
 
